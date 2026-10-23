@@ -9,82 +9,13 @@ import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { buildScene, iconFor, Sound, hash, rng, THEMES } from './explorer.js';
 import { TAU, NOISE, pointsMaterial, makePoints, fresnelMaterial, flowMaterial, textureCache, cached, glowTexture, EMOJI_FONT, badgeTexture, labelTexture, ring, glowSprite } from './kit3d.js';
 import * as fx from './fx3d.js';
+import * as heroes from './heroes3d.js';
 
 const S = 0.1; // 2D 版面單位 → 3D 單位
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
 
 // ---------- 各格的主視覺 ----------
-function makeSun(sc) {
-  const g = new THREE.Group();
-  const mat = new THREE.ShaderMaterial({
-    uniforms: { time: { value: 0 } },
-    vertexShader: /* glsl */ `varying vec3 vP; varying vec3 vN; varying vec3 vV;
-      void main() { vP = position; vec4 mv = modelViewMatrix * vec4(position, 1.0); vN = normalize(normalMatrix * normal); vV = normalize(-mv.xyz); gl_Position = projectionMatrix * mv; }`,
-    fragmentShader: NOISE + /* glsl */ `uniform float time; varying vec3 vP; varying vec3 vN; varying vec3 vV;
-      void main() {
-        float n = fbm(vP * 0.55 + vec3(time * 0.15, -time * 0.1, time * 0.05));
-        vec3 c = mix(vec3(1.9, 0.75, 0.12), vec3(2.6, 2.0, 0.9), smoothstep(0.35, 0.75, n));
-        float rim = pow(1.0 - max(dot(vN, vV), 0.0), 2.0);
-        gl_FragColor = vec4(c + rim * vec3(1.6, 0.6, 0.1), 1.0);
-      }`,
-  });
-  const sun = new THREE.Mesh(new THREE.SphereGeometry(7, 64, 48), mat);
-  g.add(sun, glowSprite(0xffa040, 36, 0.75), glowSprite(0xff6a10, 80, 0.25));
-  const radii = new Set(sc.groups.map((z) => Math.round(Math.hypot(z.x, z.y) * S)));
-  [...radii, 18, 26].forEach((r) => g.add(ring(r, 0xffc070, 0.16, 0.06)));
-  g.userData.tick = (t) => { mat.uniforms.time.value = t; sun.rotation.y = t * 0.05; };
-  return g;
-}
-
-function earthMaterial() {
-  return new THREE.ShaderMaterial({
-    uniforms: { time: { value: 0 }, sunDir: { value: new THREE.Vector3(0.7, 0.4, 0.6).normalize() } },
-    vertexShader: /* glsl */ `varying vec3 vP; varying vec3 vNW;
-      void main() { vP = position; vNW = normalize(mat3(modelMatrix) * normal); gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`,
-    fragmentShader: NOISE + /* glsl */ `uniform vec3 sunDir; varying vec3 vP; varying vec3 vNW;
-      void main() {
-        vec3 p = normalize(vP);
-        float h = fbm(p * 2.4);
-        float lat = abs(p.y);
-        vec3 ocean = mix(vec3(0.02, 0.18, 0.45), vec3(0.05, 0.35, 0.7), h);
-        vec3 land = mix(vec3(0.15, 0.45, 0.15), vec3(0.55, 0.45, 0.25), smoothstep(0.55, 0.75, h));
-        vec3 c = h > 0.52 ? land : ocean;
-        c = mix(c, vec3(0.95), smoothstep(0.78, 0.9, lat));
-        float cloud = smoothstep(0.55, 0.8, fbm(p * 4.0 + 3.0));
-        c = mix(c, vec3(1.0), cloud * 0.55);
-        float light = max(dot(vNW, sunDir), 0.0) * 0.95 + 0.12;
-        gl_FragColor = vec4(c * light, 1.0);
-      }`,
-  });
-}
-function makeEarthMoon() {
-  const g = new THREE.Group();
-  const earth = new THREE.Mesh(new THREE.SphereGeometry(6, 64, 48), earthMaterial());
-  const atmo = new THREE.Mesh(new THREE.SphereGeometry(6.5, 48, 32), fresnelMaterial(0x5ab8ff, 2.5, 1.8));
-  const moon = new THREE.Mesh(new THREE.SphereGeometry(1.6, 32, 24), new THREE.MeshStandardMaterial({ color: 0xcfd3dc, roughness: 1, flatShading: true }));
-  const orbit = ring(20, 0x9fb8ff, 0.2, 0.05);
-  g.add(earth, atmo, moon, orbit);
-  g.userData.tick = (t) => { earth.rotation.y = t * 0.12; moon.position.set(Math.cos(t * 0.2) * 20, 1, Math.sin(t * 0.2) * 20); };
-  return g;
-}
-function makeEarthCore() {
-  const g = new THREE.Group();
-  const crust = new THREE.Mesh(new THREE.SphereGeometry(13, 64, 48, 0, Math.PI * 1.5), earthMaterial());
-  crust.material.side = THREE.DoubleSide;
-  const mantle = new THREE.Mesh(new THREE.SphereGeometry(10.5, 48, 32), new THREE.MeshBasicMaterial({ color: new THREE.Color(1.4, 0.45, 0.12) }));
-  const outer = new THREE.Mesh(new THREE.SphereGeometry(6.5, 48, 32), new THREE.MeshBasicMaterial({ color: new THREE.Color(1.9, 0.9, 0.2) }));
-  const inner = new THREE.Mesh(new THREE.SphereGeometry(3.4, 32, 24), new THREE.MeshBasicMaterial({ color: new THREE.Color(2.6, 2.2, 1.2) }));
-  const atmo = new THREE.Mesh(new THREE.SphereGeometry(13.8, 48, 32), fresnelMaterial(0x5ab8ff, 2.5, 1.5));
-  const spin = new THREE.Group();
-  spin.add(crust, mantle, outer, inner);
-  spin.position.y = 6;
-  atmo.position.y = 6;
-  g.add(spin, atmo, glowSprite(0xff8a30, 40, 0.5));
-  g.children[2].position.y = 6;
-  g.userData.tick = (t) => { spin.rotation.y = t * 0.08; };
-  return g;
-}
 function makeStarCluster() {
   const g = new THREE.Group();
   const r = rng(0.21);
@@ -138,55 +69,6 @@ function makeCosmicWeb() {
   g.userData.tick = (t) => { g.rotation.y = t * 0.015; };
   return g;
 }
-function makeAtom() {
-  const g = new THREE.Group();
-  const nucleus = new THREE.Group();
-  const r = rng(0.44);
-  for (let i = 0; i < 14; i++) {
-    const m = new THREE.Mesh(new THREE.SphereGeometry(1.1, 24, 16), new THREE.MeshStandardMaterial({ color: i % 2 ? 0xff5a5a : 0x5a8cff, emissive: i % 2 ? 0x551010 : 0x102055, roughness: 0.4 }));
-    m.position.set((r() - 0.5) * 2.6, (r() - 0.5) * 2.6, (r() - 0.5) * 2.6);
-    nucleus.add(m);
-  }
-  nucleus.position.y = 5;
-  g.add(nucleus, glowSprite(0xffd090, 16, 0.6));
-  g.children[1].position.y = 5;
-  const electrons = [];
-  [0, 1, 2].forEach((k) => {
-    const orbit = new THREE.Group();
-    orbit.position.y = 5;
-    orbit.rotation.set(Math.PI / 2 + (k - 1) * 0.9, k * 1.1, 0);
-    const path = new THREE.Mesh(new THREE.TorusGeometry(22, 0.08, 8, 160), new THREE.MeshBasicMaterial({ color: 0xb48cff, transparent: true, opacity: 0.6, blending: THREE.AdditiveBlending }));
-    const e = new THREE.Mesh(new THREE.SphereGeometry(0.7, 16, 12), new THREE.MeshBasicMaterial({ color: new THREE.Color(0.6, 2.2, 2.6) }));
-    e.add(glowSprite(0x8ff0ff, 6, 0.9));
-    orbit.add(path, e);
-    electrons.push({ e, speed: 0.6 + k * 0.25, off: k * 2 });
-    g.add(orbit);
-  });
-  g.userData.tick = (t) => {
-    nucleus.rotation.y = t * 0.4;
-    electrons.forEach(({ e, speed, off }) => e.position.set(Math.cos(t * speed + off) * 22, Math.sin(t * speed + off) * 22, 0));
-  };
-  return g;
-}
-function makeCell() {
-  const g = new THREE.Group();
-  const membrane = new THREE.Mesh(new THREE.SphereGeometry(16, 64, 48), fresnelMaterial(0xff6fae, 2.2, 1.6));
-  const fill = new THREE.Mesh(new THREE.SphereGeometry(15.8, 48, 32), new THREE.MeshBasicMaterial({ color: 0x3a0a22, transparent: true, opacity: 0.25, depthWrite: false }));
-  const nucleus = new THREE.Mesh(new THREE.SphereGeometry(5, 48, 32), new THREE.MeshStandardMaterial({ color: 0x9a4dff, emissive: 0x301060, roughness: 0.3 }));
-  g.add(fill, membrane, nucleus);
-  [fill, membrane, nucleus].forEach((m) => { m.position.y = 6; });
-  const r = rng(0.12);
-  const bits = [];
-  for (let i = 0; i < 26; i++) {
-    const m = new THREE.Mesh(new THREE.CapsuleGeometry(0.5, 1.4, 4, 8), new THREE.MeshStandardMaterial({ color: i % 3 ? 0xff9f6a : 0x6affc8, emissive: i % 3 ? 0x40200a : 0x0a4030 }));
-    const a = r() * TAU, b = r() * Math.PI, d = 8 + r() * 6;
-    m.position.set(Math.cos(a) * Math.sin(b) * d, 6 + Math.cos(b) * d, Math.sin(a) * Math.sin(b) * d);
-    bits.push({ m, s: 0.3 + r() });
-    g.add(m);
-  }
-  g.userData.tick = (t) => { membrane.scale.setScalar(1 + Math.sin(t * 1.2) * 0.015); bits.forEach(({ m, s }, i) => { m.rotation.set(t * s, t * s * 0.7, i); }); };
-  return g;
-}
 function makeTimeRiver(sc) {
   const g = new THREE.Group();
   if (sc.groups.length < 2) return g;
@@ -215,24 +97,6 @@ function makeLanes(sc) {
   g.userData.tick = (t) => { mats.forEach((m) => { m.uniforms.time.value = t; }); core.rotation.set(t * 0.3, t * 0.4, 0); };
   return g;
 }
-function makeStudio() {
-  const g = new THREE.Group();
-  const mic = new THREE.Group();
-  const head = new THREE.Mesh(new THREE.CapsuleGeometry(2.2, 3, 8, 24), new THREE.MeshStandardMaterial({ color: 0x2f4f6f, emissive: 0x0a2030, metalness: 0.6, roughness: 0.3 }));
-  head.position.y = 9;
-  const grill = new THREE.Mesh(new THREE.CapsuleGeometry(2.25, 3, 8, 24), new THREE.MeshBasicMaterial({ color: 0xf4a640, wireframe: true }));
-  grill.position.y = 9;
-  const stand = new THREE.Mesh(new THREE.CylinderGeometry(0.3, 0.3, 6, 12), new THREE.MeshStandardMaterial({ color: 0x8899aa, metalness: 0.8, roughness: 0.3 }));
-  stand.position.y = 4;
-  const arc = new THREE.Mesh(new THREE.TorusGeometry(3, 0.25, 10, 40, Math.PI), new THREE.MeshStandardMaterial({ color: 0x8899aa, metalness: 0.8 }));
-  arc.position.y = 8.5; arc.rotation.z = Math.PI;
-  mic.add(head, grill, stand, arc);
-  g.add(mic, glowSprite(0xffb060, 22, 0.3), ring(12, 0xffb060, 0.3, 0.12));
-  g.children[1].position.y = 9;
-  g.userData.tick = (t) => { mic.rotation.y = t * 0.3; };
-  return g;
-}
-
 // 生物格：每一區是一座浮空島
 const BIOMES = {
   台灣特有種: { top: 0x3f9d4a, deco: 'trees', tint: 0x2c7a3a },
@@ -547,12 +411,10 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
     centerLight.intensity = theme === 'l07' ? 3.2 : 2;
     hemi.intensity = ['l03', 'l04', 'l02', 'l01', 'studio'].includes(theme) ? 1.1 : 0.45;
 
-    const decoMakers = { l07: makeSun, l06: makeEarthMoon, l05: makeEarthCore, l08: makeStarCluster, l09: makeGalaxy, l10: makeCosmicWeb, l01: makeAtom, l02: makeCell, era: makeTimeRiver, lane: makeLanes, studio: makeStudio };
+    const decoMakers = { l07: heroes.heroSolarSystem, l06: heroes.heroEarthMoon, l05: heroes.heroEarthCore, l08: makeStarCluster, l09: makeGalaxy, l10: makeCosmicWeb, l01: heroes.heroAtom, l02: heroes.heroCell, era: makeTimeRiver, lane: makeLanes, studio: heroes.heroStudio };
     const b0 = layout.bounds;
     const reach = Math.max(-b0.minX, b0.maxX, -b0.minY, b0.maxY) * S;
     if (decoMakers[theme]) worldGroup.add(decoMakers[theme](layout));
-    if (theme === 'l07') worldGroup.add(fx.makePlanets(layout));
-    if (theme === 'l06') worldGroup.add(fx.makeSatellites());
     if (theme === 'l04') worldGroup.add(fx.makeTraffic(reach));
     if (theme === 'l03') worldGroup.add(makeOcean(), fx.makeBirds(reach));
     worldGroup.add(fx.makeMotes(reach, themeColor(0)));
@@ -617,7 +479,10 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
         spots.push(spot);
       });
     });
-    worldGroup.traverse((o) => { if (o.userData.tick) ticks.push(o.userData.tick); });
+    worldGroup.traverse((o) => {
+      if (o.userData.tick) ticks.push(o.userData.tick);
+      if (o.userData.face) ticks.push(() => o.userData.face(camera.position)); // 主角轉向鏡頭
+    });
     scene3.add(worldGroup);
     sizeLabels();
     stampKey = '';
@@ -630,23 +495,34 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
   }
 
   // ---------- 鏡頭 ----------
+  const HERO_THEMES = ['l01', 'l02', 'l05', 'l06', 'l07', 'l08', 'l09', 'l10'];
   function fitTarget() {
     const b = layout.bounds;
     const w = canvas.clientWidth, h = canvas.clientHeight;
     const aspect = w / Math.max(1, h);
     let target, dist;
+    let dir = new THREE.Vector3(0, 0, 1); // 鏡頭從哪個方向看過來（水平）
     if (w < 700 && layout.groups.length > 1) {
+      // 手機：拉近到一區；有中央主角的格，鏡頭從這一區外側往中心看，前面是頻道、後面是主角
       const live = (g) => g.items.filter((e) => e.state !== 'unreleased').length;
-      const g = layout.groups.reduce((a, c) => (live(c) > live(a) ? c : a));
-      target = new THREE.Vector3(g.x * S, theme3dLift(), g.y * S);
+      const hero = HERO_THEMES.includes(layout.theme);
+      const score = (g) => live(g) / (hero ? 1 + Math.hypot(g.x, g.y) * S * 0.015 : 1);
+      const g = layout.groups.reduce((a, c) => (score(c) > score(a) ? c : a));
+      const gc = new THREE.Vector3(g.x * S, theme3dLift(), g.y * S);
       dist = (g.r * S * 2.3) / Math.min(1, aspect * 1.4);
+      if (hero && gc.lengthSq() > 1) {
+        dir = gc.clone().setY(0).normalize();
+        target = gc.clone().lerp(new THREE.Vector3(0, gc.y, 0), 0.35);
+        dist *= 1.2;
+      } else target = gc;
     } else {
       target = new THREE.Vector3((b.minX + b.maxX) / 2 * S, theme3dLift(), (b.minY + b.maxY) / 2 * S);
       const R = Math.max(b.maxX - b.minX, (b.maxY - b.minY) * 1.25) / 2 * S;
-      dist = (R / Math.tan((55 * Math.PI) / 360)) * (aspect < 1 ? 1.4 / aspect : 0.92);
+      dist = (R / Math.tan((55 * Math.PI) / 360)) * (aspect < 1 ? 1.4 / aspect : 0.92) * (layout.theme === 'l03' ? 0.78 : 1); // 生物格很大，先拉近一點
+      if (layout.groups.length === 1 && aspect >= 1) { dist *= 1.6; target.z -= 5; } // 錄音室：把後面的麥克風也拍進來
     }
     dist = Math.max(18, Math.min(380, dist));
-    const pos = target.clone().add(new THREE.Vector3(0, dist * 0.68, dist * 0.74));
+    const pos = target.clone().addScaledVector(dir, dist * 0.74).add(new THREE.Vector3(0, dist * 0.68, 0));
     return { target, pos };
   }
   function theme3dLift() { return layout.theme === 'l03' ? 1 : 0; }
@@ -658,8 +534,11 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
   // 耳機號停在畫面前方，不會被中間的太陽、銀河蓋住
   function placeShip() {
     const { target, pos } = fitTarget();
-    ship.position.copy(target).lerp(pos, 0.16);
-    ship.position.y = Math.min(ship.position.y, target.y + 9);
+    const toCam = pos.clone().sub(target).setY(0).normalize();
+    const right = new THREE.Vector3(toCam.z, 0, -toCam.x);
+    const room = canvas.clientWidth < 700 ? 5 : Math.min(heroes.roomOf(layout).inner, 30);
+    ship.position.copy(target).addScaledVector(toCam, room * 0.75).addScaledVector(right, -room * 0.55);
+    ship.position.y = target.y + 5;
     ship.rotation.set(0, 0, 0);
   }
 
@@ -794,13 +673,18 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
     const key = `${st.ear.length}:${st.hand.length}:${(st.seen || []).length}`;
     const refresh = key !== stampKey;
     stampKey = key;
+    const pxk = (2 * Math.tan((camera.fov * Math.PI) / 360)) / Math.max(1, canvas.clientHeight);
+    const minBadgePx = canvas.clientWidth < 700 ? 34 : 40;
     spots.forEach((s) => {
       const bob = reduceMotion ? 0 : Math.sin(time * 1.6 + s.phase) * 0.5;
       s.pop = Math.max(0, s.pop - dt * 2.5);
       const grow = (s === hover ? 1.25 : 1) + Math.sin(s.pop * Math.PI) * 0.5;
       s.sprite.position.set(s.local.x, s.local.y + bob, s.local.z);
       s.glow.position.copy(s.sprite.position);
-      s.sprite.scale.setScalar(s.size * grow);
+      const dist = camera.position.distanceTo(tmp.copy(s.local).applyMatrix4(s.holder.matrixWorld));
+      const eff = Math.max(s.size, (s.e.state === 'unreleased' ? 22 : minBadgePx) * pxk * dist);
+      s.sprite.scale.setScalar(eff * grow);
+      s.glow.scale.setScalar(eff * 2);
       if (s.parts) {
         const w = s.size * (s === hover ? 0.26 : 0.16);
         s.parts.beam.scale.set(w, s.local.y + bob - s.topY, w);

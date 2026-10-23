@@ -256,3 +256,7 @@ body.has-player .guide { bottom: 294px; }
 .hint3d.bye { opacity: 0; }
 @keyframes hint-in { from { opacity: 0; transform: translate(-50%, -30%); } }
 @media (max-width: 700px) { .hint3d { font-size: 14px; } }
+/* 上方標題後面一層淡淡的暗帶，亮的星球在後面也讀得清楚 */
+body.gl::before { content: ""; position: fixed; left: 0; right: 0; top: 0; height: 170px; z-index: 2; pointer-events: none;
+  background: linear-gradient(to bottom, rgba(4, 8, 18, 0.72), rgba(4, 8, 18, 0)); }
+body.gl.list::before { display: none; }
