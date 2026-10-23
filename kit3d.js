@@ -2,6 +2,8 @@
 import * as THREE from 'three';
 
 export const TAU = Math.PI * 2;
+// 柔光：所有光暈、邊光、點雲共用的強度。調這裡就能讓整個畫面更柔或更亮。
+export const SOFT = { glow: 0.5, rim: 0.6, points: 0.75 };
 
 // ---------- 共用的 GLSL ----------
 export const NOISE = /* glsl */ `
@@ -15,7 +17,7 @@ float fbm(vec3 p) { float v = 0.0, a = 0.5; for (int i = 0; i < 5; i++) { v += a
 
 export function pointsMaterial({ additive = true, scale = 600, gain = 1 } = {}) {
   return new THREE.ShaderMaterial({
-    uniforms: { time: { value: 0 }, scale: { value: scale }, gain: { value: gain } },
+    uniforms: { time: { value: 0 }, scale: { value: scale }, gain: { value: gain * SOFT.points } },
     vertexShader: /* glsl */ `
       attribute float size; attribute float phase; attribute vec3 color;
       uniform float time; uniform float scale; varying vec3 vColor; varying float vTw;
@@ -31,7 +33,7 @@ export function pointsMaterial({ additive = true, scale = 600, gain = 1 } = {}) 
       void main() {
         float d = length(gl_PointCoord - 0.5);
         float a = 1.0 - smoothstep(0.0, 0.5, d);
-        gl_FragColor = vec4(vColor * (0.8 + vTw) * gain, a);
+        gl_FragColor = vec4(vColor * (0.6 + 0.5 * vTw) * gain, a);
       }`,
     transparent: true,
     depthWrite: false,
@@ -59,7 +61,7 @@ export function makePoints(count, place, { scale = 600, gain = 1 } = {}) {
 
 export function fresnelMaterial(color, power = 3, strength = 1.4) {
   return new THREE.ShaderMaterial({
-    uniforms: { color: { value: new THREE.Color(color) }, power: { value: power }, strength: { value: strength } },
+    uniforms: { color: { value: new THREE.Color(color) }, power: { value: power }, strength: { value: strength * SOFT.rim } },
     vertexShader: /* glsl */ `varying vec3 vN; varying vec3 vV;
       void main() { vec4 mv = modelViewMatrix * vec4(position, 1.0); vN = normalize(normalMatrix * normal); vV = normalize(-mv.xyz); gl_Position = projectionMatrix * mv; }`,
     fragmentShader: /* glsl */ `uniform vec3 color; uniform float power; uniform float strength; varying vec3 vN; varying vec3 vV;
@@ -77,7 +79,7 @@ export function flowMaterial(color, speed = 0.6, bands = 18) {
         float s = fract(vUv.x * bands - time * speed);
         float pulse = smoothstep(0.0, 0.25, s) * (1.0 - smoothstep(0.55, 1.0, s));
         float edge = 1.0 - abs(vUv.y - 0.5) * 2.0;
-        gl_FragColor = vec4(color * (0.5 + 1.8 * pulse) * (0.4 + 0.6 * edge), 0.55 + 0.45 * pulse);
+        gl_FragColor = vec4(color * (0.4 + 0.7 * pulse) * (0.4 + 0.6 * edge), 0.4 + 0.3 * pulse);
       }`,
     transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide,
   });
@@ -112,27 +114,27 @@ export function badgeTexture(icon, state, marks) {
     c.width = c.height = 192;
     const g = c.getContext('2d');
     const soon = state === 'unreleased';
-    const [rimA, rimB] = state === 'subscriber' ? ['#fff3b0', '#d98a1a'] : soon ? ['#aab3cf', '#4a5270'] : ['#d8fbff', '#2aa7c9'];
-    // 像一顆糖果按鈕：外圈金屬框、內面有立體漸層、上方有反光
+    const [rimA, rimB] = state === 'subscriber' ? ['#f9e3a8', '#c99649'] : soon ? ['#b9b6d6', '#77749a'] : ['#c6ece2', '#6cb5a5'];
+    // 像繪本裡的貼紙：粉彩外框、奶油色底面、上方一點反光
     const rim = g.createLinearGradient(0, 16, 0, 176);
     rim.addColorStop(0, rimA); rim.addColorStop(1, rimB);
     g.beginPath(); g.arc(96, 96, 80, 0, TAU); g.fillStyle = rim; g.fill();
-    const face = g.createRadialGradient(76, 66, 8, 96, 100, 74);
-    if (soon) { face.addColorStop(0, '#3a4262'); face.addColorStop(1, '#151a2c'); }
-    else if (state === 'subscriber') { face.addColorStop(0, '#3a2a10'); face.addColorStop(1, '#120c04'); }
-    else { face.addColorStop(0, '#1e4a6e'); face.addColorStop(1, '#07142a'); }
+    const face = g.createRadialGradient(80, 70, 8, 96, 100, 74);
+    if (soon) { face.addColorStop(0, '#5b5a80'); face.addColorStop(1, '#3a3958'); }
+    else if (state === 'subscriber') { face.addColorStop(0, '#fff6e2'); face.addColorStop(1, '#efd9ad'); }
+    else { face.addColorStop(0, '#fffbf2'); face.addColorStop(1, '#e6ddcc'); }
     g.beginPath(); g.arc(96, 96, state === 'subscriber' ? 66 : 70, 0, TAU); g.fillStyle = face; g.fill();
     g.textAlign = 'center'; g.textBaseline = 'middle';
-    g.shadowColor = 'rgba(0,0,0,0.55)'; g.shadowBlur = 8; g.shadowOffsetY = 4;
-    if (soon) { g.font = '800 84px sans-serif'; g.fillStyle = '#c3cbe6'; g.fillText('?', 96, 102); }
+    g.shadowColor = 'rgba(60,40,20,0.25)'; g.shadowBlur = 6; g.shadowOffsetY = 3;
+    if (soon) { g.font = '800 84px sans-serif'; g.fillStyle = '#d6d2ee'; g.fillText('?', 96, 102); }
     else { g.font = `86px ${EMOJI_FONT}`; g.fillText(icon, 96, 104); }
     g.shadowColor = 'transparent';
     const gloss = g.createLinearGradient(0, 26, 0, 96);
-    gloss.addColorStop(0, 'rgba(255,255,255,0.55)'); gloss.addColorStop(1, 'rgba(255,255,255,0)');
+    gloss.addColorStop(0, 'rgba(255,255,255,0.4)'); gloss.addColorStop(1, 'rgba(255,255,255,0)');
     g.beginPath(); g.ellipse(96, 58, 52, 30, 0, Math.PI, TAU); g.ellipse(96, 58, 52, 14, 0, 0, Math.PI); g.fillStyle = gloss; g.fill();
     if (marks === 'seen') {
-      g.beginPath(); g.arc(156, 38, 18, 0, TAU); g.fillStyle = '#6ff2c4'; g.fill();
-      g.strokeStyle = '#073a2c'; g.lineWidth = 5; g.beginPath(); g.moveTo(147, 38); g.lineTo(154, 46); g.lineTo(166, 30); g.stroke();
+      g.beginPath(); g.arc(156, 38, 18, 0, TAU); g.fillStyle = '#8fd8bf'; g.fill();
+      g.strokeStyle = '#1f4a3c'; g.lineWidth = 5; g.beginPath(); g.moveTo(147, 38); g.lineTo(154, 46); g.lineTo(166, 30); g.stroke();
     } else if (marks) { g.font = `44px ${EMOJI_FONT}`; g.fillText(marks, 150, 40); }
     return c;
   });
@@ -146,9 +148,12 @@ export function labelTexture(text, color) {
     c.width = w; c.height = 80;
     g.font = '700 44px "Noto Sans TC","PingFang TC",sans-serif';
     g.textAlign = 'center'; g.textBaseline = 'middle';
-    g.shadowColor = color; g.shadowBlur = 18;
-    g.fillStyle = '#ffffff';
+    g.shadowColor = 'rgba(8, 10, 28, 0.85)'; g.shadowBlur = 10; g.shadowOffsetY = 2;
+    g.fillStyle = '#f7efe0';
     g.fillText(text, w / 2, 42);
+    g.shadowColor = 'transparent';
+    g.fillStyle = color; g.globalAlpha = 0.85; // 字下面一條小小的區域色
+    g.beginPath(); g.roundRect(w / 2 - 22, 70, 44, 6, 3); g.fill();
     return c;
   });
 }
@@ -161,7 +166,7 @@ export function ring(radius, color, opacity = 0.35, width = 0.12) {
   return m;
 }
 export function glowSprite(color, size, opacity = 1) {
-  const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTexture(), color, transparent: true, opacity, blending: THREE.AdditiveBlending, depthWrite: false }));
+  const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTexture(), color, transparent: true, opacity: opacity * SOFT.glow, blending: THREE.AdditiveBlending, depthWrite: false }));
   s.scale.set(size, size, 1);
   return s;
 }

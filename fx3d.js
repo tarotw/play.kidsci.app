@@ -5,7 +5,6 @@ import { rng } from './explorer.js';
 
 const UV_VERT = /* glsl */ `varying vec2 vUv; void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`;
 const additive = { transparent: true, depthWrite: false, blending: THREE.AdditiveBlending };
-const hdr = (color, k) => new THREE.Color(color).multiplyScalar(k);
 
 // ---------- 星雲天空：每換一格烤一次進立方體貼圖，之後不再花算力 ----------
 export function createSky(renderer) {
@@ -14,13 +13,13 @@ export function createSky(renderer) {
   const scene = new THREE.Scene();
   const uniforms = {
     base: { value: new THREE.Color() }, c1: { value: new THREE.Color() }, c2: { value: new THREE.Color() }, c3: { value: new THREE.Color() },
-    seed: { value: 0 }, bright: { value: 1 },
+    horizon: { value: new THREE.Color() }, seed: { value: 0 }, bright: { value: 1 },
   };
   const mat = new THREE.ShaderMaterial({
     uniforms,
     vertexShader: /* glsl */ `varying vec3 vDir; void main() { vDir = position; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`,
     fragmentShader: NOISE + /* glsl */ `
-      uniform vec3 base; uniform vec3 c1; uniform vec3 c2; uniform vec3 c3; uniform float seed; uniform float bright; varying vec3 vDir;
+      uniform vec3 base; uniform vec3 c1; uniform vec3 c2; uniform vec3 c3; uniform vec3 horizon; uniform float seed; uniform float bright; varying vec3 vDir;
       void main() {
         vec3 d = normalize(vDir);
         vec3 q = d * 1.6 + seed;
@@ -32,7 +31,8 @@ export function createSky(renderer) {
         col += c1 * smoothstep(0.42, 0.85, n) * (0.35 + 0.65 * band) * 0.75;
         col += c2 * smoothstep(0.5, 0.9, m) * 0.55 * band;
         col += c3 * pow(smoothstep(0.5, 0.95, n * m * 1.8), 2.0) * 0.9;
-        col *= 1.0 - smoothstep(0.55, 0.75, fbm(q * 6.0)) * 0.4 * band;
+        col *= 1.0 - smoothstep(0.55, 0.75, fbm(q * 6.0)) * 0.25 * band;
+        col += horizon * exp(-abs(d.y + 0.05) * 5.0) * 0.5; // 地平線的暖光，像天快亮
         gl_FragColor = vec4(col * bright, 1.0);
       }`,
     side: THREE.BackSide,
@@ -41,8 +41,9 @@ export function createSky(renderer) {
   scene.add(new THREE.Mesh(new THREE.SphereGeometry(10, 64, 32), mat));
   return {
     texture: target.texture,
-    bake({ base, colors, seed, bright = 1 }) {
+    bake({ base, colors, horizon = 0x000000, seed, bright = 1 }) {
       uniforms.base.value.set(base);
+      uniforms.horizon.value.set(horizon);
       [uniforms.c1, uniforms.c2, uniforms.c3].forEach((u, i) => u.value.set(colors[i]));
       uniforms.seed.value = seed;
       uniforms.bright.value = bright;
@@ -85,18 +86,20 @@ export function holoPad(color, radius) {
         vec2 cell = fract(p * radius * 0.45) - 0.5;
         float dots = 1.0 - smoothstep(0.04, 0.09, length(cell));
         float edge = smoothstep(0.88, 1.0, r);
-        float a = 0.05 + rings * 0.22 + dots * 0.14 * (1.0 - r) + edge * 0.4;
-        gl_FragColor = vec4(color * a * 1.5, a);
+        float a = 0.16 + rings * 0.08 + dots * 0.06 * (1.0 - r) + edge * 0.18 - r * 0.06;
+        vec3 glass = mix(vec3(0.10, 0.12, 0.24), color, 0.35 + rings * 0.25);
+        gl_FragColor = vec4(glass, a);
       }`,
-    ...additive,
+    transparent: true, depthWrite: false,
     side: THREE.DoubleSide,
   });
   const disc = new THREE.Mesh(new THREE.CircleGeometry(1, 72), mat);
   disc.rotation.x = -Math.PI / 2;
   disc.scale.setScalar(radius);
-  const rim = new THREE.Mesh(new THREE.TorusGeometry(radius, 0.16, 8, 120), new THREE.MeshBasicMaterial({ color: hdr(c, 1.35) }));
+  const pastel = c.clone().lerp(new THREE.Color(0xfff6ea), 0.35);
+  const rim = new THREE.Mesh(new THREE.TorusGeometry(radius, 0.3, 14, 140), new THREE.MeshStandardMaterial({ color: pastel, emissive: pastel, emissiveIntensity: 0.28, roughness: 0.45, metalness: 0.05 }));
   rim.rotation.x = Math.PI / 2;
-  const skirtMat = beamMaterial(c, 0.35);
+  const skirtMat = beamMaterial(c, 0.1);
   const skirt = new THREE.Mesh(new THREE.CylinderGeometry(radius * 0.82, radius, 3.2, 72, 1, true), skirtMat);
   skirt.position.y = -1.6;
   skirt.rotation.x = Math.PI; // 光從平台邊往下淡出
@@ -107,15 +110,15 @@ export function holoPad(color, radius) {
 
 // ---------- 頻道光柱與底座：同一種狀態共用材質 ----------
 export function beaconKit() {
-  const colors = { public: 0x6fe8ff, subscriber: 0xffc040, seen: 0x7dffc4 };
-  const beams = Object.fromEntries(Object.entries(colors).map(([k, c]) => [k, beamMaterial(c, 0.6)]));
-  const halos = Object.fromEntries(Object.entries(colors).map(([k, c]) => [k, new THREE.MeshBasicMaterial({ color: hdr(c, 1.3), ...additive, opacity: 0.8, side: THREE.DoubleSide })]));
+  const colors = { public: 0x9fdccb, subscriber: 0xf0c878, seen: 0xbfe6a8 };
+  const beams = Object.fromEntries(Object.entries(colors).map(([k, c]) => [k, beamMaterial(c, 0.2)]));
+  const halos = Object.fromEntries(Object.entries(colors).map(([k, c]) => [k, new THREE.MeshBasicMaterial({ color: c, ...additive, opacity: 0.4, side: THREE.DoubleSide })]));
   const beamGeo = new THREE.CylinderGeometry(1, 1, 1, 16, 1, true);
   beamGeo.translate(0, 0.5, 0);
   const haloGeo = new THREE.RingGeometry(0.75, 1, 48);
   haloGeo.rotateX(-Math.PI / 2);
   const orbitGeo = new THREE.TorusGeometry(1, 0.045, 6, 64);
-  const orbitMat = new THREE.MeshBasicMaterial({ color: hdr(0xffd060, 2.2) });
+  const orbitMat = new THREE.MeshStandardMaterial({ color: 0xf3d08a, emissive: 0xf3d08a, emissiveIntensity: 0.35, roughness: 0.4 });
   const sparkGeo = new THREE.OctahedronGeometry(0.22);
   return {
     kindOf: (state, seen) => (seen ? 'seen' : state === 'subscriber' ? 'subscriber' : 'public'),
@@ -153,7 +156,7 @@ export function createEffects(scene) {
   ringGeo.rotateX(-Math.PI / 2);
   return {
     shockwave(pos, color, size = 8, dur = 0.8) {
-      const mat = new THREE.MeshBasicMaterial({ color: hdr(color, 1.8), ...additive, opacity: 1, side: THREE.DoubleSide });
+      const mat = new THREE.MeshBasicMaterial({ color, ...additive, opacity: 0.6, side: THREE.DoubleSide });
       const m = new THREE.Mesh(ringGeo, mat);
       m.position.copy(pos);
       scene.add(m);
@@ -161,7 +164,7 @@ export function createEffects(scene) {
       live.push((dt) => {
         t += dt / dur;
         m.scale.setScalar(0.5 + t * size);
-        mat.opacity = Math.max(0, 1 - t);
+        mat.opacity = 0.6 * Math.max(0, 1 - t);
         if (t < 1) return true;
         scene.remove(m); mat.dispose();
         return false;
@@ -175,7 +178,7 @@ export function createEffects(scene) {
         vel.push(Math.cos(a) * s * v, Math.abs(u) * v + speed * 0.35, Math.sin(a) * s * v);
         c.set(palette[i % palette.length]);
         return { pos: [pos.x, pos.y, pos.z], size: size * (0.5 + r()) };
-      }, { scale: 500, gain: 1.6 });
+      }, { scale: 500, gain: 1.0 });
       pts.frustumCulled = false;
       scene.add(pts);
       const p = pts.geometry.attributes.position;
@@ -187,7 +190,7 @@ export function createEffects(scene) {
           p.array[i * 3] += vel[i * 3] * dt; p.array[i * 3 + 1] += vel[i * 3 + 1] * dt; p.array[i * 3 + 2] += vel[i * 3 + 2] * dt;
         }
         p.needsUpdate = true;
-        pts.material.uniforms.gain.value = 1.6 * Math.max(0, 1 - t / dur);
+        pts.material.uniforms.gain.value = Math.max(0, 1 - t / dur);
         pts.material.uniforms.time.value = t * 6;
         if (t < dur) return true;
         scene.remove(pts); pts.geometry.dispose(); pts.material.dispose();
@@ -239,10 +242,10 @@ function orbiters(count, place, { scale = 400, gain = 1 } = {}) {
 export function makeTraffic(reach) {
   const r = rng(0.37);
   return orbiters(320, (i, c) => {
-    c.set(i % 3 === 0 ? 0x7cf2ff : i % 3 === 1 ? 0xffa040 : 0xffffff);
+    c.set(i % 3 === 0 ? 0xa8e0d6 : i % 3 === 1 ? 0xf5c29a : 0xf7efe0);
     const lane = Math.floor(r() * 7);
     return { r: 8 + lane * (reach / 7), y: 3 + (lane % 3) * 3.5, a: r() * TAU, speed: (r() > 0.5 ? 1 : -1) * (0.25 + r() * 0.2) / (1 + lane * 0.4), size: 1.4 + r() };
-  }, { gain: 1.6 });
+  }, { gain: 0.9 });
 }
 
 /** 光塵：每一格都有，讓畫面有前後層次。 */
@@ -252,7 +255,7 @@ export function makeMotes(reach, color) {
   return orbiters(420, (i, c) => {
     c.copy(base).offsetHSL((r() - 0.5) * 0.1, 0, (r() - 0.5) * 0.2);
     return { r: r() * reach * 1.1, y: 1 + r() * 22, a: r() * TAU, speed: (r() - 0.5) * 0.04, size: 0.6 + r() * 1.4 };
-  }, { gain: 0.9 });
+  }, { gain: 0.55 });
 }
 
 /** 有水的浮空島：邊緣流下來的瀑布。 */
@@ -276,7 +279,7 @@ export function makeWaterfall(radius, angle, drop = 14) {
         vA = (1.0 - f) * 0.8;
       }`,
     fragmentShader: /* glsl */ `varying float vA;
-      void main() { float d = length(gl_PointCoord - 0.5); float a = (1.0 - smoothstep(0.0, 0.5, d)) * vA; gl_FragColor = vec4(vec3(0.75, 0.95, 1.2) * a, a); }`,
+      void main() { float d = length(gl_PointCoord - 0.5); float a = (1.0 - smoothstep(0.0, 0.5, d)) * vA; gl_FragColor = vec4(vec3(0.62, 0.78, 0.88) * a, a); }`,
     ...additive,
   });
   const pts = new THREE.Points(geo, mat);

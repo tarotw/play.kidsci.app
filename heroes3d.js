@@ -58,7 +58,7 @@ export function planetMaterial(kind, { c1 = 0x888888, c2 = 0x444444, c3 = 0xffff
           float cloud = smoothstep(0.55, 0.8, fbm(p * 4.0 + vec3(time * 0.01, 3.0, 0.0)));
           col = mix(col, vec3(1.0), cloud * 0.6);
           float city = isLand ? step(0.78, fbm(p * 30.0)) : 0.0; // 夜裡的城市燈光
-          glow = vec3(1.6, 1.1, 0.5) * city * (1.0 - cloud) * smoothstep(0.15, 0.0, diff);
+          glow = vec3(0.9, 0.72, 0.42) * city * (1.0 - cloud) * smoothstep(0.15, 0.0, diff);
         }
         vec3 V = normalize(cameraPosition - vW);
         float fr = pow(1.0 - max(dot(vN, V), 0.0), 3.0);
@@ -93,10 +93,10 @@ function sunSurface(radius) {
         vec3 p = normalize(vP) * 4.0;
         float cells = fbm(p * 1.6 + vec3(time * 0.12, -time * 0.08, time * 0.05));
         float spots = smoothstep(0.72, 0.8, fbm(p * 0.7 + 11.0));
-        vec3 c = mix(vec3(1.8, 0.55, 0.08), vec3(2.8, 2.0, 0.8), smoothstep(0.35, 0.75, cells));
+        vec3 c = mix(vec3(1.2, 0.62, 0.3), vec3(1.5, 1.15, 0.72), smoothstep(0.35, 0.75, cells)); // 暖暖的太陽，不刺眼
         c *= 1.0 - spots * 0.6;
         float rim = pow(1.0 - max(dot(vN, vV), 0.0), 2.0);
-        gl_FragColor = vec4(c * (1.0 - rim * 0.35) + rim * vec3(1.8, 0.5, 0.05), 1.0);
+        gl_FragColor = vec4(c * (1.0 - rim * 0.35) + rim * vec3(0.9, 0.5, 0.28), 1.0);
       }`,
   });
   return { mesh: new THREE.Mesh(new THREE.SphereGeometry(radius, 72, 48), mat), mat };
@@ -108,11 +108,11 @@ export function heroSolarSystem(sc) {
   const g = new THREE.Group();
   const R = Math.min(6, inner * 0.42);
   const sun = sunSurface(R);
-  const corona = new THREE.Mesh(new THREE.SphereGeometry(R * 1.18, 48, 32), fresnelMaterial(0xff9a30, 1.6, 2.2));
-  g.add(sun.mesh, corona, glowSprite(0xffa040, R * 5, 0.7), glowSprite(0xff6a10, R * 12, 0.22));
+  const corona = new THREE.Mesh(new THREE.SphereGeometry(R * 1.18, 48, 32), fresnelMaterial(0xf5b07a, 1.6, 1.6));
+  g.add(sun.mesh, corona, glowSprite(0xf5c08a, R * 5, 0.6), glowSprite(0xf09a70, R * 12, 0.18));
   // 日珥：太陽表面跳起來的火焰拱
   const flares = [0, 1, 2, 3].map((i) => {
-    const m = new THREE.Mesh(new THREE.TorusGeometry(R * 0.32, R * 0.05, 8, 32, Math.PI), new THREE.MeshBasicMaterial({ color: new THREE.Color(2.6, 0.9, 0.15), ...additive }));
+    const m = new THREE.Mesh(new THREE.TorusGeometry(R * 0.32, R * 0.05, 8, 32, Math.PI), new THREE.MeshBasicMaterial({ color: new THREE.Color(1.1, 0.62, 0.36), ...additive }));
     const pivot = new THREE.Group();
     pivot.rotation.set(i * 1.3, i * 2.1, i * 0.7);
     m.position.y = R * 0.92;
@@ -329,8 +329,8 @@ export function heroAtom(sc) {
   sys.position.y = orbitR * 0.45;
   g.add(sys);
   const nucleus = new THREE.Group();
-  const proton = new THREE.MeshStandardMaterial({ color: 0xff4a5a, emissive: 0x601018, roughness: 0.35, metalness: 0.1 });
-  const neutron = new THREE.MeshStandardMaterial({ color: 0x5a8cff, emissive: 0x102060, roughness: 0.35, metalness: 0.1 });
+  const proton = new THREE.MeshStandardMaterial({ color: 0xf0909a, emissive: 0x3a1a20, roughness: 0.5, metalness: 0.05 });
+  const neutron = new THREE.MeshStandardMaterial({ color: 0x92aae6, emissive: 0x1a2440, roughness: 0.5, metalness: 0.05 });
   const ball = new THREE.SphereGeometry(1.25, 28, 20);
   const n = 24;
   for (let i = 0; i < n; i++) {
@@ -340,23 +340,23 @@ export function heroAtom(sc) {
     m.position.set(Math.cos(a) * r * d, y * d, Math.sin(a) * r * d);
     nucleus.add(m);
   }
-  sys.add(nucleus, glowSprite(0xffc8a0, 12, 0.45));
+  sys.add(nucleus, glowSprite(0xf5d2b8, 12, 0.35));
   // 電子雲：機率雲的感覺
   const r = rng(0.44);
   const cloud = makePoints(1800, (i, c) => {
     const u = r() * 2 - 1, a = r() * TAU, d = orbitR * (0.3 + Math.pow(r(), 0.6) * 0.75), s = Math.sqrt(1 - u * u);
     c.setHSL(0.52 + r() * 0.1, 0.9, 0.6);
     return { pos: [Math.cos(a) * s * d, u * d * 0.8, Math.sin(a) * s * d], size: 0.6 + r() };
-  }, { scale: 400, gain: 0.35 });
+  }, { scale: 400, gain: 0.25 });
   sys.add(cloud);
   const electrons = [0, 1, 2].map((k) => {
     const orbit = new THREE.Group();
     orbit.rotation.set(Math.PI / 2 + (k - 1) * 0.95, k * 1.05, 0);
-    const path = new THREE.Mesh(new THREE.TorusGeometry(orbitR, 0.09, 8, 200), new THREE.MeshBasicMaterial({ color: new THREE.Color(0.8, 0.6, 1.6), ...additive, opacity: 0.7 }));
-    const e = new THREE.Mesh(new THREE.SphereGeometry(0.75, 20, 14), new THREE.MeshBasicMaterial({ color: new THREE.Color(0.7, 2.4, 2.8) }));
-    e.add(glowSprite(0x8ff0ff, 6, 0.9));
+    const path = new THREE.Mesh(new THREE.TorusGeometry(orbitR, 0.09, 8, 200), new THREE.MeshBasicMaterial({ color: new THREE.Color(0.72, 0.66, 0.95), ...additive, opacity: 0.45 }));
+    const e = new THREE.Mesh(new THREE.SphereGeometry(0.75, 20, 14), new THREE.MeshBasicMaterial({ color: new THREE.Color(0.75, 1.0, 0.98) }));
+    e.add(glowSprite(0xbfeee6, 6, 0.7));
     // 拖尾：沿著軌道跟在電子後面的光點
-    const trail = makePoints(40, (i, c) => { c.setRGB(0.5, 1.6, 2.0); return { pos: [0, 0, 0], size: 2.6 * (1 - i / 40), phase: 0 }; }, { scale: 400, gain: 1 });
+    const trail = makePoints(40, (i, c) => { c.setRGB(0.6, 0.85, 0.85); return { pos: [0, 0, 0], size: 2.6 * (1 - i / 40), phase: 0 }; }, { scale: 400, gain: 1 });
     trail.frustumCulled = false;
     orbit.add(path, e, trail);
     sys.add(orbit);
@@ -387,29 +387,29 @@ export function heroCell(sc) {
   sys.position.y = R * 0.55;
   g.add(sys);
   const memMat = new THREE.ShaderMaterial({
-    uniforms: { time: { value: 0 }, color: { value: new THREE.Color(0xff6fae) } },
+    uniforms: { time: { value: 0 }, color: { value: new THREE.Color(0xf0a6c4) } },
     vertexShader: NOISE + /* glsl */ `uniform float time; varying vec3 vN; varying vec3 vV;
       void main() {
         vec3 p = position + normal * (fbm(position * 0.18 + time * 0.25) - 0.5) * 1.6; // 細胞膜會蠕動
         vec4 mv = modelViewMatrix * vec4(p, 1.0); vN = normalize(normalMatrix * normal); vV = normalize(-mv.xyz); gl_Position = projectionMatrix * mv;
       }`,
     fragmentShader: /* glsl */ `uniform vec3 color; varying vec3 vN; varying vec3 vV;
-      void main() { float f = pow(1.0 - max(dot(vN, vV), 0.0), 2.2); gl_FragColor = vec4(color * (0.08 + f * 1.7), 0.08 + f * 0.9); }`,
+      void main() { float f = pow(1.0 - max(dot(vN, vV), 0.0), 2.2); gl_FragColor = vec4(color * (0.08 + f * 1.0), 0.08 + f * 0.7); }`,
     ...additive,
   });
   const membrane = new THREE.Mesh(new THREE.SphereGeometry(R, 96, 64), memMat);
-  const nucleusMat = planetMaterial('gas', { c1: 0x8a4dff, c2: 0x5a2ab0, c3: 0xd0a0ff, seed: 2, light: [0.4, 1, 0.6], rim: 0xd0a0ff });
+  const nucleusMat = planetMaterial('gas', { c1: 0xa894e2, c2: 0x7464b4, c3: 0xe0d0f4, seed: 2, light: [0.4, 1, 0.6], rim: 0xe0d0f4 });
   const nucleus = new THREE.Mesh(new THREE.SphereGeometry(R * 0.28, 48, 32), nucleusMat);
-  const nucleolus = new THREE.Mesh(new THREE.SphereGeometry(R * 0.1, 24, 16), new THREE.MeshBasicMaterial({ color: new THREE.Color(1.6, 0.6, 1.8) }));
+  const nucleolus = new THREE.Mesh(new THREE.SphereGeometry(R * 0.1, 24, 16), new THREE.MeshBasicMaterial({ color: new THREE.Color(0.98, 0.76, 1.0) }));
   nucleolus.position.set(R * 0.08, R * 0.06, R * 0.12);
   sys.add(membrane, nucleus, nucleolus);
   const r = rng(0.12);
   const inside = () => { const a = r() * TAU, b = Math.acos(r() * 2 - 1), d = R * (0.42 + r() * 0.4); return new THREE.Vector3(Math.cos(a) * Math.sin(b) * d, Math.cos(b) * d * 0.8, Math.sin(a) * Math.sin(b) * d); };
   const parts = [];
-  const mito = new THREE.MeshStandardMaterial({ color: 0xff9f4a, emissive: 0x5a2a08, roughness: 0.5 });
+  const mito = new THREE.MeshStandardMaterial({ color: 0xf3b484, emissive: 0x3a2214, roughness: 0.55 });
   const mitoGeo = new THREE.CapsuleGeometry(R * 0.045, R * 0.14, 6, 12);
   for (let i = 0; i < 12; i++) { const m = new THREE.Mesh(mitoGeo, mito); m.position.copy(inside()); m.rotation.set(r() * 3, r() * 3, r() * 3); parts.push(m); }
-  const golgi = new THREE.MeshStandardMaterial({ color: 0x6affc8, emissive: 0x0a5a3a, roughness: 0.4 });
+  const golgi = new THREE.MeshStandardMaterial({ color: 0xa4dccb, emissive: 0x16362c, roughness: 0.5 });
   const gPos = inside();
   for (let i = 0; i < 5; i++) {
     const m = new THREE.Mesh(new THREE.TorusGeometry(R * (0.12 - i * 0.012), R * 0.012, 6, 32, Math.PI * 1.2), golgi);
@@ -417,9 +417,9 @@ export function heroCell(sc) {
     m.rotation.x = Math.PI / 2;
     parts.push(m);
   }
-  const er = new THREE.Mesh(new THREE.TorusKnotGeometry(R * 0.36, R * 0.014, 220, 8, 3, 7), new THREE.MeshStandardMaterial({ color: 0x5ad8ff, emissive: 0x0a3a5a, transparent: true, opacity: 0.7 }));
+  const er = new THREE.Mesh(new THREE.TorusKnotGeometry(R * 0.36, R * 0.014, 220, 8, 3, 7), new THREE.MeshStandardMaterial({ color: 0xa8c8ee, emissive: 0x16283a, transparent: true, opacity: 0.6 }));
   parts.push(er);
-  const ribo = makePoints(500, (i, c) => { const p = inside(); c.setRGB(1.2, 1.0, 1.6); return { pos: [p.x, p.y, p.z], size: 0.5 + r() * 0.6 }; }, { scale: 360, gain: 0.8 });
+  const ribo = makePoints(500, (i, c) => { const p = inside(); c.setRGB(0.92, 0.86, 1.0); return { pos: [p.x, p.y, p.z], size: 0.5 + r() * 0.6 }; }, { scale: 360, gain: 0.8 });
   parts.push(ribo);
   parts.forEach((p) => sys.add(p));
   g.userData.tick = (t) => {
@@ -451,10 +451,10 @@ function onAirTexture() {
     const c = document.createElement('canvas');
     c.width = 320; c.height = 112;
     const g = c.getContext('2d');
-    g.fillStyle = '#2a0608'; g.strokeStyle = '#ff4a4a'; g.lineWidth = 8;
+    g.fillStyle = '#3a1c26'; g.strokeStyle = '#ee9a9a'; g.lineWidth = 8;
     g.beginPath(); g.roundRect(6, 6, 308, 100, 22); g.fill(); g.stroke();
     g.font = '900 64px sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle';
-    g.shadowColor = '#ff2020'; g.shadowBlur = 20; g.fillStyle = '#ffd8d8';
+    g.shadowColor = 'rgba(238,120,120,0.6)'; g.shadowBlur = 10; g.fillStyle = '#ffe6e0';
     g.fillText('ON AIR', 160, 60);
     return c;
   });
@@ -469,7 +469,7 @@ export function heroStudio(sc) {
   const metal = new THREE.MeshStandardMaterial({ color: 0x9aa8b8, metalness: 0.9, roughness: 0.25, emissive: 0x111418 });
   const head = new THREE.Mesh(new THREE.CapsuleGeometry(2.2, 3, 8, 32), new THREE.MeshStandardMaterial({ color: 0x2f4f6f, emissive: 0x0a2030, metalness: 0.6, roughness: 0.3 }));
   head.position.y = 9;
-  const grill = new THREE.Mesh(new THREE.CapsuleGeometry(2.26, 3, 8, 32), new THREE.MeshBasicMaterial({ color: new THREE.Color(1.4, 0.9, 0.35), wireframe: true, transparent: true, opacity: 0.6 }));
+  const grill = new THREE.Mesh(new THREE.CapsuleGeometry(2.26, 3, 8, 32), new THREE.MeshBasicMaterial({ color: new THREE.Color(0.95, 0.78, 0.55), wireframe: true, transparent: true, opacity: 0.45 }));
   grill.position.y = 9;
   const band = new THREE.Mesh(new THREE.TorusGeometry(2.3, 0.22, 10, 40), metal);
   band.position.y = 9; band.rotation.x = Math.PI / 2;
@@ -483,12 +483,12 @@ export function heroStudio(sc) {
   const sign = new THREE.Sprite(new THREE.SpriteMaterial({ map: onAirTexture(), toneMapped: false, transparent: true }));
   sign.scale.set(9, 3.15, 1);
   sign.position.set(0, 17, back);
-  const signGlow = glowSprite(0xff3030, 16, 0.35);
+  const signGlow = glowSprite(0xee8a8a, 16, 0.3);
   signGlow.position.copy(sign.position);
   g.add(mic, sign, signGlow);
   // 聲波：從麥克風一圈一圈擴散出去
   const waves = [0, 1, 2, 3].map(() => {
-    const m = new THREE.Mesh(new THREE.TorusGeometry(1, 0.05, 6, 64), new THREE.MeshBasicMaterial({ color: new THREE.Color(1.8, 1.1, 0.4), ...additive, opacity: 0 }));
+    const m = new THREE.Mesh(new THREE.TorusGeometry(1, 0.05, 6, 64), new THREE.MeshBasicMaterial({ color: new THREE.Color(1.0, 0.82, 0.58), ...additive, opacity: 0 }));
     m.position.set(0, 9.5, back);
     g.add(m);
     return m;

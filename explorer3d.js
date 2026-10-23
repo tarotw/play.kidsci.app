@@ -7,7 +7,7 @@ import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { buildScene, iconFor, Sound, hash, rng, THEMES } from './explorer.js';
-import { TAU, NOISE, pointsMaterial, makePoints, fresnelMaterial, flowMaterial, textureCache, cached, glowTexture, EMOJI_FONT, badgeTexture, labelTexture, ring, glowSprite } from './kit3d.js';
+import { SOFT, TAU, NOISE, pointsMaterial, makePoints, fresnelMaterial, flowMaterial, textureCache, cached, glowTexture, EMOJI_FONT, badgeTexture, labelTexture, ring, glowSprite } from './kit3d.js';
 import * as fx from './fx3d.js';
 import * as heroes from './heroes3d.js';
 
@@ -37,7 +37,7 @@ function makeGalaxy() {
   const g = new THREE.Group();
   const r = rng(0.63);
   const count = matchMedia('(max-width: 700px)').matches ? 16000 : 30000;
-  const core = new THREE.Color(1.0, 0.85, 0.6), arm = new THREE.Color(0.45, 0.6, 1.0), pink = new THREE.Color(1.0, 0.5, 0.9);
+  const core = new THREE.Color(0.95, 0.82, 0.66), arm = new THREE.Color(0.6, 0.66, 0.95), pink = new THREE.Color(0.95, 0.66, 0.85);
   g.add(makePoints(count, (i, c) => {
     const armI = i % 3, t = Math.pow(r(), 0.7);
     const d = t * 90;
@@ -45,8 +45,8 @@ function makeGalaxy() {
     const spread = (1 - t * 0.6) * 9 * (r() - 0.5);
     c.copy(core).lerp(r() < 0.1 ? pink : arm, Math.min(1, t * 1.4));
     return { pos: [Math.cos(a) * d + spread, (r() - 0.5) * (4 - t * 3), Math.sin(a) * d + spread], size: 1 + r() * 2.5 };
-  }, { scale: 380, gain: 0.32 }));
-  g.add(glowSprite(0xffe2b0, 30, 0.8), glowSprite(0xffb0ff, 90, 0.15));
+  }, { scale: 380, gain: 0.24 }));
+  g.add(glowSprite(0xf5dcb8, 30, 0.6), glowSprite(0xe6c0f0, 90, 0.12));
   g.userData.tick = (t) => { g.rotation.y = -t * 0.03; };
   return g;
 }
@@ -58,14 +58,14 @@ function makeCosmicWeb() {
   nodes.forEach((a, i) => nodes.slice(i + 1).forEach((b) => { if (a.distanceTo(b) < 55) seg.push(a.x, a.y, a.z, b.x, b.y, b.z); }));
   const lg = new THREE.BufferGeometry();
   lg.setAttribute('position', new THREE.Float32BufferAttribute(seg, 3));
-  g.add(new THREE.LineSegments(lg, new THREE.LineBasicMaterial({ color: 0xb070ff, transparent: true, opacity: 0.35, blending: THREE.AdditiveBlending })));
+  g.add(new THREE.LineSegments(lg, new THREE.LineBasicMaterial({ color: 0xb8a8e8, transparent: true, opacity: 0.2, blending: THREE.AdditiveBlending })));
   g.add(makePoints(5000, (i, c) => {
     const n = nodes[i % nodes.length];
     const spread = 2 + Math.pow(r(), 3) * 14;
     c.setHSL(0.75 + r() * 0.15, 0.8, 0.7);
     return { pos: [n.x + (r() - 0.5) * spread, n.y + (r() - 0.5) * spread, n.z + (r() - 0.5) * spread], size: 1 + r() * 3 };
-  }, { scale: 500, gain: 0.55 }));
-  g.add(glowSprite(0xffffff, 24, 0.6));
+  }, { scale: 500, gain: 0.4 }));
+  g.add(glowSprite(0xf0e6ff, 24, 0.5));
   g.userData.tick = (t) => { g.rotation.y = t * 0.015; };
   return g;
 }
@@ -90,9 +90,9 @@ function makeLanes(sc) {
     mats.push(mat);
     g.add(new THREE.Mesh(new THREE.TubeGeometry(curve, 80, 0.5, 10, false), mat));
   });
-  const core = new THREE.Mesh(new THREE.IcosahedronGeometry(3, 1), new THREE.MeshBasicMaterial({ color: new THREE.Color(2, 2, 2.4), wireframe: true }));
+  const core = new THREE.Mesh(new THREE.IcosahedronGeometry(3, 1), new THREE.MeshBasicMaterial({ color: new THREE.Color(0.95, 0.93, 1.0), wireframe: true, transparent: true, opacity: 0.7 }));
   core.position.y = 4;
-  g.add(core, glowSprite(0xaaf4ff, 24, 0.9));
+  g.add(core, glowSprite(0xcfeee8, 20, 0.6));
   g.children.at(-1).position.y = 4;
   g.userData.tick = (t) => { mats.forEach((m) => { m.uniforms.time.value = t; }); core.rotation.set(t * 0.3, t * 0.4, 0); };
   return g;
@@ -212,7 +212,7 @@ function makeCity(z, radius) {
   g.add(pad, ring(radius, 0xff9a40, 0.6, 0.1));
   g.children[1].position.y = 0.25;
   const r = rng(hash(z.name));
-  const edgeMat = new THREE.LineBasicMaterial({ color: r() > 0.5 ? 0x5ce8ff : 0xff9a40, transparent: true, opacity: 0.9 });
+  const edgeMat = new THREE.LineBasicMaterial({ color: r() > 0.5 ? 0xa8dcd2 : 0xf3c29a, transparent: true, opacity: 0.55 });
   const n = Math.round(6 + radius * 0.5);
   for (let i = 0; i < n; i++) {
     const a = (i / n) * TAU + r() * 0.3, d = radius * (0.75 + r() * 0.2);
@@ -231,8 +231,8 @@ function makeCity(z, radius) {
 // ---------- 耳機號 ----------
 function makeShip() {
   const g = new THREE.Group();
-  const orange = new THREE.MeshStandardMaterial({ color: 0xf4a640, emissive: 0x6a3a08, metalness: 0.4, roughness: 0.35 });
-  const blue = new THREE.MeshStandardMaterial({ color: 0x2f4f6f, emissive: 0x0a1a2a, metalness: 0.5, roughness: 0.4 });
+  const orange = new THREE.MeshStandardMaterial({ color: 0xf0b07a, emissive: 0x4a2a14, metalness: 0.2, roughness: 0.45 });
+  const blue = new THREE.MeshStandardMaterial({ color: 0x4a5f8a, emissive: 0x141c30, metalness: 0.25, roughness: 0.5 });
   const band = new THREE.Mesh(new THREE.TorusGeometry(1.25, 0.2, 12, 40, Math.PI), orange);
   band.position.y = 0.2;
   g.add(band);
@@ -240,12 +240,12 @@ function makeShip() {
     const cup = new THREE.Mesh(new THREE.CylinderGeometry(0.62, 0.62, 0.55, 24), blue);
     cup.rotation.z = Math.PI / 2;
     cup.position.set(side * 1.3, 0, 0);
-    const rim = new THREE.Mesh(new THREE.TorusGeometry(0.62, 0.08, 8, 24), new THREE.MeshBasicMaterial({ color: new THREE.Color(0.6, 2.0, 2.2) }));
+    const rim = new THREE.Mesh(new THREE.TorusGeometry(0.62, 0.08, 8, 24), new THREE.MeshStandardMaterial({ color: 0xa8e0d6, emissive: 0xa8e0d6, emissiveIntensity: 0.4, roughness: 0.4 }));
     rim.rotation.y = Math.PI / 2;
     rim.position.set(side * 1.6, 0, 0);
     g.add(cup, rim);
   });
-  const glow = glowSprite(0xffb050, 7, 0.45);
+  const glow = glowSprite(0xf5c29a, 7, 0.35);
   g.add(glow);
   const loader = new THREE.TextureLoader();
   const riders = {};
@@ -259,7 +259,7 @@ function makeShip() {
     g.add(s);
     riders[who] = s;
   });
-  const flame = new THREE.Mesh(new THREE.ConeGeometry(0.42, 1.8, 16, 1, true), new THREE.MeshBasicMaterial({ color: new THREE.Color(2.4, 1.1, 0.3), transparent: true, opacity: 0.75, blending: THREE.AdditiveBlending, depthWrite: false }));
+  const flame = new THREE.Mesh(new THREE.ConeGeometry(0.42, 1.8, 16, 1, true), new THREE.MeshBasicMaterial({ color: new THREE.Color(1.0, 0.68, 0.45), transparent: true, opacity: 0.45, blending: THREE.AdditiveBlending, depthWrite: false }));
   flame.rotation.x = -Math.PI / 2;
   flame.position.set(0, -0.1, -1.3);
   g.add(flame);
@@ -271,8 +271,8 @@ function makeShip() {
 // ---------- 主程式 ----------
 export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });
-  renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.05;
+  renderer.toneMapping = THREE.NeutralToneMapping;
+  renderer.toneMappingExposure = 0.95;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   const scene3 = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 6000);
@@ -291,7 +291,7 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
 
   const composer = new EffectComposer(renderer);
   composer.addPass(new RenderPass(scene3, camera));
-  const bloom = new UnrealBloomPass(new THREE.Vector2(256, 256), 0.7, 0.5, 0.82);
+  const bloom = new UnrealBloomPass(new THREE.Vector2(256, 256), 0.3, 0.9, 0.9);
   composer.addPass(bloom);
   composer.addPass(new OutputPass());
 
@@ -323,7 +323,7 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
     wpos.push(Math.cos(a) * d, Math.sin(a) * d, z, Math.cos(a) * d, Math.sin(a) * d, z - 6);
   }
   warpGeo.setAttribute('position', new THREE.Float32BufferAttribute(wpos, 3));
-  const warpLines = new THREE.LineSegments(warpGeo, new THREE.LineBasicMaterial({ color: 0xdff4ff, transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false }));
+  const warpLines = new THREE.LineSegments(warpGeo, new THREE.LineBasicMaterial({ color: 0xe8e0ff, transparent: true, opacity: 0, blending: THREE.AdditiveBlending, depthWrite: false }));
   warpLines.frustumCulled = false;
   camera.add(warpLines);
 
@@ -353,7 +353,7 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
   const trail = makePoints(70, () => ({ pos: [0, -999, 0], size: 3, phase: 0 }), { scale: 500 });
   trail.material.uniforms.time.value = 0;
   trail.geometry.attributes.color.array.fill(1);
-  for (let i = 0; i < 70; i++) trail.geometry.attributes.color.array.set([1.0, 0.6, 0.2], i * 3);
+  for (let i = 0; i < 70; i++) trail.geometry.attributes.color.array.set([0.95, 0.72, 0.55], i * 3);
   scene3.add(trail);
   let trailIndex = 0;
 
@@ -402,11 +402,12 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
     labels = [];
     const theme = layout.theme;
     const sky = THEMES[theme].sky;
-    const base = new THREE.Color(sky[0]).lerp(new THREE.Color(sky[1]), theme === 'l03' ? 0.8 : 0.3);
-    const neb = [0, 1, 2].map((i) => new THREE.Color().setHSL((THEMES[theme].hue[i] % 360) / 360, 1, 0.5).multiplyScalar(i === 2 ? 0.35 : 0.5));
-    sky3.bake({ base, colors: neb, seed: hash(theme) * 40, bright: theme === 'l03' ? 1.1 : 0.62 });
+    const base = new THREE.Color(sky[0]).lerp(new THREE.Color(sky[1]), theme === 'l03' ? 0.8 : 0.45).lerp(new THREE.Color(0x262c52), theme === 'l03' ? 0.15 : 0.45);
+    const neb = [0, 1, 2].map((i) => new THREE.Color().setHSL((THEMES[theme].hue[i] % 360) / 360, 0.6, 0.62).multiplyScalar(i === 2 ? 0.3 : 0.4)); // 粉彩星雲
+    const horizon = new THREE.Color().setHSL((THEMES[theme].hue[0] % 360) / 360, 0.5, 0.62).lerp(new THREE.Color(0xf3c9a8), 0.5).multiplyScalar(0.35);
+    sky3.bake({ base, colors: neb, horizon, seed: hash(theme) * 40, bright: theme === 'l03' ? 1.05 : 0.8 });
     scene3.background = sky3.texture;
-    scene3.fog = ['l03', 'l04', 'l02'].includes(theme) ? new THREE.FogExp2(base, theme === 'l03' ? 0.0018 : 0.0016) : null;
+    scene3.fog = new THREE.FogExp2(base, theme === 'l03' ? 0.0018 : 0.0011); // 一層薄霧，遠方柔柔的
     centerLight.position.set(0, theme === 'l07' ? 0 : 10, 0);
     centerLight.intensity = theme === 'l07' ? 3.2 : 2;
     hemi.intensity = ['l03', 'l04', 'l02', 'l01', 'studio'].includes(theme) ? 1.1 : 0.45;
@@ -464,7 +465,7 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
         const sprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: badgeTexture(s.icon, e.state, marks), transparent: true, opacity: soon ? 0.6 : 1, toneMapped: false, alphaTest: 0.05 }));
         sprite.scale.set(size, size, 1);
         sprite.position.copy(local);
-        const glowColor = e.state === 'subscriber' ? 0xffc040 : soon ? 0x7080a0 : 0x6fe8ff;
+        const glowColor = e.state === 'subscriber' ? 0xf0c878 : soon ? 0x8a88b0 : 0x9fdccb;
         const glow = glowSprite(glowColor, size * 2, soon ? 0.15 : 0.32);
         glow.position.copy(local);
         holder.add(glow, sprite);
@@ -581,14 +582,14 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
   });
   canvas.addEventListener('pointerleave', () => { tip.hidden = true; hover = null; });
 
-  const spotColor = (e) => (e.state === 'subscriber' ? 0xffc040 : e.state === 'unreleased' ? 0x9aa6c8 : 0x6fe8ff);
+  const spotColor = (e) => (e.state === 'subscriber' ? 0xf0c878 : e.state === 'unreleased' ? 0xb0aed0 : 0x9fdccb);
   function land(spot) {
     const top = spotWorldPos(spot);
     const base = top.clone();
     base.y -= spot.local.y - spot.topY;
     if (!reduceMotion) {
       effects.shockwave(base, spotColor(spot.e), spot.size * 1.6);
-      effects.burst(top, spot.e.state === 'subscriber' ? [0xffe070, 0xffb030, 0xffffff] : [0x8ff0ff, 0xffffff, 0xb48cff], { count: 50, speed: 7, size: 3 });
+      effects.burst(top, spot.e.state === 'subscriber' ? [0xf6dc9c, 0xf0c27a, 0xfff4e2] : [0xb8e6dc, 0xfff4e2, 0xcfc4f0], { count: 50, speed: 7, size: 3 });
     }
     spot.pop = 1;
     setTimeout(() => onPick(spot.e.code), reduceMotion ? 0 : 380);
@@ -691,7 +692,7 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
         s.parts.halo.scale.setScalar(s.size * 0.5 * (1 + 0.15 * Math.sin(time * 2 + s.phase)));
         if (s.parts.orbit) { s.parts.orbit.position.y = s.local.y + bob - s.topY; s.parts.orbit.rotation.set(1.1, time * 1.4 + s.phase, 0.35); }
       }
-      if (s.e.state === 'subscriber') s.glow.material.opacity = 0.55 + 0.35 * Math.sin(time * 2.4 + s.phase);
+      if (s.e.state === 'subscriber') s.glow.material.opacity = (0.3 + 0.12 * Math.sin(time * 1.6 + s.phase)) * SOFT.glow;
       if (refresh) {
         const m = marksFor(s.e, st);
         if (m !== s.marks) {
@@ -740,11 +741,11 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
       warp.t = Math.min(1, warp.t + dt / warp.dur);
       const p = warp.t;
       const k = Math.sin(p * Math.PI);
-      warpLines.material.opacity = k * 0.9;
+      warpLines.material.opacity = k * 0.4;
       warpLines.scale.set(1, 1, 1 + k * 6);
-      camera.fov = 55 + k * 40;
+      camera.fov = 55 + k * 22;
       camera.updateProjectionMatrix();
-      flash.style.opacity = String(Math.max(0, 1 - Math.abs(p - 0.5) * 5) * 0.8);
+      flash.style.opacity = String(Math.max(0, 1 - Math.abs(p - 0.5) * 4) * 0.45);
       if (warp.next && p >= 0.5) {
         build(warp.next);
         warp.next = null;
@@ -819,8 +820,8 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
     celebrate() {
       sound.chime();
       if (reduceMotion) return;
-      effects.burst(ship.position, [0xff6f91, 0xffd25c, 0x7cf2ff, 0x9dff7a, 0xb48cff, 0xffffff], { count: 160, speed: 12, gravity: 10, dur: 1.8, size: 5 });
-      effects.shockwave(ship.position.clone().setY(ship.position.y - 1), 0xffe070, 14, 1);
+      effects.burst(ship.position, [0xf6a8b8, 0xf6dc9c, 0xa8dcd6, 0xbfe6a8, 0xc8bcf0, 0xfff4e2], { count: 160, speed: 12, gravity: 10, dur: 1.8, size: 5 });
+      effects.shockwave(ship.position.clone().setY(ship.position.y - 1), 0xf6dc9c, 14, 1);
     },
     sound,
     progress(view) {
