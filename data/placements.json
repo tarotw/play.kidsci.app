@@ -1,0 +1,1369 @@
+{
+ "100": {
+  "also": [],
+  "home": "l04"
+ },
+ "101": {
+  "also": [],
+  "home": "era:scientists"
+ },
+ "102": {
+  "also": [],
+  "home": "l04"
+ },
+ "103": {
+  "also": [],
+  "home": "l07"
+ },
+ "104": {
+  "also": [],
+  "home": "l07"
+ },
+ "105": {
+  "also": [],
+  "home": "l07"
+ },
+ "106": {
+  "also": [],
+  "home": "l07"
+ },
+ "107": {
+  "also": [],
+  "home": "l07"
+ },
+ "108": {
+  "also": [],
+  "home": "l07"
+ },
+ "109": {
+  "also": [],
+  "home": "l07"
+ },
+ "110": {
+  "also": [],
+  "home": "l07"
+ },
+ "111": {
+  "also": [],
+  "home": "l06"
+ },
+ "112": {
+  "also": [],
+  "home": "l06"
+ },
+ "113": {
+  "also": [],
+  "home": "l06"
+ },
+ "114": {
+  "also": [],
+  "home": "l06"
+ },
+ "115": {
+  "also": [],
+  "home": "l08"
+ },
+ "116": {
+  "also": [],
+  "home": "l08"
+ },
+ "117": {
+  "also": [],
+  "home": "l06"
+ },
+ "118": {
+  "also": [],
+  "home": "l06"
+ },
+ "119": {
+  "also": [],
+  "home": "l08"
+ },
+ "120": {
+  "also": [],
+  "home": "l08"
+ },
+ "121": {
+  "also": [
+   "l05"
+  ],
+  "home": "era:earth"
+ },
+ "122": {
+  "also": [],
+  "home": "l05"
+ },
+ "123": {
+  "also": [],
+  "home": "l05"
+ },
+ "124": {
+  "also": [],
+  "home": "l05"
+ },
+ "125": {
+  "also": [],
+  "home": "l05"
+ },
+ "126": {
+  "also": [],
+  "home": "l05"
+ },
+ "127": {
+  "also": [],
+  "home": "l05"
+ },
+ "128": {
+  "also": [],
+  "home": "l05"
+ },
+ "129": {
+  "also": [],
+  "home": "l05"
+ },
+ "130": {
+  "also": [],
+  "home": "l05"
+ },
+ "131": {
+  "also": [],
+  "home": "l05"
+ },
+ "132": {
+  "also": [],
+  "home": "l05"
+ },
+ "133": {
+  "also": [],
+  "home": "l05"
+ },
+ "134": {
+  "also": [],
+  "home": "l05"
+ },
+ "135": {
+  "also": [],
+  "home": "l05"
+ },
+ "136": {
+  "also": [],
+  "home": "l05"
+ },
+ "137": {
+  "also": [],
+  "home": "l05"
+ },
+ "138": {
+  "also": [],
+  "home": "l05"
+ },
+ "139": {
+  "also": [],
+  "home": "l05"
+ },
+ "140": {
+  "also": [],
+  "home": "l05"
+ },
+ "141": {
+  "also": [],
+  "home": "l05"
+ },
+ "142": {
+  "also": [],
+  "home": "l05"
+ },
+ "143": {
+  "also": [],
+  "home": "l05"
+ },
+ "144": {
+  "also": [],
+  "home": "l05"
+ },
+ "145": {
+  "also": [],
+  "home": "l05"
+ },
+ "146": {
+  "also": [],
+  "home": "l05"
+ },
+ "147": {
+  "also": [],
+  "home": "l05"
+ },
+ "148": {
+  "also": [
+   "l05"
+  ],
+  "home": "era:earth"
+ },
+ "149": {
+  "also": [],
+  "home": "era:life"
+ },
+ "150": {
+  "also": [],
+  "home": "era:life"
+ },
+ "151": {
+  "also": [],
+  "home": "era:life"
+ },
+ "152": {
+  "also": [],
+  "home": "era:life"
+ },
+ "153": {
+  "also": [],
+  "home": "era:life"
+ },
+ "154": {
+  "also": [],
+  "home": "era:life"
+ },
+ "155": {
+  "also": [],
+  "home": "era:life"
+ },
+ "156": {
+  "also": [],
+  "home": "era:life"
+ },
+ "157": {
+  "also": [],
+  "home": "era:life"
+ },
+ "158": {
+  "also": [],
+  "home": "era:life"
+ },
+ "159": {
+  "also": [],
+  "home": "l05"
+ },
+ "160": {
+  "also": [],
+  "home": "l05"
+ },
+ "161": {
+  "also": [],
+  "home": "l05"
+ },
+ "162": {
+  "also": [],
+  "home": "l05"
+ },
+ "163": {
+  "also": [],
+  "home": "l07"
+ },
+ "164": {
+  "also": [],
+  "home": "l07"
+ },
+ "165": {
+  "also": [],
+  "home": "l07"
+ },
+ "166": {
+  "also": [],
+  "home": "l03"
+ },
+ "167": {
+  "also": [],
+  "home": "l03"
+ },
+ "168": {
+  "also": [],
+  "home": "l03"
+ },
+ "169": {
+  "also": [],
+  "home": "l03"
+ },
+ "170": {
+  "also": [],
+  "home": "era:life"
+ },
+ "171": {
+  "also": [],
+  "home": "era:life"
+ },
+ "172": {
+  "also": [],
+  "home": "era:life"
+ },
+ "173": {
+  "also": [],
+  "home": "l03"
+ },
+ "174": {
+  "also": [],
+  "home": "l03"
+ },
+ "175": {
+  "also": [],
+  "home": "l03"
+ },
+ "176": {
+  "also": [],
+  "home": "l03"
+ },
+ "177": {
+  "also": [],
+  "home": "l03"
+ },
+ "178": {
+  "also": [],
+  "home": "era:life"
+ },
+ "179": {
+  "also": [],
+  "home": "l03"
+ },
+ "180": {
+  "also": [],
+  "home": "l03"
+ },
+ "181": {
+  "also": [],
+  "home": "l03"
+ },
+ "182": {
+  "also": [],
+  "home": "l03"
+ },
+ "183": {
+  "also": [],
+  "home": "l03"
+ },
+ "184": {
+  "also": [],
+  "home": "l03"
+ },
+ "185": {
+  "also": [],
+  "home": "l03"
+ },
+ "186": {
+  "also": [],
+  "home": "l03"
+ },
+ "187": {
+  "also": [],
+  "home": "l03"
+ },
+ "188": {
+  "also": [],
+  "home": "l03"
+ },
+ "189": {
+  "also": [],
+  "home": "l03"
+ },
+ "190": {
+  "also": [],
+  "home": "l03"
+ },
+ "191": {
+  "also": [],
+  "home": "l03"
+ },
+ "192": {
+  "also": [],
+  "home": "l03"
+ },
+ "193": {
+  "also": [],
+  "home": "l03"
+ },
+ "194": {
+  "also": [],
+  "home": "l03"
+ },
+ "195": {
+  "also": [],
+  "home": "l03"
+ },
+ "196": {
+  "also": [],
+  "home": "l03"
+ },
+ "197": {
+  "also": [],
+  "home": "l03"
+ },
+ "198": {
+  "also": [],
+  "home": "l03"
+ },
+ "199": {
+  "also": [],
+  "home": "l03"
+ },
+ "200": {
+  "also": [],
+  "home": "l03"
+ },
+ "201": {
+  "also": [],
+  "home": "l03"
+ },
+ "202": {
+  "also": [],
+  "home": "l03"
+ },
+ "203": {
+  "also": [],
+  "home": "l03"
+ },
+ "204": {
+  "also": [],
+  "home": "l03"
+ },
+ "205": {
+  "also": [],
+  "home": "l03"
+ },
+ "206": {
+  "also": [],
+  "home": "l03"
+ },
+ "207": {
+  "also": [],
+  "home": "l03"
+ },
+ "208": {
+  "also": [],
+  "home": "l03"
+ },
+ "209": {
+  "also": [],
+  "home": "l03"
+ },
+ "210": {
+  "also": [],
+  "home": "l03"
+ },
+ "211": {
+  "also": [],
+  "home": "l03"
+ },
+ "212": {
+  "also": [],
+  "home": "l03"
+ },
+ "213": {
+  "also": [],
+  "home": "l03"
+ },
+ "214": {
+  "also": [],
+  "home": "l03"
+ },
+ "215": {
+  "also": [],
+  "home": "l03"
+ },
+ "216": {
+  "also": [],
+  "home": "l03"
+ },
+ "217": {
+  "also": [],
+  "home": "l03"
+ },
+ "218": {
+  "also": [],
+  "home": "l03"
+ },
+ "219": {
+  "also": [],
+  "home": "l03"
+ },
+ "220": {
+  "also": [],
+  "home": "l03"
+ },
+ "221": {
+  "also": [],
+  "home": "l03"
+ },
+ "222": {
+  "also": [],
+  "home": "l03"
+ },
+ "223": {
+  "also": [],
+  "home": "l03"
+ },
+ "224": {
+  "also": [],
+  "home": "l03"
+ },
+ "225": {
+  "also": [],
+  "home": "l03"
+ },
+ "226": {
+  "also": [],
+  "home": "l03"
+ },
+ "227": {
+  "also": [],
+  "home": "l03"
+ },
+ "228": {
+  "also": [],
+  "home": "l03"
+ },
+ "229": {
+  "also": [],
+  "home": "l03"
+ },
+ "230": {
+  "also": [],
+  "home": "l03"
+ },
+ "231": {
+  "also": [],
+  "home": "l03"
+ },
+ "232": {
+  "also": [],
+  "home": "l03"
+ },
+ "233": {
+  "also": [],
+  "home": "l03"
+ },
+ "234": {
+  "also": [],
+  "home": "l03"
+ },
+ "235": {
+  "also": [],
+  "home": "l03"
+ },
+ "236": {
+  "also": [],
+  "home": "l03"
+ },
+ "237": {
+  "also": [],
+  "home": "l03"
+ },
+ "238": {
+  "also": [],
+  "home": "l03"
+ },
+ "239": {
+  "also": [],
+  "home": "l03"
+ },
+ "240": {
+  "also": [],
+  "home": "l03"
+ },
+ "241": {
+  "also": [],
+  "home": "l03"
+ },
+ "242": {
+  "also": [],
+  "home": "l03"
+ },
+ "243": {
+  "also": [],
+  "home": "l03"
+ },
+ "244": {
+  "also": [],
+  "home": "l03"
+ },
+ "245": {
+  "also": [],
+  "home": "l03"
+ },
+ "246": {
+  "also": [],
+  "home": "l03"
+ },
+ "247": {
+  "also": [],
+  "home": "l03"
+ },
+ "248": {
+  "also": [],
+  "home": "l03"
+ },
+ "249": {
+  "also": [],
+  "home": "l03"
+ },
+ "250": {
+  "also": [],
+  "home": "l03"
+ },
+ "251": {
+  "also": [],
+  "home": "l03"
+ },
+ "252": {
+  "also": [],
+  "home": "l03"
+ },
+ "253": {
+  "also": [],
+  "home": "l03"
+ },
+ "254": {
+  "also": [],
+  "home": "l03"
+ },
+ "255": {
+  "also": [],
+  "home": "l03"
+ },
+ "256": {
+  "also": [],
+  "home": "l03"
+ },
+ "257": {
+  "also": [],
+  "home": "l03"
+ },
+ "258": {
+  "also": [],
+  "home": "l03"
+ },
+ "259": {
+  "also": [],
+  "home": "l03"
+ },
+ "260": {
+  "also": [],
+  "home": "l03"
+ },
+ "261": {
+  "also": [],
+  "home": "l03"
+ },
+ "262": {
+  "also": [],
+  "home": "l03"
+ },
+ "263": {
+  "also": [],
+  "home": "l03"
+ },
+ "264": {
+  "also": [],
+  "home": "l03"
+ },
+ "265": {
+  "also": [],
+  "home": "l03"
+ },
+ "266": {
+  "also": [],
+  "home": "l03"
+ },
+ "267": {
+  "also": [],
+  "home": "l03"
+ },
+ "268": {
+  "also": [],
+  "home": "l03"
+ },
+ "269": {
+  "also": [],
+  "home": "l03"
+ },
+ "270": {
+  "also": [],
+  "home": "l03"
+ },
+ "271": {
+  "also": [],
+  "home": "l03"
+ },
+ "272": {
+  "also": [],
+  "home": "l03"
+ },
+ "273": {
+  "also": [],
+  "home": "l03"
+ },
+ "274": {
+  "also": [],
+  "home": "l03"
+ },
+ "45": {
+  "also": [
+   "era:scientists"
+  ],
+  "home": "lane:relativity"
+ },
+ "46": {
+  "also": [
+   "era:scientists"
+  ],
+  "home": "lane:relativity"
+ },
+ "47": {
+  "also": [
+   "era:scientists"
+  ],
+  "home": "lane:relativity"
+ },
+ "48": {
+  "also": [],
+  "home": "lane:relativity"
+ },
+ "49": {
+  "also": [],
+  "home": "l07"
+ },
+ "50": {
+  "also": [],
+  "home": "l04"
+ },
+ "51": {
+  "also": [],
+  "home": "l09"
+ },
+ "52": {
+  "also": [],
+  "home": "l10"
+ },
+ "53": {
+  "also": [],
+  "home": "l01"
+ },
+ "54": {
+  "also": [],
+  "home": "l01"
+ },
+ "55": {
+  "also": [],
+  "home": "l01"
+ },
+ "56": {
+  "also": [],
+  "home": "l01"
+ },
+ "57": {
+  "also": [],
+  "home": "l01"
+ },
+ "58": {
+  "also": [],
+  "home": "l01"
+ },
+ "59": {
+  "also": [],
+  "home": "l01"
+ },
+ "60": {
+  "also": [],
+  "home": "l01"
+ },
+ "61": {
+  "also": [],
+  "home": "l01"
+ },
+ "62": {
+  "also": [],
+  "home": "l01"
+ },
+ "63": {
+  "also": [],
+  "home": "lane:force"
+ },
+ "64": {
+  "also": [],
+  "home": "lane:em"
+ },
+ "65": {
+  "also": [],
+  "home": "lane:force"
+ },
+ "66": {
+  "also": [],
+  "home": "lane:force"
+ },
+ "67": {
+  "also": [],
+  "home": "lane:force"
+ },
+ "68": {
+  "also": [],
+  "home": "l04"
+ },
+ "69": {
+  "also": [],
+  "home": "lane:em"
+ },
+ "70": {
+  "also": [],
+  "home": "lane:em"
+ },
+ "71": {
+  "also": [
+   "l06"
+  ],
+  "home": "lane:gravity"
+ },
+ "72": {
+  "also": [
+   "l06"
+  ],
+  "home": "lane:gravity"
+ },
+ "73": {
+  "also": [],
+  "home": "l04"
+ },
+ "74": {
+  "also": [],
+  "home": "l04"
+ },
+ "75": {
+  "also": [],
+  "home": "lane:energy"
+ },
+ "76": {
+  "also": [],
+  "home": "lane:energy"
+ },
+ "77": {
+  "also": [
+   "era:bigbang"
+  ],
+  "home": "l10"
+ },
+ "78": {
+  "also": [],
+  "home": "lane:light"
+ },
+ "79": {
+  "also": [],
+  "home": "l06"
+ },
+ "80": {
+  "also": [],
+  "home": "l06"
+ },
+ "81": {
+  "also": [],
+  "home": "lane:light"
+ },
+ "82": {
+  "also": [],
+  "home": "lane:light"
+ },
+ "83": {
+  "also": [],
+  "home": "l08"
+ },
+ "84": {
+  "also": [],
+  "home": "l08"
+ },
+ "85": {
+  "also": [],
+  "home": "lane:sound"
+ },
+ "86": {
+  "also": [],
+  "home": "lane:sound"
+ },
+ "87": {
+  "also": [],
+  "home": "lane:energy"
+ },
+ "88": {
+  "also": [],
+  "home": "lane:energy"
+ },
+ "89": {
+  "also": [],
+  "home": "lane:em"
+ },
+ "90": {
+  "also": [],
+  "home": "lane:em"
+ },
+ "91": {
+  "also": [],
+  "home": "lane:em"
+ },
+ "92": {
+  "also": [],
+  "home": "lane:em"
+ },
+ "93": {
+  "also": [],
+  "home": "l01"
+ },
+ "94": {
+  "also": [],
+  "home": "l01"
+ },
+ "95": {
+  "also": [],
+  "home": "l04"
+ },
+ "96": {
+  "also": [],
+  "home": "l04"
+ },
+ "97": {
+  "also": [],
+  "home": "l04"
+ },
+ "98": {
+  "also": [],
+  "home": "l04"
+ },
+ "99": {
+  "also": [],
+  "home": "l04"
+ },
+ "c1": {
+  "also": [],
+  "home": "lane:relativity"
+ },
+ "c10": {
+  "also": [],
+  "home": "l04"
+ },
+ "c11": {
+  "also": [],
+  "home": "l04"
+ },
+ "c12": {
+  "also": [],
+  "home": "l03"
+ },
+ "c13": {
+  "also": [],
+  "home": "studio"
+ },
+ "c14": {
+  "also": [],
+  "home": "lane:force"
+ },
+ "c15": {
+  "also": [],
+  "home": "l03"
+ },
+ "c16": {
+  "also": [],
+  "home": "l02"
+ },
+ "c17": {
+  "also": [],
+  "home": "l05"
+ },
+ "c18": {
+  "also": [],
+  "home": "l02"
+ },
+ "c19": {
+  "also": [],
+  "home": "l03"
+ },
+ "c2": {
+  "also": [],
+  "home": "l05"
+ },
+ "c20": {
+  "also": [],
+  "home": "l03"
+ },
+ "c21": {
+  "also": [
+   "lane:force"
+  ],
+  "home": "era:scientists"
+ },
+ "c22": {
+  "also": [
+   "lane:force"
+  ],
+  "home": "era:scientists"
+ },
+ "c23": {
+  "also": [],
+  "home": "era:scientists"
+ },
+ "c24": {
+  "also": [],
+  "home": "l03"
+ },
+ "c25": {
+  "also": [
+   "lane:gravity"
+  ],
+  "home": "era:scientists"
+ },
+ "c26": {
+  "also": [
+   "lane:force",
+   "lane:light"
+  ],
+  "home": "era:scientists"
+ },
+ "c27": {
+  "also": [],
+  "home": "era:scientists"
+ },
+ "c28": {
+  "also": [],
+  "home": "l04"
+ },
+ "c29": {
+  "also": [],
+  "home": "era:scientists"
+ },
+ "c3": {
+  "also": [],
+  "home": "studio"
+ },
+ "c30": {
+  "also": [
+   "lane:gravity"
+  ],
+  "home": "l07"
+ },
+ "c31": {
+  "also": [],
+  "home": "l03"
+ },
+ "c32": {
+  "also": [],
+  "home": "lane:energy"
+ },
+ "c33": {
+  "also": [],
+  "home": "l04"
+ },
+ "c4": {
+  "also": [],
+  "home": "l01"
+ },
+ "c4s": {
+  "also": [],
+  "home": "skip"
+ },
+ "c5": {
+  "also": [],
+  "home": "l03"
+ },
+ "c5s": {
+  "also": [],
+  "home": "skip"
+ },
+ "c6": {
+  "also": [],
+  "home": "l04"
+ },
+ "c6s": {
+  "also": [],
+  "home": "skip"
+ },
+ "c7": {
+  "also": [],
+  "home": "l05"
+ },
+ "c7s": {
+  "also": [],
+  "home": "skip"
+ },
+ "c8": {
+  "also": [],
+  "home": "l04"
+ },
+ "c8s": {
+  "also": [],
+  "home": "skip"
+ },
+ "c9": {
+  "also": [],
+  "home": "l02"
+ },
+ "c9s": {
+  "also": [],
+  "home": "skip"
+ },
+ "mother_p": {
+  "also": [],
+  "home": "skip"
+ },
+ "p1": {
+  "also": [],
+  "home": "skip"
+ },
+ "s10": {
+  "also": [],
+  "home": "l07"
+ },
+ "s11": {
+  "also": [],
+  "home": "l07"
+ },
+ "s12": {
+  "also": [],
+  "home": "l07"
+ },
+ "s13": {
+  "also": [],
+  "home": "l08"
+ },
+ "s14": {
+  "also": [],
+  "home": "l07"
+ },
+ "s15": {
+  "also": [],
+  "home": "l07"
+ },
+ "s16": {
+  "also": [],
+  "home": "l06"
+ },
+ "s17": {
+  "also": [],
+  "home": "l07"
+ },
+ "s18": {
+  "also": [],
+  "home": "l09"
+ },
+ "s19": {
+  "also": [],
+  "home": "l07"
+ },
+ "s2": {
+  "also": [
+   "lane:gravity"
+  ],
+  "home": "era:scientists"
+ },
+ "s20": {
+  "also": [],
+  "home": "l08"
+ },
+ "s21": {
+  "also": [
+   "era:bigbang"
+  ],
+  "home": "l10"
+ },
+ "s22": {
+  "also": [],
+  "home": "l10"
+ },
+ "s23": {
+  "also": [],
+  "home": "l07"
+ },
+ "s24": {
+  "also": [
+   "l02"
+  ],
+  "home": "l10"
+ },
+ "s25": {
+  "also": [],
+  "home": "l09"
+ },
+ "s26": {
+  "also": [],
+  "home": "lane:relativity"
+ },
+ "s27": {
+  "also": [],
+  "home": "l04"
+ },
+ "s28": {
+  "also": [],
+  "home": "era:scientists"
+ },
+ "s29": {
+  "also": [],
+  "home": "l04"
+ },
+ "s3": {
+  "also": [],
+  "home": "l09"
+ },
+ "s30": {
+  "also": [],
+  "home": "l04"
+ },
+ "s31": {
+  "also": [],
+  "home": "l04"
+ },
+ "s32": {
+  "also": [],
+  "home": "l03"
+ },
+ "s33": {
+  "also": [],
+  "home": "l03"
+ },
+ "s34": {
+  "also": [],
+  "home": "era:human"
+ },
+ "s35": {
+  "also": [],
+  "home": "era:human"
+ },
+ "s36": {
+  "also": [],
+  "home": "era:human"
+ },
+ "s37": {
+  "also": [],
+  "home": "era:human"
+ },
+ "s38": {
+  "also": [],
+  "home": "era:human"
+ },
+ "s39": {
+  "also": [],
+  "home": "era:human"
+ },
+ "s4": {
+  "also": [],
+  "home": "l10"
+ },
+ "s40": {
+  "also": [],
+  "home": "l04"
+ },
+ "s41": {
+  "also": [],
+  "home": "l03"
+ },
+ "s42": {
+  "also": [],
+  "home": "l03"
+ },
+ "s43": {
+  "also": [],
+  "home": "l03"
+ },
+ "s44": {
+  "also": [],
+  "home": "l03"
+ },
+ "s45": {
+  "also": [],
+  "home": "l03"
+ },
+ "s46": {
+  "also": [],
+  "home": "l03"
+ },
+ "s47": {
+  "also": [],
+  "home": "l04"
+ },
+ "s48": {
+  "also": [],
+  "home": "l04"
+ },
+ "s49": {
+  "also": [],
+  "home": "l04"
+ },
+ "s5": {
+  "also": [
+   "era:bigbang"
+  ],
+  "home": "l10"
+ },
+ "s50": {
+  "also": [],
+  "home": "l04"
+ },
+ "s51": {
+  "also": [],
+  "home": "l04"
+ },
+ "s52": {
+  "also": [],
+  "home": "l04"
+ },
+ "s53": {
+  "also": [],
+  "home": "l02"
+ },
+ "s54": {
+  "also": [],
+  "home": "l02"
+ },
+ "s55": {
+  "also": [],
+  "home": "l02"
+ },
+ "s56": {
+  "also": [],
+  "home": "l02"
+ },
+ "s57": {
+  "also": [],
+  "home": "l02"
+ },
+ "s58": {
+  "also": [],
+  "home": "l02"
+ },
+ "s59": {
+  "also": [],
+  "home": "l04"
+ },
+ "s6": {
+  "also": [],
+  "home": "l08"
+ },
+ "s60": {
+  "also": [],
+  "home": "l03"
+ },
+ "s61": {
+  "also": [],
+  "home": "l07"
+ },
+ "s7": {
+  "also": [],
+  "home": "l07"
+ },
+ "s8": {
+  "also": [],
+  "home": "l06"
+ },
+ "s9": {
+  "also": [],
+  "home": "l06"
+ },
+ "s_future": {
+  "also": [],
+  "home": "l02"
+ },
+ "w1": {
+  "also": [],
+  "home": "l04"
+ }
+}

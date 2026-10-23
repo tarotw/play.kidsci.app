@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>宇宙好好聽｜從一顆原子調到 930 億光年</title>
+<meta name="description" content="科學好好聽的萬物宇宙互動地圖：轉動萬物旋鈕，從原子、動物、地球一路到宇宙邊界，每一站都能聽 Podcast、玩 lab 實驗。">
+<meta property="og:title" content="宇宙好好聽">
+<meta property="og:description" content="戴上耳機，從一顆原子調到 930 億光年。">
+<meta property="og:image" content="https://universe.kidsci.app/assets/logo-banner.png">
+<meta name="theme-color" content="#0b1422">
+<link rel="icon" href="assets/logo-square.jpg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="./" aria-label="宇宙好好聽首頁"><img src="assets/logo-banner.png" alt="科學好好聽" width="210" height="84"></a>
+  <div class="tagline"><h1>宇宙好好聽</h1><p>從一顆原子調到 930 億光年</p></div>
+  <button class="logbook" id="logbook-btn" type="button" aria-haspopup="dialog">航行日誌 <span id="stamp-count">0</span></button>
+</header>
+
+<p class="preview-note" id="preview-note">P0 預覽：10 格全部打開，方便檢查每一集放的位置。正式版只先開「生物、地球、太陽系」三格。</p>
+
+<nav class="dial" aria-label="萬物旋鈕">
+  <button class="dial-step" id="dial-prev" type="button" aria-label="往小的世界轉">‹</button>
+  <ol class="dial-track" id="dial-track"></ol>
+  <button class="dial-step" id="dial-next" type="button" aria-label="往大的世界轉">›</button>
+</nav>
+<div class="extras" role="tablist" aria-label="其他入口" id="extras"></div>
+
+<main id="main">
+  <section class="level" id="level" aria-live="polite"></section>
+  <label class="search"><span class="sr">搜尋集數</span><input id="search" type="search" placeholder="搜尋集數名稱或代碼，例如 112、黑洞"></label>
+  <ul class="stops" id="stops"></ul>
+</main>
+
+<footer class="foot">科學好好聽，自 2025 年起 · <a href="https://lab.kidsci.app/">lab.kidsci.app</a></footer>
+
+<dialog id="channel" class="sheet" aria-labelledby="ch-title"></dialog>
+<dialog id="lab" class="labsheet" aria-label="實驗">
+  <div class="labbar"><span id="lab-title"></span><button type="button" id="lab-close">關閉實驗</button></div>
+  <iframe id="lab-frame" title="lab 實驗" allow="fullscreen"></iframe>
+</dialog>
+<dialog id="journal" class="sheet" aria-labelledby="journal-title"></dialog>
+
+<div class="player" id="player" hidden>
+  <div class="now"><strong id="now-title"></strong><span id="now-takeaway"></span></div>
+  <audio id="audio" controls preload="none"></audio>
+</div>
+
+<script src="app.js" type="module"></script>
+</body>
+</html>

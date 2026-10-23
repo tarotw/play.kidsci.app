@@ -1,0 +1,1588 @@
+[
+ {
+  "id": "solar",
+  "slug": "solar-system",
+  "title": "太陽系探索",
+  "question": "走近行星與衛星，觀察大小、自轉與公轉。",
+  "topic": "space",
+  "url": "https://lab.kidsci.app/solar-system/",
+  "episodes": [
+   "105",
+   "106"
+  ]
+ },
+ {
+  "id": "101",
+  "slug": "taipei-101",
+  "title": "台北 101：金球怎麼幫忙？",
+  "question": "在相同風與地震下，比較大樓、人物與水杯。",
+  "topic": "physics",
+  "url": "https://lab.kidsci.app/taipei-101/",
+  "episodes": [
+   "c28"
+  ]
+ },
+ {
+  "id": "newton",
+  "slug": "newton",
+  "title": "牛頓大砲",
+  "question": "改變速度，看落地、繞地球與逃逸的差別。",
+  "topic": "space",
+  "url": "https://lab.kidsci.app/newton/",
+  "episodes": [
+   "c25"
+  ]
+ },
+ {
+  "id": "math",
+  "slug": "mathquiz",
+  "title": "乘法小花園",
+  "question": "練習 2–9 的乘法，找到自己的作答節奏。",
+  "topic": "math",
+  "url": "https://lab.kidsci.app/mathquiz/",
+  "episodes": []
+ },
+ {
+  "id": "rainbow",
+  "slug": "rainbow",
+  "title": "光的彩虹實驗室",
+  "question": "換光源與元件，立即觀察折射、反射與色散。",
+  "topic": "physics",
+  "url": "https://lab.kidsci.app/rainbow/",
+  "episodes": [
+   "81",
+   "82",
+   "c26"
+  ]
+ },
+ {
+  "id": "parker",
+  "slug": "parker",
+  "title": "帕克探日實驗室",
+  "question": "試日心軌道、金星助推與隔熱盾的陰影。",
+  "topic": "space",
+  "url": "https://lab.kidsci.app/parker/",
+  "episodes": [
+   "c30"
+  ]
+ },
+ {
+  "id": "A01",
+  "slug": "claw",
+  "title": "獵豹的釘鞋",
+  "question": "爪子伸出去，就一定抓得住嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/claw/",
+  "episodes": [
+   "c5"
+  ]
+ },
+ {
+  "id": "A09",
+  "slug": "snowpaw",
+  "title": "雪豹的雪地靴",
+  "question": "腳掌變大，雪地上的壓力怎麼變？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/snowpaw/",
+  "episodes": [
+   "233"
+  ]
+ },
+ {
+  "id": "C01",
+  "slug": "batecho",
+  "title": "蝙蝠回聲測距",
+  "question": "聲音飛出去又回來，要花多久？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/batecho/",
+  "episodes": [
+   "205"
+  ]
+ },
+ {
+  "id": "D01",
+  "slug": "toucan",
+  "title": "巨嘴鳥的散熱器",
+  "question": "讓血流到大嘴巴，熱會去哪裡？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/toucan/",
+  "episodes": [
+   "225"
+  ]
+ },
+ {
+  "id": "E01",
+  "slug": "shrimp",
+  "title": "螳螂蝦的彈簧拳",
+  "question": "慢慢存能量，怎麼快速出拳？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/shrimp/",
+  "episodes": [
+   "244"
+  ]
+ },
+ {
+  "id": "E05",
+  "slug": "silklab",
+  "title": "蜘蛛絲材料實驗室",
+  "question": "很難拉斷，就一定最能接住小球嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/silklab/",
+  "episodes": [
+   "261"
+  ]
+ },
+ {
+  "id": "F03",
+  "slug": "beaver",
+  "title": "河狸水壩實驗室",
+  "question": "水壩留下的水，是從哪裡來？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/beaver/",
+  "episodes": [
+   "259"
+  ]
+ },
+ {
+  "id": "H07",
+  "slug": "camtrap",
+  "title": "雲豹相機調查",
+  "question": "沒拍到，就代表森林裡沒有嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/camtrap/",
+  "episodes": [
+   "269"
+  ]
+ },
+ {
+  "id": "A11",
+  "slug": "footpad",
+  "title": "大象腳掌緩衝墊",
+  "question": "腳墊越軟，就一定越能緩衝嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/footpad/",
+  "episodes": [
+   "217"
+  ]
+ },
+ {
+  "id": "B07",
+  "slug": "krill",
+  "title": "藍鯨的磷蝦能量帳",
+  "question": "一大口水，真的每次都划算嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/krill/",
+  "episodes": [
+   "203"
+  ]
+ },
+ {
+  "id": "C03",
+  "slug": "croceye",
+  "title": "鱷魚的兩道進光控制",
+  "question": "瞳孔和保護膜，怎麼改變進光量？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/croceye/",
+  "episodes": [
+   "190"
+  ]
+ },
+ {
+  "id": "C10",
+  "slug": "poleye",
+  "title": "螳螂蝦的偏振訊息",
+  "question": "顏色相同，光的振動方向也相同嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/poleye/",
+  "episodes": [
+   "244"
+  ]
+ },
+ {
+  "id": "D04",
+  "slug": "pengheat",
+  "title": "企鵝腳的逆流熱交換",
+  "question": "兩條血管反向流，能把熱帶回去嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/pengheat/",
+  "episodes": [
+   "228"
+  ]
+ },
+ {
+  "id": "D06",
+  "slug": "foxfur",
+  "title": "北極狐的空氣保溫層",
+  "question": "毛皮保暖，是自己發熱嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/foxfur/",
+  "episodes": [
+   "195"
+  ]
+ },
+ {
+  "id": "E09",
+  "slug": "scales",
+  "title": "穿山甲的重疊鱗片",
+  "question": "保護得密密的，還能彎嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/scales/",
+  "episodes": [
+   "197"
+  ]
+ },
+ {
+  "id": "F05",
+  "slug": "dungnav",
+  "title": "糞金龜的星空指南針",
+  "question": "遮住天空，直走會變難嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/dungnav/",
+  "episodes": [
+   "246"
+  ]
+ },
+ {
+  "id": "F09",
+  "slug": "reefpair",
+  "title": "小丑魚與海葵的交換",
+  "question": "合作的好處和成本，兩邊都一樣嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/reefpair/",
+  "episodes": [
+   "255"
+  ]
+ },
+ {
+  "id": "G01",
+  "slug": "froglife",
+  "title": "青蛙的器官與棲地",
+  "question": "換了身體，住哪裡、吃什麼也要換嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/froglife/",
+  "episodes": [
+   "187"
+  ]
+ },
+ {
+  "id": "G07",
+  "slug": "monarch",
+  "title": "帝王蝶的生命補給站",
+  "question": "有花蜜，毛毛蟲就有東西吃了嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/monarch/",
+  "episodes": [
+   "177"
+  ]
+ },
+ {
+  "id": "A02",
+  "slug": "turnlab",
+  "title": "獵豹急轉彎",
+  "question": "同一個彎道，為什麼放慢就能轉過去？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/turnlab/",
+  "episodes": [
+   "c5"
+  ]
+ },
+ {
+  "id": "A03",
+  "slug": "tailspin",
+  "title": "獵豹尾巴反向旋轉",
+  "question": "尾巴轉了，身體和整體重心會怎麼動？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/tailspin/",
+  "episodes": [
+   "c5"
+  ]
+ },
+ {
+  "id": "A04",
+  "slug": "hoofspr",
+  "title": "馬腿的回收彈簧",
+  "question": "彈回來的能量，和一開始存的一樣多嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/hoofspr/",
+  "episodes": [
+   "s33"
+  ]
+ },
+ {
+  "id": "A05",
+  "slug": "legmass",
+  "title": "馬腳的配重實驗",
+  "question": "同樣重的配重，放在腳端會更難擺嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/legmass/",
+  "episodes": [
+   "s32"
+  ]
+ },
+ {
+  "id": "A06",
+  "slug": "glide",
+  "title": "飛鼠滑翔：高度換距離",
+  "question": "多一點起飛高度，能滑到更遠的樹嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/glide/",
+  "episodes": [
+   "227"
+  ]
+ },
+ {
+  "id": "A07",
+  "slug": "hopbank",
+  "title": "袋鼠的六跳能量帳",
+  "question": "不補能量，下一跳會跟上一跳一樣高嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/hopbank/",
+  "episodes": [
+   "208"
+  ]
+ },
+ {
+  "id": "A08",
+  "slug": "tailfoot",
+  "title": "袋鼠尾巴：第五個支點",
+  "question": "尾巴接地與抬起，受力有什麼不同？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/tailfoot/",
+  "episodes": [
+   "208"
+  ]
+ },
+ {
+  "id": "A10",
+  "slug": "rockbal",
+  "title": "雪豹走窄岩：找重心",
+  "question": "身體偏出去，用尾巴能把重心帶回來嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/rockbal/",
+  "episodes": [
+   "233"
+  ]
+ },
+ {
+  "id": "A12",
+  "slug": "stridel",
+  "title": "鴕鳥快跑：兩腳的節奏",
+  "question": "一步走更遠，或每秒多走幾步，速度會怎麼變？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/stridel/",
+  "episodes": [
+   "223"
+  ]
+ },
+ {
+  "id": "B01",
+  "slug": "fintask",
+  "title": "魚尾任務：直游與轉彎",
+  "question": "同一條尾巴，在兩種任務都最好嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/fintask/",
+  "episodes": [
+   "182"
+  ]
+ },
+ {
+  "id": "B02",
+  "slug": "sharkup",
+  "title": "鯊魚的三種垂直力",
+  "question": "停游之後，浮力也會消失嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/sharkup/",
+  "episodes": [
+   "182"
+  ]
+ },
+ {
+  "id": "B03",
+  "slug": "riblets",
+  "title": "盾鱗靈感：細槽的尺度",
+  "question": "粗糙面，在任何方向與速度都減阻嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/riblets/",
+  "episodes": [
+   "184"
+  ]
+ },
+ {
+  "id": "B04",
+  "slug": "rayfin",
+  "title": "仿魟鰭的離床挑戰",
+  "question": "貼近底部，一定會多一股向上的力嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/rayfin/",
+  "episodes": [
+   "250"
+  ]
+ },
+ {
+  "id": "B05",
+  "slug": "seapadd",
+  "title": "海蛇尾巴的推水帳",
+  "question": "尾巴擺得更快，肌肉供能就不用增加嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/seapadd/",
+  "episodes": [
+   "257"
+  ]
+ },
+ {
+  "id": "B06",
+  "slug": "whisker",
+  "title": "海豹鬍鬚的水流足跡",
+  "question": "魚已離開，還能從水流找到舊路線嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/whisker/",
+  "episodes": [
+   "195"
+  ]
+ },
+ {
+  "id": "B08",
+  "slug": "diveoxy",
+  "title": "深潛鯨魚的氧氣預算",
+  "question": "留在深處前，要替上浮留下多少氧？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/diveoxy/",
+  "episodes": [
+   "199"
+  ]
+ },
+ {
+  "id": "B09",
+  "slug": "whalsnd",
+  "title": "鯨魚聲音：距離與噪聲",
+  "question": "聲音還在，為什麼更難分辨？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/whalsnd/",
+  "episodes": [
+   "203"
+  ]
+ },
+ {
+  "id": "B10",
+  "slug": "codalab",
+  "title": "抹香鯨節奏：五段間隔",
+  "question": "兩段節奏很像，就知道牠們說什麼嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/codalab/",
+  "episodes": [
+   "204"
+  ]
+ },
+ {
+  "id": "B11",
+  "slug": "airfish",
+  "title": "巨骨舌魚的兩條補氧路",
+  "question": "水裡有氧，為什麼還要浮出來呼吸？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/airfish/",
+  "episodes": [
+   "273"
+  ]
+ },
+ {
+  "id": "B12",
+  "slug": "filter",
+  "title": "鯨鯊濾食：水與食物分流",
+  "question": "吸進更多水，就一定沒有成本嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/filter/",
+  "episodes": [
+   "260"
+  ]
+ },
+ {
+  "id": "C02",
+  "slug": "mothjam",
+  "title": "蝙蝠與蛾：回聲被打亂",
+  "question": "聽到一聲響，就一定是自己的回聲嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/mothjam/",
+  "episodes": [
+   "205"
+  ]
+ },
+ {
+  "id": "C04",
+  "slug": "platbill",
+  "title": "鴨嘴獸：閉眼找食物",
+  "question": "看不見，嘴巴還能收到什麼線索？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/platbill/",
+  "episodes": [
+   "196"
+  ]
+ },
+ {
+  "id": "C05",
+  "slug": "sharkel",
+  "title": "鯊魚鼻子的電場線索",
+  "question": "轉動電源，鼻子的正負訊號會改變嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/sharkel/",
+  "episodes": [
+   "184"
+  ]
+ },
+ {
+  "id": "C06",
+  "slug": "forktong",
+  "title": "蛇的分叉舌：左右聞聞看",
+  "question": "左邊氣味多一點，示例蛇會怎麼走？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/forktong/",
+  "episodes": [
+   "189"
+  ]
+ },
+ {
+  "id": "C07",
+  "slug": "pitheat",
+  "title": "響尾蛇：熱訊號",
+  "question": "關燈後，暖老鼠還有線索嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/pitheat/",
+  "episodes": [
+   "236"
+  ]
+ },
+ {
+  "id": "C08",
+  "slug": "tapwood",
+  "title": "指猴：敲敲木頭",
+  "question": "哪一段敲起來不一樣？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/tapwood/",
+  "episodes": [
+   "234"
+  ]
+ },
+ {
+  "id": "C09",
+  "slug": "kiwitip",
+  "title": "奇異鳥：喙尖探探看",
+  "question": "看不到地下，還能找到線索嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/kiwitip/",
+  "episodes": [
+   "226"
+  ]
+ },
+ {
+  "id": "C11",
+  "slug": "eyegrid",
+  "title": "昆蟲複眼：拍細還是拍快？",
+  "question": "小眼變多，就能補回沒拍到的動作嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/eyegrid/",
+  "episodes": [
+   "175"
+  ]
+ },
+ {
+  "id": "C12",
+  "slug": "birdnav",
+  "title": "候鳥羅盤：線索一起看",
+  "question": "關掉磁場，另外的線索還能指路嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/birdnav/",
+  "episodes": [
+   "219"
+  ]
+ },
+ {
+  "id": "D02",
+  "slug": "earfan",
+  "title": "大象搧耳：熱往哪裡走？",
+  "question": "搧得更快，一定能帶走更多熱嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/earfan/",
+  "episodes": [
+   "217"
+  ]
+ },
+ {
+  "id": "D03",
+  "slug": "hareear",
+  "title": "傑克兔大耳：散熱也有代價",
+  "question": "耳朵大一點，冷暖環境都更好嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/hareear/",
+  "episodes": [
+   "235"
+  ]
+ },
+ {
+  "id": "D05",
+  "slug": "huddle",
+  "title": "企鵝抱團：換誰站外面？",
+  "question": "換個位置，能把散掉的熱變回來嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/huddle/",
+  "episodes": [
+   "228"
+  ]
+ },
+ {
+  "id": "D07",
+  "slug": "hibern",
+  "title": "冬眠的電量條：還要留力氣醒來",
+  "question": "慢慢用能量，醒來那天還夠嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/hibern/",
+  "episodes": [
+   "195"
+  ]
+ },
+ {
+  "id": "D08",
+  "slug": "slothday",
+  "title": "樹懶的一天：時間與能量",
+  "question": "多走幾小時，兩本帳會怎麼變？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/slothday/",
+  "episodes": [
+   "198"
+  ]
+ },
+ {
+  "id": "D09",
+  "slug": "leafmeal",
+  "title": "無尾熊葉子餐：三本小帳",
+  "question": "能量多的葉子，其他帳也更好嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/leafmeal/",
+  "episodes": [
+   "207"
+  ]
+ },
+ {
+  "id": "D10",
+  "slug": "rumen",
+  "title": "牛的四隔間工廠",
+  "question": "關掉微生物，纖維裡的營養去哪裡？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/rumen/",
+  "episodes": [
+   "s60"
+  ]
+ },
+ {
+  "id": "D11",
+  "slug": "crop",
+  "title": "麝雉的食物工廠",
+  "question": "發酵囊變大，就沒有代價嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/crop/",
+  "episodes": [
+   "213"
+  ]
+ },
+ {
+  "id": "D12",
+  "slug": "waterbal",
+  "title": "沙漠袋鼠鼠的水帳",
+  "question": "不喝水時，水收入從哪裡來？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/waterbal/",
+  "episodes": [
+   "236"
+  ]
+ },
+ {
+  "id": "E02",
+  "slug": "cavibub",
+  "title": "螳螂蝦的空化泡",
+  "question": "槌速相同，水壓更高還會起泡嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/cavibub/",
+  "episodes": [
+   "244"
+  ]
+ },
+ {
+  "id": "E03",
+  "slug": "twistply",
+  "title": "螳螂蝦的旋轉纖維層",
+  "question": "同樣點數，轉向最多就一定最好嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/twistply/",
+  "episodes": [
+   "244"
+  ]
+ },
+ {
+  "id": "E04",
+  "slug": "scalearm",
+  "title": "巨骨舌魚：硬鱗與韌纖維",
+  "question": "只有硬，能一直擋住牙齒嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/scalearm/",
+  "episodes": [
+   "273"
+  ]
+ },
+ {
+  "id": "E06",
+  "slug": "webpulse",
+  "title": "蜘蛛網是振動訊息網",
+  "question": "碰到哪裡？蜘蛛附近能收到什麼？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/webpulse/",
+  "episodes": [
+   "261"
+  ]
+ },
+ {
+  "id": "E07",
+  "slug": "shellock",
+  "title": "惡魔鐵甲蟲：接縫也是結構",
+  "question": "拼圖形的接縫，為什麼不能直接拉開？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/shellock/",
+  "episodes": [
+   "175"
+  ]
+ },
+ {
+  "id": "E08",
+  "slug": "beakcore",
+  "title": "巨嘴鳥的輕量夾層喙",
+  "question": "外殼裡放一個多孔內芯，重量和彎曲會怎樣？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/beakcore/",
+  "episodes": [
+   "225"
+  ]
+ },
+ {
+  "id": "E10",
+  "slug": "chamcol",
+  "title": "變色龍的結構色調音盤",
+  "question": "晶體間距一樣，換照明還會看到一樣的顏色嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/chamcol/",
+  "episodes": [
+   "189"
+  ]
+ },
+ {
+  "id": "E11",
+  "slug": "wingcol",
+  "title": "蝴蝶翅膀的角度變色",
+  "question": "翅片不換材料，只轉一個角度，反射峰會去哪裡？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/wingcol/",
+  "episodes": [
+   "238"
+  ]
+ },
+ {
+  "id": "E12",
+  "slug": "deepred",
+  "title": "深海紅色隱身：顏色需要光",
+  "question": "同一個紅物體，在深處照紅燈還會很暗嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/deepred/",
+  "episodes": [
+   "268"
+  ]
+ },
+ {
+  "id": "F01",
+  "slug": "webgeom",
+  "title": "蜘蛛網的幾何工作台",
+  "question": "同樣大的網，多繞幾圈會多用多少絲？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/webgeom/",
+  "episodes": [
+   "261"
+  ]
+ },
+ {
+  "id": "F02",
+  "slug": "mound",
+  "title": "白蟻丘的通風實驗室",
+  "question": "風不大，丘內的氣流怎麼轉向？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/mound/",
+  "episodes": [
+   "247"
+  ]
+ },
+ {
+  "id": "F04",
+  "slug": "weavelab",
+  "title": "織巢鳥的纖維編織課",
+  "question": "把草葉交錯固定，就能分散拉力嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/weavelab/",
+  "episodes": [
+   "265"
+  ]
+ },
+ {
+  "id": "F06",
+  "slug": "dungflow",
+  "title": "糞金龜的養分搬運站",
+  "question": "糞不見了，裡面的氮去了哪裡？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/dungflow/",
+  "episodes": [
+   "246"
+  ]
+ },
+ {
+  "id": "F07",
+  "slug": "antfarm",
+  "title": "切葉蟻的真菌農場",
+  "question": "只搬葉，食物就會一直增加嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/antfarm/",
+  "episodes": [
+   "237"
+  ]
+ },
+ {
+  "id": "F08",
+  "slug": "roompair",
+  "title": "蝦虎魚與槍蝦：一起比較安全？",
+  "question": "斷開觸角，誰會晚點躲？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/roompair/",
+  "episodes": [
+   "220"
+  ]
+ },
+ {
+  "id": "F10",
+  "slug": "fishsort",
+  "title": "小丑魚的條紋分類工作台",
+  "question": "同樣三條白紋，就一定是同一種？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/fishsort/",
+  "episodes": [
+   "255"
+  ]
+ },
+ {
+  "id": "F11",
+  "slug": "locust",
+  "title": "蝗蟲的接觸累積工作台",
+  "question": "擠在一起，會立刻全部變群居嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/locust/",
+  "episodes": [
+   "248"
+  ]
+ },
+ {
+  "id": "F12",
+  "slug": "waggle",
+  "title": "蜜蜂的搖擺舞解碼器",
+  "question": "舞角和搖多久，能告訴同伴花在哪裡？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/waggle/",
+  "episodes": [
+   "219"
+  ]
+ },
+ {
+  "id": "G02",
+  "slug": "icecell",
+  "title": "林蛙結冰保護：冰在哪裡？",
+  "question": "先看細胞外的冰，再看看裡面的水。",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/icecell/",
+  "episodes": [
+   "186"
+  ]
+ },
+ {
+  "id": "G03",
+  "slug": "skinoxy",
+  "title": "兩棲動物的皮膚呼吸站",
+  "question": "改兩側的氧，箭頭會往哪裡走？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/skinoxy/",
+  "episodes": [
+   "185"
+  ]
+ },
+ {
+  "id": "G04",
+  "slug": "regrow",
+  "title": "蠑螈再生的步驟排序",
+  "question": "先放「蓋住傷口」，再看看下一張卡需要誰幫忙。",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/regrow/",
+  "episodes": [
+   "c19"
+  ]
+ },
+ {
+  "id": "G05",
+  "slug": "tunlab",
+  "title": "水熊蟲的休眠不是無敵",
+  "question": "先按逐步，看慢慢變乾與復水後的等待。",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/tunlab/",
+  "episodes": [
+   "c18"
+  ]
+ },
+ {
+  "id": "G06",
+  "slug": "molt",
+  "title": "外骨骼的長大關卡",
+  "question": "先分配食物，再走回合，看幼蟹如何換大殼。",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/molt/",
+  "episodes": [
+   "173"
+  ]
+ },
+ {
+  "id": "G08",
+  "slug": "brood",
+  "title": "口孵魚：保護與進食的兩難",
+  "question": "先看幼魚，再分配護幼和覓食；看看媽媽的資源帳。",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/brood/",
+  "episodes": [
+   "s44"
+  ]
+ },
+ {
+  "id": "G09",
+  "slug": "tadpool",
+  "title": "箭毒蛙送蝌蚪：小水池的選擇",
+  "question": "先選水池、送一隻，再走一天；水夠不夠，路遠不遠？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/tadpool/",
+  "episodes": [
+   "s41"
+  ]
+ },
+ {
+  "id": "G10",
+  "slug": "wolfcare",
+  "title": "狼蛛媽媽的背包：照顧也要付成本",
+  "question": "多背幾隻小蜘蛛，媽媽與孩子的帳會怎麼變？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/wolfcare/",
+  "episodes": [
+   "s46"
+  ]
+ },
+ {
+  "id": "G11",
+  "slug": "pipaback",
+  "title": "負子蟾的育幼空間",
+  "question": "小小背包裡，空間和媽媽的投入夠嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/pipaback/",
+  "episodes": [
+   "s43"
+  ]
+ },
+ {
+  "id": "G12",
+  "slug": "milkpath",
+  "title": "蟻蛛餵奶？營養來源追蹤",
+  "question": "小蜘蛛的營養點，從哪裡來？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/milkpath/",
+  "episodes": [
+   "s42"
+  ]
+ },
+ {
+  "id": "H01",
+  "slug": "foodweb",
+  "title": "海洋食物網的能量預算",
+  "question": "切斷一條路，食物能量去哪裡？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/foodweb/",
+  "episodes": [
+   "179"
+  ]
+ },
+ {
+  "id": "H02",
+  "slug": "migrate",
+  "title": "帝王蝶接力遷徙",
+  "question": "同一隻蝶，會飛完全年的來回嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/migrate/",
+  "episodes": [
+   "177"
+  ]
+ },
+ {
+  "id": "H03",
+  "slug": "birdtime",
+  "title": "候鳥與食物高峰",
+  "question": "鳥到了，毛毛蟲也正多嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/birdtime/",
+  "episodes": [
+   "192"
+  ]
+ },
+ {
+  "id": "H04",
+  "slug": "puflight",
+  "title": "海鸚的夜航燈光圖",
+  "question": "關掉港口燈，路徑會往哪裡變？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/puflight/",
+  "episodes": [
+   "267"
+  ]
+ },
+ {
+  "id": "H05",
+  "slug": "seedride",
+  "title": "犀鳥的種子運送地圖",
+  "question": "離開果樹的種子，落到了哪裡？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/seedride/",
+  "episodes": [
+   "224"
+  ]
+ },
+ {
+  "id": "H06",
+  "slug": "fishpass",
+  "title": "櫻花鉤吻鮭的溪流通行證",
+  "question": "換一段設施，鮭魚能到更上游嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/fishpass/",
+  "episodes": [
+   "271"
+  ]
+ },
+ {
+  "id": "H08",
+  "slug": "spotid",
+  "title": "鯨鯊斑點的身分配對",
+  "question": "把照片轉一下，還能找到同一個圖樣嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/spotid/",
+  "episodes": [
+   "260"
+  ]
+ },
+ {
+  "id": "H09",
+  "slug": "flyland",
+  "title": "斑馬條紋與虻的降落",
+  "question": "同一批示例虻，換個花紋會停下來嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/flyland/",
+  "episodes": [
+   "253"
+  ]
+ },
+ {
+  "id": "H10",
+  "slug": "wetgrid",
+  "title": "河麂的濕地拼圖",
+  "question": "同樣18格濕地，放在哪裡也有差嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/wetgrid/",
+  "episodes": [
+   "270"
+  ]
+ },
+ {
+  "id": "H11",
+  "slug": "dodoisl",
+  "title": "渡渡鳥島：一起看三種壓力",
+  "question": "大鳥還在，小鳥卻變少，下一年會怎樣？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/dodoisl/",
+  "episodes": [
+   "264"
+  ]
+ },
+ {
+  "id": "H12",
+  "slug": "kelpweb",
+  "title": "海牛與海藻林的連鎖效應",
+  "question": "海獺少了，海牛也會立刻變少嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/kelpweb/",
+  "episodes": [
+   "266"
+  ]
+ },
+ {
+  "id": "X01",
+  "slug": "backrun",
+  "title": "獵豹的脊椎與步幅",
+  "question": "背部會彎，腳印一定更遠嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/backrun/",
+  "episodes": [
+   "c5"
+  ]
+ },
+ {
+  "id": "X02",
+  "slug": "jawbite",
+  "title": "食人魚的下顎槓桿",
+  "question": "同樣拉一下，哪個咬點更有力？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/jawbite/",
+  "episodes": [
+   "274"
+  ]
+ },
+ {
+  "id": "X03",
+  "slug": "toothrow",
+  "title": "食人魚換牙：保持一排工具",
+  "question": "一次換一顆，還是整側一起換？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/toothrow/",
+  "episodes": [
+   "274"
+  ]
+ },
+ {
+  "id": "X04",
+  "slug": "octomsg",
+  "title": "章魚的分散控制中心",
+  "question": "每次都問中央，還是讓腕就地處理？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/octomsg/",
+  "episodes": [
+   "174"
+  ]
+ },
+ {
+  "id": "X05",
+  "slug": "sunwarm",
+  "title": "翻車魚的深潛與回溫",
+  "question": "同樣的深潛時間，大魚和小魚一樣快變冷嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/sunwarm/",
+  "episodes": [
+   "c20"
+  ]
+ },
+ {
+  "id": "X06",
+  "slug": "oxyflow",
+  "title": "鮭魚與水中氧",
+  "question": "水變暖，氧供給和需求會一起變嗎？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/oxyflow/",
+  "episodes": [
+   "271"
+  ]
+ },
+ {
+  "id": "X07",
+  "slug": "headpres",
+  "title": "長頸鹿低頭的壓力",
+  "question": "頭比心臟低時，液柱壓差往哪邊變？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/headpres/",
+  "episodes": [
+   "211"
+  ]
+ },
+ {
+  "id": "X08",
+  "slug": "wombcube",
+  "title": "袋熊的方形便便",
+  "question": "圓形腸道裡，軟硬不同的管壁能怎樣改變形狀？",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/wombcube/",
+  "episodes": [
+   "210"
+  ]
+ },
+ {
+  "id": "I01",
+  "slug": "lever",
+  "title": "槓桿的力與距離",
+  "question": "比較同一個重物：手更省力時，要走更長的路嗎？",
+  "topic": "physics",
+  "url": "https://lab.kidsci.app/lever/",
+  "episodes": [
+   "c22"
+  ]
+ },
+ {
+  "id": "I02",
+  "slug": "buoy",
+  "title": "阿基米德的排水秤",
+  "question": "同樣一公升的物體，為什麼有的浮、有的沉？",
+  "topic": "physics",
+  "url": "https://lab.kidsci.app/buoy/",
+  "episodes": [
+   "c21"
+  ]
+ },
+ {
+  "id": "I03",
+  "slug": "hydjack",
+  "title": "液壓千斤頂的能量帳",
+  "question": "省下力氣時，手是不是要走更遠？",
+  "topic": "physics",
+  "url": "https://lab.kidsci.app/hydjack/",
+  "episodes": [
+   "66"
+  ]
+ },
+ {
+  "id": "I04",
+  "slug": "windlab",
+  "title": "翼形與攻角的小風洞",
+  "question": "把機翼抬得更高，升力就一直變大嗎？",
+  "topic": "physics",
+  "url": "https://lab.kidsci.app/windlab/",
+  "episodes": [
+   "73"
+  ]
+ },
+ {
+  "id": "I05",
+  "slug": "doppler",
+  "title": "移動聲源的多普勒波圈",
+  "question": "聲源不改音高，為什麼聽到的波峰間隔會改變？",
+  "topic": "physics",
+  "url": "https://lab.kidsci.app/doppler/",
+  "episodes": [
+   "86"
+  ]
+ },
+ {
+  "id": "I06",
+  "slug": "heatpath",
+  "title": "熱傳遞三種路徑",
+  "question": "拆橋、抽走氣體、隔開輻射，哪條路還能傳熱？",
+  "topic": "physics",
+  "url": "https://lab.kidsci.app/heatpath/",
+  "episodes": [
+   "88"
+  ]
+ },
+ {
+  "id": "I07",
+  "slug": "phase",
+  "title": "物質狀態與能量台階",
+  "question": "溫度沒上升，移入的能量去哪裡了？",
+  "topic": "physics",
+  "url": "https://lab.kidsci.app/phase/",
+  "episodes": [
+   "57"
+  ]
+ },
+ {
+  "id": "I08",
+  "slug": "circuit",
+  "title": "串並聯燈泡與電流路線",
+  "question": "斷開一盞燈旁的開關，其他燈會怎樣？",
+  "topic": "physics",
+  "url": "https://lab.kidsci.app/circuit/",
+  "episodes": [
+   "89"
+  ]
+ },
+ {
+  "id": "J01",
+  "slug": "seisloc",
+  "title": "地震波到站時間定位",
+  "question": "同一站P先到、S後到，這段時間差能告訴你什麼？",
+  "topic": "earth",
+  "url": "https://lab.kidsci.app/seisloc/",
+  "episodes": [
+   "129"
+  ]
+ },
+ {
+  "id": "J02",
+  "slug": "plates",
+  "title": "板塊邊界的地形工廠",
+  "question": "拉開、推近、擦肩：哪種邊界會形成山脈、裂谷或海溝？",
+  "topic": "earth",
+  "url": "https://lab.kidsci.app/plates/",
+  "episodes": [
+   "128"
+  ]
+ },
+ {
+  "id": "J03",
+  "slug": "gasrise",
+  "title": "火山氣體為什麼會膨脹？",
+  "question": "降低上方壓力，氣體會留在岩漿裡、形成泡，還是逃出去？",
+  "topic": "earth",
+  "url": "https://lab.kidsci.app/gasrise/",
+  "episodes": [
+   "126"
+  ]
+ },
+ {
+  "id": "J04",
+  "slug": "waterlog",
+  "title": "一滴水的循環賬本",
+  "question": "水離開海洋後，一定只走同一條回家的路嗎？",
+  "topic": "earth",
+  "url": "https://lab.kidsci.app/waterlog/",
+  "episodes": [
+   "138"
+  ]
+ },
+ {
+  "id": "J05",
+  "slug": "sandgrid",
+  "title": "河流搬沙與堆沙",
+  "question": "水慢下來，正在搬的沙會去哪裡？",
+  "topic": "earth",
+  "url": "https://lab.kidsci.app/sandgrid/",
+  "episodes": [
+   "141"
+  ]
+ },
+ {
+  "id": "J06",
+  "slug": "tracklab",
+  "title": "颱風路徑的幾股推力",
+  "question": "颱風自己在轉，它的中心就一定往同一方向走嗎？",
+  "topic": "earth",
+  "url": "https://lab.kidsci.app/tracklab/",
+  "episodes": [
+   "136"
+  ]
+ },
+ {
+  "id": "J07",
+  "slug": "heatflow",
+  "title": "洋流帶著熱量走",
+  "question": "暖水換了位置，熱量消失了嗎？",
+  "topic": "earth",
+  "url": "https://lab.kidsci.app/heatflow/",
+  "episodes": [
+   "147"
+  ]
+ },
+ {
+  "id": "J08",
+  "slug": "ensolab",
+  "title": "聖嬰的海洋蹺蹺板",
+  "question": "信風變弱，東邊的冷水還能把海面降溫嗎？",
+  "topic": "earth",
+  "url": "https://lab.kidsci.app/ensolab/",
+  "episodes": [
+   "c17"
+  ]
+ },
+ {
+  "id": "K01",
+  "slug": "seasons",
+  "title": "四季不是離太陽遠近",
+  "question": "日地距離相同，南北兩邊為什麼不是一起過夏天？",
+  "topic": "space",
+  "url": "https://lab.kidsci.app/seasons/",
+  "episodes": [
+   "c7"
+  ]
+ },
+ {
+  "id": "K02",
+  "slug": "moonview",
+  "title": "月相的三點觀察台",
+  "question": "月球都只亮半邊，為什麼我們看到的亮面會改變？",
+  "topic": "space",
+  "url": "https://lab.kidsci.app/moonview/",
+  "episodes": [
+   "112"
+  ]
+ },
+ {
+  "id": "K03",
+  "slug": "mercbeat",
+  "title": "水星的三比二節拍",
+  "question": "繞太陽兩圈，為什麼才過一個水星太陽日？",
+  "topic": "space",
+  "url": "https://lab.kidsci.app/mercbeat/",
+  "episodes": [
+   "107"
+  ]
+ },
+ {
+  "id": "K04",
+  "slug": "masslab",
+  "title": "換顆星球，質量會變嗎？",
+  "question": "同一個包包，月球上的公斤與牛頓會怎麼變？",
+  "topic": "space",
+  "url": "https://lab.kidsci.app/masslab/",
+  "episodes": [
+   "71"
+  ]
+ },
+ {
+  "id": "K05",
+  "slug": "marsmsg",
+  "title": "給火星發訊息要多久？",
+  "question": "先把火星移近，發訊息；再移遠，等回覆會差多少？",
+  "topic": "space",
+  "url": "https://lab.kidsci.app/marsmsg/",
+  "episodes": [
+   "115"
+  ]
+ },
+ {
+  "id": "K06",
+  "slug": "nudgelab",
+  "title": "讓小行星提前一點點轉彎",
+  "question": "同樣每秒加1公尺，早推和晚推差在哪裡？",
+  "topic": "space",
+  "url": "https://lab.kidsci.app/nudgelab/",
+  "episodes": [
+   "s15"
+  ]
+ },
+ {
+  "id": "K07",
+  "slug": "areabeat",
+  "title": "橢圓軌道的等面積節拍",
+  "question": "近太陽跑快一點，相同時間真的掃過相同面積嗎？",
+  "topic": "space",
+  "url": "https://lab.kidsci.app/areabeat/",
+  "episodes": [
+   "s14"
+  ]
+ },
+ {
+  "id": "K08",
+  "slug": "aurorlab",
+  "title": "極光的磁力線旅程",
+  "question": "粒子轉著彎，為什麼天空會發光？",
+  "topic": "space",
+  "url": "https://lab.kidsci.app/aurorlab/",
+  "episodes": [
+   "104"
+  ]
+ },
+ {
+  "id": "L01",
+  "slug": "leaflim",
+  "title": "光合作用的資源瓶頸",
+  "question": "只加亮燈，葉片就一定做更多糖嗎？",
+  "topic": "biology",
+  "url": "https://lab.kidsci.app/leaflim/",
+  "episodes": [
+   "168"
+  ]
+ },
+ {
+  "id": "L02",
+  "slug": "xylem",
+  "title": "樹的水柱為什麼會斷？",
+  "question": "葉子拉水，氣泡會怎樣改變水路？",
+  "topic": "biology",
+  "url": "https://lab.kidsci.app/xylem/",
+  "episodes": [
+   "169"
+  ]
+ },
+ {
+  "id": "L03",
+  "slug": "seedlab",
+  "title": "種子發芽的條件實驗",
+  "question": "水夠了，沒有氧也會發芽嗎？一次改一項，跟對照比看看。",
+  "topic": "biology",
+  "url": "https://lab.kidsci.app/seedlab/",
+  "episodes": [
+   "167"
+  ]
+ },
+ {
+  "id": "L04",
+  "slug": "camday",
+  "title": "仙人掌的用水時間表",
+  "question": "晚上收碳，白天用碳：同一天的兩種時間表，誰失水較多？",
+  "topic": "biology",
+  "url": "https://lab.kidsci.app/camday/",
+  "episodes": [
+   "235"
+  ]
+ },
+ {
+  "id": "L05",
+  "slug": "bitmail",
+  "title": "用二進位給動物發訊息",
+  "question": "翻四個開關、送出動物卡：一個檢查位能抓到哪些錯誤？",
+  "topic": "digital",
+  "url": "https://lab.kidsci.app/bitmail/",
+  "episodes": [
+   "100"
+  ]
+ },
+ {
+  "id": "L06",
+  "slug": "classify",
+  "title": "教機器分類：規則還是例子？",
+  "question": "學習卡全對，為什麼沒學過的魚卡仍可能分錯？",
+  "topic": "digital",
+  "url": "https://lab.kidsci.app/classify/",
+  "episodes": [
+   "96"
+  ]
+ },
+ {
+  "id": "L07",
+  "slug": "netmsg",
+  "title": "一條訊息如何穿過網路？",
+  "question": "封包先後到達不同，訊息還能拼回來嗎？",
+  "topic": "digital",
+  "url": "https://lab.kidsci.app/netmsg/",
+  "episodes": [
+   "102"
+  ]
+ },
+ {
+  "id": "L08",
+  "slug": "evsteps",
+  "title": "科學新聞的證據階梯",
+  "question": "沒有找到證據，和找到反例，是同一件事嗎？",
+  "topic": "digital",
+  "url": "https://lab.kidsci.app/evsteps/",
+  "episodes": [
+   "s31"
+  ]
+ },
+ {
+  "id": "roadster",
+  "slug": "tesla-roaster",
+  "title": "Roadster 超跑動力實驗室",
+  "question": "輪胎、吸地風扇與馬達，改一個零件，看車子的反應。",
+  "topic": "physics",
+  "url": "https://lab.kidsci.app/tesla-roaster/",
+  "episodes": [
+   "c33"
+  ]
+ },
+ {
+  "id": "archi",
+  "slug": "archi",
+  "title": "阿基米德實驗室",
+  "question": "把皇冠放進水裡，再用槓桿試試力臂與平衡。",
+  "topic": "physics",
+  "url": "https://lab.kidsci.app/archi/",
+  "episodes": [
+   "c21",
+   "c22"
+  ]
+ }
+]

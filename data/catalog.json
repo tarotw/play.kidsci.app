@@ -1,0 +1,4874 @@
+{
+ "generated": "2026-10-23T02:26:20Z",
+ "episodes": [
+  {
+   "code": "c1",
+   "title": "聖誕老人的極速物理學：當童話遇上相對論",
+   "home": "lane:relativity",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c10",
+   "title": "懸掛在 508 公尺高的極限科學：艾力克斯攀登台北 101 的技術真相",
+   "home": "l04",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cut00d801xlbdm74d27",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/vip-10-%E6%87%B8%E6%8E%9B%E5%9C%A8-508-%E5%85%AC%E5%B0%BA%E9%AB%98%E7%9A%84%E6%A5%B5%E9%99%90%E7%A7%91%E5%AD%B8-%E8%89%BE%E5%8A%9B%E5%85%8B%E6%96%AF%E6%94%80%E7%99%BB%E5%8F%B0%E5%8C%97-101-%E7%9A%84%E6%8A%80%E8%A1%93%E7%9C%9F%E7%9B%B8/id1812447277?i=1000711162684&uo=4",
+    "duration": 751,
+    "pubDate": "Sun, 25 Jan 2026 21:21:16 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c11",
+   "title": "垂直極限的哲學家：亞歷克斯·霍諾德與「無繩」的勇氣科學",
+   "home": "l04",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cut00d601xlcet5eyai",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/vip-11-%E5%9E%82%E7%9B%B4%E6%A5%B5%E9%99%90%E7%9A%84%E5%93%B2%E5%AD%B8%E5%AE%B6-%E4%BA%9E%E6%AD%B7%E5%85%8B%E6%96%AF-%E9%9C%8D%E8%AB%BE%E5%BE%B7%E8%88%87-%E7%84%A1%E7%B9%A9-%E7%9A%84%E5%8B%87%E6%B0%A3%E7%A7%91%E5%AD%B8/id1812447277?i=1000711830666&uo=4",
+    "duration": 914,
+    "pubDate": "Mon, 26 Jan 2026 21:17:35 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c12",
+   "title": "深海巨怪的追蹤者：大王酸漿魷與巨烏賊的發光大對決！",
+   "home": "l03",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c13",
+   "title": "無敵破壞王也比不上？揭開人類母親的超級英雄秘密！",
+   "home": "studio",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmojrdmsq002m01vv2ov79v8z",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/%E6%AF%8D%E8%A6%AA%E7%AF%80%E9%80%B1%E4%BC%81%E5%8A%83-%E6%84%9F%E6%81%A9%E7%89%B9%E8%BC%AF-%E4%BA%BA%E9%A1%9E%E7%9A%84%E6%AF%8D%E8%A6%AA-%E5%A5%B9%E4%B8%8D%E6%98%AF%E8%B6%85%E4%BA%BA-%E5%8D%BB%E5%81%9A%E4%BA%86%E6%89%80%E6%9C%89%E8%B6%85%E4%BA%BA%E7%9A%84%E4%BA%8B/id1812447277?i=1000765773272&uo=4",
+    "duration": 1119,
+    "pubDate": "Sat, 02 May 2026 12:41:06 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c14",
+   "title": "轉圈圈的魔法：向心力與離心力的隱形拔河！",
+   "home": "lane:force",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c15",
+   "title": "披著狗皮的貓？狐狸的生存黑科技與磁場定位傳奇",
+   "home": "l03",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c16",
+   "title": "人體內的奈米探險：解密超級細胞工廠的運作黑科技",
+   "home": "l02",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c17",
+   "title": "地球的氣候大怒神！聖嬰與反聖嬰現象的科學奧秘",
+   "home": "l05",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "J08",
+     "title": "聖嬰的海洋蹺蹺板",
+     "question": "信風變弱，東邊的冷水還能把海面降溫嗎？",
+     "url": "https://lab.kidsci.app/ensolab/"
+    }
+   ]
+  },
+  {
+   "code": "c18",
+   "title": "微米世界的極限生存大師：水熊蟲的「假死」超能力與抗輻射的最新科學奧秘",
+   "home": "l02",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "G05",
+     "title": "水熊蟲的休眠不是無敵",
+     "question": "先按逐步，看慢慢變乾與復水後的等待。",
+     "url": "https://lab.kidsci.app/tunlab/"
+    }
+   ]
+  },
+  {
+   "code": "c19",
+   "title": "水中「不老頑童」的奇幻魔法：美西螈的超強肢體再生與基因解密",
+   "home": "l03",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "G04",
+     "title": "蠑螈再生的步驟排序",
+     "question": "先放「蓋住傷口」，再看看下一張卡需要誰幫忙。",
+     "url": "https://lab.kidsci.app/regrow/"
+    }
+   ]
+  },
+  {
+   "code": "c2",
+   "title": "撼動之島：從龜山島斷頭看台灣地震科學",
+   "home": "l05",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c20",
+   "title": "海洋中的呆萌巨獸：翻車魚的奇特構造、日光浴之謎與驚人的跨赤道旅行",
+   "home": "l03",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmrsk94ac01sc01ulgbnc18v0",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E6%B5%B7%E6%B4%8B%E4%B8%AD%E7%9A%84%E5%91%86%E8%90%8C%E5%B7%A8%E7%8D%B8-%E7%BF%BB%E8%BB%8A%E9%AD%9A%E7%9A%84%E5%A5%87%E7%89%B9%E6%A7%8B%E9%80%A0-%E6%97%A5%E5%85%89%E6%B5%B4%E4%B9%8B%E8%AC%8E%E8%88%87%E9%A9%9A%E4%BA%BA%E7%9A%84%E8%B7%A8%E8%B5%A4%E9%81%93%E6%97%85%E8%A1%8C-p-20/id1812447277?i=1000777486149&uo=4",
+    "duration": 1320,
+    "pubDate": "Mon, 20 Jul 2026 01:44:43 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "X05",
+     "title": "翻車魚的深潛與回溫",
+     "question": "同樣的深潛時間，大魚和小魚一樣快變冷嗎？",
+     "url": "https://lab.kidsci.app/sunwarm/"
+    }
+   ]
+  },
+  {
+   "code": "c21",
+   "title": "泡澡泡出靈感的瘋狂發明家（上）：阿基米德與「Eureka!」的皇冠密碼與浮力傳奇",
+   "home": "era:scientists",
+   "also": [
+    "lane:force"
+   ],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmsbtejib0w6601stfrh4goy9",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/%E6%B3%A1%E6%BE%A1%E6%B3%A1%E5%87%BA%E9%9D%88%E6%84%9F%E7%9A%84%E7%98%8B%E7%8B%82%E7%99%BC%E6%98%8E%E5%AE%B6-%E4%B8%8A-%E9%98%BF%E5%9F%BA%E7%B1%B3%E5%BE%B7%E7%9A%84%E7%9A%87%E5%86%A0%E5%AF%86%E7%A2%BC%E8%88%87%E6%B5%AE%E5%8A%9B%E5%82%B3%E5%A5%87-c21/id1812447277?i=1000779581595&uo=4",
+    "duration": 944,
+    "pubDate": "Sun, 02 Aug 2026 22:02:07 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "I02",
+     "title": "阿基米德的排水秤",
+     "question": "同樣一公升的物體，為什麼有的浮、有的沉？",
+     "url": "https://lab.kidsci.app/buoy/"
+    },
+    {
+     "id": "archi",
+     "title": "阿基米德實驗室",
+     "question": "把皇冠放進水裡，再用槓桿試試力臂與平衡。",
+     "url": "https://lab.kidsci.app/archi/"
+    }
+   ]
+  },
+  {
+   "code": "c22",
+   "title": "泡澡泡出靈感的瘋狂發明家（下）：搬動地球的槓桿、神話武器與現代科技奇蹟",
+   "home": "era:scientists",
+   "also": [
+    "lane:force"
+   ],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "I01",
+     "title": "槓桿的力與距離",
+     "question": "比較同一個重物：手更省力時，要走更長的路嗎？",
+     "url": "https://lab.kidsci.app/lever/"
+    },
+    {
+     "id": "archi",
+     "title": "阿基米德實驗室",
+     "question": "把皇冠放進水裡，再用槓桿試試力臂與平衡。",
+     "url": "https://lab.kidsci.app/archi/"
+    }
+   ]
+  },
+  {
+   "code": "c23",
+   "title": "被老師打最低分的論文，最後得了諾貝爾獎！斯萬特．阿瑞尼斯的科學逆襲故事",
+   "home": "era:scientists",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c24",
+   "title": "不怕痛、不衰老、還不會得癌症！地底下的超級英雄「裸鼴鼠」",
+   "home": "l03",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c25",
+   "title": "蘋果砸出的宇宙秘密！牛頓奇蹟年與萬有引力的誕生",
+   "home": "era:scientists",
+   "also": [
+    "lane:gravity"
+   ],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmsvhn0au0slc01xt0nkuboa8",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/%E7%89%9B%E9%A0%93%E5%B0%88%E8%BC%AF-%E4%B8%8A-%E8%98%8B%E6%9E%9C%E7%A0%B8%E5%87%BA%E7%9A%84%E5%AE%87%E5%AE%99%E7%A7%98%E5%AF%86-%E7%89%9B%E9%A0%93%E5%A5%87%E8%B9%9F%E5%B9%B4%E8%88%87%E8%90%AC%E6%9C%89%E5%BC%95%E5%8A%9B%E7%9A%84%E8%AA%95%E7%94%9F-vip-25/id1812447277?i=1000783702335&uo=4",
+    "duration": 1402,
+    "pubDate": "Sun, 16 Aug 2026 22:02:18 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "newton",
+     "title": "牛頓大砲",
+     "question": "改變速度，看落地、繞地球與逃逸的差別。",
+     "url": "https://lab.kidsci.app/newton/"
+    }
+   ]
+  },
+  {
+   "code": "c26",
+   "title": "公車急煞、彩虹密碼與火箭升空！牛頓三大運動定律與光的魔法",
+   "home": "era:scientists",
+   "also": [
+    "lane:force",
+    "lane:light"
+   ],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "rainbow",
+     "title": "光的彩虹實驗室",
+     "question": "換光源與元件，立即觀察折射、反射與色散。",
+     "url": "https://lab.kidsci.app/rainbow/"
+    }
+   ]
+  },
+  {
+   "code": "c27",
+   "title": "磨鏡片、發明微積分、抓偽幣！牛頓的跨界神操作大結局",
+   "home": "era:scientists",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c28",
+   "title": "摩天大樓的抗震防風魔法：台北101的深根地基、巨型鋼骨與金色風阻尼球",
+   "home": "l04",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "101",
+     "title": "台北 101：金球怎麼幫忙？",
+     "question": "在相同風與地震下，比較大樓、人物與水杯。",
+     "url": "https://lab.kidsci.app/taipei-101/"
+    }
+   ]
+  },
+  {
+   "code": "c29",
+   "title": "拿自己身體當實驗的瘋狂醫學天才：維爾納．福斯曼與心導管技術的生死冒險",
+   "home": "era:scientists",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c3",
+   "title": "2025 科學大發現：從風帆恐龍到深海變形怪",
+   "home": "studio",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c30",
+   "title": "勇闖太陽煉獄的極速飛船：帕克太陽探測器與「觸摸恆星」的工程奇蹟",
+   "home": "l07",
+   "also": [
+    "lane:gravity"
+   ],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmu258v930am901wz5um6bz5c",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/%E8%A1%9D%E9%80%B2%E4%B8%8A%E7%99%BE%E8%90%AC%E5%BA%A6%E7%9A%84%E6%81%86%E6%98%9F%E7%85%89%E7%8D%84-%E4%BA%BA%E9%A1%9E%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%BF%AB%E9%A3%9B%E8%A1%8C%E5%99%A8-%E5%B8%95%E5%85%8B%E5%A4%AA%E9%99%BD%E6%8E%A2%E6%B8%AC%E5%99%A8%E5%A6%82%E4%BD%95-%E8%A7%B8%E6%91%B8%E5%A4%AA%E9%99%BD/id1812447277?i=1000789710549&uo=4",
+    "duration": 12,
+    "pubDate": "Tue, 15 Sep 2026 04:12:47 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "parker",
+     "title": "帕克探日實驗室",
+     "question": "試日心軌道、金星助推與隔熱盾的陰影。",
+     "url": "https://lab.kidsci.app/parker/"
+    }
+   ]
+  },
+  {
+   "code": "c31",
+   "title": "荒漠極速超跑鳥：有翅膀卻不愛飛、專吃毒蛇的「走鵑」傳奇",
+   "home": "l03",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c32",
+   "title": "魔術般的熱量大搬家：冷氣如何把房間變冰箱？暖氣如何從冰雪中榨出熱能？解開冷暖空調的運作奧秘",
+   "home": "lane:energy",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c33",
+   "title": "貼地飛行的太空火箭：特斯拉第二代 Roadster 的慣性與抓地力黑科技",
+   "home": "l04",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmvd8d9xg08q101x6ffb5hpw9",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/%E8%B2%BC%E5%9C%B0%E9%A3%9B%E8%A1%8C%E7%9A%84%E5%A4%AA%E7%A9%BA%E7%81%AB%E7%AE%AD-%E4%B8%8A-%E7%89%B9%E6%96%AF%E6%8B%89%E7%AC%AC%E4%BA%8C%E4%BB%A3-roadster-%E7%9A%84%E6%85%A3%E6%80%A7%E8%88%87%E6%8A%93%E5%9C%B0%E5%8A%9B%E9%BB%91%E7%A7%91%E6%8A%80-vip-33/id1812447277?i=1000796975947&uo=4",
+    "duration": 1168,
+    "pubDate": "Sun, 18 Oct 2026 22:02:13 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "roadster",
+     "title": "Roadster 超跑動力實驗室",
+     "question": "輪胎、吸地風扇與馬達，改一個零件，看車子的反應。",
+     "url": "https://lab.kidsci.app/tesla-roaster/"
+    }
+   ]
+  },
+  {
+   "code": "c4",
+   "title": "夜空的煉金術：煙火化學與無人機光影",
+   "home": "l01",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c5",
+   "title": "極速奧運會：獵豹、遊隼與旗魚的物理戰",
+   "home": "l03",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cv500ei01xlahd63d8m",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/vip-5-%E6%96%B0%E5%B9%B4%E6%82%84%E6%82%84%E8%A9%B1%E7%89%B9%E8%BC%AF-%E5%9C%B0%E7%90%83%E6%A5%B5%E9%80%9F%E5%A5%A7%E9%81%8B%E6%9C%83-%E8%AA%B0%E6%89%8D%E6%98%AF%E6%8A%AB%E8%91%97%E6%AF%9B%E7%9A%AE%E7%9A%84%E6%B3%95%E6%8B%89%E5%88%A9%E8%88%87%E7%94%9F%E7%89%A9%E7%95%8C%E7%9A%84%E6%88%B0%E9%AC%A5%E6%A9%9F/id1812447277?i=1000708141872&uo=4",
+    "duration": 972,
+    "pubDate": "Tue, 06 Jan 2026 10:44:59 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "A01",
+     "title": "獵豹的釘鞋",
+     "question": "爪子伸出去，就一定抓得住嗎？",
+     "url": "https://lab.kidsci.app/claw/"
+    },
+    {
+     "id": "A02",
+     "title": "獵豹急轉彎",
+     "question": "同一個彎道，為什麼放慢就能轉過去？",
+     "url": "https://lab.kidsci.app/turnlab/"
+    },
+    {
+     "id": "A03",
+     "title": "獵豹尾巴反向旋轉",
+     "question": "尾巴轉了，身體和整體重心會怎麼動？",
+     "url": "https://lab.kidsci.app/tailspin/"
+    },
+    {
+     "id": "X01",
+     "title": "獵豹的脊椎與步幅",
+     "question": "背部會彎，腳印一定更遠嗎？",
+     "url": "https://lab.kidsci.app/backrun/"
+    }
+   ]
+  },
+  {
+   "code": "c6",
+   "title": "無人車的上帝視角：當人工智慧握住方向盤",
+   "home": "l04",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmnvn1nkk0gnx01tsh7ea2l92",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E5%B0%96%E7%AB%AF%E7%A7%91%E6%8A%80%E5%B0%88%E8%BC%AF-1-%E7%84%A1%E4%BA%BA%E8%BB%8A%E7%9A%84%E4%B8%8A%E5%B8%9D%E8%A6%96%E8%A7%92-%E7%95%B6%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E6%8F%A1%E4%BD%8F%E6%96%B9%E5%90%91%E7%9B%A4/id1812447277?i=1000760988882&uo=4",
+    "duration": 723,
+    "pubDate": "Sun, 12 Apr 2026 22:03:09 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c7",
+   "title": "被撞歪的地球：永晝、永夜與馴鹿的藍色眼睛",
+   "home": "l05",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "K01",
+     "title": "四季不是離太陽遠近",
+     "question": "日地距離相同，南北兩邊為什麼不是一起過夏天？",
+     "url": "https://lab.kidsci.app/seasons/"
+    }
+   ]
+  },
+  {
+   "code": "c8",
+   "title": "海上鋼鐵巨獸：福特號航母的五大黑科技",
+   "home": "l04",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmno2evd201nn01v21n7ogovr",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E8%BB%8D%E4%BA%8B%E6%AD%A6%E5%99%A8%E5%B0%88%E8%BC%AF-2-%E6%B5%B7%E4%B8%8A%E9%8B%BC%E9%90%B5%E5%B7%A8%E7%8D%B8-%E7%A6%8F%E7%89%B9%E8%99%9F%E8%88%AA%E6%AF%8D%E7%9A%84%E4%BA%94%E5%A4%A7%E9%BB%91%E7%A7%91%E6%8A%80/id1812447277?i=1000760545882&uo=4",
+    "duration": 973,
+    "pubDate": "Thu, 09 Apr 2026 22:02:04 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "c9",
+   "title": "腦袋裡的雲端硬碟：從AI晶片看透阿茲海默症",
+   "home": "l02",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cv400e201xlfqdt90k4",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/vip-9-%E6%96%B0%E5%B9%B4%E6%82%84%E6%82%84%E8%A9%B1%E7%89%B9%E8%BC%AF-%E5%A4%A7%E8%85%A6%E8%88%87-ai-%E7%9A%84%E9%8F%A1%E5%83%8F%E5%A4%A7%E5%86%92%E9%9A%AA-%E7%82%BA%E4%BB%80%E9%BA%BC%E6%88%91%E5%80%91%E6%9C%83%E5%BF%98%E8%A8%98-%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%9C%83%E4%BA%82%E8%AA%AA%E8%A9%B1/id1812447277?i=1000708994059&uo=4",
+    "duration": 1228,
+    "pubDate": "Wed, 14 Jan 2026 22:05:05 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s10",
+   "title": "流星雨的祕密：許願要快！還是看火球比較實在？",
+   "home": "l07",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s11",
+   "title": "宇宙深處的冰雪信使：解密太陽系的「時光膠囊」——彗星",
+   "home": "l07",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s12",
+   "title": "毀滅倒數：如果4公里寬的彗星撞上地球？",
+   "home": "l07",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s13",
+   "title": "獵戶座的消失右肩：參宿四爆炸倒數中？",
+   "home": "l08",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s14",
+   "title": "燃燒的紅色戰神：從「西鄉星」傳說到火星殖民夢",
+   "home": "l07",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "K07",
+     "title": "橢圓軌道的等面積節拍",
+     "question": "近太陽跑快一點，相同時間真的掃過相同面積嗎？",
+     "url": "https://lab.kidsci.app/areabeat/"
+    }
+   ]
+  },
+  {
+   "code": "s15",
+   "title": "地球防衛隊：如何阻止小行星撞地球？",
+   "home": "l07",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "K06",
+     "title": "讓小行星提前一點點轉彎",
+     "question": "同樣每秒加1公尺，早推和晚推差在哪裡？",
+     "url": "https://lab.kidsci.app/nudgelab/"
+    }
+   ]
+  },
+  {
+   "code": "s16",
+   "title": "我們又要登陸月球了？阿提米絲計畫與月球新大陸",
+   "home": "l06",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s17",
+   "title": "太陽還能活多久？中年大叔的星際危機",
+   "home": "l07",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s18",
+   "title": "我們不孤單？在太陽系跟宇宙找外星人",
+   "home": "l09",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s19",
+   "title": "當天空在燃燒：極光、太陽風暴與魁北克大停電",
+   "home": "l07",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s2",
+   "title": "牛頓的蘋果與無限墜落的月亮",
+   "home": "era:scientists",
+   "also": [
+    "lane:gravity"
+   ],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s20",
+   "title": "牛郎織女的遠距離戀愛：光年與夏季大三角",
+   "home": "l08",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s21",
+   "title": "宇宙的第一道光：從大霹靂到黑暗時代",
+   "home": "l10",
+   "also": [
+    "era:bigbang"
+   ],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s22",
+   "title": "宇宙的95%是隱形的？暗物質與暗能量的祕密",
+   "home": "l10",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s23",
+   "title": "冥王星的復仇：我才不是死掉的石頭！",
+   "home": "l07",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cv400e601xlg43d1si8",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/sp-23-%E5%AE%87%E5%AE%99%E7%89%B9%E8%BC%AF-%E5%86%A5%E7%8E%8B%E6%98%9F%E5%A4%A7%E5%86%92%E9%9A%AA-%E5%BE%9E%E9%82%8A%E7%96%86%E5%AD%A4%E5%85%92%E5%88%B0%E5%86%B0%E5%B0%81%E5%A5%87%E8%B9%9F-%E9%82%A3%E9%A1%86%E6%9C%83%E8%B7%B3%E5%8B%95%E7%9A%84-%E6%B0%AE%E5%86%B0%E4%B9%8B%E5%BF%83/id1812447277?i=1000708819376&uo=4",
+    "duration": 624,
+    "pubDate": "Sun, 25 Jan 2026 00:38:58 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s24",
+   "title": "你的身體裡有個微型宇宙？細胞與星系的奇妙連結",
+   "home": "l10",
+   "also": [
+    "l02"
+   ],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cv500e801xlh5xk7od9",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/sp-24-%E5%AE%87%E5%AE%99%E7%89%B9%E8%BC%AF-%E5%AE%87%E5%AE%99%E5%A4%A7%E5%86%92%E9%9A%AA-%E5%BE%9E%E5%85%AD%E5%8D%81%E5%85%86%E7%B4%B0%E8%83%9E%E5%88%B0%E5%84%84%E8%90%AC%E5%85%89%E5%B9%B4%E7%9A%84-%E6%98%9F%E9%9A%9B%E6%8D%89%E8%BF%B7%E8%97%8F/id1812447277?i=1000708729183&uo=4",
+    "duration": 1106,
+    "pubDate": "Tue, 27 Jan 2026 21:05:29 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s25",
+   "title": "黑洞與白洞：光都逃不掉的宇宙怪獸與時空隧道",
+   "home": "l09",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cv500ec01xl8efrg15r",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/sp-25-%E5%AE%87%E5%AE%99%E7%89%B9%E8%BC%AF-%E5%AE%87%E5%AE%99%E5%A4%A7%E8%83%83%E7%8E%8B-%E9%BB%91%E6%B4%9E%E7%9A%84%E8%B2%AA%E9%A3%9F%E5%A4%A7%E5%86%92%E9%9A%AA%E8%88%87%E6%99%82%E7%A9%BA%E9%9A%A7%E9%81%93%E7%9A%84%E7%A5%95%E5%AF%86/id1812447277?i=1000708457914&uo=4",
+    "duration": 1040,
+    "pubDate": "Sat, 31 Jan 2026 00:05:42 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s26",
+   "title": "追不到的光！宇宙中最快的速度可以被超越嗎？",
+   "home": "lane:relativity",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cv400e401xlen4p5pri",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/sp-26-%E5%AE%87%E5%AE%99%E7%89%B9%E8%BC%AF-%E8%BF%BD%E5%85%89%E8%80%85%E5%A4%A7%E6%8C%91%E6%88%B0-%E8%AA%B0%E6%89%8D%E6%98%AF%E5%AE%87%E5%AE%99%E4%B8%AD%E7%9A%84-%E9%A3%9B%E6%AF%9B%E8%85%BF-%E5%86%A0%E8%BB%8D/id1812447277?i=1000708883345&uo=4",
+    "duration": 851,
+    "pubDate": "Sun, 01 Feb 2026 21:36:02 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s27",
+   "title": "隱形的室友：AI 如何讀懂你的心？",
+   "home": "l04",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmlekttua5a3i01slcytig2p4",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/sp-27-ai%E7%A7%91%E6%99%AE%E5%B0%88%E8%BC%AF-%E9%9A%B1%E5%BD%A2%E7%9A%84%E5%AE%A4%E5%8F%8B-ai-%E5%A6%82%E4%BD%95%E8%AE%80%E6%87%82%E4%BD%A0%E7%9A%84%E5%BF%83/id1812447277?i=1000748811816&uo=4",
+    "duration": 726,
+    "pubDate": "Sun, 08 Feb 2026 21:23:31 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s28",
+   "title": "AI 遊戲大爭霸：從深藍到 AlphaGo 的進化史",
+   "home": "era:scientists",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmlfwxsxk6va001ubhsa63742",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/sp-28-ai%E7%A7%91%E6%99%AE%E5%B0%88%E8%BC%AF-ai-%E9%81%8A%E6%88%B2%E5%A4%A7%E7%88%AD%E9%9C%B8-%E5%BE%9E%E6%B7%B1%E8%97%8D%E5%88%B0-alphago-%E7%9A%84%E9%80%B2%E5%8C%96%E5%8F%B2/id1812447277?i=1000748977629&uo=4",
+    "duration": 731,
+    "pubDate": "Mon, 09 Feb 2026 21:25:17 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s29",
+   "title": "AI 魔法棒背後的秘密：從文字接龍到畫出夢境",
+   "home": "l04",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmlhd7mia7n7001ubdjy5hdcz",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/sp-29-ai%E7%A7%91%E6%99%AE%E5%B0%88%E8%BC%AF-ai-%E9%AD%94%E6%B3%95%E6%A3%92%E8%83%8C%E5%BE%8C%E7%9A%84%E7%A7%98%E5%AF%86-%E5%BE%9E%E6%96%87%E5%AD%97%E6%8E%A5%E9%BE%8D%E5%88%B0%E7%95%AB%E5%87%BA%E5%A4%A2%E5%A2%83/id1812447277?i=1000749142960&uo=4",
+    "duration": 890,
+    "pubDate": "Tue, 10 Feb 2026 21:45:14 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s3",
+   "title": "宇宙的深海之音：聽見引力波的奧秘",
+   "home": "l09",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s30",
+   "title": "AI Agent 元年：你的專屬數位超人來了！",
+   "home": "l04",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmlirywy50anb01u0dbqpd6w9",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/sp-30-ai%E7%A7%91%E6%99%AE%E5%B0%88%E8%BC%AF-ai-agent-%E5%85%83%E5%B9%B4-%E4%BD%A0%E7%9A%84%E5%B0%88%E5%B1%AC%E6%95%B8%E4%BD%8D%E8%B6%85%E4%BA%BA%E4%BE%86%E4%BA%86/id1812447277?i=1000749322689&uo=4",
+    "duration": 676,
+    "pubDate": "Wed, 11 Feb 2026 21:26:08 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s31",
+   "title": "數位防禦術：如何不被 AI 牽著鼻子走？",
+   "home": "l04",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmlkbdman0ed901t94lac1gt9",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/sp-31-ai%E7%A7%91%E6%99%AE%E5%B0%88%E8%BC%AF-%E6%95%B8%E4%BD%8D%E9%98%B2%E7%A6%A6%E8%A1%93-%E5%A6%82%E4%BD%95%E4%B8%8D%E8%A2%AB-ai-%E7%89%BD%E8%91%97%E9%BC%BB%E5%AD%90%E8%B5%B0/id1812447277?i=1000749494072&uo=4",
+    "duration": 961,
+    "pubDate": "Thu, 12 Feb 2026 21:18:15 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "L08",
+     "title": "科學新聞的證據階梯",
+     "question": "沒有找到證據，和找到反例，是同一件事嗎？",
+     "url": "https://lab.kidsci.app/evsteps/"
+    }
+   ]
+  },
+  {
+   "code": "s32",
+   "title": "用中指跑贏時間：馬兒橫跨五千萬年的逆天改命",
+   "home": "l03",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmlrckyw32x4v01rd48thf1yo",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/sp-32-%E6%98%A5%E7%AF%80%E9%A6%AC%E5%B9%B4%E7%89%B9%E8%BC%AF-%E8%B2%93%E5%92%AA%E8%AE%8A%E9%A7%BF%E9%A6%AC-%E9%A6%AC%E5%85%92%E7%A5%96%E5%85%88%E7%9A%84-%E6%96%B7%E8%B6%BE-%E6%B1%82%E7%94%9F%E5%A4%A7%E5%86%92%E9%9A%AA/id1812447277?i=1000750218355&uo=4",
+    "duration": 639,
+    "pubDate": "Tue, 17 Feb 2026 21:35:02 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "A05",
+     "title": "馬腳的配重實驗",
+     "question": "同樣重的配重，放在腳端會更難擺嗎？",
+     "url": "https://lab.kidsci.app/legmass/"
+    }
+   ]
+  },
+  {
+   "code": "s33",
+   "title": "馬蹄下的秘密：從生物力學奇蹟到複製重生",
+   "home": "l03",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmlsrxt360lgc01rf37rpejcr",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/sp-33-%E6%98%A5%E7%AF%80%E9%A6%AC%E5%B9%B4%E7%89%B9%E8%BC%AF-%E4%B8%AD%E6%8C%87%E7%A5%9E%E5%8A%9F%E9%A6%AC%E8%80%81%E5%B8%AB-%E5%BE%9E%E4%BA%94%E6%A0%B9%E8%85%B3%E8%B6%BE%E5%88%B0%E5%96%AE%E8%B9%84%E7%8B%82%E5%A5%94%E7%9A%84%E6%BC%94%E5%8C%96%E5%A4%A7%E5%86%92%E9%9A%AA/id1812447277?i=1000750373156&uo=4",
+    "duration": 614,
+    "pubDate": "Wed, 18 Feb 2026 21:03:13 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "A04",
+     "title": "馬腿的回收彈簧",
+     "question": "彈回來的能量，和一開始存的一樣多嗎？",
+     "url": "https://lab.kidsci.app/hoofspr/"
+    }
+   ]
+  },
+  {
+   "code": "s34",
+   "title": "站起來的秘密！解鎖人類最早的超能力",
+   "home": "era:human",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmmh2ol37afi901uhgcfh9atk",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/sp-34-%E4%BA%BA%E9%A1%9E%E6%BC%94%E5%8C%96%E7%89%B9%E8%BC%AF-1-%E7%AB%99%E8%B5%B7%E4%BE%86%E7%9A%84%E7%A7%98%E5%AF%86-%E8%A7%A3%E9%8E%96%E4%BA%BA%E9%A1%9E%E6%9C%80%E6%97%A9%E7%9A%84%E8%B6%85%E8%83%BD%E5%8A%9B/id1812447277?i=1000753823522&uo=4",
+    "duration": 875,
+    "pubDate": "Sat, 07 Mar 2026 23:17:07 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s35",
+   "title": "百萬年前的科技發表會？石器時代的第一場BBQ派對！",
+   "home": "era:human",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmmrf6x6zfy6d01ph9a6603gg",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/sp-35-%E4%BA%BA%E9%A1%9E%E6%BC%94%E5%8C%96%E7%89%B9%E8%BC%AF-2-%E7%99%BE%E8%90%AC%E5%B9%B4%E5%89%8D%E7%9A%84%E7%A7%91%E6%8A%80%E7%99%BC%E8%A1%A8%E6%9C%83-%E7%9F%B3%E5%99%A8%E6%99%82%E4%BB%A3%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A0%B4bbq%E6%B4%BE%E5%B0%8D/id1812447277?i=1000755329764&uo=4",
+    "duration": 1040,
+    "pubDate": "Sat, 14 Mar 2026 23:38:15 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s36",
+   "title": "史前人類大揭密！尼安德塔人其實是溫柔的超級英雄？",
+   "home": "era:human",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmn12oq3w1khv01sjhcll3o0y",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/sp-36-%E4%BA%BA%E9%A1%9E%E6%BC%94%E5%8C%96%E7%89%B9%E8%BC%AF-3-%E5%8F%B2%E5%89%8D%E4%BA%BA%E9%A1%9E%E5%A4%A7%E6%8F%AD%E5%AF%86-%E5%B0%BC%E5%AE%89%E5%BE%B7%E5%A1%94%E4%BA%BA%E5%85%B6%E5%AF%A6%E6%98%AF%E6%BA%AB%E6%9F%94%E7%9A%84%E8%B6%85%E7%B4%9A%E8%8B%B1%E9%9B%84/id1812447277?i=1000756524312&uo=4",
+    "duration": 752,
+    "pubDate": "Sat, 21 Mar 2026 23:43:22 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s37",
+   "title": "破解史前人的冰箱！你的DNA裡住著遠古幽靈？",
+   "home": "era:human",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmn9mhw400eec0103g9rkhoqo",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-sp-37-%E4%BA%BA%E9%A1%9E%E6%BC%94%E5%8C%96%E7%89%B9%E8%BC%AF-4-%E7%A0%B4%E8%A7%A3%E5%8F%B2%E5%89%8D%E4%BA%BA%E7%9A%84%E5%86%B0%E7%AE%B1-%E4%BD%A0%E7%9A%84dna%E8%A3%A1%E4%BD%8F%E8%91%97%E9%81%A0%E5%8F%A4%E5%B9%BD%E9%9D%88/id1812447277?i=1000757963869&uo=4",
+    "duration": 966,
+    "pubDate": "Sun, 29 Mar 2026 00:17:08 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s38",
+   "title": "從海底商船到帝國武器：青銅，人類第一場全球化的賭注",
+   "home": "era:human",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmnfu4xv61jjf01w0djrs9uuq",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-sp-38-%E4%BA%BA%E9%A1%9E%E6%BC%94%E5%8C%96%E7%89%B9%E8%BC%AF-5-%E5%BE%9E%E6%B5%B7%E5%BA%95%E5%95%86%E8%88%B9%E5%88%B0%E5%B8%9D%E5%9C%8B%E6%AD%A6%E5%99%A8-%E9%9D%92%E9%8A%85-%E4%BA%BA%E9%A1%9E%E7%AC%AC%E4%B8%80%E5%A0%B4%E5%85%A8%E7%90%83%E5%8C%96%E7%9A%84%E8%B3%AD%E6%B3%A8/id1812447277?i=1000759303451&uo=4",
+    "duration": 935,
+    "pubDate": "Sat, 04 Apr 2026 22:02:06 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s39",
+   "title": "鐵的逆襲：從廢墟中煉出的金屬魔法",
+   "home": "era:human",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s4",
+   "title": "穹頂之外：從井底之蛙到930億光年",
+   "home": "l10",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [],
+   "content": "data/episodes/s4.json"
+  },
+  {
+   "code": "s40",
+   "title": "量子電腦的超能力：從又零又一的魔法到改變世界的未來科技",
+   "home": "l04",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s41",
+   "title": "雨林裡的超級外送員：草莓箭毒蛙媽媽的「愛心便當」大冒險！",
+   "home": "l03",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "G09",
+     "title": "箭毒蛙送蝌蚪：小水池的選擇",
+     "question": "先選水池、送一隻，再走一天；水夠不夠，路遠不遠？",
+     "url": "https://lab.kidsci.app/tadpool/"
+    }
+   ]
+  },
+  {
+   "code": "s42",
+   "title": "偽裝大師的超級母乳：大蟻蛛的哺乳奇觀",
+   "home": "l03",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "G12",
+     "title": "蟻蛛餵奶？營養來源追蹤",
+     "question": "小蜘蛛的營養點，從哪裡來？",
+     "url": "https://lab.kidsci.app/milkpath/"
+    }
+   ]
+  },
+  {
+   "code": "s43",
+   "title": "枯葉大師與最強背上育兒！揭開負子蟾的超狂生存秀",
+   "home": "l03",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "G11",
+     "title": "負子蟾的育幼空間",
+     "question": "小小背包裡，空間和媽媽的投入夠嗎？",
+     "url": "https://lab.kidsci.app/pipaback/"
+    }
+   ]
+  },
+  {
+   "code": "s44",
+   "title": "嘴巴裡的育嬰房：莫三比克口孵魚的生存奇蹟",
+   "home": "l03",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "G08",
+     "title": "口孵魚：保護與進食的兩難",
+     "question": "先看幼魚，再分配護幼和覓食；看看媽媽的資源帳。",
+     "url": "https://lab.kidsci.app/brood/"
+    }
+   ]
+  },
+  {
+   "code": "s45",
+   "title": "割肉餵娃！揭開蚓螈(yǐn yuán)媽媽的瘋狂母愛",
+   "home": "l03",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s46",
+   "title": "密集恐懼症的終極保母：狼蛛(láng zhū)媽媽的超級育兒術",
+   "home": "l03",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "G10",
+     "title": "狼蛛媽媽的背包：照顧也要付成本",
+     "question": "多背幾隻小蜘蛛，媽媽與孩子的帳會怎麼變？",
+     "url": "https://lab.kidsci.app/wolfcare/"
+    }
+   ]
+  },
+  {
+   "code": "s47",
+   "title": "子彈打子彈的終極對決！愛國者三型飛彈（PAC-3）的黑科技大解密",
+   "home": "l04",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s48",
+   "title": "翱翔天際的「強大者」：解析F-35I Adir匿蹤戰機的科技秘密",
+   "home": "l04",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s49",
+   "title": "地底掩體的終極剋星：GBU-57 巨型鑽地彈的科學奇蹟",
+   "home": "l04",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s5",
+   "title": "宇宙身世之謎：從一百五十億年前的那場「火球」說起",
+   "home": "l10",
+   "also": [
+    "era:bigbang"
+   ],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s50",
+   "title": "戰場上的天空幽靈：揭秘無人機的科技魔法",
+   "home": "l04",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s51",
+   "title": "陸地上的「飛機戰車」：M1 艾布蘭與它的噴射心臟",
+   "home": "l04",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s52",
+   "title": "揭開「海上金字塔」的神秘面紗：朱瓦特級驅逐艦與雷達匿蹤的科學魔法",
+   "home": "l04",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s53",
+   "title": "支撐生命的奇蹟建築：揭開人體骨骼的神秘面紗",
+   "home": "l02",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s54",
+   "title": "解密人體微觀宇宙：從36兆細胞大軍到看穿皮膚的透視超能力",
+   "home": "l02",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s55",
+   "title": "啟動人體無敵引擎！微觀下的肌肉三大家族與分子彈簧",
+   "home": "l02",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s56",
+   "title": "解密表情大師與肌肉的記憶超能力！還有大腦通訊的新發現",
+   "home": "l02",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s57",
+   "title": "穿上超能防護衣！皮膚的奇妙構造與觸覺感官總動員",
+   "home": "l02",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s58",
+   "title": "人體彩繪師與微觀地圖：膚色、指紋、指甲與毛髮的生理奧秘",
+   "home": "l02",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s59",
+   "title": "比子彈還快的極速黑鳥：SR-71 偵察機的熱浪傳奇與太空工程",
+   "home": "l04",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmt5uqz6j0uvt01uxen0ua8qp",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/%E4%B8%96%E7%95%8C%E4%B9%8B%E6%9C%80%E5%B0%88%E8%BC%AF-%E6%AF%94%E5%AD%90%E5%BD%88%E9%82%84%E5%BF%AB%E7%9A%84%E6%A5%B5%E9%80%9F%E9%BB%91%E9%B3%A5-sr-71-%E5%81%B5%E5%AF%9F%E6%A9%9F%E7%9A%84%E7%86%B1%E6%B5%AA%E5%82%B3%E5%A5%87%E8%88%87%E5%A4%AA%E7%A9%BA%E5%B7%A5%E7%A8%8B-sp-59/id1812447277?i=1000786118572&uo=4",
+    "duration": 916,
+    "pubDate": "Wed, 26 Aug 2026 22:02:12 GMT",
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s6",
+   "title": "星塵往事：解讀夜空中那些「眨眼」的巨人們",
+   "home": "l08",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s60",
+   "title": "吃草怎麼長(zhǎng)出滿身牛肉？解密牛的「體內細菌農場」與四個胃的消化奇蹟",
+   "home": "l03",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": [
+    {
+     "id": "D10",
+     "title": "牛的四隔間工廠",
+     "question": "關掉微生物，纖維裡的營養去哪裡？",
+     "url": "https://lab.kidsci.app/rumen/"
+    }
+   ]
+  },
+  {
+   "code": "s61",
+   "title": "太陽身旁的極端密室：解密水星的「15公里鑽石層」、縮小之謎與彗星尾巴",
+   "home": "l07",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s7",
+   "title": "恆星日記：揭開太陽系霸主的熾熱面紗",
+   "home": "l07",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s8",
+   "title": "霓虹燈下的守望者：月球的真實面紗與未解之謎",
+   "home": "l06",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s9",
+   "title": "夜空中的假星星：人造衛星的神秘面紗",
+   "home": "l06",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "s_future",
+   "title": "無敵雙豆俠：腎臟工廠的奇幻過濾大冒險！",
+   "home": "l02",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "join": "https://kidsci.firstory.io/join"
+   },
+   "labs": []
+  },
+  {
+   "code": "w1",
+   "title": "隱形、破壞與蜂群：現代戰場的終極黑科技大對決！",
+   "home": "l04",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "100",
+   "title": "數位世界的秘密密碼：只有 0 與 1 的魔法！",
+   "home": "l04",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "L05",
+     "title": "用二進位給動物發訊息",
+     "question": "翻四個開關、送出動物卡：一個檢查位能抓到哪些錯誤？",
+     "url": "https://lab.kidsci.app/bitmail/"
+    }
+   ]
+  },
+  {
+   "code": "101",
+   "title": "電腦的時光旅行：從大怪獸到小精靈",
+   "home": "era:scientists",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "102",
+   "title": "網路世界大冒險：照片的分身術與超級電腦",
+   "home": "l04",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "L07",
+     "title": "一條訊息如何穿過網路？",
+     "question": "封包先後到達不同，訊息還能拼回來嗎？",
+     "url": "https://lab.kidsci.app/netmsg/"
+    }
+   ]
+  },
+  {
+   "code": "103",
+   "title": "宇宙大廚師：太陽的火熱廚房冒險",
+   "home": "l07",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmtztm263001i01tbhgp119aj",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmtztm263001i01tbhgp119aj/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmtztm263001j01tbhbr7bhsi.mp3?v=1789304388810",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%A4%AA%E9%99%BD%E7%B3%BB%E5%B0%88%E8%BC%AF-%E5%AE%87%E5%AE%99%E5%A4%A7%E5%BB%9A%E5%B8%AB-%E5%A4%AA%E9%99%BD%E7%9A%84%E7%81%AB%E7%86%B1%E5%BB%9A%E6%88%BF%E5%86%92%E9%9A%AA-ep-103/id1812447277?i=1000789385812&uo=4",
+    "duration": 1002,
+    "pubDate": "Sun, 13 Sep 2026 22:02:10 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "104",
+   "title": "太陽的壞脾氣：雀斑、噴嚏與極光之舞",
+   "home": "l07",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmtztpng4001z01tbelxph0z2",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmtztpng4001z01tbelxph0z2/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmtztpng4002001tb7tm3d211.mp3?v=1789304555641",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%A4%AA%E9%99%BD%E7%B3%BB%E5%B0%88%E8%BC%AF-%E5%A4%AA%E9%99%BD%E7%9A%84%E5%A3%9E%E8%84%BE%E6%B0%A3-%E9%9B%80%E6%96%91-%E5%99%B4%E5%9A%8F%E8%88%87%E6%A5%B5%E5%85%89%E4%B9%8B%E8%88%9E-ep-104/id1812447277?i=1000790171164&uo=4",
+    "duration": 913,
+    "pubDate": "Wed, 16 Sep 2026 22:02:07 GMT"
+   },
+   "labs": [
+    {
+     "id": "K08",
+     "title": "極光的磁力線旅程",
+     "question": "粒子轉著彎，為什麼天空會發光？",
+     "url": "https://lab.kidsci.app/aurorlab/"
+    }
+   ]
+  },
+  {
+   "code": "105",
+   "title": "太陽系衝鋒號(上)：勇闖內行星的冰火世界",
+   "home": "l07",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmu7xnpb00o9001z3cqnec4xv",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmu7xnpb00o9001z3cqnec4xv/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmu7xnpb00o9101z30tuidqbe.mp3?v=1789794925156",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%A4%AA%E9%99%BD%E7%B3%BB%E5%B0%88%E8%BC%AF-%E5%A4%AA%E9%99%BD%E7%B3%BB%E8%A1%9D%E9%8B%92%E8%99%9F-%E4%B8%8A-%E5%8B%87%E9%97%96%E5%85%A7%E8%A1%8C%E6%98%9F%E7%9A%84%E5%86%B0%E7%81%AB%E4%B8%96%E7%95%8C-ep-105/id1812447277?i=1000790840453&uo=4",
+    "duration": 1354,
+    "pubDate": "Sun, 20 Sep 2026 22:02:10 GMT"
+   },
+   "labs": [
+    {
+     "id": "solar",
+     "title": "太陽系探索",
+     "question": "走近行星與衛星，觀察大小、自轉與公轉。",
+     "url": "https://lab.kidsci.app/solar-system/"
+    }
+   ]
+  },
+  {
+   "code": "106",
+   "title": "太陽系衝鋒號(下)：氣體巨人的奇幻國度",
+   "home": "l07",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmu7xunqf09nx01x913q3h0ch",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmu7xunqf09nx01x913q3h0ch/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmu7xunqf09ny01x91ah34dj2.mp3?v=1789795244314",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%A4%AA%E9%99%BD%E7%B3%BB%E8%A1%9D%E9%8B%92%E8%99%9F-%E4%B8%8B-%E6%B0%A3%E9%AB%94%E5%B7%A8%E4%BA%BA%E7%9A%84%E5%A5%87%E5%B9%BB%E5%9C%8B%E5%BA%A6-ep-106/id1812447277?i=1000791356695&uo=4",
+    "duration": 1222,
+    "pubDate": "Wed, 23 Sep 2026 22:02:18 GMT"
+   },
+   "labs": [
+    {
+     "id": "solar",
+     "title": "太陽系探索",
+     "question": "走近行星與衛星，觀察大小、自轉與公轉。",
+     "url": "https://lab.kidsci.app/solar-system/"
+    }
+   ]
+  },
+  {
+   "code": "107",
+   "title": "水星與金星：冰火煉獄與酸雨女王",
+   "home": "l07",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmtfikiy7024n01xv82u3605o",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmtfikiy7024n01xv82u3605o/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmtfikiy7024o01xvhaqnf971.mp3?v=1788076520409",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%A4%AA%E9%99%BD%E7%B3%BB%E5%B0%88%E8%BC%AF-%E6%B0%B4%E6%98%9F%E8%88%87%E9%87%91%E6%98%9F-%E5%86%B0%E7%81%AB%E7%85%89%E7%8D%84%E8%88%87%E9%85%B8%E9%9B%A8%E5%A5%B3%E7%8E%8B-ep-107/id1812447277?i=1000786870101&uo=4",
+    "duration": 958,
+    "pubDate": "Sun, 30 Aug 2026 22:02:07 GMT"
+   },
+   "labs": [
+    {
+     "id": "K03",
+     "title": "水星的三比二節拍",
+     "question": "繞太陽兩圈，為什麼才過一個水星太陽日？",
+     "url": "https://lab.kidsci.app/mercbeat/"
+    }
+   ]
+  },
+  {
+   "code": "108",
+   "title": "地球 vs 火星：藍色水球與紅色沙漠的超級PK",
+   "home": "l07",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmtfjnot702gw01xv906d6wbf",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmtfjnot702gw01xv906d6wbf/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmtfjnot702gx01xvcsxi6ve8.mp3?v=1788078478310",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%A4%AA%E9%99%BD%E7%B3%BB%E5%B0%88%E8%BC%AF-%E5%9C%B0%E7%90%83-vs-%E7%81%AB%E6%98%9F-%E8%97%8D%E8%89%B2%E6%B0%B4%E7%90%83%E8%88%87%E7%B4%85%E8%89%B2%E6%B2%99%E6%BC%A0%E7%9A%84%E8%B6%85%E7%B4%9Apk-ep-108/id1812447277?i=1000787520338&uo=4",
+    "duration": 1214,
+    "pubDate": "Wed, 02 Sep 2026 22:02:08 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "109",
+   "title": "木星 vs 土星：太陽系的胖嘟嘟兄弟",
+   "home": "l07",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmtpsqn990auy01uv6q870q1x",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmtpsqn990auy01uv6q870q1x/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmtpsqn9a0auz01uvfyfehs05.mp3?v=1791071313779",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%A4%AA%E9%99%BD%E7%B3%BB%E5%B0%88%E8%BC%AF-%E6%9C%A8%E6%98%9F-vs-%E5%9C%9F%E6%98%9F-%E5%A4%AA%E9%99%BD%E7%B3%BB%E7%9A%84%E8%83%96%E5%98%9F%E5%98%9F%E5%85%84%E5%BC%9F-ep-109/id1812447277?i=1000788198323&uo=4",
+    "duration": 1423,
+    "pubDate": "Sun, 06 Sep 2026 22:02:11 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "110",
+   "title": "天王星 vs 海王星：躺平哥與暴風弟的冰凍對決",
+   "home": "l07",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmtptd5qv0ds901uy5bed3rti",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmtptd5qv0ds901uy5bed3rti/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmtptd5qv0dsa01uy2p2nd9eo.mp3?v=1788699322315",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%A4%AA%E9%99%BD%E7%B3%BB%E5%B0%88%E8%BC%AF-%E5%A4%A9%E7%8E%8B%E6%98%9F-vs-%E6%B5%B7%E7%8E%8B%E6%98%9F-%E8%BA%BA%E5%B9%B3%E5%93%A5%E8%88%87%E6%9A%B4%E9%A2%A8%E5%BC%9F%E7%9A%84%E5%86%B0%E5%87%8D%E5%B0%8D%E6%B1%BA-ep-110/id1812447277?i=1000788753515&uo=4",
+    "duration": 1354,
+    "pubDate": "Wed, 09 Sep 2026 22:02:16 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "111",
+   "title": "月球肚子裡藏著大火球？揭開月球的身世之謎！",
+   "home": "l06",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmujqte5102zy01uzg8udgr7d",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmujqte5102zy01uzg8udgr7d/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmujqte5102zz01uzgpie7p7d.mp3?v=1790597329502",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E6%9C%88%E7%90%83%E8%82%9A%E5%AD%90%E8%A3%A1%E8%97%8F%E8%91%97%E5%A4%A7%E7%81%AB%E7%90%83-%E6%8F%AD%E9%96%8B%E6%9C%88%E7%90%83%E7%9A%84%E8%BA%AB%E4%B8%96%E4%B9%8B%E8%AC%8E-ep-111/id1812447277?i=1000792094195&uo=4",
+    "duration": 841,
+    "pubDate": "Mon, 28 Sep 2026 22:02:07 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "112",
+   "title": "月亮變變變！為什麼月亮會變臉？",
+   "home": "l06",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmulaerr8004x01v8hpw0gkim",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmulaerr8004x01v8hpw0gkim/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmulaerr8004y01v83rxudtik.mp3?v=1791080273221",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E6%9C%88%E4%BA%AE%E8%AE%8A%E8%AE%8A%E8%AE%8A-%E7%82%BA%E4%BB%80%E9%BA%BC%E6%9C%88%E4%BA%AE%E6%9C%83%E8%AE%8A%E8%87%89-ep-112/id1812447277?i=1000792466212&uo=4",
+    "duration": 1508,
+    "pubDate": "Wed, 30 Sep 2026 22:02:05 GMT"
+   },
+   "labs": [
+    {
+     "id": "K02",
+     "title": "月相的三點觀察台",
+     "question": "月球都只亮半邊，為什麼我們看到的亮面會改變？",
+     "url": "https://lab.kidsci.app/moonview/"
+    }
+   ]
+  },
+  {
+   "code": "113",
+   "title": "太空先鋒部隊：機器人探險家與最強火箭的祕密地圖",
+   "home": "l06",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmut6rylg05wx01tofu5ng9ha",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmut6rylg05wx01tofu5ng9ha/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmut6rylg05wy01togok58bde.mp3?v=1791080013482",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%A4%AA%E7%A9%BA%E5%85%88%E9%8B%92%E9%83%A8%E9%9A%8A-%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%8E%A2%E9%9A%AA%E5%AE%B6%E8%88%87%E6%9C%80%E5%BC%B7%E7%81%AB%E7%AE%AD%E7%9A%84%E7%A5%95%E5%AF%86%E5%9C%B0%E5%9C%96-ep-113/id1812447277?i=1000793147104&uo=4",
+    "duration": 919,
+    "pubDate": "Sun, 04 Oct 2026 22:02:42 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "114",
+   "title": "太空軌道生活指南：星圖座標、無重力挑戰與神奇人造衛星",
+   "home": "l06",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmut7k17406ex01tm5vbyh49m",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmut7k17406ex01tm5vbyh49m/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmut7k17406ey01tm6h4h4dob.mp3?v=1791081345689",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%A4%AA%E7%A9%BA%E8%BB%8C%E9%81%93%E7%94%9F%E6%B4%BB%E6%8C%87%E5%8D%97-%E6%98%9F%E5%9C%96%E5%BA%A7%E6%A8%99-%E7%84%A1%E9%87%8D%E5%8A%9B%E6%8C%91%E6%88%B0%E8%88%87%E7%A5%9E%E5%A5%87%E4%BA%BA%E9%80%A0%E8%A1%9B%E6%98%9F-ep-114/id1812447277?i=1000793527379&uo=4",
+    "duration": 1430,
+    "pubDate": "Tue, 06 Oct 2026 22:02:09 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "115",
+   "title": "星空藏寶圖：從巨石陣到哈伯望遠鏡的天文奇幻旅程",
+   "home": "l08",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmv3s8fzh00o901vsd8ny74tq",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmv3s8fzh00o901vsd8ny74tq/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmv3s8fzh00oa01vscdyfaebg.mp3?v=1791720731400",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E6%98%9F%E7%A9%BA%E8%97%8F%E5%AF%B6%E5%9C%96-%E5%BE%9E%E5%B7%A8%E7%9F%B3%E9%99%A3%E5%88%B0%E5%93%88%E4%BC%AF%E6%9C%9B%E9%81%A0%E9%8F%A1%E7%9A%84%E5%A4%A9%E6%96%87%E5%A5%87%E5%B9%BB%E6%97%85%E7%A8%8B-ep-115/id1812447277?i=1000795822576&uo=4",
+    "duration": 1171,
+    "pubDate": "Sun, 11 Oct 2026 22:02:20 GMT"
+   },
+   "labs": [
+    {
+     "id": "K05",
+     "title": "給火星發訊息要多久？",
+     "question": "先把火星移近，發訊息；再移遠，等回覆會差多少？",
+     "url": "https://lab.kidsci.app/marsmsg/"
+    }
+   ]
+  },
+  {
+   "code": "116",
+   "title": "隱形的光芒：用神奇的太空望遠鏡，看見「看不見」的宇宙",
+   "home": "l08",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmv3sezy8092m01xncdr49gk5",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmv3sezy8092m01xncdr49gk5/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmv3sezy8092n01xndncy56ge.mp3?v=1791721045298",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E9%9A%B1%E5%BD%A2%E7%9A%84%E5%85%89%E8%8A%92-%E7%94%A8%E7%A5%9E%E5%A5%87%E7%9A%84%E5%A4%AA%E7%A9%BA%E6%9C%9B%E9%81%A0%E9%8F%A1-%E7%9C%8B%E8%A6%8B-%E7%9C%8B%E4%B8%8D%E8%A6%8B-%E7%9A%84%E5%AE%87%E5%AE%99-ep-116/id1812447277?i=1000796388493&uo=4",
+    "duration": 1359,
+    "pubDate": "Wed, 14 Oct 2026 22:02:20 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "117",
+   "title": "登月大冒險：阿波羅 11 號、史上最強火箭與人類的一大步",
+   "home": "l06",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmvg2ht3m01h801w48f4iaosm",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmvg2ht3m01h801w48f4iaosm/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmvg2ht3m01h901w4csjz87q1.mp3?v=1792463555810",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E7%99%BB%E6%9C%88%E5%A4%A7%E5%86%92%E9%9A%AA-%E9%98%BF%E6%B3%A2%E7%BE%85-11-%E8%99%9F-%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%BC%B7%E7%81%AB%E7%AE%AD%E8%88%87%E4%BA%BA%E9%A1%9E%E7%9A%84%E4%B8%80%E5%A4%A7%E6%AD%A5-ep-117/id1812447277?i=1000797511641&uo=4",
+    "duration": 1891,
+    "pubDate": "Wed, 21 Oct 2026 22:02:10 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "118",
+   "title": "登月全紀錄：40 萬公里的太空芭蕾與月球上的 382 公斤寶藏",
+   "home": "l06",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "119",
+   "title": "穿越光年的對話：從哥白尼到哈伯，揭開宇宙的「時光膠囊」",
+   "home": "l08",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "120",
+   "title": "宇宙透視眼：從「W」女王到不可見光的彩色秘密",
+   "home": "l08",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "121",
+   "title": "地球小時候是個大火球？揭開地球的成長相簿！",
+   "home": "era:earth",
+   "also": [
+    "l05"
+   ],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "122",
+   "title": "地球有超能力？隱形斗篷與變形身材的秘密！",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "123",
+   "title": "地心探險記！洋蔥地球的內心戲",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "124",
+   "title": "地球穿了五件衣服？「空氣衣」與流星終結者！",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "125",
+   "title": "動物們的超級豪宅：沙漠、雨林與冰原",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "126",
+   "title": "地球也會長青春痘？火山三兄弟來了！",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "J03",
+     "title": "火山氣體為什麼會膨脹？",
+     "question": "降低上方壓力，氣體會留在岩漿裡、形成泡，還是逃出去？",
+     "url": "https://lab.kidsci.app/gasrise/"
+    }
+   ]
+  },
+  {
+   "code": "127",
+   "title": "潛入火山肚子裡！大碗公湖與噴水鬧鐘",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "128",
+   "title": "地球大拼圖：板塊互進、告別與擦肩而過",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "J02",
+     "title": "板塊邊界的地形工廠",
+     "question": "拉開、推近、擦肩：哪種邊界會形成山脈、裂谷或海溝？",
+     "url": "https://lab.kidsci.app/plates/"
+    }
+   ]
+  },
+  {
+   "code": "129",
+   "title": "地底偵探隊：P波與S波的悄悄話",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "J01",
+     "title": "地震波到站時間定位",
+     "question": "同一站P先到、S後到，這段時間差能告訴你什麼？",
+     "url": "https://lab.kidsci.app/seisloc/"
+    }
+   ]
+  },
+  {
+   "code": "130",
+   "title": "地球大寶箱：閃亮寶石與用不完的能量",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "131",
+   "title": "地球資源保衛戰：吃喝玩樂也要愛地球！",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "132",
+   "title": "地球的硬骨頭：岩石三兄弟的變身秀",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "133",
+   "title": "小小礦物學家：鑽石、黃金與石頭的秘密大發現！",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "134",
+   "title": "天氣魔法師：是誰在天空發脾氣？",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "135",
+   "title": "天空中的變形金剛：雲朵、雨滴與龍捲風的奇幻旅程",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "136",
+   "title": "颶風怪獸的誕生：熱帶海洋的旋轉巨人！",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "J06",
+     "title": "颱風路徑的幾股推力",
+     "question": "颱風自己在轉，它的中心就一定往同一方向走嗎？",
+     "url": "https://lab.kidsci.app/tracklab/"
+    }
+   ]
+  },
+  {
+   "code": "137",
+   "title": "颶風怪獸大進擊：陸地反擊與人類的防禦術！",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "138",
+   "title": "地球上的水：水滴偵探的奇幻旅程！",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "J04",
+     "title": "一滴水的循環賬本",
+     "question": "水離開海洋後，一定只走同一條回家的路嗎？",
+     "url": "https://lab.kidsci.app/waterlog/"
+    }
+   ]
+  },
+  {
+   "code": "139",
+   "title": "地球上的水：水的超級任務與變身大冒險！",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "140",
+   "title": "地球的雕塑師：風與水的鬼斧神工（上）",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "141",
+   "title": "地球的雕塑師：風與水的鬼斧神工（下）",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "J05",
+     "title": "河流搬沙與堆沙",
+     "question": "水慢下來，正在搬的沙會去哪裡？",
+     "url": "https://lab.kidsci.app/sandgrid/"
+    }
+   ]
+  },
+  {
+   "code": "142",
+   "title": "去地心探險吧！鐘乳石與地底迷宮的秘密",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "143",
+   "title": "地底大解密：峽谷大崩塌與神秘的地下微觀世界！",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "144",
+   "title": "地球的急凍雕刻師：冰河的成形與力量",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "145",
+   "title": "地球的冰雪巨人：冰河的足跡與遺產",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "146",
+   "title": "海洋的奧秘：地球藍色心臟的探索",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "147",
+   "title": "海洋的律動：潮汐、洋流與氣候的連結",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "J07",
+     "title": "洋流帶著熱量走",
+     "question": "暖水換了位置，熱量消失了嗎？",
+     "url": "https://lab.kidsci.app/heatflow/"
+    }
+   ]
+  },
+  {
+   "code": "148",
+   "title": "地球生命的史詩：從混沌到繁盛",
+   "home": "era:earth",
+   "also": [
+    "l05"
+   ],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "149",
+   "title": "地球生命的史詩：大滅絕與重生的輪迴",
+   "home": "era:life",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "150",
+   "title": "生物演化歷程：從單細胞到恐龍霸主 (上集)",
+   "home": "era:life",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmhm64phr04mq01vk2mucesur",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmhm64phr04mq01vk2mucesur/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lhjwo20vs01ss4qzo2ra7.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E7%86%B1%E9%96%80%E5%9B%9E%E9%A1%A7-%E6%81%90%E9%BE%8D%E5%B0%88%E8%BC%AF-2-%E6%81%90%E9%BE%8D%E9%9A%8A%E9%95%B7-%E6%88%91%E7%9A%84%E9%81%A0%E5%8F%A4%E7%94%9F%E7%89%A9%E6%9C%8B%E5%8F%8B%E5%8E%BB%E5%93%AA%E5%85%92%E4%BA%86-%E5%BE%9E%E5%96%AE%E7%B4%B0%E8%83%9E%E5%88%B0%E9%9C%B8%E4%B8%BB%E6%81%90%E9%BE%8D%E7%9A%84%E8%B6%85%E6%99%82%E7%A9%BA%E9%80%B2%E5%8C%96%E4%B9%8B%E6%97%85/id1812447277?i=1000735383013&uo=4",
+    "duration": 1357,
+    "pubDate": "Thu, 19 Mar 2026 21:46:16 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "151",
+   "title": "恐龍時代：地球霸主的興衰（上）",
+   "home": "era:life",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmhp0odyk0fqa010n5hzob0uc",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmhp0odyk0fqa010n5hzob0uc/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lhjwo20vp01ss4aeye94u.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E7%86%B1%E9%96%80%E5%9B%9E%E9%A1%A7-%E6%81%90%E9%BE%8D%E5%B0%88%E8%BC%AF-3-%E6%81%90%E9%BE%8D%E9%9C%B8%E4%B8%BB%E4%BE%86%E4%BA%86-%E6%AF%9B%E8%8C%B8%E8%8C%B8%E7%9A%84%E6%9A%B4%E9%BE%8D%E8%88%87-%E8%A3%9D%E7%94%B2%E5%9D%A6%E5%85%8B-%E5%A4%A7%E9%9B%86%E5%90%88/id1812447277?i=1000735705708&uo=4",
+    "duration": 819,
+    "pubDate": "Sun, 22 Mar 2026 21:55:35 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "152",
+   "title": "恐龍時代：地球霸主的興衰（中）",
+   "home": "era:life",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmhrvfaai13xi01ym65291qcd",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmhrvfaai13xi01ym65291qcd/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lhjwo20vn01ss6ofi11zd.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E7%86%B1%E9%96%80%E5%9B%9E%E9%A1%A7-%E6%81%90%E9%BE%8D%E5%B0%88%E8%BC%AF-4-%E6%81%90%E9%BE%8D%E7%A8%B1%E9%9C%B8%E7%9A%84%E7%A7%98%E5%AF%86-%E6%BA%AB%E8%A1%80%E5%BC%95%E6%93%8E-%E7%A9%BA%E4%B8%AD%E5%B7%A8%E7%8D%B8%E8%88%87%E6%BC%82%E7%A7%BB%E7%9A%84%E5%A4%A7%E9%99%B8/id1812447277?i=1000735949745&uo=4",
+    "duration": 1540,
+    "pubDate": "Tue, 24 Mar 2026 22:18:29 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "153",
+   "title": "雷克斯暴龍：陸地霸主的傳奇（上集）",
+   "home": "era:life",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmhv35mr702pq01sx93699mic",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmhv35mr702pq01sx93699mic/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lhjwo20vl01ss8r8mgf9l.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E7%86%B1%E9%96%80%E5%9B%9E%E9%A1%A7-%E6%81%90%E9%BE%8D%E5%B0%88%E8%BC%AF-5-%E6%81%90%E9%BE%8D%E7%95%8C%E7%9A%84%E6%9C%80%E5%BC%B7%E6%AE%BA%E6%89%8B-%E9%9B%B7%E5%85%8B%E6%96%AF%E6%9A%B4%E9%BE%8D%E7%9A%84%E8%B6%85%E7%8B%82%E5%92%AC%E5%90%88%E5%8A%9B%E8%88%87-%E8%B6%85%E7%B4%9A%E6%84%9F%E5%AE%98-%E5%A4%A7%E6%8F%AD%E5%AF%86/id1812447277?i=1000736255613&uo=4",
+    "duration": 1447,
+    "pubDate": "Thu, 26 Mar 2026 21:51:25 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "154",
+   "title": "雷克斯暴龍：陸地霸主的傳奇（下集）",
+   "home": "era:life",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmnbu2vxr0yfg01z07mcyf80e",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmnbu2vxr0yfg01z07mcyf80e/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmnbu2vxr0yfh01z08tpveq1p.mp3?v=1774793274690",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E7%86%B1%E9%96%80%E5%9B%9E%E9%A1%A7-%E6%81%90%E9%BE%8D%E5%B0%88%E8%BC%AF-6-%E9%9B%B7%E5%85%8B%E6%96%AF%E6%9A%B4%E9%BE%8D%E8%B7%91%E5%A4%9A%E5%BF%AB-%E5%B0%8F%E7%9F%AD%E6%89%8B%E8%83%BD%E5%B9%B9%E5%98%9B/id1812447277?i=1000758098775&uo=4",
+    "duration": 796,
+    "pubDate": "Sun, 29 Mar 2026 22:02:19 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "155",
+   "title": "恐龍末日：解鎖6600萬年前的滅絕密碼",
+   "home": "era:life",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmnd0aays143b01w01wmva7zv",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmnd0aays143b01w01wmva7zv/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmnd0aays143c01w052k10j99.mp3?v=1774864175686",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E7%86%B1%E9%96%80%E5%9B%9E%E9%A1%A7-%E6%81%90%E9%BE%8D%E5%B0%88%E8%BC%AF-7-%E6%81%90%E9%BE%8D%E6%9C%AB%E6%97%A5-%E8%A7%A3%E9%8E%966600%E8%90%AC%E5%B9%B4%E5%89%8D%E7%9A%84%E6%BB%85%E7%B5%95%E5%AF%86%E7%A2%BC/id1812447277?i=1000758524519&uo=4",
+    "duration": 1688,
+    "pubDate": "Tue, 31 Mar 2026 22:02:17 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "156",
+   "title": "生物演化歷程：恐龍的黃昏與哺乳動物的崛起 (下集)",
+   "home": "era:life",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "157",
+   "title": "失落世界的「時光膠囊」：從死亡到永恆的生命見證",
+   "home": "era:life",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "158",
+   "title": "化石的偵探遊戲：足跡、骨骸與古生物學的終極解謎",
+   "home": "era:life",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "159",
+   "title": "潛入深藍：繪製未知的水下版圖（上集）",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "160",
+   "title": "黑暗中的綠洲：海底火山與生命奇蹟（下集）",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "161",
+   "title": "萬米深淵的呼喚：征服地球「內太空」的先驅（上集）",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "162",
+   "title": "深淵的凝視：新世紀的奇蹟與隱憂（下集）",
+   "home": "l05",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "163",
+   "title": "飛向永恆：航海家1號的星際遠征",
+   "home": "l07",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "164",
+   "title": "航海家2號的史詩之旅：冰巨星兄弟與星際新邊疆",
+   "home": "l07",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "165",
+   "title": "永無止盡的奧德賽：新視野號如何重新定義太陽系",
+   "home": "l07",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "166",
+   "title": "綠色革命：從海綿到工廠，揭開植物的奇妙世界（上集）",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "167",
+   "title": "生存的智慧：植物的時間膠囊與奇特戰略（下集）",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "L03",
+     "title": "種子發芽的條件實驗",
+     "question": "水夠了，沒有氧也會發芽嗎？一次改一項，跟對照比看看。",
+     "url": "https://lab.kidsci.app/seedlab/"
+    }
+   ]
+  },
+  {
+   "code": "168",
+   "title": "綠色奇蹟：揭開葉片裡的「量子光電廠」",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "L01",
+     "title": "光合作用的資源瓶頸",
+     "question": "只加亮燈，葉片就一定做更多糖嗎？",
+     "url": "https://lab.kidsci.app/leaflim/"
+    }
+   ]
+  },
+  {
+   "code": "169",
+   "title": "植物界的摩天大樓挑戰：一滴水如何爬上頂層？",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "L02",
+     "title": "樹的水柱為什麼會斷？",
+     "question": "葉子拉水，氣泡會怎樣改變水路？",
+     "url": "https://lab.kidsci.app/xylem/"
+    }
+   ]
+  },
+  {
+   "code": "170",
+   "title": "深藍夢魘：重返巨齒鯊的史前戰場",
+   "home": "era:life",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmj1gmwxq031001rz8tgj7lyf",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmj1gmwxq031001rz8tgj7lyf/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9ljdfz20y601ssdhfebkuz.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-170-%E6%B7%B1%E6%B5%B7%E9%9C%B8%E4%B8%BB%E4%B9%8B%E8%AC%8E-%E5%B7%A8%E9%BD%92%E9%AF%8A%E7%9A%84%E7%89%99%E9%BD%92%E6%AF%94%E6%88%91%E7%9A%84%E8%87%89%E9%82%84%E5%A4%A7/id1812447277?i=1000740834814&uo=4",
+    "duration": 686,
+    "pubDate": "Thu, 11 Dec 2025 11:17:23 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "171",
+   "title": "深海戰神：敢與巨齒鯊單挑的梅爾維爾鯨",
+   "home": "era:life",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmj4bucei0f8d01jya39bbk8g",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmj4bucei0f8d01jya39bbk8g/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9ljdfz20y401ss9nndcv1j.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-171-%E9%AF%A8%E9%AF%8A%E5%A4%A7%E6%88%B0-%E6%93%81%E6%9C%89%E6%9A%B4%E9%BE%8D%E7%89%99%E9%BD%92%E7%9A%84-%E6%A2%85%E7%88%BE%E7%B6%AD%E7%88%BE%E9%AF%A8-vs-%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%A4%A7%E9%AF%8A%E9%AD%9A-%E5%B7%A8%E9%BD%92%E9%AF%8A/id1812447277?i=1000741115061&uo=4",
+    "duration": 661,
+    "pubDate": "Sat, 13 Dec 2025 11:00:23 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "172",
+   "title": "白堊紀海神：一口吞下鯊魚的蒼龍",
+   "home": "era:life",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmj76e1gx150m01nd1lpvcp1v",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmj76e1gx150m01nd1lpvcp1v/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lj7p720y201ss3xhk1doc.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-172-%E7%B5%82%E6%A5%B5%E6%B5%B7%E6%80%AA-%E8%AE%93%E9%9C%B8%E7%8E%8B%E9%BE%8D%E4%B9%9F%E4%B8%8D%E6%95%A2%E4%B8%8B%E6%B0%B4%E7%9A%84-%E7%99%BD%E5%A0%8A%E7%B4%80%E6%B5%B7%E7%A5%9E-%E8%92%BC%E9%BE%8D/id1812447277?i=1000741340837&uo=4",
+    "duration": 612,
+    "pubDate": "Mon, 15 Dec 2025 10:44:10 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "173",
+   "title": "隱形帝國：佔領地球97%的無脊椎動物（上集）",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "G06",
+     "title": "外骨骼的長大關卡",
+     "question": "先分配食物，再走回合，看幼蟹如何換大殼。",
+     "url": "https://lab.kidsci.app/molt/"
+    }
+   ]
+  },
+  {
+   "code": "174",
+   "title": "海洋異形：擁有外星智慧的章魚與管水母（下集）",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "X04",
+     "title": "章魚的分散控制中心",
+     "question": "每次都問中央，還是讓腕就地處理？",
+     "url": "https://lab.kidsci.app/octomsg/"
+    }
+   ]
+  },
+  {
+   "code": "175",
+   "title": "活體坦克：昆蟲的奈米黑科技",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "C11",
+     "title": "昆蟲複眼：拍細還是拍快？",
+     "question": "小眼變多，就能補回沒拍到的動作嗎？",
+     "url": "https://lab.kidsci.app/eyegrid/"
+    },
+    {
+     "id": "E07",
+     "title": "惡魔鐵甲蟲：接縫也是結構",
+     "question": "拼圖形的接縫，為什麼不能直接拉開？",
+     "url": "https://lab.kidsci.app/shellock/"
+    }
+   ]
+  },
+  {
+   "code": "176",
+   "title": "六足帝國：昆蟲的生化武器與飛行特技",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "177",
+   "title": "黃金戰甲：帝王斑蝶的千里長征",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "G07",
+     "title": "帝王蝶的生命補給站",
+     "question": "有花蜜，毛毛蟲就有東西吃了嗎？",
+     "url": "https://lab.kidsci.app/monarch/"
+    },
+    {
+     "id": "H02",
+     "title": "帝王蝶接力遷徙",
+     "question": "同一隻蝶，會飛完全年的來回嗎？",
+     "url": "https://lab.kidsci.app/migrate/"
+    }
+   ]
+  },
+  {
+   "code": "178",
+   "title": "生命族譜：從深海古菌到萬獸之王",
+   "home": "era:life",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "179",
+   "title": "生存遊戲：為什麼獅子比斑馬少？",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "H01",
+     "title": "海洋食物網的能量預算",
+     "question": "切斷一條路，食物能量去哪裡？",
+     "url": "https://lab.kidsci.app/foodweb/"
+    }
+   ]
+  },
+  {
+   "code": "180",
+   "title": "脊椎奇蹟：從做伏地挺身的魚到藍鯨",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "181",
+   "title": "脊椎奇蹟：從做伏地挺身的魚到藍鯨",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "182",
+   "title": "水中超跑：鯊魚的皮膚其實是飛機跑道？",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmk8bu12n0ivc01te3aqc3tzv",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmk8bu12n0ivc01te3aqc3tzv/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9liujq20xb01ss65v6cze3.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-182-%E6%B0%B4%E4%B8%8B%E6%B3%95%E6%8B%89%E5%88%A9-%E6%8F%AD%E9%96%8B%E9%AD%9A%E9%A1%9E%E6%BC%94%E5%8C%96%E8%88%87%E6%B5%81%E9%AB%94%E5%8A%9B%E5%AD%B8%E7%9A%84%E8%B6%85%E8%83%BD%E5%8A%9B%E7%A5%95%E5%AF%86/id1812447277?i=1000744582627&uo=4",
+    "duration": 787,
+    "pubDate": "Sat, 10 Jan 2026 10:45:37 GMT"
+   },
+   "labs": [
+    {
+     "id": "B01",
+     "title": "魚尾任務：直游與轉彎",
+     "question": "同一條尾巴，在兩種任務都最好嗎？",
+     "url": "https://lab.kidsci.app/fintask/"
+    },
+    {
+     "id": "B02",
+     "title": "鯊魚的三種垂直力",
+     "question": "停游之後，浮力也會消失嗎？",
+     "url": "https://lab.kidsci.app/sharkup/"
+    }
+   ]
+  },
+  {
+   "code": "183",
+   "title": "深海生存遊戲：慈父魚爸爸與子宮內的殺戮",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "184",
+   "title": "深藍戰慄：大白鯊的量子感測器與隱形戰機皮膚",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cvd00f201xlfi291v91",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cvd00f201xlfi291v91/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9liofh20x501ssf3sj2vh2.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-184-%E6%B7%B1%E6%B5%B7%E8%A3%A1%E7%9A%84%E9%9A%B1%E5%BD%A2%E6%88%B0%E6%A9%9F-%E5%A4%A7%E7%99%BD%E9%AF%8A%E7%9A%84-%E7%AC%AC%E5%85%AD%E6%84%9F-%E5%A4%A7%E5%86%92%E9%9A%AA/id1812447277?i=1000708135285&uo=4",
+    "duration": 782,
+    "pubDate": "Fri, 16 Jan 2026 21:38:29 GMT"
+   },
+   "labs": [
+    {
+     "id": "B03",
+     "title": "盾鱗靈感：細槽的尺度",
+     "question": "粗糙面，在任何方向與速度都減阻嗎？",
+     "url": "https://lab.kidsci.app/riblets/"
+    },
+    {
+     "id": "C05",
+     "title": "鯊魚鼻子的電場線索",
+     "question": "轉動電源，鼻子的正負訊號會改變嗎？",
+     "url": "https://lab.kidsci.app/sharkel/"
+    }
+   ]
+  },
+  {
+   "code": "185",
+   "title": "登陸先鋒（上）：青蛙與蟾蜍的雙重生活",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "G03",
+     "title": "兩棲動物的皮膚呼吸站",
+     "question": "改兩側的氧，箭頭會往哪裡走？",
+     "url": "https://lab.kidsci.app/skinoxy/"
+    }
+   ]
+  },
+  {
+   "code": "186",
+   "title": "生存藝術（下）：林蛙的「急凍復活」與蠑螈的再生術",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "G02",
+     "title": "林蛙結冰保護：冰在哪裡？",
+     "question": "先看細胞外的冰，再看看裡面的水。",
+     "url": "https://lab.kidsci.app/icecell/"
+    }
+   ]
+  },
+  {
+   "code": "187",
+   "title": "變態日記：從吃素的蝌蚪到吃肉的青蛙",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "G01",
+     "title": "青蛙的器官與棲地",
+     "question": "換了身體，住哪裡、吃什麼也要換嗎？",
+     "url": "https://lab.kidsci.app/froglife/"
+    }
+   ]
+  },
+  {
+   "code": "188",
+   "title": "冷血外星人？揭開爬行動物的三億年生存神技！",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cuy00dy01xle7fxbmk3",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cuy00dy01xle7fxbmk3/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lih5920wt01ssfoht6p7m.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-188-%E5%86%B7%E8%A1%80%E5%A4%96%E6%98%9F%E4%BA%BA-%E6%8F%AD%E9%96%8B%E7%88%AC%E8%A1%8C%E5%8B%95%E7%89%A9%E7%9A%84%E4%B8%89%E5%84%84%E5%B9%B4%E7%94%9F%E5%AD%98%E7%A5%9E%E6%8A%80/id1812447277?i=1000709262714&uo=4",
+    "duration": 667,
+    "pubDate": "Wed, 28 Jan 2026 21:19:22 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "189",
+   "title": "鋼鐵防護衣！揭開爬行動物的身體奧祕",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cuu00dw01xl51uhg5pn",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cuu00dw01xl51uhg5pn/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lih5920wr01sscbhe0h6o.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-189-%E9%8B%BC%E9%90%B5%E9%98%B2%E8%AD%B7%E8%A1%A3-%E6%8F%AD%E9%96%8B%E7%88%AC%E8%A1%8C%E5%8B%95%E7%89%A9%E7%9A%84%E8%BA%AB%E9%AB%94%E5%A5%A7%E7%A5%95/id1812447277?i=1000709422171&uo=4",
+    "duration": 1150,
+    "pubDate": "Sun, 01 Feb 2026 00:12:54 GMT"
+   },
+   "labs": [
+    {
+     "id": "C06",
+     "title": "蛇的分叉舌：左右聞聞看",
+     "question": "左邊氣味多一點，示例蛇會怎麼走？",
+     "url": "https://lab.kidsci.app/forktong/"
+    },
+    {
+     "id": "E10",
+     "title": "變色龍的結構色調音盤",
+     "question": "晶體間距一樣，換照明還會看到一樣的顏色嗎？",
+     "url": "https://lab.kidsci.app/chamcol/"
+    }
+   ]
+  },
+  {
+   "code": "190",
+   "title": "重裝甲戰士：鱷魚的一億年不敗神話",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cuu00du01xl056p3562",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cuu00du01xl056p3562/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lih5920wp01ss3kehen0n.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-190-%E5%B2%B8%E9%82%8A%E7%9A%84%E9%87%8D%E8%A3%9D%E7%94%B2%E6%88%B0%E5%A3%AB-%E6%8F%AD%E9%96%8B%E9%B1%B7%E9%AD%9A%E4%B8%80%E5%84%84%E5%B9%B4%E7%9A%84%E7%94%9F%E5%AD%98%E7%A5%9E%E6%8A%80/id1812447277?i=1000709576513&uo=4",
+    "duration": 800,
+    "pubDate": "Mon, 02 Feb 2026 21:10:20 GMT"
+   },
+   "labs": [
+    {
+     "id": "C03",
+     "title": "鱷魚的兩道進光控制",
+     "question": "瞳孔和保護膜，怎麼改變進光量？",
+     "url": "https://lab.kidsci.app/croceye/"
+    }
+   ]
+  },
+  {
+   "code": "191",
+   "title": "飛翔的奇蹟：鳥類世界的奧秘大解密",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cuu00ds01xl500n5g7g",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cuu00ds01xl500n5g7g/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9libdg20wo01ss1ydz2ouq.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-191-%E9%A3%9B%E7%BF%94%E7%9A%84%E5%A5%87%E8%B9%9F-%E9%B3%A5%E9%A1%9E%E4%B8%96%E7%95%8C%E7%9A%84%E5%A5%A7%E7%A7%98%E5%A4%A7%E8%A7%A3%E5%AF%86/id1812447277?i=1000709685686&uo=4",
+    "duration": 642,
+    "pubDate": "Tue, 03 Feb 2026 21:35:56 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "192",
+   "title": "鳥類的生活史：從巨蛋奇觀到萬里長征",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cuu00dq01xl06ck02rx",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cuu00dq01xl06ck02rx/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9libdg20wn01ssh9sa213n.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-192-%E9%B3%A5%E9%A1%9E%E7%9A%84%E7%94%9F%E6%B4%BB%E5%8F%B2-%E5%BE%9E%E5%B7%A8%E8%9B%8B%E5%A5%87%E8%A7%80%E5%88%B0%E8%90%AC%E9%87%8C%E9%95%B7%E5%BE%81/id1812447277?i=1000709780467&uo=4",
+    "duration": 655,
+    "pubDate": "Wed, 04 Feb 2026 21:18:46 GMT"
+   },
+   "labs": [
+    {
+     "id": "H03",
+     "title": "候鳥與食物高峰",
+     "question": "鳥到了，毛毛蟲也正多嗎？",
+     "url": "https://lab.kidsci.app/birdtime/"
+    }
+   ]
+  },
+  {
+   "code": "193",
+   "title": "解鎖天空之王的祕密：鳥類飛行的科學大冒險",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cuu00do01xl8uj37r2b",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cuu00do01xl8uj37r2b/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9libdg20wm01ss12pf2l0r.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-193-%E8%A7%A3%E9%8E%96%E5%A4%A9%E7%A9%BA%E4%B9%8B%E7%8E%8B%E7%9A%84%E7%A5%95%E5%AF%86-%E9%B3%A5%E9%A1%9E%E9%A3%9B%E8%A1%8C%E7%9A%84%E7%A7%91%E5%AD%B8%E5%A4%A7%E5%86%92%E9%9A%AA/id1812447277?i=1000709903594&uo=4",
+    "duration": 617,
+    "pubDate": "Fri, 06 Feb 2026 21:12:35 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "194",
+   "title": "哺乳動物（上）：生命型態的百變大爆發",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cuu00dm01xlgyrg3p6h",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cuu00dm01xlgyrg3p6h/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9libdg20wl01ssc0zr025u.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-194-%E5%93%BA%E4%B9%B3%E5%8B%95%E7%89%A9-%E4%B8%8A-%E7%94%9F%E5%91%BD%E5%9E%8B%E6%85%8B%E7%9A%84%E7%99%BE%E8%AE%8A%E5%A4%A7%E7%88%86%E7%99%BC/id1812447277?i=1000710098153&uo=4",
+    "duration": 1010,
+    "pubDate": "Sat, 07 Feb 2026 21:15:29 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "195",
+   "title": "哺乳動物（下）：生存大師的裝備庫與感官世界",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cuu00dk01xle9m8flf4",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cuu00dk01xle9m8flf4/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9libdf20wf01ssgsrffi1g.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-195-%E5%93%BA%E4%B9%B3%E5%8B%95%E7%89%A9-%E4%B8%8B-%E7%94%9F%E5%AD%98%E5%A4%A7%E5%B8%AB%E7%9A%84%E8%A3%9D%E5%82%99%E5%BA%AB%E8%88%87%E6%84%9F%E5%AE%98%E4%B8%96%E7%95%8C/id1812447277?i=1000710277004&uo=4",
+    "duration": 1071,
+    "pubDate": "Fri, 13 Feb 2026 21:20:36 GMT"
+   },
+   "labs": [
+    {
+     "id": "D06",
+     "title": "北極狐的空氣保溫層",
+     "question": "毛皮保暖，是自己發熱嗎？",
+     "url": "https://lab.kidsci.app/foxfur/"
+    },
+    {
+     "id": "B06",
+     "title": "海豹鬍鬚的水流足跡",
+     "question": "魚已離開，還能從水流找到舊路線嗎？",
+     "url": "https://lab.kidsci.app/whisker/"
+    },
+    {
+     "id": "D07",
+     "title": "冬眠的電量條：還要留力氣醒來",
+     "question": "慢慢用能量，醒來那天還夠嗎？",
+     "url": "https://lab.kidsci.app/hibern/"
+    }
+   ]
+  },
+  {
+   "code": "196",
+   "title": "鴨嘴獸：演化史上最不可思議的拼裝奇蹟",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cut00di01xl35605mab",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cut00di01xl35605mab/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9li3kq20we01ss6jh3cmob.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-196-%E9%B4%A8%E5%98%B4%E7%8D%B8-%E6%BC%94%E5%8C%96%E5%8F%B2%E4%B8%8A%E6%9C%80%E4%B8%8D%E5%8F%AF%E6%80%9D%E8%AD%B0%E7%9A%84%E6%8B%BC%E8%A3%9D%E5%A5%87%E8%B9%9F/id1812447277?i=1000710424526&uo=4",
+    "duration": 606,
+    "pubDate": "Sat, 14 Feb 2026 21:13:02 GMT"
+   },
+   "labs": [
+    {
+     "id": "C04",
+     "title": "鴨嘴獸：閉眼找食物",
+     "question": "看不見，嘴巴還能收到什麼線索？",
+     "url": "https://lab.kidsci.app/platbill/"
+    }
+   ]
+  },
+  {
+   "code": "197",
+   "title": "森林裡的寂寞騎士：解密「穿山甲」的隱形盔甲與身世之謎",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cut00dg01xl03b70wyh",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cut00dg01xl03b70wyh/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9li3kq20wd01ss057q43su.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-197-%E6%A3%AE%E6%9E%97%E8%A3%A1%E7%9A%84%E5%AF%82%E5%AF%9E%E9%A8%8E%E5%A3%AB-%E8%A7%A3%E5%AF%86-%E7%A9%BF%E5%B1%B1%E7%94%B2-%E7%9A%84%E9%9A%B1%E5%BD%A2%E7%9B%94%E7%94%B2%E8%88%87%E8%BA%AB%E4%B8%96%E4%B9%8B%E8%AC%8E/id1812447277?i=1000710558798&uo=4",
+    "duration": 712,
+    "pubDate": "Mon, 16 Feb 2026 21:16:44 GMT"
+   },
+   "labs": [
+    {
+     "id": "E09",
+     "title": "穿山甲的重疊鱗片",
+     "question": "保護得密密的，還能彎嗎？",
+     "url": "https://lab.kidsci.app/scales/"
+    }
+   ]
+  },
+  {
+   "code": "198",
+   "title": "從巨獸到隱士：樹懶的節能生存奇蹟與史前冒險",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cut00de01xl5jl5h7hp",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cut00de01xl5jl5h7hp/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9li3kq20wa01ss9nyv3nq3.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-198-%E5%BE%9E%E5%B7%A8%E7%8D%B8%E5%88%B0%E9%9A%B1%E5%A3%AB-%E6%A8%B9%E6%87%B6%E7%9A%84%E7%AF%80%E8%83%BD%E7%94%9F%E5%AD%98%E5%A5%87%E8%B9%9F%E8%88%87%E5%8F%B2%E5%89%8D%E5%86%92%E9%9A%AA/id1812447277?i=1000710668769&uo=4",
+    "duration": 962,
+    "pubDate": "Thu, 19 Feb 2026 20:57:45 GMT"
+   },
+   "labs": [
+    {
+     "id": "D08",
+     "title": "樹懶的一天：時間與能量",
+     "question": "多走幾小時，兩本帳會怎麼變？",
+     "url": "https://lab.kidsci.app/slothday/"
+    }
+   ]
+  },
+  {
+   "code": "199",
+   "title": "海洋中的獨角獸：獨角鯨的長牙機密與心跳悖論",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cut00dc01xl51vbhfuq",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cut00dc01xl51vbhfuq/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9li3kq20w901ss8oih4m55.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-199-%E6%B5%B7%E6%B4%8B%E4%B8%AD%E7%9A%84%E7%8D%A8%E8%A7%92%E7%8D%B8-%E7%8D%A8%E8%A7%92%E9%AF%A8%E7%9A%84%E9%95%B7%E7%89%99%E6%A9%9F%E5%AF%86%E8%88%87%E5%BF%83%E8%B7%B3%E6%82%96%E8%AB%96/id1812447277?i=1000710884482&uo=4",
+    "duration": 756,
+    "pubDate": "Fri, 20 Feb 2026 21:37:34 GMT"
+   },
+   "labs": [
+    {
+     "id": "B08",
+     "title": "深潛鯨魚的氧氣預算",
+     "question": "留在深處前，要替上浮留下多少氧？",
+     "url": "https://lab.kidsci.app/diveoxy/"
+    }
+   ]
+  },
+  {
+   "code": "200",
+   "title": "深海的時間領主：格陵蘭鯊的 400 年長生秘密",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cut00da01xlhxkb8c1n",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cut00da01xlhxkb8c1n/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9li3kq20w801ss7jg31nle.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-200-%E6%B7%B1%E6%B5%B7%E7%9A%84%E6%99%82%E9%96%93%E9%A0%98%E4%B8%BB-%E6%A0%BC%E9%99%B5%E8%98%AD%E9%AF%8A%E7%9A%84-400-%E5%B9%B4%E9%95%B7%E7%94%9F%E7%A7%98%E5%AF%86/id1812447277?i=1000711017528&uo=4",
+    "duration": 605,
+    "pubDate": "Sat, 21 Feb 2026 21:03:50 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "201",
+   "title": "穿著晚禮服的生化戰術家：你所不知道的臭鼬（Skunk）",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cut00d001xl0nr661t3",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cut00d001xl0nr661t3/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9li3kp20w501ssffe60o9o.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-201-%E7%A9%BF%E8%91%97%E6%99%9A%E7%A6%AE%E6%9C%8D%E7%9A%84%E7%94%9F%E5%8C%96%E6%88%B0%E8%A1%93%E5%AE%B6-%E4%BD%A0%E6%89%80%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84%E8%87%AD%E9%BC%AC-skunk/id1812447277?i=1000712274164&uo=4",
+    "duration": 544,
+    "pubDate": "Wed, 25 Feb 2026 21:13:30 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "202",
+   "title": "為什麼你絕對不想惹「平頭哥」？蜜獾的無畏傳奇",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cut00d401xl08051lof",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cut00d401xl08051lof/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lhwky20w401ss6iyla9qp.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-202-%E7%82%BA%E4%BB%80%E9%BA%BC%E4%BD%A0%E7%B5%95%E5%B0%8D%E4%B8%8D%E6%83%B3%E6%83%B9-%E5%B9%B3%E9%A0%AD%E5%93%A5-%E8%9C%9C%E7%8D%BE%E7%9A%84%E7%84%A1%E7%95%8F%E5%82%B3%E5%A5%87/id1812447277?i=1000711993029&uo=4",
+    "duration": 776,
+    "pubDate": "Fri, 27 Feb 2026 21:34:19 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "203",
+   "title": "藍色巨獸與深海輓歌：解密地球終極生命體的生與死",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cut00d201xl18mqglw5",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cut00d201xl18mqglw5/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9li3kp20w601ssey70gx73.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-203-%E8%97%8D%E8%89%B2%E5%B7%A8%E7%8D%B8%E8%88%87%E6%B7%B1%E6%B5%B7%E8%BC%93%E6%AD%8C-%E8%A7%A3%E5%AF%86%E5%9C%B0%E7%90%83%E7%B5%82%E6%A5%B5%E7%94%9F%E5%91%BD%E9%AB%94%E7%9A%84%E7%94%9F%E8%88%87%E6%AD%BB/id1812447277?i=1000712089721&uo=4",
+    "duration": 714,
+    "pubDate": "Mon, 23 Feb 2026 21:35:58 GMT"
+   },
+   "labs": [
+    {
+     "id": "B07",
+     "title": "藍鯨的磷蝦能量帳",
+     "question": "一大口水，真的每次都划算嗎？",
+     "url": "https://lab.kidsci.app/krill/"
+    },
+    {
+     "id": "B09",
+     "title": "鯨魚聲音：距離與噪聲",
+     "question": "聲音還在，為什麼更難分辨？",
+     "url": "https://lab.kidsci.app/whalsnd/"
+    }
+   ]
+  },
+  {
+   "code": "204",
+   "title": "深海巨獸的溫柔秘密：聽懂抹香鯨的悄悄話",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cut00cy01xlbql4h3t6",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cut00cy01xlbql4h3t6/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9li3kp20w701ss5jq52krd.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-204-%E6%B7%B1%E6%B5%B7%E5%B7%A8%E7%8D%B8%E7%9A%84%E6%BA%AB%E6%9F%94%E7%A7%98%E5%AF%86-%E8%81%BD%E6%87%82%E6%8A%B9%E9%A6%99%E9%AF%A8%E7%9A%84%E6%82%84%E6%82%84%E8%A9%B1/id1812447277?i=1000712607572&uo=4",
+    "duration": 802,
+    "pubDate": "Sun, 22 Feb 2026 21:25:37 GMT"
+   },
+   "labs": [
+    {
+     "id": "B10",
+     "title": "抹香鯨節奏：五段間隔",
+     "question": "兩段節奏很像，就知道牠們說什麼嗎？",
+     "url": "https://lab.kidsci.app/codalab/"
+    }
+   ]
+  },
+  {
+   "code": "205",
+   "title": "夜空中的「重金屬」搖滾巨星：你以為你懂蝙蝠嗎？",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cut00cw01xl34o1dbc8",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cut00cw01xl34o1dbc8/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lhwky20w301ss5xmb9u76.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-205-%E5%A4%9C%E7%A9%BA%E4%B8%AD%E7%9A%84-%E9%87%8D%E9%87%91%E5%B1%AC-%E6%90%96%E6%BB%BE%E5%B7%A8%E6%98%9F-%E4%BD%A0%E4%BB%A5%E7%82%BA%E4%BD%A0%E6%87%82%E8%9D%99%E8%9D%A0%E5%97%8E/id1812447277?i=1000712756094&uo=4",
+    "duration": 1078,
+    "pubDate": "Mon, 02 Mar 2026 21:21:16 GMT"
+   },
+   "labs": [
+    {
+     "id": "C01",
+     "title": "蝙蝠回聲測距",
+     "question": "聲音飛出去又回來，要花多久？",
+     "url": "https://lab.kidsci.app/batecho/"
+    },
+    {
+     "id": "C02",
+     "title": "蝙蝠與蛾：回聲被打亂",
+     "question": "聽到一聲響，就一定是自己的回聲嗎？",
+     "url": "https://lab.kidsci.app/mothjam/"
+    }
+   ]
+  },
+  {
+   "code": "206",
+   "title": "水豚君的佛系哲學：從亞馬遜沼澤到人類沙發，揭開「世界上最大的老鼠」稱霸地球的秘密",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmdpx4cur00cq01xld19aha50",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmdpx4cur00cq01xld19aha50/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lhwky20w201ss41urdhpw.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-206-%E6%B0%B4%E8%B1%9A%E5%90%9B%E7%9A%84%E4%BD%9B%E7%B3%BB%E5%93%B2%E5%AD%B8-%E4%B8%96%E7%95%8C%E4%B8%8A%E6%9C%80%E5%A4%A7%E7%9A%84%E8%80%81%E9%BC%A0%E5%A6%82%E4%BD%95%E7%A8%B1%E9%9C%B8%E5%9C%B0%E7%90%83/id1812447277?i=1000713444976&uo=4",
+    "duration": 760,
+    "pubDate": "Wed, 04 Mar 2026 21:24:15 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "207",
+   "title": "無尾熊：演化史上的「極簡主義者」，還是深藏不露的生存大師？",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmmfmxj0s0wae01scdnsv61gf",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmmfmxj0s0wae01scdnsv61gf/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lhwky20w101ss0fkw7ise.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-207-%E7%84%A1%E5%B0%BE%E7%86%8A-%E6%BC%94%E5%8C%96%E5%8F%B2%E4%B8%8A%E7%9A%84-%E6%A5%B5%E7%B0%A1%E4%B8%BB%E7%BE%A9%E8%80%85-%E9%82%84%E6%98%AF%E6%B7%B1%E8%97%8F%E4%B8%8D%E9%9C%B2%E7%9A%84%E7%94%9F%E5%AD%98%E5%A4%A7%E5%B8%AB/id1812447277?i=1000753703670&uo=4",
+    "duration": 614,
+    "pubDate": "Fri, 06 Mar 2026 21:00:29 GMT"
+   },
+   "labs": [
+    {
+     "id": "D09",
+     "title": "無尾熊葉子餐：三本小帳",
+     "question": "能量多的葉子，其他帳也更好嗎？",
+     "url": "https://lab.kidsci.app/leafmeal/"
+    }
+   ]
+  },
+  {
+   "code": "208",
+   "title": "演化論的肌肉與魔法：解密「袋鼠」不可思議的生存工藝",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmmjy73i33f9k01sccrpedc9k",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmmjy73i33f9k01sccrpedc9k/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lhwkx20vz01ss1cv5azb5.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-208-%E6%BC%94%E5%8C%96%E8%AB%96%E7%9A%84%E8%82%8C%E8%82%89%E8%88%87%E9%AD%94%E6%B3%95-%E8%A7%A3%E5%AF%86-%E8%A2%8B%E9%BC%A0-%E4%B8%8D%E5%8F%AF%E6%80%9D%E8%AD%B0%E7%9A%84%E7%94%9F%E5%AD%98%E5%B7%A5%E8%97%9D/id1812447277?i=1000754102986&uo=4",
+    "duration": 1091,
+    "pubDate": "Mon, 09 Mar 2026 21:10:45 GMT"
+   },
+   "labs": [
+    {
+     "id": "A07",
+     "title": "袋鼠的六跳能量帳",
+     "question": "不補能量，下一跳會跟上一跳一樣高嗎？",
+     "url": "https://lab.kidsci.app/hopbank/"
+    },
+    {
+     "id": "A08",
+     "title": "袋鼠尾巴：第五個支點",
+     "question": "尾巴接地與抬起，受力有什麼不同？",
+     "url": "https://lab.kidsci.app/tailfoot/"
+    }
+   ]
+  },
+  {
+   "code": "209",
+   "title": "演化謊言？大貓熊的「素食肉食者」真相與生存機密",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmmms5lc3e1o801uh3yp363mt",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmmms5lc3e1o801uh3yp363mt/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lhwkx20vy01ssavqb7ltp.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-209-%E6%BC%94%E5%8C%96%E8%AC%8A%E8%A8%80-%E5%A4%A7%E8%B2%93%E7%86%8A%E7%9A%84-%E7%B4%A0%E9%A3%9F%E8%82%89%E9%A3%9F%E8%80%85-%E7%9C%9F%E7%9B%B8%E8%88%87%E7%94%9F%E5%AD%98%E6%A9%9F%E5%AF%86/id1812447277?i=1000754724968&uo=4",
+    "duration": 712,
+    "pubDate": "Wed, 11 Mar 2026 21:17:51 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "210",
+   "title": "澳洲荒野的「戰鬥推土機」：揭開袋熊（Wombat）方塊便便與鋼鐵屁屁的生物學奧秘",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmmpnhkt8fy1x01uh2fn97j8q",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmmpnhkt8fy1x01uh2fn97j8q/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lhwkx20vx01ss3xu6c57r.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-210-%E6%BE%B3%E6%B4%B2%E8%8D%92%E9%87%8E%E7%9A%84-%E6%88%B0%E9%AC%A5%E6%8E%A8%E5%9C%9F%E6%A9%9F-%E6%8F%AD%E9%96%8B%E8%A2%8B%E7%86%8A%E7%9A%84%E7%94%9F%E7%89%A9%E5%AD%B8%E5%A5%A7%E7%A7%98/id1812447277?i=1000755172001&uo=4",
+    "duration": 654,
+    "pubDate": "Fri, 13 Mar 2026 21:05:48 GMT"
+   },
+   "labs": [
+    {
+     "id": "X08",
+     "title": "袋熊的方形便便",
+     "question": "圓形腸道裡，軟硬不同的管壁能怎樣改變形狀？",
+     "url": "https://lab.kidsci.app/wombcube/"
+    }
+   ]
+  },
+  {
+   "code": "211",
+   "title": "演化的摩天大樓：長頸鹿 (Giraffe) 的生理奇蹟與未解之謎",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmmtyclwgj61r01uhhwdp1h0l",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmmtyclwgj61r01uhhwdp1h0l/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lhwkx20vv01ss49k49dzm.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-211-%E6%BC%94%E5%8C%96%E7%9A%84%E6%91%A9%E5%A4%A9%E5%A4%A7%E6%A8%93-%E9%95%B7%E9%A0%B8%E9%B9%BF-giraffe-%E7%9A%84%E7%94%9F%E7%90%86%E5%A5%87%E8%B9%9F%E8%88%87%E6%9C%AA%E8%A7%A3%E4%B9%8B%E8%AC%8E/id1812447277?i=1000755651420&uo=4",
+    "duration": 630,
+    "pubDate": "Mon, 16 Mar 2026 21:08:35 GMT"
+   },
+   "labs": [
+    {
+     "id": "X07",
+     "title": "長頸鹿低頭的壓力",
+     "question": "頭比心臟低時，液柱壓差往哪邊變？",
+     "url": "https://lab.kidsci.app/headpres/"
+    }
+   ]
+  },
+  {
+   "code": "212",
+   "title": "穿著斑馬褲的長頸鹿：揭開非洲獨角獸「霍加狓」（Okapi）的神祕面紗",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmmwv24071x9s01r9cqxghb3p",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmmwv24071x9s01r9cqxghb3p/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lhjwp20vt01ssgxarcqey.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-212-%E7%A9%BF%E8%91%97%E6%96%91%E9%A6%AC%E8%A4%B2%E7%9A%84%E9%95%B7%E9%A0%B8%E9%B9%BF-%E6%8F%AD%E9%96%8B%E9%9D%9E%E6%B4%B2%E7%8D%A8%E8%A7%92%E7%8D%B8-%E9%9C%8D%E5%8A%A0%E7%8B%93-okapi-%E7%9A%84%E7%A5%9E%E7%A5%95%E9%9D%A2%E7%B4%97/id1812447277?i=1000756030709&uo=4",
+    "duration": 656,
+    "pubDate": "Wed, 18 Mar 2026 21:05:57 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "213",
+   "title": "披著羽毛的乳牛：揭開亞馬遜「臭臭鳥」麝雉的恐龍身世之謎",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmmzn93t60o9a01sj360thtyp",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmmzn93t60o9a01sj360thtyp/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lhjwo20vr01ss8g3qbc97.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-213-%E6%8A%AB%E8%91%97%E7%BE%BD%E6%AF%9B%E7%9A%84%E4%B9%B3%E7%89%9B-%E6%8F%AD%E9%96%8B%E4%BA%9E%E9%A6%AC%E9%81%9C-%E8%87%AD%E8%87%AD%E9%B3%A5-%E9%BA%9D%E9%9B%89%E7%9A%84%E6%81%90%E9%BE%8D%E8%BA%AB%E4%B8%96%E4%B9%8B%E8%AC%8E/id1812447277?i=1000756396075&uo=4",
+    "duration": 601,
+    "pubDate": "Fri, 20 Mar 2026 21:12:49 GMT"
+   },
+   "labs": [
+    {
+     "id": "D11",
+     "title": "麝雉的食物工廠",
+     "question": "發酵囊變大，就沒有代價嗎？",
+     "url": "https://lab.kidsci.app/crop/"
+    }
+   ]
+  },
+  {
+   "code": "214",
+   "title": "森林裡的頂級 DJ：琴鳥，自然界最狂的「聲音駭客」",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmn3ulh5q00lk01r7594813v0",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmn3ulh5q00lk01r7594813v0/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lhjwo20vo01sscmx21uwl.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-214-%E6%A3%AE%E6%9E%97%E8%A3%A1%E7%9A%84%E9%A0%82%E7%B4%9A-dj-%E7%90%B4%E9%B3%A5-%E8%87%AA%E7%84%B6%E7%95%8C%E6%9C%80%E7%8B%82%E7%9A%84-%E8%81%B2%E9%9F%B3%E9%A7%AD%E5%AE%A2/id1812447277?i=1000756859513&uo=4",
+    "duration": 559,
+    "pubDate": "Mon, 23 Mar 2026 21:19:49 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "215",
+   "title": "天空的紅心與海上的強盜：解密軍艦鳥的極限生存術",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmn6t54s809yj01t8ed9x0h0a",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmn6t54s809yj01t8ed9x0h0a/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lhjwo20vm01ss8tklcus2.mp3",
+    "apple": "https://podcasts.apple.com/tw/podcast/ep-215-%E5%A4%A9%E7%A9%BA%E7%9A%84%E7%B4%85%E5%BF%83%E8%88%87%E6%B5%B7%E4%B8%8A%E7%9A%84%E5%BC%B7%E7%9B%9C-%E8%A7%A3%E5%AF%86%E8%BB%8D%E8%89%A6%E9%B3%A5%E7%9A%84%E6%A5%B5%E9%99%90%E7%94%9F%E5%AD%98%E8%A1%93/id1812447277?i=1000757359537&uo=4",
+    "duration": 720,
+    "pubDate": "Wed, 25 Mar 2026 21:11:54 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "216",
+   "title": "亞馬遜危險又迷人的戰神大叔：戴面具的霸主「角鵰」！",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmn9lm7nm0mrf01z0dkdvbddm",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmn9lm7nm0mrf01z0dkdvbddm/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmn9lm7nm0mrg01z01otqavmb.mp3?v=1774658148477",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-ep-216-%E4%BA%9E%E9%A6%AC%E9%81%9C%E9%9B%A8%E6%9E%97%E7%9A%84%E6%88%B4%E9%9D%A2%E5%85%B7%E5%B7%A8%E4%BA%BA-%E6%88%B0%E7%A5%9E%E5%A4%A7%E5%8F%94-%E8%A7%92%E9%B5%B0-%E7%9A%84%E7%8B%A9%E7%8D%B5%E5%82%B3%E5%A5%87%E8%88%87%E6%BA%AB%E6%9F%94/id1812447277?i=1000757817196&uo=4",
+    "duration": 1044,
+    "pubDate": "Sat, 28 Mar 2026 00:40:59 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "217",
+   "title": "陸地巨獸的溫柔與智慧：揭開非洲象的演化奇蹟",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmnbtegge0a1t01y39r6edkne",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmnbtegge0a1t01y39r6edkne/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmnbtegge0a1u01y37ggb89up.mp3?v=1774792142663",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-ep-217-%E9%99%B8%E5%9C%B0%E5%B7%A8%E7%8D%B8%E7%9A%84%E6%BA%AB%E6%9F%94%E8%88%87%E6%99%BA%E6%85%A7-%E6%8F%AD%E9%96%8B%E9%9D%9E%E6%B4%B2%E8%B1%A1%E7%9A%84%E6%BC%94%E5%8C%96%E5%A5%87%E8%B9%9F/id1812447277?i=1000758301068&uo=4",
+    "duration": 718,
+    "pubDate": "Mon, 30 Mar 2026 22:02:10 GMT"
+   },
+   "labs": [
+    {
+     "id": "A11",
+     "title": "大象腳掌緩衝墊",
+     "question": "腳墊越軟，就一定越能緩衝嗎？",
+     "url": "https://lab.kidsci.app/footpad/"
+    },
+    {
+     "id": "D02",
+     "title": "大象搧耳：熱往哪裡走？",
+     "question": "搧得更快，一定能帶走更多熱嗎？",
+     "url": "https://lab.kidsci.app/earfan/"
+    }
+   ]
+  },
+  {
+   "code": "218",
+   "title": "沙漠裡的特種部隊：狐獴的生存黑科技與女王傳奇",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmnd0vsix0x070103548q7681",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmnd0vsix0x070103548q7681/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmnd0vsix0x0801032lzp3coi.mp3?v=1774865179618",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-ep-218-%E6%B2%99%E6%BC%A0%E8%A3%A1%E7%9A%84%E7%89%B9%E7%A8%AE%E9%83%A8%E9%9A%8A-%E7%8B%90%E7%8D%B4%E7%9A%84%E7%94%9F%E5%AD%98%E9%BB%91%E7%A7%91%E6%8A%80%E8%88%87%E5%A5%B3%E7%8E%8B%E5%82%B3%E5%A5%87/id1812447277?i=1000758731277&uo=4",
+    "duration": 685,
+    "pubDate": "Wed, 01 Apr 2026 22:02:09 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "219",
+   "title": "動物的神奇第六感：誰是導航王與超強記憶大師？",
+   "home": "l03",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmnftzs990w8k01z388sz8848",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmnftzs990w8k01z388sz8848/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmnftzs990w8l01z33scl79aa.mp3?v=1775034994674",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-ep-219-%E5%8B%95%E7%89%A9%E7%9A%84%E7%A5%9E%E5%A5%87%E7%AC%AC%E5%85%AD%E6%84%9F-%E8%AA%B0%E6%98%AF%E5%B0%8E%E8%88%AA%E7%8E%8B%E8%88%87%E8%B6%85%E5%BC%B7%E8%A8%98%E6%86%B6%E5%A4%A7%E5%B8%AB/id1812447277?i=1000759124493&uo=4",
+    "duration": 846,
+    "pubDate": "Fri, 03 Apr 2026 22:02:08 GMT"
+   },
+   "labs": [
+    {
+     "id": "C12",
+     "title": "候鳥羅盤：線索一起看",
+     "question": "關掉磁場，另外的線索還能指路嗎？",
+     "url": "https://lab.kidsci.app/birdnav/"
+    },
+    {
+     "id": "F12",
+     "title": "蜜蜂的搖擺舞解碼器",
+     "question": "舞角和搖多久，能告訴同伴花在哪裡？",
+     "url": "https://lab.kidsci.app/waggle/"
+    }
+   ]
+  },
+  {
+   "code": "220",
+   "title": "動物界的微觀社會學：誰是最佳室友與超級奶爸？",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "F08",
+     "title": "蝦虎魚與槍蝦：一起比較安全？",
+     "question": "斷開觸角，誰會晚點躲？",
+     "url": "https://lab.kidsci.app/roompair/"
+    }
+   ]
+  },
+  {
+   "code": "221",
+   "title": "地球的生命舞台：從深海到城市的棲地大冒險",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "222",
+   "title": "蜂鳥特種部隊：挑戰物理極限的生物戰鬥機",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "223",
+   "title": "鴕鳥逆襲：披著羽毛的迅猛龍與防疫救星",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "A12",
+     "title": "鴕鳥快跑：兩腳的節奏",
+     "question": "一步走更遠，或每秒多走幾步，速度會怎麼變？",
+     "url": "https://lab.kidsci.app/stridel/"
+    }
+   ]
+  },
+  {
+   "code": "224",
+   "title": "雨林中的重裝轟炸機：大犀鳥的雙嘴之謎與愛情監獄",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "H05",
+     "title": "犀鳥的種子運送地圖",
+     "question": "離開果樹的種子，落到了哪裡？",
+     "url": "https://lab.kidsci.app/seedride/"
+    }
+   ]
+  },
+  {
+   "code": "225",
+   "title": "為什麼巨嘴鳥的嘴巴那麼大？原來是自帶超級空調！",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "D01",
+     "title": "巨嘴鳥的散熱器",
+     "question": "讓血流到大嘴巴，熱會去哪裡？",
+     "url": "https://lab.kidsci.app/toucan/"
+    },
+    {
+     "id": "E08",
+     "title": "巨嘴鳥的輕量夾層喙",
+     "question": "外殼裡放一個多孔內芯，重量和彎曲會怎樣？",
+     "url": "https://lab.kidsci.app/beakcore/"
+    }
+   ]
+  },
+  {
+   "code": "226",
+   "title": "最不像鳥的鳥！奇異鳥的生存黑科技與巨蛋之謎",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "C09",
+     "title": "奇異鳥：喙尖探探看",
+     "question": "看不到地下，還能找到線索嗎？",
+     "url": "https://lab.kidsci.app/kiwitip/"
+    }
+   ]
+  },
+  {
+   "code": "227",
+   "title": "夜空中的滑翔翼！飛鼠的粉紅螢光與空氣動力學秘密",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "A06",
+     "title": "飛鼠滑翔：高度換距離",
+     "question": "多一點起飛高度，能滑到更遠的樹嗎？",
+     "url": "https://lab.kidsci.app/glide/"
+    }
+   ]
+  },
+  {
+   "code": "228",
+   "title": "穿著燕尾服的戰術大師：企鵝的生存黑科技與暗黑兵法",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "D04",
+     "title": "企鵝腳的逆流熱交換",
+     "question": "兩條血管反向流，能把熱帶回去嗎？",
+     "url": "https://lab.kidsci.app/pengheat/"
+    },
+    {
+     "id": "D05",
+     "title": "企鵝抱團：換誰站外面？",
+     "question": "換個位置，能把散掉的熱變回來嗎？",
+     "url": "https://lab.kidsci.app/huddle/"
+    }
+   ]
+  },
+  {
+   "code": "229",
+   "title": "河馬跟你想的不一樣：粉紅汗水、水下飛毛腿與古柯鹼荒謬劇",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmoh3o6js0d0s01vg1fxf37vh",
+    "audio": null,
+    "apple": "https://podcasts.apple.com/tw/podcast/%E7%AF%80%E7%9B%AE%E9%A0%90%E5%91%8A-%E6%B5%81%E7%B4%85%E6%B1%97%E7%9A%84%E6%B0%B4%E6%80%AA/id1812447277?i=1000763938105&uo=4",
+    "duration": 289,
+    "pubDate": "Mon, 27 Apr 2026 23:02:15 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "230",
+   "title": "誰說海牛只是胖？揭開「美人魚」的五大不可思議超能力",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "231",
+   "title": "深藍色的高智商異客：揭開海豚與虎鯨不為人知的「外星」文明",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "232",
+   "title": "雨林中的尤達大師：眼鏡猴的超能力與玻璃般脆弱的靈魂",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "233",
+   "title": "雪山之鬼：雪豹的極限生存黑科技與驚人基因秘密",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "A09",
+     "title": "雪豹的雪地靴",
+     "question": "腳掌變大，雪地上的壓力怎麼變？",
+     "url": "https://lab.kidsci.app/snowpaw/"
+    },
+    {
+     "id": "A10",
+     "title": "雪豹走窄岩：找重心",
+     "question": "身體偏出去，用尾巴能把重心帶回來嗎？",
+     "url": "https://lab.kidsci.app/rockbal/"
+    }
+   ]
+  },
+  {
+   "code": "234",
+   "title": "暗夜精靈的魔指傳說：指猴的敲擊回聲定位與第六根手指之謎",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "C08",
+     "title": "指猴：敲敲木頭",
+     "question": "哪一段敲起來不一樣？",
+     "url": "https://lab.kidsci.app/tapwood/"
+    }
+   ]
+  },
+  {
+   "code": "235",
+   "title": "沙漠裡的綠色巨人：索諾蘭的生存奇蹟",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "D03",
+     "title": "傑克兔大耳：散熱也有代價",
+     "question": "耳朵大一點，冷暖環境都更好嗎？",
+     "url": "https://lab.kidsci.app/hareear/"
+    },
+    {
+     "id": "L04",
+     "title": "仙人掌的用水時間表",
+     "question": "晚上收碳，白天用碳：同一天的兩種時間表，誰失水較多？",
+     "url": "https://lab.kidsci.app/camday/"
+    }
+   ]
+  },
+  {
+   "code": "236",
+   "title": "沙漠晝夜的生存狂歡與不喝水的奇蹟",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "C07",
+     "title": "響尾蛇：熱訊號",
+     "question": "關燈後，暖老鼠還有線索嗎？",
+     "url": "https://lab.kidsci.app/pitheat/"
+    },
+    {
+     "id": "D12",
+     "title": "沙漠袋鼠鼠的水帳",
+     "question": "不喝水時，水收入從哪裡來？",
+     "url": "https://lab.kidsci.app/waterbal/"
+    }
+   ]
+  },
+  {
+   "code": "237",
+   "title": "雨林裡的生存遊戲：潛入亞馬遜的神祕水陸世界",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "F07",
+     "title": "切葉蟻的真菌農場",
+     "question": "只搬葉，食物就會一直增加嗎？",
+     "url": "https://lab.kidsci.app/antfarm/"
+    }
+   ]
+  },
+  {
+   "code": "238",
+   "title": "雲端上的空中城市：探索亞馬遜樹冠層",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "E11",
+     "title": "蝴蝶翅膀的角度變色",
+     "question": "翅片不換材料，只轉一個角度，反射峰會去哪裡？",
+     "url": "https://lab.kidsci.app/wingcol/"
+    }
+   ]
+  },
+  {
+   "code": "239",
+   "title": "非洲莽原生存戰：與巨獸共舞的抗旱奇蹟",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "240",
+   "title": "莽原動物生存法則：地表最快掠食與地下微型帝國",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "241",
+   "title": "蓋在海底的超級萬里長城：大堡礁與珊瑚蟲的建築大揭秘",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "242",
+   "title": "海洋裡的熱帶雨林：探索珊瑚礁裡的極限求生大戰",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "243",
+   "title": "荒漠裡的變形金剛：兩千歲不死的超級麵包樹",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "244",
+   "title": "海底最強生化戰士：雀尾螳螂蝦的爆破神拳與奇幻視覺",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "E01",
+     "title": "螳螂蝦的彈簧拳",
+     "question": "慢慢存能量，怎麼快速出拳？",
+     "url": "https://lab.kidsci.app/shrimp/"
+    },
+    {
+     "id": "C10",
+     "title": "螳螂蝦的偏振訊息",
+     "question": "顏色相同，光的振動方向也相同嗎？",
+     "url": "https://lab.kidsci.app/poleye/"
+    },
+    {
+     "id": "E02",
+     "title": "螳螂蝦的空化泡",
+     "question": "槌速相同，水壓更高還會起泡嗎？",
+     "url": "https://lab.kidsci.app/cavibub/"
+    },
+    {
+     "id": "E03",
+     "title": "螳螂蝦的旋轉纖維層",
+     "question": "同樣點數，轉向最多就一定最好嗎？",
+     "url": "https://lab.kidsci.app/twistply/"
+    }
+   ]
+  },
+  {
+   "code": "245",
+   "title": "撕下猥瑣反派標籤：斑點鬣狗的權謀與生存絕殺",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "246",
+   "title": "閃耀的黃金活寶石：仰望星空的滾糞蟲",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "F05",
+     "title": "糞金龜的星空指南針",
+     "question": "遮住天空，直走會變難嗎？",
+     "url": "https://lab.kidsci.app/dungnav/"
+    },
+    {
+     "id": "F06",
+     "title": "糞金龜的養分搬運站",
+     "question": "糞不見了，裡面的氮去了哪裡？",
+     "url": "https://lab.kidsci.app/dungflow/"
+    }
+   ]
+  },
+  {
+   "code": "247",
+   "title": "草原上的微型摩天樓：解密非洲白蟻丘的「呼吸」奇蹟",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "F02",
+     "title": "白蟻丘的通風實驗室",
+     "question": "風不大，丘內的氣流怎麼轉向？",
+     "url": "https://lab.kidsci.app/mound/"
+    }
+   ]
+  },
+  {
+   "code": "248",
+   "title": "從「孤僻宅男」到「瘋狂暴徒」：蝗蟲變身真相與科技圍剿戰",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "F11",
+     "title": "蝗蟲的接觸累積工作台",
+     "question": "擠在一起，會立刻全部變群居嗎？",
+     "url": "https://lab.kidsci.app/locust/"
+    }
+   ]
+  },
+  {
+   "code": "249",
+   "title": "荒野中的無聲死神：揭秘非洲岩蟒的隱秘生活與狂野本能",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "250",
+   "title": "揭開海洋幽靈的面紗：在海床上飛翔的「魟(hóng)魚」戰士",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "B04",
+     "title": "仿魟鰭的離床挑戰",
+     "question": "貼近底部，一定會多一股向上的力嗎？",
+     "url": "https://lab.kidsci.app/rayfin/"
+    }
+   ]
+  },
+  {
+   "code": "251",
+   "title": "陸地重裝坦克：犀牛的史前傳說與科技救援行動",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "252",
+   "title": "地表生存黑科技：非洲牛羚的瘋狂大遷徙與氣候守護神傳奇",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "253",
+   "title": "狂野草原謎團！斑馬為什麼不能像馬一樣被我們騎？",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "H09",
+     "title": "斑馬條紋與虻的降落",
+     "question": "同一批示例虻，換個花紋會停下來嗎？",
+     "url": "https://lab.kidsci.app/flyland/"
+    }
+   ]
+  },
+  {
+   "code": "254",
+   "title": "海洋中的絕美刺客：釉彩蠟膜蝦與棘冠海星的生死鬥",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "255",
+   "title": "海洋中的毒堡壘與隱形斗篷：揭開小丑魚與海葵的終極生存密碼",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "F09",
+     "title": "小丑魚與海葵的交換",
+     "question": "合作的好處和成本，兩邊都一樣嗎？",
+     "url": "https://lab.kidsci.app/reefpair/"
+    },
+    {
+     "id": "F10",
+     "title": "小丑魚的條紋分類工作台",
+     "question": "同樣三條白紋，就一定是同一種？",
+     "url": "https://lab.kidsci.app/fishsort/"
+    }
+   ]
+  },
+  {
+   "code": "256",
+   "title": "湛藍的海洋掃地機器人：揭開藍指海星的奇妙生存術",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "257",
+   "title": "海蛇的藍色華爾茲：船槳尾巴、跨物種獵殺聯盟與「假頭」騙術大揭密",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "B05",
+     "title": "海蛇尾巴的推水帳",
+     "question": "尾巴擺得更快，肌肉供能就不用增加嗎？",
+     "url": "https://lab.kidsci.app/seapadd/"
+    }
+   ]
+  },
+  {
+   "code": "258",
+   "title": "尋水特種部隊：黃唇青斑海蛇的解渴大作戰！",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "259",
+   "title": "自然界的土木工程大師：河狸與牠們的太空級水壩",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "F03",
+     "title": "河狸水壩實驗室",
+     "question": "水壩留下的水，是從哪裡來？",
+     "url": "https://lab.kidsci.app/beaver/"
+    }
+   ]
+  },
+  {
+   "code": "260",
+   "title": "繁星鯊奇遇記：海洋溫柔巨人的超能力與星空密碼",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "B12",
+     "title": "鯨鯊濾食：水與食物分流",
+     "question": "吸進更多水，就一定沒有成本嗎？",
+     "url": "https://lab.kidsci.app/filter/"
+    },
+    {
+     "id": "H08",
+     "title": "鯨鯊斑點的身分配對",
+     "question": "把照片轉一下，還能找到同一個圖樣嗎？",
+     "url": "https://lab.kidsci.app/spotid/"
+    }
+   ]
+  },
+  {
+   "code": "261",
+   "title": "超級建築師：蜘蛛結網的秘密工程與科學奇蹟",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "E05",
+     "title": "蜘蛛絲材料實驗室",
+     "question": "很難拉斷，就一定最能接住小球嗎？",
+     "url": "https://lab.kidsci.app/silklab/"
+    },
+    {
+     "id": "E06",
+     "title": "蜘蛛網是振動訊息網",
+     "question": "碰到哪裡？蜘蛛附近能收到什麼？",
+     "url": "https://lab.kidsci.app/webpulse/"
+    },
+    {
+     "id": "F01",
+     "title": "蜘蛛網的幾何工作台",
+     "question": "同樣大的網，多繞幾圈會多用多少絲？",
+     "url": "https://lab.kidsci.app/webgeom/"
+    }
+   ]
+  },
+  {
+   "code": "262",
+   "title": "跨越四億年的藍血傳奇：這隻「馬蹄蟹」竟然是人類的救命恩人？",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "264",
+   "title": "穿越時空的奇蹟：重新認識傳奇的「渡渡鳥」，解開滅絕與重生的科學謎團！",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "H11",
+     "title": "渡渡鳥島：一起看三種壓力",
+     "question": "大鳥還在，小鳥卻變少，下一年會怎樣？",
+     "url": "https://lab.kidsci.app/dodoisl/"
+    }
+   ]
+  },
+  {
+   "code": "265",
+   "title": "非洲草原的天才建築師：朱巴蘭織布鳥的空中別墅",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "F04",
+     "title": "織巢鳥的纖維編織課",
+     "question": "把草葉交錯固定，就能分散拉力嗎？",
+     "url": "https://lab.kidsci.app/weavelab/"
+    }
+   ]
+  },
+  {
+   "code": "266",
+   "title": "消失的海洋公車：斯特拉海牛的悲歌與啟示",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "H12",
+     "title": "海牛與海藻林的連鎖效應",
+     "question": "海獺少了，海牛也會立刻變少嗎？",
+     "url": "https://lab.kidsci.app/kelpweb/"
+    }
+   ]
+  },
+  {
+   "code": "267",
+   "title": "海洋中的小丑工程師：海鸚的潛水神技與生存大挑戰",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "H04",
+     "title": "海鸚的夜航燈光圖",
+     "question": "關掉港口燈，路徑會往哪裡變？",
+     "url": "https://lab.kidsci.app/puflight/"
+    }
+   ]
+  },
+  {
+   "code": "268",
+   "title": "深海裡的巨大幽靈：神祕巨獸「冥河水母」",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "E12",
+     "title": "深海紅色隱身：顏色需要光",
+     "question": "同一個紅物體，在深處照紅燈還會很暗嗎？",
+     "url": "https://lab.kidsci.app/deepred/"
+    }
+   ]
+  },
+  {
+   "code": "269",
+   "title": "幽靈貓的傳說：探索台灣雲豹的神祕足跡與消失之謎",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "H07",
+     "title": "雲豹相機調查",
+     "question": "沒拍到，就代表森林裡沒有嗎？",
+     "url": "https://lab.kidsci.app/camtrap/"
+    }
+   ]
+  },
+  {
+   "code": "270",
+   "title": "沼澤中的隱形劍客：帶你尋找台灣曾經的「吸血鬼鹿」——獐(zhāng)",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "H10",
+     "title": "河麂的濕地拼圖",
+     "question": "同樣18格濕地，放在哪裡也有差嗎？",
+     "url": "https://lab.kidsci.app/wetgrid/"
+    }
+   ]
+  },
+  {
+   "code": "271",
+   "title": "穿越冰河的奇蹟：揭開台灣國寶「櫻花鉤(gōu)吻鮭」的重生秘辛！",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "H06",
+     "title": "櫻花鉤吻鮭的溪流通行證",
+     "question": "換一段設施，鮭魚能到更上游嗎？",
+     "url": "https://lab.kidsci.app/fishpass/"
+    },
+    {
+     "id": "X06",
+     "title": "鮭魚與水中氧",
+     "question": "水變暖，氧供給和需求會一起變嗎？",
+     "url": "https://lab.kidsci.app/oxyflow/"
+    }
+   ]
+  },
+  {
+   "code": "272",
+   "title": "紐西蘭的史前巨影：揭開「恐鳥」的神秘面紗與復活可能",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "273",
+   "title": "亞馬遜河的綠色巨人：巨骨舌魚的防彈(dàn)神話與重(chóng)生物語",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "B11",
+     "title": "巨骨舌魚的兩條補氧路",
+     "question": "水裡有氧，為什麼還要浮出來呼吸？",
+     "url": "https://lab.kidsci.app/airfish/"
+    },
+    {
+     "id": "E04",
+     "title": "巨骨舌魚：硬鱗與韌纖維",
+     "question": "只有硬，能一直擋住牙齒嗎？",
+     "url": "https://lab.kidsci.app/scalearm/"
+    }
+   ]
+  },
+  {
+   "code": "274",
+   "title": "揭開亞馬遜致命殺手的真相：食人魚的剪刀利齒與魔戒新物種的奇幻相遇",
+   "home": "l03",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "X02",
+     "title": "食人魚的下顎槓桿",
+     "question": "同樣拉一下，哪個咬點更有力？",
+     "url": "https://lab.kidsci.app/jawbite/"
+    },
+    {
+     "id": "X03",
+     "title": "食人魚換牙：保持一排工具",
+     "question": "一次換一顆，還是整側一起換？",
+     "url": "https://lab.kidsci.app/toothrow/"
+    }
+   ]
+  },
+  {
+   "code": "45",
+   "title": "孿生子悖論：愛因斯坦的時間旅行祕密！",
+   "home": "lane:relativity",
+   "also": [
+    "era:scientists"
+   ],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "46",
+   "title": "宇宙中最快樂的想法：愛因斯坦與等效原理",
+   "home": "lane:relativity",
+   "also": [
+    "era:scientists"
+   ],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "47",
+   "title": "飛向未來：愛因斯坦的時空祕密與人類的夢想火箭",
+   "home": "lane:relativity",
+   "also": [
+    "era:scientists"
+   ],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "48",
+   "title": "穿越時空大冒險：超光速飛行與奇妙時光機！",
+   "home": "lane:relativity",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "49",
+   "title": "探索太陽系的盡頭：航海家一號的漫長旅程",
+   "home": "l07",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "50",
+   "title": "【科技神話】飛行黃金：B-2 幽靈轟炸機的神祕傳說",
+   "home": "l04",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "51",
+   "title": "銀河系：宇宙地址簿上最大的一行字",
+   "home": "l09",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "52",
+   "title": "宇宙到底有多大？探索可觀測宇宙的邊界",
+   "home": "l10",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "53",
+   "title": "萬物的小積木與宇宙隱形大力士",
+   "home": "l01",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmnzsy7kt00kg01wy3afeela7",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmnzsy7kt00kg01wy3afeela7/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmnzsy7kt00kh01wydj5v2exw.mp3?v=1776242557142",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%B8%E5%B0%88%E8%BC%AF-1-%E8%90%AC%E7%89%A9%E7%9A%84%E5%B0%8F%E7%A9%8D%E6%9C%A8%E8%88%87%E5%AE%87%E5%AE%99%E9%9A%B1%E5%BD%A2%E5%A4%A7%E5%8A%9B%E5%A3%AB/id1812447277?i=1000761651790&uo=4",
+    "duration": 563,
+    "pubDate": "Wed, 15 Apr 2026 21:02:03 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "54",
+   "title": "物質的變身遊戲：認識物理與化學變化的魔法",
+   "home": "l01",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmo1a5s8x05p901vgfp6bgkj3",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmo1a5s8x05p901vgfp6bgkj3/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmo1a5s8x05pa01vg77kg8ru9.mp3?v=1776331929783",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%B8%E5%B0%88%E8%BC%AF-2-%E7%89%A9%E8%B3%AA%E7%9A%84%E8%AE%8A%E8%BA%AB%E9%81%8A%E6%88%B2-%E8%AA%8D%E8%AD%98%E7%89%A9%E7%90%86%E8%88%87%E5%8C%96%E5%AD%B8%E8%AE%8A%E5%8C%96%E7%9A%84%E9%AD%94%E6%B3%95/id1812447277?i=1000762068214&uo=4",
+    "duration": 587,
+    "pubDate": "Fri, 17 Apr 2026 22:02:10 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "55",
+   "title": "超神祕的微觀世界：原子積木與空空的足球場",
+   "home": "l01",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmo5tq0tz0j2a01vq4e962x2f",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmo5tq0tz0j2a01vq4e962x2f/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmo5tq0tz0j2b01vqc49ubx54.mp3?v=1776606651334",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%B8%E5%B0%88%E8%BC%AF-3-%E8%B6%85%E7%A5%9E%E7%A5%95%E7%9A%84%E5%BE%AE%E8%A7%80%E4%B8%96%E7%95%8C-%E5%8E%9F%E5%AD%90%E7%A9%8D%E6%9C%A8%E8%88%87%E7%A9%BA%E7%A9%BA%E7%9A%84%E8%B6%B3%E7%90%83%E5%A0%B4/id1812447277?i=1000762961310&uo=4",
+    "duration": 462,
+    "pubDate": "Tue, 21 Apr 2026 22:02:07 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "56",
+   "title": "地心深處的超級跑道：大型強子對撞機 (LHC) 的微觀冒險",
+   "home": "l01",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "57",
+   "title": "物質變身大探險：從硬邦邦到亮晶晶的四種樣子",
+   "home": "l01",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmo8f5ebt0fbh01wy12dk8xgx",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmo8f5ebt0fbh01wy12dk8xgx/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmo8f5ebt0fbi01wygszi229p.mp3?v=1776763575822",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%B8%E5%B0%88%E8%BC%AF-4-%E7%89%A9%E8%B3%AA%E8%AE%8A%E8%BA%AB%E5%A4%A7%E6%8E%A2%E9%9A%AA-%E5%BE%9E%E7%A1%AC%E9%82%A6%E9%82%A6%E5%88%B0%E4%BA%AE%E6%99%B6%E6%99%B6%E7%9A%84%E5%9B%9B%E7%A8%AE%E6%A8%A3%E5%AD%90/id1812447277?i=1000763322933&uo=4",
+    "duration": 646,
+    "pubDate": "Thu, 23 Apr 2026 22:02:03 GMT"
+   },
+   "labs": [
+    {
+     "id": "I07",
+     "title": "物質狀態與能量台階",
+     "question": "溫度沒上升，移入的能量去哪裡了？",
+     "url": "https://lab.kidsci.app/phase/"
+    }
+   ]
+  },
+  {
+   "code": "58",
+   "title": "宇宙超級積木：元素週期表的使用說明書",
+   "home": "l01",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmoft9oyz1g7u01vqgnnr9wh7",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmoft9oyz1g7u01vqgnnr9wh7/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmoft9oyz1g7v01vq3rqm3hcz.mp3?v=1777210557795",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%B8%E5%B0%88%E8%BC%AF-5-%E5%AE%87%E5%AE%99%E8%B6%85%E7%B4%9A%E7%A9%8D%E6%9C%A8-%E5%85%83%E7%B4%A0%E9%80%B1%E6%9C%9F%E8%A1%A8%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E%E6%9B%B8/id1812447277?i=1000763924011&uo=4",
+    "duration": 597,
+    "pubDate": "Mon, 27 Apr 2026 22:02:08 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "59",
+   "title": "繽紛閃耀的夜空舞會：解開煙火顏色的化學密碼",
+   "home": "l01",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmoihd5320i1901w6db8t5co9",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmoihd5320i1901w6db8t5co9/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmoihd5320i1a01w60kqlfwyl.mp3?v=1777371957100",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E7%89%A9%E7%90%86%E5%8C%96%E5%AD%B8%E5%B0%88%E8%BC%AF-6-%E7%B9%BD%E7%B4%9B%E9%96%83%E8%80%80%E7%9A%84%E5%A4%9C%E7%A9%BA%E8%88%9E%E6%9C%83-%E8%A7%A3%E9%96%8B%E7%85%99%E7%81%AB%E9%A1%8F%E8%89%B2%E7%9A%84%E5%8C%96%E5%AD%B8%E5%AF%86%E7%A2%BC/id1812447277?i=1000764579305&uo=4",
+    "duration": 584,
+    "pubDate": "Wed, 29 Apr 2026 22:02:06 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "60",
+   "title": "神奇的材料英雄：從陶瓷碗到奈米機器人",
+   "home": "l01",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmomuv75n0b8101xrdnvt1jy1",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmomuv75n0b8101xrdnvt1jy1/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmomuv75n0b8201xra79bfb2m.mp3?v=1777636758590",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E6%9D%90%E6%96%99%E7%A7%91%E5%AD%B8%E7%89%B9%E8%BC%AF-1-%E7%A5%9E%E5%A5%87%E7%9A%84%E6%9D%90%E6%96%99%E8%8B%B1%E9%9B%84-%E5%BE%9E%E9%99%B6%E7%93%B7%E7%A2%97%E5%88%B0%E5%A5%88%E7%B1%B3%E6%A9%9F%E5%99%A8%E4%BA%BA/id1812447277?i=1000765669674&uo=4",
+    "duration": 484,
+    "pubDate": "Fri, 01 May 2026 22:02:05 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "61",
+   "title": "閃亮亮的寶石秘密：碳的變身術與黃金的軟Q功夫",
+   "home": "l01",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmorat5jl03h601vm3wkd4dey",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmorat5jl03h601vm3wkd4dey/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmorat5jl03h701vmdra79n5z.mp3?v=1777905144619",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E6%9D%90%E6%96%99%E7%A7%91%E5%AD%B8%E7%89%B9%E8%BC%AF-2-%E9%96%83%E4%BA%AE%E4%BA%AE%E7%9A%84%E5%AF%B6%E7%9F%B3%E7%A7%98%E5%AF%86-%E7%A2%B3%E7%9A%84%E8%AE%8A%E8%BA%AB%E8%A1%93%E8%88%87%E9%BB%83%E9%87%91%E7%9A%84%E8%BB%9Fq%E5%8A%9F%E5%A4%AB/id1812447277?i=1000766122198&uo=4",
+    "duration": 633,
+    "pubDate": "Mon, 04 May 2026 22:02:03 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "62",
+   "title": "看不見的慢遊行：瀝青、玻璃與冰川的流動謎團",
+   "home": "l01",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmotvb1cn0cox01tdewog1ekx",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmotvb1cn0cox01tdewog1ekx/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmotvb1cn0coy01td7cl66ljb.mp3?v=1778208011432",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E6%9D%90%E6%96%99%E7%A7%91%E5%AD%B8%E7%89%B9%E8%BC%AF-3-%E7%9C%8B%E4%B8%8D%E8%A6%8B%E7%9A%84%E6%85%A2%E9%81%8A%E8%A1%8C-%E7%80%9D%E9%9D%92-%E7%8E%BB%E7%92%83%E8%88%87%E5%86%B0%E5%B7%9D%E7%9A%84%E6%B5%81%E5%8B%95%E8%AC%8E%E5%9C%98/id1812447277?i=1000766864962&uo=4",
+    "duration": 633,
+    "pubDate": "Sat, 09 May 2026 00:02:02 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "63",
+   "title": "隱形魔法師大顯身手：尋找生活中看不見的角色——「力」",
+   "home": "lane:force",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmozvjkgc05jq01w671l65osi",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmozvjkgc05jq01w671l65osi/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmozvjkgc05jr01w69n6xgih3.mp3?v=1778423704096",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E5%8A%9B%E5%AD%B8%E7%89%B9%E8%BC%AF-1-%E9%9A%B1%E5%BD%A2%E9%AD%94%E6%B3%95%E5%B8%AB%E5%A4%A7%E9%A1%AF%E8%BA%AB%E6%89%8B-%E5%B0%8B%E6%89%BE%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9C%8B%E4%B8%8D%E8%A6%8B%E7%9A%84%E8%A7%92%E8%89%B2-%E5%8A%9B/id1812447277?i=1000767276900&uo=4",
+    "duration": 787,
+    "pubDate": "Mon, 11 May 2026 22:02:03 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "64",
+   "title": "隱形的吸引力法則：解開磁鐵與地球磁場的驚人謎團",
+   "home": "lane:em",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmp2f0r150exi01xm21pudjh7",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmp2f0r150exi01xm21pudjh7/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmp2f0r150exj01xm5vqw9615.mp3?v=1778577345500",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E5%8A%9B%E5%AD%B8%E7%89%B9%E8%BC%AF-2-%E9%9A%B1%E5%BD%A2%E7%9A%84%E5%90%B8%E5%BC%95%E5%8A%9B%E6%B3%95%E5%89%87-%E8%A7%A3%E9%96%8B%E7%A3%81%E9%90%B5%E8%88%87%E5%9C%B0%E7%90%83%E7%A3%81%E5%A0%B4%E7%9A%84%E9%A9%9A%E4%BA%BA%E8%AC%8E%E5%9C%98/id1812447277?i=1000767653748&uo=4",
+    "duration": 572,
+    "pubDate": "Wed, 13 May 2026 22:02:07 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "65",
+   "title": "生活中的小小超級英雄：解密「簡單機械」的力量",
+   "home": "lane:force",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmp9ve5lo00r301wha39hdu3x",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmp9ve5lo00r301wha39hdu3x/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmp9ve5lp00r401whffm28tdg.mp3?v=1779028107000",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E5%8A%9B%E5%AD%B8%E7%89%B9%E8%BC%AF-3-%E7%94%9F%E6%B4%BB%E4%B8%AD%E7%9A%84%E5%B0%8F%E5%B0%8F%E8%B6%85%E7%B4%9A%E8%8B%B1%E9%9B%84-%E8%A7%A3%E5%AF%86-%E7%B0%A1%E5%96%AE%E6%A9%9F%E6%A2%B0-%E7%9A%84%E5%8A%9B%E9%87%8F-ep-65/id1812447277?i=1000768461673&uo=4",
+    "duration": 595,
+    "pubDate": "Mon, 18 May 2026 22:02:10 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "66",
+   "title": "大力士的秘密武器：滑輪與液壓的神奇力量",
+   "home": "lane:force",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmpceawpr00r801p6evhl3ohb",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmpceawpr00r801p6evhl3ohb/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmpceawpr00r901p6gsrqevoo.mp3?v=1779180811277",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E5%8A%9B%E5%AD%B8%E7%89%B9%E8%BC%AF-4-%E5%A4%A7%E5%8A%9B%E5%A3%AB%E7%9A%84%E7%A7%98%E5%AF%86%E6%AD%A6%E5%99%A8-%E6%BB%91%E8%BC%AA%E8%88%87%E6%B6%B2%E5%A3%93%E7%9A%84%E7%A5%9E%E5%A5%87%E5%8A%9B%E9%87%8F-ep-66/id1812447277?i=1000768812408&uo=4",
+    "duration": 783,
+    "pubDate": "Wed, 20 May 2026 22:02:16 GMT"
+   },
+   "labs": [
+    {
+     "id": "I03",
+     "title": "液壓千斤頂的能量帳",
+     "question": "省下力氣時，手是不是要走更遠？",
+     "url": "https://lab.kidsci.app/hydjack/"
+    }
+   ]
+  },
+  {
+   "code": "67",
+   "title": "誰在水裡托著你？阿基米德的浮力大發現",
+   "home": "lane:force",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "68",
+   "title": "深海裡的隱形戰神：維吉尼亞級核潛艦的祕密基地",
+   "home": "l04",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmo1addpl05ql01vgbjwu8gvd",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmo1addpl05ql01vgbjwu8gvd/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmo1addpl05qm01vg9t2betxc.mp3?v=1776332282500",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E8%BB%8D%E4%BA%8B%E6%AD%A6%E5%99%A8%E5%B0%88%E8%BC%AF-3-%E6%B7%B1%E6%B5%B7%E8%A3%A1%E7%9A%84%E9%9A%B1%E5%BD%A2%E6%88%B0%E7%A5%9E-%E7%B6%AD%E5%90%89%E5%B0%BC%E4%BA%9E%E7%B4%9A%E6%A0%B8%E6%BD%9B%E8%89%A6%E7%9A%84%E7%A5%95%E5%AF%86%E5%9F%BA%E5%9C%B0/id1812447277?i=1000762290951&uo=4",
+    "duration": 428,
+    "pubDate": "Sun, 19 Apr 2026 21:01:59 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "69",
+   "title": "誰在指揮指南針？看不見的磁力魔法",
+   "home": "lane:em",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmpjik1tn07d901qg3qusdfx1",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmpjik1tn07d901qg3qusdfx1/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmpjik1tn07da01qgbxj2gu9b.mp3?v=1779611208662",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E7%A3%81%E5%8A%9B%E7%89%B9%E8%BC%AF-1-%E8%AA%B0%E5%9C%A8%E6%8C%87%E6%8F%AE%E6%8C%87%E5%8D%97%E9%87%9D-%E7%9C%8B%E4%B8%8D%E8%A6%8B%E7%9A%84%E7%A3%81%E5%8A%9B%E9%AD%94%E6%B3%95-ep-69/id1812447277?i=1000769547502&uo=4",
+    "duration": 493,
+    "pubDate": "Mon, 25 May 2026 22:02:16 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "70",
+   "title": "誰把電變出來了？法拉第與電磁鐵的魔術秀",
+   "home": "lane:em",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmpjixrlj00ym01nr4wu1fcmm",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmpjixrlj00ym01nr4wu1fcmm/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmpjixrlj00yn01nrasjue0o1.mp3?v=1779611849730",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E7%A3%81%E5%8A%9B%E7%89%B9%E8%BC%AF-2-%E8%AA%B0%E6%8A%8A%E9%9B%BB%E8%AE%8A%E5%87%BA%E4%BE%86%E4%BA%86-%E6%B3%95%E6%8B%89%E7%AC%AC%E8%88%87%E9%9B%BB%E7%A3%81%E9%90%B5%E7%9A%84%E9%AD%94%E8%A1%93%E7%A7%80-ep-70/id1812447277?i=1000769897272&uo=4",
+    "duration": 465,
+    "pubDate": "Wed, 27 May 2026 22:02:06 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "71",
+   "title": "宇宙級吸吸功大師：揭開「重力」的隱形絲線",
+   "home": "lane:gravity",
+   "also": [
+    "l06"
+   ],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmpv2d7hx0b5v01wr05td8kqn",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmpv2d7hx0b5v01wr05td8kqn/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmpv2d7hx0b5w01wrgqsg58cs.mp3?v=1780309616075",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E9%87%8D%E5%8A%9B%E7%89%B9%E8%BC%AF-1-%E5%AE%87%E5%AE%99%E7%B4%9A%E5%90%B8%E5%90%B8%E5%8A%9F%E5%A4%A7%E5%B8%AB-%E6%8F%AD%E9%96%8B-%E9%87%8D%E5%8A%9B-%E7%9A%84%E9%9A%B1%E5%BD%A2%E7%B5%B2%E7%B7%9A-ep-71/id1812447277?i=1000770652808&uo=4",
+    "duration": 659,
+    "pubDate": "Mon, 01 Jun 2026 22:02:08 GMT"
+   },
+   "labs": [
+    {
+     "id": "K04",
+     "title": "換顆星球，質量會變嗎？",
+     "question": "同一個包包，月球上的公斤與牛頓會怎麼變？",
+     "url": "https://lab.kidsci.app/masslab/"
+    }
+   ]
+  },
+  {
+   "code": "72",
+   "title": "月亮在對你拉勾勾？潮汐與引力的神祕律動",
+   "home": "lane:gravity",
+   "also": [
+    "l06"
+   ],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmpwfza4200kp01y0avru2r7f",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmpwfza4200kp01y0avru2r7f/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmpwfza4300kq01y01b6c5sng.mp3?v=1780392951008",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E9%87%8D%E5%8A%9B%E7%89%B9%E8%BC%AF-2-%E6%9C%88%E4%BA%AE%E5%9C%A8%E5%B0%8D%E4%BD%A0%E6%8B%89%E5%8B%BE%E5%8B%BE-%E6%BD%AE%E6%B1%90%E8%88%87%E5%BC%95%E5%8A%9B%E7%9A%84%E7%A5%9E%E7%A5%95%E5%BE%8B%E5%8B%95-ep-72/id1812447277?i=1000771058191&uo=4",
+    "duration": 518,
+    "pubDate": "Wed, 03 Jun 2026 22:02:53 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "73",
+   "title": "飛天英雄大揭密：為什麼飛機能在天上飛？",
+   "home": "l04",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmq393x4u08kh010pawxpdvl8",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmq393x4u08kh010pawxpdvl8/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmq393x4u08ki010phnpe9xnj.mp3?v=1780804661959",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E9%87%8D%E5%8A%9B%E7%89%B9%E8%BC%AF-3-%E9%A3%9B%E5%A4%A9%E8%8B%B1%E9%9B%84%E5%A4%A7%E6%8F%AD%E5%AF%86-%E7%82%BA%E4%BB%80%E9%BA%BC%E9%A3%9B%E6%A9%9F%E8%83%BD%E5%9C%A8%E5%A4%A9%E4%B8%8A%E9%A3%9B-ep-73/id1812447277?i=1000771593142&uo=4",
+    "duration": 545,
+    "pubDate": "Sun, 07 Jun 2026 22:02:15 GMT"
+   },
+   "labs": [
+    {
+     "id": "I04",
+     "title": "翼形與攻角的小風洞",
+     "question": "把機翼抬得更高，升力就一直變大嗎？",
+     "url": "https://lab.kidsci.app/windlab/"
+    }
+   ]
+  },
+  {
+   "code": "74",
+   "title": "空中陀螺對抗賽：直升機與海鷹偵探的祕密",
+   "home": "l04",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmq6et3a600en01yg8ec9gql0",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmq6et3a600en01yg8ec9gql0/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmq6et3a600eo01ygab6w2rnd.mp3?v=1780995634213",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E9%87%8D%E5%8A%9B%E7%89%B9%E8%BC%AF-4-%E7%A9%BA%E4%B8%AD%E9%99%80%E8%9E%BA%E5%B0%8D%E6%8A%97%E8%B3%BD-%E7%9B%B4%E5%8D%87%E6%A9%9F%E8%88%87%E6%B5%B7%E9%B7%B9%E5%81%B5%E6%8E%A2%E7%9A%84%E7%A5%95%E5%AF%86-ep-74/id1812447277?i=1000771931931&uo=4",
+    "duration": 539,
+    "pubDate": "Tue, 09 Jun 2026 22:02:05 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "75",
+   "title": "變身大師：無所不在的能量世界",
+   "home": "lane:energy",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmq6eznpc00hm01vp1p8f2xcs",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmq6eznpc00hm01vp1p8f2xcs/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmq6eznpc00hn01vp8ceyhbgq.mp3?v=1780995941374",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E8%83%BD%E9%87%8F%E7%89%B9%E8%BC%AF-1-%E8%AE%8A%E8%BA%AB%E5%A4%A7%E5%B8%AB-%E7%84%A1%E6%89%80%E4%B8%8D%E5%9C%A8%E7%9A%84%E8%83%BD%E9%87%8F%E4%B8%96%E7%95%8C-ep-75/id1812447277?i=1000772277616&uo=4",
+    "duration": 560,
+    "pubDate": "Thu, 11 Jun 2026 22:02:45 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "76",
+   "title": "從火堆到發電廠：能量的超級變變變！",
+   "home": "lane:energy",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmqd7tmfs03bb01qoeyulfteh",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmqd7tmfs03bb01qoeyulfteh/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmqd7tmfs03bc01qogp6787lr.mp3?v=1781407173070",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E8%83%BD%E9%87%8F%E7%89%B9%E8%BC%AF-2-%E5%BE%9E%E7%81%AB%E5%A0%86%E5%88%B0%E7%99%BC%E9%9B%BB%E5%BB%A0-%E8%83%BD%E9%87%8F%E7%9A%84%E8%B6%85%E7%B4%9A%E8%AE%8A%E8%AE%8A%E8%AE%8A-ep-76/id1812447277?i=1000772913125&uo=4",
+    "duration": 635,
+    "pubDate": "Tue, 16 Jun 2026 05:12:46 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "77",
+   "title": "宇宙的第一聲啼哭：神奇的微波與大霹靂回音！",
+   "home": "l10",
+   "also": [
+    "era:bigbang"
+   ],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmqf0z55d00fo01wt35d30c3z",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmqf0z55d00fo01wt35d30c3z/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmqf0z55d00fp01wtaji9ftca.mp3?v=1781516595367",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E8%83%BD%E9%87%8F%E7%89%B9%E8%BC%AF-3-%E5%AE%87%E5%AE%99%E7%9A%84%E7%AC%AC%E4%B8%80%E8%81%B2%E5%95%BC%E5%93%AD-%E7%A5%9E%E5%A5%87%E7%9A%84%E5%BE%AE%E6%B3%A2%E8%88%87%E5%A4%A7%E9%9C%B9%E9%9D%82%E5%9B%9E%E9%9F%B3-ep-77/id1812447277?i=1000773181680&uo=4",
+    "duration": 415,
+    "pubDate": "Wed, 17 Jun 2026 22:02:06 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "78",
+   "title": "誰在玩躲貓貓？尋找隱形的超能力光線！",
+   "home": "lane:light",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmqn6useb0dzn01xa71rrhm8l",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmqn6useb0dzn01xa71rrhm8l/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmqn6useb0dzo01xa1f4th1nn.mp3?v=1782010199574",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E8%AA%B0%E5%9C%A8%E7%8E%A9%E8%BA%B2%E8%B2%93%E8%B2%93-%E5%B0%8B%E6%89%BE%E9%9A%B1%E5%BD%A2%E7%9A%84%E8%B6%85%E8%83%BD%E5%8A%9B%E5%85%89%E7%B7%9A-ep-78/id1812447277?i=1000773644742&uo=4",
+    "duration": 465,
+    "pubDate": "Sun, 21 Jun 2026 22:02:36 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "79",
+   "title": "太空裡的傳聲筒：通訊衛星與它們的超級快遞任務！",
+   "home": "l06",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmqnf706w000801ylhb3dh3bi",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmqnf706w000801ylhb3dh3bi/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmqnf706w000901ylb56x0p1e.mp3?v=1782024250607",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E5%A4%AA%E7%A9%BA%E8%A3%A1%E7%9A%84%E5%82%B3%E8%81%B2%E7%AD%92-%E9%80%9A%E8%A8%8A%E8%A1%9B%E6%98%9F%E8%88%87%E5%AE%83%E5%80%91%E7%9A%84%E8%B6%85%E7%B4%9A%E5%BF%AB%E9%81%9E%E4%BB%BB%E5%8B%99-ep-79/id1812447277?i=1000774102300&uo=4",
+    "duration": 503,
+    "pubDate": "Wed, 24 Jun 2026 22:02:17 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "80",
+   "title": "宇宙偵探找找看：GPS如何從兩萬公里的太空找到你？",
+   "home": "l06",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmqxmg426026c01xegvg8465v",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmqxmg426026c01xegvg8465v/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmqxmg426026d01xe3o1s54gc.mp3?v=1782641054890",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E5%AE%87%E5%AE%99%E5%81%B5%E6%8E%A2%E6%89%BE%E6%89%BE%E7%9C%8B-gps%E5%A6%82%E4%BD%95%E5%BE%9E%E5%85%A9%E8%90%AC%E5%85%AC%E9%87%8C%E7%9A%84%E5%A4%AA%E7%A9%BA%E6%89%BE%E5%88%B0%E4%BD%A0-ep-80/id1812447277?i=1000774614359&uo=4",
+    "duration": 434,
+    "pubDate": "Sun, 28 Jun 2026 22:02:05 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "81",
+   "title": "光影魔術師：揭開光線折射與反射的驚奇秘密！",
+   "home": "lane:light",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmqxmocb1027101xehu1h4jxf",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmqxmocb1027101xehu1h4jxf/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmqxmocb1027201xe8vuf1k5b.mp3?v=1782641443207",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E5%85%89%E5%BD%B1%E9%AD%94%E8%A1%93%E5%B8%AB-%E6%8F%AD%E9%96%8B%E5%85%89%E7%B7%9A%E6%8A%98%E5%B0%84%E8%88%87%E5%8F%8D%E5%B0%84%E7%9A%84%E9%A9%9A%E5%A5%87%E7%A7%98%E5%AF%86-ep-81/id1812447277?i=1000775070645&uo=4",
+    "duration": 603,
+    "pubDate": "Wed, 01 Jul 2026 22:02:23 GMT"
+   },
+   "labs": [
+    {
+     "id": "rainbow",
+     "title": "光的彩虹實驗室",
+     "question": "換光源與元件，立即觀察折射、反射與色散。",
+     "url": "https://lab.kidsci.app/rainbow/"
+    }
+   ]
+  },
+  {
+   "code": "82",
+   "title": "泡泡彩虹與雷射英雄：光影精靈的捉迷藏大賽！",
+   "home": "lane:light",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmr7u8v4c046l01t6fwhj7fz1",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmr7u8v4c046l01t6fwhj7fz1/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmr7u8v4c046m01t632v3h8it.mp3?v=1783258814677",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E6%B3%A1%E6%B3%A1%E5%BD%A9%E8%99%B9%E8%88%87%E9%9B%B7%E5%B0%84%E8%8B%B1%E9%9B%84-%E5%85%89%E5%BD%B1%E7%B2%BE%E9%9D%88%E7%9A%84%E6%8D%89%E8%BF%B7%E8%97%8F%E5%A4%A7%E8%B3%BD-ep-82/id1812447277?i=1000775565679&uo=4",
+    "duration": 667,
+    "pubDate": "Sun, 05 Jul 2026 22:02:01 GMT"
+   },
+   "labs": [
+    {
+     "id": "rainbow",
+     "title": "光的彩虹實驗室",
+     "question": "換光源與元件，立即觀察折射、反射與色散。",
+     "url": "https://lab.kidsci.app/rainbow/"
+    }
+   ]
+  },
+  {
+   "code": "83",
+   "title": "宇宙大眼睛：智利「甚大望遠鏡」VLT 尋寶記！",
+   "home": "l08",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmr7ul7c0041h01xg8fdq2w6j",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmr7ul7c0041h01xg8fdq2w6j/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmr7ul7c0041i01xggdhy35ov.mp3?v=1783259392605",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E5%AE%87%E5%AE%99%E5%A4%A7%E7%9C%BC%E7%9D%9B-%E6%99%BA%E5%88%A9-%E7%94%9A%E5%A4%A7%E6%9C%9B%E9%81%A0%E9%8F%A1-vlt-%E5%B0%8B%E5%AF%B6%E8%A8%98-ep-83/id1812447277?i=1000776031842&uo=4",
+    "duration": 708,
+    "pubDate": "Wed, 08 Jul 2026 22:02:05 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "84",
+   "title": "宇宙大眼睛的超強眼鏡：雷射假星星與地下合體遊戲！",
+   "home": "l08",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmrhnv8dm0eue01u8a05ddo0b",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmrhnv8dm0eue01u8a05ddo0b/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmrhnv8dm0euf01u82appgqb8.mp3?v=1783852761197",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E5%AE%87%E5%AE%99%E5%A4%A7%E7%9C%BC%E7%9D%9B%E7%9A%84%E8%B6%85%E5%BC%B7%E7%9C%BC%E9%8F%A1-%E9%9B%B7%E5%B0%84%E5%81%87%E6%98%9F%E6%98%9F%E8%88%87%E5%9C%B0%E4%B8%8B%E5%90%88%E9%AB%94%E9%81%8A%E6%88%B2-ep-84/id1812447277?i=1000776504846&uo=4",
+    "duration": 497,
+    "pubDate": "Sun, 12 Jul 2026 22:02:21 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "85",
+   "title": "聲音小精靈的接力賽：推進擠擠的振動遊戲！",
+   "home": "lane:sound",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmrho88q80b7h01wccnbzg64y",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmrho88q80b7h01wccnbzg64y/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmrho88q80b7i01wc07d64o6y.mp3?v=1783853366619",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E8%81%B2%E9%9F%B3%E5%B0%8F%E7%B2%BE%E9%9D%88%E7%9A%84%E6%8E%A5%E5%8A%9B%E8%B3%BD-%E6%8E%A8%E9%80%B2%E6%93%A0%E6%93%A0%E7%9A%84%E6%8C%AF%E5%8B%95%E9%81%8A%E6%88%B2-ep-85/id1812447277?i=1000776974113&uo=4",
+    "duration": 498,
+    "pubDate": "Wed, 15 Jul 2026 22:02:15 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "86",
+   "title": "聲音變變變：救護車的變音術與樂器的唱歌方法",
+   "home": "lane:sound",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmrt2cpig0dzz01uldpgw7btm",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmrt2cpig0dzz01uldpgw7btm/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmrt2cpig0e0001ul91ve2xj8.mp3?v=1784542223469",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%85%AC%E9%96%8B-%E8%81%B2%E9%9F%B3%E8%AE%8A%E8%AE%8A%E8%AE%8A-%E6%95%91%E8%AD%B7%E8%BB%8A%E7%9A%84%E8%AE%8A%E9%9F%B3%E8%A1%93%E8%88%87%E6%A8%82%E5%99%A8%E7%9A%84%E5%94%B1%E6%AD%8C%E6%96%B9%E6%B3%95-ep-86/id1812447277?i=1000777940839&uo=4",
+    "duration": 526,
+    "pubDate": "Wed, 22 Jul 2026 22:02:04 GMT"
+   },
+   "labs": [
+    {
+     "id": "I05",
+     "title": "移動聲源的多普勒波圈",
+     "question": "聲源不改音高，為什麼聽到的波峰間隔會改變？",
+     "url": "https://lab.kidsci.app/doppler/"
+    }
+   ]
+  },
+  {
+   "code": "87",
+   "title": "熱的魔法師：小精靈的能量派對",
+   "home": "lane:energy",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmryohz7u0oj701w81bwzbgs8",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmryohz7u0oj701w81bwzbgs8/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmryohz7u0oj801w8gwy6bq33.mp3?v=1784881746642",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E7%86%B1%E7%9A%84%E9%AD%94%E6%B3%95%E5%B8%AB-%E5%B0%8F%E7%B2%BE%E9%9D%88%E7%9A%84%E8%83%BD%E9%87%8F%E6%B4%BE%E5%B0%8D-ep-87/id1812447277?i=1000778455519&uo=4",
+    "duration": 515,
+    "pubDate": "Sun, 26 Jul 2026 22:02:12 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "88",
+   "title": "熱能大冒險：熱與溫度的神祕差別",
+   "home": "lane:energy",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmryokos806oc01yxfley8y1l",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmryokos806oc01yxfley8y1l/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmryokos806od01yx6wyjdy66.mp3?v=1784881876613",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E7%86%B1%E8%83%BD%E5%A4%A7%E5%86%92%E9%9A%AA-%E7%86%B1%E8%88%87%E6%BA%AB%E5%BA%A6%E7%9A%84%E7%A5%9E%E7%A5%95%E5%B7%AE%E5%88%A5-ep-88/id1812447277?i=1000778994178&uo=4",
+    "duration": 640,
+    "pubDate": "Wed, 29 Jul 2026 22:02:09 GMT"
+   },
+   "labs": [
+    {
+     "id": "I06",
+     "title": "熱傳遞三種路徑",
+     "question": "拆橋、抽走氣體、隔開輻射，哪條路還能傳熱？",
+     "url": "https://lab.kidsci.app/heatpath/"
+    }
+   ]
+  },
+  {
+   "code": "89",
+   "title": "電的魔法探險：電子小精靈的奇幻跑道",
+   "home": "lane:em",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmsbtug6j0wgo01xf3uvc11x1",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmsbtug6j0wgo01xf3uvc11x1/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmsbtug6j0wgp01xf24idfec6.mp3?v=1785676784340",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E9%9B%BB%E7%9A%84%E9%AD%94%E6%B3%95%E6%8E%A2%E9%9A%AA-%E9%9B%BB%E5%AD%90%E5%B0%8F%E7%B2%BE%E9%9D%88%E7%9A%84%E5%A5%87%E5%B9%BB%E8%B7%91%E9%81%93-ep-89/id1812447277?i=1000780134498&uo=4",
+    "duration": 492,
+    "pubDate": "Wed, 05 Aug 2026 22:01:59 GMT"
+   },
+   "labs": [
+    {
+     "id": "I08",
+     "title": "串並聯燈泡與電流路線",
+     "question": "斷開一盞燈旁的開關，其他燈會怎樣？",
+     "url": "https://lab.kidsci.app/circuit/"
+    }
+   ]
+  },
+  {
+   "code": "90",
+   "title": "靜電英雄與閃電：大自然的電力派對",
+   "home": "lane:em",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmsl6dmaw1zwn01z63cpih5bw",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmsl6dmaw1zwn01z63cpih5bw/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmsl6dmaw1zwo01z6emcpcs0n.mp3?v=1786416583413",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E9%9D%9C%E9%9B%BB%E8%8B%B1%E9%9B%84%E8%88%87%E9%96%83%E9%9B%BB-%E5%A4%A7%E8%87%AA%E7%84%B6%E7%9A%84%E9%9B%BB%E5%8A%9B%E6%B4%BE%E5%B0%8D-ep-90/id1812447277?i=1000781295874&uo=4",
+    "duration": 573,
+    "pubDate": "Sun, 09 Aug 2026 22:02:07 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "91",
+   "title": "電力小精靈的大冒險：電力從哪裡來？",
+   "home": "lane:em",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmsl6mp6p1zy301z60vovfupl",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmsl6mp6p1zy301z60vovfupl/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmsl6mp6p1zy401z66no9bm43.mp3?v=1786416513571",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E9%9B%BB%E5%8A%9B%E5%B0%8F%E7%B2%BE%E9%9D%88%E7%9A%84%E5%A4%A7%E5%86%92%E9%9A%AA-%E9%9B%BB%E5%8A%9B%E5%BE%9E%E5%93%AA%E8%A3%A1%E4%BE%86-ep-91/id1812447277?i=1000783029365&uo=4",
+    "duration": 529,
+    "pubDate": "Wed, 12 Aug 2026 22:02:11 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "92",
+   "title": "電力小精靈的變裝派對：電是怎麼進到你家的？",
+   "home": "lane:em",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmsvhwdt70pnr01vs2kyb16pf",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmsvhwdt70pnr01vs2kyb16pf/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmsvhwdt70pns01vs5so00lkv.mp3?v=1786866050084",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E9%9B%BB%E5%8A%9B%E5%B0%8F%E7%B2%BE%E9%9D%88%E7%9A%84%E8%AE%8A%E8%A3%9D%E6%B4%BE%E5%B0%8D-%E9%9B%BB%E6%98%AF%E6%80%8E%E9%BA%BC%E9%80%B2%E5%88%B0%E4%BD%A0%E5%AE%B6%E7%9A%84-ep-92/id1812447277?i=1000784426550&uo=4",
+    "duration": 508,
+    "pubDate": "Wed, 19 Aug 2026 22:02:09 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "93",
+   "title": "原子小積木的變身秀：核能是怎麼發電的？",
+   "home": "l01",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "firstory": "https://open.firstory.fm/story/cmt5u4m2o1lkv01wy94kn7qqk",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmt5u4m2o1lkv01wy94kn7qqk/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmt5u4m2o1lkw01wy5xlfb4q0.mp3?v=1787491256354",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%8E%9F%E5%AD%90%E5%B0%8F%E7%A9%8D%E6%9C%A8%E7%9A%84%E8%AE%8A%E8%BA%AB%E7%A7%80-%E6%A0%B8%E8%83%BD%E6%98%AF%E6%80%8E%E9%BA%BC%E7%99%BC%E9%9B%BB%E7%9A%84-ep-93/id1812447277?i=1000785351299&uo=4",
+    "duration": 622,
+    "pubDate": "Sun, 23 Aug 2026 22:02:10 GMT"
+   },
+   "labs": []
+  },
+  {
+   "code": "94",
+   "title": "原子同學的雙面超能力：救人英雄還是大破壞王？",
+   "home": "l01",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "95",
+   "title": "機器人小夥伴 NAO：會跳舞、會聊天、還會讀心術？",
+   "home": "l04",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "96",
+   "title": "機器人超進化：從傻傻聽話到偷偷學會變聰明",
+   "home": "l04",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": [
+    {
+     "id": "L06",
+     "title": "教機器分類：規則還是例子？",
+     "question": "學習卡全對，為什麼沒學過的魚卡仍可能分錯？",
+     "url": "https://lab.kidsci.app/classify/"
+    }
+   ]
+  },
+  {
+   "code": "97",
+   "title": "隱形的小管家：電子學的神奇魔法",
+   "home": "l04",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "98",
+   "title": "電子積木總動員：手機和電腦裡的秘密派對！",
+   "home": "l04",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  },
+  {
+   "code": "99",
+   "title": "超級小英雄：晶片裡的迷你城市大冒險！",
+   "home": "l04",
+   "also": [],
+   "state": "unreleased",
+   "listen": null,
+   "labs": []
+  }
+ ]
+}
