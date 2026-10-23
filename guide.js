@@ -127,13 +127,17 @@ export function createGuide({ root, cast }) {
   savePrefs();
 
   return {
-    /** 排進一串台詞；urgent=true 會先清掉還沒說的台詞。 */
-    say(lines, { urgent = false, then } = {}) {
+    /** 排進一串台詞；urgent=true 會先清掉還沒說的台詞；同一個 topic 的新台詞會換掉舊的。 */
+    say(lines, { urgent = false, then, topic } = {}) {
       if (!prefs.on || !lines?.length) { then?.(); return; }
       if (urgent) queue = [];
+      if (topic) {
+        queue = queue.filter((l) => l.topic !== topic);
+        lines = lines.map((l) => ({ ...l, topic }));
+      }
       queue.push(...lines);
       if (then) onEmpty = then;
-      if (!line) nextLine();
+      if (!line || (topic && line.topic === topic)) nextLine();
     },
     busy: () => Boolean(line),
     get on() { return prefs.on; },

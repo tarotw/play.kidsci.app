@@ -100,7 +100,7 @@ function talkAboutView() {
   const said = view.kind === 'level' ? lines.levels[view.id] : lines.views[view.kind];
   const m = currentMission();
   const extra = m ? [{ who: 'captain', text: `新任務：${m.text}！` }] : [];
-  guide.say([...(said || []), ...extra]);
+  guide.say([...(said || []), ...extra], { topic: 'scene' }); // 快速轉旋鈕時只講現在這一格
 }
 function suggestGo() {
   const e = explorer.suggest();

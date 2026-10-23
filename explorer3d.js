@@ -553,6 +553,7 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
   controls.mouseButtons = { LEFT: THREE.MOUSE.PAN, MIDDLE: THREE.MOUSE.DOLLY, RIGHT: THREE.MOUSE.ROTATE };
   controls.touches = { ONE: THREE.TOUCH.PAN, TWO: THREE.TOUCH.DOLLY_ROTATE };
   controls.zoomToCursor = true;
+  const fixedQuality = new URLSearchParams(location.search).has('hq');
 
   const composer = new EffectComposer(renderer);
   composer.addPass(new RenderPass(scene3, camera));
@@ -596,6 +597,19 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
   warpLines.frustumCulled = false;
   camera.add(warpLines);
 
+  // 第一次進 3D：告訴小朋友怎麼操作
+  try {
+    if (!localStorage.getItem('kidsci-universe-hint3d')) {
+      const hint = document.createElement('p');
+      hint.className = 'hint3d';
+      hint.textContent = matchMedia('(pointer: coarse)').matches ? '👆 一指拖曳移動　✌️ 兩指縮放、轉動\n點發光的頻道就出發' : '🖱️ 拖曳移動　右鍵轉動　滾輪縮放\n點發光的頻道就出發';
+      document.body.appendChild(hint);
+      const bye = () => { hint.classList.add('bye'); setTimeout(() => hint.remove(), 600); localStorage.setItem('kidsci-universe-hint3d', '1'); };
+      setTimeout(bye, 7000);
+      canvas.addEventListener('pointerdown', bye, { once: true });
+    }
+  } catch { /* 沒有儲存也沒關係 */ }
+
   const flash = document.createElement('div');
   flash.className = 'warp-flash';
   document.body.appendChild(flash);
@@ -627,6 +641,9 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
   let time = 0;
   let last = performance.now();
   let running = true;
+  let rafId = 0;
+  let pixelRatio = Math.min(1.75, window.devicePixelRatio || 1);
+  const perf = { sum: 0, n: 0, step: 0 }; // 太慢就自動降畫質
 
   function themeColor(i) { return new THREE.Color().setHSL(((THEMES[layout.theme].hue[i % 3]) % 360) / 360, 0.8, 0.6); }
 
@@ -707,7 +724,7 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
         const size = soon ? 3.4 : e.state === 'subscriber' ? 6 : 5.4;
         const local = new THREE.Vector3((s.x - z.x) * S, topY + size * 0.75 + 0.3, (s.y - z.y) * S);
         const marks = marksFor(e, stampsNow);
-        const sprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: badgeTexture(s.icon, e.state, marks), transparent: true, opacity: soon ? 0.6 : 1, toneMapped: false }));
+        const sprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: badgeTexture(s.icon, e.state, marks), transparent: true, opacity: soon ? 0.6 : 1, toneMapped: false, alphaTest: 0.05 }));
         sprite.scale.set(size, size, 1);
         sprite.position.copy(local);
         const glowColor = e.state === 'subscriber' ? 0xffc040 : soon ? 0x7080a0 : 0x6fe8ff;
@@ -815,7 +832,7 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
 
   function resize() {
     const w = canvas.clientWidth, h = canvas.clientHeight;
-    const pr = Math.min(1.75, window.devicePixelRatio || 1);
+    const pr = pixelRatio;
     renderer.setPixelRatio(pr);
     renderer.setSize(w, h, false);
     composer.setPixelRatio(pr);
@@ -832,10 +849,34 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
 
   // ---------- 主迴圈 ----------
   const tmp = new THREE.Vector3();
+  function adapt(raw) {
+    if (fixedQuality || perf.step >= 2 || warp) return;
+    perf.sum += raw; perf.n += 1;
+    if (perf.n < 90) return;
+    const avg = perf.sum / perf.n;
+    perf.sum = 0; perf.n = 0;
+    if (avg < 1 / 30) return;
+    perf.step += 1;
+    if (perf.step === 1 && pixelRatio > 1) { pixelRatio = 1; resize(); }
+    else { perf.step = 2; bloom.enabled = false; }
+  }
+
+  // 拖太遠會迷路：鏡頭中心不能離開這一格
+  function clampTarget() {
+    if (!layout) return;
+    const b = layout.bounds, m = 0;
+    const cx = Math.min(b.maxX * S + m, Math.max(b.minX * S - m, controls.target.x));
+    const cz = Math.min(b.maxY * S + m, Math.max(b.minY * S - m, controls.target.z));
+    const dx = cx - controls.target.x, dz = cz - controls.target.z;
+    if (dx || dz) { controls.target.x += dx; controls.target.z += dz; camera.position.x += dx; camera.position.z += dz; }
+  }
+
   function frame(now) {
     if (!running) return;
-    const dt = Math.min(0.05, (now - last) / 1000);
+    const raw = (now - last) / 1000;
+    const dt = Math.min(0.05, raw);
     last = now;
+    adapt(raw);
     time += dt;
     stars.material.uniforms.time.value = time;
     ticks.forEach((f) => f(reduceMotion ? time * 0.3 : time, dt));
@@ -913,17 +954,20 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
       if (p >= 1) { warp = null; warpLines.material.opacity = 0; camera.fov = 55; camera.updateProjectionMatrix(); flash.style.opacity = '0'; }
     }
     controls.update();
+    clampTarget();
     composer.render(dt);
-    requestAnimationFrame(frame);
+    rafId = requestAnimationFrame(frame);
   }
 
   window.addEventListener('resize', resize);
   document.addEventListener('visibilitychange', () => {
     running = !document.hidden;
-    if (running) { last = performance.now(); requestAnimationFrame(frame); }
+    cancelAnimationFrame(rafId);
+    if (running) { last = performance.now(); perf.sum = 0; perf.n = 0; rafId = requestAnimationFrame(frame); }
   });
+  controls.addEventListener('start', () => { camAnim = null; }); // 小朋友自己動手時，自動鏡頭讓開
   resize();
-  requestAnimationFrame(frame);
+  rafId = requestAnimationFrame(frame);
 
   function dolly(factor) {
     const offset = camera.position.clone().sub(controls.target);
