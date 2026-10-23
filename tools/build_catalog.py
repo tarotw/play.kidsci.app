@@ -35,6 +35,17 @@ def home_by_rules(text: str, rules: list[dict]) -> str:
     return "studio"
 
 
+def zone_for(title: str, home: str, levels: dict) -> str | None:
+    """依 world.json 的區域關鍵字決定一集在那一格的哪一區；都不符合就放最後一區。"""
+    level = levels.get(home)
+    if not level:
+        return None
+    for zone in level["zones"]:
+        if any(word in title for word in zone["words"]):
+            return zone["name"]
+    return level["zones"][-1]["name"]
+
+
 def pick_record(records: list[dict]) -> dict | None:
     """同一集可能有多筆（VIP 版、後來的公開版、預告），優先完整版、再取最新。"""
     if not records:
@@ -54,6 +65,7 @@ def main() -> None:
     rules = load("tag_rules.json")["rules"]
     labs = load("labs.json")
     status = load("status.json")["episodes"] if (DATA / "status.json").exists() else {}
+    levels = {l["id"]: l for l in load("world.json")["levels"]}
 
     labs_by_code: dict[str, list[dict]] = {}
     for lab in labs:
@@ -99,6 +111,7 @@ def main() -> None:
             "code": code,
             "title": title,
             "home": home,
+            "zone": zone_for(title, home, levels),
             "also": also,
             "state": state,
             "listen": listen,

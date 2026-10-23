@@ -6,7 +6,9 @@
 
 ## 目前進度：P0
 
-- `index.html` + `app.js` + `style.css`：萬物旋鈕預覽版。10 格全部打開，方便檢查每一集放的位置；正式版把 `app.js` 的 `PREVIEW` 改成 `false`，只開 `data/world.json` 的 `mvp_levels`（生物、地球、太陽系）。
+- `index.html` + `app.js` + `style.css` + `explorer.js`：萬物旋鈕預覽版。每一格是一個可以拖曳、縮放的探索場景（Canvas 2D，不載入外部圖檔），每一集是一顆發光的頻道，點了耳機號就飛過去；轉旋鈕換格時有曲速穿越效果與調頻音效。右上角 ☰ 切換清單模式（給鍵盤、螢幕閱讀器與檢查分類用）。
+- 10 格全部打開，方便檢查每一集放的位置；正式版把 `app.js` 的 `PREVIEW` 改成 `false`，只開 `data/world.json` 的 `mvp_levels`（生物、地球、太陽系）。
+- 每一格裡的「區」（海洋、雨林、火山…）由 `data/world.json` 的區域關鍵字自動分，`build_catalog.py` 寫進每一集的 `zone`；分錯的話改關鍵字或在 `placements.json` 加 `zone`。
 - 公開集數在頁面裡直接播放，重點句跟著播放時間亮起；訂閱者限定（`c`、`s` 開頭）連到 Firstory，按鈕要按住 2 秒（請大人幫忙）。
 - 實驗以 iframe 全螢幕打開，開 60 秒或收到 `kidsci-bridge.js` 的通知就蓋小手章；聽到 80% 蓋耳朵章。星章存在瀏覽器（localStorage）。
 
@@ -53,7 +55,7 @@ python3 tools/build_catalog.py
 python3 -m http.server 8000   # 然後開 http://localhost:8000/?lv=l07
 ```
 
-網址參數：`?lv=l07`（某一格）、`?lv=era:life`（時光機）、`?ch=112`（直接打開某一台）。
+網址參數：`?lv=l07`（某一格）、`?lv=era:life`（時光機）、`?ch=112`（直接打開某一台）、`?mode=list`（清單模式）。
 
 ## 發布
 

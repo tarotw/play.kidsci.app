@@ -13,28 +13,45 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="top">
+<canvas id="world" aria-label="萬物宇宙地圖：拖曳移動、滾輪或雙指縮放、點發光的頻道。也可以改用清單模式。"></canvas>
+
+<header class="hud-top">
   <a class="brand" href="./" aria-label="宇宙好好聽首頁"><img src="assets/logo-banner.png" alt="科學好好聽" width="210" height="84"></a>
-  <div class="tagline"><h1>宇宙好好聽</h1><p>從一顆原子調到 930 億光年</p></div>
-  <button class="logbook" id="logbook-btn" type="button" aria-haspopup="dialog">航行日誌 <span id="stamp-count">0</span></button>
+  <div class="scene">
+    <h1 id="scene-name">宇宙好好聽</h1>
+    <p id="scene-meta"></p>
+    <div class="explore" aria-label="探索度"><span id="explore-bar"></span></div>
+  </div>
+  <div class="hud-buttons">
+    <button class="round" id="sound-btn" type="button" aria-pressed="true" aria-label="音效">🔊</button>
+    <button class="round" id="list-btn" type="button" aria-pressed="false" aria-label="清單模式">☰</button>
+    <button class="logbook" id="logbook-btn" type="button" aria-haspopup="dialog">航行日誌 <span id="stamp-count">0</span></button>
+  </div>
 </header>
 
-<p class="preview-note" id="preview-note">P0 預覽：10 格全部打開，方便檢查每一集放的位置。正式版只先開「生物、地球、太陽系」三格。</p>
+<div class="hud-zoom" aria-label="縮放">
+  <button class="round" type="button" data-zoom="1" aria-label="放大">＋</button>
+  <button class="round" type="button" data-zoom="-1" aria-label="縮小">－</button>
+  <button class="round" type="button" data-zoom="0" aria-label="回到全景">⌂</button>
+</div>
 
-<nav class="dial" aria-label="萬物旋鈕">
-  <button class="dial-step" id="dial-prev" type="button" aria-label="往小的世界轉">‹</button>
-  <ol class="dial-track" id="dial-track"></ol>
-  <button class="dial-step" id="dial-next" type="button" aria-label="往大的世界轉">›</button>
-</nav>
-<div class="extras" role="tablist" aria-label="其他入口" id="extras"></div>
+<p class="preview-note" id="preview-note">P0 預覽：10 格全部打開。正式版先開「生物、地球、太陽系」。</p>
 
-<main id="main">
+<div class="hud-bottom">
+  <div class="extras" role="tablist" aria-label="其他入口" id="extras"></div>
+  <nav class="tuner" aria-label="萬物旋鈕">
+    <button class="dial-step" id="dial-prev" type="button" aria-label="往小的世界轉">‹</button>
+    <ol class="dial-track" id="dial-track"></ol>
+    <button class="dial-step" id="dial-next" type="button" aria-label="往大的世界轉">›</button>
+  </nav>
+</div>
+
+<main id="main" hidden>
   <section class="level" id="level" aria-live="polite"></section>
   <label class="search"><span class="sr">搜尋集數</span><input id="search" type="search" placeholder="搜尋集數名稱或代碼，例如 112、黑洞"></label>
   <ul class="stops" id="stops"></ul>
+  <footer class="foot">科學好好聽，自 2025 年起 · <a href="https://lab.kidsci.app/">lab.kidsci.app</a></footer>
 </main>
-
-<footer class="foot">科學好好聽，自 2025 年起 · <a href="https://lab.kidsci.app/">lab.kidsci.app</a></footer>
 
 <dialog id="channel" class="sheet" aria-labelledby="ch-title"></dialog>
 <dialog id="lab" class="labsheet" aria-label="實驗">
@@ -42,6 +59,7 @@
   <iframe id="lab-frame" title="lab 實驗" allow="fullscreen"></iframe>
 </dialog>
 <dialog id="journal" class="sheet" aria-labelledby="journal-title"></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <div class="player" id="player" hidden>
   <div class="now"><strong id="now-title"></strong><span id="now-takeaway"></span></div>
