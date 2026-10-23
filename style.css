@@ -346,3 +346,78 @@ body.zoom-page.has-player .guide { bottom: 200px; }
   .zoom-page .guide { left: 8px; bottom: calc(96px + env(safe-area-inset-bottom)); }
   body.zoom-page.has-player .guide { bottom: 196px; }
 }
+
+/* ---------- 宇宙地圖（mindmap.html）：迷宮開圖 ---------- */
+.map-page { background: #0c0e22; }
+.map-page::before { content: ""; position: fixed; left: 0; right: 0; top: 0; height: 150px; z-index: 2; pointer-events: none;
+  background: linear-gradient(to bottom, rgba(10, 12, 30, 0.7), rgba(10, 12, 30, 0)); }
+#stage { position: fixed; inset: 0; touch-action: none; overflow: hidden; cursor: grab; }
+#stage:active { cursor: grabbing; }
+#stage #world { position: absolute; inset: 0; width: 100%; height: 100%; }
+#nodes { position: absolute; inset: 0; pointer-events: none; }
+.map-page #map-progress { margin: 2px 0 4px; color: var(--muted); font-size: 14px; }
+
+.mm-node { position: absolute; left: 0; top: 0; width: 0; height: 0; pointer-events: auto; padding: 0; border: 0; outline: none;
+  background: none; color: var(--text); will-change: transform; -webkit-tap-highlight-color: transparent; }
+/* 節點本身是 0×0 的錨點：球的中心對準它在地圖上的位置，名字掛在球下面 */
+.mm-node .orb { position: absolute; left: 0; top: 0; translate: -50% -50%; display: grid; place-items: center; width: var(--s); height: var(--s); border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, hsl(var(--h) 70% 90%), hsl(var(--h) 45% 62%) 70%, hsl(var(--h) 40% 45%));
+  box-shadow: 0 0 0 3px hsl(var(--h) 60% 80% / 0.55), 0 6px 18px rgba(4, 6, 20, 0.5), 0 0 28px hsl(var(--h) 80% 70% / 0.45);
+  transition: transform 0.2s, box-shadow 0.2s; }
+.mm-node .em { font-size: calc(var(--s) * 0.52); line-height: 1; filter: drop-shadow(0 2px 3px rgba(40, 20, 10, 0.3)); }
+.mm-node .orb img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+.mm-node .nm { position: absolute; left: 0; top: calc(var(--s) / 2 + 5px); translate: -50% 0; max-width: 160px; padding: 2px 10px; border-radius: 999px; background: rgba(14, 16, 40, 0.82); font-weight: 700; font-size: var(--f);
+  line-height: 1.35; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35); }
+.mm-node:hover .orb, .mm-node:focus-visible .orb { transform: scale(1.08); }
+.mm-node:focus-visible .orb { outline: 3px solid var(--gold); outline-offset: 4px; }
+.mm-node.d0 { --s: 104px; --f: 18px; }
+.mm-node.d0 .orb { box-shadow: 0 0 0 4px #efcf8e, 0 0 50px rgba(246, 220, 156, 0.6); }
+.mm-node.d1 { --s: 78px; --f: 17px; }
+.mm-node.d2 { --s: 56px; --f: 14px; }
+.mm-node.d3 { --s: 42px; --f: 12px; }
+/* 大主題、小主題外圈的進度環：聽過幾成 */
+.mm-node.d1 .orb::after, .mm-node.d2 .orb::after { content: ""; position: absolute; inset: -7px; border-radius: 50%;
+  background: conic-gradient(#efcf8e calc(var(--p, 0) * 1%), transparent 0); -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px)); mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px)); }
+.mm-node.vip .orb { box-shadow: 0 0 0 3px #e7c27a, 0 6px 18px rgba(4, 6, 20, 0.5), 0 0 26px rgba(240, 200, 120, 0.5); }
+.mm-node.soon .orb { filter: saturate(0.25) brightness(0.75); }
+.mm-node .mk { position: absolute; right: -6px; top: -6px; min-width: 20px; height: 20px; border-radius: 10px; font-size: 12px; line-height: 20px; background: #232948; }
+.mm-node .mk.ok { background: #8fd8bf; color: #1f4a3c; font-weight: 800; }
+/* 還在雲裡的地方：只看得到模糊的影子和「？」，會一閃一閃 */
+.mm-node.fog .orb { background: radial-gradient(circle at 35% 30%, rgba(200, 196, 240, 0.55), rgba(70, 66, 120, 0.55)); box-shadow: 0 0 0 2px rgba(220, 214, 255, 0.45), 0 0 30px rgba(220, 214, 255, 0.35);
+  animation: fog-glow 2.4s ease-in-out infinite; }
+.mm-node.fog .em { filter: blur(2px) grayscale(1) brightness(1.3); opacity: 0.45; }
+.mm-node.fog .q { position: absolute; font-size: calc(var(--s) * 0.5); font-weight: 900; color: #fff6e6; text-shadow: 0 0 12px rgba(255, 240, 200, 0.9); }
+.mm-node.fog .nm { display: none; } /* 還沒打開的地方不顯示名字，只有發光的「？」 */
+@keyframes fog-glow { 50% { box-shadow: 0 0 0 3px rgba(255, 240, 200, 0.7), 0 0 44px rgba(255, 240, 200, 0.55); } }
+.mm-node.appear .orb { animation: pop-in 0.55s cubic-bezier(0.2, 0.9, 0.3, 1.5) both, fog-glow 2.4s ease-in-out 0.6s infinite; }
+.mm-node.appear:not(.fog) .orb { animation: pop-in 0.55s cubic-bezier(0.2, 0.9, 0.3, 1.5) both; }
+@keyframes pop-in { from { transform: scale(0.2); opacity: 0; } }
+.mm-node.hint .orb { animation: hint 0.5s ease-in-out 4 alternate; }
+@keyframes hint { to { transform: scale(1.35); box-shadow: 0 0 0 5px #efcf8e, 0 0 60px rgba(246, 220, 156, 0.8); } }
+/* 遠近：拉遠時只剩光點，拉近才看得到名字（galaxy：整張地圖，最遠） */
+#nodes[data-lod="galaxy"] .d0 { --s: 60px; }
+#nodes[data-lod="galaxy"] .d1 { --s: 26px; }
+#nodes[data-lod="galaxy"] .d2 { --s: 9px; }
+#nodes[data-lod="galaxy"] :is(.d1, .d2) :is(.nm, .q, .mk), #nodes[data-lod="galaxy"] .d2 .em, #nodes[data-lod="galaxy"] :is(.d1, .d2) .orb::after { display: none; }
+#nodes[data-lod="galaxy"] .d0 .nm { display: none; }
+#nodes[data-lod="far"] .d3 { --s: 8px; }
+#nodes[data-lod="far"] .d2 { --s: 34px; }
+#nodes[data-lod="far"] .d3 :is(.em, .nm, .q, .mk), #nodes[data-lod="far"] .d2 .nm { display: none; }
+#nodes[data-lod="mid"] .d3 { --s: 28px; }
+#nodes[data-lod="mid"] .d3 :is(.nm, .mk) { display: none; }
+#nodes[data-lod="near"] .d3 .nm { display: none; }
+.mm-node.d3 .nm { max-width: 100px; }
+
+.minimap { position: fixed; right: 14px; top: calc(96px + env(safe-area-inset-top)); z-index: 5; width: 132px; height: 132px; border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--line), var(--shadow); cursor: pointer; }
+.map-zoom { top: auto; bottom: calc(24px + env(safe-area-inset-bottom)); }
+.map-page .guide { bottom: calc(24px + env(safe-area-inset-bottom)); }
+body.map-page.has-player .guide, body.map-page.has-player .map-zoom { bottom: 120px; }
+@media (max-width: 700px) {
+  .minimap { width: 96px; height: 96px; top: calc(150px + env(safe-area-inset-top)); right: 8px; }
+  .map-page .hud-zoom.map-zoom { top: auto; bottom: calc(18px + env(safe-area-inset-bottom)); right: 8px; }
+  body:has(#guide:not([hidden])) .map-page .map-zoom, .map-page:has(#guide:not([hidden])) .map-zoom { visibility: hidden; }
+  .mm-node.d0 { --s: 88px; --f: 16px; }
+  .mm-node.d1 { --s: 66px; --f: 15px; }
+  .mm-node.d2 { --s: 48px; --f: 13px; }
+}
