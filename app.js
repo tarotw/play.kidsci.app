@@ -105,7 +105,8 @@ function talkAboutView() {
 function suggestGo() {
   const e = explorer.suggest();
   if (!e) { guide.say([{ who: 'captain', text: '這一格都探索完了！轉轉旋鈕去下一格吧。' }], { urgent: true }); return; }
-  guide.say([{ who: 'curious', text: fill(pick(lines.idle), { title: e.title }), actions: [{ label: '🚀 帶我去', run: () => explorer.flyTo(e.code) }, { label: '等一下', run: () => {} }] }], { urgent: true });
+  const idle = pick(lines.idle);
+  guide.say([{ who: idle.who, text: fill(idle.text, { title: e.title }), actions: [{ label: '🚀 帶我去', run: () => explorer.flyTo(e.code) }, { label: '等一下', run: () => {} }] }], { urgent: true });
 }
 function openGuideMenu() {
   if (!guide.on) { guide.on = true; }
@@ -482,6 +483,9 @@ async function init() {
     view = home.includes(':') ? { kind: home.split(':')[0], id: home.split(':')[1] } : home === 'studio' ? { kind: 'studio', id: 'studio' } : { kind: 'level', id: home };
   }
   explorer = await makeExplorer({ canvas: $('#world'), world, episodes, getStamps: () => stamps, onPick: openChannel }, params.get('gl') === '0');
+  // 隊長或博士說話時，耳機號上的那一位會跟著跳
+  const guideRoot = $('#guide');
+  new MutationObserver(() => explorer.talk?.(guideRoot.hidden ? null : guideRoot.dataset.who)).observe(guideRoot, { attributes: true, attributeFilter: ['hidden', 'data-who'] });
   bind();
   saveStamps();
   if (params.get('mode') === 'list') setListMode(true);

@@ -137,7 +137,7 @@ export function createGuide({ root, cast }) {
       }
       queue.push(...lines);
       if (then) onEmpty = then;
-      if (!line || (topic && line.topic === topic)) nextLine();
+      if (!line || urgent || (topic && line.topic === topic)) nextLine();
     },
     busy: () => Boolean(line),
     get on() { return prefs.on; },
