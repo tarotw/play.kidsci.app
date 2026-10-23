@@ -171,7 +171,7 @@ dialog::backdrop { background: rgba(3, 8, 18, 0.55); backdrop-filter: blur(2px);
 }
 .toast.show { transform: translate(-50%, -50%) scale(1); opacity: 1; }
 
-.player[hidden] { display: none; }
+[hidden] { display: none !important; }
 .player { position: fixed; left: 0; right: 0; bottom: 0; z-index: 6; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: var(--panel-2); border-top: 1px solid var(--line); display: grid; gap: 6px; }
 .player audio { width: 100%; }
 .player .now { display: flex; flex-direction: column; font-size: 14px; }
@@ -242,3 +242,11 @@ body.has-player .guide { bottom: 294px; }
   .guide-avatar { width: 56px; height: 56px; }
   .guide-text { font-size: 16px; }
 }
+
+/* 3D 版 */
+.warp-flash { position: fixed; inset: 0; pointer-events: none; opacity: 0; z-index: 3;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.95), rgba(140,240,255,0.5) 35%, rgba(10,20,40,0) 70%); }
+.tip3d { position: fixed; z-index: 6; transform: translate(-50%, -100%); pointer-events: none; max-width: 260px;
+  padding: 6px 10px; border-radius: 10px; background: rgba(8,16,32,0.9); border: 1px solid rgba(140,240,255,0.5);
+  color: #fff; font-size: 14px; line-height: 1.35; box-shadow: 0 0 18px rgba(140,240,255,0.25); }
+.tip3d[hidden] { display: none; }

@@ -1,5 +1,5 @@
 // 宇宙好好聽：萬物旋鈕。資料來自 data/world.json 與 data/catalog.json（由 tools/ 產生）。
-import { createExplorer, iconFor } from './explorer.js';
+import { createExplorer as createExplorer2d, iconFor } from './explorer.js';
 import { createGuide } from './guide.js';
 
 const PREVIEW = true; // P0：所有格都打開，方便檢查分類。正式版改成 false，只開 world.mvp_levels。
@@ -441,6 +441,22 @@ function bind() {
   bindHold(document);
 }
 
+// 先試 3D（WebGL）；舊裝置、關掉 WebGL 或 ?gl=0 就用 2D 版。
+function webglOk() {
+  try { const c = document.createElement('canvas'); return !!(c.getContext('webgl2') || c.getContext('webgl')); } catch { return false; }
+}
+async function makeExplorer(opts, force2d) {
+  if (!force2d && webglOk()) {
+    try {
+      const { createExplorer } = await import('./explorer3d.js');
+      const ex = createExplorer(opts);
+      document.body.classList.add('gl');
+      return ex;
+    } catch (err) { console.warn('3D 啟動失敗，改用 2D', err); }
+  }
+  return createExplorer2d(opts);
+}
+
 async function init() {
   [world, { episodes }, lines] = await Promise.all([
     fetch('data/world.json').then((r) => r.json()),
@@ -465,7 +481,7 @@ async function init() {
     const home = byCode.get(ch).home;
     view = home.includes(':') ? { kind: home.split(':')[0], id: home.split(':')[1] } : home === 'studio' ? { kind: 'studio', id: 'studio' } : { kind: 'level', id: home };
   }
-  explorer = createExplorer({ canvas: $('#world'), world, episodes, getStamps: () => stamps, onPick: openChannel });
+  explorer = await makeExplorer({ canvas: $('#world'), world, episodes, getStamps: () => stamps, onPick: openChannel }, params.get('gl') === '0');
   bind();
   saveStamps();
   if (params.get('mode') === 'list') setListMode(true);

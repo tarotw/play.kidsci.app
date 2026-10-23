@@ -5,12 +5,12 @@ const GOLDEN = 2.399963;
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // ---------- 小工具 ----------
-function hash(str) {
+export function hash(str) {
   let h = 2166136261;
   for (let i = 0; i < str.length; i++) h = Math.imul(h ^ str.charCodeAt(i), 16777619);
   return (h >>> 0) / 4294967296;
 }
-function rng(seed) {
+export function rng(seed) {
   let s = Math.floor(seed * 2147483647) || 1;
   return () => (s = (s * 16807) % 2147483647) / 2147483647;
 }
@@ -66,7 +66,7 @@ export function iconFor(e) {
 }
 
 // ---------- 場景主題 ----------
-const THEMES = {
+export const THEMES = {
   l01: { sky: ['#07040f', '#1a0f33'], hue: [268, 300, 190], deco: 'atom', label: '#e7d6ff' },
   l02: { sky: ['#16040b', '#3a0d22'], hue: [340, 10, 300], deco: 'cells', label: '#ffd6e4' },
   l03: { sky: ['#041b2b', '#0b4a5c'], hue: [190, 120, 45], deco: 'life', label: '#e8fff4' },
@@ -81,10 +81,10 @@ const THEMES = {
   lane: { sky: ['#030712', '#0c1426'], hue: [190, 45, 320], deco: 'lanes', label: '#e0fbff' },
   studio: { sky: ['#120a06', '#2a160c'], hue: [30, 15, 45], deco: 'studio', label: '#ffeedd' },
 };
-const LANE_COLORS = ['#ff8a5c', '#ffd25c', '#ff5c8a', '#7cf2ff', '#b48cff', '#5cffb0', '#ffffff'];
+export const LANE_COLORS = ['#ff8a5c', '#ffd25c', '#ff5c8a', '#7cf2ff', '#b48cff', '#5cffb0', '#ffffff'];
 
 // ---------- 音效（Web Audio，第一次點擊後才啟動） ----------
-class Sound {
+export class Sound {
   constructor() { this.ctx = null; this.on = true; }
   wake() {
     if (this.ctx) return;
@@ -129,7 +129,7 @@ class Sound {
 }
 
 // ---------- 版面 ----------
-function buildScene(view, world, episodes) {
+export function buildScene(view, world, episodes) {
   const groups = [];
   const theme = view.kind === 'level' ? view.id : view.kind;
   const hues = THEMES[theme].hue;
