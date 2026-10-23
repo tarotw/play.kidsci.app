@@ -67,7 +67,7 @@ export function planetMaterial(kind, { c1 = 0x888888, c2 = 0x444444, c3 = 0xffff
   });
 }
 
-function ringMaterial(inner, outer, colors) {
+export function ringMaterial(inner, outer, colors) {
   return new THREE.ShaderMaterial({
     uniforms: { inner: { value: inner }, outer: { value: outer }, c1: { value: new THREE.Color(colors[0]) }, c2: { value: new THREE.Color(colors[1]) } },
     vertexShader: /* glsl */ `varying vec3 vP; varying vec3 vW; void main() { vP = position; vec4 w = modelMatrix * vec4(position, 1.0); vW = w.xyz; gl_Position = projectionMatrix * viewMatrix * w; }`,
@@ -83,7 +83,7 @@ function ringMaterial(inner, outer, colors) {
   });
 }
 
-function sunSurface(radius) {
+export function sunSurface(radius) {
   const mat = new THREE.ShaderMaterial({
     uniforms: { time: { value: 0 } },
     vertexShader: /* glsl */ `varying vec3 vP; varying vec3 vN; varying vec3 vV;

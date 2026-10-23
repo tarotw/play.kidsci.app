@@ -1,0 +1,97 @@
+{
+  "about": "宇宙好好聽・一路放大縮小（小樣本）。layers 由大到小排列；每個 thing 是畫面上一個可以點的東西，codes 是它裡面的集數（第一集最先出現）。door 是「鑽進去」的入口，通往下一層。",
+  "start": "you",
+  "layers": [
+    {
+      "id": "solar", "name": "太陽系", "emoji": "🪐", "size": "45 億公里", "vsYou": "比你大 4 兆倍",
+      "lines": [
+        { "who": "curious", "text": "哇！我們飛出地球了，這些都是太陽的家人！" },
+        { "who": "captain", "text": "點一顆行星，聽它的故事。想回家，就往地球鑽進去。" }
+      ],
+      "things": [
+        { "id": "sun", "name": "太陽", "emoji": "☀️", "codes": ["103", "104", "s7", "s17", "s19", "c30"] },
+        { "id": "venus", "name": "水星與金星", "emoji": "🟠", "codes": ["107", "s61"] },
+        { "id": "earth", "name": "地球", "emoji": "🌍", "codes": ["105", "108"], "door": true },
+        { "id": "mars", "name": "火星", "emoji": "🔴", "codes": ["s14"] },
+        { "id": "jupiter", "name": "木星與土星", "emoji": "🪐", "codes": ["109", "106"] },
+        { "id": "uranus", "name": "天王星與海王星", "emoji": "🔵", "codes": ["110"] },
+        { "id": "comet", "name": "彗星與流星", "emoji": "☄️", "codes": ["s11", "s10", "s12", "s15", "s23"] }
+      ]
+    },
+    {
+      "id": "earth", "name": "地球", "emoji": "🌍", "size": "1.3 萬公里", "vsYou": "比你大 1000 萬倍",
+      "lines": [
+        { "who": "captain", "text": "這就是我們住的地球！月亮在旁邊轉圈圈。" },
+        { "who": "curious", "text": "點月亮、火箭和衛星聽故事。往「你在這裡」鑽進去，就回到你身邊。" }
+      ],
+      "things": [
+        { "id": "home", "name": "你在這裡", "emoji": "📍", "codes": [], "door": true },
+        { "id": "moon", "name": "月球", "emoji": "🌙", "codes": ["112", "111", "s8"] },
+        { "id": "rocket", "name": "登月火箭", "emoji": "🚀", "codes": ["117", "113", "s16"] },
+        { "id": "satellite", "name": "人造衛星", "emoji": "🛰️", "codes": ["80", "79", "114", "s9"] },
+        { "id": "volcano", "name": "火山與地震", "emoji": "🌋", "codes": ["c2"] },
+        { "id": "typhoon", "name": "天氣與颱風", "emoji": "🌀", "codes": ["c17"] },
+        { "id": "tilt", "name": "歪歪的地球", "emoji": "🧭", "codes": ["c7"] }
+      ]
+    },
+    {
+      "id": "you", "name": "你", "emoji": "🧒", "size": "1 公尺", "vsYou": "你的大小",
+      "lines": [
+        { "who": "captain", "text": "嗨！這裡是你的大小，身邊有好多動物朋友。" },
+        { "who": "curious", "text": "點一點牠們聽故事！按「鑽進去」看你的皮膚裡面，按「退出來」飛到天上看地球。" }
+      ],
+      "things": [
+        { "id": "kid", "name": "你", "emoji": "🧒", "codes": [], "door": true },
+        { "id": "kangaroo", "name": "袋鼠", "emoji": "🦘", "codes": ["208"] },
+        { "id": "giraffe", "name": "長頸鹿", "emoji": "🦒", "codes": ["211"] },
+        { "id": "panda", "name": "大貓熊", "emoji": "🐼", "codes": ["209"] },
+        { "id": "elephant", "name": "非洲象", "emoji": "🐘", "codes": ["217"] },
+        { "id": "bird", "name": "鳥", "emoji": "🐦", "codes": ["191", "193", "192"] },
+        { "id": "bat", "name": "蝙蝠", "emoji": "🦇", "codes": ["205"] }
+      ]
+    },
+    {
+      "id": "skin", "name": "你的皮膚", "emoji": "✋", "size": "1 公釐", "vsYou": "比你小 1000 倍",
+      "lines": [
+        { "who": "curious", "text": "我們變得好小，鑽進你的手裡了！" },
+        { "who": "captain", "text": "這裡有指紋、肌肉和骨頭。再往發光的細胞鑽進去，會變得更小喔。" }
+      ],
+      "things": [
+        { "id": "cell", "name": "細胞", "emoji": "🦠", "codes": ["s54"], "door": true },
+        { "id": "print", "name": "指紋與毛髮", "emoji": "👆", "codes": ["s58"] },
+        { "id": "shield", "name": "皮膚防護衣", "emoji": "🛡️", "codes": ["s57"] },
+        { "id": "muscle", "name": "肌肉", "emoji": "💪", "codes": ["s55", "s56"] },
+        { "id": "bone", "name": "骨頭", "emoji": "🦴", "codes": ["s53"] }
+      ]
+    },
+    {
+      "id": "cell", "name": "細胞", "emoji": "🦠", "size": "0.01 公釐", "vsYou": "比你小 10 萬倍",
+      "lines": [
+        { "who": "captain", "text": "這就是一個細胞！你的身體裡有 36 兆個。" },
+        { "who": "curious", "text": "細胞裡有工廠和小機器。再鑽進中間，就會看到原子！" }
+      ],
+      "things": [
+        { "id": "core", "name": "鑽進原子", "emoji": "⚛️", "codes": [], "door": true },
+        { "id": "factory", "name": "細胞工廠", "emoji": "🏭", "codes": ["c16"] },
+        { "id": "brain", "name": "大腦細胞", "emoji": "🧠", "codes": ["c9"] },
+        { "id": "tardigrade", "name": "水熊蟲", "emoji": "🧸", "codes": ["c18"] }
+      ]
+    },
+    {
+      "id": "atom", "name": "原子", "emoji": "⚛️", "size": "0.1 奈米", "vsYou": "比你小 100 億倍",
+      "lines": [
+        { "who": "curious", "text": "這是最小最小的積木：原子！" },
+        { "who": "captain", "text": "萬物都是原子堆出來的。點一點，聽它們變魔術。" }
+      ],
+      "things": [
+        { "id": "atom", "name": "原子積木", "emoji": "⚛️", "codes": ["55", "53"] },
+        { "id": "table", "name": "元素週期表", "emoji": "🧪", "codes": ["58"] },
+        { "id": "matter", "name": "物質變身", "emoji": "🧊", "codes": ["57", "54", "62"] },
+        { "id": "firework", "name": "煙火的顏色", "emoji": "🎆", "codes": ["59", "c4"] },
+        { "id": "gem", "name": "寶石與碳", "emoji": "💎", "codes": ["61"] },
+        { "id": "nuclear", "name": "核能", "emoji": "⚡", "codes": ["93"] },
+        { "id": "material", "name": "神奇材料", "emoji": "🏺", "codes": ["60"] }
+      ]
+    }
+  ]
+}

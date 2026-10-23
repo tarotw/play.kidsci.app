@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>宇宙好好聽｜一路放大縮小</title>
+<meta name="description" content="科學好好聽的萬物宇宙：從你的大小出發，鑽進去看皮膚、細胞、原子，退出來看地球、太陽系。每個東西點一下，都會說自己的故事。">
+<meta property="og:title" content="宇宙好好聽・一路放大縮小">
+<meta property="og:image" content="https://universe.kidsci.app/assets/logo-banner.png">
+<meta name="theme-color" content="#171b34">
+<link rel="icon" href="assets/logo-square.jpg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="zoom-page">
+<div class="loading" id="loading" role="status"><img src="assets/logo-square.jpg" alt="" width="72" height="72"><p id="loading-text">耳機號準備起飛…</p></div>
+<canvas id="world" aria-label="萬物宇宙：拖曳轉著看，兩指或滾輪放大縮小，點發亮的東西聽故事。"></canvas>
+
+<header class="hud-top">
+  <a class="brand" href="./" aria-label="宇宙好好聽首頁"><img src="assets/logo-banner.png" alt="科學好好聽" width="210" height="84"></a>
+  <div class="scene">
+    <h1 id="layer-name">你</h1>
+    <p id="layer-size"></p>
+  </div>
+  <div class="hud-buttons">
+    <button class="round guide-btn" id="guide-btn" type="button" aria-label="找科學隊長"><img src="assets/avatar-captain.png" alt=""></button>
+    <button class="round" id="sound-btn" type="button" aria-pressed="true" aria-label="音效">🔊</button>
+    <button class="logbook" id="logbook-btn" type="button" aria-haspopup="dialog" aria-label="航行日誌"><span class="label">航行日誌</span> <span id="stamp-count">0</span></button>
+  </div>
+</header>
+
+<nav class="elevator" id="elevator" aria-label="萬物電梯：由大到小"></nav>
+
+<section class="guide" id="guide" hidden tabindex="0" aria-live="polite" aria-label="科學隊長與好奇博士"></section>
+
+<div class="zoom-controls">
+  <button class="zoom-btn out" id="btn-out" type="button"><span class="ico">🔭</span><span class="txt">退出來</span><small id="out-to"></small></button>
+  <button class="zoom-btn in" id="btn-in" type="button"><span class="ico">🔍</span><span class="txt">鑽進去</span><small id="in-to"></small></button>
+</div>
+
+<dialog id="thing" class="sheet" aria-labelledby="thing-title"></dialog>
+<dialog id="channel" class="sheet" aria-labelledby="ch-title"></dialog>
+<dialog id="lab" class="labsheet" aria-label="實驗">
+  <div class="labbar"><span id="lab-title"></span><button type="button" id="lab-close">關閉實驗</button></div>
+  <iframe id="lab-frame" title="lab 實驗" allow="fullscreen"></iframe>
+</dialog>
+<dialog id="journal" class="sheet" aria-labelledby="journal-title"></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="player" id="player" hidden>
+  <div class="now"><strong id="now-title"></strong><span id="now-takeaway"></span></div>
+  <audio id="audio" controls preload="none"></audio>
+</div>
+
+<script type="importmap">{"imports":{"three":"./vendor/three/three.module.min.js","three/addons/":"./vendor/three/addons/"}}</script>
+<script src="zoom.js" type="module"></script>
+</body>
+</html>
