@@ -87,7 +87,22 @@ export function createGuide({ root, cast }) {
     nextLine();
   }
 
+  // 頻道卡、實驗、航行日誌開著時，背後的畫面按不到：台詞先排隊，等它關掉再說
+  let waiting = false;
+  function openDialog() { return document.querySelector('dialog[open]'); }
+  function waitForDialog() {
+    if (waiting) return;
+    waiting = true;
+    const check = () => {
+      if (openDialog()) { setTimeout(check, 250); return; }
+      waiting = false;
+      if (!line && queue.length) nextLine();
+    };
+    setTimeout(check, 250);
+  }
+
   function nextLine() {
+    if (queue.length && openDialog()) { hide(); waitForDialog(); return; }
     if (queue.length) { show(queue.shift()); return; }
     hide();
     const done = onEmpty;

@@ -108,6 +108,7 @@ body.has-player .hud-bottom { bottom: 104px; background: none; }
 
 /* ---------- 清單模式 ---------- */
 main { padding: calc(150px + env(safe-area-inset-top)) 16px 260px; max-width: 1100px; margin: 0 auto; }
+body.has-player main { padding-bottom: 300px; } /* 播放器出現時，清單最後幾集也捲得出來 */
 .level { padding: 16px; border-radius: var(--radius); background: var(--panel-solid); margin-bottom: 12px; }
 .level h2 { margin: 0 0 4px; font-size: 24px; }
 .level .meta { color: var(--muted); margin: 0 0 8px; }
@@ -143,7 +144,9 @@ dialog::backdrop { background: rgba(3, 8, 18, 0.55); backdrop-filter: blur(2px);
 .sheet .inner { padding: 20px; overflow-y: auto; }
 .sheet .hero { font-size: 56px; line-height: 1; margin: 0 0 8px; filter: drop-shadow(0 4px 10px rgba(6, 8, 24, 0.4)); }
 .sheet h2 { margin: 0 0 4px; font-size: 22px; }
-.sheet .close { float: right; min-width: 44px; min-height: 44px; border: 0; background: transparent; font-size: 22px; }
+/* ✕ 一定在最上層：大圖示有陰影濾鏡，會自己疊一層蓋住浮動的按鈕；捲動長內容時也一直留在右上角 */
+.sheet .close { position: sticky; top: 0; z-index: 3; float: right; min-width: 48px; min-height: 48px; margin: -6px -6px 0 8px;
+  border: 1px solid var(--line); border-radius: 50%; background: var(--panel-solid); color: var(--text); font-size: 22px; box-shadow: var(--shadow); }
 .actions { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
 .btn { min-height: 44px; padding: 0 18px; border-radius: 999px; border: 0; background: var(--orange); color: var(--bg); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; }
 .btn.alt { background: transparent; color: var(--teal); border: 1px solid var(--teal); }
@@ -197,7 +200,9 @@ dialog::backdrop { background: rgba(3, 8, 18, 0.55); backdrop-filter: blur(2px);
   .hud-top { flex-wrap: wrap; }
   .scene { order: 3; flex-basis: 100%; }
   .preview-note { top: calc(150px + env(safe-area-inset-top)); max-width: 200px; }
-  .hud-zoom { top: auto; bottom: 190px; }
+  /* 手機：縮放鍵放到標題下面，避開導覽框（它的 ✕ 也在右邊）和下方旋鈕；導覽框出現時先收起來，雙指一樣能縮放 */
+  .hud-zoom { top: calc(168px + env(safe-area-inset-top)); bottom: auto; right: 10px; }
+  body:has(#guide:not([hidden])) .hud-zoom { visibility: hidden; }
   .knob { min-width: 92px; }
   .toast { width: min(86vw, 360px); font-size: 18px; }
   .extras { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; scrollbar-width: none; }
@@ -236,6 +241,8 @@ dialog::backdrop { background: rgba(3, 8, 18, 0.55); backdrop-filter: blur(2px);
 .guide.typed .guide-next { opacity: 1; animation: blink 1.2s infinite; }
 @keyframes blink { 50% { opacity: 0.3; } }
 body.has-player .guide { bottom: 294px; }
+/* 頻道卡等視窗開著時，導覽框先藏起來（它在背景按不到，看到反而以為關不掉） */
+body:has(dialog[open]) .guide { visibility: hidden; }
 
 /* 頻道卡上的兩人對話 */
 .duo { display: grid; gap: 8px; margin: 4px 0 12px; }
