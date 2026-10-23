@@ -1,5 +1,6 @@
 // 宇宙好好聽：萬物旋鈕。資料來自 data/world.json 與 data/catalog.json（由 tools/ 產生）。
 import { createExplorer, iconFor } from './explorer.js';
+import { createGuide } from './guide.js';
 
 const PREVIEW = true; // P0：所有格都打開，方便檢查分類。正式版改成 false，只開 world.mvp_levels。
 const LAB_ORIGIN = 'https://lab.kidsci.app';
@@ -9,14 +10,15 @@ const LAB_STAMP_SECONDS = 60;
 const $ = (sel) => document.querySelector(sel);
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
-let world, episodes, byCode, explorer;
+let world, episodes, byCode, explorer, guide, lines;
+const talked = new Set(); // 這次打開網頁已經介紹過的格
 let view = { kind: 'level', id: 'l03' };
 let listMode = false;
 let labTimer = null;
 
 // ---------- 航行日誌（星章與探索紀錄） ----------
 function loadStamps() {
-  const empty = { ear: [], hand: [], seen: [] };
+  const empty = { ear: [], hand: [], seen: [], missions: [], guess: 0 };
   try { return { ...empty, ...(JSON.parse(localStorage.getItem(STORE_KEY)) || {}) }; } catch { return empty; }
 }
 let stamps = loadStamps();
@@ -28,14 +30,99 @@ function addStamp(kind, code) {
   if (stamps[kind].includes(code)) return;
   stamps[kind].push(code);
   saveStamps();
-  if (kind === 'seen') { renderHud(); return; }
-  const e = byCode.get(code);
-  toast(`${kind === 'ear' ? '👂 耳朵章' : '✋ 小手章'} +1<br><small>${esc(code)} 台｜${esc(e?.title || '')}</small>`);
-  explorer?.celebrate();
+  if (kind !== 'seen') {
+    const e = byCode.get(code);
+    toast(`${kind === 'ear' ? '👂 耳朵章' : '✋ 小手章'} +1<br><small>${esc(code)} 台｜${esc(e?.title || '')}</small>`);
+    explorer?.celebrate();
+    popLogbook();
+    guide?.say(lines.stamps[kind]);
+    renderStops();
+  }
+  checkMissions();
+  renderHud();
+}
+function popLogbook() {
   $('#logbook-btn').classList.remove('pop');
   void $('#logbook-btn').offsetWidth;
   $('#logbook-btn').classList.add('pop');
-  renderStops();
+}
+const fill = (text, vars) => text.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? '');
+const pick = (list) => list[Math.floor(Math.random() * list.length)];
+
+// ---------- 任務 ----------
+function missionsFor(v) {
+  if (v.kind !== 'level') return [];
+  const here = episodes.filter((e) => e.home === v.id);
+  const n = Math.min(3, here.filter((e) => e.state !== 'unreleased').length);
+  const list = [];
+  if (n) list.push({ id: `${v.id}:visit`, text: fill(lines.missions.visit, { n }), goal: n, count: () => here.filter((e) => stamps.seen.includes(e.code)).length });
+  if (here.some((e) => e.state === 'subscriber')) list.push({ id: `${v.id}:gold`, text: lines.missions.gold, goal: 1, count: () => here.filter((e) => e.state === 'subscriber' && stamps.seen.includes(e.code)).length });
+  if (here.some((e) => e.state === 'public' && e.listen?.audio)) list.push({ id: `${v.id}:listen`, text: lines.missions.listen, goal: 1, count: () => here.filter((e) => stamps.ear.includes(e.code)).length });
+  return list;
+}
+function currentMission() {
+  return missionsFor(view).find((m) => !stamps.missions.includes(m.id));
+}
+function checkMissions() {
+  missionsFor(view).forEach((m) => {
+    if (stamps.missions.includes(m.id) || m.count() < m.goal) return;
+    stamps.missions.push(m.id);
+    saveStamps();
+    toast(`🏅 任務完成<br><small>${esc(m.text)}</small>`);
+    explorer?.celebrate();
+    popLogbook();
+    guide?.say(lines.missions.done.map((l) => ({ ...l, text: fill(l.text, { mission: m.text }) })));
+  });
+}
+
+// ---------- 大小猜猜看 ----------
+function startGuess() {
+  const levels = [...world.levels].sort(() => Math.random() - 0.5).slice(0, 2);
+  const [a, b] = levels;
+  const big = a.n > b.n ? a : b, small = big === a ? b : a;
+  const vars = { a: a.name, b: b.name, big: big.name, small: small.name, bigScale: big.scale, smallScale: small.scale };
+  const answer = (choice) => () => {
+    const right = choice === big;
+    if (right) { stamps.guess += 1; saveStamps(); explorer.celebrate(); toast('🧠 答對了！'); }
+    guide.say([
+      { who: 'captain', text: fill(right ? lines.guess.right : lines.guess.wrong, vars) },
+      { who: 'curious', text: '再玩一次？', actions: [{ label: '🎲 再一題', run: startGuess }, { label: '不玩了', run: () => {} }] },
+    ]);
+  };
+  guide.say([{ who: 'curious', text: fill(lines.guess.ask, vars), actions: [{ label: a.name, run: answer(a) }, { label: b.name, run: answer(b) }] }], { urgent: true });
+}
+
+// ---------- 主角說話的時機 ----------
+function talkAboutView() {
+  const key = view.kind === 'level' ? view.id : view.kind;
+  if (talked.has(key)) return;
+  talked.add(key);
+  const said = view.kind === 'level' ? lines.levels[view.id] : lines.views[view.kind];
+  const m = currentMission();
+  const extra = m ? [{ who: 'captain', text: `新任務：${m.text}！` }] : [];
+  guide.say([...(said || []), ...extra]);
+}
+function suggestGo() {
+  const e = explorer.suggest();
+  if (!e) { guide.say([{ who: 'captain', text: '這一格都探索完了！轉轉旋鈕去下一格吧。' }], { urgent: true }); return; }
+  guide.say([{ who: 'curious', text: fill(pick(lines.idle), { title: e.title }), actions: [{ label: '🚀 帶我去', run: () => explorer.flyTo(e.code) }, { label: '等一下', run: () => {} }] }], { urgent: true });
+}
+function openGuideMenu() {
+  if (!guide.on) { guide.on = true; }
+  guide.say([{ ...lines.menu, actions: [
+    { label: '🎲 大小猜猜看', run: startGuess },
+    { label: '🎯 現在的任務', run: () => { const m = currentMission(); guide.say([{ who: 'captain', text: m ? `${m.text}（${Math.min(m.count(), m.goal)}／${m.goal}）` : '這一格的任務都完成了，太厲害了！' }]); } },
+    { label: '🚀 帶我去一台', run: suggestGo },
+    { label: '🤫 先不要說話', run: () => { guide.on = false; } },
+  ] }], { urgent: true });
+}
+let idleTimer = null;
+function resetIdle() {
+  clearTimeout(idleTimer);
+  idleTimer = setTimeout(() => {
+    if (listMode || document.querySelector('dialog[open]') || guide.busy()) { resetIdle(); return; }
+    suggestGo();
+  }, 25000);
 }
 function stampMarks(code) {
   return (stamps.ear.includes(code) ? '👂' : '') + (stamps.hand.includes(code) ? '✋' : '');
@@ -94,6 +181,10 @@ function renderHud() {
   $('#scene-name').textContent = name;
   $('#scene-meta').textContent = `${meta} · 已探索 ${p.seen}／${p.total} 台`;
   $('#explore-bar').style.width = `${p.total ? (p.seen / p.total) * 100 : 0}%`;
+  const m = currentMission();
+  const all = missionsFor(view);
+  $('#mission').textContent = m ? `🎯 ${m.text}（${Math.min(m.count(), m.goal)}／${m.goal}）` : all.length ? '🏅 這一格的任務都完成了！' : '';
+  $('#mission').classList.toggle('done', !m && all.length > 0);
 }
 
 function renderLevel() {
@@ -133,7 +224,7 @@ function renderStops() {
 
 function render({ moveScene = true } = {}) {
   renderDial();
-  if (moveScene) explorer.show(sceneView());
+  if (moveScene) { explorer.show(sceneView()); setTimeout(talkAboutView, 900); }
   renderHud();
   if (listMode) { renderLevel(); renderStops(); }
   const params = new URLSearchParams(location.search);
@@ -176,6 +267,14 @@ async function openChannel(code) {
     ? `<div class="card"><h3>🃏 ${esc(content.card.name)}</h3><p>${esc(content.card.description)}</p><ul>${content.card.knowledge.map((k) => `<li>${esc(k)}</li>`).join('')}</ul></div>` : '';
   const question = content?.question
     ? `<div class="question"><strong>好奇博士問你：</strong>${esc(content.question.text)}</div>` : '';
+  const ask = fill(pick(lines.channel[e.state]), { icon: iconFor(e) });
+  const reply = e.state === 'subscriber' ? lines.answers.subscriber
+    : e.state === 'unreleased' ? (content?.caption || lines.answers.unreleased)
+    : content?.takeaways?.[0]?.text || content?.card?.description
+      || (e.labs[0] ? `這一集有實驗「${e.labs[0].title}」可以玩：${e.labs[0].question}` : lines.answers.fallback);
+  const duo = `<div class="duo">
+    <div class="say curious"><img src="${lines.cast.curious.avatar}" alt="${lines.cast.curious.name}"><p>${esc(ask)}</p></div>
+    <div class="say captain"><img src="${lines.cast.captain.avatar}" alt="${lines.cast.captain.name}"><p>${esc(reply)}</p></div></div>`;
   const note = e.state === 'subscriber'
     ? '<p class="hint">訂閱者限定頻道。按住按鈕 2 秒（請大人幫忙）才會打開 Firstory。實驗一樣可以玩。</p>'
     : e.state === 'unreleased' ? `<p class="hint">🔒 神秘訊號，即將登場。${esc(content?.caption || '')}</p>` : '';
@@ -185,7 +284,7 @@ async function openChannel(code) {
     <p class="hero" aria-hidden="true">${e.state === 'unreleased' ? '❔' : iconFor(e)}</p>
     <h2 id="ch-title">${esc(e.title)}</h2>
     <p class="hint">${esc(code)} 台 ${stateBadge(e)} ${stampMarks(code)}</p>
-    ${note}<div class="actions">${actions}</div>${takeaways}${card}${question}</div>`;
+    ${duo}${note}<div class="actions">${actions}</div>${takeaways}${card}${question}</div>`;
   $('#channel').showModal();
   const params = new URLSearchParams(location.search);
   params.set('ch', code);
@@ -265,7 +364,7 @@ function openJournal() {
   $('#journal').innerHTML = `<div class="inner">
     <button class="close" type="button" data-close aria-label="關閉">✕</button>
     <h2 id="journal-title">📔 航行日誌</h2>
-    <p>👂 耳朵章 ${stamps.ear.length} 枚 · ✋ 小手章 ${stamps.hand.length} 枚 · 🔭 拜訪過 ${stamps.seen.length} 台</p>
+    <p>👂 耳朵章 ${stamps.ear.length} 枚 · ✋ 小手章 ${stamps.hand.length} 枚 · 🏅 任務勳章 ${stamps.missions.length} 枚 · 🧠 猜對 ${stamps.guess} 題 · 🔭 拜訪過 ${stamps.seen.length} 台</p>
     <h3>聽過的頻道</h3><ul>${stamps.ear.map(line).join('') || '<li class="hint">還沒有，找一顆發光的頻道聽聽看！</li>'}</ul>
     <h3>做過的實驗</h3><ul>${stamps.hand.map(line).join('') || '<li class="hint">還沒有</li>'}</ul>
     <button class="btn alt" type="button" id="clear-stamps">清除航行日誌</button></div>`;
@@ -311,7 +410,7 @@ function bind() {
     const lab = t.closest('[data-lab]');
     if (lab) { openLab(lab.dataset.lab, lab.dataset.labTitle, lab.dataset.code); return; }
     if (t.closest('[data-close]')) { t.closest('dialog').close(); return; }
-    if (t.id === 'clear-stamps') { stamps = { ear: [], hand: [], seen: [] }; saveStamps(); renderStops(); renderHud(); $('#journal').close(); }
+    if (t.id === 'clear-stamps') { stamps = { ear: [], hand: [], seen: [], missions: [], guess: 0 }; saveStamps(); renderStops(); renderHud(); $('#journal').close(); }
   });
   document.addEventListener('keydown', (ev) => {
     if (listMode || document.querySelector('dialog[open]') || ev.target.closest('input, .tuner')) return;
@@ -328,6 +427,8 @@ function bind() {
   $('#lab-close').addEventListener('click', closeLab);
   $('#lab').addEventListener('cancel', closeLab);
   $('#logbook-btn').addEventListener('click', openJournal);
+  $('#guide-btn').addEventListener('click', openGuideMenu);
+  ['pointerdown', 'keydown', 'wheel'].forEach((type) => window.addEventListener(type, resetIdle, { passive: true }));
   $('#list-btn').addEventListener('click', () => setListMode(!listMode));
   $('#sound-btn').addEventListener('click', () => {
     explorer.sound.wake();
@@ -341,14 +442,17 @@ function bind() {
 }
 
 async function init() {
-  [world, { episodes }] = await Promise.all([
+  [world, { episodes }, lines] = await Promise.all([
     fetch('data/world.json').then((r) => r.json()),
     fetch('data/catalog.json').then((r) => r.json()),
+    fetch('data/dialogue.json').then((r) => r.json()),
   ]);
+  guide = createGuide({ root: $('#guide'), cast: lines.cast });
   byCode = new Map(episodes.map((e) => [e.code, e]));
   if (!PREVIEW) $('#preview-note').hidden = true;
   else setTimeout(() => { $('#preview-note').hidden = true; }, 8000);
-  try { if (!localStorage.getItem(`${STORE_KEY}-hint`)) { toast('👆 拖曳畫面去探索<br><small>點發光的頻道，耳機號就會飛過去</small>'); localStorage.setItem(`${STORE_KEY}-hint`, '1'); } } catch { /* 沒有儲存也沒關係 */ }
+  let firstVisit = true;
+  try { firstVisit = !localStorage.getItem(`${STORE_KEY}-intro`); localStorage.setItem(`${STORE_KEY}-intro`, '1'); } catch { /* 沒有儲存也沒關係 */ }
 
   const params = new URLSearchParams(location.search);
   const lv = params.get('lv');
@@ -365,7 +469,12 @@ async function init() {
   bind();
   saveStamps();
   if (params.get('mode') === 'list') setListMode(true);
+  if (firstVisit) {
+    talked.add(view.kind === 'level' ? view.id : view.kind);
+    guide.say(lines.intro, { then: () => { talked.delete(view.kind === 'level' ? view.id : view.kind); talkAboutView(); } });
+  }
   render();
+  resetIdle();
   if (ch && byCode.has(ch)) openChannel(ch);
 }
 

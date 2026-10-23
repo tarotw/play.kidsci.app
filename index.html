@@ -21,11 +21,13 @@
     <h1 id="scene-name">宇宙好好聽</h1>
     <p id="scene-meta"></p>
     <div class="explore" aria-label="探索度"><span id="explore-bar"></span></div>
+    <p class="mission" id="mission"></p>
   </div>
   <div class="hud-buttons">
+    <button class="round guide-btn" id="guide-btn" type="button" aria-label="找科學隊長"><img src="assets/avatar-captain.png" alt=""></button>
     <button class="round" id="sound-btn" type="button" aria-pressed="true" aria-label="音效">🔊</button>
     <button class="round" id="list-btn" type="button" aria-pressed="false" aria-label="清單模式">☰</button>
-    <button class="logbook" id="logbook-btn" type="button" aria-haspopup="dialog">航行日誌 <span id="stamp-count">0</span></button>
+    <button class="logbook" id="logbook-btn" type="button" aria-haspopup="dialog" aria-label="航行日誌"><span class="label">航行日誌</span> <span id="stamp-count">0</span></button>
   </div>
 </header>
 
@@ -36,6 +38,8 @@
 </div>
 
 <p class="preview-note" id="preview-note">P0 預覽：10 格全部打開。正式版先開「生物、地球、太陽系」。</p>
+
+<section class="guide" id="guide" hidden tabindex="0" aria-live="polite" aria-label="科學隊長與好奇博士"></section>
 
 <div class="hud-bottom">
   <div class="extras" role="tablist" aria-label="其他入口" id="extras"></div>

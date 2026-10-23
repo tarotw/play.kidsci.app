@@ -178,7 +178,12 @@ dialog::backdrop { background: rgba(3, 8, 18, 0.55); backdrop-filter: blur(2px);
 .player #now-takeaway { color: var(--orange); }
 
 @media (max-width: 640px) {
-  .brand img { width: 108px; }
+  .brand img { width: 96px; }
+  .round { width: 40px; height: 40px; font-size: 16px; }
+  .logbook { min-height: 40px; }
+  .logbook .label { display: none; }
+  .logbook::before { content: "📔"; }
+  .preview-note { display: none; }
   .scene h1 { font-size: 19px; }
   .logbook { padding: 0 10px; font-size: 14px; }
   .hud-top { flex-wrap: wrap; }
@@ -191,3 +196,49 @@ dialog::backdrop { background: rgba(3, 8, 18, 0.55); backdrop-filter: blur(2px);
   .extra { min-height: 38px; padding: 0 12px; font-size: 14px; white-space: nowrap; flex: none; }
 }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; animation: none !important; } }
+
+/* ---------- 科學隊長與好奇博士 ---------- */
+.guide-btn { padding: 0; overflow: hidden; border-color: var(--orange); }
+.guide-btn img { width: 100%; height: 100%; display: block; }
+.mission { margin: 4px 0 0; font-size: 13px; color: var(--gold); }
+.mission.done { color: var(--teal); }
+.guide {
+  position: fixed; left: 16px; bottom: 190px; z-index: 7; width: min(460px, calc(100vw - 32px));
+  display: grid; grid-template-columns: 72px 1fr auto; gap: 10px; align-items: start;
+  padding: 12px 12px 22px; border-radius: 20px; cursor: pointer;
+  background: rgba(12, 20, 38, 0.95); border: 2px solid var(--orange);
+  box-shadow: 0 0 30px rgba(244, 166, 64, 0.35), 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+.guide[data-who="curious"] { border-color: var(--teal); box-shadow: 0 0 30px rgba(148, 223, 225, 0.35), 0 10px 30px rgba(0, 0, 0, 0.5); }
+.guide.bounce { animation: guide-in 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.4); }
+@keyframes guide-in { from { transform: translateY(16px) scale(0.95); opacity: 0.4; } }
+.guide-avatar { width: 72px; height: 72px; border-radius: 50%; border: 3px solid var(--orange); background: #142036; }
+.guide[data-who="curious"] .guide-avatar { border-color: var(--teal); animation: wobble 2.4s ease-in-out infinite; }
+@keyframes wobble { 50% { transform: rotate(-6deg); } }
+.guide-name { margin: 0; font-weight: 700; color: var(--orange); font-size: 14px; }
+.guide[data-who="curious"] .guide-name { color: var(--teal); }
+.guide-text { margin: 2px 0 0; font-size: 17px; line-height: 1.55; min-height: 2.4em; }
+.guide-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.guide-action { min-height: 40px; padding: 0 14px; border-radius: 999px; border: 0; background: var(--orange); color: var(--bg); font-weight: 700; }
+.guide[data-who="curious"] .guide-action { background: var(--teal); }
+.guide-tools { display: grid; gap: 6px; }
+.guide-tools button { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); background: transparent; }
+.guide-tools .guide-voice[aria-pressed="true"] { border-color: var(--gold); }
+.guide-next { position: absolute; right: 16px; bottom: 4px; font-size: 11px; color: var(--muted); opacity: 0; }
+.guide.typed .guide-next { opacity: 1; animation: blink 1.2s infinite; }
+@keyframes blink { 50% { opacity: 0.3; } }
+body.has-player .guide { bottom: 294px; }
+
+/* 頻道卡上的兩人對話 */
+.duo { display: grid; gap: 8px; margin: 4px 0 12px; }
+.say { display: grid; grid-template-columns: 44px 1fr; gap: 8px; align-items: start; }
+.say img { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--teal); }
+.say p { margin: 0; padding: 8px 12px; border-radius: 4px 16px 16px 16px; background: var(--panel-2); font-size: 15px; }
+.say.captain img { border-color: var(--orange); }
+.say.captain p { border: 1px solid rgba(244, 166, 64, 0.5); }
+
+@media (max-width: 640px) {
+  .guide { left: 8px; right: 8px; width: auto; bottom: 178px; grid-template-columns: 56px 1fr auto; }
+  .guide-avatar { width: 56px; height: 56px; }
+  .guide-text { font-size: 16px; }
+}

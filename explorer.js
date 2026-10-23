@@ -22,7 +22,7 @@ const ICONS = [
   ['鯊', '🦈'], ['鯨', '🐋'], ['海豚', '🐬'], ['虎鯨', '🐋'], ['章魚', '🐙'], ['魷', '🦑'], ['烏賊', '🦑'], ['水母', '🪼'],
   ['螳螂蝦', '🦐'], ['蝦', '🦐'], ['蟹', '🦀'], ['海星', '⭐'], ['珊瑚', '🪸'], ['小丑魚', '🐠'], ['翻車魚', '🐡'], ['魟', '🐟'],
   ['海牛', '🦭'], ['海豹', '🦭'], ['食人魚', '🐟'], ['魚', '🐟'], ['龜', '🐢'], ['鱷', '🐊'], ['蛇', '🐍'], ['蟒', '🐍'],
-  ['蛙', '🐸'], ['蟾', '🐸'], ['螈', '🦎'], ['蜥', '🦎'], ['變色龍', '🦎'], ['企鵝', '🐧'], ['鸚', '🦜'], ['犀鳥', '🦜'],
+  ['蛙', '🐸'], ['蟾', '🐸'], ['螈', '🦎'], ['蜥', '🦎'], ['爬行', '🦎'], ['變色龍', '🦎'], ['企鵝', '🐧'], ['鸚', '🦜'], ['犀鳥', '🦜'],
   ['巨嘴鳥', '🦜'], ['蜂鳥', '🐦'], ['鴕鳥', '🐦'], ['渡渡', '🦤'], ['海鸚', '🐦'], ['鳥', '🐦'], ['蝙蝠', '🦇'], ['獅', '🦁'],
   ['豹', '🐆'], ['獵豹', '🐆'], ['象', '🐘'], ['長頸鹿', '🦒'], ['霍加', '🦒'], ['斑馬', '🦓'], ['犀牛', '🦏'], ['河馬', '🦛'],
   ['袋鼠', '🦘'], ['大貓熊', '🐼'], ['無尾熊', '🐨'], ['樹懶', '🦥'], ['水豚', '🐹'], ['狐', '🦊'], ['狼', '🐺'], ['馬', '🐴'],
@@ -750,6 +750,23 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
     home() { fit(false); },
     pan(dx, dy) { cam.tx += dx / cam.z; cam.ty += dy / cam.z; },
     celebrate() { sound.chime(); },
+    flyTo(code) {
+      const spot = scene?.spots.find((s) => s.e.code === code);
+      if (spot) fly(spot);
+    },
+    /** 離鏡頭最近、還沒拜訪過、已經播出的頻道。 */
+    suggest() {
+      if (!scene) return null;
+      const seen = new Set(getStamps().seen || []);
+      let best = null, bestD = Infinity;
+      scene.spots.forEach((s) => {
+        if (seen.has(s.e.code) || s.e.state === 'unreleased') return;
+        const d = Math.hypot(s.x - cam.x, s.y - cam.y);
+        if (d < bestD) { best = s; bestD = d; }
+      });
+      return best ? best.e : null;
+    },
+    spotsInView() { return scene ? scene.spots.map((s) => s.e) : []; },
     sound,
     progress(view) {
       const sc = scene && scene.view === view ? scene : buildScene(view, world, episodes);
