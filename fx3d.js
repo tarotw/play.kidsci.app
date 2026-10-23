@@ -1,4 +1,4 @@
-// 宇宙好好聽 3D 特效：星雲天空、全像平台、頻道光柱、落地衝擊波、各格的小生命。
+// 宇宙好好聽 3D 特效：星雲天空、全像平台、落地衝擊波、各格的小生命。（頻道在 channels3d.js）
 import * as THREE from 'three';
 import { TAU, NOISE, makePoints, glowSprite } from './kit3d.js';
 import { rng } from './explorer.js';
@@ -8,7 +8,9 @@ const additive = { transparent: true, depthWrite: false, blending: THREE.Additiv
 
 // ---------- 星雲天空：每換一格烤一次進立方體貼圖，之後不再花算力 ----------
 export function createSky(renderer) {
-  const target = new THREE.WebGLCubeRenderTarget(512, { type: THREE.HalfFloatType });
+  // 星雲本來就柔，不需要高解析度：手機 256、桌機 384，換格時烤得快
+  const size = matchMedia('(pointer: coarse)').matches ? 256 : 384;
+  const target = new THREE.WebGLCubeRenderTarget(size, { type: THREE.HalfFloatType });
   const cam = new THREE.CubeCamera(0.1, 100, target);
   const scene = new THREE.Scene();
   const uniforms = {
@@ -32,7 +34,7 @@ export function createSky(renderer) {
         col += c2 * smoothstep(0.5, 0.9, m) * 0.55 * band;
         col += c3 * pow(smoothstep(0.5, 0.95, n * m * 1.8), 2.0) * 0.9;
         col *= 1.0 - smoothstep(0.55, 0.75, fbm(q * 6.0)) * 0.25 * band;
-        col += horizon * exp(-abs(d.y + 0.05) * 5.0) * 0.5; // 地平線的暖光，像天快亮
+        col += horizon * exp(-abs(d.y + 0.05) * 5.0) * 0.5;
         gl_FragColor = vec4(col * bright, 1.0);
       }`,
     side: THREE.BackSide,
@@ -106,47 +108,6 @@ export function holoPad(color, radius) {
   g.add(disc, rim, skirt);
   g.userData.tick = (t) => { mat.uniforms.time.value = t; skirtMat.uniforms.time.value = t; };
   return g;
-}
-
-// ---------- 頻道光柱與底座：同一種狀態共用材質 ----------
-export function beaconKit() {
-  const colors = { public: 0x9fdccb, subscriber: 0xf0c878, seen: 0xbfe6a8 };
-  const beams = Object.fromEntries(Object.entries(colors).map(([k, c]) => [k, beamMaterial(c, 0.2)]));
-  const halos = Object.fromEntries(Object.entries(colors).map(([k, c]) => [k, new THREE.MeshBasicMaterial({ color: c, ...additive, opacity: 0.4, side: THREE.DoubleSide })]));
-  const beamGeo = new THREE.CylinderGeometry(1, 1, 1, 16, 1, true);
-  beamGeo.translate(0, 0.5, 0);
-  const haloGeo = new THREE.RingGeometry(0.75, 1, 48);
-  haloGeo.rotateX(-Math.PI / 2);
-  const orbitGeo = new THREE.TorusGeometry(1, 0.045, 6, 64);
-  const orbitMat = new THREE.MeshStandardMaterial({ color: 0xf3d08a, emissive: 0xf3d08a, emissiveIntensity: 0.35, roughness: 0.4 });
-  const sparkGeo = new THREE.OctahedronGeometry(0.22);
-  return {
-    kindOf: (state, seen) => (seen ? 'seen' : state === 'subscriber' ? 'subscriber' : 'public'),
-    make(kind, height, size, subscriber) {
-      const g = new THREE.Group();
-      const beam = new THREE.Mesh(beamGeo, beams[kind]);
-      beam.scale.set(size * 0.16, height, size * 0.16);
-      const halo = new THREE.Mesh(haloGeo, halos[kind]);
-      halo.scale.setScalar(size * 0.5);
-      halo.position.y = 0.05;
-      g.add(beam, halo);
-      let orbit = null;
-      if (subscriber) {
-        orbit = new THREE.Group();
-        const ringMesh = new THREE.Mesh(orbitGeo, orbitMat);
-        ringMesh.scale.setScalar(size * 0.62);
-        const spark = new THREE.Mesh(sparkGeo, orbitMat);
-        spark.position.x = size * 0.62;
-        orbit.add(ringMesh, spark);
-        orbit.position.y = height;
-        g.add(orbit);
-      }
-      g.traverse((o) => { o.userData.shared = true; }); // 幾何與材質共用，換格時不要丟掉
-      return { group: g, beam, halo, orbit };
-    },
-    setKind(parts, kind) { parts.beam.material = beams[kind]; parts.halo.material = halos[kind]; },
-    tick(t) { Object.values(beams).forEach((m) => { m.uniforms.time.value = t; }); },
-  };
 }
 
 // ---------- 一次性特效：衝擊波、彩色碎片 ----------
@@ -226,7 +187,7 @@ function orbiters(count, place, { scale = 400, gain = 1 } = {}) {
         vec3 p = vec3(cos(a) * orbit.x, orbit.y + sin(time * 0.7 + orbit.z * 3.0) * 0.6, sin(a) * orbit.x);
         vec4 mv = modelViewMatrix * vec4(p, 1.0);
         gl_Position = projectionMatrix * mv;
-        gl_PointSize = clamp(size * scale / -mv.z, 1.0, 9.0); // 太靠近鏡頭也不會變成大光球
+        gl_PointSize = clamp(size * scale / -mv.z, 1.0, 9.0);
         vColor = color;
       }`,
     fragmentShader: /* glsl */ `uniform float gain; varying vec3 vColor;
@@ -293,25 +254,33 @@ export function makeWaterfall(radius, angle, drop = 14) {
 /** 生物格：一群會拍翅膀的鳥在島群上空盤旋。 */
 export function makeBirds(reach) {
   const g = new THREE.Group();
-  const mat = new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0x334455, side: THREE.DoubleSide });
   const wingGeo = new THREE.PlaneGeometry(0.9, 0.35);
   wingGeo.translate(0.45, 0, 0);
   wingGeo.rotateX(-Math.PI / 2);
+  // 28 片翅膀用一個 InstancedMesh 畫完；骨架只拿來算位置，不放進場景
+  const wings = new THREE.InstancedMesh(wingGeo, new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0x334455, side: THREE.DoubleSide }), 28);
+  wings.frustumCulled = false;
+  g.add(wings);
+  const rig = new THREE.Group();
   const r = rng(0.81);
   const birds = Array.from({ length: 14 }, (_, i) => {
-    const b = new THREE.Group();
-    const L = new THREE.Mesh(wingGeo, mat), R = new THREE.Mesh(wingGeo, mat);
+    const b = new THREE.Object3D(), L = new THREE.Object3D(), R = new THREE.Object3D();
     R.scale.x = -1;
     b.add(L, R);
-    g.add(b);
+    rig.add(b);
     return { b, L, R, d: reach * (0.35 + r() * 0.5), y: 13 + r() * 6, off: (i / 14) * 1.2 + (i % 2) * 0.1, flap: 7 + r() * 3 };
   });
-  g.userData.tick = (t) => birds.forEach((x) => {
-    const a = t * 0.12 + x.off;
-    x.b.position.set(Math.cos(a) * x.d, x.y + Math.sin(t + x.off * 5) * 0.6, Math.sin(a) * x.d);
-    x.b.rotation.y = -a;
-    const w = Math.sin(t * x.flap) * 0.7;
-    x.L.rotation.z = w; x.R.rotation.z = -w;
-  });
+  g.userData.tick = (t) => {
+    birds.forEach((x) => {
+      const a = t * 0.12 + x.off;
+      x.b.position.set(Math.cos(a) * x.d, x.y + Math.sin(t + x.off * 5) * 0.6, Math.sin(a) * x.d);
+      x.b.rotation.y = -a;
+      const w = Math.sin(t * x.flap) * 0.7;
+      x.L.rotation.z = w; x.R.rotation.z = -w;
+    });
+    rig.updateMatrixWorld(true);
+    birds.forEach((x, i) => { wings.setMatrixAt(i * 2, x.L.matrixWorld); wings.setMatrixAt(i * 2 + 1, x.R.matrixWorld); });
+    wings.instanceMatrix.needsUpdate = true;
+  };
   return g;
 }

@@ -30,7 +30,7 @@ export function planetMaterial(kind, { c1 = 0x888888, c2 = 0x444444, c3 = 0xffff
       void main() {
         vec3 p = normalize(vP);
         vec3 col; vec3 glow = vec3(0.0);
-        vec3 L = fixedLight > 0.5 ? lightDir : normalize(-vW); // 沒指定就是太陽在原點
+        vec3 L = fixedLight > 0.5 ? lightDir : normalize(-vW);
         float diff = max(dot(vN, L), 0.0);
         if (kind == 0) {
           float n = fbm(p * 3.0 + seed);
@@ -41,7 +41,7 @@ export function planetMaterial(kind, { c1 = 0x888888, c2 = 0x444444, c3 = 0xffff
           float b = sin(lat * 20.0 + fbm(p * 2.0 + seed) * 3.0) * 0.5 + 0.5;
           col = mix(c1, c2, b);
           col = mix(col, c3, smoothstep(0.6, 0.9, fbm(p * 6.0 + seed)) * 0.35);
-          if (spot > 0.5) { // 大紅斑
+          if (spot > 0.5) {
             vec2 q = vec2(atan(p.z, p.x) - 0.8, (p.y + 0.35) * 2.2);
             col = mix(col, vec3(0.75, 0.3, 0.18), smoothstep(0.32, 0.12, length(q)));
           }
@@ -57,7 +57,7 @@ export function planetMaterial(kind, { c1 = 0x888888, c2 = 0x444444, c3 = 0xffff
           col = mix(col, vec3(0.95), smoothstep(0.8, 0.9, abs(p.y)));
           float cloud = smoothstep(0.55, 0.8, fbm(p * 4.0 + vec3(time * 0.01, 3.0, 0.0)));
           col = mix(col, vec3(1.0), cloud * 0.6);
-          float city = isLand ? step(0.78, fbm(p * 30.0)) : 0.0; // 夜裡的城市燈光
+          float city = isLand ? step(0.72, noise3(p * 40.0)) : 0.0;
           glow = vec3(0.9, 0.72, 0.42) * city * (1.0 - cloud) * smoothstep(0.15, 0.0, diff);
         }
         vec3 V = normalize(cameraPosition - vW);
@@ -75,7 +75,7 @@ function ringMaterial(inner, outer, colors) {
       void main() {
         float t = (length(vP.xy) - inner) / (outer - inner);
         float bands = 0.55 + 0.45 * sin(t * 60.0) * sin(t * 13.0 + 1.0);
-        float gap = smoothstep(0.58, 0.6, t) * (1.0 - smoothstep(0.63, 0.65, t)); // 卡西尼環縫
+        float gap = smoothstep(0.58, 0.6, t) * (1.0 - smoothstep(0.63, 0.65, t));
         float a = bands * (1.0 - gap) * smoothstep(0.0, 0.05, t) * (1.0 - smoothstep(0.95, 1.0, t)) * 0.85;
         gl_FragColor = vec4(mix(c1, c2, t) * 0.9, a);
       }`,
@@ -93,7 +93,7 @@ function sunSurface(radius) {
         vec3 p = normalize(vP) * 4.0;
         float cells = fbm(p * 1.6 + vec3(time * 0.12, -time * 0.08, time * 0.05));
         float spots = smoothstep(0.72, 0.8, fbm(p * 0.7 + 11.0));
-        vec3 c = mix(vec3(1.2, 0.62, 0.3), vec3(1.5, 1.15, 0.72), smoothstep(0.35, 0.75, cells)); // 暖暖的太陽，不刺眼
+        vec3 c = mix(vec3(1.2, 0.62, 0.3), vec3(1.5, 1.15, 0.72), smoothstep(0.35, 0.75, cells));
         c *= 1.0 - spots * 0.6;
         float rim = pow(1.0 - max(dot(vN, vV), 0.0), 2.0);
         gl_FragColor = vec4(c * (1.0 - rim * 0.35) + rim * vec3(0.9, 0.5, 0.28), 1.0);
@@ -390,7 +390,7 @@ export function heroCell(sc) {
     uniforms: { time: { value: 0 }, color: { value: new THREE.Color(0xf0a6c4) } },
     vertexShader: NOISE + /* glsl */ `uniform float time; varying vec3 vN; varying vec3 vV;
       void main() {
-        vec3 p = position + normal * (fbm(position * 0.18 + time * 0.25) - 0.5) * 1.6; // 細胞膜會蠕動
+        vec3 p = position + normal * (fbm(position * 0.18 + time * 0.25) - 0.5) * 1.6;
         vec4 mv = modelViewMatrix * vec4(p, 1.0); vN = normalize(normalMatrix * normal); vV = normalize(-mv.xyz); gl_Position = projectionMatrix * mv;
       }`,
     fragmentShader: /* glsl */ `uniform vec3 color; varying vec3 vN; varying vec3 vV;

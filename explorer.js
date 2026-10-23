@@ -210,7 +210,7 @@ export function buildScene(view, world, episodes) {
 }
 
 // ---------- 主程式 ----------
-export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
+export function createExplorer({ canvas, world, episodes, getStamps, onPick, onReady = () => {} }) {
   const ctx = canvas.getContext('2d');
   const sound = new Sound();
   const sprites = new Map();
@@ -227,6 +227,7 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
   let running = true;
 
   function resize() {
+    if (!canvas.clientWidth || !canvas.clientHeight) return; // 清單模式時畫布藏起來
     dpr = Math.min(2, window.devicePixelRatio || 1);
     W = canvas.clientWidth;
     H = canvas.clientHeight;
@@ -614,8 +615,15 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
   }
 
   // ---------- 主迴圈 ----------
+  // 先排好下一格：這一格出錯也不會整個停住；清單模式或實驗全螢幕時不畫
+  let lastErr = '';
   function frame(now) {
     if (!running) return;
+    requestAnimationFrame(frame);
+    if (!canvas.clientWidth || document.querySelector('dialog.labsheet[open]')) { last = now; return; }
+    try { step(now); } catch (err) { if (String(err) !== lastErr) { lastErr = String(err); console.error('2D 畫面出錯', err); } }
+  }
+  function step(now) {
     const dt = Math.min(0.05, (now - last) / 1000);
     last = now;
     time += dt;
@@ -645,7 +653,6 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
         onPick(done.spot.e.code);
       }
     }
-    requestAnimationFrame(frame);
   }
 
   function setScene(view) {
@@ -731,7 +738,8 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
     if (reduceMotion) { ship.x = spot.x; ship.y = spot.y; }
   }
 
-  window.addEventListener('resize', resize);
+  if (typeof ResizeObserver === 'function') new ResizeObserver(resize).observe(canvas);
+  else window.addEventListener('resize', resize);
   document.addEventListener('visibilitychange', () => {
     running = !document.hidden;
     if (running) { last = performance.now(); requestAnimationFrame(frame); }
@@ -739,6 +747,7 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick }) {
 
   resize();
   requestAnimationFrame(frame);
+  setTimeout(onReady, 0);
 
   return {
     show(view) {

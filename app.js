@@ -1,6 +1,7 @@
 // 宇宙好好聽：萬物旋鈕。資料來自 data/world.json 與 data/catalog.json（由 tools/ 產生）。
 import { createExplorer as createExplorer2d, iconFor } from './explorer.js';
 import { createGuide } from './guide.js';
+import { patchDialogs } from './compat.js';
 
 const PREVIEW = true; // P0：所有格都打開，方便檢查分類。正式版改成 false，只開 world.mvp_levels。
 const LAB_ORIGIN = 'https://lab.kidsci.app';
@@ -118,12 +119,15 @@ function openGuideMenu() {
   ] }], { urgent: true });
 }
 let idleTimer = null;
+let idleNags = 0; // 推薦過幾次；每推薦一次就等更久，不會一直打擾
 function resetIdle() {
   clearTimeout(idleTimer);
   idleTimer = setTimeout(() => {
-    if (listMode || document.querySelector('dialog[open]') || guide.busy()) { resetIdle(); return; }
+    const listening = !$('#audio').paused;
+    if (listMode || listening || document.querySelector('dialog[open]') || guide.busy()) { resetIdle(); return; }
+    idleNags += 1;
     suggestGo();
-  }, 25000);
+  }, 25000 * 2 ** Math.min(idleNags, 4));
 }
 function stampMarks(code) {
   return (stamps.ear.includes(code) ? '👂' : '') + (stamps.hand.includes(code) ? '✋' : '');
@@ -245,6 +249,7 @@ function setListMode(on) {
 async function openChannel(code) {
   const e = byCode.get(code);
   if (!e) return;
+  idleNags = 0;
   addStamp('seen', code);
   let content = null;
   if (e.content) {
@@ -293,22 +298,39 @@ async function openChannel(code) {
 }
 
 function holdLink(url, label, style) {
-  return `<button class="btn ${style} hold" type="button" data-hold="${esc(url)}"><span class="fill"></span><span>${esc(label)}（按住）</span></button>`;
+  return `<button class="btn ${style} hold" type="button" data-hold="${esc(url)}"><span class="fill"></span><span class="label">${esc(label)}（按住）</span></button>`;
 }
 
-// 「請大人幫忙」：按住 2 秒才開外部連結。
+// 「請大人幫忙」：按住 2 秒，放開的那一下才開外部連結。
+// 放開是使用者的手勢，Safari 才不會把新分頁當成彈出視窗擋掉。
 function bindHold(root) {
-  let timer = null;
-  const start = (btn) => {
-    btn.classList.add('holding');
-    timer = setTimeout(() => { btn.classList.remove('holding'); window.open(btn.dataset.hold, '_blank', 'noopener'); }, 2000);
+  let held = null;
+  const label = (btn) => btn.querySelector('.label');
+  const stop = () => {
+    if (!held) return;
+    clearTimeout(held.timer);
+    held.btn.classList.remove('holding', 'ready');
+    label(held.btn).textContent = held.text;
+    held = null;
   };
-  const stop = (btn) => { btn?.classList.remove('holding'); clearTimeout(timer); };
+  const start = (btn) => {
+    stop();
+    btn.classList.add('holding');
+    const h = { btn, ready: false, text: label(btn).textContent };
+    h.timer = setTimeout(() => { h.ready = true; btn.classList.add('ready'); label(btn).textContent = '放開就打開 ✓'; }, 2000);
+    held = h;
+  };
+  const finish = () => {
+    if (held?.ready) window.open(held.btn.dataset.hold, '_blank', 'noopener');
+    stop();
+  };
   root.addEventListener('pointerdown', (ev) => { const b = ev.target.closest('[data-hold]'); if (b) start(b); });
-  root.addEventListener('pointerup', (ev) => stop(ev.target.closest('[data-hold]')));
-  root.addEventListener('pointerleave', (ev) => stop(ev.target.closest?.('[data-hold]')), true);
+  root.addEventListener('pointerup', finish);
+  root.addEventListener('pointercancel', stop);
+  root.addEventListener('pointerleave', (ev) => { if (held && ev.target === held.btn) stop(); }, true);
+  root.addEventListener('contextmenu', (ev) => { if (ev.target.closest('[data-hold]')) ev.preventDefault(); }); // 長按不要跳出選單
   root.addEventListener('keydown', (ev) => { const b = ev.target.closest('[data-hold]'); if (b && (ev.key === 'Enter' || ev.key === ' ') && !ev.repeat) { ev.preventDefault(); start(b); } });
-  root.addEventListener('keyup', (ev) => { const b = ev.target.closest('[data-hold]'); if (b) stop(b); });
+  root.addEventListener('keyup', (ev) => { if (ev.target.closest('[data-hold]') && (ev.key === 'Enter' || ev.key === ' ')) finish(); });
 }
 
 // ---------- 播放器 ----------
@@ -316,18 +338,19 @@ let playing = null;
 async function play(code) {
   const e = byCode.get(code);
   const audio = $('#audio');
-  playing = { code, takeaways: [] };
-  if (e.content) {
-    try { playing.takeaways = (await (await fetch(e.content)).json()).takeaways || []; } catch { /* 沒有重點句也能聽 */ }
-  }
+  const now = { code, takeaways: [] };
+  playing = now;
   audio.src = e.listen.audio;
   $('#now-title').textContent = `${code} 台｜${e.title}`;
   $('#now-takeaway').textContent = '';
   $('#player').hidden = false;
   document.body.classList.add('has-player');
-  audio.play().catch(() => {});
-  if ('mediaSession' in navigator) {
+  audio.play().catch(() => {}); // 被瀏覽器擋下時，下面的播放鍵還在，按一下就能聽
+  if ('mediaSession' in navigator && typeof MediaMetadata === 'function') {
     navigator.mediaSession.metadata = new MediaMetadata({ title: e.title, artist: '科學好好聽', album: '宇宙好好聽' });
+  }
+  if (e.content) {
+    try { const t = (await (await fetch(e.content)).json()).takeaways || []; if (playing === now) now.takeaways = t; } catch { /* 沒有重點句也能聽 */ }
   }
 }
 function onTime() {
@@ -411,7 +434,7 @@ function bind() {
     const lab = t.closest('[data-lab]');
     if (lab) { openLab(lab.dataset.lab, lab.dataset.labTitle, lab.dataset.code); return; }
     if (t.closest('[data-close]')) { t.closest('dialog').close(); return; }
-    if (t.id === 'clear-stamps') { stamps = { ear: [], hand: [], seen: [], missions: [], guess: 0 }; saveStamps(); renderStops(); renderHud(); $('#journal').close(); }
+    if (t.id === 'clear-stamps' && confirm('要清除全部的星章和紀錄嗎？清除後就找不回來了。')) { stamps = { ear: [], hand: [], seen: [], missions: [], guess: 0 }; saveStamps(); renderStops(); renderHud(); $('#journal').close(); }
   });
   document.addEventListener('keydown', (ev) => {
     if (listMode || document.querySelector('dialog[open]') || ev.target.closest('input, .tuner')) return;
@@ -464,6 +487,7 @@ async function init() {
     fetch('data/catalog.json').then((r) => r.json()),
     fetch('data/dialogue.json').then((r) => r.json()),
   ]);
+  patchDialogs();
   guide = createGuide({ root: $('#guide'), cast: lines.cast });
   byCode = new Map(episodes.map((e) => [e.code, e]));
   if (!PREVIEW) $('#preview-note').hidden = true;
@@ -482,7 +506,7 @@ async function init() {
     const home = byCode.get(ch).home;
     view = home.includes(':') ? { kind: home.split(':')[0], id: home.split(':')[1] } : home === 'studio' ? { kind: 'studio', id: 'studio' } : { kind: 'level', id: home };
   }
-  explorer = await makeExplorer({ canvas: $('#world'), world, episodes, getStamps: () => stamps, onPick: openChannel }, params.get('gl') === '0');
+  explorer = await makeExplorer({ canvas: $('#world'), world, episodes, getStamps: () => stamps, onPick: openChannel, onReady: () => document.body.classList.add('ready') }, params.get('gl') === '0');
   // 隊長或博士說話時，耳機號上的那一位會跟著跳
   const guideRoot = $('#guide');
   new MutationObserver(() => explorer.talk?.(guideRoot.hidden ? null : guideRoot.dataset.who)).observe(guideRoot, { attributes: true, attributeFilter: ['hidden', 'data-who'] });
@@ -498,4 +522,7 @@ async function init() {
   if (ch && byCode.has(ch)) openChannel(ch);
 }
 
-init();
+init().catch((err) => {
+  console.error(err);
+  $('#loading-text').innerHTML = '載入失敗了，可能是網路不穩。<br><button class="btn" type="button" onclick="location.reload()">重新整理</button>';
+});
