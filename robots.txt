@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /mindmap.html
+Disallow: /knob.html
+Disallow: /zoom.html
+
+Sitemap: https://play.kidsci.app/sitemap.xml

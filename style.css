@@ -588,3 +588,6 @@ body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px
 .isle-tip small.subscriber { color: #9a6a0c; }
 .isle-tip small.unreleased { color: #6a6e8e; }
 @media (max-width: 640px) { .lg { font-size: 12px; padding: 0 7px; } .isle-people { gap: 3px 4px; padding: 3px 8px 3px 4px; } }
+
+/* 文字版（給搜尋引擎和螢幕閱讀器）：畫面上收起來，內容和島上的一致 */
+.text-version { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
