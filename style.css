@@ -492,7 +492,8 @@ body.isle-page .guide { bottom: var(--below); max-height: calc(100dvh - var(--be
 .isle-page .loading { background: linear-gradient(#9fd4ff, #ffe0ef); color: var(--text); }
 .isle-page .sheet .hero { filter: drop-shadow(0 4px 8px rgba(80, 70, 140, 0.25)); }
 
-/* 下面三顆大按鈕：居民、火箭站、全部的島 */
+/* 下面：一顆主要的「🚀 去別的島」，旁邊一顆小的「🗺️ 全部的島」（在全景時變「🏝️ 回到島上」）。
+   「居民」是這座島的事，放在上面島名下面 */
 /* 寬度跟著按鈕（不被 left: 50% 擠成一半寬） */
 .isle-bar { position: fixed; left: 50%; bottom: calc(16px + env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 5; display: flex; gap: 10px; width: max-content; max-width: calc(100vw - 16px); }
 body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px); }
@@ -503,17 +504,23 @@ body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px
   .isle-page .player #now-takeaway { display: none; }
   .isle-page .player audio { height: 40px; }
 }
-.isle-btn { display: grid; grid-template-columns: auto auto; grid-template-rows: auto auto; column-gap: 8px; align-items: center; justify-items: start;
-  min-width: 128px; min-height: 64px; padding: 8px 18px; border-radius: 999px; border: 3px solid #fff; background: rgba(255, 255, 255, 0.92); color: var(--text);
-  box-shadow: 0 6px 18px rgba(80, 70, 140, 0.22); }
-.isle-btn .ico { grid-row: span 2; font-size: 30px; line-height: 1; }
-.isle-btn .txt { font-size: 18px; font-weight: 800; white-space: nowrap; }
-.isle-btn small { white-space: nowrap; }
-.isle-btn small { font-size: 12px; color: var(--muted); }
-.isle-btn.rocket { background: linear-gradient(#ff8a6b, #ff6a5c); color: #fff; border-color: #ffd2c4; }
-.isle-btn.rocket small { color: #fff4ee; }
-.isle-btn:disabled { opacity: 0.45; }
-.isle-btn:not(:disabled):active { transform: scale(0.96); }
+.isle-btn { display: flex; align-items: center; gap: 10px; min-height: 64px; padding: 8px 28px 8px 20px; border-radius: 999px; border: 3px solid #ffd2c4;
+  background: linear-gradient(#ff8a6b, #ff6a5c); color: #fff; box-shadow: 0 6px 18px rgba(200, 80, 60, 0.3); }
+.isle-btn .ico { font-size: 30px; line-height: 1; }
+.isle-btn .txt { font-size: 20px; font-weight: 900; white-space: nowrap; letter-spacing: 0.04em; }
+.isle-map { display: grid; place-items: center; align-content: center; gap: 1px; width: 64px; height: 64px; padding: 0; border-radius: 22px; border: 3px solid #fff;
+  background: rgba(255, 255, 255, 0.92); color: var(--text); box-shadow: 0 6px 18px rgba(80, 70, 140, 0.22); }
+.isle-map .ico { font-size: 24px; line-height: 1; }
+.isle-map .txt { font-size: 11px; font-weight: 800; white-space: nowrap; }
+:is(.isle-btn, .isle-map):active { transform: scale(0.96); }
+.isle-map:hover { background: #fff; }
+/* 島名下面：這座島的居民（一整塊都可以按） */
+.isle-people { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; max-width: 100%; margin-top: 4px; padding: 4px 10px 4px 6px; border-radius: 16px;
+  border: 2px solid #fff; background: rgba(255, 255, 255, 0.82); color: #3a3f8a; text-align: left; box-shadow: 0 3px 10px rgba(80, 70, 140, 0.16); }
+.isle-people:hover { background: #fff; }
+.isle-people .who { font-size: 14px; font-weight: 900; white-space: nowrap; padding: 1px 4px; }
+.isle-people .more { font-size: 16px; color: var(--orange); }
+.isle-people .legend-row { display: contents; }
 
 /* 島名標籤（跟著島在畫面上移動） */
 #isle-labels { position: fixed; inset: 0; z-index: 3; pointer-events: none; }
@@ -543,19 +550,21 @@ body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px
 .isle-pick:hover { border-color: #b8a8ff; }
 
 @media (max-width: 640px) {
-  .isle-bar { gap: 6px; width: calc(100vw - 16px); justify-content: center; }
-  /* 手機：圖示在上、字在下，三顆按鈕排得下 */
-  .isle-btn { min-width: 0; flex: 1; min-height: 60px; padding: 6px 6px; grid-template-columns: 1fr; justify-items: center; border-radius: 22px; }
-  .isle-btn .ico { grid-row: auto; font-size: 24px; }
-  .isle-btn .txt { font-size: 14px; white-space: nowrap; }
-  .isle-btn small { display: none; }
+  .isle-bar { gap: 8px; }
+  .isle-btn { min-height: 56px; padding: 6px 22px 6px 16px; }
+  .isle-btn .ico { font-size: 26px; }
+  .isle-btn .txt { font-size: 18px; }
+  .isle-map { width: 56px; height: 56px; border-radius: 20px; }
+  .isle-people .who { font-size: 13px; }
   .isle-grid { grid-template-columns: repeat(2, 1fr); }
   .isle-label { font-size: 13px; padding: 4px 9px 4px 6px; }
   .isle-label .em { font-size: 17px; }
 }
 @media (max-height: 520px) {
-  .isle-btn { min-height: 48px; padding: 4px 12px; }
+  .isle-btn { min-height: 48px; padding: 4px 20px 4px 14px; }
   .isle-btn .ico { font-size: 22px; }
+  .isle-map { width: 48px; height: 48px; }
+  .isle-map .txt { display: none; }
   .isle-page .guide { width: min(380px, 50vw); }
 }
 
@@ -571,4 +580,4 @@ body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px
 .isle-tip small.public { color: #1f8f52; }
 .isle-tip small.subscriber { color: #9a6a0c; }
 .isle-tip small.unreleased { color: #6a6e8e; }
-@media (max-width: 380px) { .lg { font-size: 12px; padding: 0 7px; } }
+@media (max-width: 640px) { .lg { font-size: 12px; padding: 0 7px; } .isle-people { gap: 3px 4px; padding: 3px 8px 3px 4px; } }

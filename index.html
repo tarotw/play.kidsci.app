@@ -16,7 +16,7 @@
 </head>
 <body class="isle-page">
 <div class="loading" id="loading" role="status"><img src="assets/logo-square.jpg" alt="" width="72" height="72"><p id="loading-text">火箭加油中…</p></div>
-<canvas id="world" aria-label="宇宙群島：拖曳轉著看，兩指或滾輪拉近拉遠，點小居民聽故事，點別的島就坐火箭飛過去。也可以用下面的「居民名單」和「火箭站」。"></canvas>
+<canvas id="world" aria-label="宇宙群島：拖曳轉著看，兩指或滾輪拉近拉遠，點小居民聽故事，點別的島就坐火箭飛過去。也可以用島名下面的「居民」名單，和下面的「去別的島」。"></canvas>
 <div id="isle-labels" aria-hidden="true"></div>
 <div class="isle-tip" id="isle-tip" hidden></div>
 
@@ -25,6 +25,8 @@
   <div class="scene">
     <h1 id="isle-name">宇宙群島</h1>
     <p id="isle-meta"></p>
+    <!-- 在島上：島名下面就是「這座島的居民」，一起寫出幾個可以聽、幾個 VIP、幾個還在準備 -->
+    <button class="isle-people" id="people-btn" type="button" aria-haspopup="dialog" hidden><span class="who">👥 <span id="people-count"></span> <span class="more" aria-hidden="true">›</span></span><span class="legend-row" id="people-legend"></span></button>
   </div>
   <div class="hud-buttons">
     <button class="round guide-btn" id="guide-btn" type="button" aria-label="找科學隊長"><img src="assets/avatar-captain.png" alt=""></button>
@@ -35,10 +37,9 @@
 
 <section class="guide" id="guide" hidden tabindex="0" aria-live="polite" aria-label="科學隊長與好奇博士"></section>
 
-<nav class="isle-bar" aria-label="島上的按鈕">
-  <button class="isle-btn" id="people-btn" type="button" aria-haspopup="dialog"><span class="ico">👥</span><span class="txt">居民</span><small id="people-count"></small></button>
-  <button class="isle-btn rocket" id="station-btn" type="button" aria-haspopup="dialog"><span class="ico">🚀</span><span class="txt">火箭站</span><small>去別的島</small></button>
-  <button class="isle-btn" id="map-btn" type="button"><span class="ico" id="map-ico">🗺️</span><span class="txt" id="map-txt">全部的島</span></button>
+<nav class="isle-bar" aria-label="去別的島">
+  <button class="isle-btn rocket" id="station-btn" type="button" aria-haspopup="dialog"><span class="ico">🚀</span><span class="txt">去別的島</span></button>
+  <button class="isle-map" id="map-btn" type="button"><span class="ico" id="map-ico">🗺️</span><span class="txt" id="map-txt">全部的島</span></button>
 </nav>
 
 <dialog id="station" class="sheet" aria-labelledby="station-title"></dialog>
