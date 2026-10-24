@@ -11,7 +11,6 @@ export const pick = (list) => list[Math.floor(Math.random() * list.length)];
 
 export function stateBadge(e) {
   if (e.state === 'subscriber') return '<span class="badge vip">👑 VIP・請大人幫忙</span>';
-  if (e.state === 'unreleased') return '<span class="badge soon">💤 準備中</span>';
   return '<span class="badge can">▶ 可以聽</span>';
 }
 
@@ -52,10 +51,10 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     }
     actions += e.labs.map((lab) => `<button class="btn alt" type="button" data-lab="${esc(lab.url)}" data-lab-title="${esc(lab.title)}" data-code="${esc(code)}">🧪 ${esc(lab.title)}</button>`).join('');
 
-    // 每一集都列出 Apple Podcasts 和 Spotify：有連結就按住打開，還沒有就寫「即將推出」
-    const platform = (url, icon, name) => (url ? holdLink(url, `${icon} ${name}`, 'alt pf') : `<span class="pf soon">${icon} ${name}・即將推出</span>`);
-    const platforms = `<div class="platforms" aria-label="在其他平台收聽"><span class="pf-cap">在其他平台收聽</span>
-      ${platform(listen.apple, '🍎', 'Apple Podcasts')}${platform(listen.spotify, '🟢', 'Spotify')}</div>`;
+    // Apple Podcasts 和 Spotify：有連結才列出來（按住打開）
+    const platform = (url, icon, name) => (url ? holdLink(url, `${icon} ${name}`, 'alt pf') : '');
+    const pf = platform(listen.apple, '🍎', 'Apple Podcasts') + platform(listen.spotify, '🟢', 'Spotify');
+    const platforms = pf ? `<div class="platforms" aria-label="在其他平台收聽"><span class="pf-cap">在其他平台收聽</span>${pf}</div>` : '';
     const takeaways = content?.takeaways?.length
       ? `<h3>重點句</h3><ol class="takeaways" id="takeaways">${content.takeaways.map((t) =>
         `<li data-t="${t.t ?? ''}">${esc(t.emoji)} ${esc(t.text)}</li>`).join('')}</ol>` : '';

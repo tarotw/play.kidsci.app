@@ -5,7 +5,7 @@
 - Apple：iTunes Lookup（一次最多 200 集，從最新的開始）。
 - Spotify：有設定 SPOTIFY_CLIENT_ID、SPOTIFY_CLIENT_SECRET 就用官方 API（最完整）；
   沒有的話讀 Spotify 公開的節目頁和嵌入頁。節目 ID 用 SPOTIFY_SHOW_ID，沒設定就從 Firstory 的節目頁找。
-找不到的集數，網站上會顯示「即將推出」。
+找不到的集數，網站上就不顯示那個平台。
 """
 from __future__ import annotations
 
@@ -98,7 +98,7 @@ def missing_apple_codes() -> list[tuple[str, str]]:
     if not path.exists():
         return []
     eps = json.loads(path.read_text(encoding="utf-8"))["episodes"]
-    return [(e["code"], e["title"]) for e in eps if e["state"] != "unreleased" and not (e.get("listen") or {}).get("apple")]
+    return [(e["code"], e["title"]) for e in eps if not (e.get("listen") or {}).get("apple")]
 
 
 def apple(prev: dict) -> dict:

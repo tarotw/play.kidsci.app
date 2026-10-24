@@ -57,10 +57,11 @@ function assign(defs, episodes) {
     const isle = out.find(({ def }) => def.sources.some((src) => match(src, e))) || out.find(({ def }) => def.id === startId);
     isle.eps.push({ ...e, icon: iconFor(e) });
   });
-  // 公開的先、再來是訂閱、最後是準備中（清單裡的順序）
-  const order = { public: 0, subscriber: 1, unreleased: 2 };
+  // 一般可以聽的先、再來是 VIP（清單裡的順序）
+  const order = { public: 0, subscriber: 1 };
   out.forEach((x) => x.eps.sort((a, b) => order[a.state] - order[b.state] || a.code.localeCompare(b.code, 'en', { numeric: true })));
-  return out;
+  // 還沒有任何一集上架的島先不出現（有集數上架就會自動出現）
+  return out.filter((x) => x.eps.length || x.def.id === startId);
 }
 
 // ---------- 上面的島名、下面的按鈕 ----------
@@ -82,7 +83,7 @@ function renderHud() {
   // 島名下面：這座島的居民（按了打開名單），一眼看出幾個可以聽、幾個要請大人幫忙、幾個還在準備
   const ct = (st) => x.eps.filter((e) => e.state === st).length;
   $('#people-count').textContent = `${x.eps.length} 位居民`;
-  $('#people-legend').innerHTML = [[ct('public'), 'can', '▶ 可以聽'], [ct('subscriber'), 'vip', '👑 VIP'], [ct('unreleased'), 'soon', '💤 準備中']]
+  $('#people-legend').innerHTML = [[ct('public'), 'can', '▶ 可以聽'], [ct('subscriber'), 'vip', '👑 VIP']]
     .filter(([n]) => n).map(([n, cls, txt]) => `<span class="lg ${cls}">${txt} ${n}</span>`).join('') + (seen ? `<span class="lg-seen">✓ 拜訪過 ${seen}</span>` : '');
   $('#people-btn').setAttribute('aria-label', `看${def.name}的 ${x.eps.length} 位居民`);
   $('#people-btn').hidden = false;
@@ -123,7 +124,7 @@ function openPeople() {
     <p class="hero" aria-hidden="true">${def.emoji}</p>
     <h2 id="people-title">${esc(def.name)}的居民</h2>
     <p class="hint">${x.eps.length} 個故事住在這裡。</p>
-    <p class="legend"><span class="lg can">▶ 綠色：可以聽</span><span class="lg vip">👑 金色：VIP，請大人幫忙</span><span class="lg soon">💤 睡覺：還在準備中</span></p>
+    <p class="legend"><span class="lg can">▶ 綠色：可以聽</span><span class="lg vip">👑 金色：VIP，請大人幫忙</span></p>
     <ul class="eps">${rows}</ul></div>`;
   $('#people').showModal();
 }
@@ -205,7 +206,7 @@ function openGuideMenu() {
   if (!guide.on) guide.on = true;
   const def = world.current();
   const x = def && isleById.get(def.id);
-  const fresh = x?.eps.find((e) => e.state !== 'unreleased' && !stamps.seen.includes(e.code));
+  const fresh = x?.eps.find((e) => !stamps.seen.includes(e.code));
   const next = isles.find(({ def: d }) => !visited.has(d.id));
   guide.say([{ who: 'captain', text: '需要幫忙嗎？', actions: [
     ...(fresh ? [{ label: `👋 介紹一個居民給我`, run: () => meet(fresh.code) }] : []),
@@ -244,7 +245,7 @@ function bind() {
   });
   ['pointerdown', 'keydown', 'wheel'].forEach((t) => window.addEventListener(t, resetIdle, { passive: true }));
 }
-const LISTEN = { public: '▶ 可以在這裡聽', subscriber: '👑 VIP 故事：請大人幫忙收聽', unreleased: '💤 還在準備中，還不能聽' };
+const LISTEN = { public: '▶ 可以在這裡聽', subscriber: '👑 VIP 故事：請大人幫忙收聽' };
 function showTip(code, x, y) {
   const tip = $('#isle-tip');
   if (!code || document.querySelector('dialog[open]')) { tip.hidden = true; return; }

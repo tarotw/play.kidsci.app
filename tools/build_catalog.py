@@ -141,13 +141,12 @@ def main() -> None:
         if home == "skip":
             continue
 
+        # 只放 podcast 上真的找得到（不是只有預告片）的集數：還沒上架的不放進網站
+        if not best or best["trailerOnly"]:
+            continue
+        # c、s 開頭是 VIP；但標題寫「公開｜」的那一版是公開放送，就當一般可以聽
         access = "subscriber" if code[:1] in ("c", "s") else "public"
-        if access == "subscriber":
-            state = "subscriber"
-        elif best and not best["trailerOnly"]:
-            state = "public"
-        else:
-            state = "unreleased"
+        state = "public" if access == "public" or best["labeledPublic"] else "subscriber"
 
         listen = None
         if best:
@@ -160,11 +159,9 @@ def main() -> None:
             }
         if state == "subscriber":
             listen = {**(listen or {}), "join": JOIN_URL}
-        # Apple Podcasts、Spotify：找得到就放連結，找不到網站會寫「即將推出」
+        # Apple Podcasts、Spotify：找得到就放連結，找不到就不顯示
         apple_url = (listen or {}).get("apple") or platforms["apple"].get(code)
         spotify_url = platforms["spotify"].get(code)
-        if state == "unreleased":
-            apple_url = spotify_url = None  # 還沒播出：平台上只有預告片，先寫「即將推出」
         if apple_url:
             apple_url = re.sub(r"[?&]uo=\d+$", "", apple_url)
         if apple_url or spotify_url or listen:
