@@ -1,4 +1,4 @@
-# 宇宙好好聽 · universe.kidsci.app
+# 宇宙好好聽 · play.kidsci.app
 
 科學好好聽的「萬物宇宙」互動地圖：轉動萬物旋鈕，從一顆原子、一隻動物、整個地球，一路調到 930 億光年的宇宙邊界；再搭時光機回到恐龍與牛頓的年代。每一站都能聽 Podcast、打開 [lab.kidsci.app](https://lab.kidsci.app/) 的實驗，收集星章。
 
@@ -69,6 +69,6 @@ python3 -m http.server 8000   # 然後開 http://localhost:8000/（其他版本�
 
 ## 發布
 
-GitHub Pages（Settings → Pages → Deploy from branch → `main` / root），`CNAME` 已設為 `universe.kidsci.app`；kidsci.app 的 DNS 要加一筆 `universe` CNAME 指向 `tarotw.github.io`。
+GitHub Pages（Settings → Pages → Deploy from branch → `main` / root），`CNAME` 已設為 `play.kidsci.app`；kidsci.app 的 DNS 要加一筆 `play` CNAME 指向 `tarotw.github.io`。舊網址 `universe.kidsci.app` 由另一個小 repo（`universe-redirect`）掛著，自動轉到 play.kidsci.app（保留 `?ch=`、`?isle=`）。
 
 `bridge/kidsci-bridge.js` 要放進 lab.kidsci.app 的根目錄，並在每個實驗頁加 `<script src="/kidsci-bridge.js" defer></script>`。
