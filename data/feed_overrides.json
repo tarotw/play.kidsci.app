@@ -1,6 +1,7 @@
 {
   "_comment": "標題沒有代碼、又無法靠相似度對到 Drive 資料夾的單集。match 是標題裡的一段字；code 是 Drive 代碼，或 studio（放錄音室）。confirmed=false 表示是推定，請確認後改成 true。",
   "overrides": [
+    {"match": "比黃金還貴的飛機：B-2 幽靈轟炸機", "code": "50", "confirmed": true},
     {"match": "帕克太陽探測器如何「觸摸太陽」", "code": "c30", "confirmed": true},
     {"match": "母親節週企劃", "code": "c13", "confirmed": false},
     {"match": "節目預告｜流紅汗的水怪", "code": "229", "confirmed": false},

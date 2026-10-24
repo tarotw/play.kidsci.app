@@ -2,7 +2,8 @@
 """找每一集在 Apple Podcasts 和 Spotify 上的連結，存成 data/platforms.json（build_catalog.py 會用）。
 
 要連到 Apple 和 Spotify，所以在 GitHub Actions 上跑（.github/workflows/status.yml）。
-- Apple：iTunes Lookup（一次最多 200 集，從最新的開始）。
+- Apple：iTunes Lookup 只給公開 RSS 裡的集數；Apple Podcasts 網頁用的 API（amp-api）才有全部，
+  包括「Apple Podcasts 訂閱頻道」的訂閱者專屬集數（VIP），每一集記下 sub=True。
 - Spotify：有設定 SPOTIFY_CLIENT_ID、SPOTIFY_CLIENT_SECRET 就用官方 API（最完整）；
   沒有的話讀 Spotify 公開的節目頁和嵌入頁。節目 ID 用 SPOTIFY_SHOW_ID，沒設定就從 Firstory 的節目頁找。
 找不到的集數，網站上就不顯示那個平台。
@@ -87,6 +88,39 @@ def apple_rows(results: list[dict]) -> list[dict]:
             for r in results if (r.get("wrapperType") == "podcastEpisode" or r.get("kind") == "podcast-episode") and str(r.get("collectionId")) == APPLE_ID]
 
 
+def apple_full() -> list[dict]:
+    """Apple Podcasts 網頁上的全部單集（含訂閱者專屬）。權杖從網頁的 JS 裡拿（跟瀏覽器一樣）。"""
+    page = get(f"https://podcasts.apple.com/tw/podcast/id{APPLE_ID}")
+    token = None
+    for path in re.findall(r'src="(/assets/index[^"]+\.js)"', page):
+        m = re.search(r"eyJ[A-Za-z0-9_-]{10,}\.eyJ[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}", get("https://podcasts.apple.com" + path))
+        if m:
+            token = m.group(0)
+            break
+    if not token:
+        raise RuntimeError("Apple 網頁上找不到 API 權杖")
+    headers = {"Authorization": f"Bearer {token}", "Origin": "https://podcasts.apple.com", "Referer": "https://podcasts.apple.com/"}
+
+    def fetch(extra: str) -> list[dict]:
+        rows, url = [], f"https://amp-api.podcasts.apple.com/v1/catalog/tw/podcasts/{APPLE_ID}/episodes?limit=100&l=zh-Hant-TW{extra}"
+        for _ in range(20):
+            d = json.loads(get(url, headers))
+            for e in d.get("data", []):
+                a = e.get("attributes", {})
+                rows.append({"title": a.get("name", ""), "url": clean_url(a.get("url")), "guid": a.get("guid"), "date": a.get("releaseDateTime"), "ms": a.get("durationInMilliseconds")})
+            if not d.get("next"):
+                break
+            url = "https://amp-api.podcasts.apple.com" + d["next"] + "&l=zh-Hant-TW" + extra
+        return rows
+
+    sub = {r["url"] for r in fetch("&filter[podcasts:episodes:subscriber]=true")}
+    rows = fetch("")
+    for r in rows:
+        r["sub"] = r["url"] in sub
+    say(f"Apple 網頁：全部 {len(rows)} 集，其中訂閱者專屬 {len(sub)} 集")
+    return rows
+
+
 def apple_search(term: str) -> list[dict]:
     q = urllib.parse.urlencode({"term": term, "media": "podcast", "entity": "podcastEpisode", "limit": 200, "country": "tw"})
     return apple_rows(json.loads(get(f"https://itunes.apple.com/search?{q}")).get("results", []))
@@ -110,6 +144,16 @@ def apple(prev: dict) -> dict:
     for e in apple_rows(results):
         found[e["url"]] = e
     say(f"Apple：節目共 {show.get('trackCount')} 集；Lookup 拿到 {len(apple_rows(results))} 集")
+    # 全部（含訂閱者專屬）：以網頁 API 為準，記下哪些是訂閱者專屬
+    try:
+        full = apple_full()
+        if full:
+            for e in found.values():
+                e["sub"] = False
+            for e in full:
+                found[e["url"]] = {**found.get(e["url"], {}), **e}
+    except Exception as err:  # noqa: BLE001
+        say(f"Apple 網頁 API 失敗（保留上次的）：{err}")
     # Lookup 只給還在 RSS 裡的集數；舊的用搜尋找：先搜節目名稱，再一集一集搜標題
     try:
         for e in apple_search("科學好好聽"):

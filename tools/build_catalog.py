@@ -68,7 +68,7 @@ def platform_links(status: dict) -> dict[str, dict[str, str]]:
     """data/platforms.json（platform_links.py 產生）→ 每個代碼在 Apple、Spotify 的連結。"""
     path = DATA / "platforms.json"
     if not path.exists():
-        return {"apple": {}, "spotify": {}}
+        return {"apple": {}, "spotify": {}, "apple_eps": {}}
     data = json.loads(path.read_text(encoding="utf-8"))
     # Firstory 上的標題 → 代碼（平台上的標題通常一模一樣）；預告片不算
     by_title, trailers = {}, set()
@@ -78,7 +78,7 @@ def platform_links(status: dict) -> dict[str, dict[str, str]]:
             if rec.get("trailerOnly"):
                 trailers.add(rec["title"].strip())
     titles, overrides = load_drive_titles(), load_overrides()
-    out: dict[str, dict[str, str]] = {"apple": {}, "spotify": {}}
+    out: dict[str, dict] = {"apple": {}, "spotify": {}, "apple_eps": {}}
     # 最準的：Firstory 單集頁上寫的連結（每一集自己的頁面）
     pages = data.get("firstory") or {}
     for code, records in status.items():
@@ -102,6 +102,8 @@ def platform_links(status: dict) -> dict[str, dict[str, str]]:
                     continue
             if code == "studio":
                 continue
+            if name == "apple":
+                out["apple_eps"].setdefault(code, []).append(ep)  # Apple 上有這一集（sub＝訂閱者專屬）
             # 同一集有「熱門回顧」重播時，連到原本那一集；單集頁上已經有的就不換
             old = chosen.get((name, code))
             if code in out[name] and old is None:
@@ -127,13 +129,15 @@ def main() -> None:
             labs_by_code.setdefault(code, []).append(
                 {"id": lab["id"], "title": lab["title"], "question": lab["question"], "url": lab["url"]})
 
-    codes = set(titles) | {c for c in status if c != "studio"}
+    apple_eps = platforms["apple_eps"]
+    codes = set(titles) | {c for c in status if c != "studio"} | set(apple_eps)
     episodes = []
     for code in sorted(codes, key=lambda c: (c[:1].isdigit(), c)):
         placement = placements.get(code)
         records = status.get(code, [])
         best = pick_record(records)
-        title = titles.get(code) or (best["title"].strip("〈〉") if best else code)
+        on_apple = apple_eps.get(code, [])
+        title = titles.get(code) or (best["title"].strip("〈〉") if best else on_apple[0]["title"].strip("〈〉") if on_apple else code)
         if placement is None:
             home, also, auto = home_by_rules(title, rules), [], True
         else:
@@ -141,18 +145,26 @@ def main() -> None:
         if home == "skip":
             continue
 
-        # 只放 podcast 上真的找得到（不是只有預告片）的集數：還沒上架的不放進網站
-        if not best or best["trailerOnly"]:
+        # 只放 podcast 上真的找得到的集數：Firstory 的公開 RSS（不算只有預告片的），
+        # 或 Apple Podcasts（含「訂閱頻道」的訂閱者專屬集數）。兩邊都沒有的不放進網站
+        on_firstory = bool(best) and not best["trailerOnly"]
+        if not on_firstory and not on_apple:
             continue
-        # c、s 開頭是 VIP；但標題寫「公開｜」的那一版是公開放送，就當一般可以聽
-        access = "subscriber" if code[:1] in ("c", "s") else "public"
-        state = "public" if access == "public" or best["labeledPublic"] else "subscriber"
+        # VIP：Apple 上是訂閱者專屬，或代碼 c、s 開頭；但標題寫「公開｜」的那一版是公開放送，就當一般可以聽
+        if on_firstory and best["labeledPublic"]:
+            state = "public"
+        elif code[:1] in ("c", "s") or any(e.get("sub") for e in on_apple):
+            state = "subscriber"
+        else:
+            state = "public"
+        if not on_firstory:
+            best = None  # 只有預告片：不拿預告片的音檔
 
         listen = None
         if best:
             listen = {
                 "firstory": best["link"],
-                "audio": best["audio"] if state == "public" else None,
+                "audio": best["audio"] if state == "public" else None,  # 在網站上直接播（只有公開 RSS 裡的才有）
                 "apple": best["apple"]["url"] if best["apple"] else None,
                 "duration": best["duration"],
                 "pubDate": best["pubDate"],
