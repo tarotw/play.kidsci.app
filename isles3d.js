@@ -353,6 +353,7 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
     p.target = null; p.wait = r0() * 3; p.speed = 0.9 + r0() * 0.6; p.face = r0() > 0.5 ? 1 : -1;
     p.sleep = p.e.state === 'unreleased';
     p.size = p.isle.swim ? 2.6 : 2.9;
+    p.gy = p.isle.swim ? p.isle.walkY : p.isle.ground(p.x, p.z);
     res.iA.setXYZW(i, atlas.index.get(p.e.icon), p.e.state === 'subscriber' ? crown : p.sleep ? zzz : -1, 0, r0() * TAU);
     res.iB.setXYZW(i, p.face, 0, 0, p.size);
     res.iC.setX(i, p.sleep ? 1 : 0);
@@ -378,22 +379,35 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
           if (!p.target) {
             // 去附近的一個空地
             const near = isle.walk.filter(([x, z]) => Math.hypot(x - p.x, z - p.z) < 9);
-            const pick = (near.length ? near : isle.walk)[Math.floor(Math.random() * (near.length || isle.walk.length))];
-            p.target = [pick[0] + (Math.random() - 0.5) * 1.2, pick[1] + (Math.random() - 0.5) * 1.2];
+            const list = near.length ? near : isle.walk;
+            // 找一個走得到的點：路上不穿過房子、不掉進湖裡（試幾次都不行就先站著）
+            for (let tries = 0; tries < 4 && !p.target; tries++) {
+              const pick = list[Math.floor(Math.random() * list.length)];
+              const tx = pick[0] + (Math.random() - 0.5) * 1.2, tz = pick[1] + (Math.random() - 0.5) * 1.2;
+              const n = Math.ceil(Math.hypot(tx - p.x, tz - p.z) / 0.8);
+              let ok = true;
+              const stuck = !isle.canWalk(p.x, p.z); // 站在不能走的地方（一開始撒點撒歪了）：先讓他走出來
+              for (let s = 1; s <= n && ok && !stuck; s++) ok = isle.canWalk(p.x + ((tx - p.x) * s) / n, p.z + ((tz - p.z) * s) / n);
+              if (ok) p.target = [tx, tz];
+            }
+            if (!p.target) p.wait = 1 + Math.random() * 2;
           }
-          const dx = p.target[0] - p.x, dz = p.target[1] - p.z, d = Math.hypot(dx, dz);
-          if (d < 0.2) { p.target = null; p.wait = 1 + Math.random() * 4; }
-          else {
-            const v = Math.min(d, p.speed * dt);
-            p.x += (dx / d) * v; p.z += (dz / d) * v;
-            walking = 1;
-            const sx = dx * camRight.x + dz * camRight.z;
-            if (Math.abs(sx) > 0.05) p.face = sx > 0 ? -1 : 1; // 圖示大多朝左：往右走就翻過來
+          if (p.target) {
+            const dx = p.target[0] - p.x, dz = p.target[1] - p.z, d = Math.hypot(dx, dz);
+            if (d < 0.2) { p.target = null; p.wait = 1 + Math.random() * 4; }
+            else {
+              const v = Math.min(d, p.speed * dt);
+              p.x += (dx / d) * v; p.z += (dz / d) * v;
+              if (!isle.swim) p.gy = isle.ground(p.x, p.z);
+              walking = 1;
+              const sx = dx * camRight.x + dz * camRight.z;
+              if (Math.abs(sx) > 0.05) p.face = sx > 0 ? -1 : 1; // 圖示大多朝左：往右走就翻過來
+            }
           }
         }
       }
       const bob = Math.sin(t * 0.5 + isle.phase) * 0.6;
-      res.iPos.setXYZ(i, isle.pos.x + p.x, isle.pos.y + bob + isle.walkY, isle.pos.z + p.z);
+      res.iPos.setXYZ(i, isle.pos.x + p.x, isle.pos.y + bob + p.gy, isle.pos.z + p.z);
       res.iA.setZ(i, walking);
       res.iB.setX(i, p.face);
       res.iB.setZ(i, p.hi > 0 ? 1 : 0);

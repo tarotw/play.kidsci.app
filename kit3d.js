@@ -146,15 +146,16 @@ export function mergeStatic(meshes, { flat = true, roughness = 0.9, metalness = 
     const c = m.material.color.clone();
     if (m.material.emissive) c.add(m.material.emissive.clone().multiplyScalar(0.6));
     count += g.attributes.position.count;
-    return { g, c };
+    return { g, c, vc: g.attributes.color }; // 有自己的頂點顏色（例如地形）就用它的
   });
   const pos = new Float32Array(count * 3), nor = new Float32Array(count * 3), col = new Float32Array(count * 3);
   let o = 0;
-  parts.forEach(({ g, c }) => {
+  parts.forEach(({ g, c, vc }) => {
     const n = g.attributes.position.count;
     pos.set(g.attributes.position.array, o * 3);
     nor.set(g.attributes.normal.array, o * 3);
-    for (let i = (o) * 3, end = (o + n) * 3; i < end; i += 3) { col[i] = c.r; col[i + 1] = c.g; col[i + 2] = c.b; }
+    if (vc && vc.itemSize === 3) col.set(vc.array, o * 3);
+    else for (let i = (o) * 3, end = (o + n) * 3; i < end; i += 3) { col[i] = c.r; col[i + 1] = c.g; col[i + 2] = c.b; }
     o += n;
     g.dispose();
   });
