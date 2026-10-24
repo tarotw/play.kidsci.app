@@ -140,25 +140,52 @@ function placeLabels() {
   requestAnimationFrame(placeLabels);
   if (!world || document.hidden) return;
   const mode = world.mode(), W = innerWidth, H = innerHeight;
-  // 近的島先排；會疊到別人的標籤就只留圖示（手機上全景很擠）
+  // 近的島先排；會疊到別人的標籤就只留圖示（手機上全景很擠），還是疊到就往上或往下挪一點
+  // 上面的標題、按鈕、下面的大按鈕、隊長泡泡、播放器也算「佔住了」：標籤不躲在它們底下
+  const hud = HUD_PARTS.map((sel) => document.querySelector(sel)).filter((el) => el && !el.hidden && el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden').map((el) => {
+    // 標題、說明只算字真正佔的地方（區塊本身可能拉得很寬）
+    let r = el.getBoundingClientRect();
+    if (el.matches('h1, p')) { labelRange.selectNodeContents(el); r = labelRange.getBoundingClientRect(); }
+    return { l: r.left - 4, r: r.right + 4, t: r.top - 4, b: r.bottom + 4 };
+  });
   const placed = [];
-  const hit = (r) => placed.some((q) => r.l < q.r && q.l < r.r && r.t < q.b && q.t < r.b);
+  const over = (r, list) => list.some((q) => r.l < q.r && q.l < r.r && r.t < q.b && q.t < r.b);
   world.islandScreens().sort((a, b) => a.dist - b.dist).forEach((s) => {
     const b = labels.get(s.id);
-    const show = mode !== 'flight' && !s.behind && !(mode === 'island' && s.here) && s.x > -60 && s.x < W + 60 && s.y > 40 && s.y < H - 40;
+    let show = mode !== 'flight' && !s.behind && !(mode === 'island' && s.here) && s.x > -60 && s.x < W + 60 && s.y > 40 && s.y < H - 40;
+    if (show) {
+      const far = mode === 'island';
+      if (!b.dataset.w) { b.classList.remove('mini', 'far'); b.dataset.w = b.offsetWidth; b.classList.add('far'); b.dataset.wf = b.offsetWidth; }
+      const w = Number(far ? b.dataset.wf : b.dataset.w), h = far ? 26 : 32;
+      const box = (half, dy) => ({ l: s.x - half, r: s.x + half, t: s.y + dy - h, b: s.y + dy });
+      // 試試看：完整標籤 → 只留圖示 → 圖示往上挪 → 圖示往下挪
+      const tries = [[w / 2, 0, false], [18, 0, true], [18, -h - 2, true], [18, h + 2, true]];
+      const ok = tries.find(([half, dy]) => { const r = box(half, dy); return !over(r, hud) && !over(r, placed) && r.l > 2 && r.r < W - 2; });
+      if (ok) {
+        const [half, dy, mini] = ok;
+        placed.push(box(half, dy));
+        b.classList.toggle('far', far);
+        b.classList.toggle('mini', mini);
+        b.style.transform = `translate3d(${s.x.toFixed(1)}px, ${(s.y + dy).toFixed(1)}px, 0)`;
+      } else show = false; // 擠不下（或被按鈕蓋住）：這一格先不顯示，島本身還是點得到
+    }
     b.style.visibility = show ? '' : 'hidden';
-    if (!show) return;
-    const far = mode === 'island';
-    if (!b.dataset.w) { b.classList.remove('mini', 'far'); b.dataset.w = b.offsetWidth; b.classList.add('far'); b.dataset.wf = b.offsetWidth; }
-    const w = Number(far ? b.dataset.wf : b.dataset.w), h = far ? 26 : 32;
-    const full = { l: s.x - w / 2, r: s.x + w / 2, t: s.y - h, b: s.y };
-    let mini = hit(full);
-    if (mini) placed.push({ l: s.x - 18, r: s.x + 18, t: s.y - h, b: s.y }); else placed.push(full);
-    b.classList.toggle('far', far);
-    b.classList.toggle('mini', mini);
-    b.style.transform = `translate3d(${s.x.toFixed(1)}px, ${s.y.toFixed(1)}px, 0)`;
   });
 }
+// 量下面大按鈕、播放器、上方標題的高度，給 CSS 排隊長泡泡和按鈕的位置用（才不會互相蓋住）
+function measureHud() {
+  const st = document.body.style, bar = document.querySelector('.isle-bar'), player = document.getElementById('player');
+  const top = Math.max(...['.hud-top .brand', '#isle-meta', '.hud-buttons'].map((sel) => document.querySelector(sel)?.getBoundingClientRect().bottom || 0));
+  st.setProperty('--bar-h', `${bar.offsetHeight}px`);
+  st.setProperty('--player-h', `${player.hidden ? 0 : player.offsetHeight}px`);
+  st.setProperty('--top-h', `${Math.round(top)}px`);
+}
+if ('ResizeObserver' in window) { const ro = new ResizeObserver(measureHud); ['.isle-bar', '#player', '.hud-top'].forEach((sel) => ro.observe(document.querySelector(sel))); }
+addEventListener('resize', measureHud);
+new MutationObserver(measureHud).observe(document.getElementById('player'), { attributes: true, attributeFilter: ['hidden'] });
+measureHud();
+const HUD_PARTS = ['.hud-top .brand', '#isle-name', '#isle-meta', '.hud-buttons', '.isle-bar', '#guide', '#player'];
+const labelRange = document.createRange();
 
 function go(id) {
   if (world.busy()) return;

@@ -348,8 +348,10 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
   const r0 = rng(0.61);
   people.forEach((p, i) => {
     const w = p.isle.walk;
+    // 從一個空地出發（稍微撒開，但不要撒進房子或水裡）
     const start = w[Math.floor(r0() * w.length)];
-    p.x = start[0] + (r0() - 0.5); p.z = start[1] + (r0() - 0.5);
+    p.x = start[0]; p.z = start[1];
+    for (let k = 0; k < 6; k++) { const x = start[0] + (r0() - 0.5), z = start[1] + (r0() - 0.5); if (p.isle.canWalk(x, z)) { p.x = x; p.z = z; break; } }
     p.target = null; p.wait = r0() * 3; p.speed = 0.9 + r0() * 0.6; p.face = r0() > 0.5 ? 1 : -1;
     p.sleep = p.e.state === 'unreleased';
     p.size = p.isle.swim ? 2.6 : 2.9;

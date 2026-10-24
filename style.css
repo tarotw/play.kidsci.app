@@ -479,22 +479,35 @@ body.map-page.has-player .guide, body.map-page.has-player .map-zoom { bottom: 12
 .isle-page .btn { color: #fff; }
 .isle-page .btn.alt { color: var(--teal); }
 .isle-page dialog::backdrop { background: rgba(70, 60, 130, 0.3); }
-.isle-page .guide { background: rgba(255, 255, 255, 0.96); box-shadow: 0 10px 30px rgba(80, 70, 140, 0.25); bottom: calc(108px + env(safe-area-inset-bottom)); }
+.isle-page .guide { background: rgba(255, 255, 255, 0.96); box-shadow: 0 10px 30px rgba(80, 70, 140, 0.25); }
+/* 隊長泡泡永遠在下面大按鈕的上方、上面標題的下方；放不下就在泡泡裡面捲動。
+   --bar-h、--player-h、--top-h 由 islands.js 量好（按鈕、播放器、上方標題實際的高度） */
+body.isle-page { --below: calc(16px + var(--bar-h, 64px) + 10px + env(safe-area-inset-bottom)); }
+body.isle-page.has-player { --below: calc(var(--player-h, 106px) + 10px + var(--bar-h, 64px) + 10px); }
+body.isle-page .guide { bottom: var(--below); max-height: calc(100dvh - var(--below) - var(--top-h, 80px) - 8px); overflow-y: auto; overscroll-behavior: contain; }
 .isle-page .guide-text { color: var(--text); }
 .isle-page .toast { background: rgba(255, 255, 255, 0.97); color: var(--orange); border-color: #ffc98a; }
 .isle-page .takeaways li.on { background: #fff1dc; }
 .isle-page .loading { background: linear-gradient(#9fd4ff, #ffe0ef); color: var(--text); }
-.isle-page body.has-player .guide, body.isle-page.has-player .guide { bottom: 230px; }
 .isle-page .sheet .hero { filter: drop-shadow(0 4px 8px rgba(80, 70, 140, 0.25)); }
 
 /* 下面三顆大按鈕：居民、火箭站、全部的島 */
-.isle-bar { position: fixed; left: 50%; bottom: calc(16px + env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 5; display: flex; gap: 10px; }
-body.isle-page.has-player .isle-bar { bottom: 122px; }
+/* 寬度跟著按鈕（不被 left: 50% 擠成一半寬） */
+.isle-bar { position: fixed; left: 50%; bottom: calc(16px + env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 5; display: flex; gap: 10px; width: max-content; max-width: calc(100vw - 16px); }
+body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px); }
+/* 手機或矮螢幕：播放器只留一行標題，讓出空間給島 */
+@media (max-width: 640px), (max-height: 600px) {
+  .isle-page .player { padding: 6px 12px calc(6px + env(safe-area-inset-bottom)); gap: 4px; }
+  .isle-page .player .now strong { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .isle-page .player #now-takeaway { display: none; }
+  .isle-page .player audio { height: 40px; }
+}
 .isle-btn { display: grid; grid-template-columns: auto auto; grid-template-rows: auto auto; column-gap: 8px; align-items: center; justify-items: start;
   min-width: 128px; min-height: 64px; padding: 8px 18px; border-radius: 999px; border: 3px solid #fff; background: rgba(255, 255, 255, 0.92); color: var(--text);
   box-shadow: 0 6px 18px rgba(80, 70, 140, 0.22); }
 .isle-btn .ico { grid-row: span 2; font-size: 30px; line-height: 1; }
-.isle-btn .txt { font-size: 18px; font-weight: 800; }
+.isle-btn .txt { font-size: 18px; font-weight: 800; white-space: nowrap; }
+.isle-btn small { white-space: nowrap; }
 .isle-btn small { font-size: 12px; color: var(--muted); }
 .isle-btn.rocket { background: linear-gradient(#ff8a6b, #ff6a5c); color: #fff; border-color: #ffd2c4; }
 .isle-btn.rocket small { color: #fff4ee; }
@@ -535,7 +548,6 @@ body.isle-page.has-player .isle-bar { bottom: 122px; }
   .isle-btn .ico { grid-row: auto; font-size: 24px; }
   .isle-btn .txt { font-size: 14px; white-space: nowrap; }
   .isle-btn small { display: none; }
-  .isle-page .guide { bottom: calc(84px + env(safe-area-inset-bottom)); }
   .isle-grid { grid-template-columns: repeat(2, 1fr); }
   .isle-label { font-size: 13px; padding: 4px 9px 4px 6px; }
   .isle-label .em { font-size: 17px; }
