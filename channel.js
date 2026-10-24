@@ -162,7 +162,7 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
   // ---------- 航行日誌 ----------
   function openJournal() {
     const st = getStamps();
-    const line = (code) => { const e = byCode.get(code); return e ? `<li>${iconFor(e)} ${esc(code)} 台｜${esc(e.title)}</li>` : ''; };
+    const line = (code) => { const e = byCode.get(code); return e ? `<li><button type="button" class="jl" data-open-ch="${esc(code)}">${iconFor(e)} ${esc(code)} 台｜${esc(e.title)}</button></li>` : ''; };
     $('#journal').innerHTML = `<div class="inner">
       <button class="close" type="button" data-close aria-label="關閉">✕</button>
       <h2 id="journal-title">📔 航行日誌</h2>
@@ -181,12 +181,14 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     const lab = t.closest('[data-lab]');
     if (lab) { openLab(lab.dataset.lab, lab.dataset.labTitle, lab.dataset.code); return; }
     if (t.closest('[data-close]')) { t.closest('dialog').close(); return; }
+    const again = t.closest('[data-open-ch]'); // 航行日誌：點一台再打開它
+    if (again) { $('#journal').close(); openChannel(again.dataset.openCh); return; }
     if (t.id === 'clear-stamps' && confirm('要清除全部的星章和紀錄嗎？清除後就找不回來了。')) { onClear(); $('#journal').close(); }
   });
   $('#channel').addEventListener('close', () => {
     const params = new URLSearchParams(location.search);
     params.delete('ch');
-    history.replaceState(null, '', `?${params}`);
+    history.replaceState(null, '', params.toString() ? `?${params}` : location.pathname);
   });
   $('#lab-close').addEventListener('click', closeLab);
   $('#lab').addEventListener('cancel', closeLab);

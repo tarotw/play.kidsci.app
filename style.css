@@ -145,6 +145,9 @@ dialog::backdrop { background: rgba(3, 8, 18, 0.55); backdrop-filter: blur(2px);
 .sheet .hero { font-size: 56px; line-height: 1; margin: 0 0 8px; filter: drop-shadow(0 4px 10px rgba(6, 8, 24, 0.4)); }
 .sheet h2 { margin: 0 0 4px; font-size: 22px; }
 /* ✕ 一定在最上層：大圖示有陰影濾鏡，會自己疊一層蓋住浮動的按鈕；捲動長內容時也一直留在右上角 */
+.sheet .jl { all: unset; cursor: pointer; border-radius: 6px; }
+.sheet .jl:hover { text-decoration: underline; }
+.sheet .jl:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .sheet .close { position: sticky; top: 0; z-index: 3; float: right; min-width: 48px; min-height: 48px; margin: -6px -6px 0 8px;
   border: 1px solid var(--line); border-radius: 50%; background: var(--panel-solid); color: var(--text); font-size: 22px; box-shadow: var(--shadow); }
 .actions { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
@@ -351,7 +354,7 @@ body.zoom-page.has-player .guide { bottom: 200px; }
 .map-page { background: #0c0e22; }
 .map-page::before { content: ""; position: fixed; left: 0; right: 0; top: 0; height: 150px; z-index: 2; pointer-events: none;
   background: linear-gradient(to bottom, rgba(10, 12, 30, 0.7), rgba(10, 12, 30, 0)); }
-#stage { position: fixed; inset: 0; touch-action: none; overflow: hidden; cursor: grab; }
+#stage { position: fixed; inset: 0; touch-action: none; overflow: hidden; cursor: grab; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
 #stage:active { cursor: grabbing; }
 #stage #world { position: absolute; inset: 0; width: 100%; height: 100%; }
 #nodes { position: absolute; inset: 0; pointer-events: none; }
@@ -393,6 +396,13 @@ body.zoom-page.has-player .guide { bottom: 200px; }
 .mm-node.appear:not(.fog) .orb { animation: pop-in 0.55s cubic-bezier(0.2, 0.9, 0.3, 1.5) both; }
 @keyframes pop-in { from { transform: scale(0.2); opacity: 0; } }
 .mm-node.hint .orb { animation: hint 0.5s ease-in-out 4 alternate; }
+/* 一閃一閃很耗電：拉遠時、一集一集的小「？」只靠地圖上的光暈呼吸就好 */
+#nodes:is([data-lod="far"], [data-lod="galaxy"]) .mm-node.fog:not(.hint) .orb, .mm-node.d3.fog:not(.hint) .orb { animation: none; }
+.mm-node.d3.fog.appear:not(.hint) .orb { animation: pop-in 0.55s cubic-bezier(0.2, 0.9, 0.3, 1.5) both; }
+#nodes[data-lod="far"] .mm-node.appear .orb, #nodes[data-lod="galaxy"] .mm-node.appear .orb { animation: none; }
+@media (prefers-reduced-motion: reduce) {
+  .mm-node .orb, .mm-node.fog .orb, .mm-node.appear .orb { animation: none !important; transition: none; }
+}
 @keyframes hint { to { transform: scale(1.35); box-shadow: 0 0 0 5px #efcf8e, 0 0 60px rgba(246, 220, 156, 0.8); } }
 /* 遠近：拉遠時只剩光點，拉近才看得到名字（galaxy：整張地圖，最遠） */
 #nodes[data-lod="galaxy"] .d0 { --s: 60px; }
@@ -414,10 +424,40 @@ body.zoom-page.has-player .guide { bottom: 200px; }
 .map-page .guide { bottom: calc(24px + env(safe-area-inset-bottom)); }
 body.map-page.has-player .guide, body.map-page.has-player .map-zoom { bottom: 120px; }
 @media (max-width: 700px) {
-  .minimap { width: 96px; height: 96px; top: calc(150px + env(safe-area-inset-top)); right: 8px; }
+  /* 手機：小地圖放進標題那一列的右邊，不擋地圖 */
+  .minimap { width: 60px; height: 60px; top: calc(58px + env(safe-area-inset-top)); right: 12px; }
+  .map-page .scene { padding-right: 68px; }
   .map-page .hud-zoom.map-zoom { top: auto; bottom: calc(18px + env(safe-area-inset-bottom)); right: 8px; }
   body:has(#guide:not([hidden])) .map-page .map-zoom, .map-page:has(#guide:not([hidden])) .map-zoom { visibility: hidden; }
   .mm-node.d0 { --s: 88px; --f: 16px; }
   .mm-node.d1 { --s: 66px; --f: 15px; }
   .mm-node.d2 { --s: 48px; --f: 13px; }
+}
+/* 很窄的手機（320 寬）：節點小一號，第一圈的「？」才不會擠在一起 */
+@media (max-width: 360px) {
+  .mm-node.d0 { --s: 72px; --f: 14px; }
+  .mm-node.d1 { --s: 52px; --f: 13px; }
+  .mm-node.d2 { --s: 42px; --f: 12px; }
+  .mm-node.d3 { --s: 36px; }
+}
+/* 很矮的畫面（手機橫拿）：標題、小地圖、縮放鍵、對話框都縮小，留空間給地圖 */
+@media (max-height: 520px) {
+  .map-page .hud-top { padding-top: calc(6px + env(safe-area-inset-top)); padding-bottom: 4px; }
+  .map-page .brand img { width: 96px; }
+  .map-page .scene h1 { font-size: 17px; }
+  .map-page .scene p { font-size: 12px; margin: 0 0 3px; }
+  .map-page .round { width: 38px; height: 38px; font-size: 15px; }
+  .map-page .logbook { min-height: 38px; }
+  .minimap { width: 76px; height: 76px; top: calc(60px + env(safe-area-inset-top)); right: 8px; }
+  .map-page .hud-zoom.map-zoom { bottom: calc(8px + env(safe-area-inset-bottom)); right: 8px; gap: 6px; }
+  .map-page .guide { left: 8px; bottom: calc(6px + env(safe-area-inset-bottom)); width: min(360px, 46vw); grid-template-columns: 40px 1fr auto; gap: 8px; padding: 6px 8px 14px; border-radius: 16px; }
+  .map-page .guide-avatar { width: 40px; height: 40px; }
+  .map-page .guide-name { font-size: 12px; }
+  .map-page .guide-text { font-size: 14px; line-height: 1.4; min-height: 0; }
+  .map-page .guide-action { min-height: 34px; padding: 0 10px; font-size: 13px; }
+  .map-page .guide-tools button { width: 30px; height: 30px; }
+  .mm-node.d0 { --s: 64px; --f: 13px; }
+  .mm-node.d1 { --s: 46px; --f: 13px; }
+  .mm-node.d2 { --s: 40px; --f: 12px; }
+  .mm-node.d3 { --s: 36px; }
 }

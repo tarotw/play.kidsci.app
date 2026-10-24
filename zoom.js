@@ -132,7 +132,7 @@ async function init() {
     onClear: () => { stamps = { ear: [], hand: [], seen: [], missions: [], guess: 0 }; saveStamps(); world.refreshMarks(); },
   });
   if (!webglOk()) {
-    $('#loading-text').innerHTML = '這台裝置沒辦法顯示 3D 宇宙。<br><a class="btn" href="index.html?gl=0">改用平面的萬物地圖</a>';
+    $('#loading-text').innerHTML = '這台裝置沒辦法顯示 3D 宇宙。<br><a class="btn" href="knob.html?gl=0">改用平面的萬物地圖</a>';
     return;
   }
   const { createZoomWorld } = await import('./zoom3d.js');

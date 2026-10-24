@@ -243,17 +243,22 @@ function clampCam() {
   if (r > lim) { cam.x *= lim / r; cam.y *= lim / r; }
 }
 const wrapAngle = (a) => Math.atan2(Math.sin(a), Math.cos(a));
-// 畫面上下左右被按鈕和對話框擋住的地方（像素）
+// 畫面上下左右被按鈕和對話框擋住的地方（像素）：量真的標題列、播放器，不同大小的螢幕都對得準
 function safeArea() {
   const c = canvas(), W = c.clientWidth, H = c.clientHeight, phone = W < 700;
-  return { W, H, phone, left: phone ? 6 : 40, right: phone ? 6 : 40, top: phone ? 130 : 110, bottom: phone ? 150 : 130 };
+  const head = document.querySelector('.hud-top .scene')?.getBoundingClientRect().bottom || 100;
+  const player = document.body.classList.contains('has-player') ? ($('#player').offsetHeight || 110) : 0;
+  const guide = phone ? 130 : H < 560 ? 64 : 130; // 手機的對話框橫跨整個下方；電腦、橫拿只在左下角
+  const chip = parseFloat(getComputedStyle(chips.get('root') || document.body).getPropertyValue('--s')) * 0.65 || 66; // 大主題球的大小
+  const side = phone ? 6 : $('#minimap').offsetWidth + 28; // 電腦和橫拿：右邊一整條是小地圖和縮放鍵
+  return { W, H, phone, chip, left: phone ? 6 : 40, right: side, top: Math.min(H * 0.35, head + 6), bottom: Math.min(H * 0.35, guide + player + 8) };
 }
 // 要把 list 都放進畫面，地圖轉 rot 的時候需要多少「單位／像素」
 function fitScale(list, rot, A = safeArea()) {
   const cs = Math.cos(rot), sn = Math.sin(rot);
   const us = list.map((n) => n.x * cs + n.y * sn), vs = list.map((n) => -n.x * sn + n.y * cs);
   const spanU = Math.max(...us) - Math.min(...us), spanV = Math.max(...vs) - Math.min(...vs);
-  const availW = Math.max(120, A.W - A.left - A.right - (A.phone ? 66 : 130)), availH = Math.max(120, A.H - A.top - A.bottom - 80);
+  const availW = Math.max(120, A.W - A.left - A.right - A.chip * (A.phone ? 1 : 2)), availH = Math.max(100, A.H - A.top - A.bottom - A.chip * 1.2);
   return { upp: Math.max(spanU / availW, spanV / availH), midU: (Math.max(...us) + Math.min(...us)) / 2, midV: (Math.max(...vs) + Math.min(...vs)) / 2 };
 }
 // 這群節點排成長長一條時，轉一下讓它順著螢幕比較長的那一邊（沒有明顯比較好就不轉，免得頭暈）
@@ -322,6 +327,18 @@ function reveal(n, { silent = false } = {}) {
   else setTimeout(() => focus(n), 250);
   // 發現新的大主題：說一下裡面有多少東西（同一個 topic，會換掉還沒看完的開場白）
   if (n.kind === 'branch') setTimeout(() => guide.say([{ who: 'curious', text: `${n.emoji} 發現新大陸「${n.name}」！這裡藏了 ${n.children.length} 個小地方、${leafCount(n)} 個故事。` }], { topic: 'map' }), 900);
+}
+// 從別的地方（航行日誌、分享連結）打開的故事：把通往它的路打開，鏡頭移過去
+function openPathTo(code, { dur = 0.9 } = {}) {
+  const leaf = nodes?.get(`ep:${code}`);
+  if (!leaf || !fx) return null;
+  if (!isOpen(leaf)) {
+    const path = []; let n = leaf; while (n) { path.unshift(n); n = n.parent ? nodes.get(n.parent) : null; }
+    path.forEach((x) => reveal(x, { silent: true }));
+    const zone = nodes.get(leaf.parent);
+    fitTo([zone, ...zone.children.map((id) => nodes.get(id))], { rot: 'auto', dur });
+  }
+  return leaf;
 }
 function activate(n) {
   if (isFrontier(n)) { reveal(n); return; }
@@ -437,7 +454,10 @@ function zoomAt(sx, sy, factor) {
 function bindGestures() {
   const stage = $('#stage');
   stage.addEventListener('pointerdown', (ev) => {
+    if (ev.pointerType === 'mouse' && ev.button !== 0) return;
     sound.wake();
+    // 抓住這根手指：拖到標題或按鈕上才放開，也一樣收得到放開的事件（不然下一次會被當成兩指縮放）
+    try { stage.setPointerCapture(ev.pointerId); } catch { /* 舊瀏覽器沒有也沒關係 */ }
     pointers.set(ev.pointerId, { x: ev.clientX, y: ev.clientY });
     if (pointers.size === 1) { drag = { x: ev.clientX, y: ev.clientY, t: performance.now(), target: ev.target.closest('.mm-node') }; moved = 0; vel = { x: 0, y: 0 }; camAnim = null; }
     if (pointers.size === 2) { const [a, b] = [...pointers.values()]; pinchD = Math.hypot(a.x - b.x, a.y - b.y); drag = null; }
@@ -465,6 +485,7 @@ function bindGestures() {
     clampCam();
   });
   const end = (ev) => {
+    if (!pointers.has(ev.pointerId)) return;
     const wasTap = drag && moved < 8 && pointers.size === 1;
     pointers.delete(ev.pointerId);
     if (pointers.size < 2) pinchD = 0;
@@ -476,7 +497,13 @@ function bindGestures() {
     if (!pointers.size) drag = null;
   };
   stage.addEventListener('pointerup', end);
-  stage.addEventListener('pointercancel', (ev) => { pointers.delete(ev.pointerId); drag = null; pinchD = 0; });
+  const cancel = (ev) => { pointers.delete(ev.pointerId); drag = null; pinchD = 0; };
+  stage.addEventListener('pointercancel', cancel);
+  stage.addEventListener('lostpointercapture', (ev) => { if (pointers.has(ev.pointerId)) cancel(ev); });
+  window.addEventListener('blur', () => { pointers.clear(); drag = null; pinchD = 0; });
+  // 視窗大小改變（手機轉橫、轉直）：節點要重新對位
+  if (typeof ResizeObserver === 'function') new ResizeObserver(() => { dirty = true; drawMinimap(); }).observe(canvas());
+  else window.addEventListener('resize', () => { dirty = true; drawMinimap(); });
   stage.addEventListener('wheel', (ev) => { ev.preventDefault(); zoomAt(ev.clientX, ev.clientY, Math.exp(ev.deltaY * (ev.ctrlKey ? 0.01 : 0.0015))); }, { passive: false });
   // 鍵盤：按 Tab 到節點、按 Enter 打開（滑鼠和手指已經在上面處理過了）
   $('#nodes').addEventListener('click', (ev) => { if (ev.detail !== 0) return; const chip = ev.target.closest('.mm-node'); if (chip) activate(nodes.get(chip.dataset.id)); });
@@ -561,12 +588,12 @@ async function init() {
   guide = createGuide({ root: $('#guide'), cast: lines.cast });
   channels = createChannels({
     byCode, lines, getStamps: () => stamps, addStamp,
-    onOpen: () => { idleNags = 0; },
+    onOpen: (code) => { idleNags = 0; openPathTo(code); },
     onClear: () => { stamps = { ear: [], hand: [], seen: [], missions: [], guess: 0 }; saveStamps(); nodes.forEach(updateChip); renderProgress(); },
   });
   sound = new Sound();
   if (!webglOk()) {
-    $('#loading-text').innerHTML = '這台裝置沒辦法顯示宇宙地圖。<br><a class="btn" href="index.html?gl=0">改用平面的萬物地圖</a>';
+    $('#loading-text').innerHTML = '這台裝置沒辦法顯示宇宙地圖。<br><a class="btn" href="knob.html?gl=0">改用平面的萬物地圖</a>';
     return;
   }
   buildTree(world, catalog.episodes);
@@ -583,15 +610,16 @@ async function init() {
   bindHud();
   saveStamps();
   renderProgress();
-  // 分享連結 ?ch=代碼：把通往那一集的路打開，再打開那一集
-  const ch = new URLSearchParams(location.search).get('ch');
-  const target = ch && nodes.get(`ep:${ch}`);
-  if (target) {
-    const path = []; let n = target; while (n) { path.unshift(n); n = n.parent ? nodes.get(n.parent) : null; }
-    path.forEach((x) => reveal(x, { silent: true }));
-    const sibs = nodes.get(target.parent).children.map((id) => nodes.get(id));
-    fitTo([nodes.get(target.parent), ...sibs], { rot: 'auto', dur: 0 });
+  // 分享連結 ?ch=代碼：把通往那一集的路打開，再打開那一集；舊版的 ?lv=大主題 也接得起來
+  const params = new URLSearchParams(location.search);
+  const ch = params.get('ch'), lv = nodes.get(params.get('lv') || '');
+  if (ch && nodes.has(`ep:${ch}`)) {
+    fitTo(overview(), { dur: 0, rot: 0 });
+    openPathTo(ch, { dur: 0 });
     channels.openChannel(ch);
+  } else if (lv && lv.depth === 1) {
+    reveal(lv, { silent: true });
+    fitTo([lv, ...lv.children.map((id) => nodes.get(id))], { rot: 'auto', dur: 0 });
   } else {
     const shown = [...nodes.values()].filter((x) => isOpen(x) || isFrontier(x));
     fitTo(firstVisit ? overview() : shown, { dur: 0, rot: 0 });
