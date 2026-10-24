@@ -1,0 +1,12 @@
+lookup200.json: 200 366919 bytes  https://itunes.apple.com/lookup?id=1812447277&entity=podcastEpisode&limit=200&country=tw
+lookup300.json: 200 366919 bytes  https://itunes.apple.com/lookup?id=1812447277&entity=podcastEpisode&limit=300&country=tw
+page.html: 200 720566 bytes  https://podcasts.apple.com/tw/podcast/id1812447277
+seeall.html: 200 720560 bytes  https://podcasts.apple.com/tw/podcast/id1812447277?see-all=episodes
+soundon.xml: 200 477988 bytes  https://feeds.soundon.fm/podcasts/cbbe3124-188a-4de6-87b4-2b65ed4f2d46.xml
+firstory.xml: 200 477988 bytes  https://feed.firstory.me/rss/user/cmdpx4cs200ax01xldg5ta89p
+search 科學好好聽: 200 matched 73 (total 73)
+search 科學好好聽 EP: 200 matched 80 (total 101)
+search 科學好好聽 宇宙: 200 matched 14 (total 105)
+search 科學好好聽 恐龍: 200 matched 8 (total 107)
+search 科學好好聽 動物: 200 matched 5 (total 107)
+search 科學好好聽 地球: 200 matched 6 (total 108)
