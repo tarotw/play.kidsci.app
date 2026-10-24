@@ -183,7 +183,7 @@ def main() -> None:
             "code": code,
             "title": title,
             "home": home,
-            "zone": zone_for(title, home, levels),
+            "zone": (placement or {}).get("zone") or zone_for(title, home, levels),  # placements.json 可以直接指定在哪一區
             "also": also,
             "state": state,
             "listen": listen,
