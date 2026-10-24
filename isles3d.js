@@ -149,11 +149,12 @@ function makeTrail(scene, count = 160) {
 }
 
 // ---------- 居民（每一集一個會走路的小人：頭是它的圖示，下面有兩隻小腳） ----------
-function makeAtlas(icons) {
+function makeAtlas(icons, specials) {
   const T = 112, cols = Math.ceil(Math.sqrt(icons.length)), rows = Math.ceil(icons.length / cols);
   const c = document.createElement('canvas'); c.width = cols * T; c.height = rows * T;
-  const g = c.getContext('2d');
-  const tmp = document.createElement('canvas'); tmp.width = tmp.height = T; const tg = tmp.getContext('2d');
+  const g = c.getContext('2d', { willReadFrequently: true });
+  const tmp = document.createElement('canvas'); tmp.width = tmp.height = T; const tg = tmp.getContext('2d', { willReadFrequently: true });
+  const colors = new Map();
   icons.forEach((icon, i) => {
     const x = (i % cols) * T, y = Math.floor(i / cols) * T;
     tg.clearRect(0, 0, T, T);
@@ -161,52 +162,62 @@ function makeAtlas(icons) {
     tg.textAlign = 'center'; tg.textBaseline = 'middle';
     if (icon === 'zzz') { tg.font = '900 44px sans-serif'; tg.fillStyle = '#7a6cff'; tg.fillText('z', T * 0.35, T * 0.62); tg.font = '900 34px sans-serif'; tg.fillText('z', T * 0.58, T * 0.42); tg.font = '900 26px sans-serif'; tg.fillText('z', T * 0.76, T * 0.26); }
     else if (icon === 'check') { tg.fillStyle = '#5fcf9f'; tg.beginPath(); tg.arc(T / 2, T / 2, T * 0.32, 0, TAU); tg.fill(); tg.strokeStyle = '#fff'; tg.lineWidth = 12; tg.lineCap = 'round'; tg.beginPath(); tg.moveTo(T * 0.34, T * 0.52); tg.lineTo(T * 0.46, T * 0.64); tg.lineTo(T * 0.68, T * 0.38); tg.stroke(); }
-    else { tg.font = `${Math.round(T * 0.74)}px ${EMOJI_FONT}`; tg.fillStyle = '#000'; tg.fillText(icon, T / 2, T * 0.54); }
-    // 貼紙的白邊：先畫一圈白色的影子，再把圖示疊上去
+    else { tg.font = `${Math.round(T * 0.7)}px ${EMOJI_FONT}`; tg.fillStyle = '#000'; tg.fillText(icon, T / 2, T * 0.52); }
     g.save();
-    const sil = document.createElement('canvas'); sil.width = sil.height = T; const sg = sil.getContext('2d');
-    sg.drawImage(tmp, 0, 0); sg.globalCompositeOperation = 'source-in'; sg.fillStyle = '#ffffff'; sg.fillRect(0, 0, T, T);
-    for (let k = 0; k < 12; k++) { const a = (k / 12) * TAU; g.drawImage(sil, x + Math.cos(a) * 4.5, y + Math.sin(a) * 4.5); }
+    if (specials.includes(icon)) {
+      // 頭上的小徽章（皇冠、zzz、勾勾）保留白邊，遠遠也看得清楚
+      const sil = document.createElement('canvas'); sil.width = sil.height = T; const sg = sil.getContext('2d');
+      sg.drawImage(tmp, 0, 0); sg.globalCompositeOperation = 'source-in'; sg.fillStyle = '#ffffff'; sg.fillRect(0, 0, T, T);
+      for (let k = 0; k < 12; k++) { const a = (k / 12) * TAU; g.drawImage(sil, x + Math.cos(a) * 4.5, y + Math.sin(a) * 4.5); }
+    } else {
+      // 居民的頭：記下圖示的主要顏色，身體就用這個顏色
+      const d = tg.getImageData(0, 0, T, T).data;
+      let r = 0, gg = 0, b = 0, w = 0;
+      for (let k = 0; k < d.length; k += 16) { const a = d[k + 3] / 255; if (a < 0.5) continue; const sat = Math.max(d[k], d[k + 1], d[k + 2]) - Math.min(d[k], d[k + 1], d[k + 2]); const wt = a * (0.2 + sat / 255); r += d[k] * wt; gg += d[k + 1] * wt; b += d[k + 2] * wt; w += wt; }
+      colors.set(icon, w ? new THREE.Color().setRGB(r / w / 255, gg / w / 255, b / w / 255, THREE.SRGBColorSpace) : new THREE.Color(0xdddddd));
+    }
     g.drawImage(tmp, x, y);
     g.restore();
   });
   const tex = new THREE.CanvasTexture(c);
   tex.colorSpace = THREE.SRGBColorSpace;
   tex.anisotropy = 4;
-  return { tex, cols, rows, index: new Map(icons.map((ic, i) => [ic, i])) };
+  return { tex, cols, rows, index: new Map(icons.map((ic, i) => [ic, i])), colors };
 }
 
+// 居民是一個立體的小人：3D 的身體和兩隻腳（會被光照到、有陰影），頭是那一集的圖示
+// （做成有厚度、有光澤的一塊，永遠面向鏡頭），頭上的徽章說能不能聽，腳下的光圈也是：
+// 綠色 ▶ ＝ 現在就可以聽；金色皇冠 ＝ VIP（請大人幫忙）；灰灰的在睡覺 💤 ＝ 還在準備中
+// 尺寸（以居民大小 S 為單位）：腳 0～0.1，身體 0～0.58，頭 0.36～1.31，徽章再上面
+export const BODY = { headBottom: 0.36, head: 0.95, top: 1.75 };
 function makeResidents(scene, list, atlas) {
   const n = list.length;
   const quad = new THREE.InstancedBufferGeometry();
   quad.setAttribute('position', new THREE.Float32BufferAttribute([-0.5, 0, 0, 0.5, 0, 0, 0.5, 1, 0, -0.5, 1, 0], 3));
   quad.setIndex([0, 1, 2, 0, 2, 3]);
   const iPos = new THREE.InstancedBufferAttribute(new Float32Array(n * 3), 3).setUsage(THREE.DynamicDrawUsage);
-  const iA = new THREE.InstancedBufferAttribute(new Float32Array(n * 4), 4).setUsage(THREE.DynamicDrawUsage); // 圖示、頭上的東西、走路中、相位
+  const iA = new THREE.InstancedBufferAttribute(new Float32Array(n * 4), 4).setUsage(THREE.DynamicDrawUsage); // 圖示、頭上的東西、跳起來多高、相位
   const iB = new THREE.InstancedBufferAttribute(new Float32Array(n * 4), 4).setUsage(THREE.DynamicDrawUsage); // 面向、聽過、被點到、大小
-  const iC = new THREE.InstancedBufferAttribute(new Float32Array(n), 1).setUsage(THREE.DynamicDrawUsage); // 睡覺（還沒上架）
+  const iC = new THREE.InstancedBufferAttribute(new Float32Array(n * 2), 2).setUsage(THREE.DynamicDrawUsage); // 睡覺（還沒上架）、能不能聽（0 可以聽、1 VIP、2 還不行）
   quad.setAttribute('iPos', iPos); quad.setAttribute('iA', iA); quad.setAttribute('iB', iB); quad.setAttribute('iC', iC);
   quad.instanceCount = n;
   const uniforms = { time: { value: 0 }, map: { value: atlas.tex }, grid: { value: new THREE.Vector2(atlas.cols, atlas.rows) }, checkTile: { value: atlas.index.get('check') } };
   const mat = new THREE.ShaderMaterial({
     uniforms,
-    vertexShader: /* glsl */ `attribute vec3 iPos; attribute vec4 iA; attribute vec4 iB; attribute float iC; uniform float time;
-      varying vec2 vQ; varying vec4 vA; varying vec4 vB; varying float vC; varying float vStep;
+    vertexShader: /* glsl */ `attribute vec3 iPos; attribute vec4 iA; attribute vec4 iB; attribute vec2 iC; uniform float time;
+      varying vec2 vQ; varying vec4 vA; varying vec4 vB; varying vec2 vC;
       void main() {
         float S = iB.w;
-        float step = time * 7.0 + iA.w;
-        float hop = iA.z * abs(sin(step)) * 0.16 + iB.z * abs(sin(time * 9.0)) * 0.5 + iC * sin(time * 1.6 + iA.w) * 0.03;
-        vec3 right = vec3(viewMatrix[0][0], viewMatrix[1][0], viewMatrix[2][0]);
-        right = normalize(vec3(right.x, 0.0, right.z));
-        // 每個居民往鏡頭方向挪一點點（不一樣多），兩個站在同一排的才不會互相閃爍
-        vec3 toward = normalize(vec3(-viewMatrix[0][2], 0.0, -viewMatrix[2][2]) * -1.0);
-        vec3 p = iPos + right * position.x * S * 1.3 + vec3(0.0, (position.y * 1.6 + hop) * S, 0.0) + toward * (iA.w * 0.03);
+        vec3 right = normalize(vec3(viewMatrix[0][0], 0.0, viewMatrix[2][0]));
+        vec3 back = normalize(vec3(viewMatrix[0][2], 0.0, viewMatrix[2][2]));
+        // 頭在身體前面一點（不然會被圓圓的身體擋住），每個人再多挪一點點，站同一排的才不會閃爍
+        vec3 p = iPos + right * position.x * S * 1.3 + vec3(0.0, position.y * ${BODY.top.toFixed(2)} * S + iA.z, 0.0) + back * (S * 0.26 + iA.w * 0.03);
         gl_Position = projectionMatrix * viewMatrix * vec4(p, 1.0);
-        vQ = vec2(position.x * 1.3, position.y * 1.6 + hop * 0.0);
-        vA = iA; vB = iB; vC = iC; vStep = step;
+        vQ = vec2(position.x * 1.3, position.y * ${BODY.top.toFixed(2)});
+        vA = iA; vB = iB; vC = iC;
       }`,
     fragmentShader: /* glsl */ `uniform sampler2D map; uniform vec2 grid; uniform float time; uniform float checkTile;
-      varying vec2 vQ; varying vec4 vA; varying vec4 vB; varying float vC; varying float vStep;
+      varying vec2 vQ; varying vec4 vA; varying vec4 vB; varying vec2 vC;
       vec4 tile(float idx, vec2 uv) {
         if (uv.x < 0.0 || uv.x > 1.0 || uv.y < 0.0 || uv.y > 1.0) return vec4(0.0);
         // 編號從頂點傳過來會有一點點誤差（84 變成 83.9999），要先四捨五入，不然會拿到隔壁的圖、出現條紋
@@ -218,31 +229,52 @@ function makeResidents(scene, list, atlas) {
       vec4 over(vec4 top, vec4 base) { float a = top.a + base.a * (1.0 - top.a); return vec4((top.rgb * top.a + base.rgb * base.a * (1.0 - top.a)) / max(a, 0.0001), a); }
       void main() {
         vec4 col = vec4(0.0);
-        float walk = vA.z;
-        // 兩隻小腳（走路的時候一前一後抬起來）
-        for (int i = 0; i < 2; i++) {
-          float side = i == 0 ? -1.0 : 1.0;
-          float lift = walk * max(0.0, sin(vStep + (i == 0 ? 0.0 : 3.14159))) * 0.09;
-          vec2 f = (vQ - vec2(side * 0.17, 0.08 + lift)) / vec2(0.13, 0.075);
-          float d = dot(f, f);
-          if (vC < 0.5 && d < 1.0) col = over(vec4(0.24, 0.26, 0.42, 1.0), col);
+        float sleep = vC.x;
+        // ---- 頭：有厚度的圖示 ----
+        vec2 h = (vQ - vec2(0.0, ${BODY.headBottom.toFixed(2)} + (sleep > 0.5 ? -0.06 : 0.0))) / ${BODY.head.toFixed(2)};
+        vec2 uv = vec2(h.x * vB.x + 0.5, h.y);
+        // 側面：往下、往旁邊疊幾層變暗的影子，看起來像一塊有厚度的餅乾
+        vec4 side = vec4(0.0);
+        for (int k = 5; k >= 1; k--) {
+          vec4 s = tile(vA.x, uv + vec2(0.006 * float(k) * vB.x, 0.014 * float(k)));
+          side = over(vec4(s.rgb * (0.52 + 0.03 * float(k)), s.a), side);
         }
-        // 身體：圖示（走路時有一點點壓扁、拉長）
-        float sq = 1.0 + walk * sin(vStep * 2.0) * 0.05;
-        vec2 b = (vQ - vec2(0.0, -0.03 + (vC > 0.5 ? -0.07 : 0.0))) / vec2(1.0 / sq, sq);
-        vec2 uv = vec2(b.x * vB.x + 0.5, b.y);
-        vec4 body = tile(vA.x, uv);
-        if (vC > 0.5) body.rgb = mix(body.rgb, vec3(dot(body.rgb, vec3(0.33))), 0.35);
-        body.rgb = mix(body.rgb, vec3(1.0), vB.z * 0.2);
-        col = over(body, col);
-        // 頭上的東西：皇冠（訂閱）或 zzz（還在準備中）
-        if (vA.y >= 0.0) {
-          float bob = sin(time * 2.0 + vA.w) * 0.03;
-          vec2 o = (vQ - vec2(vC > 0.5 ? 0.3 : 0.0, 0.8 + bob)) / 0.42 + vec2(0.5, 0.0);
+        vec4 face = tile(vA.x, uv);
+        // 邊緣的斜面：用旁邊四點的透明度算出「表面朝哪裡」，朝左上（光）的亮、朝右下的暗
+        float e = 0.022;
+        float aL = tile(vA.x, uv - vec2(e, 0.0)).a, aR = tile(vA.x, uv + vec2(e, 0.0)).a;
+        float aD = tile(vA.x, uv - vec2(0.0, e)).a, aU = tile(vA.x, uv + vec2(0.0, e)).a;
+        vec2 nrm = vec2(aL - aR, aD - aU);
+        float bevel = dot(nrm, normalize(vec2(-0.6 * vB.x, 0.8)));
+        face.rgb *= 1.0 + 0.32 * bevel + 0.08 * (uv.y - 0.5);
+        // 一點點亮亮的反光
+        face.rgb += vec3(0.22) * face.a * (1.0 - smoothstep(0.0, 0.16, length((uv - vec2(0.5 - 0.17 * vB.x, 0.74)) * vec2(1.0, 1.6))));
+        // 細細的深色外框（貼在草地、雪地上也看得清楚）
+        float near = max(max(aL, aR), max(aD, aU));
+        vec4 rim = vec4(0.17, 0.18, 0.32, near * 0.9 * (1.0 - face.a));
+        vec4 head = over(face, over(rim, side));
+        if (sleep > 0.5) head.rgb = mix(head.rgb, vec3(dot(head.rgb, vec3(0.33))), 0.45) * 0.95;
+        head.rgb = mix(head.rgb, vec3(1.0), vB.z * 0.2);
+        col = over(head, col);
+        float bob = sin(time * 2.0 + vA.w) * 0.03;
+        // ---- 頭上：能不能聽 ----
+        if (vC.y < 0.5) {
+          // 綠色的播放鍵 ▶：可以聽
+          vec2 c = (vQ - vec2(0.38, 1.22 + bob)) / (0.22 * (1.0 + 0.06 * sin(time * 3.0 + vA.w)));
+          float r = length(c);
+          vec2 t = c - vec2(0.08, 0.0);
+          float tri = step(-0.32, t.x) * step(abs(t.y) * 1.73 + t.x, 0.42);
+          vec4 badge = r < 1.0 ? vec4(mix(vec3(0.16, 0.72, 0.42), vec3(0.32, 0.86, 0.55), 0.5 + 0.5 * c.y), 1.0) : r < 1.22 ? vec4(1.0) : vec4(0.0);
+          if (r < 1.0 && tri > 0.5) badge = vec4(1.0);
+          if (r >= 1.22 && r < 1.32) badge = vec4(0.17, 0.18, 0.32, 0.6);
+          col = over(badge, col);
+        } else if (vA.y >= 0.0) {
+          // 皇冠（VIP）或 zzz（還在準備中）
+          vec2 o = (vQ - vec2(sleep > 0.5 ? 0.32 : 0.0, 1.2 + bob)) / 0.46 + vec2(0.5, 0.0);
           col = over(tile(vA.y, o), col);
         }
-        // 聽過的：右上角一個綠色勾勾
-        if (vB.y > 0.5) col = over(tile(checkTile, (vQ - vec2(0.42, 0.72)) / 0.3 + vec2(0.5, 0.0)), col);
+        // 聽過的：左上角一個綠色勾勾
+        if (vB.y > 0.5) col = over(tile(checkTile, (vQ - vec2(-0.4, 1.04)) / 0.3 + vec2(0.5, 0.0)), col);
         if (col.a < 0.5) discard;
         gl_FragColor = vec4(col.rgb, 1.0);
       }`,
@@ -250,21 +282,48 @@ function makeResidents(scene, list, atlas) {
   });
   const mesh = new THREE.Mesh(quad, mat);
   mesh.frustumCulled = false;
+  mesh.renderOrder = 2;
   scene.add(mesh);
-  // 腳下的影子（平平地貼在地上）
+  // 身體：圓滾滾的豆子，顏色跟頭（圖示）一樣
+  const body = new THREE.InstancedMesh(new THREE.CapsuleGeometry(0.2, 0.18, 4, 12).translate(0, 0.3, 0), new THREE.MeshStandardMaterial({ roughness: 0.55 }), n);
+  const feet = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 10, 6), new THREE.MeshStandardMaterial({ color: 0x3d4270, roughness: 0.6 }), n * 2);
+  body.frustumCulled = feet.frustumCulled = false;
+  body.instanceMatrix.setUsage(THREE.DynamicDrawUsage); feet.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+  const grey = new THREE.Color(0xb8bccc), white = new THREE.Color(0xffffff);
+  list.forEach((p, i) => {
+    const c = (atlas.colors.get(p.e.icon) || grey).clone().lerp(white, 0.3);
+    if (p.e.state === 'unreleased') c.lerp(grey, 0.6);
+    body.setColorAt(i, c);
+  });
+  scene.add(body, feet);
+  // 腳下：影子＋光圈（綠色＝可以聽、金色＝VIP，還在準備中的只有影子）
   const sq = new THREE.InstancedBufferGeometry();
   sq.setAttribute('position', new THREE.Float32BufferAttribute([-0.5, 0, -0.5, 0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5], 3));
   sq.setIndex([0, 2, 1, 0, 3, 2]);
-  sq.setAttribute('iPos', iPos); sq.setAttribute('iB', iB);
+  sq.setAttribute('iPos', iPos); sq.setAttribute('iB', iB); sq.setAttribute('iC', iC); sq.setAttribute('iA', iA);
   sq.instanceCount = n;
   const shadow = new THREE.Mesh(sq, new THREE.ShaderMaterial({
-    vertexShader: /* glsl */ `attribute vec3 iPos; attribute vec4 iB; varying vec2 vP; void main() { vP = position.xz * 2.0; vec3 p = iPos + vec3(position.x * iB.w * 1.1, 0.05, position.z * iB.w * 0.8); gl_Position = projectionMatrix * viewMatrix * vec4(p, 1.0); }`,
-    fragmentShader: /* glsl */ `varying vec2 vP; void main() { float d = dot(vP, vP); gl_FragColor = vec4(0.25, 0.2, 0.4, 0.28 * (1.0 - smoothstep(0.3, 1.0, d))); }`,
+    uniforms: { time: uniforms.time },
+    vertexShader: /* glsl */ `attribute vec3 iPos; attribute vec4 iB; attribute vec2 iC; attribute vec4 iA; varying vec2 vP; varying vec2 vC; varying float vPh;
+      void main() { vP = position.xz * 2.0; vC = iC; vPh = iA.w; vec3 p = iPos + vec3(position.x * iB.w * 1.3, 0.12, position.z * iB.w * 1.3); gl_Position = projectionMatrix * viewMatrix * vec4(p, 1.0); }`,
+    fragmentShader: /* glsl */ `uniform float time; varying vec2 vP; varying vec2 vC; varying float vPh;
+      void main() {
+        float d = length(vP);
+        vec4 c = vec4(0.25, 0.2, 0.4, 0.3 * (1.0 - smoothstep(0.15, 0.55, d)));
+        if (vC.y < 1.5) {
+          vec3 rc = vC.y < 0.5 ? vec3(0.25, 0.85, 0.5) : vec3(1.0, 0.78, 0.25);
+          float pulse = vC.y < 0.5 ? 0.75 + 0.25 * sin(time * 3.0 + vPh) : 0.8;
+          float ring = (1.0 - smoothstep(0.0, 0.1, abs(d - 0.72))) * pulse;
+          c = vec4(mix(c.rgb, rc, ring), max(c.a, ring * 0.9));
+        }
+        if (c.a < 0.01) discard;
+        gl_FragColor = c;
+      }`,
     transparent: true, depthWrite: false,
   }));
   shadow.frustumCulled = false;
   scene.add(shadow);
-  return { mesh, iPos, iA, iB, iC, uniforms };
+  return { mesh, body, feet, iPos, iA, iB, iC, uniforms };
 }
 
 function sparkleTexture() {
@@ -342,7 +401,7 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
   const people = [];
   isles.forEach((x) => x.eps.forEach((e) => people.push({ e, isle: x })));
   const icons = [...new Set(people.map((p) => p.e.icon)), '👑', 'zzz', 'check'];
-  const atlas = makeAtlas(icons);
+  const atlas = makeAtlas(icons, ['👑', 'zzz', 'check']);
   const crown = atlas.index.get('👑'), zzz = atlas.index.get('zzz');
   const res = makeResidents(scene, people, atlas);
   const r0 = rng(0.61);
@@ -354,11 +413,12 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
     for (let k = 0; k < 6; k++) { const x = start[0] + (r0() - 0.5), z = start[1] + (r0() - 0.5); if (p.isle.canWalk(x, z)) { p.x = x; p.z = z; break; } }
     p.target = null; p.wait = r0() * 3; p.speed = 0.9 + r0() * 0.6; p.face = r0() > 0.5 ? 1 : -1;
     p.sleep = p.e.state === 'unreleased';
-    p.size = p.isle.swim ? 2.6 : 2.9;
+    p.size = p.isle.swim ? 2.7 : 3.0;
+    p.walking = 0;
     p.gy = p.isle.swim ? p.isle.walkY : p.isle.ground(p.x, p.z);
     res.iA.setXYZW(i, atlas.index.get(p.e.icon), p.e.state === 'subscriber' ? crown : p.sleep ? zzz : -1, 0, r0() * TAU);
     res.iB.setXYZW(i, p.face, 0, 0, p.size);
-    res.iC.setX(i, p.sleep ? 1 : 0);
+    res.iC.setXY(i, p.sleep ? 1 : 0, p.e.state === 'public' ? 0 : p.e.state === 'subscriber' ? 1 : 2);
     p.hi = 0;
   });
   function refreshMarks() {
@@ -368,9 +428,11 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
   }
   refreshMarks();
   const byCode = new Map(people.map((p, i) => [p.e.code, i]));
-  const camRight = new THREE.Vector3();
+  const camRight = new THREE.Vector3(), camBack = new THREE.Vector3();
+  const bodyM = new THREE.Matrix4(), footM = new THREE.Matrix4();
   function stepPeople(dt, t) {
     camRight.set(camera.matrixWorld.elements[0], 0, camera.matrixWorld.elements[2]).normalize();
+    camBack.set(camera.matrixWorld.elements[8], 0, camera.matrixWorld.elements[10]).normalize();
     people.forEach((p, i) => {
       const isle = p.isle;
       if (p.hi > 0) p.hi = Math.max(0, p.hi - dt);
@@ -410,11 +472,31 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
       }
       const bob = Math.sin(t * 0.5 + isle.phase) * 0.6;
       res.iPos.setXYZ(i, isle.pos.x + p.x, isle.pos.y + bob + p.gy, isle.pos.z + p.z);
-      res.iA.setZ(i, walking);
+      // 跳一跳：走路時小小的跳、被點到時跳高高；睡覺的輕輕晃
+      const S = p.size, step = t * 7 + res.iA.getW(i);
+      p.walking += (walking - p.walking) * Math.min(1, dt * 8);
+      const jump = p.hi > 0 ? Math.abs(Math.sin(t * 9)) * 0.5 * S : 0;
+      const hop = p.walking * Math.abs(Math.sin(step)) * 0.12 * S + jump;
+      const sink = isle.swim ? 0.32 * S : 0; // 在水裡游泳：身體泡在水裡，只露出頭
+      res.iA.setZ(i, hop - sink);
       res.iB.setX(i, p.face);
       res.iB.setZ(i, p.hi > 0 ? 1 : 0);
+      // 3D 身體和腳
+      const x = isle.pos.x + p.x, y = isle.pos.y + bob + p.gy, z = isle.pos.z + p.z;
+      const squash = 1 + p.walking * Math.sin(step * 2) * 0.06;
+      bodyM.makeScale(S / squash, S * squash * (p.sleep ? 0.8 : 1), S / squash);
+      bodyM.setPosition(x, y + hop - sink, z);
+      res.body.setMatrixAt(i, bodyM);
+      for (let k = 0; k < 2; k++) {
+        const side = k ? 1 : -1, lift = p.walking * Math.max(0, Math.sin(step + k * Math.PI)) * 0.09 * S;
+        const fwd = p.sleep ? 0.2 : 0.05;
+        footM.makeScale(0.11 * S, 0.065 * S, 0.15 * S);
+        footM.setPosition(x + camRight.x * side * 0.11 * S + camBack.x * fwd * S, y + jump + lift + 0.05 * S - sink, z + camRight.z * side * 0.11 * S + camBack.z * fwd * S);
+        res.feet.setMatrixAt(i * 2 + k, footM);
+      }
     });
     res.iPos.needsUpdate = true; res.iA.needsUpdate = true; res.iB.needsUpdate = true;
+    res.body.instanceMatrix.needsUpdate = true; res.feet.instanceMatrix.needsUpdate = true;
   }
 
   // ----- 火箭 -----
@@ -557,7 +639,7 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
     const rad = Math.max(30, 2.9 * pxPerUnit * 0.75);
     people.forEach((p, i) => {
       if (p.isle !== here) return;
-      const s = toScreen(v3.set(res.iPos.getX(i), res.iPos.getY(i) + p.size * 0.75, res.iPos.getZ(i)));
+      const s = toScreen(v3.set(res.iPos.getX(i), res.iPos.getY(i) + p.size * 0.8, res.iPos.getZ(i)));
       if (s.behind) return;
       const d = Math.hypot(s.x - sx, s.y - sy);
       if (d < rad && d < bestD) { best = i; bestD = d; }
@@ -746,7 +828,7 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
         return { id: x.def.id, x: p.x, y: p.y, behind: p.behind, dist, here: x === here };
       });
     },
-    residentScreen(code) { const i = byCode.get(code); if (i == null) return null; return toScreen(v3.set(res.iPos.getX(i), res.iPos.getY(i) + people[i].size * 1.8, res.iPos.getZ(i))); },
+    residentScreen(code) { const i = byCode.get(code); if (i == null) return null; return toScreen(v3.set(res.iPos.getX(i), res.iPos.getY(i) + people[i].size * 1.6, res.iPos.getZ(i))); },
     /** 不坐火箭，直接換到那座島（測試用）。 */
     jump(id) { const to = byId.get(id); if (!to || flight) return; here = to; mode = 'island'; camAnim = null; Object.assign(view, islandView(here)); onArrive(here.def); },
     debug: { renderer, scene, camera, view, people, isles, ship, get here() { return here; }, get flight() { return flight; } },

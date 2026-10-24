@@ -78,7 +78,10 @@ function renderHud() {
   const x = isleById.get(def.id);
   const seen = x.eps.filter((e) => stamps.seen.includes(e.code)).length;
   $('#isle-name').textContent = `${def.emoji} ${def.name}`;
-  $('#isle-meta').textContent = `${x.eps.length} 個故事居民 · 拜訪過 ${seen} 個`;
+  // 一眼看出這座島有幾個可以聽、幾個要請大人幫忙、幾個還在準備
+  const ct = (st) => x.eps.filter((e) => e.state === st).length;
+  $('#isle-meta').innerHTML = [[ct('public'), 'can', '▶ 可以聽'], [ct('subscriber'), 'vip', '👑 VIP'], [ct('unreleased'), 'soon', '💤 準備中']]
+    .filter(([n]) => n).map(([n, cls, txt]) => `<span class="lg ${cls}">${txt} ${n}</span>`).join('') + (seen ? `<span class="lg-seen">✓ 拜訪過 ${seen}</span>` : '');
   $('#people-count').textContent = `${x.eps.length} 位`;
   $('#people-btn').disabled = false;
   $('#map-ico').textContent = '🗺️'; $('#map-txt').textContent = '全部的島';
@@ -115,7 +118,8 @@ function openPeople() {
     <button class="close" type="button" data-close aria-label="關閉">✕</button>
     <p class="hero" aria-hidden="true">${def.emoji}</p>
     <h2 id="people-title">${esc(def.name)}的居民</h2>
-    <p class="hint">${x.eps.length} 個故事住在這裡。👑 是訂閱的故事，💤 的還在準備中。</p>
+    <p class="hint">${x.eps.length} 個故事住在這裡。</p>
+    <p class="legend"><span class="lg can">▶ 綠色：可以聽</span><span class="lg vip">👑 金色：VIP，請大人幫忙</span><span class="lg soon">💤 睡覺：還在準備中</span></p>
     <ul class="eps">${rows}</ul></div>`;
   $('#people').showModal();
 }
@@ -209,8 +213,11 @@ function openGuideMenu() {
 /** 跟一個居民打招呼：讓他跳一跳，再打開他的故事卡。 */
 function meet(code) {
   world.greet(code);
-  setTimeout(() => channels.openChannel(code), 450);
+  openSoon(code);
 }
+// 先讓居民跳一下再打開卡片；連點好幾次只開最後一次
+let openTimer = 0;
+function openSoon(code) { clearTimeout(openTimer); openTimer = setTimeout(() => channels.openChannel(code), 450); }
 
 function bind() {
   $('#station-btn').addEventListener('click', openStation);
@@ -233,11 +240,12 @@ function bind() {
   });
   ['pointerdown', 'keydown', 'wheel'].forEach((t) => window.addEventListener(t, resetIdle, { passive: true }));
 }
+const LISTEN = { public: '▶ 可以在這裡聽', subscriber: '👑 VIP 故事：請大人幫忙收聽', unreleased: '💤 還在準備中，還不能聽' };
 function showTip(code, x, y) {
   const tip = $('#isle-tip');
   if (!code || document.querySelector('dialog[open]')) { tip.hidden = true; return; }
   const e = byCode.get(code);
-  tip.textContent = e.title;
+  tip.innerHTML = `${esc(e.title)}<small class="st ${e.state}">${LISTEN[e.state] || ''}</small>`;
   tip.hidden = false;
   tip.style.transform = `translate(${Math.round(x + 14)}px, ${Math.round(y - 40)}px)`;
 }
@@ -297,7 +305,7 @@ async function init() {
   world = createIsles({
     canvas: $('#world'), islands: isles, startId: want, getStamps: () => stamps,
     onReady: () => document.body.classList.add('ready'),
-    onResident: (code) => { setTimeout(() => channels.openChannel(code), 450); },
+    onResident: openSoon,
     onHover: showTip,
     onLaunch: (def) => { toast(`🚀 出發！<br><small>飛往${esc(def.name)}</small>`); },
     onArrive: (def) => {

@@ -10,9 +10,9 @@ export const fill = (text, vars) => text.replace(/\{(\w+)\}/g, (_, k) => vars[k]
 export const pick = (list) => list[Math.floor(Math.random() * list.length)];
 
 export function stateBadge(e) {
-  if (e.state === 'subscriber') return '<span class="badge vip">VIP</span>';
-  if (e.state === 'unreleased') return '<span class="badge soon">即將登場</span>';
-  return '<span class="badge">公開</span>';
+  if (e.state === 'subscriber') return '<span class="badge vip">👑 VIP・請大人幫忙</span>';
+  if (e.state === 'unreleased') return '<span class="badge soon">💤 準備中</span>';
+  return '<span class="badge can">▶ 可以聽</span>';
 }
 
 /**
@@ -28,15 +28,20 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     return (st.ear.includes(code) ? '👂' : '') + (st.hand.includes(code) ? '✋' : '');
   };
 
+  // 每次打開、關掉都換一個號碼：還在讀資料時被關掉（或又點了別人），就不要再跳出來
+  let openSeq = 0;
+  $('#channel').addEventListener('close', () => { openSeq++; });
   async function openChannel(code) {
     const e = byCode.get(code);
     if (!e) return;
+    const mine = ++openSeq;
     onOpen(code);
     addStamp('seen', code);
     let content = null;
     if (e.content) {
       try { content = await (await fetch(e.content)).json(); } catch { content = null; }
     }
+    if (mine !== openSeq) return;
     const listen = e.listen || {};
     let actions = '';
     if (e.state === 'public' && listen.audio) {
