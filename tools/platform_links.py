@@ -13,14 +13,16 @@ import base64
 import json
 import os
 import re
+import time
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "platforms.json"
 APPLE_ID = "1812447277"
+SPOTIFY_SHOW = "1eyISRdcgDTwZqIqrP1qKv"  # 從 Firstory 節目頁找到的；SPOTIFY_SHOW_ID 可以蓋過
 FIRSTORY_PAGES = ["https://open.firstory.fm/user/kidsci", "https://open.firstory.fm/user/kidsci/platforms"]
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
 log: list[str] = []
@@ -44,20 +46,64 @@ def clean_url(url: str | None) -> str | None:
 
 
 # ---------- Apple ----------
-def apple() -> dict:
+def apple_rows(results: list[dict]) -> list[dict]:
+    return [{"title": r.get("trackName", ""), "url": clean_url(r.get("trackViewUrl")), "guid": r.get("episodeGuid"), "date": r.get("releaseDate"), "ms": r.get("trackTimeMillis")}
+            for r in results if (r.get("wrapperType") == "podcastEpisode" or r.get("kind") == "podcast-episode") and str(r.get("collectionId")) == APPLE_ID]
+
+
+def apple_search(term: str) -> list[dict]:
+    q = urllib.parse.urlencode({"term": term, "media": "podcast", "entity": "podcastEpisode", "limit": 200, "country": "tw"})
+    return apple_rows(json.loads(get(f"https://itunes.apple.com/search?{q}")).get("results", []))
+
+
+def missing_apple_codes() -> list[tuple[str, str]]:
+    """已經上架（公開或訂閱）、但還沒有 Apple 連結的集數（代碼, 標題）。"""
+    path = ROOT / "data" / "catalog.json"
+    if not path.exists():
+        return []
+    eps = json.loads(path.read_text(encoding="utf-8"))["episodes"]
+    return [(e["code"], e["title"]) for e in eps if e["state"] != "unreleased" and not (e.get("listen") or {}).get("apple")]
+
+
+def apple(prev: dict) -> dict:
     url = f"https://itunes.apple.com/lookup?id={APPLE_ID}&entity=podcastEpisode&limit=200&country=tw"
     results = json.loads(get(url)).get("results", [])
     show = next((r for r in results if r.get("wrapperType") == "track" or r.get("kind") == "podcast"), {})
-    eps = [{"title": r.get("trackName", ""), "url": clean_url(r.get("trackViewUrl")), "guid": r.get("episodeGuid"), "date": r.get("releaseDate"), "ms": r.get("trackTimeMillis")}
-           for r in results if r.get("wrapperType") == "podcastEpisode" or r.get("kind") == "podcast-episode"]
-    say(f"Apple：節目共 {show.get('trackCount')} 集，這次拿到 {len(eps)} 集")
-    return {"show": clean_url(show.get("collectionViewUrl")), "total": show.get("trackCount"), "episodes": eps}
+    found = {e["url"]: e for e in (prev.get("episodes") or []) if e.get("url")}  # 以前找到的都留著（Apple 很少下架）
+    before = len(found)
+    for e in apple_rows(results):
+        found[e["url"]] = e
+    say(f"Apple：節目共 {show.get('trackCount')} 集；Lookup 拿到 {len(apple_rows(results))} 集")
+    # Lookup 只給還在 RSS 裡的集數；舊的用搜尋找：先搜節目名稱，再一集一集搜標題
+    try:
+        for e in apple_search("科學好好聽"):
+            found[e["url"]] = e
+    except Exception as err:  # noqa: BLE001
+        say(f"Apple 搜尋失敗：{err}")
+    searched = dict(prev.get("searched") or {})
+    week_ago = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%d")
+    todo = [(c, t) for c, t in missing_apple_codes() if searched.get(c, "") < week_ago][:90]
+    for code, title in todo:
+        term = re.sub(r"[：:｜|，,。！!？?（）()「」『』〈〉\[\]]+", " ", title).strip()[:40]
+        try:
+            for e in apple_search(term):
+                found[e["url"]] = e
+            searched[code] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        except Exception as err:  # noqa: BLE001
+            say(f"Apple 搜尋 {code} 失敗：{err}")
+            if "429" in str(err):
+                break
+        time.sleep(3.2)  # iTunes 搜尋一分鐘大約 20 次
+    say(f"Apple：一集一集搜尋 {len(todo)} 集；全部共 {len(found)} 集（之前 {before} 集）")
+    return {"show": clean_url(show.get("collectionViewUrl")), "total": show.get("trackCount"), "episodes": list(found.values()), "searched": searched}
 
 
 # ---------- Spotify ----------
 def spotify_show_id() -> str | None:
     if os.environ.get("SPOTIFY_SHOW_ID"):
         return os.environ["SPOTIFY_SHOW_ID"]
+    if SPOTIFY_SHOW:
+        return SPOTIFY_SHOW
     for page in FIRSTORY_PAGES:
         try:
             html = get(page)
@@ -146,7 +192,7 @@ def spotify_public(show: str) -> list[dict]:
     return list(found.values())
 
 
-def spotify() -> dict:
+def spotify(prev: dict) -> dict:
     show = spotify_show_id()
     if not show:
         say("Spotify：找不到節目 ID（可以在 repo 的 Secrets 設定 SPOTIFY_SHOW_ID）")
@@ -159,8 +205,12 @@ def spotify() -> dict:
             return {"show": f"https://open.spotify.com/show/{show}", "source": "api", "episodes": eps}
     except Exception as err:  # noqa: BLE001
         say(f"Spotify API 失敗：{err}")
-    eps = spotify_public(show)
-    return {"show": f"https://open.spotify.com/show/{show}", "source": "public", "episodes": eps}
+    # 沒有 API 金鑰：公開頁面只看得到最新的一集，每天累積下來
+    say("Spotify：沒有設定 SPOTIFY_CLIENT_ID／SPOTIFY_CLIENT_SECRET，只能從公開頁面找（通常只有最新一集）")
+    found = {e["url"]: e for e in (prev.get("episodes") or []) if e.get("url")}
+    for e in spotify_public(show):
+        found[e["url"]] = e
+    return {"show": f"https://open.spotify.com/show/{show}", "source": "public", "episodes": list(found.values())}
 
 
 def main() -> None:
@@ -168,7 +218,7 @@ def main() -> None:
     data = {"generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
     for name, fn in (("apple", apple), ("spotify", spotify)):
         try:
-            data[name] = fn()
+            data[name] = fn(old.get(name) or {})
         except Exception as err:  # noqa: BLE001
             say(f"{name} 失敗：{err}")
             data[name] = old.get(name) or {"show": None, "episodes": []}
