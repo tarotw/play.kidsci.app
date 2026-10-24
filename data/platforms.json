@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-24T03:00:49Z",
+ "generated": "2026-10-24T03:05:07Z",
  "apple": {
   "show": "https://podcasts.apple.com/tw/podcast/%E7%A7%91%E5%AD%B8%E5%A5%BD%E5%A5%BD%E8%81%BD/id1812447277",
   "total": 202,
@@ -1017,10 +1017,10 @@
  },
  "log": [
   "Apple：節目共 202 集；Lookup 拿到 133 集",
-  "Apple：一集一集搜尋 65 集；全部共 133 集（之前 133 集）",
+  "Apple：一集一集搜尋 0 集；全部共 133 集（之前 133 集）",
   "Spotify 節目 ID：1eyISRdcgDTwZqIqrP1qKv",
   "Spotify：沒有設定 SPOTIFY_CLIENT_ID／SPOTIFY_CLIENT_SECRET，只能從公開頁面找（通常只有最新一集）",
-  "Spotify 嵌入頁：14737 字，找到 1 集",
+  "Spotify 嵌入頁：14741 字，找到 1 集",
   "Spotify 節目頁：167157 字，多找到 0 集；頁面上的單集連結 0 個"
  ]
 }
