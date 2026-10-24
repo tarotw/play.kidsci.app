@@ -828,7 +828,7 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
         return { id: x.def.id, x: p.x, y: p.y, behind: p.behind, dist, here: x === here };
       });
     },
-    residentScreen(code) { const i = byCode.get(code); if (i == null) return null; return toScreen(v3.set(res.iPos.getX(i), res.iPos.getY(i) + people[i].size * 1.6, res.iPos.getZ(i))); },
+    residentScreen(code) { const i = byCode.get(code); if (i == null) return null; return toScreen(v3.set(res.iPos.getX(i), res.iPos.getY(i) + people[i].size * 0.8, res.iPos.getZ(i))); }, // 頭的中間（點這裡一定點到他）
     /** 不坐火箭，直接換到那座島（測試用）。 */
     jump(id) { const to = byId.get(id); if (!to || flight) return; here = to; mode = 'island'; camAnim = null; Object.assign(view, islandView(here)); onArrive(here.def); },
     debug: { renderer, scene, camera, view, people, isles, ship, get here() { return here; }, get flight() { return flight; } },
