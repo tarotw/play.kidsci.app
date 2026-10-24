@@ -69,6 +69,6 @@ python3 -m http.server 8000   # 然後開 http://localhost:8000/（其他版本�
 
 ## 發布
 
-GitHub Pages（Settings → Pages → Deploy from branch → `main` / root），`CNAME` 已設為 `play.kidsci.app`；kidsci.app 的 DNS 要加一筆 `play` CNAME 指向 `tarotw.github.io`。舊網址 `universe.kidsci.app` 由另一個小 repo（`universe-redirect`）掛著，自動轉到 play.kidsci.app（保留 `?ch=`、`?isle=`）。
+GitHub Pages（Settings → Pages → Deploy from branch → `main` / root），`CNAME` 已設為 `play.kidsci.app`；kidsci.app 的 DNS 要加一筆 `play` CNAME 指向 `tarotw.github.io`。
 
 `bridge/kidsci-bridge.js` 要放進 lab.kidsci.app 的根目錄，並在每個實驗頁加 `<script src="/kidsci-bridge.js" defer></script>`。
