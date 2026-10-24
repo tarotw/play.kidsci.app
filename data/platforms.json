@@ -1,5 +1,667 @@
 {
- "generated": "2026-10-24T03:05:07Z",
+ "generated": "2026-10-24T03:29:00Z",
+ "firstory": {
+  "https://open.firstory.fm/story/cmdpx4cur00cq01xld19aha50": {
+   "spotify": "https://open.spotify.com/episode/3LeJFdsCDBCpJGKXBftJ8v",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cut00cw01xl34o1dbc8": {
+   "spotify": "https://open.spotify.com/episode/3cSAaS4A10S9pQ355ZY3oJ",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cut00cy01xlbql4h3t6": {
+   "spotify": "https://open.spotify.com/episode/2cgWj418n801Jp5Q9q0OEo",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cut00d001xl0nr661t3": {
+   "spotify": "https://open.spotify.com/episode/2TAW0LkXELaF9Sb8hMNEjg",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cut00d201xl18mqglw5": {
+   "spotify": "https://open.spotify.com/episode/465doevv9jyrKjDBK23ykc",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cut00d401xl08051lof": {
+   "spotify": "https://open.spotify.com/episode/5DuXw9Jp7nY6DYVEWI2t99",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cut00d601xlcet5eyai": {
+   "spotify": "https://open.spotify.com/episode/2MwVjuUdAllDsJtWb3SAWj",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cut00d801xlbdm74d27": {
+   "spotify": "https://open.spotify.com/episode/1pCPXbwdzpR0iQWb4PEncz",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cut00da01xlhxkb8c1n": {
+   "spotify": "https://open.spotify.com/episode/3KxPHusxAAD42oqwyGJQpN",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cut00dc01xl51vbhfuq": {
+   "spotify": "https://open.spotify.com/episode/53iwEetNdMBOLKmTWh0HRI",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cut00de01xl5jl5h7hp": {
+   "spotify": "https://open.spotify.com/episode/3euALP8knlaZA5tXLtgICH",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cut00dg01xl03b70wyh": {
+   "spotify": "https://open.spotify.com/episode/3jbkGNA92BGKMdPRCNcWkA",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cut00di01xl35605mab": {
+   "spotify": "https://open.spotify.com/episode/53tf5m6WXIMVeZQN0TIRON",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cuu00dk01xle9m8flf4": {
+   "spotify": "https://open.spotify.com/episode/111ebpaFGQiTAcOhBE4Mjc",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cuu00dm01xlgyrg3p6h": {
+   "spotify": "https://open.spotify.com/episode/5bstn2qw5dZsYtus7aVpgx",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cuu00do01xl8uj37r2b": {
+   "spotify": "https://open.spotify.com/episode/3kgcXjSwmRnoICJNAAymAX",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cuu00dq01xl06ck02rx": {
+   "spotify": "https://open.spotify.com/episode/0EZ3ple8dMpeI92kl65C0L",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cuu00ds01xl500n5g7g": {
+   "spotify": "https://open.spotify.com/episode/0TuJOXZWcaszamA4j77Q0N",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cuu00du01xl056p3562": {
+   "spotify": "https://open.spotify.com/episode/1IvjVOujuc5VssUBnPR69v",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cuu00dw01xl51uhg5pn": {
+   "spotify": "https://open.spotify.com/episode/02fC5zjlNmIn8fEuJZHipU",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cuy00dy01xle7fxbmk3": {
+   "spotify": "https://open.spotify.com/episode/6yDz6oMyE61KiQxj85n359",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cv400e201xlfqdt90k4": {
+   "spotify": "https://open.spotify.com/episode/0aDjFOqhnbyl5poJJE153d",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cv400e401xlen4p5pri": {
+   "spotify": "https://open.spotify.com/episode/1kEGWHs8ogrPgk7T5W5eLT",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cv400e601xlg43d1si8": {
+   "spotify": "https://open.spotify.com/episode/0NDue5LMVwyMGMRhq8MzmM",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cv500e801xlh5xk7od9": {
+   "spotify": "https://open.spotify.com/episode/1hqUKGWv7pmfJ7I66l6BrR",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cv500ec01xl8efrg15r": {
+   "spotify": "https://open.spotify.com/episode/2T6ILBszcYZC1Fjp2CCowC",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cv500ee01xl9f4o2bhb": {
+   "spotify": "https://open.spotify.com/episode/1mvETIYtFKVn1jyUcFjiVE",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cv500ei01xlahd63d8m": {
+   "spotify": "https://open.spotify.com/episode/2VSGgMT6V8FrWqVXvzFRQw",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cv500ek01xl7iqn7xel": {
+   "spotify": "https://open.spotify.com/episode/4Plk9gpNOCCuoTqsO9o7Xw",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmdpx4cvd00f201xlfi291v91": {
+   "spotify": "https://open.spotify.com/episode/3cgEVrIZ6bRUF3wJc2agzj",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmhm64phr04mq01vk2mucesur": {
+   "spotify": "https://open.spotify.com/episode/3SRTJaU26tm8iWlc04IVaC",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmhp0odyk0fqa010n5hzob0uc": {
+   "spotify": "https://open.spotify.com/episode/5Z6U81jvONmt8JU3zZ7IS8",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmhrvfaai13xi01ym65291qcd": {
+   "spotify": "https://open.spotify.com/episode/1arbyONENjTSGBhZdcHuKl",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmhv35mr702pq01sx93699mic": {
+   "spotify": "https://open.spotify.com/episode/2VrNSyUc49Vlpu3iMcOqkp",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmj1gmwxq031001rz8tgj7lyf": {
+   "spotify": "https://open.spotify.com/episode/6eEEm3vFIqOLWjoO8gcTXC",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmj4bucei0f8d01jya39bbk8g": {
+   "spotify": "https://open.spotify.com/episode/5ROGKz2nSfG17rnQik0yzM",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmj76e1gx150m01nd1lpvcp1v": {
+   "spotify": "https://open.spotify.com/episode/6vATnidiSW8lJ8INTz8OP4",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmk8bu12n0ivc01te3aqc3tzv": {
+   "spotify": "https://open.spotify.com/episode/3WRlDVWubwtycz86H0StuM",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmlekttua5a3i01slcytig2p4": {
+   "spotify": "https://open.spotify.com/episode/3scrn72y1qxj8eh6Bs9xz7",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmlfwxsxk6va001ubhsa63742": {
+   "spotify": "https://open.spotify.com/episode/5buk98CRlZVtWVT3kNvlcn",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmlhd7mia7n7001ubdjy5hdcz": {
+   "spotify": "https://open.spotify.com/episode/5jONgUHsz6Pp7LAfGvL5sT",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmlirywy50anb01u0dbqpd6w9": {
+   "spotify": "https://open.spotify.com/episode/1hczUoFJgP5MOqcuC1FTNy",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmlkbdman0ed901t94lac1gt9": {
+   "spotify": "https://open.spotify.com/episode/6ji3YsaMqqwBI6M2birdi4",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmlrckyw32x4v01rd48thf1yo": {
+   "spotify": "https://open.spotify.com/episode/01M6LxmzrdEr3FMpb6CvdB",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmlsrxt360lgc01rf37rpejcr": {
+   "spotify": "https://open.spotify.com/episode/44YfqFVuCsYxYGcvY5nP8A",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmmfmxj0s0wae01scdnsv61gf": {
+   "spotify": "https://open.spotify.com/episode/6oUDrEgbrI16K3x0ramQ2Q",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmmh2ol37afi901uhgcfh9atk": {
+   "spotify": "https://open.spotify.com/episode/2ibyrJvHdxqAYmhX5z7haE",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmmjy73i33f9k01sccrpedc9k": {
+   "spotify": "https://open.spotify.com/episode/7p8mE7UO5AiuYF2IrneW1p",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmmms5lc3e1o801uh3yp363mt": {
+   "spotify": "https://open.spotify.com/episode/5gj0h2HNCwKLMhsdJ5fo1T",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmmpnhkt8fy1x01uh2fn97j8q": {
+   "spotify": "https://open.spotify.com/episode/2bNBzkCo1sMsyUzKLp1lic",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmmrf6x6zfy6d01ph9a6603gg": {
+   "spotify": "https://open.spotify.com/episode/4lkDMhcKGbZUagANjKGeHw",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmmtyclwgj61r01uhhwdp1h0l": {
+   "spotify": "https://open.spotify.com/episode/27rMEhIFiNCaUxw4W0GHzz",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmmwv24071x9s01r9cqxghb3p": {
+   "spotify": "https://open.spotify.com/episode/7hnVMsKS9ZC7607OczA0al",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmmzn93t60o9a01sj360thtyp": {
+   "spotify": "https://open.spotify.com/episode/6QQRTv9bgFEJL59P62dtdb",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmn12oq3w1khv01sjhcll3o0y": {
+   "spotify": "https://open.spotify.com/episode/10YvYAg65dqUCBqnJe7TMF",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmn3ulh5q00lk01r7594813v0": {
+   "spotify": "https://open.spotify.com/episode/1OtrBBHjy7wg86kpvCQJPf",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmn6t54s809yj01t8ed9x0h0a": {
+   "spotify": "https://open.spotify.com/episode/2lyo87cVkxESYQq1daOPR5",
+   "apple": null,
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmn9lm7nm0mrf01z0dkdvbddm": {
+   "spotify": "https://open.spotify.com/episode/5w5DmueqfcQbnuCB7S5xQk",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000757817196",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmn9mhw400eec0103g9rkhoqo": {
+   "spotify": "https://open.spotify.com/episode/2RuxcYoNz3GcvRa3TSNwQ0",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000757963869",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmnbtegge0a1t01y39r6edkne": {
+   "spotify": "https://open.spotify.com/episode/7IoSE9isJ8S4pvA6uFNad8",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000758301068",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmnbu2vxr0yfg01z07mcyf80e": {
+   "spotify": "https://open.spotify.com/episode/2t4mFsN8IahbZmyhByv0wG",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000758098775",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmnd0aays143b01w01wmva7zv": {
+   "spotify": "https://open.spotify.com/episode/0PZfufIKNMre7dmK2WWYnL",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000758524519",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmnd0vsix0x070103548q7681": {
+   "spotify": "https://open.spotify.com/episode/2z0gzlajF9LnerQVZJd998",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000758731277",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmnftzs990w8k01z388sz8848": {
+   "spotify": "https://open.spotify.com/episode/1jgycc9JnLIbZ8TzOhUpTo",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000759124493",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmnfu4xv61jjf01w0djrs9uuq": {
+   "spotify": "https://open.spotify.com/episode/40lj6BuHmOLTU4bH4WS5zb",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000759303451",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmno2evd201nn01v21n7ogovr": {
+   "spotify": "https://open.spotify.com/episode/2a2BRUXUUR1IvmvbAjspbu",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000760545882",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmnvn1nkk0gnx01tsh7ea2l92": {
+   "spotify": "https://open.spotify.com/episode/6OMh8LamfuNUHbymYFXS5J",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000760988882",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmnzsy7kt00kg01wy3afeela7": {
+   "spotify": "https://open.spotify.com/episode/2nTSKRxj9jwDUVxnps69In",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000761651790",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmo0utqad03p501vq3zh3cd5c": {
+   "spotify": "https://open.spotify.com/episode/6sisuC2lSxTZR5qK43fgIr",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000761720018",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmo1a5s8x05p901vgfp6bgkj3": {
+   "spotify": "https://open.spotify.com/episode/6c5WwncJJMQOMwJxTSOyvI",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000762068214",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmo1addpl05ql01vgbjwu8gvd": {
+   "spotify": "https://open.spotify.com/episode/5L6QM7rGSaFs65oeGNZ1JH",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000762290951",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmo5tq0tz0j2a01vq4e962x2f": {
+   "spotify": "https://open.spotify.com/episode/5y3sfBOU4tOUvzUQXzUft1",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000762961310",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmo8f5ebt0fbh01wy12dk8xgx": {
+   "spotify": "https://open.spotify.com/episode/1BXHDiSMjxHkxlfKedxXcR",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000763322933",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmoft9oyz1g7u01vqgnnr9wh7": {
+   "spotify": "https://open.spotify.com/episode/7qT6zZNKHLTMsHdxrWtcWv",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000763924011",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmoh3o6js0d0s01vg1fxf37vh": {
+   "spotify": "https://open.spotify.com/episode/2ckIVn6aKnNPbaFEwcnLBT",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000763938105",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmoihd5320i1901w6db8t5co9": {
+   "spotify": "https://open.spotify.com/episode/53QIeOYKK01kJUGfq2iWKs",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000764579305",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmojrdmsq002m01vv2ov79v8z": {
+   "spotify": "https://open.spotify.com/episode/7KfmEQ2cJXcEC4NZUXuouI",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000765773272",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmomuv75n0b8101xrdnvt1jy1": {
+   "spotify": "https://open.spotify.com/episode/4KhyqyMA4lC36C6OmQTbiK",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000765669674",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmorat5jl03h601vm3wkd4dey": {
+   "spotify": "https://open.spotify.com/episode/2ZhnLJdCe7cnr6OosqpWvm",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000766122198",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmotvb1cn0cox01tdewog1ekx": {
+   "spotify": "https://open.spotify.com/episode/78AFI3jbYjajJ3GGlC2ZVd",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000766864962",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmozvjkgc05jq01w671l65osi": {
+   "spotify": "https://open.spotify.com/episode/3pGEX1VdM1rup3MASrbF82",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000767276900",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmp2f0r150exi01xm21pudjh7": {
+   "spotify": "https://open.spotify.com/episode/3gSOX1T3yZsp9U3xt2qgoY",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000767653748",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmp9ve5lo00r301wha39hdu3x": {
+   "spotify": "https://open.spotify.com/episode/3Z4HlNSC4KB0Liuq2O3W4Q",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000768461673",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmpceawpr00r801p6evhl3ohb": {
+   "spotify": "https://open.spotify.com/episode/2xL4JQ4EBNKN0XUkWrXSpj",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000768812408",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmpjik1tn07d901qg3qusdfx1": {
+   "spotify": "https://open.spotify.com/episode/1K5uv6OTMC6ddsd9bgHqlU",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000769547502",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmpjixrlj00ym01nr4wu1fcmm": {
+   "spotify": "https://open.spotify.com/episode/50y5AKjDeBpBs5LsWgFkLY",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000769897272",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmpv2d7hx0b5v01wr05td8kqn": {
+   "spotify": "https://open.spotify.com/episode/3BIVFJldl3nhMFrVZ9zu6g",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000770652808",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmpwfza4200kp01y0avru2r7f": {
+   "spotify": "https://open.spotify.com/episode/6SsiHZnGjn4a6RK1t8UnRP",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000771058191",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmq393x4u08kh010pawxpdvl8": {
+   "spotify": "https://open.spotify.com/episode/11ZEJF4mLpxkhIodiPOzWv",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000771593142",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmq6et3a600en01yg8ec9gql0": {
+   "spotify": "https://open.spotify.com/episode/2akKFYVR3QZWFhNJ6QSyHV",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000771931931",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmq6eznpc00hm01vp1p8f2xcs": {
+   "spotify": "https://open.spotify.com/episode/59lnepxgNIj2UaZNmQuwdI",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000772277616",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmqd7tmfs03bb01qoeyulfteh": {
+   "spotify": "https://open.spotify.com/episode/6NhPmo6YN22NcflNTI2fhC",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000772913125",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmqf0z55d00fo01wt35d30c3z": {
+   "spotify": "https://open.spotify.com/episode/174irTMcVeZ1MQrJdmxSEi",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000773181680",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmqn6useb0dzn01xa71rrhm8l": {
+   "spotify": "https://open.spotify.com/episode/37aLRu6evKeOWjAR7VNwbx",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000773644742",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmqnf706w000801ylhb3dh3bi": {
+   "spotify": "https://open.spotify.com/episode/6AxgxcQwwWhhK7DMYyqtsh",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000774102300",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmqxmg426026c01xegvg8465v": {
+   "spotify": "https://open.spotify.com/episode/2LqGBlqIf2OklCmBbf0Lgz",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000774614359",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmqxmocb1027101xehu1h4jxf": {
+   "spotify": "https://open.spotify.com/episode/5JpSfphMNCT0RESCQRqFY1",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000775070645",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmr7u8v4c046l01t6fwhj7fz1": {
+   "spotify": "https://open.spotify.com/episode/5HSZanZI5eAzpn5BBAKeFg",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000775565679",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmr7ul7c0041h01xg8fdq2w6j": {
+   "spotify": "https://open.spotify.com/episode/1xinLxB6oNuXUbdmH6HmKF",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000776031842",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmrhnv8dm0eue01u8a05ddo0b": {
+   "spotify": "https://open.spotify.com/episode/5RfueB0DiFFoLJoLVIS0c2",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000776504846",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmrho88q80b7h01wccnbzg64y": {
+   "spotify": "https://open.spotify.com/episode/3b6Hj4g3yV6IXZDm97E6Dm",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000776974113",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmrsk94ac01sc01ulgbnc18v0": {
+   "spotify": "https://open.spotify.com/episode/1Ti5iwG1AgBDOVEBrZPR4g",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000777486149",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmrt2cpig0dzz01uldpgw7btm": {
+   "spotify": "https://open.spotify.com/episode/0WBvMWG3rXfkxyGfzB7aQb",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000777940839",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmryohz7u0oj701w81bwzbgs8": {
+   "spotify": "https://open.spotify.com/episode/1hxgWAGvdGWVo26E1VXPe8",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000778455519",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmryokos806oc01yxfley8y1l": {
+   "spotify": "https://open.spotify.com/episode/2zwDGKeUOSw18eKaux2HMv",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000778994178",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmsbtejib0w6601stfrh4goy9": {
+   "spotify": "https://open.spotify.com/episode/63qPrQmtpEVYrxEuy4rrYg",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000779581595",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmsbtug6j0wgo01xf3uvc11x1": {
+   "spotify": "https://open.spotify.com/episode/3iO9Zok706NWqcsWKBUTn1",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000780134498",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmsl6dmaw1zwn01z63cpih5bw": {
+   "spotify": "https://open.spotify.com/episode/5spvzYXSsxSUcMkgB6uo8M",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000781295874",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmsl6mp6p1zy301z60vovfupl": {
+   "spotify": "https://open.spotify.com/episode/3rEoCqKjW7ZIqr1Y5GxY74",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000783029365",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmsvhn0au0slc01xt0nkuboa8": {
+   "spotify": "https://open.spotify.com/episode/7kgOAPIwzpAhsPod2sf8WU",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000783702335",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmsvhwdt70pnr01vs2kyb16pf": {
+   "spotify": "https://open.spotify.com/episode/6jHkMvQPqdVWGTsIySz2mH",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000784426550",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmt5u4m2o1lkv01wy94kn7qqk": {
+   "spotify": "https://open.spotify.com/episode/4ol6KEU5x90K0yoiddhPVP",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000785351299",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmt5uqz6j0uvt01uxen0ua8qp": {
+   "spotify": "https://open.spotify.com/episode/5fpmdkUUSzfvt5nHimr8He",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000786118572",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmtfikiy7024n01xv82u3605o": {
+   "spotify": "https://open.spotify.com/episode/0SzjconGAwISUZgiNiSGM4",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000786870101",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmtfjnot702gw01xv906d6wbf": {
+   "spotify": "https://open.spotify.com/episode/4DtW1lgEJTMYcEIWizdtxJ",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000787520338",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmtpsqn990auy01uv6q870q1x": {
+   "spotify": "https://open.spotify.com/episode/0WpxQ9rcfAYx8HBwXUmmVo",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000788198323",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmtptd5qv0ds901uy5bed3rti": {
+   "spotify": "https://open.spotify.com/episode/6mIAiQuS0IyQ16M9Es3EQP",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000788753515",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmtztm263001i01tbhgp119aj": {
+   "spotify": "https://open.spotify.com/episode/6Wgvt8WUbOCCRw3uHKgijW",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000789385812",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmtztpng4001z01tbelxph0z2": {
+   "spotify": "https://open.spotify.com/episode/0AUlaSPe4nlT2IIv3aWL9K",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000790171164",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmu258v930am901wz5um6bz5c": {
+   "spotify": "https://open.spotify.com/episode/3jaVZRN50SyFwJgFVYM2eJ",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000789710549",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmu7xnpb00o9001z3cqnec4xv": {
+   "spotify": "https://open.spotify.com/episode/3HI4aX7VZliQKMWBjXSC6x",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000790840453",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmu7xunqf09nx01x913q3h0ch": {
+   "spotify": "https://open.spotify.com/episode/2XBcncBPaqGcP1Q2Is3xT6",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000791356695",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmudxtyzm00bo01u64z3tavg7": {
+   "spotify": "https://open.spotify.com/episode/4r3S0WVNjDQRDDovk3WWvf",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000791265602",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmujqte5102zy01uzg8udgr7d": {
+   "spotify": "https://open.spotify.com/episode/04GV4BoYBx75t3IMfPGpiz",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000792094195",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmulaerr8004x01v8hpw0gkim": {
+   "spotify": "https://open.spotify.com/episode/3tEpyqQdZMjOfRm1Ph77pL",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000792466212",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmut6rylg05wx01tofu5ng9ha": {
+   "spotify": "https://open.spotify.com/episode/138FoKQfB5u8zqmxDfpXO9",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000793147104",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmut7k17406ex01tm5vbyh49m": {
+   "spotify": "https://open.spotify.com/episode/1Sr5GmfvtPe9mZ121UFGtj",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000793527379",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmutwxwof07bm01v16rteccxq": {
+   "spotify": "https://open.spotify.com/episode/7zYV2xiCuJxnpwkbbtHGiF",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000793107060",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmv3s8fzh00o901vsd8ny74tq": {
+   "spotify": "https://open.spotify.com/episode/2kiDYBkzNbpE60CNjJ5nFB",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000795822576",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmv3sezy8092m01xncdr49gk5": {
+   "spotify": "https://open.spotify.com/episode/2A64fhpTIh7j0ez79fOW3Y",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000796388493",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmvd8d9xg08q101x6ffb5hpw9": {
+   "spotify": "https://open.spotify.com/episode/2hnihdDz3Gpe3Pg05ybemi",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000796975947",
+   "checked": "2026-10-24"
+  },
+  "https://open.firstory.fm/story/cmvg2ht3m01h801w48f4iaosm": {
+   "spotify": "https://open.spotify.com/episode/39O86S9aP8znpGJ3gDiS8c",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000797511641",
+   "checked": "2026-10-24"
+  }
+ },
  "apple": {
   "show": "https://podcasts.apple.com/tw/podcast/%E7%A7%91%E5%AD%B8%E5%A5%BD%E5%A5%BD%E8%81%BD/id1812447277",
   "total": 202,
@@ -1016,11 +1678,12 @@
   ]
  },
  "log": [
+  "Firstory 單集頁：這次看了 132 頁；132 集裡有 Spotify 連結 132 集、Apple 連結 75 集",
   "Apple：節目共 202 集；Lookup 拿到 133 集",
   "Apple：一集一集搜尋 0 集；全部共 133 集（之前 133 集）",
   "Spotify 節目 ID：1eyISRdcgDTwZqIqrP1qKv",
   "Spotify：沒有設定 SPOTIFY_CLIENT_ID／SPOTIFY_CLIENT_SECRET，只能從公開頁面找（通常只有最新一集）",
-  "Spotify 嵌入頁：14741 字，找到 1 集",
+  "Spotify 嵌入頁：14739 字，找到 1 集",
   "Spotify 節目頁：167157 字，多找到 0 集；頁面上的單集連結 0 個"
  ]
 }
