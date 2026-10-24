@@ -45,6 +45,42 @@ def clean_url(url: str | None) -> str | None:
     return re.sub(r"[?&]uo=\d+$", "", url)
 
 
+# ---------- Firstory 單集頁：上面有這一集在 Spotify、Apple 的連結（Firstory 自己發佈到這些平台） ----------
+def firstory_pages(prev: dict) -> dict:
+    path = ROOT / "data" / "status.json"
+    if not path.exists():
+        return prev
+    status = json.loads(path.read_text(encoding="utf-8"))["episodes"]
+    links = sorted({r["link"] for recs in status.values() for r in recs if r.get("link")})
+    found = dict(prev)
+    week_ago = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%d")
+    fetched = 0
+    for url in links:
+        old = found.get(url) or {}
+        if old.get("spotify") and old.get("apple"):
+            continue  # 兩個都有了，不用再看
+        if old.get("checked", "") >= week_ago:
+            continue  # 一週內看過、還沒有連結：下週再看（平台可能還在處理）
+        try:
+            html = get(url)
+        except Exception as err:  # noqa: BLE001
+            say(f"Firstory 單集頁讀不到：{url}（{err}）")
+            continue
+        sp = re.findall(r"open\.spotify\.com/episode/([A-Za-z0-9]{22})", html)
+        ap = re.findall(r"podcasts\.apple\.com/(?:[a-z]{2}/)?podcast/(?:[^\"'\s<>\\?]*/)?id" + APPLE_ID + r"\?i=(\d+)", html)
+        found[url] = {
+            "spotify": f"https://open.spotify.com/episode/{sp[0]}" if sp else old.get("spotify"),
+            "apple": f"https://podcasts.apple.com/tw/podcast/id{APPLE_ID}?i={ap[0]}" if ap else old.get("apple"),
+            "checked": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+        }
+        fetched += 1
+        time.sleep(0.35)
+    sp_n = sum(1 for v in found.values() if v.get("spotify"))
+    ap_n = sum(1 for v in found.values() if v.get("apple"))
+    say(f"Firstory 單集頁：這次看了 {fetched} 頁；{len(found)} 集裡有 Spotify 連結 {sp_n} 集、Apple 連結 {ap_n} 集")
+    return found
+
+
 # ---------- Apple ----------
 def apple_rows(results: list[dict]) -> list[dict]:
     return [{"title": r.get("trackName", ""), "url": clean_url(r.get("trackViewUrl")), "guid": r.get("episodeGuid"), "date": r.get("releaseDate"), "ms": r.get("trackTimeMillis")}
@@ -216,6 +252,11 @@ def spotify(prev: dict) -> dict:
 def main() -> None:
     old = json.loads(OUT.read_text(encoding="utf-8")) if OUT.exists() else {}
     data = {"generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
+    try:
+        data["firstory"] = firstory_pages(old.get("firstory") or {})
+    except Exception as err:  # noqa: BLE001
+        say(f"Firstory 單集頁失敗：{err}")
+        data["firstory"] = old.get("firstory") or {}
     for name, fn in (("apple", apple), ("spotify", spotify)):
         try:
             data[name] = fn(old.get(name) or {})

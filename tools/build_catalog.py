@@ -78,6 +78,16 @@ def platform_links(status: dict) -> dict[str, dict[str, str]]:
                 trailers.add(rec["title"].strip())
     titles, overrides = load_drive_titles(), load_overrides()
     out: dict[str, dict[str, str]] = {"apple": {}, "spotify": {}}
+    # 最準的：Firstory 單集頁上寫的連結（每一集自己的頁面）
+    pages = data.get("firstory") or {}
+    for code, records in status.items():
+        for rec in sorted(records, key=lambda r: ("回顧" in r["title"], r.get("trailerOnly", False))):
+            page = pages.get(rec.get("link") or "") or {}
+            if rec.get("trailerOnly"):
+                continue
+            for name in ("apple", "spotify"):
+                if page.get(name):
+                    out[name].setdefault(code, page[name])
     chosen: dict[tuple[str, str], str] = {}
     for name in ("apple", "spotify"):
         for ep in (data.get(name) or {}).get("episodes", []):
@@ -91,8 +101,10 @@ def platform_links(status: dict) -> dict[str, dict[str, str]]:
                     continue
             if code == "studio":
                 continue
-            # 同一集有「熱門回顧」重播時，連到原本那一集
+            # 同一集有「熱門回顧」重播時，連到原本那一集；單集頁上已經有的就不換
             old = chosen.get((name, code))
+            if code in out[name] and old is None:
+                continue
             if old is None or ("回顧" in old and "回顧" not in title):
                 out[name][code] = ep["url"]
                 chosen[(name, code)] = title
