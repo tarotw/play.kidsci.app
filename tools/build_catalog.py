@@ -7,8 +7,12 @@ data/status.json（status_check.py 產生）、data/episodes/<代碼>.json（bui
 from __future__ import annotations
 
 import json
+import sys
 from email.utils import parsedate_to_datetime
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from status_check import code_from_title, load_drive_titles, load_overrides  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -59,6 +63,42 @@ def pick_record(records: list[dict]) -> dict | None:
     return max(records, key=key)
 
 
+def platform_links(status: dict) -> dict[str, dict[str, str]]:
+    """data/platforms.json（platform_links.py 產生）→ 每個代碼在 Apple、Spotify 的連結。"""
+    path = DATA / "platforms.json"
+    if not path.exists():
+        return {"apple": {}, "spotify": {}}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    # Firstory 上的標題 → 代碼（平台上的標題通常一模一樣）；預告片不算
+    by_title, trailers = {}, set()
+    for code, records in status.items():
+        for rec in records:
+            by_title[rec["title"].strip()] = code
+            if rec.get("trailerOnly"):
+                trailers.add(rec["title"].strip())
+    titles, overrides = load_drive_titles(), load_overrides()
+    out: dict[str, dict[str, str]] = {"apple": {}, "spotify": {}}
+    chosen: dict[tuple[str, str], str] = {}
+    for name in ("apple", "spotify"):
+        for ep in (data.get(name) or {}).get("episodes", []):
+            title = (ep.get("title") or "").strip()
+            if not ep.get("url") or title in trailers or (ep.get("ms") and ep["ms"] < 60000):
+                continue
+            code = by_title.get(title)
+            if not code:
+                code, how = code_from_title(title, titles, overrides)
+                if not code or (how.startswith("title:") and float(how[6:]) < 0.75):
+                    continue
+            if code == "studio":
+                continue
+            # 同一集有「熱門回顧」重播時，連到原本那一集
+            old = chosen.get((name, code))
+            if old is None or ("回顧" in old and "回顧" not in title):
+                out[name][code] = ep["url"]
+                chosen[(name, code)] = title
+    return out
+
+
 def main() -> None:
     titles = drive_titles()
     placements = load("placements.json")
@@ -66,6 +106,7 @@ def main() -> None:
     labs = load("labs.json")
     status = load("status.json")["episodes"] if (DATA / "status.json").exists() else {}
     levels = {l["id"]: l for l in load("world.json")["levels"]}
+    platforms = platform_links(status)
 
     labs_by_code: dict[str, list[dict]] = {}
     for lab in labs:
@@ -106,6 +147,11 @@ def main() -> None:
             }
         if state == "subscriber":
             listen = {**(listen or {}), "join": JOIN_URL}
+        # Apple Podcasts、Spotify：找得到就放連結，找不到網站會寫「即將推出」
+        apple_url = (listen or {}).get("apple") or platforms["apple"].get(code)
+        spotify_url = platforms["spotify"].get(code)
+        if apple_url or spotify_url or listen:
+            listen = {**(listen or {}), "apple": apple_url, "spotify": spotify_url}
 
         entry = {
             "code": code,
@@ -134,6 +180,8 @@ def main() -> None:
     states = Counter(e["state"] for e in episodes)
     print(len(episodes), "episodes |", dict(sorted(homes.items())), "|", dict(states))
     print("auto-placed:", [e["code"] for e in episodes if e.get("autoPlaced")])
+    has = lambda k: sum(1 for e in episodes if (e.get("listen") or {}).get(k))  # noqa: E731
+    print(f"Apple 連結 {has('apple')} 集、Spotify 連結 {has('spotify')} 集（共 {len(episodes)} 集）")
 
 
 if __name__ == "__main__":
