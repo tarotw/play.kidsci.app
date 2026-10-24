@@ -7,6 +7,7 @@ data/status.json（status_check.py 產生）、data/episodes/<代碼>.json（bui
 from __future__ import annotations
 
 import json
+import re
 import sys
 from email.utils import parsedate_to_datetime
 from pathlib import Path
@@ -162,6 +163,10 @@ def main() -> None:
         # Apple Podcasts、Spotify：找得到就放連結，找不到網站會寫「即將推出」
         apple_url = (listen or {}).get("apple") or platforms["apple"].get(code)
         spotify_url = platforms["spotify"].get(code)
+        if state == "unreleased":
+            apple_url = spotify_url = None  # 還沒播出：平台上只有預告片，先寫「即將推出」
+        if apple_url:
+            apple_url = re.sub(r"[?&]uo=\d+$", "", apple_url)
         if apple_url or spotify_url or listen:
             listen = {**(listen or {}), "apple": apple_url, "spotify": spotify_url}
 
