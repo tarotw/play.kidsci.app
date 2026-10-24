@@ -3,30 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>宇宙好好聽｜科學好好聽的宇宙地圖</title>
-<meta name="description" content="科學好好聽的宇宙地圖：整張心智圖被星雲蓋住，點發光的「？」一塊一塊打開，從大主題、小主題一路找到每一集故事。">
-<meta property="og:title" content="宇宙好好聽・宇宙地圖">
-<meta property="og:description" content="整張宇宙地圖被星雲蓋住了！點發光的「？」一層一層打開，找到 300 多個科學故事。">
+<title>宇宙好好聽｜科學好好聽的宇宙群島</title>
+<meta name="description" content="科學好好聽的宇宙群島：每一集故事都變成小居民，住在浮在天上的島。坐火箭到雨林島、恐龍島、月亮島拜訪他們，點一下就能聽故事。">
+<meta property="og:title" content="宇宙好好聽・宇宙群島">
+<meta property="og:description" content="坐火箭去拜訪住在浮空島上的 300 多個科學故事！">
+<meta property="og:image" content="https://universe.kidsci.app/assets/logo-banner.png">
 <meta property="og:url" content="https://universe.kidsci.app/">
 <link rel="canonical" href="https://universe.kidsci.app/">
-<meta property="og:image" content="https://universe.kidsci.app/assets/logo-banner.png">
-<meta name="theme-color" content="#0c0e22">
+<meta name="theme-color" content="#9fd4ff">
 <link rel="icon" href="assets/logo-square.jpg">
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="map-page">
-<div class="loading" id="loading" role="status"><img src="assets/logo-square.jpg" alt="" width="72" height="72"><p id="loading-text">正在展開宇宙地圖…</p></div>
-<div id="stage">
-  <canvas id="world" aria-hidden="true"></canvas>
-  <div id="nodes" aria-label="宇宙地圖：按 Tab 移到節點，按 Enter 打開"></div>
-</div>
+<body class="isle-page">
+<div class="loading" id="loading" role="status"><img src="assets/logo-square.jpg" alt="" width="72" height="72"><p id="loading-text">火箭加油中…</p></div>
+<canvas id="world" aria-label="宇宙群島：拖曳轉著看，兩指或滾輪拉近拉遠，點小居民聽故事，點別的島就坐火箭飛過去。也可以用下面的「居民名單」和「火箭站」。"></canvas>
+<div id="isle-labels" aria-hidden="true"></div>
+<div class="isle-tip" id="isle-tip" hidden></div>
 
 <header class="hud-top">
   <a class="brand" href="./" aria-label="宇宙好好聽首頁"><img src="assets/logo-banner.png" alt="科學好好聽" width="210" height="84"></a>
   <div class="scene">
-    <h1>🗺️ 宇宙地圖</h1>
-    <p id="map-progress"></p>
-    <div class="explore" aria-hidden="true"><span id="map-bar"></span></div>
+    <h1 id="isle-name">宇宙群島</h1>
+    <p id="isle-meta"></p>
   </div>
   <div class="hud-buttons">
     <button class="round guide-btn" id="guide-btn" type="button" aria-label="找科學隊長"><img src="assets/avatar-captain.png" alt=""></button>
@@ -35,16 +33,16 @@
   </div>
 </header>
 
-<canvas class="minimap" id="minimap" width="160" height="160" aria-label="小地圖：點一下就飛過去"></canvas>
-
-<div class="hud-zoom map-zoom" aria-label="縮放">
-  <button class="round" type="button" data-zoom="1" aria-label="放大">＋</button>
-  <button class="round" type="button" data-zoom="-1" aria-label="縮小">－</button>
-  <button class="round" type="button" data-zoom="0" aria-label="回到中心">⌂</button>
-</div>
-
 <section class="guide" id="guide" hidden tabindex="0" aria-live="polite" aria-label="科學隊長與好奇博士"></section>
 
+<nav class="isle-bar" aria-label="島上的按鈕">
+  <button class="isle-btn" id="people-btn" type="button" aria-haspopup="dialog"><span class="ico">👥</span><span class="txt">居民</span><small id="people-count"></small></button>
+  <button class="isle-btn rocket" id="station-btn" type="button" aria-haspopup="dialog"><span class="ico">🚀</span><span class="txt">火箭站</span><small>去別的島</small></button>
+  <button class="isle-btn" id="map-btn" type="button"><span class="ico" id="map-ico">🗺️</span><span class="txt" id="map-txt">全部的島</span></button>
+</nav>
+
+<dialog id="station" class="sheet" aria-labelledby="station-title"></dialog>
+<dialog id="people" class="sheet" aria-labelledby="people-title"></dialog>
 <dialog id="channel" class="sheet" aria-labelledby="ch-title"></dialog>
 <dialog id="lab" class="labsheet" aria-label="實驗">
   <div class="labbar"><span id="lab-title"></span><button type="button" id="lab-close">關閉實驗</button></div>
@@ -59,6 +57,6 @@
 </div>
 
 <script type="importmap">{"imports":{"three":"./vendor/three/three.module.min.js","three/addons/":"./vendor/three/addons/"}}</script>
-<script src="mindmap.js" type="module"></script>
+<script src="islands.js" type="module"></script>
 </body>
 </html>

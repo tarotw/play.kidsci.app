@@ -154,6 +154,10 @@ dialog::backdrop { background: rgba(3, 8, 18, 0.55); backdrop-filter: blur(2px);
 .btn { min-height: 44px; padding: 0 18px; border-radius: 999px; border: 0; background: var(--orange); color: var(--bg); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; }
 .btn.alt { background: transparent; color: var(--teal); border: 1px solid var(--teal); }
 .btn.gold { background: var(--gold); }
+/* 頻道卡上的 Apple Podcasts、Spotify */
+.platforms { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 4px 0 12px; }
+.platforms .pf-cap { flex-basis: 100%; font-size: 13px; color: var(--muted); }
+.pf.soon { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px dashed var(--line); color: var(--muted); font-size: 14px; }
 .hold { position: relative; overflow: hidden; }
 .hold .fill { position: absolute; inset: 0; width: 0; background: rgba(255, 255, 255, 0.35); transition: width 2s linear; }
 .hold.holding .fill { width: 100%; }

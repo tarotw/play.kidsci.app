@@ -45,9 +45,12 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
       if (listen.firstory) actions += holdLink(listen.firstory, '到 Firstory 收聽', 'gold');
       actions += holdLink(listen.join, '加入 VIP', 'alt');
     }
-    if (listen.apple && e.state === 'public') actions += holdLink(listen.apple, '在 Apple Podcasts 開啟', 'alt');
     actions += e.labs.map((lab) => `<button class="btn alt" type="button" data-lab="${esc(lab.url)}" data-lab-title="${esc(lab.title)}" data-code="${esc(code)}">🧪 ${esc(lab.title)}</button>`).join('');
 
+    // 每一集都列出 Apple Podcasts 和 Spotify：有連結就按住打開，還沒有就寫「即將推出」
+    const platform = (url, icon, name) => (url ? holdLink(url, `${icon} ${name}`, 'alt pf') : `<span class="pf soon">${icon} ${name}・即將推出</span>`);
+    const platforms = `<div class="platforms" aria-label="在其他平台收聽"><span class="pf-cap">在其他平台收聽</span>
+      ${platform(listen.apple, '🍎', 'Apple Podcasts')}${platform(listen.spotify, '🟢', 'Spotify')}</div>`;
     const takeaways = content?.takeaways?.length
       ? `<h3>重點句</h3><ol class="takeaways" id="takeaways">${content.takeaways.map((t) =>
         `<li data-t="${t.t ?? ''}">${esc(t.emoji)} ${esc(t.text)}</li>`).join('')}</ol>` : '';
@@ -72,7 +75,7 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
       <p class="hero" aria-hidden="true">${e.state === 'unreleased' ? '❔' : iconFor(e)}</p>
       <h2 id="ch-title">${esc(e.title)}</h2>
       <p class="hint">${esc(code)} 台 ${stateBadge(e)} ${stampMarks(code)}</p>
-      ${duo}${note}<div class="actions">${actions}</div>${takeaways}${card}${question}</div>`;
+      ${duo}${note}${actions ? `<div class="actions">${actions}</div>` : ''}${platforms}${takeaways}${card}${question}</div>`;
     if (!$('#channel').open) $('#channel').showModal();
     const params = new URLSearchParams(location.search);
     params.set('ch', code);

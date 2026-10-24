@@ -2,59 +2,12 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
 <title>宇宙好好聽｜宇宙群島</title>
-<meta name="description" content="科學好好聽的宇宙群島：每一集故事都變成小居民，住在浮在天上的島。坐火箭到雨林島、恐龍島、月亮島拜訪他們，點一下就能聽故事。">
-<meta property="og:title" content="宇宙好好聽・宇宙群島">
-<meta property="og:description" content="坐火箭去拜訪住在浮空島上的 300 多個科學故事！">
-<meta property="og:image" content="https://universe.kidsci.app/assets/logo-banner.png">
-<meta name="theme-color" content="#9fd4ff">
-<link rel="icon" href="assets/logo-square.jpg">
-<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://universe.kidsci.app/">
+<!-- 宇宙群島搬到首頁了；舊連結（含 ?ch=、?isle=）轉過去 -->
+<script>location.replace('./' + location.search + location.hash);</script>
+<meta http-equiv="refresh" content="0; url=./">
 </head>
-<body class="isle-page">
-<div class="loading" id="loading" role="status"><img src="assets/logo-square.jpg" alt="" width="72" height="72"><p id="loading-text">火箭加油中…</p></div>
-<canvas id="world" aria-label="宇宙群島：拖曳轉著看，兩指或滾輪拉近拉遠，點小居民聽故事，點別的島就坐火箭飛過去。也可以用下面的「居民名單」和「火箭站」。"></canvas>
-<div id="isle-labels" aria-hidden="true"></div>
-<div class="isle-tip" id="isle-tip" hidden></div>
-
-<header class="hud-top">
-  <a class="brand" href="./" aria-label="宇宙好好聽首頁"><img src="assets/logo-banner.png" alt="科學好好聽" width="210" height="84"></a>
-  <div class="scene">
-    <h1 id="isle-name">宇宙群島</h1>
-    <p id="isle-meta"></p>
-  </div>
-  <div class="hud-buttons">
-    <button class="round guide-btn" id="guide-btn" type="button" aria-label="找科學隊長"><img src="assets/avatar-captain.png" alt=""></button>
-    <button class="round" id="sound-btn" type="button" aria-pressed="true" aria-label="音效">🔊</button>
-    <button class="logbook" id="logbook-btn" type="button" aria-haspopup="dialog" aria-label="航行日誌"><span class="label">航行日誌</span> <span id="stamp-count">0</span></button>
-  </div>
-</header>
-
-<section class="guide" id="guide" hidden tabindex="0" aria-live="polite" aria-label="科學隊長與好奇博士"></section>
-
-<nav class="isle-bar" aria-label="島上的按鈕">
-  <button class="isle-btn" id="people-btn" type="button" aria-haspopup="dialog"><span class="ico">👥</span><span class="txt">居民</span><small id="people-count"></small></button>
-  <button class="isle-btn rocket" id="station-btn" type="button" aria-haspopup="dialog"><span class="ico">🚀</span><span class="txt">火箭站</span><small>去別的島</small></button>
-  <button class="isle-btn" id="map-btn" type="button"><span class="ico" id="map-ico">🗺️</span><span class="txt" id="map-txt">全部的島</span></button>
-</nav>
-
-<dialog id="station" class="sheet" aria-labelledby="station-title"></dialog>
-<dialog id="people" class="sheet" aria-labelledby="people-title"></dialog>
-<dialog id="channel" class="sheet" aria-labelledby="ch-title"></dialog>
-<dialog id="lab" class="labsheet" aria-label="實驗">
-  <div class="labbar"><span id="lab-title"></span><button type="button" id="lab-close">關閉實驗</button></div>
-  <iframe id="lab-frame" title="lab 實驗" allow="fullscreen"></iframe>
-</dialog>
-<dialog id="journal" class="sheet" aria-labelledby="journal-title"></dialog>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-<div class="player" id="player" hidden>
-  <div class="now"><strong id="now-title"></strong><span id="now-takeaway"></span></div>
-  <audio id="audio" controls preload="none"></audio>
-</div>
-
-<script type="importmap">{"imports":{"three":"./vendor/three/three.module.min.js","three/addons/":"./vendor/three/addons/"}}</script>
-<script src="islands.js" type="module"></script>
-</body>
+<body><p><a href="./">宇宙群島搬到這裡了</a></p></body>
 </html>

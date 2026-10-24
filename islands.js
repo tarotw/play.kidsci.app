@@ -253,14 +253,17 @@ async function init() {
     onClear: () => { stamps = { ear: [], hand: [], seen: [], missions: [], guess: 0 }; saveStamps(); world.refreshMarks(); renderHud(); },
   });
   if (!webglOk()) {
-    $('#loading-text').innerHTML = '這台裝置沒辦法顯示 3D 的宇宙群島。<br><a class="btn" href="./">改用宇宙地圖</a>';
+    $('#loading-text').innerHTML = '這台裝置沒辦法顯示 3D 的宇宙群島。<br><a class="btn" href="knob.html?gl=0">改用平面的萬物地圖</a>';
     return;
   }
   // 分享連結：?ch=代碼 從那一集住的島出發；?isle=島 從那座島出發
   const params = new URLSearchParams(location.search);
   const ch = params.get('ch');
   const chIsle = ch && isles.find((x) => x.eps.some((e) => e.code === ch));
-  const want = chIsle?.def.id || (isleById.has(params.get('isle')) ? params.get('isle') : startId);
+  // 舊版的 ?lv=大主題（例如 l07 太陽系）：去住最多那個主題的島
+  const lv = params.get('lv');
+  const lvIsle = lv && isles.map((x) => ({ x, n: x.eps.filter((e) => e.home === lv || e.home.startsWith(`${lv}:`)).length })).sort((a, b) => b.n - a.n).find((y) => y.n)?.x;
+  const want = chIsle?.def.id || (isleById.has(params.get('isle')) ? params.get('isle') : lvIsle?.def.id || startId);
   const firstVisit = !visited.size;
   const { createIsles } = await import('./isles3d.js');
   let lastIsland = want;

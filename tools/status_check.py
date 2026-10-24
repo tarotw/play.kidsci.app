@@ -4,7 +4,7 @@
 預期規則：Drive 代碼 c、s 開頭是訂閱者限定，其餘公開。
 輸出 data/status.json（給 build_catalog.py 用）與 STATUS.md（給人看的不一致清單）。
 
-Spotify 只有在設定了 SPOTIFY_SHOW_ID、SPOTIFY_CLIENT_ID、SPOTIFY_CLIENT_SECRET 時才會檢查。
+Spotify 只有在設定了 SPOTIFY_CLIENT_ID、SPOTIFY_CLIENT_SECRET 時才會檢查（節目 ID 預設已填好）。
 """
 from __future__ import annotations
 
@@ -120,7 +120,7 @@ def apple_episodes(apple_json: bytes) -> dict[str, dict]:
 
 
 def spotify_episode_names() -> set[str] | None:
-    show = os.environ.get("SPOTIFY_SHOW_ID")
+    show = os.environ.get("SPOTIFY_SHOW_ID") or "1eyISRdcgDTwZqIqrP1qKv"  # 科學好好聽在 Spotify 的節目 ID
     cid = os.environ.get("SPOTIFY_CLIENT_ID")
     secret = os.environ.get("SPOTIFY_CLIENT_SECRET")
     if not (show and cid and secret):
