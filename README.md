@@ -57,7 +57,7 @@ python3 tools/build_catalog.py
 
 `.github/workflows/status.yml` 每天台灣時間 07:43 讀 [listensci](https://github.com/tarotw/listensci) 更新好的 `soundon.xml` 與 `apple.json`，重跑上架狀態與目錄。Spotify 要在 repo 的 Settings → Secrets 加上 `SPOTIFY_CLIENT_ID`、`SPOTIFY_CLIENT_SECRET` 才會檢查（節目 ID 預設已填好）。
 
-每一集的 **Apple Podcasts、Spotify 連結**由 `tools/platform_links.py` 找（同一個每日工作，存在 `data/platforms.json`，`build_catalog.py` 依 Firstory 標題對到代碼），頻道卡上每一集都會列出這兩個平台：有連結就按住打開，找不到就寫「即將推出」。Apple 用 iTunes Lookup（只給還在 RSS 裡的集數）加上搜尋（節目名稱、還沒找到的每一集標題，每週重搜一次）。Spotify 的公開頁面只看得到最新一集，要拿到全部的集數，請到 [Spotify for Developers](https://developer.spotify.com/dashboard) 建一個 app，把 Client ID 和 Client Secret 加到 repo 的 Settings → Secrets and variables → Actions（`SPOTIFY_CLIENT_ID`、`SPOTIFY_CLIENT_SECRET`）；節目 ID 已經寫在程式裡（`1eyISRdcgDTwZqIqrP1qKv`）。
+每一集的 **Apple Podcasts、Spotify 連結**由 `tools/platform_links.py` 找（同一個每日工作，存在 `data/platforms.json`），頻道卡上每一集都會列出這兩個平台：有連結就按住打開，找不到就寫「即將推出」。最準的來源是每一集的 Firstory 單集頁：Firstory 自己把節目發佈到 Spotify 和 Apple，單集頁上就寫著那一集在兩個平台的網址（看過的頁面會記下來，還沒有連結的每週再看一次）。另外也用 iTunes Lookup／搜尋補 Apple，再用標題對到代碼（`build_catalog.py`）。只在 Firstory 會員區、不在公開 RSS 裡的訂閱集數，平台上找不到公開連結，會顯示「即將推出」。如果之後想改用 Spotify 官方 API，把 `SPOTIFY_CLIENT_ID`、`SPOTIFY_CLIENT_SECRET` 加到 repo 的 Actions Secrets 就會自動使用（節目 ID `1eyISRdcgDTwZqIqrP1qKv` 已寫在程式裡）。
 
 ## 本機預覽
 
