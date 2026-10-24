@@ -461,3 +461,83 @@ body.map-page.has-player .guide, body.map-page.has-player .map-zoom { bottom: 12
   .mm-node.d2 { --s: 40px; --f: 12px; }
   .mm-node.d3 { --s: 36px; }
 }
+
+/* ---------- 宇宙群島（islands.html）：明亮的白天太空 ---------- */
+.isle-page {
+  --bg: #fffaf2; --panel: rgba(255, 255, 255, 0.9); --panel-solid: #ffffff; --panel-2: #f4f1ff; --line: #dcd6f4;
+  --text: #2c2f4a; --muted: #6a6e8e; --orange: #e8783c; --gold: #c08a22; --teal: #23917f; --dark-star: #8a8cb0;
+  --shadow: 0 8px 24px rgba(80, 70, 140, 0.18);
+  color-scheme: light; background: #bfe2ff;
+}
+.isle-page .hud-top { background: linear-gradient(to bottom, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0)); }
+.isle-page .scene h1 { color: #3a3f8a; text-shadow: 0 2px 0 rgba(255, 255, 255, 0.9); }
+.isle-page .scene p { color: #4a4f7a; font-weight: 600; }
+.isle-page .btn { color: #fff; }
+.isle-page .btn.alt { color: var(--teal); }
+.isle-page dialog::backdrop { background: rgba(70, 60, 130, 0.3); }
+.isle-page .guide { background: rgba(255, 255, 255, 0.96); box-shadow: 0 10px 30px rgba(80, 70, 140, 0.25); bottom: calc(108px + env(safe-area-inset-bottom)); }
+.isle-page .guide-text { color: var(--text); }
+.isle-page .toast { background: rgba(255, 255, 255, 0.97); color: var(--orange); border-color: #ffc98a; }
+.isle-page .takeaways li.on { background: #fff1dc; }
+.isle-page .loading { background: linear-gradient(#9fd4ff, #ffe0ef); color: var(--text); }
+.isle-page body.has-player .guide, body.isle-page.has-player .guide { bottom: 230px; }
+.isle-page .sheet .hero { filter: drop-shadow(0 4px 8px rgba(80, 70, 140, 0.25)); }
+
+/* 下面三顆大按鈕：居民、火箭站、全部的島 */
+.isle-bar { position: fixed; left: 50%; bottom: calc(16px + env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 5; display: flex; gap: 10px; }
+body.isle-page.has-player .isle-bar { bottom: 122px; }
+.isle-btn { display: grid; grid-template-columns: auto auto; grid-template-rows: auto auto; column-gap: 8px; align-items: center; justify-items: start;
+  min-width: 128px; min-height: 64px; padding: 8px 18px; border-radius: 999px; border: 3px solid #fff; background: rgba(255, 255, 255, 0.92); color: var(--text);
+  box-shadow: 0 6px 18px rgba(80, 70, 140, 0.22); }
+.isle-btn .ico { grid-row: span 2; font-size: 30px; line-height: 1; }
+.isle-btn .txt { font-size: 18px; font-weight: 800; }
+.isle-btn small { font-size: 12px; color: var(--muted); }
+.isle-btn.rocket { background: linear-gradient(#ff8a6b, #ff6a5c); color: #fff; border-color: #ffd2c4; }
+.isle-btn.rocket small { color: #fff4ee; }
+.isle-btn:disabled { opacity: 0.45; }
+.isle-btn:not(:disabled):active { transform: scale(0.96); }
+
+/* 島名標籤（跟著島在畫面上移動） */
+#isle-labels { position: fixed; inset: 0; z-index: 3; pointer-events: none; }
+.isle-label { position: absolute; left: 0; top: 0; translate: -50% -100%; display: flex; align-items: center; gap: 6px; padding: 5px 12px 5px 8px; border-radius: 999px;
+  border: 2px solid #fff; background: rgba(255, 255, 255, 0.9); color: var(--text); font-weight: 800; font-size: 15px; white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(80, 70, 140, 0.25); pointer-events: auto; will-change: transform; }
+.isle-label .em { font-size: 20px; line-height: 1; }
+.isle-label .ct { min-width: 22px; padding: 0 6px; border-radius: 999px; background: #ffe2c8; color: #a8551c; font-size: 12px; text-align: center; }
+.isle-label.far { padding: 3px 9px 3px 6px; font-size: 13px; opacity: 0.88; }
+.isle-label.far .ct { display: none; }
+.isle-label:hover { background: #fff; }
+.isle-label.mini { padding: 4px; gap: 0; }
+.isle-label.mini :is(.nm, .ct) { display: none; }
+.isle-tip { position: fixed; left: 0; top: 0; z-index: 4; max-width: 280px; padding: 6px 12px; border-radius: 12px; background: rgba(255, 255, 255, 0.96); color: var(--text);
+  font-weight: 700; font-size: 14px; box-shadow: 0 4px 14px rgba(80, 70, 140, 0.25); pointer-events: none; }
+
+/* 火箭站：一格一格的島 */
+.isle-grid { list-style: none; margin: 10px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.isle-pick { position: relative; display: grid; justify-items: center; gap: 2px; width: 100%; min-height: 104px; padding: 10px 6px; border-radius: 18px;
+  border: 2px solid var(--line); background: linear-gradient(#ffffff, #f4f1ff); color: var(--text); text-align: center; }
+.isle-pick .em { font-size: 34px; line-height: 1.1; }
+.isle-pick .nm { font-weight: 800; font-size: 15px; }
+.isle-pick .ct { font-size: 12px; color: var(--muted); }
+.isle-pick .you { position: absolute; top: -8px; right: -4px; padding: 0 8px; border-radius: 999px; background: var(--orange); color: #fff; font-size: 11px; font-weight: 700; }
+.isle-pick .been { position: absolute; top: 6px; right: 8px; color: var(--teal); font-weight: 900; }
+.isle-pick.here { border-color: var(--orange); background: linear-gradient(#fff6ee, #ffe8d6); }
+.isle-pick:hover { border-color: #b8a8ff; }
+
+@media (max-width: 640px) {
+  .isle-bar { gap: 6px; width: calc(100vw - 16px); justify-content: center; }
+  /* 手機：圖示在上、字在下，三顆按鈕排得下 */
+  .isle-btn { min-width: 0; flex: 1; min-height: 60px; padding: 6px 6px; grid-template-columns: 1fr; justify-items: center; border-radius: 22px; }
+  .isle-btn .ico { grid-row: auto; font-size: 24px; }
+  .isle-btn .txt { font-size: 14px; white-space: nowrap; }
+  .isle-btn small { display: none; }
+  .isle-page .guide { bottom: calc(84px + env(safe-area-inset-bottom)); }
+  .isle-grid { grid-template-columns: repeat(2, 1fr); }
+  .isle-label { font-size: 13px; padding: 4px 9px 4px 6px; }
+  .isle-label .em { font-size: 17px; }
+}
+@media (max-height: 520px) {
+  .isle-btn { min-height: 48px; padding: 4px 12px; }
+  .isle-btn .ico { font-size: 22px; }
+  .isle-page .guide { width: min(380px, 50vw); }
+}

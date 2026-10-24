@@ -1,0 +1,304 @@
+// 宇宙好好聽・宇宙群島：每一集故事都是一個小居民，住在浮在天上的島。坐火箭在島和島之間飛。
+// 資料：data/islands.json（有哪些島、每座島住哪些集）、data/catalog.json、data/dialogue.json。
+import { patchDialogs } from './compat.js';
+import { createGuide } from './guide.js';
+import { createChannels, esc, stateBadge } from './channel.js';
+import { iconFor } from './explorer.js';
+
+const STORE_KEY = 'kidsci-universe-v1'; // 航行日誌（跟其他版本共用）
+const VISIT_KEY = 'kidsci-universe-isles-v1'; // 去過哪些島
+const $ = (sel) => document.querySelector(sel);
+
+let world, guide, channels, lines, byCode, isles, isleById, startId;
+
+// ---------- 航行日誌 ----------
+function loadStamps() {
+  const empty = { ear: [], hand: [], seen: [], missions: [], guess: 0 };
+  try { return { ...empty, ...(JSON.parse(localStorage.getItem(STORE_KEY)) || {}) }; } catch { return empty; }
+}
+let stamps = loadStamps();
+function saveStamps() {
+  try { localStorage.setItem(STORE_KEY, JSON.stringify(stamps)); } catch { /* 停用儲存時仍可玩 */ }
+  $('#stamp-count').textContent = stamps.ear.length + stamps.hand.length;
+}
+function addStamp(kind, code) {
+  if (stamps[kind].includes(code)) return;
+  stamps[kind].push(code);
+  saveStamps();
+  world?.refreshMarks();
+  renderHud();
+  if (kind === 'seen') return;
+  toast(`${kind === 'ear' ? '👂 耳朵章' : '✋ 小手章'} +1<br><small>${esc(byCode.get(code)?.title || '')}</small>`);
+  world?.sound.chime();
+  guide?.say(lines.stamps[kind]);
+}
+let visited = new Set();
+try { visited = new Set(JSON.parse(localStorage.getItem(VISIT_KEY)) || []); } catch { /* 沒有也沒關係 */ }
+function markVisit(id) { visited.add(id); try { localStorage.setItem(VISIT_KEY, JSON.stringify([...visited])); } catch { /* 沒關係 */ } }
+let toastTimer = null;
+function toast(html) {
+  const el = $('#toast');
+  el.innerHTML = html;
+  el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2400);
+}
+
+// ---------- 每一集住哪一座島 ----------
+function assign(defs, episodes) {
+  // "l03:雨林" 是 l03 的雨林區；"l01"、"era:life"、"lane:force"、"studio" 是整個 home
+  const match = (src, e) => {
+    if (src.startsWith('era:') || src.startsWith('lane:') || !src.includes(':')) return e.home === src;
+    const i = src.indexOf(':');
+    return e.home === src.slice(0, i) && e.zone === src.slice(i + 1);
+  };
+  const out = defs.map((def) => ({ def, eps: [] }));
+  episodes.forEach((e) => {
+    const isle = out.find(({ def }) => def.sources.some((src) => match(src, e))) || out.find(({ def }) => def.id === startId);
+    isle.eps.push({ ...e, icon: iconFor(e) });
+  });
+  // 公開的先、再來是訂閱、最後是準備中（清單裡的順序）
+  const order = { public: 0, subscriber: 1, unreleased: 2 };
+  out.forEach((x) => x.eps.sort((a, b) => order[a.state] - order[b.state] || a.code.localeCompare(b.code, 'en', { numeric: true })));
+  return out;
+}
+
+// ---------- 上面的島名、下面的按鈕 ----------
+function renderHud() {
+  const def = world?.current();
+  if (!def) {
+    $('#isle-name').textContent = '🗺️ 宇宙群島';
+    const heard = stamps.seen.filter((c) => byCode.has(c)).length;
+    $('#isle-meta').textContent = `${isles.length} 座島 · 去過 ${visited.size} 座 · 拜訪過 ${heard} 個居民`;
+    $('#people-count').textContent = '';
+    $('#people-btn').disabled = true;
+    $('#map-ico').textContent = '🏝️'; $('#map-txt').textContent = '回到島上';
+    return;
+  }
+  const x = isleById.get(def.id);
+  const seen = x.eps.filter((e) => stamps.seen.includes(e.code)).length;
+  $('#isle-name').textContent = `${def.emoji} ${def.name}`;
+  $('#isle-meta').textContent = `${x.eps.length} 個故事居民 · 拜訪過 ${seen} 個`;
+  $('#people-count').textContent = `${x.eps.length} 位`;
+  $('#people-btn').disabled = false;
+  $('#map-ico').textContent = '🗺️'; $('#map-txt').textContent = '全部的島';
+  const p = new URLSearchParams(location.search);
+  if (p.get('isle') !== def.id) { p.set('isle', def.id); history.replaceState(null, '', `?${p}`); }
+}
+
+// ---------- 火箭站：選一座島 ----------
+function openStation() {
+  const here = world.current()?.id;
+  $('#station').innerHTML = `<div class="inner">
+    <button class="close" type="button" data-close aria-label="關閉">✕</button>
+    <h2 id="station-title">🚀 火箭站</h2>
+    <p class="hint">想去哪一座島？點一下，火箭就出發！</p>
+    <ul class="isle-grid">${isles.map(({ def, eps }) => {
+      const seen = eps.filter((e) => stamps.seen.includes(e.code)).length;
+      return `<li><button type="button" class="isle-pick${def.id === here ? ' here' : ''}" data-go="${def.id}" ${def.id === here ? 'aria-current="true"' : ''}>
+        <span class="em">${def.emoji}</span><span class="nm">${esc(def.name)}</span>
+        <span class="ct">${eps.length} 位居民${seen ? ` · 👋 ${seen}` : ''}</span>${def.id === here ? '<span class="you">你在這裡</span>' : visited.has(def.id) ? '<span class="been">✓</span>' : ''}</button></li>`;
+    }).join('')}</ul></div>`;
+  $('#station').showModal();
+}
+
+// ---------- 居民名單 ----------
+function openPeople() {
+  const def = world.current();
+  if (!def) return;
+  const x = isleById.get(def.id);
+  const rows = x.eps.map((e) => `
+    <li><button type="button" class="ep ${e.state}" data-ep="${esc(e.code)}">
+      <span class="ic">${e.icon}</span><span class="tt">${esc(e.title)}</span>
+      <span class="tg">${stateBadge(e)}${e.labs.length ? '<span class="badge lab">實驗</span>' : ''}${stamps.seen.includes(e.code) ? '<span class="badge seen">✓ 拜訪過</span>' : ''}</span></button></li>`).join('');
+  $('#people').innerHTML = `<div class="inner">
+    <button class="close" type="button" data-close aria-label="關閉">✕</button>
+    <p class="hero" aria-hidden="true">${def.emoji}</p>
+    <h2 id="people-title">${esc(def.name)}的居民</h2>
+    <p class="hint">${x.eps.length} 個故事住在這裡。👑 是訂閱的故事，💤 的還在準備中。</p>
+    <ul class="eps">${rows}</ul></div>`;
+  $('#people').showModal();
+}
+
+// ---------- 島名標籤（全景的時候每座島上面有名字；在島上時，遠方的島也看得到名字） ----------
+const labels = new Map();
+function makeLabels() {
+  const box = $('#isle-labels');
+  isles.forEach(({ def, eps }) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'isle-label';
+    b.dataset.go = def.id;
+    b.innerHTML = `<span class="em">${def.emoji}</span><span class="nm">${esc(def.name)}</span><span class="ct">${eps.length}</span>`;
+    b.tabIndex = -1;
+    box.appendChild(b);
+    labels.set(def.id, b);
+  });
+  box.addEventListener('click', (ev) => { const b = ev.target.closest('[data-go]'); if (b) go(b.dataset.go); });
+}
+function placeLabels() {
+  requestAnimationFrame(placeLabels);
+  if (!world || document.hidden) return;
+  const mode = world.mode(), W = innerWidth, H = innerHeight;
+  // 近的島先排；會疊到別人的標籤就只留圖示（手機上全景很擠）
+  const placed = [];
+  const hit = (r) => placed.some((q) => r.l < q.r && q.l < r.r && r.t < q.b && q.t < r.b);
+  world.islandScreens().sort((a, b) => a.dist - b.dist).forEach((s) => {
+    const b = labels.get(s.id);
+    const show = mode !== 'flight' && !s.behind && !(mode === 'island' && s.here) && s.x > -60 && s.x < W + 60 && s.y > 40 && s.y < H - 40;
+    b.style.visibility = show ? '' : 'hidden';
+    if (!show) return;
+    const far = mode === 'island';
+    if (!b.dataset.w) { b.classList.remove('mini', 'far'); b.dataset.w = b.offsetWidth; b.classList.add('far'); b.dataset.wf = b.offsetWidth; }
+    const w = Number(far ? b.dataset.wf : b.dataset.w), h = far ? 26 : 32;
+    const full = { l: s.x - w / 2, r: s.x + w / 2, t: s.y - h, b: s.y };
+    let mini = hit(full);
+    if (mini) placed.push({ l: s.x - 18, r: s.x + 18, t: s.y - h, b: s.y }); else placed.push(full);
+    b.classList.toggle('far', far);
+    b.classList.toggle('mini', mini);
+    b.style.transform = `translate3d(${s.x.toFixed(1)}px, ${s.y.toFixed(1)}px, 0)`;
+  });
+}
+
+function go(id) {
+  if (world.busy()) return;
+  if (!world.travel(id)) return;
+}
+
+// ---------- 隊長選單 ----------
+function openGuideMenu() {
+  if (!guide.on) guide.on = true;
+  const def = world.current();
+  const x = def && isleById.get(def.id);
+  const fresh = x?.eps.find((e) => e.state !== 'unreleased' && !stamps.seen.includes(e.code));
+  const next = isles.find(({ def: d }) => !visited.has(d.id));
+  guide.say([{ who: 'captain', text: '需要幫忙嗎？', actions: [
+    ...(fresh ? [{ label: `👋 介紹一個居民給我`, run: () => meet(fresh.code) }] : []),
+    { label: '🚀 打開火箭站', run: openStation },
+    ...(next ? [{ label: `🏝️ 帶我去${next.def.name}`, run: () => go(next.def.id) }] : []),
+    { label: '🤫 先不要說話', run: () => { guide.on = false; } },
+  ] }], { urgent: true });
+}
+/** 跟一個居民打招呼：讓他跳一跳，再打開他的故事卡。 */
+function meet(code) {
+  world.greet(code);
+  setTimeout(() => channels.openChannel(code), 450);
+}
+
+function bind() {
+  $('#station-btn').addEventListener('click', openStation);
+  $('#people-btn').addEventListener('click', openPeople);
+  $('#map-btn').addEventListener('click', () => { if (world.busy()) return; if (world.mode() === 'overview') { const id = world.lastIsland(); world.travel(id); } else world.overview(); });
+  $('#station').addEventListener('click', (ev) => { const b = ev.target.closest('[data-go]'); if (b) { $('#station').close(); go(b.dataset.go); } });
+  $('#people').addEventListener('click', (ev) => { const b = ev.target.closest('[data-ep]'); if (b) { $('#people').close(); meet(b.dataset.ep); } });
+  $('#guide-btn').addEventListener('click', openGuideMenu);
+  $('#logbook-btn').addEventListener('click', () => channels.openJournal());
+  $('#sound-btn').addEventListener('click', () => {
+    world.sound.wake();
+    world.sound.on = !world.sound.on;
+    $('#sound-btn').textContent = world.sound.on ? '🔊' : '🔇';
+    $('#sound-btn').setAttribute('aria-pressed', String(world.sound.on));
+  });
+  document.addEventListener('keydown', (ev) => {
+    if (document.querySelector('dialog[open]') || ev.target.closest('input')) return;
+    if (ev.key === 'r' || ev.key === 'R') openStation();
+    if (ev.key === 'm' || ev.key === 'M') $('#map-btn').click();
+  });
+  ['pointerdown', 'keydown', 'wheel'].forEach((t) => window.addEventListener(t, resetIdle, { passive: true }));
+}
+function showTip(code, x, y) {
+  const tip = $('#isle-tip');
+  if (!code || document.querySelector('dialog[open]')) { tip.hidden = true; return; }
+  const e = byCode.get(code);
+  tip.textContent = e.title;
+  tip.hidden = false;
+  tip.style.transform = `translate(${Math.round(x + 14)}px, ${Math.round(y - 40)}px)`;
+}
+
+// 閒置太久：提醒可以點居民或坐火箭
+let idleTimer = null, idleNags = 0;
+function resetIdle() {
+  clearTimeout(idleTimer);
+  idleTimer = setTimeout(() => {
+    if (document.querySelector('dialog[open]') || guide.busy() || !$('#audio').paused || world.busy()) { resetIdle(); return; }
+    idleNags += 1;
+    const def = world.current();
+    guide.say([def
+      ? { who: 'curious', text: '島上的小居民都是一集故事喔！點一個跟他打招呼？', actions: [{ label: '👥 看居民名單', run: openPeople }, { label: '🚀 去別的島', run: openStation }] }
+      : { who: 'curious', text: '要去哪一座島？點一座島，火箭就會飛過去！', actions: [{ label: '🚀 打開火箭站', run: openStation }] }], { urgent: true });
+    resetIdle();
+  }, 35000 * 2 ** Math.min(idleNags, 3));
+}
+
+function webglOk() {
+  try { const c = document.createElement('canvas'); return !!c.getContext('webgl2'); } catch { return false; }
+}
+
+async function init() {
+  const [catalog, dialogue, data] = await Promise.all([
+    fetch('data/catalog.json').then((r) => r.json()),
+    fetch('data/dialogue.json').then((r) => r.json()),
+    fetch('data/islands.json').then((r) => r.json()),
+  ]);
+  patchDialogs();
+  lines = dialogue;
+  startId = data.start;
+  byCode = new Map(catalog.episodes.map((e) => [e.code, e]));
+  isles = assign(data.islands, catalog.episodes);
+  isleById = new Map(isles.map((x) => [x.def.id, x]));
+  guide = createGuide({ root: $('#guide'), cast: lines.cast });
+  channels = createChannels({
+    byCode, lines, getStamps: () => stamps, addStamp,
+    onOpen: () => { idleNags = 0; $('#isle-tip').hidden = true; },
+    onClear: () => { stamps = { ear: [], hand: [], seen: [], missions: [], guess: 0 }; saveStamps(); world.refreshMarks(); renderHud(); },
+  });
+  if (!webglOk()) {
+    $('#loading-text').innerHTML = '這台裝置沒辦法顯示 3D 的宇宙群島。<br><a class="btn" href="./">改用宇宙地圖</a>';
+    return;
+  }
+  // 分享連結：?ch=代碼 從那一集住的島出發；?isle=島 從那座島出發
+  const params = new URLSearchParams(location.search);
+  const ch = params.get('ch');
+  const chIsle = ch && isles.find((x) => x.eps.some((e) => e.code === ch));
+  const want = chIsle?.def.id || (isleById.has(params.get('isle')) ? params.get('isle') : startId);
+  const firstVisit = !visited.size;
+  const { createIsles } = await import('./isles3d.js');
+  let lastIsland = want;
+  world = createIsles({
+    canvas: $('#world'), islands: isles, startId: want, getStamps: () => stamps,
+    onReady: () => document.body.classList.add('ready'),
+    onResident: (code) => { setTimeout(() => channels.openChannel(code), 450); },
+    onHover: showTip,
+    onLaunch: (def) => { toast(`🚀 出發！<br><small>飛往${esc(def.name)}</small>`); },
+    onArrive: (def) => {
+      renderHud();
+      if (!def) return;
+      lastIsland = def.id;
+      const first = !visited.has(def.id);
+      markVisit(def.id);
+      if (first && def.intro) setTimeout(() => guide.say([{ who: def.id === startId ? 'captain' : 'curious', text: def.intro }], { topic: 'isle' }), 500);
+    },
+  });
+  world.lastIsland = () => lastIsland;
+  makeLabels();
+  placeLabels();
+  bind();
+  saveStamps();
+  renderHud();
+  markVisit(want);
+  if (ch && byCode.has(ch)) setTimeout(() => meet(ch), 800);
+  else if (firstVisit) setTimeout(() => {
+    const def = world.current() || isleById.get(want).def;
+    guide.say([
+      def.id === startId ? { who: 'captain', text: def.intro } : { who: 'captain', text: `歡迎來到宇宙群島！這裡是${def.name}。${def.intro}` },
+      { who: 'curious', text: '島上走來走去的小居民，每一個都是一集故事！點一下就能聽。想去別的島，就坐火箭！', actions: [{ label: '🚀 打開火箭站', run: openStation }, { label: '好！', run: () => {} }] },
+    ], { topic: 'isle' });
+  }, 900);
+  resetIdle();
+  if (/[?&]debug\b/.test(location.search) || navigator.webdriver) window.__isles = { world, isles, stamps: () => stamps };
+}
+
+init().catch((err) => {
+  console.error(err);
+  $('#loading-text').innerHTML = '載入失敗了，可能是網路不穩。<br><button class="btn" type="button" onclick="location.reload()">重新整理</button>';
+});
