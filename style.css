@@ -532,13 +532,20 @@ body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px
 .isle-label.far { padding: 3px 9px 3px 6px; font-size: 13px; opacity: 0.88; }
 .isle-label.far .ct { display: none; }
 .isle-label:hover { background: #fff; }
+/* 全景：群島的名字（動物群島、科學群島…），淡淡的、不能按 */
+.group-label { position: absolute; left: 0; top: 0; display: flex; align-items: center; gap: 6px; padding: 4px 14px; border-radius: 999px; pointer-events: none;
+  background: rgba(58, 63, 138, 0.55); color: #fff; font-weight: 900; font-size: 16px; letter-spacing: 0.08em; white-space: nowrap; will-change: transform;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25); }
+.group-label .em { font-size: 18px; }
+@media (max-width: 640px) { .group-label { font-size: 13px; padding: 3px 10px; } .group-label .em { font-size: 15px; } }
 .isle-label.mini { padding: 4px; gap: 0; }
 .isle-label.mini :is(.nm, .ct) { display: none; }
 .isle-tip { position: fixed; left: 0; top: 0; z-index: 4; max-width: 280px; padding: 6px 12px; border-radius: 12px; background: rgba(255, 255, 255, 0.96); color: var(--text);
   font-weight: 700; font-size: 14px; box-shadow: 0 4px 14px rgba(80, 70, 140, 0.25); pointer-events: none; }
 
 /* 火箭站：一格一格的島 */
-.isle-grid { list-style: none; margin: 10px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.isle-group { margin: 16px 0 0; font-size: 15px; color: #3a3f8a; }
+.isle-grid { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
 .isle-pick { position: relative; display: grid; justify-items: center; gap: 2px; width: 100%; min-height: 104px; padding: 10px 6px; border-radius: 18px;
   border: 2px solid var(--line); background: linear-gradient(#ffffff, #f4f1ff); color: var(--text); text-align: center; }
 .isle-pick .em { font-size: 34px; line-height: 1.1; }

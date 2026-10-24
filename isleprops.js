@@ -56,6 +56,7 @@ const BIOMES = {
   rainforest: { ground: 0x6fd46e, edge: 0x4cb85a, soil: [0xe0a878, 0xc78a62, 0xa86e50], cliff: 0xa8805a, shore: 0xc8b07a },
   savanna: { ground: 0xf4d880, edge: 0xe3bd62, soil: [0xeab27a, 0xd49464, 0xb87a52], cliff: 0xc8946a, shore: 0xb89060 },
   desert: { ground: 0xfbe3a6, edge: 0xf1cc84, soil: [0xf6c98a, 0xe8b072, 0xd0955e], cliff: 0xe0a070 },
+  stoneage: { ground: 0xbcd47e, edge: 0x9cbc62, soil: [0xd9a87a, 0xbf8c62, 0xa0724e], cliff: 0x9a8270, shore: 0xc8b48a },
   dino: { ground: 0x9ad872, edge: 0x7cc05c, soil: [0xe2ac7c, 0xc98f66, 0xaa7354], cliff: 0xb88a62 },
   volcano: { ground: 0xd9a585, edge: 0xc48b6c, soil: [0xc08068, 0xa66a58, 0x8a5648], cliff: 0x8a5a48 },
   ice: { ground: 0xf6fbff, edge: 0xdcefff, soil: [0xc8e8fb, 0xa6d6f4, 0x86c2ec], cliff: 0x9fc4e0, shore: 0xd6ecfa, peak: 0xffffff, peakY: 2.4 },
@@ -438,6 +439,20 @@ const TERRAIN = {
     k.obst.push({ x: A[0], z: A[1], r: 3.2 });
     return (x, z, y, slope) => (slope > 0.45 && y > 0.8 ? [[0xd9a066, 0xc07a4a, 0xe8c08a, 0xa86a44][Math.floor(y * 1.6) % 4], 0.9] : null);
   },
+  stoneage(k) {
+    // 一座大岩丘（洞穴就挖在它面向島中間的那一面），旁邊幾個小丘，低處一條小溪
+    const w = waves(12.4), H = polar(k, k.rand(0, TAU), 0.6), B = polar(k, k.rand(0, TAU), 0.58);
+    const brook = [polar(k, Math.atan2(H[1], H[0]) + 2.2, 0.95), polar(k, Math.atan2(H[1], H[0]) + 2.9, 0.2)];
+    k.water = -0.3;
+    k.hraw = (x, z) => {
+      let h = 0.6 * w(x, z, 0.24) + 0.4 + 4.4 * Math.min(1, 1.5 * gauss(x, z, ...H, 3.4)) + 1.8 * gauss(x, z, ...B, 2.6);
+      const r = segDist(x, z, ...brook[0], ...brook[1]);
+      return h - (h + 0.9) * Math.exp(-(r * r) / 1.6);
+    };
+    k.hill = H;
+    k.obst.push({ x: H[0], z: H[1], r: 3 });
+    return (x, z, y, slope) => (slope > 0.6 && y > 1 ? [[0xa89078, 0x96806a, 0xb49c82][Math.floor(y * 1.3) % 3], 0.85] : null);
+  },
   volcano(k) {
     const W = k.R * 0.55, H = k.R * 0.62, cr = W * 0.27, w = waves(5.2);
     const cone = (d) => H * Math.pow(Math.max(0, 1 - d / W), 1.1);
@@ -696,6 +711,55 @@ const BUILD = {
     k.scatter(6, 2, k.R * 0.88, 1.2, (x, z) => k.palm(x, z, k.rand(0.9, 1.3)));
     // 蕨類
     k.scatter(8, 2, k.R * 0.9, 0.7, (x, z) => { for (let i = 0; i < 5; i++) { const a = (i / 5) * TAU; k.part(k.S.cone4, 0x4cae5a, x + Math.cos(a) * 0.4, 0.4, z + Math.sin(a) * 0.4, 0.2, 1.2, 0.08, -a, 0, -(Math.PI / 2 - 0.6)); } });
+  },
+  stoneage(k) {
+    // 洞穴：在大岩丘面向島中間的那一面，黑黑的洞口、洞口兩邊有壁畫
+    const [hx, hz] = k.hill, toC = Math.atan2(-hz, -hx), d = 2.6, cx = hx + Math.cos(toC) * d, cz = hz + Math.sin(toC) * d;
+    const face = -toC + Math.PI / 2;
+    k.flat(cx + Math.cos(toC) * 1.2, cz + Math.sin(toC) * 1.2, 1.8);
+    const p = k.at(cx, cz, face);
+    p(k.S.half, 0x2c2430, 0, 0, 0.1, 1.7, 2.2, 0.6, 0, -Math.PI / 2);
+    p(k.S.arch, 0x8a7462, 0, 0, 0.35, 1.8, 2.3, 2.5);
+    for (let i = 0; i < 5; i++) p(k.S.dodeca, k.pick([0x9a8270, 0xa89078, 0x8a7462]), k.rand(-2.6, 2.6), k.rand(0.3, 2.6), k.rand(-0.4, 0.4), k.rand(0.6, 1.1));
+    const wall = new THREE.Mesh(new THREE.PlaneGeometry(2.6, 1.4), new THREE.MeshBasicMaterial({ map: caveArtTexture(), transparent: true }));
+    wall.position.set(cx + Math.cos(face) * 2.9 + Math.cos(toC) * 0.6, 1.5, cz - Math.sin(face) * 2.9 + Math.sin(toC) * 0.6);
+    wall.rotation.y = face; k.add(wall);
+    k.part(k.S.box, 0xa89078, cx + Math.cos(face) * 2.9, 1.3, cz - Math.sin(face) * 2.9, 3, 2.6, 0.6, face);
+    k.block(cx, cz, 2.2, false);
+    // 營火和圍坐的石頭
+    const f = k.spot(3, k.R * 0.6, 1.8);
+    if (f) { campfire(k, f[0], f[1]); smoke(k, f[0], 1.6, f[1], 0.7); for (let i = 0; i < 4; i++) { const a = (i / 4) * TAU + 0.4; k.part(k.S.box, 0x9a8270, f[0] + Math.cos(a) * 1.8, 0.25, f[1] + Math.sin(a) * 1.8, 0.9, 0.5, 0.5, -a); } }
+    // 長毛象
+    const m = k.spot(3, k.R * 0.8, 2.4);
+    if (m) {
+      const q = k.at(m[0], m[1], k.rand(0, TAU), 1.15), fur = 0x8a5a3a;
+      q(k.S.ball, fur, 0, 2.3, 0, 1.9, 1.5, 1.2);
+      q(k.S.ball, fur, 1.7, 2.9, 0, 0.9);
+      q(k.S.ball, 0x7a4e30, 1.8, 3.6, 0, 0.55, 0.4, 0.5);
+      q(k.S.capsule, fur, 2.5, 1.9, 0, 0.3, 1.6, 0.3, 0, 0, 0.25);
+      [0.32, -0.32].forEach((z) => q(new THREE.TorusGeometry(0.8, 0.09, 6, 16, Math.PI * 0.9), 0xfff6e6, 2.3, 2.2, z, 1, 1, 1, 0, 0, Math.PI * 0.9));
+      [[-1, 0.6], [-1, -0.6], [1, 0.6], [1, -0.6]].forEach(([x, z]) => q(k.S.cyl, fur, x, 0.8, z, 0.38, 1.6, 0.38));
+      q(k.S.ball, 0x222233, 2.35, 3.05, 0.55, 0.08); q(k.S.ball, 0x222233, 2.35, 3.05, -0.55, 0.08);
+      q(k.S.cone, fur, -1.95, 2.3, 0, 0.12, 0.8, 0.12, 0, 0, Math.PI / 2 + 0.5);
+    }
+    // 長毛象骨頭搭的小屋
+    k.scatter(2, 3, k.R * 0.8, 1.6, (x, z) => {
+      const q = k.at(x, z, k.rand(0, TAU));
+      q(k.S.cone, 0xc8a070, 0, 1.2, 0, 1.4, 2.4, 1.4);
+      for (let i = 0; i < 6; i++) { const a = (i / 6) * TAU; q(k.S.capsule, 0xfff6e6, Math.cos(a) * 1.0, 1.1, Math.sin(a) * 1.0, 0.12, 2.2, 0.12, -a, 0, 0.45 * (i % 2 ? 1 : -1)); }
+      q(k.S.half, 0x3a2c28, 0, 0, 1.3, 0.5, 0.9, 0.2, 0, -Math.PI / 2);
+    });
+    // 巨石陣
+    const st = k.spot(4, k.R * 0.82, 2.6);
+    if (st) {
+      const q = k.at(st[0], st[1], k.rand(0, TAU));
+      for (let i = 0; i < 6; i++) { const a = (i / 6) * TAU, x = Math.cos(a) * 1.9, z = Math.sin(a) * 1.9; q(k.S.box, 0xb8b4ac, x, 1.2, z, 0.6, 2.4, 0.4, -a + Math.PI / 2); if (i % 2 === 0) q(k.S.box, 0xaaa69e, Math.cos(a + 0.52) * 1.75, 2.55, Math.sin(a + 0.52) * 1.75, 1.9, 0.35, 0.4, -(a + 0.52) + Math.PI / 2); }
+    }
+    // 石器、骨頭、青銅器
+    k.scatter(5, 2, k.R * 0.85, 0.5, (x, z) => { k.part(k.S.octa, 0x7a7a8a, x, 0.2, z, 0.3, 0.12, 0.45, k.rand(0, TAU)); k.part(k.S.cyl6, 0x9a6a46, x + 0.4, 0.06, z, 0.05, 0.9, 0.05, k.rand(0, TAU), Math.PI / 2); });
+    const bz = k.spot(3, k.R * 0.8, 0.9);
+    if (bz) { k.part(k.S.ball, 0xc8963c, bz[0], 0.55, bz[1], 0.55, 0.5, 0.55); k.part(k.S.cyl, 0xc8963c, bz[0], 1.0, bz[1], 0.3, 0.35, 0.3); k.part(k.S.torus, 0xb07a2c, bz[0], 1.15, bz[1], 0.35, 0.35, 0.5, 0, Math.PI / 2); }
+    k.scatter(6, 2, k.R * 0.9, 1.1, (x, z) => k.pine(x, z, k.rand(0.8, 1.1), 0x5a9e5a));
   },
   volcano(k) {
     // 火山本身是地形（TERRAIN.volcano）：這裡放火山口裡的岩漿和冒出來的煙
@@ -1356,6 +1420,27 @@ function signTexture(emoji, name) {
     return c;
   });
 }
+function caveArtTexture() {
+  return cached('cave-art', () => {
+    const c = document.createElement('canvas'); c.width = 256; c.height = 140; const g = c.getContext('2d');
+    g.fillStyle = '#b8a088'; g.globalAlpha = 0.95; g.fillRect(0, 0, 256, 140); g.globalAlpha = 1;
+    // 手印
+    const hand = (x, y, s, col) => { g.fillStyle = col; g.beginPath(); g.ellipse(x, y, 9 * s, 11 * s, 0, 0, TAU); g.fill(); [-8, -3, 2, 7].forEach((dx, i) => { g.fillRect(x + dx * s - 2 * s, y - 24 * s + (i % 3) * 2 * s, 4 * s, 14 * s); }); g.fillRect(x + 9 * s, y - 6 * s, 9 * s, 4 * s); };
+    hand(30, 50, 1.1, '#a3401e'); hand(52, 90, 0.9, '#7a2e14');
+    // 動物（長毛象、鹿）
+    g.strokeStyle = '#5a2412'; g.fillStyle = '#8a3216'; g.lineWidth = 4; g.lineCap = 'round';
+    g.beginPath(); g.ellipse(130, 70, 34, 22, 0, 0, TAU); g.fill();
+    g.beginPath(); g.arc(165, 62, 12, 0, TAU); g.fill();
+    g.beginPath(); g.moveTo(172, 70); g.quadraticCurveTo(182, 95, 174, 108); g.stroke();
+    [106, 120, 140, 152].forEach((x) => { g.beginPath(); g.moveTo(x, 85); g.lineTo(x, 104); g.stroke(); });
+    g.beginPath(); g.ellipse(212, 92, 18, 9, 0, 0, TAU); g.fill();
+    g.beginPath(); g.moveTo(226, 86); g.lineTo(236, 70); g.moveTo(236, 70); g.lineTo(230, 60); g.moveTo(236, 70); g.lineTo(244, 62); g.stroke();
+    [202, 208, 216, 222].forEach((x) => { g.beginPath(); g.moveTo(x, 98); g.lineTo(x, 112); g.stroke(); });
+    // 小人
+    g.beginPath(); g.arc(200, 34, 5, 0, TAU); g.moveTo(200, 39); g.lineTo(200, 54); g.moveTo(192, 46); g.lineTo(212, 40); g.moveTo(200, 54); g.lineTo(194, 64); g.moveTo(200, 54); g.lineTo(206, 64); g.stroke();
+    const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.generateMipmaps = false; t.minFilter = THREE.LinearFilter; return t;
+  });
+}
 function puffTexture() {
   return cached('puff', () => {
     const c = document.createElement('canvas'); c.width = c.height = 64; const g = c.getContext('2d');
@@ -1703,6 +1788,12 @@ function pterosaur(k) {
 }
 
 const EXTRA = {
+  stoneage(k) {
+    // 天上飛過的鳥，溪邊的釣魚叉架
+    birds(k, [0x6a5a4a, 0x8a7a6a], 4);
+    const r = k.spot(3, k.R * 0.85, 0.8);
+    if (r) { const q = k.at(r[0], r[1], k.rand(0, TAU)); [-0.5, 0.5].forEach((x) => q(k.S.cyl6, 0x9a6a46, x, 0.9, 0, 0.06, 1.8, 0.06)); q(k.S.cyl6, 0x9a6a46, 0, 1.7, 0, 0.05, 1.3, 0.05, 0, 0, Math.PI / 2); [0.25, -0.25].forEach((x) => q(k.S.capsule, 0x8ab8d8, x, 1.25, 0, 0.12, 0.7, 0.08)); }
+  },
   studio(k) {
     // 圓弧形的觀眾席，面向錄音室
     const cx = -6, cz = -3.5, face = Math.atan2(-cz, -cx);
@@ -1961,6 +2052,7 @@ const FILL = {
   savanna: (k, x, z) => (k.r() < 0.6 ? k.tuft(x, z, 1.4, 0xe0b850) : k.rock(x, z, 0.5, 0xd8b890)),
   desert: (k, x, z) => (k.r() < 0.5 ? k.cactus(x, z, 0.6) : k.rock(x, z, 0.45, 0xe8a878)),
   dino: (k, x, z) => (k.r() < 0.5 ? k.part(k.S.ball, k.pick([0xfff2dc, 0xe6f4ff]), x, 0.35, z, 0.3, 0.42, 0.3) : k.bush(x, z, 0.7, 0x4cae5a)),
+  stoneage: (k, x, z) => (k.r() < 0.5 ? k.rock(x, z, k.rand(0.35, 0.6), 0xa89078) : k.tuft(x, z, 1.2, 0xb0c86a)),
   volcano: (k, x, z) => (k.r() < 0.5 ? k.rock(x, z, 0.5, 0xb8a090) : k.crystal(x, z, 0.5, k.pick([0xb98cff, 0x7cc8ff, 0xff8ab8]))),
   ice: (k, x, z) => (k.r() < 0.5 ? k.part(k.S.half, 0xffffff, x, 0, z, 0.9, 0.5, 0.9) : k.part(k.S.cone6, 0xbfe9ff, x, 0.6, z, 0.3, 1.2, 0.3, k.rand(0, 1))),
   wetland: (k, x, z) => (k.r() < 0.5 ? k.flowers(x, z, 4, 0.6) : k.mushroom(x, z, 0.6)),

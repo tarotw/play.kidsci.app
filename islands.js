@@ -9,7 +9,7 @@ const STORE_KEY = 'kidsci-universe-v1'; // 航行日誌（跟其他版本共用�
 const VISIT_KEY = 'kidsci-universe-isles-v1'; // 去過哪些島
 const $ = (sel) => document.querySelector(sel);
 
-let world, guide, channels, lines, byCode, isles, isleById, startId;
+let world, guide, channels, lines, byCode, isles, isleById, startId, groupDefs = [];
 
 // ---------- 航行日誌 ----------
 function loadStamps() {
@@ -86,8 +86,9 @@ function renderHud() {
   $('#people-legend').innerHTML = [[ct('public'), 'can', '▶ 可以聽'], [ct('subscriber'), 'vip', '👑 VIP']]
     .filter(([n]) => n).map(([n, cls, txt]) => `<span class="lg ${cls}">${txt} ${n}</span>`).join('') + (seen ? `<span class="lg-seen">✓ 拜訪過 ${seen}</span>` : '');
   $('#people-btn').setAttribute('aria-label', `看${def.name}的 ${x.eps.length} 位居民`);
-  $('#people-btn').hidden = false;
-  $('#isle-meta').hidden = true;
+  $('#people-btn').hidden = !x.eps.length;
+  $('#isle-meta').hidden = !!x.eps.length;
+  if (!x.eps.length) $('#isle-meta').textContent = '出發點：坐火箭去拜訪住在各個島上的故事居民吧！';
   $('#map-ico').textContent = '🗺️'; $('#map-txt').textContent = '全部的島';
   $('#map-btn').setAttribute('aria-label', '看全部的島');
   const p = new URLSearchParams(location.search);
@@ -101,12 +102,16 @@ function openStation() {
     <button class="close" type="button" data-close aria-label="關閉">✕</button>
     <h2 id="station-title">🚀 火箭站</h2>
     <p class="hint">想去哪一座島？點一下，火箭就出發！</p>
-    <ul class="isle-grid">${isles.map(({ def, eps }) => {
-      const seen = eps.filter((e) => stamps.seen.includes(e.code)).length;
-      return `<li><button type="button" class="isle-pick${def.id === here ? ' here' : ''}" data-go="${def.id}" ${def.id === here ? 'aria-current="true"' : ''}>
-        <span class="em">${def.emoji}</span><span class="nm">${esc(def.name)}</span>
-        <span class="ct">${eps.length} 位居民${seen ? ` · 👋 ${seen}` : ''}</span>${def.id === here ? '<span class="you">你在這裡</span>' : visited.has(def.id) ? '<span class="been">✓</span>' : ''}</button></li>`;
-    }).join('')}</ul></div>`;
+    ${[{ id: '', name: '出發點', emoji: '🎙️' }, ...groupDefs].map((g) => {
+      const list = isles.filter(({ def }) => (def.group || '') === g.id);
+      if (!list.length) return '';
+      return `<h3 class="isle-group">${g.emoji} ${esc(g.name)}</h3><ul class="isle-grid">${list.map(({ def, eps }) => {
+        const seen = eps.filter((e) => stamps.seen.includes(e.code)).length;
+        return `<li><button type="button" class="isle-pick${def.id === here ? ' here' : ''}" data-go="${def.id}" ${def.id === here ? 'aria-current="true"' : ''}>
+          <span class="em">${def.emoji}</span><span class="nm">${esc(def.name)}</span>
+          <span class="ct">${eps.length ? `${eps.length} 位居民${seen ? ` · 👋 ${seen}` : ''}` : '出發點'}</span>${def.id === here ? '<span class="you">你在這裡</span>' : visited.has(def.id) ? '<span class="been">✓</span>' : ''}</button></li>`;
+      }).join('')}</ul>`;
+    }).join('')}</div>`;
   $('#station').showModal();
 }
 
@@ -131,6 +136,7 @@ function openPeople() {
 
 // ---------- 島名標籤（全景的時候每座島上面有名字；在島上時，遠方的島也看得到名字） ----------
 const labels = new Map();
+const groupLabels = new Map();
 function makeLabels() {
   const box = $('#isle-labels');
   isles.forEach(({ def, eps }) => {
@@ -138,10 +144,19 @@ function makeLabels() {
     b.type = 'button';
     b.className = 'isle-label';
     b.dataset.go = def.id;
-    b.innerHTML = `<span class="em">${def.emoji}</span><span class="nm">${esc(def.name)}</span><span class="ct">${eps.length}</span>`;
+    b.innerHTML = `<span class="em">${def.emoji}</span><span class="nm">${esc(def.name)}</span>${eps.length ? `<span class="ct">${eps.length}</span>` : ''}`;
     b.tabIndex = -1;
     box.appendChild(b);
     labels.set(def.id, b);
+  });
+  // 群島的名字（全景才出現，不能按）
+  groupDefs.forEach((g) => {
+    const el = document.createElement('div');
+    el.className = 'group-label';
+    el.innerHTML = `<span class="em">${g.emoji}</span>${esc(g.name)}`;
+    el.style.visibility = 'hidden';
+    box.appendChild(el);
+    groupLabels.set(g.id, el);
   });
   box.addEventListener('click', (ev) => { const b = ev.target.closest('[data-go]'); if (b) go(b.dataset.go); });
 }
@@ -158,6 +173,17 @@ function placeLabels() {
     return { l: r.left - 4, r: r.right + 4, t: r.top - 4, b: r.bottom + 4 };
   });
   const placed = [];
+  // 全景：每個群島的名字（動物群島、科學群島…），先排，島名標籤會讓開
+  groupLabels.forEach((el) => { el.style.visibility = 'hidden'; });
+  if (mode === 'overview') world.groupScreens().forEach((g) => {
+    const el = groupLabels.get(g.id); if (!el || g.behind) return;
+    const w = el.offsetWidth || 120, h = el.offsetHeight || 30, r = { l: g.x - w / 2, r: g.x + w / 2, t: g.y - h / 2, b: g.y + h / 2 };
+    // 跑出畫面就推回來；被按鈕、標題蓋住或跟別的群島名疊在一起就先不顯示
+    const dx = Math.max(0, 6 - r.l) - Math.max(0, r.r - (W - 6)); r.l += dx; r.r += dx;
+    if (r.t < 4 || r.b > H - 4 || hud.some((q) => r.l < q.r && q.l < r.r && r.t < q.b && q.t < r.b) || placed.some((q) => r.l < q.r && q.l < r.r && r.t < q.b && q.t < r.b)) return;
+    el.style.visibility = ''; el.style.transform = `translate3d(${r.l.toFixed(1)}px, ${r.t.toFixed(1)}px, 0)`;
+    placed.push(r);
+  });
   const over = (r, list) => list.some((q) => r.l < q.r && q.l < r.r && r.t < q.b && q.t < r.b);
   world.islandScreens().sort((a, b) => a.dist - b.dist).forEach((s) => {
     const b = labels.get(s.id);
@@ -263,7 +289,7 @@ function resetIdle() {
     if (document.querySelector('dialog[open]') || guide.busy() || !$('#audio').paused || world.busy()) { resetIdle(); return; }
     idleNags += 1;
     const def = world.current();
-    guide.say([def
+    guide.say([def && isleById.get(def.id)?.eps.length
       ? { who: 'curious', text: '島上的小居民都是一集故事喔！點一個跟他打招呼？', actions: [{ label: '👥 看居民名單', run: openPeople }, { label: '🚀 去別的島', run: openStation }] }
       : { who: 'curious', text: '要去哪一座島？點一座島，火箭就會飛過去！', actions: [{ label: '🚀 去別的島', run: openStation }] }], { urgent: true });
     resetIdle();
@@ -285,6 +311,7 @@ async function init() {
   startId = data.start;
   byCode = new Map(catalog.episodes.map((e) => [e.code, e]));
   isles = assign(data.islands, catalog.episodes);
+  groupDefs = (data.groups || []).filter((g) => isles.some((x) => x.def.group === g.id));
   isleById = new Map(isles.map((x) => [x.def.id, x]));
   guide = createGuide({ root: $('#guide'), cast: lines.cast });
   channels = createChannels({

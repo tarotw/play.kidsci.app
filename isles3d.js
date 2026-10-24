@@ -371,10 +371,18 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
     return { def, eps, R };
   });
   const others = isles.filter((x) => x.def.id !== startId);
-  others.forEach((x, i) => {
-    const a = (i / others.length) * TAU + 0.15, ring = i % 2 ? 182 : 128;
+  // 同一個群島（動物、遠古、科學、科技、太空）的島排在一起，群和群之間空出一段
+  const GAP = 1.1;
+  const groupCount = new Set(others.map((x) => x.def.group || '')).size;
+  const units = others.length + groupCount * GAP;
+  let u = 0, prevGroup = null, inGroup = 0;
+  others.forEach((x) => {
+    if ((x.def.group || '') !== prevGroup) { u += GAP; prevGroup = x.def.group || ''; inGroup = 0; }
+    const a = ((u + 0.5) / units) * TAU + 0.15, ring = inGroup % 2 ? 182 : 128;
     const jitter = (hash(x.def.id) - 0.5) * 10;
     x.pos = new THREE.Vector3(Math.cos(a) * ring, (TIER_Y[x.def.tier] ?? 0) + jitter, Math.sin(a) * ring);
+    x.angle = a;
+    u += 1; inGroup++;
   });
   isles.forEach((x) => {
     if (!x.pos) x.pos = new THREE.Vector3(0, TIER_Y.home, 0);
@@ -827,6 +835,13 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
         const dist = camera.position.distanceTo(x.pos);
         return { id: x.def.id, x: p.x, y: p.y, behind: p.behind, dist, here: x === here };
       });
+    },
+    /** 每個群島的名字放在哪裡（那一群島的外側）。 */
+    groupScreens() {
+      // 那一群島在畫面上的中心（每座島投影到畫面再平均），稍微往上一點，放在島和島中間
+      const out = new Map();
+      others.forEach((x) => { const g = x.def.group; if (!g) return; const p = toScreen(v3.set(x.pos.x, x.pos.y + 8, x.pos.z)); if (p.behind) return; const o = out.get(g) || { x: 0, y: 0, n: 0 }; o.x += p.x; o.y += p.y; o.n++; out.set(g, o); });
+      return [...out].map(([id, o]) => ({ id, x: o.x / o.n, y: o.y / o.n, behind: false }));
     },
     residentScreen(code) { const i = byCode.get(code); if (i == null) return null; return toScreen(v3.set(res.iPos.getX(i), res.iPos.getY(i) + people[i].size * 0.8, res.iPos.getZ(i))); }, // 頭的中間（點這裡一定點到他）
     /** 不坐火箭，直接換到那座島（測試用）。 */
