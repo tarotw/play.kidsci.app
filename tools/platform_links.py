@@ -109,10 +109,10 @@ def apple_full() -> list[dict]:
             d = json.loads(get(url, headers))
             for e in d.get("data", []):
                 a = e.get("attributes", {})
-                d = a.get("description")
-                d = (d.get("standard") or d.get("short")) if isinstance(d, dict) else d
+                desc = a.get("description")
+                desc = (desc.get("standard") or desc.get("short")) if isinstance(desc, dict) else desc
                 rows.append({"title": a.get("name", ""), "url": clean_url(a.get("url")), "guid": a.get("guid"), "date": a.get("releaseDateTime"), "ms": a.get("durationInMilliseconds"),
-                             "intro": intro_text(d)})
+                             "intro": intro_text(desc)})
             if not d.get("next"):
                 break
             url = "https://amp-api.podcasts.apple.com" + d["next"] + "&l=zh-Hant-TW" + extra
