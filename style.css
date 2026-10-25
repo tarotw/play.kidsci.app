@@ -611,3 +611,8 @@ body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px
 .say.speaking img { animation: talking 0.5s ease-in-out infinite alternate; }
 @keyframes talking { to { transform: translateY(-3px) rotate(-4deg); } }
 @media (prefers-reduced-motion: reduce) { .say.speaking img { animation: none; } }
+
+/* 還不能出聲時（還沒點過畫面）：喇叭一閃一閃，小朋友知道點一下就會念 */
+.guide.waiting .guide-voice { animation: tap-me 0.9s ease-in-out infinite; border-color: var(--orange); background: #fff1dc; }
+@keyframes tap-me { 50% { transform: scale(1.18); box-shadow: 0 0 0 6px rgba(232, 120, 60, 0.25); } }
+@media (prefers-reduced-motion: reduce) { .guide.waiting .guide-voice { animation: none; } }

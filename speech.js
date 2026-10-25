@@ -35,6 +35,19 @@ const clean = (text) => String(text).replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27
 /** 有沒有辦法念（瀏覽器支援語音）。 */
 export const canSpeak = () => ok;
 
+// 瀏覽器規定：使用者還沒點過畫面之前，網頁不能自己出聲。
+// 這時候要念的先記著，等第一次點畫面（或按鍵）就馬上念。
+let interacted = false, pending = null;
+const touched = () => (navigator.userActivation ? navigator.userActivation.hasBeenActive : interacted);
+if (ok) {
+  const mark = () => { interacted = true; };
+  ['pointerdown', 'keydown', 'touchstart'].forEach((t) => window.addEventListener(t, mark, { capture: true, passive: true }));
+  const replay = () => { if (pending) { const p = pending; pending = null; speakLines(p.lines, p.opts); } };
+  ['click', 'keydown'].forEach((t) => document.addEventListener(t, replay)); // 不用 touchend：它比 click 早，對話框會以為已經念過、直接跳下一句
+}
+/** 現在念得出來嗎（使用者點過畫面了）。 */
+export const unlocked = () => ok && touched();
+
 let token = 0;
 /** 停下正在念的。 */
 export function stopSpeaking() {
@@ -48,7 +61,9 @@ export function stopSpeaking() {
  */
 export function speakLines(lines, { onLine = () => {}, onDone = () => {} } = {}) {
   stopSpeaking();
+  pending = null;
   if (!ok || !lines.length) { onDone(false); return; }
+  if (!touched()) { pending = { lines, opts: { onLine, onDone } }; return; } // 等第一次點畫面
   const mine = token;
   const parts = [];
   lines.forEach((l, i) => {
@@ -69,14 +84,24 @@ export function speakLines(lines, { onLine = () => {}, onDone = () => {} } = {})
     u.rate = rate;
     // 裝置上沒有可用的聲音時，有些瀏覽器不會開始也不會報錯：3 秒還沒開始就當作念不出來
     let started = false;
-    const guard = setTimeout(() => { if (!started && mine === token) { stopSpeaking(); onDone(false); } }, 3000);
+    const guard = setTimeout(() => {
+      if (started || mine !== token) return;
+      stopSpeaking();
+      if (!interacted) pending = { lines, opts: { onLine, onDone } }; // 還沒點過畫面（不支援 userActivation 的瀏覽器）：等點了再念
+      else onDone(false);
+    }, 3000);
     u.onstart = () => { started = true; clearTimeout(guard); };
     u.onend = () => { clearTimeout(guard); next(); };
-    u.onerror = () => { clearTimeout(guard); if (mine === token) onDone(false); };
+    u.onerror = (ev) => {
+      clearTimeout(guard);
+      if (mine !== token) return;
+      if (ev?.error === 'not-allowed') { pending = { lines, opts: { onLine, onDone } }; return; } // 被擋：等點了再念
+      onDone(false);
+    };
     speechSynthesis.speak(u);
   };
   next();
 }
 
 /** 念一句。 */
-export function speak(text, who) { speakLines([{ who, text }]); }
+export function speak(text, who, opts) { speakLines([{ who, text }], opts); }

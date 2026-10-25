@@ -55,6 +55,7 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     const question = content?.question
       ? `<div class="question"><strong>好奇博士問你：</strong>${esc(content.question.text)}</div>` : '';
     talk = introTalk(e, content);
+    talkTitle = e.title;
     // 每一句都可以點來聽（隊長是女生的聲音、博士是男生的聲音），上面的按鈕從頭念到尾
     const say = ([who, text], i) => `<div class="say ${who}" data-say="${i}"${canSpeak() ? ' role="button" tabindex="0" aria-label="念這一句"' : ''}><img src="${lines.cast[who].avatar}" alt="${lines.cast[who].name}"><p>${esc(text)}</p></div>`;
     const playAll = canSpeak() ? '<button type="button" class="talk-play" data-talk aria-pressed="false">🔊 聽他們說</button>' : '';
@@ -74,15 +75,17 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
   }
 
   // ---------- 念卡片上的對話 ----------
-  let talk = [];
+  let talk = [], talkTitle = '';
   function playTalk(from = 0) {
     const bubbles = [...document.querySelectorAll('#channel .say')];
     const btn = document.querySelector('#channel [data-talk]');
     const mark = (i) => bubbles.forEach((b, j) => b.classList.toggle('speaking', j === i));
     btn?.setAttribute('aria-pressed', 'true');
     if (btn) btn.textContent = '⏹ 停';
-    speakLines(talk.slice(from).map(([who, text]) => ({ who, text })), {
-      onLine: (i) => mark(from + i),
+    // 從頭念的時候，隊長先念這一集的名字（還不認得字的小朋友也知道是哪一集）
+    const title = from === 0 ? [{ who: 'captain', text: `這一集是：${talkTitle}` }] : [];
+    speakLines([...title, ...talk.slice(from).map(([who, text]) => ({ who, text }))], {
+      onLine: (i) => mark(from + i - title.length),
       onDone: () => { mark(-1); if (btn) { btn.setAttribute('aria-pressed', 'false'); btn.textContent = '🔊 聽他們說'; } },
     });
   }

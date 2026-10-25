@@ -1,12 +1,16 @@
 // 科學隊長與好奇博士的對話框：打字機效果、點一下繼續、可以帶按鈕，也可以用瀏覽器的語音念出來。
-import { speak as say, stopSpeaking, canSpeak } from './speech.js';
+import { speak as say, stopSpeaking, canSpeak, unlocked } from './speech.js';
 
 const STORE_KEY = 'kidsci-universe-guide';
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+// 預設會念出來（小朋友可能還不認得字）；按 🔊 關掉之後才記住「不要念」
 function loadPrefs() {
-  try { return { on: true, voice: false, ...(JSON.parse(localStorage.getItem(STORE_KEY)) || {}) }; }
-  catch { return { on: true, voice: false }; }
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORE_KEY)) || {};
+    if (!saved.voiceChosen) delete saved.voice; // 以前存的「不念」是舊的預設值，不是小朋友自己選的
+    return { on: true, voice: true, ...saved };
+  } catch { return { on: true, voice: true }; }
 }
 
 export function createGuide({ root, cast }) {
@@ -38,8 +42,23 @@ export function createGuide({ root, cast }) {
     voiceBtn.textContent = prefs.voice ? '🔊' : '🔈';
   }
 
+  // 念完一句（沒有按鈕要選）就自己往下一句，不用認字、不用一直點
+  let heard = false;
   function speak(text, who) {
-    if (prefs.voice) say(text, who);
+    heard = false;
+    if (!prefs.voice) return;
+    const current = line;
+    // 還不能出聲（還沒點過畫面）：喇叭一閃一閃，提示點一下就會念
+    root.classList.toggle('waiting', canSpeak() && !unlocked());
+    say(text, who, {
+      onLine: () => { heard = true; root.classList.remove('waiting'); },
+      onDone: (finished) => {
+        root.classList.remove('waiting');
+        if (!finished) heard = true; // 念不出來（裝置沒有語音）：點一下照常往下一句
+        if (!finished || line !== current || root.hidden || current.actions?.length) return;
+        setTimeout(() => { if (line === current && !root.hidden) { if (!root.classList.contains('typed')) finishTyping(); nextLine(); } }, 900);
+      },
+    });
   }
 
   function show(next) {
@@ -123,11 +142,14 @@ export function createGuide({ root, cast }) {
     if (ev.target.closest('.guide-close')) { queue = []; onEmpty = null; hide(); return; }
     if (ev.target.closest('.guide-voice')) {
       prefs.voice = !prefs.voice;
+      prefs.voiceChosen = true;
       savePrefs();
       if (prefs.voice && line) speak(line.text, line.who);
       else stopSpeaking();
       return;
     }
+    // 還沒聽到這一句（網頁剛打開、還不能出聲）：第一次點是「念給我聽」，不是跳到下一句
+    if (prefs.voice && canSpeak() && line && !heard) { speak(line.text, line.who); return; }
     advance();
   });
   root.addEventListener('keydown', (ev) => {
