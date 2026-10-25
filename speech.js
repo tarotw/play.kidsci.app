@@ -1,34 +1,7 @@
-// 科學隊長（女生）和好奇博士（男生）的聲音：用瀏覽器內建的語音念台詞。
-// 隊長挑女聲、博士挑男聲；裝置上沒有中文男聲時，博士用同一個聲音、把音調壓低。
+// 全站朗讀只使用科學隊長的女性華語，沒有角色切換或壓低音調。
+import { pickCaptainVoice } from './speech-voices.js';
 const ok = typeof window !== 'undefined' && 'speechSynthesis' in window;
-
-// 常見的中文語音名字（Windows／Edge、macOS／iOS、Android／Chrome）
-const MALE = /yunjhe|zhiwei|yunxi|yunyang|yunjian|yunze|kangkang|li-mu|limu|yu-shu|yushu|\bmale\b|男/i; // 不用 lookbehind：舊版 Safari 不支援，會整個壞掉
-const FEMALE = /hsiaochen|hsiaoyu|yating|hanhan|meijia|mei-jia|tingting|sin-ji|xiaoxiao|xiaoyi|huihui|female|女|google/i;
-
-let voices = [];
-function loadVoices() {
-  if (!ok) return;
-  const zh = speechSynthesis.getVoices().filter((v) => /^zh|^cmn/i.test(v.lang));
-  // 台灣的優先，再來香港、中國
-  const rank = (v) => (/TW|Hant/i.test(v.lang) ? 0 : /HK/i.test(v.lang) ? 2 : 1);
-  voices = zh.sort((a, b) => rank(a) - rank(b));
-}
-if (ok) {
-  loadVoices();
-  speechSynthesis.addEventListener?.('voiceschanged', loadVoices);
-}
-
-function pickVoice(who) {
-  if (!voices.length) loadVoices();
-  const female = voices.find((v) => FEMALE.test(v.name) && !MALE.test(v.name)) || voices.find((v) => !MALE.test(v.name)) || voices[0];
-  if (who === 'curious') {
-    const male = voices.find((v) => MALE.test(v.name));
-    if (male) return { voice: male, pitch: 1.05, rate: 1.05 };
-    return { voice: female, pitch: 0.65, rate: 0.98 }; // 沒有男聲：同一個聲音、音調壓低
-  }
-  return { voice: female, pitch: 1.12, rate: 1.0 };
-}
+let voiceTimer = null;
 
 const clean = (text) => String(text).replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}]/gu, '').trim();
 
@@ -55,11 +28,13 @@ let token = 0;
 export function stopSpeaking() {
   token++;
   pending = null; // 關掉對話框、換一句時，等著要念的也一起作廢
+  clearTimeout(voiceTimer);
+  voiceTimer = null;
   if (ok) speechSynthesis.cancel();
 }
 
 /**
- * 依序念一串台詞 [{ who, text }]。每一句開始時呼叫 onLine(i)，全部念完（或被停下）時呼叫 onDone(finished)。
+ * 依序用同一個科學隊長女聲念台詞 [{ text }]。每一句開始時呼叫 onLine(i)，全部念完（或被停下）時呼叫 onDone(finished)。
  * 長的句子會切成一句一句念（有些瀏覽器一次念太長會中斷）。
  */
 export function speakLines(lines, { onLine = () => {}, onDone = () => {} } = {}) {
@@ -71,20 +46,19 @@ export function speakLines(lines, { onLine = () => {}, onDone = () => {} } = {})
   const parts = [];
   lines.forEach((l, i) => {
     const text = clean(l.text);
-    (text.match(/[^。！？!?；;]+[。！？!?；;」』）)]*/g) || [text]).forEach((s, j) => { if (s.trim()) parts.push({ i, first: j === 0, who: l.who, text: s.trim() }); });
+    (text.match(/[^。！？!?；;]+[。！？!?；;」』）)]*/g) || [text]).forEach((s, j) => { if (s.trim()) parts.push({ i, first: j === 0, text: s.trim() }); });
   });
-  let n = 0;
+  let n = 0, voice;
   const next = () => {
     if (mine !== token) return;
     if (n >= parts.length) { onDone(true); return; }
     const p = parts[n++];
     if (p.first) onLine(p.i);
     const u = new SpeechSynthesisUtterance(p.text);
-    const { voice, pitch, rate } = pickVoice(p.who);
-    u.lang = voice?.lang || 'zh-TW';
-    if (voice) u.voice = voice;
-    u.pitch = pitch;
-    u.rate = rate;
+    u.lang = 'zh-TW';
+    u.voice = voice;
+    u.pitch = 1;
+    u.rate = 1;
     // 裝置上沒有可用的聲音時，有些瀏覽器不會開始也不會報錯：3 秒還沒開始就當作念不出來
     let started = false;
     const guard = setTimeout(() => {
@@ -103,8 +77,19 @@ export function speakLines(lines, { onLine = () => {}, onDone = () => {} } = {})
     };
     speechSynthesis.speak(u);
   };
-  next();
+  // 有些裝置第一次回傳空語音清單；等清單載入再選，避免誤用系統的粵語預設聲音。
+  const deadline = Date.now() + 1500;
+  const start = () => {
+    if (mine !== token) return;
+    const available = speechSynthesis.getVoices();
+    if (!available.length && Date.now() < deadline) { voiceTimer = setTimeout(start, 100); return; }
+    voiceTimer = null;
+    voice = pickCaptainVoice(available);
+    if (!voice) { onDone(false); return; }
+    next();
+  };
+  start();
 }
 
 /** 念一句。 */
-export function speak(text, who, opts) { speakLines([{ who, text }], opts); }
+export function speak(text, opts) { speakLines([{ text }], opts); }

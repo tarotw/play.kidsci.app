@@ -1,37 +1,36 @@
 {
-  "_comment": "科學隊長（女孩，負責解說）與好奇博士（男孩，負責發問）的台詞。{name}、{scale}、{big}、{small} 等會由程式代入。",
+  "_comment": "科學隊長的導覽台詞，統一使用女性華語朗讀。{name}、{scale}、{big}、{small} 等會由程式代入。",
   "cast": {
-    "captain": {"name": "科學隊長", "avatar": "assets/avatar-captain.png", "voice": "female"},
-    "curious": {"name": "好奇博士", "avatar": "assets/avatar-curious.png", "voice": "male"}
+    "captain": {"name": "科學隊長", "avatar": "assets/avatar-captain.png", "voice": "female"}
   },
   "intro": [
     {"who": "captain", "text": "嗨！我是科學隊長，歡迎登上耳機號！"},
-    {"who": "curious", "text": "我是好奇博士！隊長，我們今天要去哪裡？"},
+    {"who": "captain", "text": "今天想去哪裡探險呢？"},
     {"who": "captain", "text": "轉轉下面的萬物旋鈕，往左是更小的世界，往右是更大的世界。"},
-    {"who": "curious", "text": "那些會發光的圓圈是什麼？"},
+    {"who": "captain", "text": "那些會發光的圓圈是什麼？"},
     {"who": "captain", "text": "每一顆都是一集科學好好聽！點一下，耳機號就會飛過去。拖曳畫面可以到處探險喔。"},
-    {"who": "curious", "text": "金色的那種好亮！"},
+    {"who": "captain", "text": "金色的那種好亮！"},
     {"who": "captain", "text": "金色是訂閱者限定的頻道，要請大人幫忙才能聽。灰灰的問號是還沒播出的神秘訊號。出發吧！"}
   ],
   "levels": {
-    "l01": [{"who": "curious", "text": "哇，好小！原子到底有多小？"}, {"who": "captain", "text": "大約 0.1 奈米。一千萬個原子排成一排，才差不多 1 公釐長！"}],
-    "l02": [{"who": "curious", "text": "我的身體裡有多少個細胞啊？"}, {"who": "captain", "text": "大約 36 兆個！每一個都在努力幫你工作。"}],
-    "l03": [{"who": "curious", "text": "這一格的大小跟我們差不多耶！"}, {"who": "captain", "text": "對，這裡是動物和植物的世界。地球上最大的動物是藍鯨，身長可以超過 30 公尺，差不多兩台半公車！"}],
-    "l04": [{"who": "curious", "text": "人類可以蓋多高的大樓？"}, {"who": "captain", "text": "台北 101 有 508 公尺高，裡面還藏著一顆 660 噸的金色阻尼球，幫大樓抵抗強風。"}],
-    "l05": [{"who": "curious", "text": "地球的中心是不是很熱？"}, {"who": "captain", "text": "大約五千多度，跟太陽表面差不多熱！"}],
-    "l06": [{"who": "curious", "text": "月亮離我們有多遠？"}, {"who": "captain", "text": "大約 38 萬公里。光從月亮跑到地球，只要一秒多一點。"}],
-    "l07": [{"who": "curious", "text": "太陽好大！可以裝下幾個地球？"}, {"who": "captain", "text": "大約 130 萬個！而且太陽在宇宙裡還只是一顆普通的星星。"}],
-    "l08": [{"who": "curious", "text": "晚上看到的星光，是現在發出來的嗎？"}, {"who": "captain", "text": "不一定！牛郎星的光要跑大約 17 年才到地球，我們看到的是它 17 年前的樣子。"}],
-    "l09": [{"who": "curious", "text": "銀河系有多大？"}, {"who": "captain", "text": "大約 10 萬光年寬。就算用光速飛，也要飛 10 萬年！"}],
-    "l10": [{"who": "curious", "text": "宇宙有邊界嗎？"}, {"who": "captain", "text": "我們看得到的部分大約 930 億光年寬。再過去還有什麼，科學家還在找答案！"}]
+    "l01": [{"who": "captain", "text": "哇，好小！原子到底有多小？"}, {"who": "captain", "text": "大約 0.1 奈米。一千萬個原子排成一排，才差不多 1 公釐長！"}],
+    "l02": [{"who": "captain", "text": "我的身體裡有多少個細胞啊？"}, {"who": "captain", "text": "大約 36 兆個！每一個都在努力幫你工作。"}],
+    "l03": [{"who": "captain", "text": "這一格的大小跟我們差不多耶！"}, {"who": "captain", "text": "對，這裡是動物和植物的世界。地球上最大的動物是藍鯨，身長可以超過 30 公尺，差不多兩台半公車！"}],
+    "l04": [{"who": "captain", "text": "人類可以蓋多高的大樓？"}, {"who": "captain", "text": "台北 101 有 508 公尺高，裡面還藏著一顆 660 噸的金色阻尼球，幫大樓抵抗強風。"}],
+    "l05": [{"who": "captain", "text": "地球的中心是不是很熱？"}, {"who": "captain", "text": "大約五千多度，跟太陽表面差不多熱！"}],
+    "l06": [{"who": "captain", "text": "月亮離我們有多遠？"}, {"who": "captain", "text": "大約 38 萬公里。光從月亮跑到地球，只要一秒多一點。"}],
+    "l07": [{"who": "captain", "text": "太陽好大！可以裝下幾個地球？"}, {"who": "captain", "text": "大約 130 萬個！而且太陽在宇宙裡還只是一顆普通的星星。"}],
+    "l08": [{"who": "captain", "text": "晚上看到的星光，是現在發出來的嗎？"}, {"who": "captain", "text": "不一定！牛郎星的光要跑大約 17 年才到地球，我們看到的是它 17 年前的樣子。"}],
+    "l09": [{"who": "captain", "text": "銀河系有多大？"}, {"who": "captain", "text": "大約 10 萬光年寬。就算用光速飛，也要飛 10 萬年！"}],
+    "l10": [{"who": "captain", "text": "宇宙有邊界嗎？"}, {"who": "captain", "text": "我們看得到的部分大約 930 億光年寬。再過去還有什麼，科學家還在找答案！"}]
   },
   "views": {
-    "era": [{"who": "curious", "text": "時光機可以開到哪裡？"}, {"who": "captain", "text": "從 138 億年前的大霹靂，一路開到恐龍、人類祖先和科學家的年代！"}],
-    "lane": [{"who": "curious", "text": "這些發光的線是什麼？"}, {"who": "captain", "text": "這是法則航道。同一個科學法則，像重力，從蘋果掉下來到月亮繞著地球，都在作用。"}],
-    "studio": [{"who": "curious", "text": "咦，這裡是哪裡？"}, {"who": "captain", "text": "這是我們的錄音室！每一集科學好好聽，都是從這裡出發的。"}]
+    "era": [{"who": "captain", "text": "時光機可以開到哪裡？"}, {"who": "captain", "text": "從 138 億年前的大霹靂，一路開到恐龍、人類祖先和科學家的年代！"}],
+    "lane": [{"who": "captain", "text": "這些發光的線是什麼？"}, {"who": "captain", "text": "這是法則航道。同一個科學法則，像重力，從蘋果掉下來到月亮繞著地球，都在作用。"}],
+    "studio": [{"who": "captain", "text": "咦，這裡是哪裡？"}, {"who": "captain", "text": "這是我們的錄音室！每一集科學好好聽，都是從這裡出發的。"}]
   },
   "channel": {
-    "public": ["這一台在講什麼呀？", "{icon} 這是什麼？我好想知道！", "隊長，這一集好玩嗎？"],
+    "public": ["這一台在講什麼呀？", "{icon} 這是什麼？我好想知道！", "一起來認識這一集的科學故事吧！"],
     "subscriber": ["這一台是金色的耶！", "金色頻道裡藏著什麼？"],
     "unreleased": ["這個問號訊號是什麼？", "好神秘的訊號……"]
   },
@@ -41,18 +40,18 @@
     "fallback": "按住下面的按鈕，到 Apple Podcasts 或 Spotify 聽聽看，我們一起找答案！"
   },
   "stamps": {
-    "ear": [{"who": "captain", "text": "你聽完一整集了！耳朵章蓋好了。"}, {"who": "curious", "text": "下一台要去哪裡？"}],
-    "hand": [{"who": "curious", "text": "哇，你做完實驗了！"}, {"who": "captain", "text": "動手試試看，就是科學家在做的事。小手章拿去！"}]
+    "ear": [{"who": "captain", "text": "你聽完一整集了！耳朵章蓋好了。"}, {"who": "captain", "text": "下一台要去哪裡？"}],
+    "hand": [{"who": "captain", "text": "哇，你做完實驗了！"}, {"who": "captain", "text": "動手試試看，就是科學家在做的事。小手章拿去！"}]
   },
   "idle": [
-    {"who": "curious", "text": "隊長，我想去「{title}」那一台看看！"},
-    {"who": "curious", "text": "那邊有一台「{title}」，我們去好不好？"}
+    {"who": "captain", "text": "我們去「{title}」那一台看看吧！"},
+    {"who": "captain", "text": "那邊有一台「{title}」，我們去好不好？"}
   ],
   "missions": {
     "visit": "拜訪這一格的 {n} 台頻道",
     "gold": "找到一台金色的 VIP 頻道",
     "listen": "在這一格聽完一集",
-    "done": [{"who": "captain", "text": "任務完成：{mission}！給你一枚任務勳章 🏅"}, {"who": "curious", "text": "耶！我們越來越像真正的科學家了！"}]
+    "done": [{"who": "captain", "text": "任務完成：{mission}！給你一枚任務勳章 🏅"}, {"who": "captain", "text": "耶！我們越來越像真正的科學家了！"}]
   },
   "guess": {
     "ask": "考考你：「{a}」和「{b}」，哪一個比較大？",

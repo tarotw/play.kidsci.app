@@ -59,13 +59,13 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     const card = content?.card
       ? `<div class="card"><h3>🃏 ${esc(content.card.name)}</h3><p>${esc(content.card.description)}</p><ul>${content.card.knowledge.map((k) => `<li>${esc(k)}</li>`).join('')}</ul></div>` : '';
     const question = content?.question
-      ? `<div class="question"><strong>好奇博士問你：</strong>${esc(content.question.text)}</div>` : '';
+      ? `<div class="question"><strong>科學隊長問你：</strong>${esc(content.question.text)}</div>` : '';
     talk = introTalk(e, content);
     talkTitle = e.title;
     currentCode = code;
-    // 每一句都可以點來聽（隊長是女生的聲音、博士是男生的聲音），上面的按鈕從頭念到尾
+    // 每一句都由科學隊長的同一個女聲朗讀，上面的按鈕從頭念到尾
     const say = ([who, text], i) => `<div class="say ${who}" data-say="${i}"${canSpeak() ? ' role="button" tabindex="0" aria-label="念這一句"' : ''}><img src="${lines.cast[who].avatar}" alt="${lines.cast[who].name}"><p>${esc(text)}</p></div>`;
-    const playAll = canSpeak() ? '<button type="button" class="talk-play" data-talk aria-pressed="false">🔊 聽他們說</button>' : '';
+    const playAll = canSpeak() ? '<button type="button" class="talk-play" data-talk aria-pressed="false">🔊 聽隊長說</button>' : '';
     const duo = `<div class="duo">${playAll}${talk.map(say).join('')}</div>`;
 
     $('#channel').innerHTML = `<div class="inner">
@@ -91,7 +91,7 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
       return u.toString();
     } catch { return null; }
   }
-  // 按了內嵌播放器（焦點跑進 iframe）：停下隊長和博士的聲音、蓋耳朵章
+  // 按了內嵌播放器（焦點跑進 iframe）：停下科學隊長的朗讀、蓋耳朵章
   window.addEventListener('blur', () => {
     setTimeout(() => {
       const f = document.activeElement;
@@ -109,41 +109,34 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     const btn = document.querySelector('#channel [data-talk]');
     const mark = (i) => bubbles.forEach((b, j) => b.classList.toggle('speaking', j === i));
     // 從頭念的時候，隊長先念這一集的名字（還不認得字的小朋友也知道是哪一集）
-    const title = from === 0 ? [{ who: 'captain', text: `這一集是：${talkTitle}` }] : [];
-    speakLines([...title, ...talk.slice(from).map(([who, text]) => ({ who, text }))], {
-      // 按鈕在真的開始念的時候才變成「停」（還不能出聲、在等第一次點畫面時，它還是「聽他們說」）
+    const title = from === 0 ? [{ text: `這一集是：${talkTitle}` }] : [];
+    speakLines([...title, ...talk.slice(from).map(([, text]) => ({ text }))], {
+      // 按鈕在真的開始念的時候才變成「停」（還不能出聲、在等第一次點畫面時，它還是「聽隊長說」）
       onLine: (i) => { mark(from + i - title.length); btn?.setAttribute('aria-pressed', 'true'); if (btn) btn.textContent = '⏹ 停'; },
-      onDone: () => { mark(-1); if (btn) { btn.setAttribute('aria-pressed', 'false'); btn.textContent = '🔊 聽他們說'; } },
+      onDone: () => { mark(-1); if (btn) { btn.setAttribute('aria-pressed', 'false'); btn.textContent = '🔊 聽隊長說'; } },
     });
   }
   function stopTalk() {
     stopSpeaking();
     document.querySelectorAll('#channel .say.speaking').forEach((b) => b.classList.remove('speaking'));
     const btn = document.querySelector('#channel [data-talk]');
-    if (btn) { btn.setAttribute('aria-pressed', 'false'); btn.textContent = '🔊 聽他們說'; }
+    if (btn) { btn.setAttribute('aria-pressed', 'false'); btn.textContent = '🔊 聽隊長說'; }
   }
 
-  // 介紹變成兩個人的對話：介紹開頭是問句就給好奇博士問，其餘由科學隊長回答（太長就分兩段）
+  // 科學隊長直接介紹故事；長文分段，保留逐句點選朗讀。
   function introTalk(e, content) {
     const intro = (e.intro || '').replace(/^小朋友[，,]\s*/, '');
-    const sents = intro.match(/[^。！？!?]+[。！？!?]*[」』）)]*/g)?.map((x) => x.trim()).filter(Boolean) || [];
-    if (!sents.length) {
+    if (!intro.trim()) {
       const reply = content?.takeaways?.[0]?.text || content?.card?.description
         || (e.labs[0] ? `這一集有實驗「${e.labs[0].title}」可以玩：${e.labs[0].question}` : lines.answers.fallback);
-      return [['curious', fill(pick(lines.channel.public), { icon: iconFor(e) })], ['captain', reply]];
+      return [['captain', reply]];
     }
-    const out = [];
-    // 開頭連續的問句（最多兩句）都給好奇博士問
-    const isQ = (x) => /[？?][」』）)]*$/.test(x);
-    const qs = [];
-    while (sents.length > 1 && qs.length < 2 && isQ(sents[0])) qs.push(sents.shift());
-    out.push(['curious', qs.length ? qs.join('') : fill(pick(lines.channel.public), { icon: iconFor(e) })]);
-    const rest = sents.join('');
-    if (rest.length > 90 && sents.length > 2) {
+    const sents = intro.match(/[^。！？!?]+[。！？!?]*[」』）)]*/g)?.map((x) => x.trim()).filter(Boolean) || [intro];
+    if (intro.length > 90 && sents.length > 2) {
       const half = Math.ceil(sents.length / 2);
-      out.push(['captain', sents.slice(0, half).join('')], ['captain', sents.slice(half).join('')]);
-    } else out.push(['captain', rest]);
-    return out;
+      return [['captain', sents.slice(0, half).join('')], ['captain', sents.slice(half).join('')]];
+    }
+    return [['captain', intro]];
   }
 
   // ---------- 實驗 ----------

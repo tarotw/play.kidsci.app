@@ -254,7 +254,7 @@ function makeShip() {
   g.add(glow);
   const loader = new THREE.TextureLoader();
   const riders = {};
-  [['captain', -0.62], ['curious', 0.62]].forEach(([who, x]) => {
+  [['captain', 0]].forEach(([who, x]) => {
     const tex = loader.load(`assets/avatar-${who}.png`);
     tex.colorSpace = THREE.SRGBColorSpace;
     const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, toneMapped: false }));

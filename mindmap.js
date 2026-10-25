@@ -326,7 +326,7 @@ function reveal(n, { silent = false } = {}) {
   if (n.kind === 'leaf') setTimeout(() => channels.openChannel(n.code), 450);
   else setTimeout(() => focus(n), 250);
   // 發現新的大主題：說一下裡面有多少東西（同一個 topic，會換掉還沒看完的開場白）
-  if (n.kind === 'branch') setTimeout(() => guide.say([{ who: 'curious', text: `${n.emoji} 發現新大陸「${n.name}」！這裡藏了 ${n.children.length} 個小地方、${leafCount(n)} 個故事。` }], { topic: 'map' }), 900);
+  if (n.kind === 'branch') setTimeout(() => guide.say([{ who: 'captain', text: `${n.emoji} 發現新大陸「${n.name}」！這裡藏了 ${n.children.length} 個小地方、${leafCount(n)} 個故事。` }], { topic: 'map' }), 900);
 }
 // 從別的地方（航行日誌、分享連結）打開的故事：把通往它的路打開，鏡頭移過去
 function openPathTo(code, { dur = 0.9 } = {}) {
@@ -544,7 +544,7 @@ function resetIdle() {
     const n = nearestFrontier();
     if (!n) return;
     idleNags += 1;
-    guide.say([{ who: 'curious', text: '雲裡還有地方在發光耶！我們去打開看看？', actions: [{ label: '🔦 帶我去', run: () => { fitTo([n, nodes.get(n.parent)], { scale: 1.4 }); setTimeout(() => pulse(n), 700); } }, { label: '等一下', run: () => {} }] }], { urgent: true });
+    guide.say([{ who: 'captain', text: '雲裡還有地方在發光耶！我們去打開看看？', actions: [{ label: '🔦 帶我去', run: () => { fitTo([n, nodes.get(n.parent)], { scale: 1.4 }); setTimeout(() => pulse(n), 700); } }, { label: '等一下', run: () => {} }] }], { urgent: true });
     resetIdle();
   }, 30000 * 2 ** Math.min(idleNags, 3));
 }
@@ -628,7 +628,7 @@ async function init() {
   if (/[?&]debug\b/.test(location.search) || navigator.webdriver) window.__mapDebug = { nodes, cam, fx, revealed: () => revealed, worldToScreen, links: () => links, busy: () => !!camAnim || pointers.size > 0 };
   if (firstVisit) setTimeout(() => guide.say([
     { who: 'captain', text: '這張宇宙地圖被雲遮住了！' },
-    { who: 'curious', text: '點一個會發光的「？」，雲就會散開。一層一層打開，就能找到好多故事！' },
+    { who: 'captain', text: '點一個會發光的「？」，雲就會散開。一層一層打開，就能找到好多故事！' },
   ], { topic: 'map' }), 600);
   resetIdle();
 }

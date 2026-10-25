@@ -288,8 +288,8 @@ function resetIdle() {
     idleNags += 1;
     const def = world.current();
     guide.say([def && isleById.get(def.id)?.eps.length
-      ? { who: 'curious', text: '島上的小居民都是一集故事喔！點一個跟他打招呼？', actions: [{ label: '👥 看居民名單', run: openPeople }, { label: '🚀 去別的島', run: openStation }] }
-      : { who: 'curious', text: '要去哪一座島？點一座島，火箭就會飛過去！', actions: [{ label: '🚀 去別的島', run: openStation }] }], { urgent: true });
+      ? { who: 'captain', text: '島上的小居民都是一集故事喔！點一個跟他打招呼？', actions: [{ label: '👥 看居民名單', run: openPeople }, { label: '🚀 去別的島', run: openStation }] }
+      : { who: 'captain', text: '要去哪一座島？點一座島，火箭就會飛過去！', actions: [{ label: '🚀 去別的島', run: openStation }] }], { urgent: true });
     resetIdle();
   }, 35000 * 2 ** Math.min(idleNags, 3));
 }
@@ -345,7 +345,7 @@ async function init() {
       lastIsland = def.id;
       const first = !visited.has(def.id);
       markVisit(def.id);
-      if (first && def.intro) setTimeout(() => guide.say([{ who: def.id === startId ? 'captain' : 'curious', text: def.intro }], { topic: 'isle' }), 500);
+      if (first && def.intro) setTimeout(() => guide.say([{ who: 'captain', text: def.intro }], { topic: 'isle' }), 500);
     },
   });
   world.lastIsland = () => lastIsland;
@@ -360,7 +360,7 @@ async function init() {
     const def = world.current() || isleById.get(want).def;
     guide.say([
       def.id === startId ? { who: 'captain', text: def.intro } : { who: 'captain', text: `歡迎來到宇宙群島！這裡是${def.name}。${def.intro}` },
-      { who: 'curious', text: '島上走來走去的小居民，每一個都是一集故事！點一下，就能認識他、聽他說故事。想去別的島，就坐火箭！', actions: [{ label: '🚀 去別的島', run: openStation }, { label: '好！', run: () => {} }] },
+      { who: 'captain', text: '島上走來走去的小居民，每一個都是一集故事！點一下，就能認識他、聽他說故事。想去別的島，就坐火箭！', actions: [{ label: '🚀 去別的島', run: openStation }, { label: '好！', run: () => {} }] },
     ], { topic: 'isle' });
   }, 900);
   resetIdle();

@@ -82,10 +82,10 @@ function startGuess() {
     if (right) { stamps.guess += 1; saveStamps(); explorer.celebrate(); toast('🧠 答對了！'); }
     guide.say([
       { who: 'captain', text: fill(right ? lines.guess.right : lines.guess.wrong, vars) },
-      { who: 'curious', text: '再玩一次？', actions: [{ label: '🎲 再一題', run: startGuess }, { label: '不玩了', run: () => {} }] },
+      { who: 'captain', text: '再玩一次？', actions: [{ label: '🎲 再一題', run: startGuess }, { label: '不玩了', run: () => {} }] },
     ]);
   };
-  guide.say([{ who: 'curious', text: fill(lines.guess.ask, vars), actions: [{ label: a.name, run: answer(a) }, { label: b.name, run: answer(b) }] }], { urgent: true });
+  guide.say([{ who: 'captain', text: fill(lines.guess.ask, vars), actions: [{ label: a.name, run: answer(a) }, { label: b.name, run: answer(b) }] }], { urgent: true });
 }
 
 // ---------- 主角說話的時機 ----------
