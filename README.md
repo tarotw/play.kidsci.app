@@ -81,7 +81,7 @@ GitHub Pages（Settings → Pages → Deploy from branch → `main` / root），
 ## 頻道卡與收聽
 
 點小居民打開的卡片：上面是好奇博士和科學隊長的對話，內容是這一集的介紹（`catalog.json` 的 `intro`，來自 Firstory 單集說明，沒有的話用 Apple Podcasts 上的說明，所以 VIP 集數也有介紹；只留第一段，去掉連結和宣傳句，由 `status_check.py` 的 `intro_text` 整理）。介紹開頭是問句就給好奇博士問，其餘由隊長回答。
-收聽一律連到 **Apple Podcasts、Spotify**（點一下就在新分頁打開；點的時候蓋👂耳朵章），網站上不直接播放 RSS 的音檔，也不連 Firstory。VIP 集數一樣只放 Apple／Spotify 的單集連結。
+免費的集數在卡片上方直接放 **Apple Podcasts 內嵌播放器**（`embed.podcasts.apple.com`，網址由單集的 Apple 連結換主機而來）：小朋友不用離開網站就能聽完整一集；它是從 Firstory 串流音檔，所以算進 Firstory 的下載數（不算進 Apple Podcasts Connect 的數據）。按下播放器時停下隊長和博士的聲音、蓋👂耳朵章；關掉卡片時播放器一起拿掉，聲音才會停。VIP 集數不放播放器。下面另有 **Apple Podcasts、Spotify** 按鈕（點一下開新分頁，給想在 App 裡追蹤的大人）。網站上不直接播放 RSS 的音檔，也不連 Firstory。VIP 集數一樣只放 Apple／Spotify 的單集連結。
 
 ## 對話語音
 

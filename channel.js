@@ -45,7 +45,13 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     // 收聽：Apple Podcasts、Spotify（點一下就在新分頁打開）
     const platform = (url, icon, name, cls) => (url ? `<a class="btn pf ${cls}" href="${esc(url)}" target="_blank" rel="noopener" data-ear="${esc(code)}">${icon} ${esc(name)}</a>` : '');
     const pf = platform(listen.apple, '🍎', 'Apple Podcasts', 'apple') + platform(listen.spotify, '🟢', 'Spotify', 'spotify');
-    const platforms = pf ? `<div class="platforms" aria-label="收聽這一集"><span class="pf-cap">🎧 收聽這一集</span>${pf}</div>` : '';
+    // 免費的集數：卡片裡直接放 Apple Podcasts 的播放器（音檔從 Firstory 播，算進 Firstory 的下載數）
+    const embedUrl = e.state === 'public' ? appleEmbed(listen.apple) : null;
+    const embed = embedUrl ? `<div class="embed"><iframe title="用 Apple Podcasts 收聽：${esc(e.title)}" src="${esc(embedUrl)}" height="175" loading="lazy"
+      allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+      sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"></iframe></div>` : '';
+    const cap = embedUrl ? '📱 到 App 收聽，按「追蹤」新的一集就會自己出現' : '🎧 收聽這一集';
+    const platforms = pf ? `<div class="platforms" aria-label="收聽這一集"><span class="pf-cap">${cap}</span>${pf}</div>` : '';
     const labs = e.labs.map((lab) => `<button class="btn alt" type="button" data-lab="${esc(lab.url)}" data-lab-title="${esc(lab.title)}" data-code="${esc(code)}">🧪 ${esc(lab.title)}</button>`).join('');
     const takeaways = content?.takeaways?.length
       ? `<h3>重點句</h3><ol class="takeaways" id="takeaways">${content.takeaways.map((t) =>
@@ -56,6 +62,7 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
       ? `<div class="question"><strong>好奇博士問你：</strong>${esc(content.question.text)}</div>` : '';
     talk = introTalk(e, content);
     talkTitle = e.title;
+    currentCode = code;
     // 每一句都可以點來聽（隊長是女生的聲音、博士是男生的聲音），上面的按鈕從頭念到尾
     const say = ([who, text], i) => `<div class="say ${who}" data-say="${i}"${canSpeak() ? ' role="button" tabindex="0" aria-label="念這一句"' : ''}><img src="${lines.cast[who].avatar}" alt="${lines.cast[who].name}"><p>${esc(text)}</p></div>`;
     const playAll = canSpeak() ? '<button type="button" class="talk-play" data-talk aria-pressed="false">🔊 聽他們說</button>' : '';
@@ -66,7 +73,7 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
       <p class="hero" aria-hidden="true">${iconFor(e)}</p>
       <h2 id="ch-title">${esc(e.title)}</h2>
       <p class="hint">${esc(code)} 台 ${stateBadge(e)} ${stampMarks(code)}</p>
-      ${duo}${platforms}${labs ? `<div class="actions">${labs}</div>` : ''}${takeaways}${card}${question}</div>`;
+      ${embed}${duo}${platforms}${labs ? `<div class="actions">${labs}</div>` : ''}${takeaways}${card}${question}</div>`;
     if (!$('#channel').open) $('#channel').showModal();
     if (autoVoice()) playTalk(0); // 打開了「念給我聽」：卡片的對話也直接念
     const params = new URLSearchParams(location.search);
@@ -74,8 +81,29 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     history.replaceState(null, '', `?${params}`);
   }
 
+  // Apple Podcasts 單集網址 → 內嵌播放器網址（同一條路徑，換成 embed 的主機）
+  function appleEmbed(url) {
+    try {
+      const u = new URL(url);
+      if (u.hostname !== 'podcasts.apple.com' || !u.searchParams.get('i')) return null;
+      u.hostname = 'embed.podcasts.apple.com';
+      u.searchParams.set('theme', 'light');
+      return u.toString();
+    } catch { return null; }
+  }
+  // 按了內嵌播放器（焦點跑進 iframe）：停下隊長和博士的聲音、蓋耳朵章
+  window.addEventListener('blur', () => {
+    setTimeout(() => {
+      const f = document.activeElement;
+      if (f?.tagName === 'IFRAME' && f.closest('#channel .embed') && $('#channel').open) {
+        stopTalk();
+        if (currentCode) addStamp('ear', currentCode);
+      }
+    }, 0);
+  });
+
   // ---------- 念卡片上的對話 ----------
-  let talk = [], talkTitle = '';
+  let talk = [], talkTitle = '', currentCode = null;
   function playTalk(from = 0) {
     const bubbles = [...document.querySelectorAll('#channel .say')];
     const btn = document.querySelector('#channel [data-talk]');
@@ -170,6 +198,7 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
   $('#channel').addEventListener('keydown', (ev) => { const b = ev.target.closest?.('[data-say]'); if (b && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); playTalk(Number(b.dataset.say)); } });
   $('#channel').addEventListener('close', () => {
     stopTalk();
+    $('#channel .embed')?.remove(); // 關掉卡片：播放器一起拿掉，聲音才會停
     const params = new URLSearchParams(location.search);
     params.delete('ch');
     history.replaceState(null, '', params.toString() ? `?${params}` : location.pathname);

@@ -616,3 +616,9 @@ body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px
 .guide.waiting .guide-voice { animation: tap-me 0.9s ease-in-out infinite; border-color: var(--orange); background: #fff1dc; }
 @keyframes tap-me { 50% { transform: scale(1.18); box-shadow: 0 0 0 6px rgba(232, 120, 60, 0.25); } }
 @media (prefers-reduced-motion: reduce) { .guide.waiting .guide-voice { animation: none; } }
+
+/* 卡片裡的 Apple Podcasts 播放器 */
+.embed { margin: 4px 0 8px; border-radius: 12px; overflow: hidden; background: #f4f1ff; min-height: 175px; }
+.embed iframe { display: block; width: 100%; height: 175px; border: 0; }
+/* 有播放器的卡片：播放器才是主角，下面的 App 按鈕跟著捲動就好（不要黏在下緣蓋住播放器） */
+.isle-page #channel .embed ~ .platforms { position: static; background: none; margin: 4px 0 8px; padding: 0; }
