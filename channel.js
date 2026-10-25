@@ -78,8 +78,11 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
       return [['curious', fill(pick(lines.channel.public), { icon: iconFor(e) })], ['captain', reply]];
     }
     const out = [];
-    if (sents.length > 1 && /[？?][」』）)]*$/.test(sents[0])) out.push(['curious', sents.shift()]);
-    else out.push(['curious', fill(pick(lines.channel.public), { icon: iconFor(e) })]);
+    // 開頭連續的問句（最多兩句）都給好奇博士問
+    const isQ = (x) => /[？?][」』）)]*$/.test(x);
+    const qs = [];
+    while (sents.length > 1 && qs.length < 2 && isQ(sents[0])) qs.push(sents.shift());
+    out.push(['curious', qs.length ? qs.join('') : fill(pick(lines.channel.public), { icon: iconFor(e) })]);
     const rest = sents.join('');
     if (rest.length > 90 && sents.length > 2) {
       const half = Math.ceil(sents.length / 2);
