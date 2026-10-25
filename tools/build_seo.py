@@ -79,7 +79,7 @@ def main() -> None:
         {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": "科學好好聽是什麼？", "acceptedAnswer": {"@type": "Answer", "text": "科學好好聽是給孩子聽的科普 Podcast，用有趣的故事介紹恐龍、太空、動物、人體、物理和科技。"}},
             {"@type": "Question", "name": "宇宙群島怎麼玩？", "acceptedAnswer": {"@type": "Answer", "text": "每一集故事是一個住在浮空島上的小居民。拖曳轉動畫面、點小居民就能聽到這一集的介紹（還可以念出來），也可以按「去別的島」坐火箭到其他島。"}},
-            {"@type": "Question", "name": "哪裡可以收聽科學好好聽？", "acceptedAnswer": {"@type": "Answer", "text": "在 Apple Podcasts 和 Spotify 都可以收聽。宇宙群島上點一下小居民就會看到介紹，按住按鈕就能到 Apple Podcasts 或 Spotify 收聽；綠色 ▶ 是免費集數，金色皇冠是 VIP 訂閱集數。"}},
+            {"@type": "Question", "name": "哪裡可以收聽科學好好聽？", "acceptedAnswer": {"@type": "Answer", "text": "在 Apple Podcasts 和 Spotify 都可以收聽。宇宙群島上點一下小居民就會看到這一集的介紹，免費的集數可以直接在卡片裡的 Apple Podcasts 播放器聽完整一集，也可以點按鈕到 Apple Podcasts 或 Spotify 收聽；金色皇冠是 VIP 訂閱集數。"}},
             {"@type": "Question", "name": "適合幾歲的孩子？", "acceptedAnswer": {"@type": "Answer", "text": "適合 4 到 12 歲的孩子，大人陪著一起聽也很有趣。"}},
         ]},
     ]
@@ -111,7 +111,7 @@ def main() -> None:
              f"<h2>{NAME}・宇宙群島：兒童科普 Podcast 互動地圖</h2>",
              f"<p>《{NAME}》是給孩子聽的科普 Podcast。宇宙群島把 {total} 集科學故事變成住在浮空島上的小居民："
              f"拖曳轉動畫面、點一下小居民就能看到這一集的介紹，再到 "
-             f'<a href="{APPLE}">Apple Podcasts</a> 或 <a href="{SPOTIFY}">Spotify</a> 收聽（其中 {free} 集免費）。'
+             f'<a href="{APPLE}">Apple Podcasts</a> 或 <a href="{SPOTIFY}">Spotify</a> 收聽（其中 {free} 集免費，卡片裡就有播放器）。'
              "適合 4 到 12 歲的孩子，親子一起學恐龍、太空、動物、人體、物理和科技。</p>"]
     for gid in [None] + list(groups):
         sel = [(i, x) for i, x in live if i.get("group") == gid] if gid else [(i, x) for i, x in live if not i.get("group")]
