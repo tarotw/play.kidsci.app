@@ -108,13 +108,17 @@ def intro_text(desc: str | None) -> str | None:
     s = html.unescape(re.sub(r"<[^>]+>", "", s))
     paras = [p.strip() for p in s.split("\n") if p.strip()]
     out = ""
-    for i, p in enumerate(paras):
-        if i and (PROMO.search(p) or len(out) >= 40):  # 第一段一定留（就算裡面剛好有「訂閱」）
-            break
+    for p in paras:
         p = re.sub(r"=+\s*>.*$", "", p)
-        p = re.sub(r"https?://\S+", "", p).strip()
+        p = re.sub(r"https?://\S+", "", p)
+        # VIP 集數在 Apple 上的說明開頭是宣傳句（「👉 加入 VIP 專屬星球，一個月免費收聽～」）
+        p = re.sub(r"^[👉\s]*加入\s*VIP[^～~！!。]*[～~！!。]", "", p).strip(" 　-—:：")
+        if not p:
+            continue
+        if out and (PROMO.search(p) or len(out) >= 40):  # 第一段一定留（就算裡面剛好有「訂閱」）
+            break
         out = f"{out} {p}".strip()
-    out = re.sub(r"\s+", " ", out).strip(" 　-—:：")
+    out = re.sub(r"\s+", " ", out).strip()
     return out if len(out) >= 12 else None
 
 

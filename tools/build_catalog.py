@@ -13,7 +13,7 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from status_check import code_from_title, load_drive_titles, load_overrides  # noqa: E402
+from status_check import code_from_title, intro_text, load_drive_titles, load_overrides  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -170,7 +170,7 @@ def main() -> None:
         # 這一集的介紹（卡片上的對話用）：Firstory 單集說明，沒有的話用 Apple 上的（VIP 集數也有）
         intros = [r.get("intro") for r in sorted(records, key=lambda r: ("回顧" in r["title"], r.get("trailerOnly", False))) if not r.get("trailerOnly")]
         intros += [ep.get("intro") for ep in sorted(on_apple, key=lambda ep: "回顧" in (ep.get("title") or ""))]
-        intro = next((t for t in intros if t), None)
+        intro = next((t for t in (intro_text(x) for x in intros if x) if t), None)  # 再整理一次（之前存下來的也套用最新規則）
 
         entry = {
             "code": code,
