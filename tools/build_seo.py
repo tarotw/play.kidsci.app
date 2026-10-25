@@ -58,8 +58,8 @@ def main() -> None:
     # ---- 標題、描述（集數寫真的數字）----
     title = "科學好好聽｜兒童科普 Podcast 互動地圖・宇宙群島"
     desc = (f"《科學好好聽》兒童科普 Podcast 的 3D 互動地圖：{total} 集科學故事變成小居民，住在動物、恐龍、太空、人體、物理的浮空島上。"
-            "坐火箭到雨林、深海、月亮拜訪他們，點一下就能聽，親子一起學科學。")
-    og_desc = f"坐火箭去拜訪 {total} 個兒童科普故事：恐龍、太空、動物、人體、科技，點一下就能聽！"
+            "坐火箭到雨林、深海、月亮拜訪他們，點一下就能聽介紹、連到 Apple Podcasts 和 Spotify 收聽，親子一起學科學。")
+    og_desc = f"坐火箭去拜訪 {total} 個兒童科普故事：恐龍、太空、動物、人體、科技，點一下就能認識他們！"
 
     # ---- JSON-LD ----
     series = {
@@ -78,7 +78,7 @@ def main() -> None:
                               "url": f"{SITE}?isle={isl['id']}"} for n, (isl, _) in enumerate(live)]},
         {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": "科學好好聽是什麼？", "acceptedAnswer": {"@type": "Answer", "text": "科學好好聽是給孩子聽的科普 Podcast，用有趣的故事介紹恐龍、太空、動物、人體、物理和科技。"}},
-            {"@type": "Question", "name": "宇宙群島怎麼玩？", "acceptedAnswer": {"@type": "Answer", "text": "每一集故事是一個住在浮空島上的小居民。拖曳轉動畫面、點小居民就能聽故事，也可以按「去別的島」坐火箭到其他島。"}},
+            {"@type": "Question", "name": "宇宙群島怎麼玩？", "acceptedAnswer": {"@type": "Answer", "text": "每一集故事是一個住在浮空島上的小居民。拖曳轉動畫面、點小居民就能聽到這一集的介紹（還可以念出來），也可以按「去別的島」坐火箭到其他島。"}},
             {"@type": "Question", "name": "哪裡可以收聽科學好好聽？", "acceptedAnswer": {"@type": "Answer", "text": "在 Apple Podcasts 和 Spotify 都可以收聽。宇宙群島上點一下小居民就會看到介紹，按住按鈕就能到 Apple Podcasts 或 Spotify 收聽；綠色 ▶ 是免費集數，金色皇冠是 VIP 訂閱集數。"}},
             {"@type": "Question", "name": "適合幾歲的孩子？", "acceptedAnswer": {"@type": "Answer", "text": "適合 4 到 12 歲的孩子，大人陪著一起聽也很有趣。"}},
         ]},

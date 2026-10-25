@@ -149,13 +149,14 @@ def main() -> None:
         on_firstory = bool(best) and not best["trailerOnly"]
         if not on_firstory and not on_apple:
             continue
-        # VIP：Apple 上是訂閱者專屬，或代碼 c、s 開頭；但標題寫「公開｜」的那一版是公開放送，就當一般可以聽
-        if on_firstory and best["labeledPublic"]:
+        # VIP：以 Apple Podcasts 為準（Apple 上標「僅限訂閱者」的才是 VIP，其餘大家都聽得到）；
+        # 只有 Firstory 沒有 Apple 的才退回看代碼（c、s 開頭是 VIP，標題寫「公開｜」的除外）
+        if on_apple:
+            state = "subscriber" if all(e.get("sub") for e in on_apple) else "public"
+        elif on_firstory and best["labeledPublic"]:
             state = "public"
-        elif code[:1] in ("c", "s") or any(e.get("sub") for e in on_apple):
-            state = "subscriber"
         else:
-            state = "public"
+            state = "subscriber" if code[:1] in ("c", "s") else "public"
         if not on_firstory:
             best = None  # 只有預告片：不拿預告片的音檔
 

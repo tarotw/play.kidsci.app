@@ -360,7 +360,7 @@ async function init() {
     const def = world.current() || isleById.get(want).def;
     guide.say([
       def.id === startId ? { who: 'captain', text: def.intro } : { who: 'captain', text: `歡迎來到宇宙群島！這裡是${def.name}。${def.intro}` },
-      { who: 'curious', text: '島上走來走去的小居民，每一個都是一集故事！點一下就能聽。想去別的島，就坐火箭！', actions: [{ label: '🚀 去別的島', run: openStation }, { label: '好！', run: () => {} }] },
+      { who: 'curious', text: '島上走來走去的小居民，每一個都是一集故事！點一下，就能認識他、聽他說故事。想去別的島，就坐火箭！', actions: [{ label: '🚀 去別的島', run: openStation }, { label: '好！', run: () => {} }] },
     ], { topic: 'isle' });
   }, 900);
   resetIdle();

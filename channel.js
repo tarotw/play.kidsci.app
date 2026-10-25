@@ -1,6 +1,6 @@
 // 宇宙好好聽：頻道卡（介紹對話＋到 Apple Podcasts、Spotify 收聽）、實驗、航行日誌。萬物旋鈕版（app.js）與放大縮小版（zoom.js）共用。
 import { iconFor } from './explorer.js';
-import { speakLines, stopSpeaking, canSpeak } from './speech.js';
+import { speakLines, stopSpeaking, canSpeak, replayedBy } from './speech.js';
 
 const LAB_ORIGIN = 'https://lab.kidsci.app';
 const LAB_STAMP_SECONDS = 60;
@@ -80,12 +80,11 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     const bubbles = [...document.querySelectorAll('#channel .say')];
     const btn = document.querySelector('#channel [data-talk]');
     const mark = (i) => bubbles.forEach((b, j) => b.classList.toggle('speaking', j === i));
-    btn?.setAttribute('aria-pressed', 'true');
-    if (btn) btn.textContent = '⏹ 停';
     // 從頭念的時候，隊長先念這一集的名字（還不認得字的小朋友也知道是哪一集）
     const title = from === 0 ? [{ who: 'captain', text: `這一集是：${talkTitle}` }] : [];
     speakLines([...title, ...talk.slice(from).map(([who, text]) => ({ who, text }))], {
-      onLine: (i) => mark(from + i - title.length),
+      // 按鈕在真的開始念的時候才變成「停」（還不能出聲、在等第一次點畫面時，它還是「聽他們說」）
+      onLine: (i) => { mark(from + i - title.length); btn?.setAttribute('aria-pressed', 'true'); if (btn) btn.textContent = '⏹ 停'; },
       onDone: () => { mark(-1); if (btn) { btn.setAttribute('aria-pressed', 'false'); btn.textContent = '🔊 聽他們說'; } },
     });
   }
@@ -155,7 +154,11 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     if (lab) { openLab(lab.dataset.lab, lab.dataset.labTitle, lab.dataset.code); return; }
     if (t.closest('[data-close]')) { t.closest('dialog').close(); return; }
     const talkBtn = t.closest('[data-talk]');
-    if (talkBtn) { if (talkBtn.getAttribute('aria-pressed') === 'true') stopTalk(); else playTalk(0); return; }
+    if (talkBtn) {
+      if (replayedBy(ev)) return; // 這一下點擊剛好把等著的念出來了
+      if (talkBtn.getAttribute('aria-pressed') === 'true') stopTalk(); else playTalk(0);
+      return;
+    }
     const bubble = t.closest('#channel [data-say]');
     if (bubble && canSpeak()) { playTalk(Number(bubble.dataset.say)); return; }
     const ear = t.closest('[data-ear]'); // 點了 Apple／Spotify 去聽：蓋耳朵章（連結本身照常打開）

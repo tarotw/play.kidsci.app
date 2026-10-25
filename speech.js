@@ -3,7 +3,7 @@
 const ok = typeof window !== 'undefined' && 'speechSynthesis' in window;
 
 // 常見的中文語音名字（Windows／Edge、macOS／iOS、Android／Chrome）
-const MALE = /yunjhe|zhiwei|yunxi|yunyang|yunjian|yunze|kangkang|li-mu|limu|yu-shu|yushu|(?<!fe)male|男/i;
+const MALE = /yunjhe|zhiwei|yunxi|yunyang|yunjian|yunze|kangkang|li-mu|limu|yu-shu|yushu|\bmale\b|男/i; // 不用 lookbehind：舊版 Safari 不支援，會整個壞掉
 const FEMALE = /hsiaochen|hsiaoyu|yating|hanhan|meijia|mei-jia|tingting|sin-ji|xiaoxiao|xiaoyi|huihui|female|女|google/i;
 
 let voices = [];
@@ -37,14 +37,16 @@ export const canSpeak = () => ok;
 
 // 瀏覽器規定：使用者還沒點過畫面之前，網頁不能自己出聲。
 // 這時候要念的先記著，等第一次點畫面（或按鍵）就馬上念。
-let interacted = false, pending = null;
+let interacted = false, pending = null, lastReplay = null;
 const touched = () => (navigator.userActivation ? navigator.userActivation.hasBeenActive : interacted);
 if (ok) {
   const mark = () => { interacted = true; };
   ['pointerdown', 'keydown', 'touchstart'].forEach((t) => window.addEventListener(t, mark, { capture: true, passive: true }));
-  const replay = () => { if (pending) { const p = pending; pending = null; speakLines(p.lines, p.opts); } };
+  const replay = (ev) => { if (pending) { const p = pending; pending = null; lastReplay = ev; speakLines(p.lines, p.opts); } };
   ['click', 'keydown'].forEach((t) => document.addEventListener(t, replay)); // 不用 touchend：它比 click 早，對話框會以為已經念過、直接跳下一句
 }
+/** 這一下點擊是不是剛好把「等著要念的」念出來了（按鈕就不要再當成「停」）。 */
+export const replayedBy = (ev) => lastReplay === ev;
 /** 現在念得出來嗎（使用者點過畫面了）。 */
 export const unlocked = () => ok && touched();
 
@@ -52,6 +54,7 @@ let token = 0;
 /** 停下正在念的。 */
 export function stopSpeaking() {
   token++;
+  pending = null; // 關掉對話框、換一句時，等著要念的也一起作廢
   if (ok) speechSynthesis.cancel();
 }
 
