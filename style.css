@@ -651,3 +651,23 @@ body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px
   .captain-intro-text { font-size: 15px; }
   .guide .guide-avatar-play { width: 56px; height: 56px; }
 }
+
+/* 單集專屬封面與資訊一直保留，不受 Apple 播放器或介紹模式影響。 */
+#channel .close { float: none; display: block; margin: -6px -6px -48px auto; }
+.episode-profile { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 18px; align-items: start; padding: 6px 46px 8px 0; }
+.episode-cover { display: block; width: 112px; height: 112px; object-fit: cover; border-radius: 18px; background: #f2e8d8; box-shadow: 0 5px 16px #1d224a20; }
+.episode-show { margin: 0 0 7px; font-size: 12px; font-weight: 800; color: var(--muted); }
+.episode-profile h2 { font-size: 20px; line-height: 1.45; overflow-wrap: anywhere; }
+.episode-meta { margin: 8px 0 6px; color: var(--muted); font-size: 13px; }
+.episode-profile .hint { margin: 0; line-height: 1.8; }
+.podcast-return-cover { width: 64px; height: 64px; border-radius: 12px; object-fit: cover; }
+.podcast-return { gap: 12px; }
+.podcast-return > span:first-of-type { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: #8852cd; color: white; font-size: 22px; }
+@media (max-width: 440px) {
+  .episode-profile { grid-template-columns: 84px minmax(0, 1fr); gap: 12px; padding-right: 38px; }
+  .episode-cover { width: 84px; height: 84px; border-radius: 14px; }
+  .episode-profile h2 { font-size: 18px; }
+  .episode-show { font-size: 11px; }
+  .episode-meta { font-size: 12px; }
+  .podcast-return-cover { width: 52px; height: 52px; }
+}

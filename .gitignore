@@ -1,3 +1,4 @@
 __pycache__/
 .DS_Store
 assets/speech/*.tmp
+assets/episode-covers/*.tmp

@@ -80,8 +80,10 @@ GitHub Pages（Settings → Pages → Deploy from branch → `main` / root），
 
 ## 頻道卡與收聽
 
-點小居民打開的卡片：上面是科學隊長的故事介紹，內容是這一集的介紹（`catalog.json` 的 `intro`，來自 Firstory 單集說明，沒有的話用 Apple Podcasts 上的說明，所以 VIP 集數也有介紹；只留第一段，去掉連結和宣傳句，由 `status_check.py` 的 `intro_text` 整理）。`episode-intro.js` 將介紹縮成一段、最多 90 字，畫面與語音共用同一段內容。
+點小居民打開的卡片：上方的單集預覽顯示該集專屬封面、標題、日期及長度，接著是科學隊長的故事介紹，內容是這一集的介紹（`catalog.json` 的 `intro`，來自 Firstory 單集說明，沒有的話用 Apple Podcasts 上的說明，所以 VIP 集數也有介紹；只留第一段，去掉連結和宣傳句，由 `status_check.py` 的 `intro_text` 整理）。`episode-intro.js` 將介紹縮成一段、最多 90 字，畫面與語音共用同一段內容。
 免費的集數在卡片上方直接放 **Apple Podcasts 內嵌播放器**（`embed.podcasts.apple.com`，網址由單集的 Apple 連結換主機而來）：小朋友不用離開網站就能聽完整一集；它是從 Firstory 串流音檔，所以算進 Firstory 的下載數（不算進 Apple Podcasts Connect 的數據）。點隊長圖像時先移除 Podcast 播放器，再播放介紹；改按「聽完整 Podcast」先結束介紹、再載入播放器，兩種聲音互斥。切換至介紹會結束目前的 Podcast 播放，播放器不保留進度。按下 Podcast 播放器時蓋👂耳朵章；關掉卡片時播放器一起拿掉，聲音才會停。VIP 集數不放播放器。下面另有 **Apple Podcasts、Spotify** 按鈕（點一下開新分頁，給想在 App 裡追蹤的大人）。網站上不直接播放 RSS 的音檔，也不連 Firstory。VIP 集數一樣只放 Apple／Spotify 的單集連結。
+
+單集封面由 Apple Podcasts 單集資料與 RSS 的 `itunes:image` 取得，`build_catalog.py` 以實際 Apple 單集 ID 對應封面，並補上平台提供的日期與長度，未提供的欄位不顯示。`tools/cache_episode_artwork.py` 將原圖原樣快取在 `assets/episode-covers/`，網頁不必等待外部播放器載入才顯示圖片；每日更新也會補齊新封面。`episode-profile.js` 統一圖片選取與日期、長度格式；圖片載入失敗時使用節目封面。聽隊長介紹、暫時移除 Apple 播放器時，這張單集預覽仍保留，回到完整 Podcast 的按鈕也顯示該集封面。Apple 內嵌播放器裡的圖片由 Apple 決定，可能仍是節目共用封面。
 
 ## 對話語音
 

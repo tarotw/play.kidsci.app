@@ -9,6 +9,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+from urllib.parse import urlparse, parse_qs
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
@@ -166,6 +167,16 @@ def main() -> None:
         if apple_url:
             apple_url = re.sub(r"[?&]uo=\d+$", "", apple_url)
         listen = {"apple": apple_url, "spotify": spotify_url}
+        episode_id = parse_qs(urlparse(apple_url or "").query).get("i", [None])[0]
+        apple_profile = next((ep for ep in on_apple if episode_id and parse_qs(urlparse(ep.get("url") or "").query).get("i", [None])[0] == episode_id), None)
+        if apple_profile is None and on_apple:
+            apple_profile = sorted(on_apple, key=lambda ep: "回顧" in (ep.get("title") or ""))[0]
+        apple_profile = apple_profile or {}
+        if apple_profile.get("ms"):
+            listen["duration"] = round(apple_profile["ms"] / 1000)
+        if apple_profile.get("date"):
+            listen["pubDate"] = apple_profile["date"]
+        artwork = apple_profile.get("artwork") or (best or {}).get("artwork") or "assets/logo-square.jpg"
         if best:
             listen.update({"duration": best["duration"], "pubDate": best["pubDate"]})
         # 這一集的介紹（卡片上的對話用）：Firstory 單集說明，沒有的話用 Apple 上的（VIP 集數也有）
@@ -181,6 +192,7 @@ def main() -> None:
             "also": also,
             "state": state,
             "listen": listen,
+            "artwork": artwork,
             "intro": intro,
             "labs": labs_by_code.get(code, []),
         }

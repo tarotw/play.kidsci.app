@@ -14,8 +14,10 @@
     "duration": 751,
     "pubDate": "Sun, 25 Jan 2026 21:21:16 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/3e/aa/2f/3eaa2fa8-b0eb-65b0-f9a1-88d9b4c95092/mza_16476294906037830925.jpg/600x600bb.jpg",
    "intro": "當艾力克斯掛在 101 的外牆時，你以為他只是在玩命？其實這是一場精密計算的科學盛宴！從 7 度偏差的重力陷阱到國家級的資安護盾，帶你拆解這場世界級奇蹟背後的理工浪漫！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/e94645f424104582efe3.jpg"
   },
   {
    "code": "c11",
@@ -30,8 +32,10 @@
     "duration": 914,
     "pubDate": "Mon, 26 Jan 2026 21:17:35 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/7b/c3/90/7bc39012-43dc-20e3-aea2-628e938ca769/mza_9543066611054284501.jpg/600x600bb.jpg",
    "intro": "想像一下，如果你要爬上一棟比台北101還高的岩壁，而且身上完全沒有繩子保護，你會害怕嗎？今天我們要來認識攀岩界的傳奇人物亞歷克斯·霍諾德，看看他是如何訓練自己的大腦，把恐懼變成冷靜的超能力，最終征服那座高達914公尺的酋長岩！這不僅是攀岩的故事，更是關於勇氣與極致準備的科學。",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/c5f91e2716acace39337.jpg"
   },
   {
    "code": "c12",
@@ -42,10 +46,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-c-12-%E6%B7%B1%E6%B5%B7%E5%B7%A8%E6%80%AA%E7%9A%84%E8%BF%BD%E8%B9%A4%E8%80%85-%E5%A4%A7%E7%8E%8B%E9%85%B8%E6%BC%BF%E9%AD%B7%E8%88%87%E5%B7%A8%E7%83%8F%E8%B3%8A%E7%9A%84%E7%99%BC%E5%85%89%E5%A4%A7%E5%B0%8D%E6%B1%BA/id1812447277?i=1000761754814",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-04-20T20:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/fc/b5/1e/fcb51ec6-4fc3-3e5b-770c-da9df1b97e32/0855ba79-c502-4bfc-8189-eff21c4d28f6.jpg/600x600bb.jpg",
    "intro": "潛入幾千公尺深的漆黑大海，竟然有一隻拖著 10 公尺長「絲帶」的巨大幽靈？牠不靠噴毒液，而是靠「抱抱」來抓獵物！更神奇的是，牠還是小魚們的移動避風港喔。趕快來聽聽這隻連科學家都一百年見不到幾次的深海巨獸——冥河水母的神祕故事吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/8bd4ad75ede267da22a4.jpg"
   },
   {
    "code": "c13",
@@ -60,8 +67,10 @@
     "duration": 1119,
     "pubDate": "Sat, 02 May 2026 12:41:06 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/b2/b8/b6/b2b8b677-6b88-a083-2c8b-b66fd10602c6/mza_12358164203790664775.jpg/600x600bb.jpg",
    "intro": "這集我們用科學的角度，帶你重新認識「媽媽」這個角色。從懷孕時身體與大腦的巨大改變，到生產的極限挑戰，再到產後的恢復與日以繼夜的照護，每一個階段都有驚人的數據與真實的代價。你會發現，母愛不只是情感，更是一場被生物學驗證的極限任務。聽完這一集，也許你會更懂，為什麼媽媽值得被好好珍惜與感謝。",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/8d7fb33d79a4e3b40aea.jpg"
   },
   {
    "code": "c14",
@@ -72,10 +81,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip%E9%BB%9E%E6%92%AD-%E5%8A%9B%E5%AD%B8%E7%89%B9%E8%BC%AF-5-%E8%BD%89%E5%9C%88%E5%9C%88%E7%9A%84%E9%AD%94%E6%B3%95-%E5%90%91%E5%BF%83%E5%8A%9B%E8%88%87%E9%9B%A2%E5%BF%83%E5%8A%9B%E7%9A%84%E9%9A%B1%E5%BD%A2%E6%8B%94%E6%B2%B3-vip-14/id1812447277?i=1000769314277",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-05-26T16:02:17Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/47/0a/90/470a90d2-5392-0018-1ce1-d58460a8ca5a/809a3ca2-b144-4eed-b2d4-22a5fba36c27.jpg/600x600bb.jpg",
    "intro": "感謝高雄鳳山的Jimmy小朋友點播 你有玩過旋轉木馬或坐過過彎急駛的車子嗎？為什麼那股想把你甩出去的「離心力」其實是個假想力？而默默拉住你、不讓你飛走的「向心力」又是如何藏在我們身邊呢？從洗衣機脫水、太空站的人造重力，到宇宙中神秘的暗物質，這對物理界的隱形雙子星無所不在！快來跟著科學隊長與好奇博士，一起揭開轉圈圈背後的動感科學魔法吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/d2884f990234094e3156.jpg"
   },
   {
    "code": "c15",
@@ -86,10 +98,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip%E9%BB%9E%E6%92%AD-%E6%8A%AB%E8%91%97%E7%8B%97%E7%9A%AE%E7%9A%84%E8%B2%93-%E7%8B%90%E7%8B%B8%E7%9A%84%E7%94%9F%E5%AD%98%E9%BB%91%E7%A7%91%E6%8A%80%E8%88%87%E7%A3%81%E5%A0%B4%E5%AE%9A%E4%BD%8D%E5%82%B3%E5%A5%87-vip-15/id1812447277?i=1000769917329",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-05-28T00:38:42Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/0b/74/ad/0b74ad37-e9d1-74d7-b3b7-9fa8449e7f5e/a5c30f0c-0d3c-466c-aae5-3171fcb1729f.jpg/600x600bb.jpg",
    "intro": "為什麼狐狸在雪地裡捕鼠時，朝向東北方跳躍的成功率會翻倍？為什麼被人類馴養的狐狸會長出像小狗一樣的垂耳與捲尾？這集我們要走進狐狸的世界，揭開牠們隱藏在「狡猾」面紗下的演化奇蹟，看牠們如何利用地球磁場與出神入化的生存智慧成為自然界的生存大師！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/33f0cc5bfa8536912426.jpg"
   },
   {
    "code": "c16",
@@ -100,10 +115,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip%E9%BB%9E%E6%92%AD-%E4%BA%BA%E9%AB%94%E5%85%A7%E7%9A%84%E5%A5%88%E7%B1%B3%E6%8E%A2%E9%9A%AA-%E8%A7%A3%E5%AF%86%E8%B6%85%E7%B4%9A%E7%B4%B0%E8%83%9E%E5%B7%A5%E5%BB%A0%E7%9A%84%E9%81%8B%E4%BD%9C%E9%BB%91%E7%A7%91%E6%8A%80-vip-16/id1812447277?i=1000770373666",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-06-02T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/fb/1d/a4/fb1da438-7b2d-e24a-f1e9-87b524b4ecc3/cbf958fd-0e2d-4dd5-bb6c-619fc322d1bb.jpg/600x600bb.jpg",
    "intro": "你知道嗎？你的身體其實是由數十兆個超迷你「奈米工廠」組成的！在這個神奇工廠裡，有負責發電的粒線體、會走路的驅動蛋白，還有指揮一切的細胞核總部！快跟著我們一起縮小身體，進入細胞的微觀交響樂世界冒險吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/24e99d645bda883d6822.jpg"
   },
   {
    "code": "c17",
@@ -114,8 +132,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip%E9%BB%9E%E6%92%AD-%E5%9C%B0%E7%90%83%E7%9A%84%E6%B0%A3%E5%80%99%E5%A4%A7%E6%80%92%E7%A5%9E-%E8%81%96%E5%AC%B0%E8%88%87%E5%8F%8D%E8%81%96%E5%AC%B0%E7%8F%BE%E8%B1%A1%E7%9A%84%E7%A7%91%E5%AD%B8%E5%A5%A7%E7%A7%98-vip-17/id1812447277?i=1000774559175",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-06-29T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/a3/9e/26/a39e26e4-392f-4381-5430-bea8e7a10efb/edbd28d2-5d46-47c1-ba9c-727149109d1b.jpg/600x600bb.jpg",
    "intro": "你知道地球的氣候也會坐「大怒神」嗎？當太平洋上的信風悄悄改變，竟然會讓南美洲下起暴雨、亞洲發生乾旱，甚至讓加拉巴哥群島的海鬣蜥使出「縮骨功」縮小身體來求生！快來和科學隊長與好奇博士一起探索「聖嬰」與「反聖嬰」這對調皮兄妹的全球大冒險吧！",
    "labs": [
     {
@@ -124,7 +144,8 @@
      "question": "信風變弱，東邊的冷水還能把海面降溫嗎？",
      "url": "https://lab.kidsci.app/ensolab/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/378c366382f3d98302cf.jpg"
   },
   {
    "code": "c18",
@@ -135,8 +156,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip%E9%BB%9E%E6%92%AD-%E5%BE%AE%E7%B1%B3%E4%B8%96%E7%95%8C%E7%9A%84%E6%A5%B5%E9%99%90%E7%94%9F%E5%AD%98%E5%A4%A7%E5%B8%AB-%E6%B0%B4%E7%86%8A%E8%9F%B2%E7%9A%84-%E5%81%87%E6%AD%BB-%E8%B6%85%E8%83%BD%E5%8A%9B-vip-18/id1812447277?i=1000775524331",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-07-09T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/8a/73/b9/8a73b91e-d756-c853-d722-1314c8cddd3d/e159bbdd-981e-421a-b172-af1cf05575ae.jpg/600x600bb.jpg",
    "intro": "小朋友們，你們知道世界上有哪種生物可以在沒有空氣、充滿輻射的外太空活下來，甚至不吃不喝被「風乾」30年還能再次復活嗎？答案就是走路搖搖晃晃、模樣像隻可愛小熊的「水熊蟲」！今天科學隊長和好奇博士要帶大家認識這隻地表最強的微米巨人，一起揭開牠們超強抗輻射基因與假死狀態的科學魔法！",
    "labs": [
     {
@@ -145,7 +168,8 @@
      "question": "先按逐步，看慢慢變乾與復水後的等待。",
      "url": "https://lab.kidsci.app/tunlab/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/1f50a00b946ba1d34699.jpg"
   },
   {
    "code": "c19",
@@ -156,8 +180,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip%E9%BB%9E%E6%92%AD-%E6%B0%B4%E4%B8%AD-%E4%B8%8D%E8%80%81%E9%A0%91%E7%AB%A5-%E7%9A%84%E5%A5%87%E5%B9%BB%E9%AD%94%E6%B3%95-%E5%A2%A8%E8%A5%BF%E5%93%A5%E9%88%8D%E5%8F%A3%E8%9E%88%E7%9A%84%E8%B6%85%E5%BC%B7%E8%82%A2%E9%AB%94%E5%86%8D%E7%94%9F%E8%88%87%E5%9F%BA%E5%9B%A0%E8%A7%A3%E5%AF%86-vip-19/id1812447277?i=1000776458121",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-07-16T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/ff/df/d1/ffdfd1d2-0b30-b8f2-6673-963213016c02/a9274790-655f-4251-a9ca-2669bd476650.jpg/600x600bb.jpg",
    "intro": "你們知道世界上有哪種動物即使缺手缺腳，甚至心臟、大腦受損，都能完好如初地自己「長」回來嗎？答案就是頭上長著六隻粉紅小鰓、永遠帶著可愛微笑的「墨西哥鈍口螈」！今天科學隊長和好奇博士要帶大家認識這隻超萌的「不老頑童」，一起揭開牠們神奇的再生魔法與最新基因密碼！",
    "labs": [
     {
@@ -166,7 +192,8 @@
      "question": "先放「蓋住傷口」，再看看下一張卡需要誰幫忙。",
      "url": "https://lab.kidsci.app/regrow/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/acf59796bdc2c4b8d70c.jpg"
   },
   {
    "code": "c20",
@@ -181,6 +208,7 @@
     "duration": 1320,
     "pubDate": "Mon, 20 Jul 2026 01:44:43 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/34/cb/94/34cb941f-5fa6-88ce-bbcd-243f258f8d9c/mza_18255119349390788062.jpg/600x600bb.jpg",
    "intro": "你們看過沒有尾巴、像個大魚頭一樣在水裡游的巨大魚類嗎？牠就是「翻車魚」！牠一天到晚躺在海面上曬太陽，居然是為了請海鳥幫忙抓身上多達 60 幾種的寄生蟲！而且牠一次可以生下 3 億顆卵，剛出生時只有一粒沙子那麼小，長大卻能變成兩公噸的巨無霸！更神奇的是，牠被咬掉一大塊肉還能神態自若地活著！快跟著我們一起探尋這隻海洋中呆萌又強大的微生物吧！",
    "labs": [
     {
@@ -189,7 +217,8 @@
      "question": "同樣的深潛時間，大魚和小魚一樣快變冷嗎？",
      "url": "https://lab.kidsci.app/sunwarm/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/fc2caebcf3937fd443cb.jpg"
   },
   {
    "code": "c21",
@@ -206,6 +235,7 @@
     "duration": 944,
     "pubDate": "Sun, 02 Aug 2026 22:02:07 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/26/89/61/26896129-667c-d229-817c-f571a30fe11d/mza_3954117988447294641.jpg/600x600bb.jpg",
    "intro": "泡個澡也能拿下物理學奇蹟？古希臘科學家阿基米德在洗澡時看見水溢出來，竟然連衣服都顧不上穿，光著腳衝上街頭狂喊「Eureka!」！他究竟發現了什麼驚天大密碼？不破壞皇冠要怎麼抓出偷工減料的金匠？沉重的鋼鐵巨輪又是如何漂浮在大海上的？快來跟我們一起揭開浮力原理的奧秘吧！",
    "labs": [
     {
@@ -220,7 +250,8 @@
      "question": "把皇冠放進水裡，再用槓桿試試力臂與平衡。",
      "url": "https://lab.kidsci.app/archi/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/e432061891cedec3a76f.jpg"
   },
   {
    "code": "c23",
@@ -231,10 +262,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E8%A2%AB%E8%80%81%E5%B8%AB%E6%89%93%E6%9C%80%E4%BD%8E%E5%88%86%E7%9A%84%E8%AB%96%E6%96%87-%E6%9C%80%E5%BE%8C%E5%BE%97%E4%BA%86%E8%AB%BE%E8%B2%9D%E7%88%BE%E7%8D%8E-%E6%96%AF%E8%90%AC%E7%89%B9-%E9%98%BF%E7%91%9E%E5%B0%BC%E6%96%AF%E7%9A%84%E7%A7%91%E5%AD%B8%E9%80%86%E8%A5%B2%E6%95%85%E4%BA%8B-vip-23/id1812447277?i=1000781142903",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-08-10T22:02:12Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/e8/3f/f5/e83ff50d-7fa7-4d2c-33d2-9efbc0825e4a/174175a3-bbed-45d3-b3a4-b0f6069496ae.jpg/600x600bb.jpg",
    "intro": "如果你的作業被老師評為最低分，你會放棄還是繼續堅持？19 世紀的瑞典年輕人阿瑞尼斯，因為提出「食鹽在水裡會自動拆開成離子」的神奇觀點，被教授打極低分數；但 20 年後，這份論文竟讓他拿下瑞典史上第一個諾貝爾化學獎！他不只揭開了「夏天食物為什麼容易壞」、「數蟋蟀叫聲就能量氣溫」的化學密碼，甚至在百年前就手算出全球暖化的預言。快跟著科學隊長與浩奇博士，一起聆聽這段驚天動地的科學逆襲傳奇！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/6e9df591d8a29a230803.jpg"
   },
   {
    "code": "c24",
@@ -245,10 +279,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E4%B8%8D%E6%80%95%E7%97%9B-%E4%B8%8D%E8%A1%B0%E8%80%81-%E9%82%84%E4%B8%8D%E6%9C%83%E5%BE%97%E7%99%8C%E7%97%87-%E5%9C%B0%E5%BA%95%E4%B8%8B%E7%9A%84%E8%B6%85%E7%B4%9A%E8%8B%B1%E9%9B%84-%E8%A3%B8%E9%BC%B4%E9%BC%A0-vip-24/id1812447277?i=1000783565142",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-08-17T22:02:08Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/51/71/74/5171746c-f2e7-ecc8-7598-de954bcd136d/d0b7f92a-7cc2-4c22-882d-5a630273fb9b.jpg/600x600bb.jpg",
    "intro": "如果有一種動物外表像粉紅熱狗、長著大門牙，卻擁有不怕痛、不衰老、不會得癌症，甚至能在沒氧氣時「變身植物」吃果糖存活的神奇超能力，你相信嗎？牠就是生活在東非地底下的「裸鼴鼠」！牠們不只擁有階級分明的地底王國，還用「女王香水」統治臣民、用王國方言辨認同胞。快跟著科學隊長與好奇博士，一起鑽進地底探索這位超級英雄的長壽奧秘吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/9e246053fd6ba49ed407.jpg"
   },
   {
    "code": "c25",
@@ -265,6 +302,7 @@
     "duration": 1402,
     "pubDate": "Sun, 16 Aug 2026 22:02:18 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/65/b1/a4/65b1a46e-09c0-c24b-37f4-403ec230260b/mza_9632199566207219275.jpg/600x600bb.jpg",
    "intro": "你知道嗎？牛頓在 23 歲那年遇上了可怕的大瘟疫，被迫回鄉「在家休息」，沒想到這段宅在農莊的日子，竟然成了改變整個人類歷史的「科學奇蹟年」！他不只從一顆蘋果悟出了連月亮都管得著的萬有引力，還用超酷的「大砲思想實驗」解釋了為什麼人造衛星永遠掉不下來！快來聽聽這位科學巨人的超狂傳奇",
    "labs": [
     {
@@ -273,7 +311,8 @@
      "question": "改變速度，看落地、繞地球與逃逸的差別。",
      "url": "https://lab.kidsci.app/newton/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/23071f5875ade5681f96.jpg"
   },
   {
    "code": "c26",
@@ -287,8 +326,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E7%89%9B%E9%A0%93%E5%B0%88%E8%BC%AF-%E4%B8%AD-%E5%85%AC%E8%BB%8A%E6%80%A5%E7%85%9E-%E5%BD%A9%E8%99%B9%E5%AF%86%E7%A2%BC%E8%88%87%E7%81%AB%E7%AE%AD%E5%8D%87%E7%A9%BA-%E7%89%9B%E9%A0%93%E4%B8%89%E5%A4%A7%E9%81%8B%E5%8B%95%E5%AE%9A%E5%BE%8B%E8%88%87%E5%85%89%E7%9A%84%E9%AD%94%E6%B3%95-vip-26/id1812447277?i=1000783566094",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-08-20T22:02:05Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/9c/8b/83/9c8b833c-0bd0-edc8-617f-2a427060caa9/1b4ca8a6-0183-41ed-8b0d-ed345443b5e5.jpg/600x600bb.jpg",
    "intro": "你有沒有想過，為什麼公車急煞的時候身體會往前衝？為什麼 SpaceX 的火箭越飛越快？為什麼雨後天空會出現彩虹？這些看似毫無關聯的問題，牛頓用三條簡單的定律和一塊玻璃三稜鏡，通通都解答了！快來一起解鎖宇宙的運行密碼和彩虹的終極秘密",
    "labs": [
     {
@@ -297,7 +338,8 @@
      "question": "換光源與元件，立即觀察折射、反射與色散。",
      "url": "https://lab.kidsci.app/rainbow/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/82eeac4dfd6e952a0a4b.jpg"
   },
   {
    "code": "c27",
@@ -308,10 +350,13 @@
    "state": "public",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E7%89%9B%E9%A0%93%E5%B0%88%E8%BC%AF-%E4%B8%8B-%E7%A3%A8%E9%8F%A1%E7%89%87-%E7%99%BC%E6%98%8E%E5%BE%AE%E7%A9%8D%E5%88%86-%E6%8A%93%E5%81%BD%E5%B9%A3-%E7%89%9B%E9%A0%93%E7%9A%84%E8%B7%A8%E7%95%8C%E7%A5%9E%E6%93%8D%E4%BD%9C%E5%A4%A7%E7%B5%90%E5%B1%80-vip-27/id1812447277?i=1000785301723",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-08-27T16:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/e4/be/4a/e4be4aa3-9bf5-1a3d-1323-2cd3292d6bbf/24673687-06a6-4cdb-9ccd-109406f98f35.jpg/600x600bb.jpg",
    "intro": "牛頓除了萬有引力和三大運動定律，他還有更多神操作！他親手熬夜磨出改變天文史的反射望遠鏡、嫌數學不夠用就乾脆自己發明微積分，晚年還化身倫敦臥底神探，把「偽幣之王」關進監獄！最酷的是——你口袋裡硬幣側邊那圈凹凸齒痕，正是 300 年前牛頓設計的防偽智慧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/30cf80d18054e940c13c.jpg"
   },
   {
    "code": "c29",
@@ -322,10 +367,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E8%81%BD%E7%B2%89%E9%BB%9E%E6%92%AD-%E7%A7%91%E5%AD%B8%E5%AE%B6%E5%B0%88%E8%BC%AF-%E6%8B%BF%E8%87%AA%E5%B7%B1%E8%BA%AB%E9%AB%94%E7%95%B6%E5%AF%A6%E9%A9%97%E7%9A%84%E7%98%8B%E7%8B%82%E9%86%AB%E5%AD%B8%E5%A4%A9%E6%89%8D-%E7%B6%AD%E7%88%BE%E7%B4%8D-%E7%A6%8F%E6%96%AF%E6%9B%BC%E8%88%87%E5%BF%83%E5%B0%8E%E7%AE%A1%E6%8A%80%E8%A1%93%E7%9A%84%E7%94%9F%E6%AD%BB%E5%86%92%E9%9A%AA-vip-29/id1812447277?i=1000788228350",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-09-10T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/f9/19/cd/f919cd7c-2027-6abd-f7ae-67f407d3767b/71073635-956f-45c1-a65a-3af535d75b7d.jpg/600x600bb.jpg",
    "intro": "如果有人要拿一根 65 公分長的管子插進自己的手臂一路推進跳動的心臟，大家一定覺得他瘋了！但 1929 年 25 歲的德國年輕醫師維爾納．福斯曼正是用這場不可思議的自體實驗，打破了心臟碰不得的百年禁忌，更為現代心導管手術奠定了救人無數的基石！想知道他是如何在地下室 X 光室看著管子鑽進心臟、甚至在被嘲笑放逐 27 年後榮獲諾貝爾獎的嗎？快跟著科學隊長與好奇博士一起揭開這場驚心動魄的醫學傳奇吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/d01af98b10b3a0c38062.jpg"
   },
   {
    "code": "c30",
@@ -338,8 +386,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E8%81%BD%E7%B2%89%E9%BB%9E%E6%92%AD-%E5%8B%87%E9%97%96%E5%A4%AA%E9%99%BD%E7%85%89%E7%8D%84%E7%9A%84%E6%A5%B5%E9%80%9F%E9%A3%9B%E8%88%B9-%E5%B8%95%E5%85%8B%E5%A4%AA%E9%99%BD%E6%8E%A2%E6%B8%AC%E5%99%A8%E8%88%87-%E8%A7%B8%E6%91%B8%E6%81%86%E6%98%9F-%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%A5%87%E8%B9%9F-vip-30/id1812447277?i=1000789335998",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-09-14T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/18/33/f9/1833f9bc-c80e-0db8-89dd-2bad01436305/dbf91d91-b2ee-4966-b04a-70435d9ba2f0.jpg/600x600bb.jpg",
    "intro": "如果有人告訴你，人類建造了一艘太空船，要直接衝進百萬度高溫的太陽大氣層，飛行速度快到一秒鐘就能飛將近 200 公里，從台北到高雄只要不到 2 秒——你一定會懷疑這是科幻電影裡的超級情節！但這正是 NASA「帕克太陽探測器」真實上演的人類奇蹟！這艘裝載超級碳纖維盾牌、連太陽能板都有專屬水冷空調的飛船，究竟是如何在千度火海中「觸摸太陽」？被學界嘲諷半世紀的科學狂想又是如何大白於天下？快跟著科學隊長與好奇博士，一起搭上這艘人類史上最快的極速飛車，勇闖太陽的狂暴心臟吧！",
    "labs": [
     {
@@ -348,7 +398,8 @@
      "question": "試日心軌道、金星助推與隔熱盾的陰影。",
      "url": "https://lab.kidsci.app/parker/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/79dda152f8baf74eb9c6.jpg"
   },
   {
    "code": "c31",
@@ -359,10 +410,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E8%81%BD%E7%B2%89%E9%BB%9E%E6%92%AD-%E8%8D%92%E6%BC%A0%E6%A5%B5%E9%80%9F%E8%B6%85%E8%B7%91%E9%B3%A5-%E6%9C%89%E7%BF%85%E8%86%80%E5%8D%BB%E4%B8%8D%E6%84%9B%E9%A3%9B-%E5%B0%88%E5%90%83%E6%AF%92%E8%9B%87%E7%9A%84-%E8%B5%B0%E9%B5%91-%E5%82%B3%E5%A5%87-vip-31/id1812447277?i=1000793041813",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-10-05T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/75/0c/78/750c7866-fbe5-d02f-caff-70cd5714e843/2258c731-185f-4fd8-9fc4-70702e3602c3.jpg/600x600bb.jpg",
    "intro": "如果有一隻鳥長了豐滿的羽翼卻幾乎不飛，反而能在滾燙的沙漠上以時速 42 公里狂飆，甚至把劇毒的響尾蛇當成可口點心，你一定會覺得這太不可思議了！牠就是卡通裡「嗶嗶鳥」的真實原型——走鵑！這隻背部自帶太陽能充電板、終生不用喝水還能靠眼眶排鹽的神奇超跑鳥，究竟有什麼不可思議的沙漠生存黑科技？快跟著科學隊長和好奇博士，一起來到北美大荒漠，見證走鵑驚心動魄的極速傳奇吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/d8cd07d3ea1f5472a1ef.jpg"
   },
   {
    "code": "c32",
@@ -373,10 +427,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E9%AD%94%E8%A1%93%E8%88%AC%E7%9A%84%E7%86%B1%E9%87%8F%E5%A4%A7%E6%90%AC%E5%AE%B6-%E5%86%B7%E6%B0%A3%E5%A6%82%E4%BD%95%E6%8A%8A%E6%88%BF%E9%96%93%E8%AE%8A%E5%86%B0%E7%AE%B1-%E6%9A%96%E6%B0%A3%E5%A6%82%E4%BD%95%E5%BE%9E%E5%86%B0%E9%9B%AA%E4%B8%AD%E6%A6%A8%E5%87%BA%E7%86%B1%E8%83%BD-vip-32/id1812447277?i=1000795254039",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-10-12T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/8c/b1/90/8cb1902d-333e-f681-b74c-cbc00ee048ab/0f063328-2568-47e6-9b1c-bc57cbc2013c.jpg/600x600bb.jpg",
    "intro": "在炎熱夏天只要按一下遙控器，房間瞬間就變得冰冰涼涼；到了寒冷冬天下雪天，空調竟然還能吐出暖呼呼的春風！掛在牆上的白色方盒子，肚子裡既沒有塞大冰塊，也沒有生火爐，它到底施展了什麼魔法？物理學家揭曉了一個驚天大秘密：世界上根本沒有「製造冷氣」這回事，冷氣機其實是一個身手矯健的「熱量超級搬運工」！更不可思議的是，它連在零下 10 度的暴風雪裡，都能硬生生「榨出熱能」！快跟著科學隊長和好奇博士，一起拆開空調的機械心臟，探索這場精彩絕倫的熱量大逃亡吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/5c5023e7cc72e832027f.jpg"
   },
   {
    "code": "c33",
@@ -391,6 +448,7 @@
     "duration": 1168,
     "pubDate": "Sun, 18 Oct 2026 22:02:13 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/2e/10/3e/2e103e5a-5a69-7298-775f-d27f22fa13f6/mza_1373854733641526863.jpg/600x600bb.jpg",
    "intro": "2026 年 10 月 15 日，特斯拉第二代 Roadster 在德州跑出 0 到 60 英里只要 0.81 秒的驚人加速，還倒掛在弧形軌道上行駛！但你知道嗎？讓車子「不會掉下來」的幫手之一，竟然就是牛頓第一定律的慣性；而它的底盤吸氣風扇，還能在車子還沒動的時候就把車牢牢吸住！上集就跟著科學隊長和好奇博士，一起看懂慣性和抓地力的秘密，也算一算起跑那一瞬間，你的頭會變成多重的「鉛球」！",
    "labs": [
     {
@@ -399,7 +457,8 @@
      "question": "輪胎、吸地風扇與馬達，改一個零件，看車子的反應。",
      "url": "https://lab.kidsci.app/tesla-roaster/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/446ce093fefba53b8368.jpg"
   },
   {
    "code": "c34",
@@ -410,10 +469,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E8%B2%BC%E5%9C%B0%E9%A3%9B%E8%A1%8C%E7%9A%84%E5%A4%AA%E7%A9%BA%E7%81%AB%E7%AE%AD-%E4%B8%8B-%E7%89%B9%E6%96%AF%E6%8B%89%E7%AC%AC%E4%BA%8C%E4%BB%A3-roadster-%E7%9A%84%E6%8E%A8%E9%80%B2%E5%99%A8-%E9%A6%AC%E8%B5%AB%E7%92%B0%E8%88%87%E7%89%9B%E9%A0%93%E7%AC%AC%E4%B8%89%E5%AE%9A%E5%BE%8B-vip-34/id1812447277?i=1000796871517",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-10-18T23:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/fc/5c/16/fc5c1650-da67-a6d3-8f19-beda0dd52c17/d5d8fa47-dca7-44e2-9f41-7f372a98976e.jpg/600x600bb.jpg",
    "intro": "輪胎再會抓地，也跑不出 0.81 秒！特斯拉 Roadster 的秘密武器，是車尾把 250 公斤壓縮空氣以超音速噴出去的推進器，推力大約 8 噸！噴出來的氣流裡，還會排出一串像鑽石項鍊的「馬赫環」。為什麼會排成一顆一顆的鑽石？為什麼火箭的會發光、Roadster 的卻不會？下集跟著科學隊長和好奇博士，從牛頓第三定律一路玩到超音速震波！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/7b6289b5be601f4289fa.jpg"
   },
   {
    "code": "c5",
@@ -428,6 +490,7 @@
     "duration": 972,
     "pubDate": "Tue, 06 Jan 2026 10:44:59 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/dc/d0/60/dcd060b5-b401-6f7b-66a3-d801ec083068/mza_677465919592990589.jpg/600x600bb.jpg",
    "intro": "想知道哪種生物加速比法拉利跑車還快嗎？或是哪種鳥類鼻孔裡藏著噴射機的科技？今天科學隊長與好奇博士要帶大家參加一場「地表最強速度爭霸戰」！我們將潛入深海看旗魚變形，再衝上雲端看遊隼俯衝，保證讓你發現原來大自然才是最酷的工程師！",
    "labs": [
     {
@@ -454,7 +517,8 @@
      "question": "背部會彎，腳印一定更遠嗎？",
      "url": "https://lab.kidsci.app/backrun/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/baa94e65b70a58c127f7.jpg"
   },
   {
    "code": "c6",
@@ -469,8 +533,10 @@
     "duration": 723,
     "pubDate": "Sun, 12 Apr 2026 22:03:09 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/a4/ce/a3/a4cea3fb-9aab-98a0-83a2-c63dd2e4310a/mza_4264325354149830741.jpg/600x600bb.jpg",
    "intro": "無人車是怎麼「看路」的？原來它有不怕黑的雷射眼，還會跟紅綠燈講悄悄話！揭開自動駕駛背後的黑科技秘密。",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/4c6399154ba4f3034664.jpg"
   },
   {
    "code": "c8",
@@ -485,8 +551,10 @@
     "duration": 973,
     "pubDate": "Thu, 09 Apr 2026 22:02:04 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/da/9b/06/da9b06d7-6312-e018-893a-22e7a90050f1/mza_14611582776270136763.jpg/600x600bb.jpg",
    "intro": "這一艘船造價133億美元，擁有人造恆星動力心臟，還把飛機當作軌道砲發射？來看看未來的海上霸主是如何煉成的！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/b690acffb8998b68c056.jpg"
   },
   {
    "code": "c9",
@@ -501,8 +569,10 @@
     "duration": 1228,
     "pubDate": "Wed, 14 Jan 2026 22:05:05 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/da/79/91/da7991da-2c36-c25d-23ef-9196542a16f9/mza_12106048813666089896.jpg/600x600bb.jpg",
    "intro": "你知道你的大腦裡藏著數億個微型「接線生」嗎？他們每天忙著傳訊息讓你學會新知識！但萬一這些線路打結了，或是 AI 機器人開始胡言亂語，到底是發生了什麼事？今天科學隊長和好奇博士要帶你進入一個神奇的鏡像世界，看 AI 怎麼學會「抓重點」，還要揭開阿茲海默症遺忘的秘密，原來「連結」才是智慧的最強超能力！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/840bd3f7607ebde3487d.jpg"
   },
   {
    "code": "s23",
@@ -517,8 +587,10 @@
     "duration": 624,
     "pubDate": "Sun, 25 Jan 2026 00:38:58 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/67/78/51/67785126-2205-ef99-e90d-b025cfbfd520/mza_1583304875460830807.jpg/600x600bb.jpg",
    "intro": "你們知道太陽系的邊緣躲著一個「帶著愛心」的星球嗎？冥王星雖然被剔除出行星行列，但它可一點都不可憐！它有著超酷的藍色天空，還會噴發出冰漿，甚至有像牙膏一樣緩慢流動的巨大冰原！快跟著科學隊長和好奇博士，一起搭上時速超快的探測器，去看看這顆「活著」的冰雪世界吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/98e93065629af51e97b8.jpg"
   },
   {
    "code": "s24",
@@ -535,8 +607,10 @@
     "duration": 1106,
     "pubDate": "Tue, 27 Jan 2026 21:05:29 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/26/6c/9c/266c9ca0-ed61-768c-aeec-1414f4a1bb25/mza_15103588693516535450.jpg/600x600bb.jpg",
    "intro": "你的身體就像一個微型宇宙，住著六十兆個細胞夥伴 ！而真正的宇宙更像是一個巨大的「動物園」，裡面有長得像銅鑼燒的銀河系 ，還有看不見卻力大無窮的「暗物質」特務在搬運星星 。快跟著科學隊長和好奇博士，一起搭乘光速火箭，去尋找宇宙的第一道光吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/bbfe8d8a8f61e57c1f85.jpg"
   },
   {
    "code": "s25",
@@ -551,8 +625,10 @@
     "duration": 1040,
     "pubDate": "Sat, 31 Jan 2026 00:05:42 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/3f/be/aa/3fbeaaaa-4484-5e8c-d183-e3d038d025c3/mza_9292011912779650860.jpg/600x600bb.jpg",
    "intro": "你有想過如果人被吸進黑洞會變成什麼樣子嗎？科學家說那會變成「義大利麵」！這集我們要跟著科學隊長和好奇博士，一起去追蹤宇宙中最強大的隱形大胃王——黑洞，看看它們是怎麼誕生、怎麼「吃飯」，還要揭開神祕白洞與蟲洞的傳說。快來一起加入這場跨越光速的宇宙冒險吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/ad19b762cefa1348655f.jpg"
   },
   {
    "code": "s26",
@@ -567,8 +643,10 @@
     "duration": 851,
     "pubDate": "Sun, 01 Feb 2026 21:36:02 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/12/eb/59/12eb59b6-e146-a3ad-76d7-0e10c02342d9/mza_15290058318046404232.jpg/600x600bb.jpg",
    "intro": "你以為光是「瞬間」到達的嗎？其實光雖然快，但它也有自己的極限速度喔！想像一下，古時候的科學家居然想在山頭揮動煤油燈來測光速，結果卻測到了自己的反應速度？更神奇的是，不論你跑得多快去追光，光永遠都會以同樣的速度把你甩在後頭！想知道為什麼導航系統沒了光速祕密就會出錯嗎？快來跟我們一起追光吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/f775ca63c230b17321a4.jpg"
   },
   {
    "code": "s27",
@@ -583,8 +661,10 @@
     "duration": 726,
     "pubDate": "Sun, 08 Feb 2026 21:23:31 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/90/f3/35/90f3353e-a20f-2d40-52f3-71efaffba749/mza_11757709586859523978.jpg/600x600bb.jpg",
    "intro": "你知道你的手機裡住著一位隱形的室友嗎？它不只知道你喜歡看什麼影片，甚至還認得你剛睡醒的臉！今天我們要來聊聊這位既聰明又有點神祕的 AI 朋友，它到底是怎麼學會讀心術的？它真的懂我們的心情嗎？快來聽聽這場充滿驚奇的數位冒險吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/80a1d0dc619d2debd6dc.jpg"
   },
   {
    "code": "s28",
@@ -599,8 +679,10 @@
     "duration": 731,
     "pubDate": "Mon, 09 Feb 2026 21:25:17 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/ac/17/67/ac1767a5-39d5-4060-fff8-a1ccb00bd58f/mza_3809167970822792233.jpg/600x600bb.jpg",
    "intro": "AI 竟然也會玩遊戲？而且還玩到了世界冠軍！從只會死算術的「深藍」，到下出外星招式的「AlphaGo」，AI 的進化速度簡直比超級賽亞人還快！但你知道嗎？AI 這麼會玩遊戲，其實是為了幫人類解決更難的問題喔！快來聽聽這場精彩的 AI 遊戲爭霸戰！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/915ce3029c513d3055de.jpg"
   },
   {
    "code": "s29",
@@ -615,8 +697,10 @@
     "duration": 890,
     "pubDate": "Tue, 10 Feb 2026 21:45:14 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/cc/04/22/cc042217-9e2b-3516-4e63-3049d1fd9c1d/mza_15383276052504863986.jpg/600x600bb.jpg",
    "intro": "你想過為什麼 ChatGPT 這麼會聊天嗎？其實它是一個超級厲害的「文字接龍高手」喔！還有那些超漂亮的 AI 繪圖，竟然是從一堆像雜訊一樣的點點變出來的？今天我們要來拆解這根「數位魔法棒」，看看它是怎麼運作的，還有我們要怎麼唸對「咒語」，才能讓它變出我們想要的東西！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/d831120bd804e67d57d8.jpg"
   },
   {
    "code": "s30",
@@ -631,8 +715,10 @@
     "duration": 676,
     "pubDate": "Wed, 11 Feb 2026 21:26:08 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/ba/89/e1/ba89e108-3dc3-b667-7544-c19434031148/mza_9570675830924066790.jpg/600x600bb.jpg",
    "intro": "想要一個像鋼鐵人「賈維斯」一樣的萬能管家嗎？2026 年就是夢想成真的一年！現在的 AI 不只會聊天，還能幫你當翻譯、當家教、甚至是幫醫生看病的超級助手！還有那些能去火星探險的機器人，它們正在改變我們的世界。快來聽聽這些 AI 代理人（Agent）如何成為我們的最強外掛！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/4bcc28f45b6aa63c9297.jpg"
   },
   {
    "code": "s31",
@@ -647,6 +733,7 @@
     "duration": 961,
     "pubDate": "Thu, 12 Feb 2026 21:18:15 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/95/92/17/959217f0-4480-125a-a9e1-67aad4ecc33a/mza_14236591084181260180.jpg/600x600bb.jpg",
    "intro": "你也想要哈利波特的魔法棒嗎？AI 就像這根魔法棒，但如果不小心，可是會被魔法反噬的喔！Deepfake 讓眼睛看到的都不一定是真的，太依賴 AI 還會讓大腦生鏽變笨！今天我們要教大家五招「數位防禦術」，讓你保護自己，做 AI 的聰明主人！",
    "labs": [
     {
@@ -655,7 +742,8 @@
      "question": "沒有找到證據，和找到反例，是同一件事嗎？",
      "url": "https://lab.kidsci.app/evsteps/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/937b7705c1d33133a581.jpg"
   },
   {
    "code": "s32",
@@ -670,6 +758,7 @@
     "duration": 639,
     "pubDate": "Tue, 17 Feb 2026 21:35:02 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/d7/9b/b0/d79bb0e2-4142-a136-315f-73a3654cf7e7/mza_1992563713166904228.jpg/600x600bb.jpg",
    "intro": "你相信現在高大威猛的馬，在 5500 萬年前竟然只有貓咪那麼大，而且腳上還有軟軟的肉墊嗎？為了在布滿「玻璃砂紙」的草原活下去，牠們不但把牙齒變成了自動鉛筆，還決定捨棄多餘的腳趾，練就了用「中指」奔跑的絕技！快來聽聽這場跨越千萬年的逆天改命大冒險吧！",
    "labs": [
     {
@@ -678,7 +767,8 @@
      "question": "同樣重的配重，放在腳端會更難擺嗎？",
      "url": "https://lab.kidsci.app/legmass/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/d10849f008df48c84596.jpg"
   },
   {
    "code": "s33",
@@ -693,6 +783,7 @@
     "duration": 614,
     "pubDate": "Wed, 18 Feb 2026 21:03:13 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/ac/92/a0/ac92a08f-1ca1-5941-5098-9bfd98757e71/mza_9013488307935967008.jpg/600x600bb.jpg",
    "intro": "帥氣的馬兒竟然是靠「一根中指」在草原上狂奔喔！這可不是在開玩笑，而是大自然最厲害的「輕量化」設計，再加上腳踝內建的超級彈簧，讓馬兒跑起來省力又飛快。想知道馬腿上藏著哪些消失腳趾的秘密，還有科學家怎麼用「時光機」技術讓古代野馬復活嗎？快跟著科學隊長和好奇博士一起揭開馬蹄下的奇蹟吧！",
    "labs": [
     {
@@ -701,7 +792,8 @@
      "question": "彈回來的能量，和一開始存的一樣多嗎？",
      "url": "https://lab.kidsci.app/hoofspr/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/8141b507bf9c87679e5f.jpg"
   },
   {
    "code": "s34",
@@ -716,8 +808,10 @@
     "duration": 875,
     "pubDate": "Sat, 07 Mar 2026 23:17:07 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f6/68/fc/f668fc96-fcdb-1581-9855-bd97646681fd/mza_15434399374643414696.jpg/600x600bb.jpg",
    "intro": "早在三百多萬年前，就有一個「人類」媽媽牽著她的小孩，在火山灰上散步耶！這不是電影，是科學家發現的真實腳印喔！想知道為什麼「站起來」是我們老祖宗最重要的一場豪賭，還因此解鎖了超能力嗎？快來聽聽這集故事！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/a36d7e1033ed9b98c8b2.jpg"
   },
   {
    "code": "s35",
@@ -732,8 +826,10 @@
     "duration": 1040,
     "pubDate": "Sat, 14 Mar 2026 23:38:15 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/df/be/df/dfbedfb8-69d7-f51c-642e-b7d595b2bafe/mza_4544332747754052982.jpg/600x600bb.jpg",
    "intro": "你知道嗎？一百萬年前的「科技新品」居然是一把石頭做的萬用瑞士刀！更酷的是，我們的祖先舉辦了史上第一場BBQ派對，結果竟然讓大腦變大了！這到底是怎麼回事？快來聽聽石器時代最酷的秘密！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/93fee98e73ef321df6bb.jpg"
   },
   {
    "code": "s36",
@@ -748,8 +844,10 @@
     "duration": 752,
     "pubDate": "Sat, 21 Mar 2026 23:43:22 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/32/99/4e/32994ee8-fcc5-de59-a560-a377dec848da/mza_4752541398539609454.jpg/600x600bb.jpg",
    "intro": "你以為住在山洞裡的史前人類都只會敲石頭嗎？大錯特錯！考古學家發現，溫柔的尼安德塔人竟然會照顧受傷失明的夥伴長達20年，甚至還有將近50萬年前蓋的「史前豪宅」被找到了！快來聽聽這些顛覆你想像的遠古秘密！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/89c20de4ec844b487c52.jpg"
   },
   {
    "code": "s37",
@@ -764,8 +862,10 @@
     "duration": 966,
     "pubDate": "Sun, 29 Mar 2026 00:17:08 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/df/ba/c8/dfbac81b-53dd-2631-365b-a64c55f23817/mza_13664637354739452101.jpg/600x600bb.jpg",
    "intro": "你以為石器時代的人類天天都在開烤肉派對嗎？大錯特錯！他們不但會烤地瓜、辦海鮮全餐，甚至還會從樹皮跟黴菌裡找出天然的OK繃！更酷的是，這些遠古親戚的「幽靈」可能還偷偷住在你的身體裡喔！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/de721dced695b0af2628.jpg"
   },
   {
    "code": "s38",
@@ -780,8 +880,10 @@
     "duration": 935,
     "pubDate": "Sat, 04 Apr 2026 22:02:06 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/b4/cf/8b/b4cf8b4d-a572-d773-c9bd-c0b303991274/mza_5031361250925543211.jpg/600x600bb.jpg",
    "intro": "你知道人類最早的「全球化」不是手機也不是網路，而是一塊錫礦嗎？青銅時代的祖先為了找到錫，開通了跨越數千公里的貿易路線；古埃及法老手上的刀，竟然是從外太空掉下來的隕石做的！超酷的金屬故事等你來聽！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/996c00927ea202bfb39e.jpg"
   },
   {
    "code": "s41",
@@ -792,8 +894,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E5%8B%95%E7%89%A9%E6%AF%8D%E8%A6%AA%E5%B0%88%E8%BC%AF-2-%E9%9B%A8%E6%9E%97%E8%A3%A1%E7%9A%84%E8%B6%85%E7%B4%9A%E5%A4%96%E9%80%81%E5%93%A1-%E8%8D%89%E8%8E%93%E7%AE%AD%E6%AF%92%E8%9B%99%E5%AA%BD%E5%AA%BD%E7%9A%84-%E6%84%9B%E5%BF%83%E4%BE%BF%E7%95%B6-%E5%A4%A7%E5%86%92%E9%9A%AA-sp-41/id1812447277?i=1000764072568",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-04-30T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/0e/9f/de/0e9fde54-3804-9e83-d843-1d9a268814ea/20c9a940-3a00-45a2-80d0-24e4ba059f9f.jpg/600x600bb.jpg",
    "intro": "誰說青蛙不照顧小孩？在中美洲雨林裡，有一位體型不到三公分的草莓箭毒蛙媽媽，不僅要背著孩子爬樹找「單人托兒所」，每天還要辛苦外送富含「護身毒素」的愛心便當！快來聽聽這位最強單親媽媽的感人故事，看看小蝌蚪是如何靠著媽媽的便當變身成有毒小戰士的吧！",
    "labs": [
     {
@@ -802,7 +906,8 @@
      "question": "先選水池、送一隻，再走一天；水夠不夠，路遠不遠？",
      "url": "https://lab.kidsci.app/tadpool/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/9a81ff1e3150d9108d33.jpg"
   },
   {
    "code": "s42",
@@ -813,8 +918,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E5%8B%95%E7%89%A9%E6%AF%8D%E8%A6%AA%E5%B0%88%E8%BC%AF-3-%E5%81%BD%E8%A3%9D%E5%A4%A7%E5%B8%AB%E7%9A%84%E8%B6%85%E7%B4%9A%E6%AF%8D%E4%B9%B3-%E5%A4%A7%E8%9F%BB%E8%9B%9B%E7%9A%84%E5%93%BA%E4%B9%B3%E5%A5%87%E8%A7%80-sp-42/id1812447277?i=1000765881017",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-05-03T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/ae/0e/02/ae0e021e-ad2d-f4f2-e8fe-e03a0c16c1ba/5e8d4b08-1fdd-46e8-89c3-3fb3486047c3.jpg/600x600bb.jpg",
    "intro": "蜘蛛竟然也會哺乳？世界上竟然有蛋白質含量是牛奶 4 倍的「超級蜘蛛奶」！微小的大蟻蛛不僅會假裝成螞蟻來保命，更會用不可思議的母愛照顧小寶寶。快來聽聽這場顛覆常識的蜘蛛奇遇記吧！",
    "labs": [
     {
@@ -823,7 +930,8 @@
      "question": "小蜘蛛的營養點，從哪裡來？",
      "url": "https://lab.kidsci.app/milkpath/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/44c3cddda55bee62c902.jpg"
   },
   {
    "code": "s43",
@@ -834,8 +942,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E5%8B%95%E7%89%A9%E6%AF%8D%E8%A6%AA%E5%B0%88%E8%BC%AF-4-%E6%9E%AF%E8%91%89%E5%A4%A7%E5%B8%AB%E8%88%87%E6%9C%80%E5%BC%B7%E8%83%8C%E4%B8%8A%E8%82%B2%E5%85%92-%E6%8F%AD%E9%96%8B%E8%B2%A0%E5%AD%90%E8%9F%BE%E7%9A%84%E8%B6%85%E7%8B%82%E7%94%9F%E5%AD%98%E7%A7%80-sp-43/id1812447277?i=1000765952353",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-05-05T21:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/76/95/52/76955235-08e2-8e73-a7ef-696b2a0f43ee/195f8460-ab00-406d-be16-ebb8738844ef.jpg/600x600bb.jpg",
    "intro": "你知道動物界最神奇的「異形秀」在哪裡上演嗎？那就是南美洲的亞馬遜河底！長得像一片泡爛枯葉的負子蟾，居然會把卵背在背上的「小口袋」裡，甚至還能省去蝌蚪期，直接從小蟾蜍的模樣「破背而出」！趕快跟著科學隊長與好奇博士，一起探索這群神秘生物的超能力吧！",
    "labs": [
     {
@@ -844,7 +954,8 @@
      "question": "小小背包裡，空間和媽媽的投入夠嗎？",
      "url": "https://lab.kidsci.app/pipaback/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/f98f59948863da0437bf.jpg"
   },
   {
    "code": "s44",
@@ -855,8 +966,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E5%8B%95%E7%89%A9%E6%AF%8D%E8%A6%AA%E5%B0%88%E8%BC%AF-5-%E5%98%B4%E5%B7%B4%E8%A3%A1%E7%9A%84%E8%82%B2%E5%AC%B0%E6%88%BF-%E8%8E%AB%E4%B8%89%E6%AF%94%E5%85%8B%E5%8F%A3%E5%AD%B5%E9%AD%9A%E7%9A%84%E7%94%9F%E5%AD%98%E5%A5%87%E8%B9%9F-sp-44/id1812447277?i=1000765953085",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-05-07T21:02:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/3a/23/57/3a23576f-83ae-8846-822d-416c70e146b9/56dce499-b896-493f-90ad-d1d090f2af0c.jpg/600x600bb.jpg",
    "intro": "你知道有一種魚會把小孩含在嘴巴裡長大嗎？甚至還能變換淡水與海水的模式！趕快跟著科學隊長與好奇博士，一起揭開莫三比克口孵魚的超強生存特種部隊！",
    "labs": [
     {
@@ -865,7 +978,8 @@
      "question": "先看幼魚，再分配護幼和覓食；看看媽媽的資源帳。",
      "url": "https://lab.kidsci.app/brood/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/df5c5c1b8ef03d6fa2fc.jpg"
   },
   {
    "code": "s45",
@@ -876,10 +990,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E5%8B%95%E7%89%A9%E6%AF%8D%E8%A6%AA%E5%B0%88%E8%BC%AF-6-%E5%89%B2%E8%82%89%E9%A4%B5%E5%A8%83-%E6%8F%AD%E9%96%8B%E8%9A%93%E8%9E%88%E5%AA%BD%E5%AA%BD%E7%9A%84%E7%98%8B%E7%8B%82%E6%AF%8D%E6%84%9B-sp-45/id1812447277?i=1000767054760",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-05-10T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/53/83/e2/5383e20b-72f3-6a9c-1866-0d54d3c79026/dce44e4e-d0dc-4c14-8fa9-7f8154c22832.jpg/600x600bb.jpg",
    "intro": "竟然有動物會讓孩子吃自己的肉？蚓螈媽媽不只割肉餵娃，還會分泌「乳汁」給寶寶喝！快來聽聽這場發生在神祕地底下的瘋狂母愛盛宴，保證讓大開眼界！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/204da0461add1674024f.jpg"
   },
   {
    "code": "s46",
@@ -890,8 +1007,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E5%8B%95%E7%89%A9%E6%AF%8D%E8%A6%AA%E5%B0%88%E8%BC%AF-7-%E5%AF%86%E9%9B%86%E6%81%90%E6%87%BC%E7%97%87%E7%9A%84%E7%B5%82%E6%A5%B5%E4%BF%9D%E6%AF%8D-%E7%8B%BC%E8%9B%9B%E5%AA%BD%E5%AA%BD%E7%9A%84%E8%B6%85%E7%B4%9A%E8%82%B2%E5%85%92%E8%A1%93-sp-46/id1812447277?i=1000767355664",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-05-12T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/26/8b/ec/268bec4d-e752-ecba-8051-d24ff92f14b8/93327ffa-b2ba-47b8-85fa-0721f4c11709.jpg/600x600bb.jpg",
    "intro": "聽說過會背著幾百個孩子到處跑的超級媽媽嗎？狼蛛媽媽不只會把卵囊隨身攜帶，等孩子出生後，還會讓整群小蜘蛛密密麻麻地爬在自己背上，簡直就是自然界的「行動育兒車」！雖然畫面震撼，但背後全是滿滿的母愛與神奇的科學秘密喔！",
    "labs": [
     {
@@ -900,7 +1019,8 @@
      "question": "多背幾隻小蜘蛛，媽媽與孩子的帳會怎麼變？",
      "url": "https://lab.kidsci.app/wolfcare/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/2ee67699ebc8017a6fb2.jpg"
   },
   {
    "code": "s47",
@@ -911,10 +1031,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E8%BB%8D%E4%BA%8B%E6%AD%A6%E5%99%A8%E5%B0%88%E8%BC%AF-4-%E5%AD%90%E5%BD%88%E6%89%93%E5%AD%90%E5%BD%88%E7%9A%84%E7%B5%82%E6%A5%B5%E5%B0%8D%E6%B1%BA-%E6%84%9B%E5%9C%8B%E8%80%85%E4%B8%89%E5%9E%8B%E9%A3%9B%E5%BD%88-pac-3-%E7%9A%84%E9%BB%91%E7%A7%91%E6%8A%80%E5%A4%A7%E8%A7%A3%E5%AF%86-sp-47/id1812447277?i=1000767556188",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-05-14T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/c9/7e/b4/c97eb4a0-57e1-13ea-0232-33b13adbd3f8/634c6490-f698-48cd-a975-d5b702289378.jpg/600x600bb.jpg",
    "intro": "在浩瀚天空中，如何用一顆子彈擊中另一顆子彈？愛國者三型飛彈不靠爆炸，而是直接撞碎敵方彈頭！快跟著科學隊長和好奇博士，一起揭開 180 個微型推進器與毫米波雷達的保鑣傳奇！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/fba2528c857fa0d59905.jpg"
   },
   {
    "code": "s48",
@@ -925,10 +1048,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E8%BB%8D%E4%BA%8B%E6%AD%A6%E5%99%A8%E5%B0%88%E8%BC%AF-5-%E7%BF%B1%E7%BF%94%E5%A4%A9%E9%9A%9B%E7%9A%84-%E5%BC%B7%E5%A4%A7%E8%80%85-%E8%A7%A3%E6%9E%90f-35i-adir%E5%8C%BF%E8%B9%A4%E6%88%B0%E6%A9%9F%E7%9A%84%E7%A7%91%E6%8A%80%E7%A7%98%E5%AF%86-sp-48/id1812447277?i=1000768255205",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-05-17T21:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/60/d2/be/60d2bec6-46b8-2be9-312a-216ff1c5d3e8/d62824da-fc99-46eb-b54c-54e64b7ad3ed.jpg/600x600bb.jpg",
    "intro": "想知道這架被稱為「強大者」的戰機是如何在雷達上「隱身」的嗎？它竟然還有「外掛大腦」跟「匿蹤油箱」！快來聽聽這架未來戰機的秘密科技！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/85e92f9ebed4777dafa9.jpg"
   },
   {
    "code": "s49",
@@ -939,10 +1065,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E8%BB%8D%E4%BA%8B%E6%AD%A6%E5%99%A8%E5%B0%88%E8%BC%AF-6-%E5%9C%B0%E5%BA%95%E6%8E%A9%E9%AB%94%E7%9A%84%E7%B5%82%E6%A5%B5%E5%89%8B%E6%98%9F-gbu-57-%E5%B7%A8%E5%9E%8B%E9%91%BD%E5%9C%B0%E5%BD%88%E7%9A%84%E7%A7%91%E5%AD%B8%E5%A5%87%E8%B9%9F-sp-49/id1812447277?i=1000768531349",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-05-19T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/90/d3/68/90d3680f-ceec-af7a-e98e-90a86916b619/7d525e62-0417-4df1-8858-210d6a198b02.jpg/600x600bb.jpg",
    "intro": "聽說地底深處最安全？那可不一定！今天科學隊長和浩奇博士要帶大家認識「地表最強常規武器」——GBU-57 巨型鑽地彈。看它如何像熱刀切奶油一樣鑽透幾十公尺厚的石層，還有它那會「算數」的智慧引信！趕快來聽聽這場地底下的科技大戰吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/d5de33b9c063d0a1d7e4.jpg"
   },
   {
    "code": "s50",
@@ -953,10 +1082,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E8%BB%8D%E4%BA%8B%E6%AD%A6%E5%99%A8%E5%B0%88%E8%BC%AF-7-%E6%88%B0%E5%A0%B4%E4%B8%8A%E7%9A%84%E5%A4%A9%E7%A9%BA%E5%B9%BD%E9%9D%88-%E6%8F%AD%E7%A7%98%E7%84%A1%E4%BA%BA%E6%A9%9F%E7%9A%84%E7%A7%91%E6%8A%80%E9%AD%94%E6%B3%95-sp-50/id1812447277?i=1000768531926",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-05-21T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/6d/86/8f/6d868f82-4a0f-04cb-37ba-804e90897544/2f177bd3-e0be-4963-89d9-a2aa6ccc6822.jpg/600x600bb.jpg",
    "intro": "小朋友們，你們知道現在的戰場上有一群看不見的「小蜜蜂」正在大顯身手嗎？它們不僅會飛，還會自己思考，甚至能用便宜的石頭換別人的鑽石盾牌喔！快跟著科學隊長和浩奇博士，一起揭開這些科技幽靈的神秘面紗吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/9f84d87943cc08be6b3b.jpg"
   },
   {
    "code": "s51",
@@ -967,10 +1099,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E8%BB%8D%E4%BA%8B%E6%AD%A6%E5%99%A8%E5%B0%88%E8%BC%AF-8-%E9%99%B8%E5%9C%B0%E4%B8%8A%E7%9A%84-%E9%A3%9B%E6%A9%9F%E6%88%B0%E8%BB%8A-m1-%E8%89%BE%E5%B8%83%E8%98%AD%E8%88%87%E5%AE%83%E7%9A%84%E5%99%B4%E5%B0%84%E5%BF%83%E8%87%9F-sp-51/id1812447277?i=1000769315315",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-05-24T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/7b/9c/02/7b9c0243-7488-02d7-8190-e60c21843d24/445b6690-0391-46ec-99a0-8e0ba0e28367.jpg/600x600bb.jpg",
    "intro": "想像一下，有一台像噴射機一樣發出「咻(xiū)咻(xiū)」聲的戰車！它重達 67 噸卻能跑得比公車還快，原來肚子裡裝的是直昇機引擎？快來聽聽這台超酷的「飛機戰車」是怎麼運作的吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/7b803f5fac977a25c4a1.jpg"
   },
   {
    "code": "s52",
@@ -981,10 +1116,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E8%BB%8D%E4%BA%8B%E6%AD%A6%E5%99%A8%E5%B0%88%E8%BC%AF-9-%E6%8F%AD%E9%96%8B-%E6%B5%B7%E4%B8%8A%E9%87%91%E5%AD%97%E5%A1%94-%E7%9A%84%E7%A5%9E%E7%A7%98%E9%9D%A2%E7%B4%97-%E6%9C%B1%E7%93%A6%E7%89%B9%E7%B4%9A%E9%A9%85%E9%80%90%E8%89%A6%E8%88%87%E9%9B%B7%E9%81%94%E5%8C%BF%E8%B9%A4%E7%9A%84%E7%A7%91%E5%AD%B8%E9%AD%94%E6%B3%95-sp-52/id1812447277?i=1000769315451",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-05-31T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/6b/2f/f1/6b2ff131-f562-3aea-78a8-fc1f121088db/830d8230-74bb-4660-8cfa-7bcdefb1e2c0.jpg/600x600bb.jpg",
    "intro": "想像一艘比足球場還大的超級軍艦，在雷達上竟然看起來像小漁船？快來認識這艘長(zhǎng)得像「金字塔」的朱瓦特級驅逐艦，看看科學家如何利用幾何學讓軍艦玩一場終極大躲貓貓！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/2b83edfcbe0775d916df.jpg"
   },
   {
    "code": "s54",
@@ -995,10 +1133,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E8%A7%A3%E5%AF%86%E4%BA%BA%E9%AB%94%E5%BE%AE%E8%A7%80%E5%AE%87%E5%AE%99-%E5%BE%9E36%E5%85%86%E7%B4%B0%E8%83%9E%E5%A4%A7%E8%BB%8D%E5%88%B0%E7%9C%8B%E7%A9%BF%E7%9A%AE%E8%86%9A%E7%9A%84%E9%80%8F%E8%A6%96%E8%B6%85%E8%83%BD%E5%8A%9B-sp-54/id1812447277?i=1000771526252",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-06-08T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/b9/e3/25/b9e325d9-4ba5-2f91-e58c-125e617d280e/ed4945fe-00e0-4082-afef-65d251797ea7.jpg/600x600bb.jpg",
    "intro": "你聽說過嗎？我們每個人身上都住了幾十兆個微小細胞，光是拉直體內的 DNA，就能往返太陽 20 幾次！更酷的是，現代醫學影像技術已經可以把儀器搬到病床邊甚至救護車上，直接看穿皮膚、搶救大腦！快來跟著科學隊長與浩奇博士，一起解密我們身上這座最神奇的微觀宇宙吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/0bf37866b7457b6406d0.jpg"
   },
   {
    "code": "s55",
@@ -1009,10 +1150,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E5%95%9F%E5%8B%95%E4%BA%BA%E9%AB%94%E7%84%A1%E6%95%B5%E5%BC%95%E6%93%8E-%E5%BE%AE%E8%A7%80%E4%B8%8B%E7%9A%84%E8%82%8C%E8%82%89%E4%B8%89%E5%A4%A7%E5%AE%B6%E6%97%8F%E8%88%87%E5%88%86%E5%AD%90%E5%BD%88%E7%B0%A7-sp-55/id1812447277?i=1000772586393",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-06-16T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/6c/be/7e/6cbe7eae-112c-35fd-958d-86b8106b25ef/9bc5c665-85de-42a8-bd1e-25c275188cd2.jpg/600x600bb.jpg",
    "intro": "伸出手指、向朋友微笑，甚至在操場上奔跑，這些動作全靠我們體內的無敵引擎——肌肉！你知道全身有超過640條肌肉嗎？想知道哪條肌肉是最長的？哪條是最迷你的？快跟著科學隊長和好奇博士一起解開皮膚底下的肌肉奧秘吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/b66fc47aae2d1a417201.jpg"
   },
   {
    "code": "s56",
@@ -1023,10 +1167,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E8%A7%A3%E5%AF%86%E8%A1%A8%E6%83%85%E5%A4%A7%E5%B8%AB%E8%88%87%E8%82%8C%E8%82%89%E7%9A%84%E8%A8%98%E6%86%B6%E8%B6%85%E8%83%BD%E5%8A%9B-%E9%82%84%E6%9C%89%E5%A4%A7%E8%85%A6%E9%80%9A%E8%A8%8A%E7%9A%84%E6%96%B0%E7%99%BC%E7%8F%BE-sp-56/id1812447277?i=1000773583228",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-06-22T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/2a/df/18/2adf1889-1769-cca3-0055-46ef332d82a7/a9cb0bc1-2054-44a0-b43d-86275ffd0a2c.jpg/600x600bb.jpg",
    "intro": "你知道當你走一步路時，身體需要動用200條肌肉嗎？每個人夢想的「六塊肌」，其實是一整塊大肌肉？最驚奇的是，當你運動時，肌肉會釋放激素跟大腦對話，甚至幫大腦清除垃圾！快跟著科學隊長和好奇博士，一起來揭開面部表情與肌肉的神奇記憶力吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/594fa371373101defe2d.jpg"
   },
   {
    "code": "s59",
@@ -1041,8 +1188,10 @@
     "duration": 916,
     "pubDate": "Wed, 26 Aug 2026 22:02:12 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/7a/c3/1c/7ac31cba-3d76-b941-8e7a-25a5a784f10c/mza_13026708868776047211.jpg/600x600bb.jpg",
    "intro": "你有聽過在地面上會不停漏油、飛上高空反而完全密封的超音速飛機嗎？SR-71「黑鳥」偵察機飛得比步槍子彈還快，遇到飛彈追擊只要踩下油門就能把飛彈遠遠甩開！快來跟著科學隊長與好奇博士，一起揭開這架黑色極速神話背後的驚人科學黑科技吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/da15647320e1fff8e2b6.jpg"
   },
   {
    "code": "s62",
@@ -1053,10 +1202,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E7%A9%BF%E8%B6%8A%E4%B8%80%E5%84%84%E5%B9%B4%E7%9A%84%E6%B7%A1%E6%B0%B4-%E6%B0%B4%E4%B8%AD%E8%A3%9D%E7%94%B2%E8%BB%8A-%E8%A7%A3%E5%AF%86%E9%B1%B7%E9%9B%80%E9%B1%94%E7%9A%84%E9%9B%99%E6%8E%92%E5%88%A9%E9%BD%92-%E9%98%B2%E5%BD%88%E7%A1%AC%E9%B1%97%E8%88%87%E9%95%B7%E7%94%9F%E5%9F%BA%E5%9B%A0%E4%B9%8B%E8%AC%8E-sp-62/id1812447277?i=1000796861549",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-10-20T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/b8/37/c1/b837c18f-294e-cd02-7f9f-2b59d263bb70/c7d25643-a935-4ba5-86b2-a7f0be035799.jpg/600x600bb.jpg",
    "intro": "如果有一種魚披著連菜刀都砍不進去的防彈鎖子甲、長著短吻鱷般的雙排暴牙，甚至在水裡缺氧時還能直接探出水面大口呼吸空氣，你相信牠真的存在嗎？牠就是見證恐龍滅絕的遠古活化石——鱷雀鱔！更神奇的是，科學家發現牠體內的分子時鐘慢得驚人，相隔一億年的親戚竟然還能生寶寶！快跟著科學隊長與好奇博士，一起潛入深水解開這隻史前裝甲巨獸的生存超能力吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/b4c7d9e13a915d22fcec.jpg"
   },
   {
    "code": "103",
@@ -1071,8 +1223,10 @@
     "duration": 1002,
     "pubDate": "Sun, 13 Sep 2026 22:02:10 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/61/4a/b0/614ab07c-99b0-a7b4-b253-bc12e12fbc24/mza_3465957331577785381.jpg/600x600bb.jpg",
    "intro": "各位小小探險家！你知道太陽公公其實是一位超級大廚師嗎？他在核心煮著熱騰騰的光和熱，而且他的表面竟然像一鍋滾燙的「米粒粥」，每一顆米粒都跟台灣一樣大？！快戴上你的想像力墨鏡，跟我們一起飛向太陽探險吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/9815efa4dcf98402a9a5.jpg"
   },
   {
    "code": "104",
@@ -1087,6 +1241,7 @@
     "duration": 913,
     "pubDate": "Wed, 16 Sep 2026 22:02:07 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/ef/8a/73/ef8a73ce-aaa3-f641-ab3f-35ecdc77d463/mza_16074598950150337265.jpg/600x600bb.jpg",
    "intro": "各位小小探險家！你知道太陽公公的臉上也會長「雀斑」嗎？而且他還會打「宇宙級」的超大噴嚏，噴出來的東西竟然變成了地球上夢幻的極光！快來聽聽這集節目，看看太陽為什麼像一顆軟糖球一樣扭來扭去，還有他是怎麼變魔術把天空變漂亮的！",
    "labs": [
     {
@@ -1095,7 +1250,8 @@
      "question": "粒子轉著彎，為什麼天空會發光？",
      "url": "https://lab.kidsci.app/aurorlab/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/9ad6e345762605af6135.jpg"
   },
   {
    "code": "105",
@@ -1110,6 +1266,7 @@
     "duration": 1354,
     "pubDate": "Sun, 20 Sep 2026 22:02:10 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/9b/38/e9/9b38e97e-5b48-88ed-70b2-4fdb76bc55de/mza_2953100911350863296.jpg/600x600bb.jpg",
    "intro": "各位小小探險家！快繫好安全帶，我們的「太陽系衝鋒號」要出發囉！這次我們要拜訪太陽系最熱鬧的內行星區",
    "labs": [
     {
@@ -1118,7 +1275,8 @@
      "question": "走近行星與衛星，觀察大小、自轉與公轉。",
      "url": "https://lab.kidsci.app/solar-system/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/7cf95be9753431ec4ff8.jpg"
   },
   {
    "code": "106",
@@ -1133,6 +1291,7 @@
     "duration": 1222,
     "pubDate": "Wed, 23 Sep 2026 22:02:18 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/8c/13/2e/8c132efe-75b8-e11c-9fea-0531eafea3da/mza_7669466089501930666.jpg/600x600bb.jpg",
    "intro": "各位小小太空人！穿越了危險的小行星帶，我們即將進入太陽系的「巨人國」！ 🌪️ 木星的肚子裡有個比地球還大的超級颱風？",
    "labs": [
     {
@@ -1141,7 +1300,8 @@
      "question": "走近行星與衛星，觀察大小、自轉與公轉。",
      "url": "https://lab.kidsci.app/solar-system/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/48339c69f01381d01ecd.jpg"
   },
   {
    "code": "107",
@@ -1156,6 +1316,7 @@
     "duration": 958,
     "pubDate": "Sun, 30 Aug 2026 22:02:07 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/3d/47/66/3d476616-468d-275d-11fd-cd613908f35b/mza_7442671942505002021.jpg/600x600bb.jpg",
    "intro": "各位小小探險家！歡迎來到太陽系的「極端派對」！🔥🧊這集我們要深入拜訪兩位脾氣超古怪的鄰居",
    "labs": [
     {
@@ -1164,7 +1325,8 @@
      "question": "繞太陽兩圈，為什麼才過一個水星太陽日？",
      "url": "https://lab.kidsci.app/mercbeat/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/bd45f79dc856f6b347b9.jpg"
   },
   {
    "code": "108",
@@ -1179,8 +1341,10 @@
     "duration": 1214,
     "pubDate": "Wed, 02 Sep 2026 22:02:08 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/5d/49/0e/5d490ed1-a0c2-e7e9-26a6-1f4b5457f1d2/mza_17496454313124778193.jpg/600x600bb.jpg",
    "intro": "各位小小探險家！這集我們要來一場星際大PK！🥊 一方是我們的家——充滿活力的 藍色地球隊 🌍",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/47e18b0d402092d27c13.jpg"
   },
   {
    "code": "109",
@@ -1195,8 +1359,10 @@
     "duration": 1423,
     "pubDate": "Sun, 06 Sep 2026 22:02:11 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/41/da/fd/41dafd20-a326-eccd-f672-5a7455a34906/mza_4309980916437467229.jpg/600x600bb.jpg",
    "intro": "各位小小探險家！這集我們要飛向外太陽系，拜訪兩個超級大胖子！🪐 👑 木星大哥：他是太陽系的國王，肚子裡裝得下1300個地球！還有一個比地球還大的紅眼睛颱風！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/79cf4651cfa751cfbe96.jpg"
   },
   {
    "code": "110",
@@ -1211,8 +1377,10 @@
     "duration": 1354,
     "pubDate": "Wed, 09 Sep 2026 22:02:16 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/44/82/9b/44829b1a-4a3b-38c5-bd61-7c11e42011cd/mza_9058818745292873843.jpg/600x600bb.jpg",
    "intro": "這集我們要拜訪一對穿著藍色外套的神秘兄弟 🛌 天王星哥哥：他是個超級怪咖，竟然是「躺著」繞太陽跑的！而且他是全太陽系最冷的冰庫！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/10db79e0e4bdd7763810.jpg"
   },
   {
    "code": "111",
@@ -1227,8 +1395,10 @@
     "duration": 841,
     "pubDate": "Mon, 28 Sep 2026 22:02:07 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/93/d7/38/93d738d0-066f-3a5a-188d-0003d107af7c/mza_13508808726403475951.jpg/600x600bb.jpg",
    "intro": "你知道看起來冷冰冰的月球，肚子裡竟然藏著一顆超級燙的大火球嗎？而且她還很害羞，永遠只敢用正臉面對地球喔！快來聽聽月球還有哪些不可告人的秘密吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/11fd0500f0925c20de32.jpg"
   },
   {
    "code": "112",
@@ -1243,6 +1413,7 @@
     "duration": 1508,
     "pubDate": "Wed, 30 Sep 2026 22:02:05 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/99/db/1b/99db1b60-9f04-ed51-2fce-b4753e23a37b/mza_12716284835715953378.jpg/600x600bb.jpg",
    "intro": "為什麼月亮有時候圓圓的像燒餅，有時候彎彎的像香蕉？其實月亮是個愛漂亮的舞者，每天都在換臉喔！而且你知道嗎，月亮正在偷偷離家出走？稍微不注意，每年就跑掉 3.8 公分！還有更多月球秘密，都在科學好好聽！",
    "labs": [
     {
@@ -1251,7 +1422,8 @@
      "question": "月球都只亮半邊，為什麼我們看到的亮面會改變？",
      "url": "https://lab.kidsci.app/moonview/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/7e3a42a0b7175033b6a5.jpg"
   },
   {
    "code": "113",
@@ -1266,8 +1438,10 @@
     "duration": 919,
     "pubDate": "Sun, 04 Oct 2026 22:02:42 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/7b/a2/dd/7ba2dd7d-7eb1-bdf4-f427-c2a36d6042e2/mza_10563546259402890401.jpg/600x600bb.jpg",
    "intro": "小朋友，你想過要去外太空探險嗎？但是在那邊不能呼吸、又冷又熱，該怎麼辦呢？別擔心，聰明的科學家派出了「機器人探險家」當先鋒！今天我們要跟著航海家號去送「黃金唱片」給外星人，還要看看火星探測車怎麼在紅色的土地上趴趴走，最後還要教你怎麼用隱形的「X 射線」看穿宇宙的祕密喔！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/8a3b56bc09d6e8b5b79c.jpg"
   },
   {
    "code": "114",
@@ -1282,8 +1456,10 @@
     "duration": 1430,
     "pubDate": "Tue, 06 Oct 2026 22:02:09 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/87/a3/e9/87a3e9bd-8ea6-ee0d-b713-41bc89c756f2/mza_4865259309635466793.jpg/600x600bb.jpg",
    "intro": "如果你去太空旅行一年，回來居然會長高 5 公分？而且在那邊居然不能隨便用水洗頭！這到底是怎麼回事？今天我們要來揭開太空站裡的神祕生活，看看人造衛星是怎麼幫我們定位導航的，還要一起想辦法解決「太空垃圾」的大麻煩喔！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/7b3620f93c02cee4acc1.jpg"
   },
   {
    "code": "115",
@@ -1298,6 +1474,7 @@
     "duration": 1171,
     "pubDate": "Sun, 11 Oct 2026 22:02:20 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/09/da/90/09da906b-dcad-9a77-31ac-9a1db500f49e/mza_18420197936872173121.jpg/600x600bb.jpg",
    "intro": "當我們抬頭看星星時，其實是在看「過去」耶！就算是最近的月亮，也是 1.25 秒前的樣子喔！今天我們要化身小小天文學家，穿越時空去看古代的巨石陣，還要跟著伽利略一起發明望遠鏡，揭開星空的祕密喔！",
    "labs": [
     {
@@ -1306,7 +1483,8 @@
      "question": "先把火星移近，發訊息；再移遠，等回覆會差多少？",
      "url": "https://lab.kidsci.app/marsmsg/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/d7362c2e61573fcac319.jpg"
   },
   {
    "code": "116",
@@ -1321,8 +1499,10 @@
     "duration": 1359,
     "pubDate": "Wed, 14 Oct 2026 22:02:20 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/3b/d2/5b/3bd25b0c-a3b4-5390-4b05-745c62370d84/mza_4155502038925723914.jpg/600x600bb.jpg",
    "intro": "小朋友，如果你的眼睛可以看穿牆壁，或者像蝙蝠一樣聽到遠方的聲音，那會是什麼感覺？天文學家就有這種超能力喔！他們利用厲害的太空望遠鏡，可以看到肉眼看不到的 X 射線和紅外線。今天我們要一起去觀察 400 年前的一場大爆炸，看看這場宇宙煙火秀留下的「熱呼呼」祕密！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/a4737460ab3062aea3ac.jpg"
   },
   {
    "code": "117",
@@ -1337,8 +1517,10 @@
     "duration": 1891,
     "pubDate": "Wed, 21 Oct 2026 22:02:10 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/57/b6/07/57b60770-b819-11b0-0887-d8f4809d990b/mza_18436842279018332817.jpg/600x600bb.jpg",
    "intro": "小朋友，如果有一天你要去月球，你會想在那邊留下你的腳印嗎？1969 年，兩名勇敢的太空人真的做到了！他們搭乘比 30 層樓還高的超級火箭，飛了 40 萬公里才抵達月球。快跟著我們一起回到那個熱血沸騰的發射台，看看人類是怎麼踏出那「歷史性的一步」吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/50ddfa093197d7d0b355.jpg"
   },
   {
    "code": "150",
@@ -1353,8 +1535,10 @@
     "duration": 1357,
     "pubDate": "Thu, 19 Mar 2026 21:46:16 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/71/07/51/710751b7-7927-b093-dbdc-6d967ccf9de4/mza_2591795247061959979.jpg/600x600bb.jpg",
    "intro": "準備好了嗎？我們要坐上地球的「時光機」，回到$38$億年前！從一開始的小小單細胞，在前寒武紀的火熱海洋裡偷偷長大，然後到了古生代，生命開始「大爆發」！海洋裡出現了有殼的動物，還有超酷的「裝甲魚」莎卡班貝魚。接著，生命英雄們爬上陸地，長出了像樹一樣高的鱗木，還有翼展比老鷹還大的巨蜻蜓！最後我們來到恐龍的家——中生代，見到了背上有「大帆」的異齒獸，還有像老鼠一樣小的摩爾根獸，最後恐龍正式登上歷史舞台，成為地球霸主！這是一場超好玩的生命大冒險，快跟著我們一起來探險吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/770e3c9dfb2a01a37d71.jpg"
   },
   {
    "code": "151",
@@ -1369,8 +1553,10 @@
     "duration": 819,
     "pubDate": "Sun, 22 Mar 2026 21:55:35 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/95/3b/e1/953be1bc-90cb-27ef-4df7-590352798d7c/mza_17197931665123816681.jpg/600x600bb.jpg",
    "intro": "恐龍稱霸地球超過1億6千萬年 ，而且最新的科學發現，牠們才不是行動緩慢的灰色大蜥蜴，而是有羽毛、五顏六色的超級動物 ！這集節目要帶大家認識恐龍的兩大家族「蜥臀目」和「鳥臀目」 ，猜猜看，鳥類竟然不是「鳥臀目」的後代 ！我們還會見到地球上最大的巴塔哥巨龍 、愛吃魚的棘龍 ，還有像坦克一樣的甲龍 和長滿骨板的劍龍 ，準備好你的好奇心，一起出發恐龍時代！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/155e10088e4e1ffcb68e.jpg"
   },
   {
    "code": "152",
@@ -1385,8 +1571,10 @@
     "duration": 1540,
     "pubDate": "Tue, 24 Mar 2026 22:18:29 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/dd/b6/e1/ddb6e122-bde7-5b5d-f636-669e3ad5b007/mza_5357876213857479559.jpg/600x600bb.jpg",
    "intro": "原來恐龍這麼厲害，不是因為牠們很兇，而是因為牠們有「秘密武器」！這一集我們要解開恐龍的「溫血引擎」之謎 ，看看牠們為什麼不像蜥蜴一樣懶洋洋，反而能跑能跳，甚至住在很冷的極地 ！而且，我們還要飛上天，認識比長頸鹿還高的「風神翼龍」 ，潛入深海，看看恐怖的「滄龍」 ！最後，我們會發現，恐龍之所以能稱霸地球，竟然還跟「大陸漂移」有關係 ？快來聽聽看地球是怎麼幫恐龍變身超級霸主的！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/5f959cc5bd5085079e66.jpg"
   },
   {
    "code": "153",
@@ -1401,8 +1589,10 @@
     "duration": 1447,
     "pubDate": "Thu, 26 Mar 2026 21:51:25 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f2/66/48/f2664871-bc99-e9c4-6e24-9e5c6f194eaf/mza_2598106910048579654.jpg/600x600bb.jpg",
    "intro": "你們知道誰是恐龍界最厲害的超級英雄（或超級大壞蛋）嗎？沒錯，就是我們的「霸王龍」——雷克斯暴龍！牠可不是只會亂吼亂叫的恐龍喔！牠有著史上陸地上最厲害的「碎骨機」巨顎，咬下去的力量比鱷魚大四倍！而且，牠還有比老鷹還厲害的超級好眼力，比獵犬還靈敏的超強鼻子，甚至能聽到我們聽不到的低頻聲音！科學家還在猜，牠的腦袋是不是跟聰明的猴子一樣厲害呢！快來跟著我們一起，把這台超酷的古代「殺戮機器」從頭到腳檢查一遍吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/7d156a2cdd0cd479a28d.jpg"
   },
   {
    "code": "154",
@@ -1417,8 +1607,10 @@
     "duration": 796,
     "pubDate": "Sun, 29 Mar 2026 22:02:19 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/e4/51/75/e45175b0-12de-3983-2603-27a079447e44/mza_8296873913155541797.jpg/600x600bb.jpg",
    "intro": "你也覺得暴龍的手短短的很可愛嗎？但科學家說那可能是致命武器喔！還有還有，暴龍可能不是獨行俠，而是會全家大小一起出門打獵？這集科學隊長要帶大家解開暴龍身上的更多謎團，還要告訴你為什麼恐龍會突然消失在地球上！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/56c864c276f5daa65bfd.jpg"
   },
   {
    "code": "155",
@@ -1433,8 +1625,10 @@
     "duration": 1688,
     "pubDate": "Tue, 31 Mar 2026 22:02:17 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/ee/82/99/ee829958-32bf-2d9c-84e7-a3489472b81a/mza_9099252398968688466.jpg/600x600bb.jpg",
    "intro": "6600萬年前那一顆小行星，真的殺死了所有恐龍嗎？其實在撞擊之前，地球就已經生病了？這集我們要像偵探一樣，回到犯罪現場，解開恐龍滅絕的真正兇手！還要告訴你，為什麼鱷魚和鳥類可以活下來，恐龍卻不行？",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/3f9c82f96d09b8a059a7.jpg"
   },
   {
    "code": "170",
@@ -1449,8 +1643,10 @@
     "duration": 686,
     "pubDate": "Thu, 11 Dec 2025 11:17:23 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/e8/93/3f/e8933fe3-2eb5-82c1-9ac1-2feb3fb72b8c/mza_11953703347369922091.jpg/600x600bb.jpg",
    "intro": "在好久好久以前的海洋裡，住著一種超巨大的鯊魚，牠的名字叫做「巨齒鯊」！牠的牙齒竟然比一個大人的手掌還要大！牠不只是超級大隻，牠還是個「熱血殺手」，身體比海水溫暖，所以游得超快，還能把一輛小汽車像葡萄一樣輕鬆咬扁！一起來看看這隻已經消失的神祕海中霸王吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/b3dcbefa8738380d5e89.jpg"
   },
   {
    "code": "171",
@@ -1465,8 +1661,10 @@
     "duration": 661,
     "pubDate": "Sat, 13 Dec 2025 11:00:23 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/6d/c3/6d/6dc36d7a-3be3-1874-dbb8-8e56276a7ac6/mza_10054968370731306968.jpg/600x600bb.jpg",
    "intro": "在幾百萬年前的海洋裡，除了超可怕的「巨齒鯊」之外，還住著一頭敢直視牠、而且更聰明的超級巨鯨！牠的牙齒比巨齒鯊的還要長，簡直就像古代的攻城槌！牠就是梅爾維爾鯨，一個擁有高科技聲納和超高智商的深海戰神！快來聽我們揭開這場史前海洋最精彩的「鯨鯊大戰」吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/ec16d6a6f02089785107.jpg"
   },
   {
    "code": "172",
@@ -1481,8 +1679,10 @@
     "duration": 612,
     "pubDate": "Mon, 15 Dec 2025 10:44:10 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/ba/c2/8e/bac28e56-68bc-2257-5171-008331a253df/mza_1625287999448198284.jpg/600x600bb.jpg",
    "intro": "你知道電影裡那個一口吞掉大白鯊的超級海怪「蒼龍」嗎？它不是恐龍，也不是魚，它竟然是一隻游回大海的超級大蜥蜴！而且它有超可怕的兩排牙齒，就像內建的輸送帶，獵物被咬到就別想跑！想知道這隻海中霸主是怎麼從不到一公尺的小蜥蜴，變成十五公尺長的白堊紀海神嗎？趕快打開「科學好好聽」！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/390373e80c0ad6d92ea7.jpg"
   },
   {
    "code": "182",
@@ -1497,6 +1697,7 @@
     "duration": 787,
     "pubDate": "Sat, 10 Jan 2026 10:45:37 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/1c/b7/75/1cb7757b-bdcb-9bd6-e5f6-d7f9ef3ba3f3/mza_9390693710569024897.jpg/600x600bb.jpg",
    "intro": "你們知道魚類其實是深海裡的「物理大師」嗎？牠們不用導航就能在黑暗中躲避障礙，有的魚甚至能像飛機一樣在海面上滑翔！今天科學隊長和好奇博士要帶大家潛入深海，拆解這群水下法拉利的超強構造，保證讓你聽完後，下次去水族館會盯著魚尾巴看個不停！",
    "labs": [
     {
@@ -1511,7 +1712,8 @@
      "question": "停游之後，浮力也會消失嗎？",
      "url": "https://lab.kidsci.app/sharkup/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/8304604c87f1c1fa86fe.jpg"
   },
   {
    "code": "184",
@@ -1526,6 +1728,7 @@
     "duration": 782,
     "pubDate": "Fri, 16 Jan 2026 21:38:29 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/e9/25/64/e925648c-a0d9-333c-08b9-db8b478a5167/mza_8535422499678065396.jpg/600x600bb.jpg",
    "intro": "大家知道嗎？大白鯊其實是海洋裡的「超級英雄」！牠們不但穿著能消除噪音的「隱形盔甲」，還內建了能感應心跳的「第六感雷達」，甚至一生要換三萬顆牙齒呢！快跟著科學隊長和浩奇博士，一起潛入深海，看看人類科學家是怎麼跟這位神祕導師學習最新科技的吧！",
    "labs": [
     {
@@ -1540,7 +1743,8 @@
      "question": "轉動電源，鼻子的正負訊號會改變嗎？",
      "url": "https://lab.kidsci.app/sharkel/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/52d186e9feb8d0736f05.jpg"
   },
   {
    "code": "188",
@@ -1555,8 +1759,10 @@
     "duration": 667,
     "pubDate": "Wed, 28 Jan 2026 21:19:22 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/82/29/21/82292165-0d79-ffb7-a270-57600308c086/mza_14878743633704321798.jpg/600x600bb.jpg",
    "intro": "如果你以為爬行動物只是冷冰冰的怪獸，那你就大錯錯啦！它們可是地球上最強的「生存大師」，不用吃太多、曬曬太陽就能充電，連皮膚都像穿了防水潛水衣！快來聽聽這群三億年前就存在的活化石，到底藏了多少超能力吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/efd4c79c09d30f3d4dae.jpg"
   },
   {
    "code": "189",
@@ -1571,6 +1777,7 @@
     "duration": 1150,
     "pubDate": "Sun, 01 Feb 2026 00:12:54 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/24/04/bb/2404bbd5-6146-0341-2059-1dbab3643274/mza_4007150628401793329.jpg/600x600bb.jpg",
    "intro": "你知道嗎？爬行動物其實是自然界的「機甲戰士」！它們身上穿著像鋼鐵俠一樣的角蛋白裝甲，能隔絕高溫與脫水，甚至連蛋殼都自帶防護！更神奇的是，它們還懂「奈米科技」來變臉，而蛇的舌頭居然是「立體雷達」！快來跟科學隊長一起揭開這些三億年生存裝備的終極祕密吧！",
    "labs": [
     {
@@ -1585,7 +1792,8 @@
      "question": "晶體間距一樣，換照明還會看到一樣的顏色嗎？",
      "url": "https://lab.kidsci.app/chamcol/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/e1aac455bb3a78798ec9.jpg"
   },
   {
    "code": "190",
@@ -1600,6 +1808,7 @@
     "duration": 800,
     "pubDate": "Mon, 02 Feb 2026 21:10:20 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/b0/9f/27/b09f2780-7a3d-98b6-0a9d-db925773b4a5/mza_4640014512484570942.jpg/600x600bb.jpg",
    "intro": "你知道地表上最強的「機甲戰士」是誰嗎？答案就是鱷魚！它們穿著厚厚的骨甲，眼睛自帶護目鏡，甚至可以一年不吃東西！快跟著科學隊長一起來看看這群從恐龍時代活到現在的生存大師吧！",
    "labs": [
     {
@@ -1608,7 +1817,8 @@
      "question": "瞳孔和保護膜，怎麼改變進光量？",
      "url": "https://lab.kidsci.app/croceye/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/c161b86ddff31b920db5.jpg"
   },
   {
    "code": "191",
@@ -1623,8 +1833,10 @@
     "duration": 642,
     "pubDate": "Tue, 03 Feb 2026 21:35:56 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/b4/e4/05/b4e405e7-7afc-2290-05cd-08540a61bc93/mza_14631293075972915419.jpg/600x600bb.jpg",
    "intro": "你知道鳥類其實是恐龍的後代嗎？牠們擁有像手風琴一樣的氣囊和能磨碎石子的胃，甚至連腦袋都自帶避震器！快來跟著科學隊長一起探索鳥類神奇的隱形超能力吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/2c03122b52d849558a36.jpg"
   },
   {
    "code": "192",
@@ -1639,6 +1851,7 @@
     "duration": 655,
     "pubDate": "Wed, 04 Feb 2026 21:18:46 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/59/08/12/59081224-e12b-f5de-c467-f9cf97f683fb/mza_10663381996222502108.jpg/600x600bb.jpg",
    "intro": "從一顆豌豆大的蛋到穿越地球兩極的超級遠征，鳥類的生命旅程簡直比動作電影還精彩！牠們竟然能直接喝海水，還能用眼睛「看見」地球磁場來導航？快跟著浩奇博士來一場說走就走的鳥類大冒險吧！",
    "labs": [
     {
@@ -1647,7 +1860,8 @@
      "question": "鳥到了，毛毛蟲也正多嗎？",
      "url": "https://lab.kidsci.app/birdtime/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/6deee326cc9dbdde60ee.jpg"
   },
   {
    "code": "193",
@@ -1662,8 +1876,10 @@
     "duration": 617,
     "pubDate": "Fri, 06 Feb 2026 21:12:35 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/96/71/cc/9671cc01-6fa2-43fd-9557-b14cfe139e07/mza_14265032211860273473.jpg/600x600bb.jpg",
    "intro": "大朋友小朋友們，想知道鳥兒是怎麼在天上飛的嗎？這可不是隨便拍拍翅膀喔！今天科學隊長和浩奇博士要帶大家拆解鳥類的「超高性能飛機」，看看羽毛裡的魔鬼氈、會呼吸的中空骨頭，甚至還有能看見磁場的「特異功能」！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/733c92f544707fe976dc.jpg"
   },
   {
    "code": "194",
@@ -1678,8 +1894,10 @@
     "duration": 1010,
     "pubDate": "Sat, 07 Feb 2026 21:15:29 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f9/57/22/f95722aa-ffe8-17ae-72d7-94315ee8b160/mza_12180125724828706679.jpg/600x600bb.jpg",
    "intro": "你知道我們哺乳動物的祖先曾經在恐龍腳下「求生存」嗎？甚至還有會產卵的哺乳動物！今天科學隊長和好奇博士要帶你穿越時空，看看海陸空的哺乳動物大師們有哪些超酷的求生技能！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/7f3fe16a4a20459f1f62.jpg"
   },
   {
    "code": "195",
@@ -1694,6 +1912,7 @@
     "duration": 1071,
     "pubDate": "Fri, 13 Feb 2026 21:20:36 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/b1/f4/eb/b1f4ebff-5d9b-e278-1a67-626c433b91d7/mza_16846647685949940350.jpg/600x600bb.jpg",
    "intro": "為什麼北極熊不怕冷？貓咪的眼睛為什麼在晚上會發光？今天科學隊長和好奇博士要帶你解開哺乳動物身上的「神祕裝備」，從高科技毛髮到超級感官，讓你發現原來我們身上帶了這麼多驚人的黑科技！",
    "labs": [
     {
@@ -1714,7 +1933,8 @@
      "question": "慢慢用能量，醒來那天還夠嗎？",
      "url": "https://lab.kidsci.app/hibern/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/62b3f1ea6064eef220ca.jpg"
   },
   {
    "code": "196",
@@ -1729,6 +1949,7 @@
     "duration": 606,
     "pubDate": "Sat, 14 Feb 2026 21:13:02 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/08/bc/29/08bc293a-b379-3255-9309-22f7e9f4c23b/mza_3359230293954463530.jpg/600x600bb.jpg",
    "intro": "你知道有一種動物長得像是把鴨子的嘴、海狸的尾巴、水獺的腳拼在一起的嗎？牠不但會生蛋、還會用「流汗」的方式餵奶給寶寶喝！更神奇的是，牠的奶水可以殺死超級細菌，毒液還能幫助研發糖尿病新藥，甚至在紫外線下會發出藍綠色的螢光！這隻來自澳洲的鴨嘴獸，簡直就是大自然最瘋狂的創意傑作！",
    "labs": [
     {
@@ -1737,7 +1958,8 @@
      "question": "看不見，嘴巴還能收到什麼線索？",
      "url": "https://lab.kidsci.app/platbill/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/6a8ef59585826e6d4b68.jpg"
   },
   {
    "code": "197",
@@ -1752,6 +1974,7 @@
     "duration": 712,
     "pubDate": "Mon, 16 Feb 2026 21:16:44 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/dc/01/08/dc01086b-c487-311f-3899-9438cc9683f6/mza_8716592833781612459.jpg/600x600bb.jpg",
    "intro": "你知道有一種動物長得像會走路的大松果，舌頭居然長在骨盆上，還會像暴龍一樣用兩隻腳走路嗎？牠就是全世界唯一有鱗片的哺乳動物——穿山甲！牠的鱗片不只是盔甲，還能殺菌；牠沒有牙齒，卻會吞石頭來磨碎食物；牠還有一個超能力：可以跟病毒和平共處而不生病！更棒的是，台灣的臺北市立動物園是全世界第一個成功人工養育穿山甲寶寶的地方喔！",
    "labs": [
     {
@@ -1760,7 +1983,8 @@
      "question": "保護得密密的，還能彎嗎？",
      "url": "https://lab.kidsci.app/scales/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/92458be867e3d3a57431.jpg"
   },
   {
    "code": "198",
@@ -1775,6 +1999,7 @@
     "duration": 962,
     "pubDate": "Thu, 19 Feb 2026 20:57:45 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/0f/31/9b/0f319b0b-36de-b2c1-5c86-f09d4000df0e/mza_16641615994514448138.jpg/600x600bb.jpg",
    "intro": "你知道嗎？平時慢吞吞的樹懶，祖先竟然是身高兩層樓高的史前巨獸！牠們不僅身上躲著一整座「微觀農場」，還是傳播酪梨種子的功臣。快跟著我們一起回到冰河時期，看看樹懶如何用「慢」贏過演化的這場比賽！",
    "labs": [
     {
@@ -1783,7 +2008,8 @@
      "question": "多走幾小時，兩本帳會怎麼變？",
      "url": "https://lab.kidsci.app/slothday/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/65a485e1a2112e784a2d.jpg"
   },
   {
    "code": "199",
@@ -1798,6 +2024,7 @@
     "duration": 756,
     "pubDate": "Fri, 20 Feb 2026 21:37:34 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/e0/06/83/e00683cc-fd86-1334-c6ae-a8e993f6c676/mza_9187553696958488658.jpg/600x600bb.jpg",
    "intro": "在冰冷的北極深海，住著傳說中的「獨角獸」！但那根長長的角其實是一顆超級敏感的牙齒？它不但能偵測海水溫度，還能用來發動「敲擊戰術」把魚敲暈！快來和科學隊長一起揭開獨角鯨的神祕面紗，看看牠們如何挑戰深海極限！",
    "labs": [
     {
@@ -1806,7 +2033,8 @@
      "question": "留在深處前，要替上浮留下多少氧？",
      "url": "https://lab.kidsci.app/diveoxy/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/f2bc135bfecdc30557ab.jpg"
   },
   {
    "code": "200",
@@ -1821,8 +2049,10 @@
     "duration": 605,
     "pubDate": "Sat, 21 Feb 2026 21:03:50 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/e1/7b/e3/e17be395-9f76-5b44-d733-dd7605517888/mza_17126683680367640763.jpg/600x600bb.jpg",
    "intro": "當莎士比亞在寫劇本時，這隻鯊魚可能才剛出生！地球上最長壽的脊椎動物——格陵蘭鯊，竟然可以活超過 400 年！雖然牠游得比小寶寶爬行還要慢，卻是個厲害的「睡夢殺手」。快跟著科學隊長一起潛入北極深海，看看這位「時間領主」的神奇傳說！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/72b1da2d849286bdd383.jpg"
   },
   {
    "code": "201",
@@ -1837,8 +2067,10 @@
     "duration": 544,
     "pubDate": "Wed, 25 Feb 2026 21:13:30 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/49/fa/4a/49fa4ae1-8334-90af-03d2-49836d425cc0/mza_4302911401626682156.jpg/600x600bb.jpg",
    "intro": "在北美洲的後院，如果你看到一個黑白相間、走路搖搖晃晃的毛茸茸生物，所有人的第一反應都是——快跑。今天，我們要帶你深入臭鼬的微觀化學世界、雜技般的防禦舞蹈，以及 2024-2025 年間的最新發現。",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/ffbeb7484177fb402e58.jpg"
   },
   {
    "code": "202",
@@ -1853,8 +2085,10 @@
     "duration": 776,
     "pubDate": "Fri, 27 Feb 2026 21:34:19 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/07/01/ff/0701ff20-a19a-8d18-cc3e-eef38c1de273/mza_13564474874187011504.jpg/600x600bb.jpg",
    "intro": "在非洲草原上，連獅子都要避讓三分的生物是誰？不是大象也不是犀牛，而是體重才十幾公斤的「平頭哥」蜜獾！牠們會把毒蛇當辣條啃，還會製作梯子越獄？快來認識這位地表最強硬漢",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/edb2ba7363943a45f451.jpg"
   },
   {
    "code": "203",
@@ -1869,6 +2103,7 @@
     "duration": 714,
     "pubDate": "Mon, 23 Feb 2026 21:35:58 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/58/ad/c5/58adc5cc-6c8d-581e-3ef6-cab6edae8de6/mza_2469911376138222397.jpg/600x600bb.jpg",
    "intro": "地球上最大的動物竟然不是恐龍？藍鯨的心臟大到像輛高爾夫球車，死後還能化身為深海中維持百年的生命綠洲！快來聽聽這場壯麗的生命交響曲",
    "labs": [
     {
@@ -1883,7 +2118,8 @@
      "question": "聲音還在，為什麼更難分辨？",
      "url": "https://lab.kidsci.app/whalsnd/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/288a13cce25a0502b6d1.jpg"
   },
   {
    "code": "204",
@@ -1898,6 +2134,7 @@
     "duration": 802,
     "pubDate": "Sun, 22 Feb 2026 21:25:37 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/f9/6e/74/f96e7482-0b7b-5fa5-124b-13a445fe50b8/mza_11327301566874190458.jpg/600x600bb.jpg",
    "intro": "你知道世界上最大的有牙齒的動物是誰嗎？答案就是抹香鯨！牠除了頭超級大，還擁有神奇的「鯨腦油」讓牠變身深海潛水艇！更酷的是，科學家發現牠們竟然有自己的語言，還會聊八卦？快跟我們一起潛入深海，揭開抹香鯨的神秘面紗！",
    "labs": [
     {
@@ -1906,7 +2143,8 @@
      "question": "兩段節奏很像，就知道牠們說什麼嗎？",
      "url": "https://lab.kidsci.app/codalab/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/5e962107e39080269fb2.jpg"
   },
   {
    "code": "205",
@@ -1921,6 +2159,7 @@
     "duration": 1078,
     "pubDate": "Mon, 02 Mar 2026 21:21:16 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/7a/fb/a6/7afba607-bbb4-bd1d-f642-f04ae7128e50/mza_3903608056433607203.jpg/600x600bb.jpg",
    "intro": "蝙蝠不只是吸血鬼的代言人，牠們其實是掌握高科技聲納的空中戰機，更是天生的重金屬搖滾巨星！你知道每一杯龍舌蘭酒背後都要感謝蝙蝠嗎？還有，為什麼蝙蝠身上有那麼多病毒，自己卻不會生病？甚至最新的科學發現，牠們的腳趾竟然會發光！快跟著科學隊長與浩奇博士，一起揭開這位夜空霸主的神秘面紗吧！",
    "labs": [
     {
@@ -1935,7 +2174,8 @@
      "question": "聽到一聲響，就一定是自己的回聲嗎？",
      "url": "https://lab.kidsci.app/mothjam/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/b90ba8a9b066c2ea259e.jpg"
   },
   {
    "code": "206",
@@ -1950,8 +2190,10 @@
     "duration": 760,
     "pubDate": "Wed, 04 Mar 2026 21:24:15 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/0c/57/61/0c57614f-2015-1eab-50ba-7533895f7bca/mza_4291723522721235247.jpg/600x600bb.jpg",
    "intro": "在這個焦慮的時代，有一種生物憑藉著幾乎靜止的表情、萬物皆可「騎」的好脾氣，成為了全球互聯網的心理治療師。今天我們要深入亞馬遜雨林，剖析這個體重可達 70 公斤的巨獸，如何用最慵懶的姿態，書寫最硬核的生存故事。從吃便便的營養學到教皇認證的「魚類」身份，從氣味戰爭到入侵豪宅區的社會運動，一起來認識這位自然界的「佛系哲學家」。",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/7e8fa3f318386942a28b.jpg"
   },
   {
    "code": "207",
@@ -1966,6 +2208,7 @@
     "duration": 614,
     "pubDate": "Fri, 06 Mar 2026 21:00:29 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/45/31/bf/4531bfaa-940b-24fb-9a5c-e073c7d36dd0/mza_6184587057718514635.jpg/600x600bb.jpg",
    "intro": "無尾熊不只是可愛的瞌睡蟲，牠們是演化史上的極端異類！為了吃有毒的尤加利葉，牠們演化出超強肝臟和獨特的發酵槽，卻犧牲了珍貴的大腦能量。從寶寶必吃的「特殊的生化湯」到跟人類一樣的指紋，再到對抗衣原體的生存戰役，今天讓我們揭開澳洲國寶不為人知的硬核生存祕密。",
    "labs": [
     {
@@ -1974,7 +2217,8 @@
      "question": "能量多的葉子，其他帳也更好嗎？",
      "url": "https://lab.kidsci.app/leafmeal/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/94f8b50facf38ad5ba25.jpg"
   },
   {
    "code": "208",
@@ -1989,6 +2233,7 @@
     "duration": 1091,
     "pubDate": "Mon, 09 Mar 2026 21:10:45 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/62/a3/78/62a378ed-c3b5-bb64-2164-2d980461071d/mza_7866055195508036093.jpg/600x600bb.jpg",
    "intro": "袋鼠，不只是澳洲草原上的可愛跳跳獸，更是演化史上的肌肉魔法師！你知道牠們有「第五條腿」嗎？你知道媽媽能同時照顧三個不同年紀的寶寶，還能隨意暫停懷孕嗎？從一腳踢破對手肚皮的格鬥技，到眼神指揮人類的超高智商，今天帶你重新認識這位荒原上的生存大師。",
    "labs": [
     {
@@ -2003,7 +2248,8 @@
      "question": "尾巴接地與抬起，受力有什麼不同？",
      "url": "https://lab.kidsci.app/tailfoot/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/5f5b5d019bfdb693e766.jpg"
   },
   {
    "code": "209",
@@ -2018,8 +2264,10 @@
     "duration": 712,
     "pubDate": "Wed, 11 Mar 2026 21:17:51 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/3e/36/74/3e36745f-1595-8d8a-761f-6e3701d46f54/mza_9223374063559406473.jpg/600x600bb.jpg",
    "intro": "大貓熊，這位演化史上的「活化石」，其實充滿了生理上的矛盾。牠們明明是吃素的，卻長著肉食動物的腸胃；為了抓竹子，牠們演化出了第六根「手指」；為了禦寒，牠們竟然會往身上塗馬糞！從基因突變到極端早產，今天讓我們揭開這位呆萌國寶背後驚人的生存故事。",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/cc891521716a42600fb0.jpg"
   },
   {
    "code": "210",
@@ -2034,6 +2282,7 @@
     "duration": 654,
     "pubDate": "Fri, 13 Mar 2026 21:05:48 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/31/ce/bc/31cebc73-aaf3-19d4-097a-36ad2d95ff19/mza_13410291443346094216.jpg/600x600bb.jpg",
    "intro": "袋熊，這種看起來憨態可掬的生物，其實是澳洲叢林中的「地下坦克」。牠們擁有生物界唯一的「立方體」便便，還配備了能粉碎掠食者頭骨的「鋼鐵屁屁」。除此之外，牠們的「反向育兒袋」和在大火中成為無數動物避難所的地底宮殿，都展示了大自然演化的奇蹟。今天就讓我們一起認識這位澳洲荒野的生存大師。",
    "labs": [
     {
@@ -2042,7 +2291,8 @@
      "question": "圓形腸道裡，軟硬不同的管壁能怎樣改變形狀？",
      "url": "https://lab.kidsci.app/wombcube/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/d7db52548be69af04751.jpg"
   },
   {
    "code": "211",
@@ -2057,6 +2307,7 @@
     "duration": 630,
     "pubDate": "Mon, 16 Mar 2026 21:08:35 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/c1/48/db/c148dbdd-15f0-bae7-853c-0340f98e9c3d/mza_5708013344876511139.jpg/600x600bb.jpg",
    "intro": "長頸鹿不僅是脖子長的動物，牠們更是挑戰物理極限的生物工程奇蹟。從2.5倍於人類的血壓而不中風，到像太空衣一樣的皮膚防止水腫，再到為了求偶而進行的殘酷「脖擊」。今天《科學好好聽》帶你解開長頸鹿的生理謎團，以及近期震驚科學界的「侏儒長頸鹿」與四種物種的新發現。",
    "labs": [
     {
@@ -2065,7 +2316,8 @@
      "question": "頭比心臟低時，液柱壓差往哪邊變？",
      "url": "https://lab.kidsci.app/headpres/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/8ad5ec779f1eddd02375.jpg"
   },
   {
    "code": "212",
@@ -2080,8 +2332,10 @@
     "duration": 656,
     "pubDate": "Wed, 18 Mar 2026 21:05:57 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/6e/13/2b/6e132b18-ae91-e8d1-97df-e5db988645eb/mza_8744678112500757535.jpg/600x600bb.jpg",
    "intro": "在非洲剛果雨林深處，住著一種傳說中的生物——霍加狓。牠們長著長頸鹿的臉、穿著斑馬的褲子，還有一條能洗眼睛的藍色長舌頭！這種被稱為「非洲獨角獸」的神祕動物，不僅會吃木炭解毒，還用人類聽不到的超低音波講祕密。本集節目將帶你深入雨林，探索霍加狓的演化奇蹟與最新保育故事。",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/a1b0136966d5115cec96.jpg"
   },
   {
    "code": "213",
@@ -2096,6 +2350,7 @@
     "duration": 601,
     "pubDate": "Fri, 20 Mar 2026 21:12:49 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/c5/74/89/c5748993-87c4-ba9c-add9-6efd99b6bd9b/mza_13881933129985837959.jpg/600x600bb.jpg",
    "intro": "在亞馬遜雨林深處，住著一種頂著龐克頭、聞起來像牛糞的神祕怪鳥——麝雉。牠們不僅小時候翅膀上長著恐龍般的爪子，還會像牛一樣反芻樹葉！這種被稱為「臭臭鳥」的奇特生物，竟然是演化樹上唯一的孤兒。本集節目將帶你穿越時空，探索麝雉如何靠著「太難吃」和「恐龍利爪」在殘酷的雨林中存活至今。",
    "labs": [
     {
@@ -2104,7 +2359,8 @@
      "question": "發酵囊變大，就沒有代價嗎？",
      "url": "https://lab.kidsci.app/crop/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/2b89bf0a423e1dd33a8e.jpg"
   },
   {
    "code": "214",
@@ -2119,8 +2375,10 @@
     "duration": 559,
     "pubDate": "Mon, 23 Mar 2026 21:19:49 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/0c/71/dc/0c71dcb1-6099-5b01-44ec-c39889a51467/mza_14031130283299830633.jpg/600x600bb.jpg",
    "intro": "你知道森林裡有一位超級 DJ 嗎？牠不只會學其他鳥叫，連電鋸聲、相機聲甚至嬰兒哭聲都模仿得維妙維肖！這就是來自澳洲的「琴鳥」。但你知道嗎？牠這麼做不只是為了好玩，背後其實藏著想要交女朋友的滿滿（且有點心機）的愛意喔！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/c286e07a81cc7a1faa96.jpg"
   },
   {
    "code": "215",
@@ -2135,8 +2393,10 @@
     "duration": 720,
     "pubDate": "Wed, 25 Mar 2026 21:11:54 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/45/26/2b/45262b5a-0ae4-dda4-0431-d248311858cf/mza_16713499254102137842.jpg/600x600bb.jpg",
    "intro": "你有看過掛著紅色大氣球在天上飛的鳥嗎？那就是「軍艦鳥」！牠們是超厲害的空中飛人，可以幾個月都不落地，甚至邊飛邊睡覺！但你知道嗎？身為海鳥的牠們竟然是「旱鴨子」，一碰到水就會淹死？這到底是怎麼回事？快來聽聽這位天空大盜的傳奇故事！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/792e99f170df924500c5.jpg"
   },
   {
    "code": "216",
@@ -2151,8 +2411,10 @@
     "duration": 1044,
     "pubDate": "Sat, 28 Mar 2026 00:40:59 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/2f/83/d2/2f83d297-5d41-de6b-dd39-f6fa1be8b1d6/mza_8291133881367360557.jpg/600x600bb.jpg",
    "intro": "想像一下，在神祕的亞馬遜雨林深處，住著一位側面帥氣如戰神，正面卻呆萌像個大叔的終極猛禽「角鵰」！牠們不只長相自帶「反差萌」，還擁有一副比棕熊還要巨大的恐怖利爪，只要輕輕一握，就能輕易捕捉棲息在樹冠層上的樹懶和猴子！到底這位連猴子都聞風喪膽的頂級殺手，為什麼回到家卻成了無微不至的溫柔好爸媽？快進來聽聽這位叢林霸主不可思議的生存哲學吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/928336fe908bc749e75e.jpg"
   },
   {
    "code": "217",
@@ -2167,6 +2429,7 @@
     "duration": 718,
     "pubDate": "Mon, 30 Mar 2026 22:02:10 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/fb/78/bd/fb78bd61-f673-8778-aac6-a136c83d2841/mza_2854433485411700716.jpg/600x600bb.jpg",
    "intro": "你知道陸地上最大的動物「非洲象」走路竟然完全沒有聲音嗎？因為牠們腳底下自帶高級氣墊鞋！而且牠們還有超能力，可以用腳掌「聽」幾公里以外的聲音！這群溫柔的巨獸不僅聰明，記憶力超好，還跟我們人類一樣非常重視家人喔。快來認識這位充滿智慧的大朋友！",
    "labs": [
     {
@@ -2181,7 +2444,8 @@
      "question": "搧得更快，一定能帶走更多熱嗎？",
      "url": "https://lab.kidsci.app/earfan/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/29adc1c7b3a908475699.jpg"
   },
   {
    "code": "218",
@@ -2196,8 +2460,10 @@
     "duration": 685,
     "pubDate": "Wed, 01 Apr 2026 22:02:09 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/ec/44/1b/ec441b1b-cc92-1d5d-8eaf-b2d93b939501/mza_6146692989283397303.jpg/600x600bb.jpg",
    "intro": "你知道狐獴自帶「太陽眼鏡」和「抗毒血清」嗎？牠們還會用聲音幫同伴「按摩」喔！快來看看這群沙漠小戰士的驚人秘密！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/1422458ab6e6b9fcc5a6.jpg"
   },
   {
    "code": "219",
@@ -2212,6 +2478,7 @@
     "duration": 846,
     "pubDate": "Fri, 03 Apr 2026 22:02:08 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/67/9b/9b/679b9b5a-9c94-4a43-f0e3-29856a0721bf/mza_14454045675102048113.jpg/600x600bb.jpg",
    "intro": "你知道嗎？剛出生的蜘蛛不用學就會結網，海豚竟然看得懂手語，還有帝王斑蝶怎麼完成橫跨幾代的超長途旅行？動物們身上其實藏著超多我們想像不到的「黑科技」！今天科學隊長和好奇博士要帶大家去破解動物們的「超級大腦」與「神祕羅盤」，甚至還有像鋼鐵人一樣的量子視覺喔！快來聽聽這些不可思議的生存祕技！",
    "labs": [
     {
@@ -2226,7 +2493,8 @@
      "question": "舞角和搖多久，能告訴同伴花在哪裡？",
      "url": "https://lab.kidsci.app/waggle/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/c57deb5919168f0092d9.jpg"
   },
   {
    "code": "220",
@@ -2237,8 +2505,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-ep-220-%E5%8B%95%E7%89%A9%E7%95%8C%E7%9A%84%E5%BE%AE%E8%A7%80%E7%A4%BE%E6%9C%83%E5%AD%B8-%E8%AA%B0%E6%98%AF%E6%9C%80%E4%BD%B3%E5%AE%A4%E5%8F%8B%E8%88%87%E8%B6%85%E7%B4%9A%E5%A5%B6%E7%88%B8/id1812447277?i=1000761396057",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-04-14T21:49:50Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/e5/78/32/e578329e-4f02-ff7c-7683-6f1308df941d/e9c7c762-3994-4dfc-82bc-9d4051883e4b.png/600x600bb.jpg",
    "intro": "誰說動物都獨來獨往？海底有專門的「美容院」，螞蟻還會開「牧場」養蚜蟲！還有蠍子求偶竟然要跳華爾滋？這集我們來看看動物界超有趣的社交生活與爸媽經！",
    "labs": [
     {
@@ -2247,7 +2517,8 @@
      "question": "斷開觸角，誰會晚點躲？",
      "url": "https://lab.kidsci.app/roompair/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/a03cb95acb603543f8c2.jpg"
   },
   {
    "code": "221",
@@ -2258,10 +2529,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-ep-221-%E5%9C%B0%E7%90%83%E7%9A%84%E7%94%9F%E5%91%BD%E8%88%9E%E5%8F%B0-%E5%BE%9E%E6%B7%B1%E6%B5%B7%E5%88%B0%E5%9F%8E%E5%B8%82%E7%9A%84%E6%A3%B2%E5%9C%B0%E5%A4%A7%E5%86%92%E9%9A%AA/id1812447277?i=1000761396335",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-04-14T21:53:06Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/61/0a/a2/610aa200-0db2-9ff3-f919-c4275764f9af/2e2fe52c-448f-4d8c-a226-4b1ea7b2d3ce.png/600x600bb.jpg",
    "intro": "你知道嗎？除了亞馬遜雨林，連你家門口的大樹也是一個熱鬧的生態系！但北美大草原竟然只剩下2%？而且浣熊為了在城市生存，竟然變得更聰明了？快來跟我們一起探索地球上各種神奇的「家」！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/456e7a6c53aa2c611233.jpg"
   },
   {
    "code": "222",
@@ -2272,10 +2546,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-ep-222-%E8%9C%82%E9%B3%A5%E7%89%B9%E7%A8%AE%E9%83%A8%E9%9A%8A-%E6%8C%91%E6%88%B0%E7%89%A9%E7%90%86%E6%A5%B5%E9%99%90%E7%9A%84%E7%94%9F%E7%89%A9%E6%88%B0%E9%AC%A5%E6%A9%9F/id1812447277?i=1000761396729",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-04-14T21:56:03Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/99/bf/b1/99bfb173-0b8d-9802-1694-54e99431e797/0904038b-a0d7-4f36-adae-595da0b276e1.png/600x600bb.jpg",
    "intro": "你以為蜂鳥只是花園裡可愛的小精靈嗎？大錯特錯！牠們其實是裝備了「生物黑科技」的微型戰鬥機。想像一下，一種生物能每秒拍翅膀80次，心跳快到每分鐘1200下，為了活下去每天要吃掉自己體重三倍的食物！而且牠們眼裡的世界比我們多一種顏色，還能在空中倒車、垂直起降。這集科學毫郝聽，我們要縮小身體，潛入蜂鳥的瘋狂世界，看看這些只有幾公克重的小傢伙，如何用超能力挑戰物理極限！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/26cc42703e3509011ab6.jpg"
   },
   {
    "code": "223",
@@ -2286,8 +2563,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-ep-223-%E9%B4%95%E9%B3%A5%E9%80%86%E8%A5%B2-%E6%8A%AB%E8%91%97%E7%BE%BD%E6%AF%9B%E7%9A%84%E8%BF%85%E7%8C%9B%E9%BE%8D%E8%88%87%E9%98%B2%E7%96%AB%E6%95%91%E6%98%9F/id1812447277?i=1000761396880",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-04-14T21:58:03Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/b0/5f/e0/b05fe063-504c-73ff-198d-957040c765d2/e78ab312-d126-4121-8a0b-030c0f4d56e8.png/600x600bb.jpg",
    "intro": "你也以為鴕鳥只會把頭埋進沙子裡逃避現實嗎？其實牠們是草原上最致命的格鬥家！一腳就能踢飛獅子，跑起來比機車還快。更不可思議的是，科學家發現鴕鳥強大的免疫系統竟然能製造出對抗新冠病毒的「超級口罩」！鴕鳥媽媽甚至還會用「別人的蛋」來保護自己的小孩？這集科學毫郝聽，帶你認識這位被嚴重低估的現代恐龍！",
    "labs": [
     {
@@ -2296,7 +2575,8 @@
      "question": "一步走更遠，或每秒多走幾步，速度會怎麼變？",
      "url": "https://lab.kidsci.app/stridel/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/b17cf042fa3c1684a930.jpg"
   },
   {
    "code": "224",
@@ -2307,8 +2587,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-ep-224-%E9%9B%A8%E6%9E%97%E4%B8%AD%E7%9A%84%E9%87%8D%E8%A3%9D%E8%BD%9F%E7%82%B8%E6%A9%9F-%E5%A4%A7%E7%8A%80%E9%B3%A5%E7%9A%84%E9%9B%99%E5%98%B4%E4%B9%8B%E8%AC%8E%E8%88%87%E6%84%9B%E6%83%85%E7%9B%A3%E7%8D%84/id1812447277?i=1000761494134",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-04-16T20:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/65/b3/46/65b34693-136b-5381-8d4e-f5db795d9061/3c553286-126e-4761-9bc0-3ff8f2333412.jpg/600x600bb.jpg",
    "intro": "你聽過飛起來像蒸汽火車一樣吵的鳥嗎？大犀鳥頭上頂著巨大的黃色「頭盔」，竟然還會自己噴防水口紅？最震撼的是，牠們為了保護寶寶，媽媽會把自己封在樹洞特等席長達四個月，把命都交給爸爸！快來跟著科學隊長一起走進雨林，揭開這群守信用又愛漂亮的重裝飛行員秘密吧！",
    "labs": [
     {
@@ -2317,7 +2599,8 @@
      "question": "離開果樹的種子，落到了哪裡？",
      "url": "https://lab.kidsci.app/seedride/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/d19f224045310062b2b0.jpg"
   },
   {
    "code": "225",
@@ -2328,8 +2611,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-ep-225-%E7%82%BA%E4%BB%80%E9%BA%BC%E5%B7%A8%E5%98%B4%E9%B3%A5%E7%9A%84%E5%98%B4%E5%B7%B4%E9%82%A3%E9%BA%BC%E5%A4%A7-%E5%8E%9F%E4%BE%86%E6%98%AF%E8%87%AA%E5%B8%B6%E8%B6%85%E7%B4%9A%E7%A9%BA%E8%AA%BF/id1812447277?i=1000761494569",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-04-18T20:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/10/1a/b2/101ab216-aac2-5102-fa07-de2e1ac6365f/59993e52-61b6-4285-b14f-56f24d3942d7.jpg/600x600bb.jpg",
    "intro": "巨嘴鳥那張佔身體三分之一的大嘴巴，竟然不是為了愛美，而是最高科技的「隨身冷氣機」？而且睡覺時還能變成暖暖包？這集我們來揭開熱帶雨林最潮散熱器的秘密！",
    "labs": [
     {
@@ -2344,7 +2629,8 @@
      "question": "外殼裡放一個多孔內芯，重量和彎曲會怎樣？",
      "url": "https://lab.kidsci.app/beakcore/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/682921f1a1d03e5b72a3.jpg"
   },
   {
    "code": "226",
@@ -2355,8 +2641,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E5%8B%95%E7%89%A9%E6%AF%8D%E8%A6%AA%E5%B0%88%E8%BC%AF-1-%E6%9C%80%E4%B8%8D%E5%83%8F%E9%B3%A5%E7%9A%84%E9%B3%A5-%E5%A5%87%E7%95%B0%E9%B3%A5%E7%9A%84%E7%94%9F%E5%AD%98%E9%BB%91%E7%A7%91%E6%8A%80%E8%88%87%E5%B7%A8%E8%9B%8B%E4%B9%8B%E8%AC%8E-ep-226/id1812447277?i=1000762246663",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-04-22T21:02:02Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/d2/dd/e0/d2dde066-aaaf-7725-9878-4de472a8a0b1/baad089a-68cf-405c-b1c9-9907ed6275d1.jpg/600x600bb.jpg",
    "intro": "紐西蘭的國寶奇異鳥，竟然長著貓爪、羽毛像毛髮，還能生下佔體重20%的超級巨蛋？這簡直是鳥類界的生物奇蹟！一起來認識這個為了生存把技能點數都點歪的可愛霸主！",
    "labs": [
     {
@@ -2365,7 +2653,8 @@
      "question": "看不到地下，還能找到線索嗎？",
      "url": "https://lab.kidsci.app/kiwitip/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/eaf5d8574ba618be3a3f.jpg"
   },
   {
    "code": "227",
@@ -2376,8 +2665,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-ep-227-%E5%A4%9C%E7%A9%BA%E4%B8%AD%E7%9A%84%E6%BB%91%E7%BF%94%E7%BF%BC-%E9%A3%9B%E9%BC%A0%E7%9A%84%E7%B2%89%E7%B4%85%E8%9E%A2%E5%85%89%E8%88%87%E7%A9%BA%E6%B0%A3%E5%8B%95%E5%8A%9B%E5%AD%B8%E7%A7%98%E5%AF%86/id1812447277?i=1000762623130",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-04-24T23:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/9a/cc/d9/9accd969-3696-c072-2e8d-36e484b8580f/8dc17fee-be91-406c-a27c-eb0fd133a41e.jpg/600x600bb.jpg",
    "intro": "森林裡的忍者「飛鼠」其實不會飛？但牠滑翔的距離竟然有一個足球場那麼遠！而且科學家最近發現，牠們在晚上還會發出粉紅色的螢光？這到底是怎麼回事？快來聽聽這位穿著皮草的空氣動力學大師有多厲害！",
    "labs": [
     {
@@ -2386,7 +2677,8 @@
      "question": "多一點起飛高度，能滑到更遠的樹嗎？",
      "url": "https://lab.kidsci.app/glide/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/0cd5c4f3dd9734b83b0a.jpg"
   },
   {
    "code": "228",
@@ -2397,8 +2689,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-ep-228-%E7%A9%BF%E8%91%97%E7%87%95%E5%B0%BE%E6%9C%8D%E7%9A%84%E6%88%B0%E8%A1%93%E5%A4%A7%E5%B8%AB-%E4%BC%81%E9%B5%9D%E7%9A%84%E7%94%9F%E5%AD%98%E9%BB%91%E7%A7%91%E6%8A%80%E8%88%87%E6%9A%97%E9%BB%91%E5%85%B5%E6%B3%95/id1812447277?i=1000763399630",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-04-26T00:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/01/49/93/014993b9-2f84-b4ef-b2ea-c0767a822927/1be1ae3e-9661-456f-bd1e-6eb5d62ac312.jpg/600x600bb.jpg",
    "intro": "可以在零下60度生存、為了石頭會使出「美人計」、還會每天打瞌睡一萬次的動物是誰？沒錯，就是企鵝！本集將揭開這些穿著燕尾服的呆萌大師背後的驚人秘密，從史前巨人到超強物理學抱團，保證讓你大開眼界！",
    "labs": [
     {
@@ -2413,7 +2707,8 @@
      "question": "換個位置，能把散掉的熱變回來嗎？",
      "url": "https://lab.kidsci.app/huddle/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/4b01d34d503c407a1a51.jpg"
   },
   {
    "code": "230",
@@ -2424,10 +2719,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E8%AA%B0%E8%AA%AA%E6%B5%B7%E7%89%9B%E5%8F%AA%E6%98%AF%E8%83%96-%E6%8F%AD%E9%96%8B-%E7%BE%8E%E4%BA%BA%E9%AD%9A-%E7%9A%84%E4%BA%94%E5%A4%A7%E4%B8%8D%E5%8F%AF%E6%80%9D%E8%AD%B0%E8%B6%85%E8%83%BD%E5%8A%9B-ep-230/id1812447277?i=1000770373880",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-06-04T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/99/2e/f0/992ef0fe-ec93-2396-3403-2283d6609ce3/9ec6fffa-42de-4a17-a613-12982838a45e.jpg/600x600bb.jpg",
    "intro": "你知道嗎？圓滾滾的海牛其實一點都不胖，牠只是骨子裡重！而且牠們還是水中的「放屁大師」，靠著放屁來控制潛水深度？甚至連牙齒也會像輸送帶一樣不斷換新！快來一起認識這位溫柔的海洋巨獸，發現牠身上超酷的演化祕密吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/a350ac3327b30e7585d4.jpg"
   },
   {
    "code": "231",
@@ -2438,10 +2736,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E6%B7%B1%E8%97%8D%E8%89%B2%E7%9A%84%E9%AB%98%E6%99%BA%E5%95%86%E7%95%B0%E5%AE%A2-%E6%8F%AD%E9%96%8B%E6%B5%B7%E8%B1%9A%E8%88%87%E8%99%8E%E9%AF%A8%E4%B8%8D%E7%82%BA%E4%BA%BA%E7%9F%A5%E7%9A%84-%E5%A4%96%E6%98%9F-%E6%96%87%E6%98%8E-ep-231/id1812447277?i=1000771836933",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-06-10T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/40/6c/47/406c474d-f660-e0db-d25f-1003b3f1b7e5/4c2d5d34-5e81-4353-ae8c-530a8151ff6a.jpg/600x600bb.jpg",
    "intro": "海豚不只是可愛的表演者，牠們是擁有複雜社會、會使用工具、甚至會「吸毒」的高智商外星文明！從透視眼到流體力學捕獵，這集帶你深入探索海洋智者的秘密生活！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/137919efc09bf46e23cd.jpg"
   },
   {
    "code": "232",
@@ -2452,10 +2753,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E9%9B%A8%E6%9E%97%E4%B8%AD%E7%9A%84%E5%B0%A4%E9%81%94%E5%A4%A7%E5%B8%AB-%E7%9C%BC%E9%8F%A1%E7%8C%B4%E7%9A%84%E8%B6%85%E8%83%BD%E5%8A%9B%E8%88%87%E7%8E%BB%E7%92%83%E8%88%AC%E8%84%86%E5%BC%B1%E7%9A%84%E9%9D%88%E9%AD%82-ep-232/id1812447277?i=1000772585794",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-06-14T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/80/fa/75/80fa75b3-ffec-cf5f-c4d2-36c8d27b203c/5ff58d52-c600-41a0-80f5-47231cfd53c4.jpg/600x600bb.jpg",
    "intro": "你知道有一種動物，眼睛比腦袋還大嗎？牠就是眼鏡猴！這隻來自東南亞雨林的小傢伙，頭可以轉180度像貓頭鷹，是靈長類中唯一的「純肉食殺手」，還能發出人類聽不見的超音波秘密通訊！但牠們的神經系統超級敏感，壓力太大就會崩潰……快來認識這位雨林中的尤達大師吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/ba94b1b837e7a27dd219.jpg"
   },
   {
    "code": "233",
@@ -2466,8 +2770,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E9%9B%AA%E5%B1%B1%E4%B9%8B%E9%AC%BC-%E9%9B%AA%E8%B1%B9%E7%9A%84%E6%A5%B5%E9%99%90%E7%94%9F%E5%AD%98%E9%BB%91%E7%A7%91%E6%8A%80%E8%88%87%E9%A9%9A%E4%BA%BA%E5%9F%BA%E5%9B%A0%E7%A7%98%E5%AF%86-ep-233/id1812447277?i=1000772783409",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-06-18T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/9e/23/d1/9e23d1f0-b177-cdef-98e9-acb9a4eb17d4/55102f15-5a80-43ae-b3bb-912eed93e1b0.jpg/600x600bb.jpg",
    "intro": "在海拔5000公尺的雪山上，住著一位神秘的「幽靈」——雪豹！牠的尾巴可以當棉被蓋、腳掌自帶消音器、還能一躍跳過15公尺！更驚人的是，科學家發現雪豹的親戚不是豹，竟然是老虎！快來認識這位雪山上的超級忍者！",
    "labs": [
     {
@@ -2482,7 +2788,8 @@
      "question": "身體偏出去，用尾巴能把重心帶回來嗎？",
      "url": "https://lab.kidsci.app/rockbal/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/c432a618f66dc4b0a978.jpg"
   },
   {
    "code": "234",
@@ -2493,8 +2800,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E6%9A%97%E5%A4%9C%E7%B2%BE%E9%9D%88%E7%9A%84%E9%AD%94%E6%8C%87%E5%82%B3%E8%AA%AA-%E6%8C%87%E7%8C%B4%E7%9A%84%E6%95%B2%E6%93%8A%E5%9B%9E%E8%81%B2%E5%AE%9A%E4%BD%8D%E8%88%87%E7%AC%AC%E5%85%AD%E6%A0%B9%E6%89%8B%E6%8C%87%E4%B9%8B%E8%AC%8E-ep-234/id1812447277?i=1000773586737",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-06-25T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/07/df/b7/07dfb74d-b18d-7e9a-8d08-6976691d34af/c4830c06-1c00-4aae-8ca5-17345f675150.jpg/600x600bb.jpg",
    "intro": "在馬達加斯加的雨林深處，住著一隻長得像「上帝喝醉時拼湊出來」的奇怪動物——指猴！牠有蝙蝠的耳朵、老鼠的牙齒、還有一根超級詭異的「魔指」，能用敲擊聲找到藏在樹幹裡的蟲子！更神奇的是，科學家發現牠還有隱藏的「第六根手指」！快來認識這位被誤解的暗夜精靈！",
    "labs": [
     {
@@ -2503,7 +2812,8 @@
      "question": "哪一段敲起來不一樣？",
      "url": "https://lab.kidsci.app/tapwood/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/2a63a74e69047fa58154.jpg"
   },
   {
    "code": "235",
@@ -2514,8 +2824,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E6%B2%99%E6%BC%A0%E8%A3%A1%E7%9A%84%E7%B6%A0%E8%89%B2%E5%B7%A8%E4%BA%BA-%E7%B4%A2%E8%AB%BE%E8%98%AD%E7%9A%84%E7%94%9F%E5%AD%98%E5%A5%87%E8%B9%9F-ep-235/id1812447277?i=1000774559488",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-07-02T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/3c/d1/e4/3cd1e460-cc83-c5a0-7343-e1124a3052db/ad7f3596-b6d0-4ffe-a675-aa74bcdfba40.jpg/600x600bb.jpg",
    "intro": "誰說沙漠只有沙子？這裡有身高三層樓的仙人掌巨人，還有自帶冷氣機的兔子！快來索諾蘭沙漠，發現這裡的動物們各個身懷絕技！",
    "labs": [
     {
@@ -2530,7 +2842,8 @@
      "question": "晚上收碳，白天用碳：同一天的兩種時間表，誰失水較多？",
      "url": "https://lab.kidsci.app/camday/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/bde9c78455bf15e99756.jpg"
   },
   {
    "code": "236",
@@ -2541,8 +2854,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E6%B2%99%E6%BC%A0%E6%99%9D%E5%A4%9C%E8%88%87%E4%B8%8D%E5%96%9D%E6%B0%B4%E7%9A%84%E5%A5%87%E8%B9%9F-%E5%BE%9E%E5%8D%97%E6%A5%B5%E5%88%B0%E7%81%AB%E6%98%9F%E7%9A%84%E6%A5%B5%E9%99%90%E6%8C%91%E6%88%B0-ep-236/id1812447277?i=1000775523120",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-07-06T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/83/00/01/830001ee-decf-84a1-4a22-824635b7dd4d/3a01d594-8e54-43da-a2ed-c98e57c6b1ab.jpg/600x600bb.jpg",
    "intro": "南極洲也是沙漠？袋鼠鼠一輩子都不喝水？當太陽下山後，沙漠才真正熱鬧起來！來看看這些不可思議的生存大師如何在極限環境中活出精彩！",
    "labs": [
     {
@@ -2557,7 +2872,8 @@
      "question": "不喝水時，水收入從哪裡來？",
      "url": "https://lab.kidsci.app/waterbal/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/a11603eb784ce718ad71.jpg"
   },
   {
    "code": "237",
@@ -2568,8 +2884,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E9%9B%A8%E6%9E%97%E8%A3%A1%E7%9A%84%E7%94%9F%E5%AD%98%E9%81%8A%E6%88%B2-%E6%BD%9B%E5%85%A5%E4%BA%9E%E9%A6%AC%E9%81%9C%E7%9A%84%E7%A5%9E%E7%A5%95%E6%B0%B4%E9%99%B8%E4%B8%96%E7%95%8C-ep-237/id1812447277?i=1000776457988",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-07-13T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/54/b8/df/54b8dfd2-ac1c-7a13-1a16-49923c75a767/bd2f951d-ecae-4053-96e4-a5fde444e7cb.jpg/600x600bb.jpg",
    "intro": "準備好進入世界上最神秘的「綠色地獄」了嗎？那裡有會發出狗吠聲的魚、能載動小孩的巨大蓮葉，還有力大無窮的螞蟻在地下種田！快跟著科學隊長一起跳進亞馬遜河，揭開這些雨林生存大師的神祕面目！",
    "labs": [
     {
@@ -2578,7 +2896,8 @@
      "question": "只搬葉，食物就會一直增加嗎？",
      "url": "https://lab.kidsci.app/antfarm/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/57c2fb283f96ae0115b6.jpg"
   },
   {
    "code": "238",
@@ -2589,8 +2908,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E9%9B%B2%E7%AB%AF%E4%B8%8A%E7%9A%84%E7%A9%BA%E4%B8%AD%E5%9F%8E%E5%B8%82-%E6%8E%A2%E7%B4%A2%E4%BA%9E%E9%A6%AC%E9%81%9C%E6%A8%B9%E5%86%A0%E5%B1%A4-ep-238/id1812447277?i=1000777538198",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-07-20T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/a4/a6/49/a4a649f4-e986-8059-aa38-46567b1536be/b47f4eb2-58dc-4e4a-846d-563407907ca4.jpg/600x600bb.jpg",
    "intro": "抬頭看！亞馬遜雨林的樹頂上有一個巨大的空中城市！那裡有嘴巴像大鉗子的巨嘴鳥、動作慢到長青苔的樹懶，還有一種身上帶著致命毒素卻超級愛護寶寶的青蛙！快跟著科學隊長一起爬上樹梢，發現這個充滿陽光與色彩的奇妙世界！",
    "labs": [
     {
@@ -2599,7 +2920,8 @@
      "question": "翅片不換材料，只轉一個角度，反射峰會去哪裡？",
      "url": "https://lab.kidsci.app/wingcol/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/ad28a10dcddfb8c0024b.jpg"
   },
   {
    "code": "239",
@@ -2610,10 +2932,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E9%9D%9E%E6%B4%B2%E8%8E%BD%E5%8E%9F%E7%94%9F%E5%AD%98%E6%88%B0-%E8%88%87%E5%B7%A8%E7%8D%B8%E5%85%B1%E8%88%9E%E7%9A%84%E6%8A%97%E6%97%B1%E5%A5%87%E8%B9%9F-ep-239/id1812447277?i=1000777539144",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-07-23T22:02:23Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/31/0c/23/310c23ca-ad78-a59b-59d9-1b5ae6db25e0/54639dd9-df01-40df-8f85-e142adc74288.jpg/600x600bb.jpg",
    "intro": "你知道嗎？大白草原中最巨大的「推土機」非洲象不僅吃相霸氣，竟然還是維持環境平衡的神秘減碳幫手！還有長頸鹿與滿是刺的大樹間，竟藏著螞蟻大軍站崗的終極防禦秘密！快來聽聽非洲莽原上植物與龐大巨獸的奇妙生存戰吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/dfb8665b5ba30d404fa8.jpg"
   },
   {
    "code": "240",
@@ -2624,10 +2949,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E8%8E%BD%E5%8E%9F%E5%8B%95%E7%89%A9%E7%94%9F%E5%AD%98%E6%B3%95%E5%89%87-%E5%9C%B0%E8%A1%A8%E6%9C%80%E5%BF%AB%E6%8E%A0%E9%A3%9F%E8%88%87%E5%9C%B0%E4%B8%8B%E5%BE%AE%E5%9E%8B%E5%B8%9D%E5%9C%8B-ep-240/id1812447277?i=1000778170321",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-07-27T22:02:16Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/ac/f9/c6/acf9c62c-7196-25fe-d3af-186faa9ffd93/a1628e0f-44ed-4804-bdcb-046e6a9e7071.jpg/600x600bb.jpg",
    "intro": "想要體驗時速 100 公里的極速競飆嗎？！快來看草原上的速度之王獵豹如何終極追擊！還有藏在地底、高聳如城堡的超酷「白蟻帝國」，以及專門把動物大便變成黃金寶藏的神奇小蟲！草原上的生態系遠比你想的還豐富！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/5d81908345c7a376a297.jpg"
   },
   {
    "code": "241",
@@ -2638,10 +2966,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E8%93%8B%E5%9C%A8%E6%B5%B7%E5%BA%95%E7%9A%84%E8%B6%85%E7%B4%9A%E8%90%AC%E9%87%8C%E9%95%B7%E5%9F%8E-%E5%A4%A7%E5%A0%A1%E7%A4%81%E8%88%87%E7%8F%8A%E7%91%9A%E8%9F%B2%E7%9A%84%E5%BB%BA%E7%AF%89%E5%A4%A7%E6%8F%AD%E7%A7%98-ep-241/id1812447277?i=1000778170557",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-07-30T22:02:19Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/f2/ed/ef/f2edefc2-d4bb-b0ad-d803-c7c42543dc9c/22ffc1a9-82fd-4768-a4c3-84ae7488d519.jpg/600x600bb.jpg",
    "intro": "你知道龐大的海底建築「大堡礁」，其實是一群微小的「珊瑚蟲」蓋出來的嗎？從太空中甚至能看到這個超威的海底社區喔！快跟著科學隊長一起下海，探索這個色彩繽紛的海底都市吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/406cf5c7756dd47ee748.jpg"
   },
   {
    "code": "242",
@@ -2652,10 +2983,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E6%B5%B7%E6%B4%8B%E8%A3%A1%E7%9A%84%E7%86%B1%E5%B8%B6%E9%9B%A8%E6%9E%97-%E6%8E%A2%E7%B4%A2%E7%8F%8A%E7%91%9A%E7%A4%81%E8%A3%A1%E7%9A%84%E6%A5%B5%E9%99%90%E6%B1%82%E7%94%9F%E5%A4%A7%E6%88%B0-ep-242/id1812447277?i=1000779533042",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-08-06T22:02:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/b0/ff/fe/b0fffe3b-4ecd-5718-50c5-782206fa6b14/b29e7e10-b337-48b8-b0c9-22d7423cf18b.jpg/600x600bb.jpg",
    "intro": "沒想到平靜美麗的珊瑚礁，就像是海洋裡最擁擠熱鬧的大城市！為了爭一口飯吃，魚兒們有的演化出鐵鎚般的拳頭，有的甚至能偷別人的毒刺來防身？一場超級瘋狂的海底求生淘汰賽即將開始！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/a72f789d4aa0821d1fcf.jpg"
   },
   {
    "code": "243",
@@ -2666,10 +3000,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E8%8D%92%E6%BC%A0%E8%A3%A1%E7%9A%84%E8%AE%8A%E5%BD%A2%E9%87%91%E5%89%9B-%E5%85%A9%E5%8D%83%E6%AD%B2%E4%B8%8D%E6%AD%BB%E7%9A%84%E8%B6%85%E7%B4%9A%E9%BA%B5%E5%8C%85%E6%A8%B9-ep-243/id1812447277?i=1000781143317",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-08-13T22:02:17Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/1b/d2/83/1bd283ca-7567-43d5-8610-c696aa639fcf/ba978cf7-3e70-489c-a41d-46f977042ad1.jpg/600x600bb.jpg",
    "intro": "你有看過長得像「倒栽蔥」的魔法大樹嗎？牠不僅能在身體裡藏了一座游泳池的水，樹幹中間還可以開餐廳、做防空洞！這就是活了兩千多年的超級戰士「非洲麵包樹」！快來聽聽這棵生命之樹的神奇生存秘技吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/f3b5ea6383bc7bd4fa30.jpg"
   },
   {
    "code": "244",
@@ -2680,8 +3017,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E6%B5%B7%E5%BA%95%E6%9C%80%E5%BC%B7%E7%94%9F%E5%8C%96%E6%88%B0%E5%A3%AB-%E9%9B%80%E5%B0%BE%E8%9E%B3%E8%9E%82%E8%9D%A6%E7%9A%84%E7%88%86%E7%A0%B4%E7%A5%9E%E6%8B%B3%E8%88%87%E5%A5%87%E5%B9%BB%E8%A6%96%E8%A6%BA-ep-244/id1812447277?i=1000785303067",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-08-24T22:02:03Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/0d/53/89/0d538997-6173-9e16-8439-f5473b994e61/d14308be-342c-43d2-beb9-11397be3cb1e.jpg/600x600bb.jpg",
    "intro": "海洋裡有一種外表超華麗，卻身懷絕技的「外星戰士」！牠出拳的速度比子彈還要快，連海水都會被揍到瞬間沸騰發光！而且牠不僅穿著打不破的奈米裝甲，眼睛還能看到我們人類完全看不到的隱藏光線！快來聽聽這隻海底拳王「雀尾螳螂蝦」的超狂傳奇！",
    "labs": [
     {
@@ -2708,7 +3047,8 @@
      "question": "同樣點數，轉向最多就一定最好嗎？",
      "url": "https://lab.kidsci.app/twistply/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/45ffd2f8bd509f85807d.jpg"
   },
   {
    "code": "245",
@@ -2719,10 +3059,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E6%92%95%E4%B8%8B%E7%8C%A5%E7%91%A3%E5%8F%8D%E6%B4%BE%E6%A8%99%E7%B1%A4-%E6%96%91%E9%BB%9E%E9%AC%A3%E7%8B%97%E7%9A%84%E6%AC%8A%E8%AC%80%E8%88%87%E7%94%9F%E5%AD%98%E7%B5%95%E6%AE%BA-ep-245/id1812447277?i=1000786784573",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-09-03T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/b9/b9/4c/b9b94c10-c7e7-a125-8897-9c3888a614d1/fc1e4324-7186-4bdf-bf8e-adef67e730f4.jpg/600x600bb.jpg",
    "intro": "說到鬣狗，你是不是馬上想到動畫裡的搞笑壞蛋和跟班？大錯特錯啦！牠們不僅是頭腦超級聰明、咬合力比獅子還猛的無敵女戰士，而且還有超強的團隊合作能力！連牠們「在群體裡地位高低」居然都會寫進自己的基因裡！這集絕對讓你對鬣狗徹底改觀！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/71087bd95f317bc52c6b.jpg"
   },
   {
    "code": "246",
@@ -2733,8 +3076,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E9%96%83%E8%80%80%E7%9A%84%E9%BB%83%E9%87%91%E6%B4%BB%E5%AF%B6%E7%9F%B3-%E4%BB%B0%E6%9C%9B%E6%98%9F%E7%A9%BA%E7%9A%84%E6%BB%BE%E7%B3%9E%E8%9F%B2-ep-246/id1812447277?i=1000788140795",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-09-07T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/92/5e/47/925e479d-1f44-5056-c2e6-336d94e4af08/be267838-73e5-4d19-8487-005b4e752ac4.jpg/600x600bb.jpg",
    "intro": "大家都聽過糞金龜，但是你有看過閃閃發光的「黃金滾糞蟲」嗎？牠們不僅不需要色素就像寶石一樣發光，還會看著天上的銀河系星星認路回家呢！甚至連科學家都向牠們學習發明最新的無人機導航系統！快來認識這位神奇的微觀太空人吧！",
    "labs": [
     {
@@ -2749,7 +3094,8 @@
      "question": "糞不見了，裡面的氮去了哪裡？",
      "url": "https://lab.kidsci.app/dungflow/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/9a99b318907c7ae0f013.jpg"
   },
   {
    "code": "247",
@@ -2760,8 +3106,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E8%8D%89%E5%8E%9F%E4%B8%8A%E7%9A%84%E5%BE%AE%E5%9E%8B%E6%91%A9%E5%A4%A9%E6%A8%93-%E8%A7%A3%E5%AF%86%E9%9D%9E%E6%B4%B2%E7%99%BD%E8%9F%BB%E4%B8%98%E7%9A%84-%E5%91%BC%E5%90%B8-%E5%A5%87%E8%B9%9F-ep-247/id1812447277?i=1000789336961",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-09-17T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/38/35/2d/38352d99-6ff5-ee8e-26f9-d8fe4f023ff6/0e3c063c-4cf4-4bfe-8a50-f0e19258856c.jpg/600x600bb.jpg",
    "intro": "你知道在非洲大草原上最厲害的建築師是誰嗎？不是人類，而是微小的「非洲白蟻」！牠們蓋出來的土丘摩天樓不但會「呼吸」，裡面甚至還有溫馨神奇的「真菌農場」。就連我們現代的摩天大樓，都要向這群小小建築師學習不開冷氣也能很涼爽的秘密喔！快來場微觀世界的生態大探險吧！",
    "labs": [
     {
@@ -2770,7 +3118,8 @@
      "question": "風不大，丘內的氣流怎麼轉向？",
      "url": "https://lab.kidsci.app/mound/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/85873d71c4eb3ac0058c.jpg"
   },
   {
    "code": "248",
@@ -2781,8 +3130,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E5%BE%9E-%E5%AD%A4%E5%83%BB%E5%AE%85%E7%94%B7-%E5%88%B0-%E7%98%8B%E7%8B%82%E6%9A%B4%E5%BE%92-%E8%9D%97%E8%9F%B2%E8%AE%8A%E8%BA%AB%E7%9C%9F%E7%9B%B8%E8%88%87%E7%A7%91%E6%8A%80%E5%9C%8D%E5%89%BF%E6%88%B0-ep-248/id1812447277?i=1000790675357",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-09-21T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/7d/0f/2f/7d0f2fb7-8a66-70dc-6c6d-7771b5b8f46e/3968cd44-c879-4c82-a9b3-7487296ca640.jpg/600x600bb.jpg",
    "intro": "想像一下，原本害羞的綠色小蚱蜢，居然會因為被「摸大腿」而變身成紅黑色的瘋狂暴徒！牠們甚至還會噴射「聚會香水」呼朋引伴，形成遮天蔽日的恐怖蝗軍！不過別擔心，現在的人類可是派出了AI和無人機大軍來守護農田喔！快來看看這場超酷的「蟲蟲大戰」吧！",
    "labs": [
     {
@@ -2791,7 +3142,8 @@
      "question": "擠在一起，會立刻全部變群居嗎？",
      "url": "https://lab.kidsci.app/locust/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/8f70c81fd6f41884af84.jpg"
   },
   {
    "code": "249",
@@ -2802,10 +3154,13 @@
    "state": "public",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E8%8D%92%E9%87%8E%E4%B8%AD%E7%9A%84%E7%84%A1%E8%81%B2%E6%AD%BB%E7%A5%9E-%E6%8F%AD%E7%A7%98%E9%9D%9E%E6%B4%B2%E5%B2%A9%E8%9F%92%E7%9A%84%E9%9A%B1%E7%A7%98%E7%94%9F%E6%B4%BB%E8%88%87%E7%8B%82%E9%87%8E%E6%9C%AC%E8%83%BD-ep-249/id1812447277?i=1000792025985",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-09-29T16:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/61/ba/fb/61bafbee-8e53-1a31-c540-845c840cfec9/95faff21-b3fc-4eae-9663-f03d2c78ac06.jpg/600x600bb.jpg",
    "intro": "想像一下，非洲大草原上住著一條比休旅車還要長、身上自帶夜視鏡和隱形斗篷的王者——非洲岩蟒！牠們不僅力氣超大，連鱷魚都能吃下肚，沒想到這位霸主居然也是一位超溫暖的蛇媽媽喔！快跟著我們一起潛入沼澤，展開這場驚險又刺激的生態大冒險吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/b185a28c4179d731a248.jpg"
   },
   {
    "code": "250",
@@ -2816,8 +3171,10 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E6%8F%AD%E9%96%8B%E6%B5%B7%E6%B4%8B%E5%B9%BD%E9%9D%88%E7%9A%84%E9%9D%A2%E7%B4%97-%E5%9C%A8%E6%B5%B7%E5%BA%8A%E4%B8%8A%E9%A3%9B%E7%BF%94%E7%9A%84-%E9%AD%9F%E9%AD%9A-%E6%88%B0%E5%A3%AB-ep-250/id1812447277?i=1000792031412",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-10-01T16:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/5c/28/bd/5c28bdd9-dac0-3aa9-94e2-b8035421d543/8a73b094-aa4c-4868-af65-03a07d830f2e.jpg/600x600bb.jpg",
    "intro": "你有看過在海底「慢動作飛行」的神祕飛毯嗎？那其實是聰明絕頂的魟魚！牠們不僅有著像馬賽克瓷磚般的精密骨骼，還能在強大的海底吸力中穩定航行，甚至能潛入兩座台北 101 大樓深的深海！快跟著科學隊長一起潛入藍色海洋，認識這些流體力學大師吧！",
    "labs": [
     {
@@ -2826,7 +3183,8 @@
      "question": "貼近底部，一定會多一股向上的力嗎？",
      "url": "https://lab.kidsci.app/rayfin/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/910867dfdd462e7aa5ac.jpg"
   },
   {
    "code": "251",
@@ -2837,10 +3195,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E9%99%B8%E5%9C%B0%E9%87%8D%E8%A3%9D%E5%9D%A6%E5%85%8B-%E7%8A%80%E7%89%9B%E7%9A%84%E5%8F%B2%E5%89%8D%E5%82%B3%E8%AA%AA%E8%88%87%E7%A7%91%E6%8A%80%E6%95%91%E6%8F%B4%E8%A1%8C%E5%8B%95-ep-251/id1812447277?i=1000793041597",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-10-07T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/35/31/7b/35317bd3-a4e7-54b7-d292-8ca25ad88f5b/839df2dd-29fa-4eb8-ac0b-8f6366c0ef2a.jpg/600x600bb.jpg",
    "intro": "小朋友，你們知道嗎？犀牛以前竟然比長頸鹿還要高，甚至長得像神話裡的獨角獸！雖然牠們穿著厚厚的皮膚「鎧甲」，但其實很需要泥巴面膜來防曬喔。快來聽聽這群史前巨獸如何靠著「高科技」和「科學代孕」在現代活下去吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/e7397e93cc32ec145bbf.jpg"
   },
   {
    "code": "252",
@@ -2851,10 +3212,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E9%9D%9E%E6%B4%B2%E7%89%9B%E7%BE%9A%E7%9A%84%E7%98%8B%E7%8B%82%E5%A4%A7%E9%81%B7%E5%BE%99%E8%88%87%E6%B0%A3%E5%80%99%E5%AE%88%E8%AD%B7%E7%A5%9E%E5%82%B3%E5%A5%87-ep-252/id1812447277?i=1000795257817",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-10-15T22:00:00Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/ce/b5/cc/ceb5cc26-c07d-8d0d-3cf5-2437acdb5740/a73459f8-a457-4599-a026-62cf0d55f138.jpg/600x600bb.jpg",
    "intro": "你以為牛羚只是一群吃草的呆萌動物嗎？大錯特錯！牠們除了會內建能聞到50公里外的「氣象雷達」找雨水，竟然還是維持地球氣候的「隱形碳匯守護神」！快跟著我們一起參加這場驚心動魄的東非大遷徙，看牠們如何使出不可思議的「群體智慧」戰勝可怕的尼羅鱷！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/cba903a8047d31727525.jpg"
   },
   {
    "code": "50",
@@ -2865,10 +3229,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E8%BB%8D%E4%BA%8B%E6%AD%A6%E5%99%A8%E5%B0%88%E8%BC%AF-1-%E6%AF%94%E9%BB%83%E9%87%91%E9%82%84%E8%B2%B4%E7%9A%84%E9%A3%9B%E6%A9%9F-b-2-%E5%B9%BD%E9%9D%88%E8%BD%9F%E7%82%B8%E6%A9%9F%E7%9A%84%E7%A7%98%E5%AF%86/id1812447277?i=1000761398141",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-04-14T22:03:29Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/ad/2d/0d/ad2d0dea-45b1-0f5d-d6f2-a3166116dc78/60e218eb-4ad7-4f9c-a26f-bf7562052b47.jpg/600x600bb.jpg",
    "intro": "想知道世界上有沒有飛機比黃金還要貴嗎？答案就是 B-2 幽靈轟炸機！它長得像外星飛船，會玩高科技躲貓貓，連雷達都找不到它。但它也是個「嬌氣小公主」，連濕氣都會讓它失控。快來聽聽這架飛行黃金的傳奇故事吧",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/2d270a88022047598a28.jpg"
   },
   {
    "code": "53",
@@ -2883,8 +3250,10 @@
     "duration": 563,
     "pubDate": "Wed, 15 Apr 2026 21:02:03 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/a6/d3/ab/a6d3ab4e-cc54-7d03-bcb4-56db460d68a7/mza_5632559313355686617.jpg/600x600bb.jpg",
    "intro": "如果你把自己縮小、縮小、再縮小，會看到什麼呢？原來這世界上所有好吃的、好玩的，都是由一群「原子小積木」拼起來的！而且，宇宙中居然還藏著看不見的隱形大力士和神祕推手？快來跟著科學隊長和浩奇博士，一起解開物質的神奇密碼！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/eaa6369655a731fe827f.jpg"
   },
   {
    "code": "54",
@@ -2899,8 +3268,10 @@
     "duration": 587,
     "pubDate": "Fri, 17 Apr 2026 22:02:10 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/2b/ff/68/2bff6840-3dcd-517c-5c3d-f03c1b6f91c1/mza_2632080769738530106.jpg/600x600bb.jpg",
    "intro": "如果你以為石頭、木頭和塑膠都一成不變，那你就大錯特錯囉！這集我們要來看看物質如何大玩「變身遊戲」！有的變身只是換件衣服（物理變化），有的卻是徹底變了一個人（化學變化）。為什麼木頭燒完變黑炭？種子怎麼變大樹？快跟著我們一起解開地球資源的祕密，當個環保的科學小偵探！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/f30798d47592b6542932.jpg"
   },
   {
    "code": "55",
@@ -2915,8 +3286,10 @@
     "duration": 462,
     "pubDate": "Tue, 21 Apr 2026 22:02:07 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/cf/da/3b/cfda3b4b-d1dd-e58e-d737-eece3f94c3ed/mza_4208748360536280172.jpg/600x600bb.jpg",
    "intro": "如果把這世界切、切、切到最小，會剩下什麼呢？原來這世界上所有好玩的玩具、好喝的果汁，甚至我們自己，都是由一群裡面「空蕩蕩」的足球場——也就是原子拼成的！想知道豌豆大的原子核跟蚊子般的電子是怎麼在足球場裡玩遊戲的嗎？快跟著科學隊長一起變小，出發去微觀世界探險吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/330a8f7c477b9d5306c0.jpg"
   },
   {
    "code": "56",
@@ -2927,10 +3300,13 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-%E5%B0%96%E7%AB%AF%E7%A7%91%E6%8A%80%E5%B0%88%E8%BC%AF-2-%E5%9C%B0%E5%BF%83%E6%B7%B1%E8%99%95%E7%9A%84%E8%B6%85%E7%B4%9A%E8%B7%91%E9%81%93-%E5%A4%A7%E5%9E%8B%E5%BC%B7%E5%AD%90%E5%B0%8D%E6%92%9E%E6%A9%9F-lhc-%E7%9A%84%E5%BE%AE%E8%A7%80%E5%86%92%E9%9A%AA/id1812447277?i=1000761331167",
-    "spotify": null
+    "spotify": null,
+    "pubDate": "2026-04-14T14:44:59Z"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/68/85/ed/6885edf6-06e2-da2c-8a47-f44b785df621/0671ef71-c373-42a1-aad4-f8dc0637fe7f.jpg/600x600bb.jpg",
    "intro": "你知道地底下埋著一個全長 27 公里的超級甜甜圈嗎？它不但是全球最大的冰箱，還能讓小粒子像火車一樣正面對撞！這集我們要跟著四位超級偵探，一起去尋找讓萬物變重的「上帝粒子」，還要煮一鍋宇宙誕生時的「粒子濃湯」！快跟著科學隊長，來一場最震撼的微觀大碰撞吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/f3b8ae1eab811436bb7a.jpg"
   },
   {
    "code": "57",
@@ -2945,6 +3321,7 @@
     "duration": 646,
     "pubDate": "Thu, 23 Apr 2026 22:02:03 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/f4/39/bb/f439bba6-804b-b366-8398-60a8eff2dafa/mza_16378219812953816479.jpg/600x600bb.jpg",
    "intro": "為什麼冰塊會消失？蜂蜜為什麼流得比水慢？原來這世界上的所有東西，裡面都住著一群愛跳舞的小粒子！這集我們要來認識物質的四種超酷樣子，從硬邦邦的固體、愛流動的液體、自由自在的氣體，到亮晶晶的電漿體！快跟著科學隊長，一起解開溫度魔法師的變身祕密吧！",
    "labs": [
     {
@@ -2953,7 +3330,8 @@
      "question": "溫度沒上升，移入的能量去哪裡了？",
      "url": "https://lab.kidsci.app/phase/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/c96541d114eedba783c2.jpg"
   },
   {
    "code": "58",
@@ -2968,8 +3346,10 @@
     "duration": 597,
     "pubDate": "Mon, 27 Apr 2026 22:02:08 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/48/e7/b1/48e7b16a-dc3c-61a7-af79-066becaa0d01/mza_288863879682648302.jpg/600x600bb.jpg",
    "intro": "如果把世界拆開，你會發現那是用一百多種「元素積木」拼成的！有些積木會變身（碳），有些積木很孤僻（惰性氣體），還有一張神祕的地圖幫你整理好所有的宿舍（元素週期表）。想知道你身體裡最多的積木是什麼嗎？快跟著好奇博士，一起解開這本宇宙最強的材料說明書！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/0ae4da327d2c2c5a09c2.jpg"
   },
   {
    "code": "59",
@@ -2984,8 +3364,10 @@
     "duration": 584,
     "pubDate": "Wed, 29 Apr 2026 22:02:06 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/cc/e7/85/cce785f9-2749-27dd-4912-bc693d5c8920/mza_3742177764691520590.jpg/600x600bb.jpg",
    "intro": "為什麼煙火可以噴出五顏六色的光？原來那是微小原子在玩「變裝派對」！這集我們要來看煙火肚子裡的祕密積木，認識紅色的鍶、黃色的鈉，還有混合出的神祕紫色！快來跟著主持人解開夜空中的化學密碼，你會發現連烤蛋糕和吃飯消化，都是精彩的化學反應喔！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/87bd4195bb425a7e4c05.jpg"
   },
   {
    "code": "60",
@@ -3000,8 +3382,10 @@
     "duration": 484,
     "pubDate": "Fri, 01 May 2026 22:02:05 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/6c/b0/29/6cb02934-d077-178e-2304-65fa1fd77c49/mza_14926414151832278718.jpg/600x600bb.jpg",
    "intro": "為什麼你的椅子不會像棉花糖一樣軟？為什麼腳踏車可以這麼輕？答案就在「材料科學」裡！這一集我們要帶領大家去英雄裝備庫，認識耐熱的陶瓷、愛變身的塑膠，還有會自己補好傷口的未來材料！快跟著科學隊長，一起看看奈米技術是怎麼在細小的世界裡玩積木的吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/a0d138a89018d3c45398.jpg"
   },
   {
    "code": "61",
@@ -3016,8 +3400,10 @@
     "duration": 633,
     "pubDate": "Mon, 04 May 2026 22:02:03 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/f6/61/31/f6613195-6c0b-817a-1bae-a3cc1b941b25/mza_6671248264244334522.jpg/600x600bb.jpg",
    "intro": "寫字用的鉛筆芯，竟然跟閃亮亮的鑽石是親戚？而昂貴的黃金，為什麼能被打得比紙還薄卻不斷裂？這集我們要帶領大家鑽進微觀世界，看碳原子如何玩「千層蛋糕」與「堅固城堡」的排隊遊戲，還要潛入黃金原子的「電子大海」裡划船！快跟著科學隊長，解開寶藏背後的原子密碼！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/46cbe37d156465891f48.jpg"
   },
   {
    "code": "62",
@@ -3032,8 +3418,10 @@
     "duration": 633,
     "pubDate": "Sat, 09 May 2026 00:02:02 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/4b/0e/d2/4b0ed20c-7887-62f0-4226-c59b4c21aa0b/mza_4432746759678873364.jpg/600x600bb.jpg",
    "intro": "如果你以為馬路上的黑色瀝青是硬硬的石頭，那你就被它騙了！這集我們要化身科學偵探，去追查那些「偷偷慢跑」的固體：有一百年只滴下九滴的瀝青，有被瞬間凍僵的液體——玻璃，還有重到會自己溜滑梯的巨大冰川！快跟著科學隊長，一起用跨越時空的放大鏡，解開這些偽裝大師們的流動謎團吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/aafcfc94a1603e297ce4.jpg"
   },
   {
    "code": "63",
@@ -3048,8 +3436,10 @@
     "duration": 787,
     "pubDate": "Mon, 11 May 2026 22:02:03 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/23/11/a7/2311a73d-dc77-b04c-4c14-f62876801670/mza_13536526384966081126.jpg/600x600bb.jpg",
    "intro": "如果你推牆壁，牆壁也會偷偷推你嗎？為什麼穿上大雪鞋就不會掉進雪堆裡？這一集我們要去活捉生活中的隱形魔法師——「力」！從讓東西動起來的推力，到把我們吸在地球上的引力，還有能幫小兵立大功的槓桿與壓力！快跟著科學隊長，一起解開牛頓爺爺的三大秘密，看火箭是怎麼靠「反擊」飛上太空的吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/15b60ee26a94c4748526.jpg"
   },
   {
    "code": "64",
@@ -3064,8 +3454,10 @@
     "duration": 572,
     "pubDate": "Wed, 13 May 2026 22:02:07 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/46/30/19/4630190b-1327-cb8c-b18c-223510fac7a2/mza_1335615382068865560.jpg/600x600bb.jpg",
    "intro": "為什麼磁鐵有時候會緊緊抱在一起，有時候卻像吵架一樣拼命推開對方？你知道我們踩著的地球，其實是一顆巨大的懶骨頭磁鐵嗎？這集我們要去活捉生活中的神祕磁力，看它如何變成保護地球的「金鐘罩」，還要看看時速 500 公里的磁浮列車，是怎麼靠著「互相討厭」在軌道上飛起來的！快跟著浩奇博士，一起進入這場吸力十足的超能力大冒險！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/7364babb41db3a5c8e2c.jpg"
   },
   {
    "code": "65",
@@ -3080,8 +3472,10 @@
     "duration": 595,
     "pubDate": "Mon, 18 May 2026 22:02:10 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/f4/cc/eb/f4cceb1c-a068-ebfd-fdcc-b86f9723af69/mza_1302938972161544786.jpg/600x600bb.jpg",
    "intro": "為什麼剪刀可以輕鬆剪開硬紙板？為什麼騎腳踏車變速後可以輕鬆爬上斜坡？原來我們的生活周遭住著一群看不見的「超級英雄」，它們的名字叫簡單機械！從能舉起地球的槓桿、會隱身術的捲起來斜面（螺旋），到能隨意切換速度與力量的齒輪。快跟著科學隊長，一起找出家裡的這些神奇小幫手，看看它們是怎麼讓你的力氣變大好幾倍的吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/f47319bf1a8a4c3e59f2.jpg"
   },
   {
    "code": "66",
@@ -3096,6 +3490,7 @@
     "duration": 783,
     "pubDate": "Wed, 20 May 2026 22:02:16 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/6e/a7/66/6ea766a4-01ed-7324-db56-d4f328dcda5c/mza_17815599736736211490.jpg/600x600bb.jpg",
    "intro": "為什麼修車師傅輕輕壓幾下把手，就能把好幾噸重的汽車頂起來？為什麼起重機能吊起那麼重的鋼筋？這集我們要去揭開兩位超級大力士的秘密——「滑輪」與「液壓」！看它們如何利用繩子和水，把你的小力氣放大一百倍！快跟著科學隊長，一起來場力量倍增的魔法大秀吧！",
    "labs": [
     {
@@ -3104,7 +3499,8 @@
      "question": "省下力氣時，手是不是要走更遠？",
      "url": "https://lab.kidsci.app/hydjack/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/5e03fdfbbdf2d9a72b50.jpg"
   },
   {
    "code": "68",
@@ -3119,8 +3515,10 @@
     "duration": 428,
     "pubDate": "Sun, 19 Apr 2026 21:01:59 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/bb/a0/32/bba0323f-f1bd-5eda-58cf-f3fba21e350d/mza_3399806319977858535.jpg/600x600bb.jpg",
    "intro": "想像一下，如果有一艘船可以在海底躲好幾個月都不用浮出水面，那裡面的人要呼吸什麼？吃什麼？這集我們將潛入深海，開箱這座移動的海底城堡——「維吉尼亞級核潛艦」！看它如何用核子心臟發電，用海水變出氧氣，還能用「順風耳」聽出敵人在哪裡。快穿好你的鋼鐵盔甲，跟科學隊長一起下潛探險吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/cf39b4c16c4b1435225f.jpg"
   },
   {
    "code": "69",
@@ -3135,8 +3533,10 @@
     "duration": 493,
     "pubDate": "Mon, 25 May 2026 22:02:16 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/eb/f2/55/ebf255ae-2ca7-6f6a-79df-ffa5f5797653/mza_8347594800816746382.jpg/600x600bb.jpg",
    "intro": "為什麼磁鐵只吸鐵釘，卻不理會鋁罐和銅板？為什麼指南針永遠知道北方在哪裡？這集我們要縮小變成原子大小，鑽進磁鐵裡面，看一群叫做「電子」的小舞者如何跳出整齊的舞步來產生磁力！還要揭開地球磁場的祕密，看它是如何引導古代探險家發現新大陸的。快拿好你的羅盤，跟好奇博士一起航向磁力大海吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/e51d16ef5d3b1e880ee8.jpg"
   },
   {
    "code": "70",
@@ -3151,8 +3551,10 @@
     "duration": 465,
     "pubDate": "Wed, 27 May 2026 22:02:06 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/fb/60/82/fb6082b4-248e-04ef-189c-e4d96c6daa18/mza_17086434730540267624.jpg/600x600bb.jpg",
    "intro": "你知道我們每天用的電是怎麼「變」出來的嗎？為什麼鴿子出門飛再遠都不會迷路？這集我們要來認識一位沒有上過學的科學魔法師——法拉第！看他如何用磁鐵變出電，還要教大家做一個聽話的「電磁鐵」，讓它想吸就吸、想停就停！快準備好你的漆包線，跟浩奇博士一起來場電磁魔術大亂鬥吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/d009e1dcd4de31436552.jpg"
   },
   {
    "code": "71",
@@ -3169,6 +3571,7 @@
     "duration": 659,
     "pubDate": "Mon, 01 Jun 2026 22:02:08 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/e2/dc/01/e2dc0150-ef0d-cd52-7142-2188dff015b8/mza_235963105286894863.jpg/600x600bb.jpg",
    "intro": "為什麼地球自轉得這麼快，我們卻不會像沒抓穩的小朋友一樣被甩出去？天上的月亮為什麼要繞著地球轉圈圈？原來宇宙中住著一位「吸吸功大師」——重力！它雖然是四大力量中最弱的一個，卻能把整個太陽系綁在一起。這集我們要跟著牛頓去蘋果樹下，看看重力如何讓我們變重或變輕，還要教大家好好分清楚「質量」和「重量」的不同！快穿好你的引力靴，跟著科學小姐姐去宇宙巡航吧！",
    "labs": [
     {
@@ -3177,7 +3580,8 @@
      "question": "同一個包包，月球上的公斤與牛頓會怎麼變？",
      "url": "https://lab.kidsci.app/masslab/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/f52916b2a5d1a3dfd9f3.jpg"
   },
   {
    "code": "72",
@@ -3194,8 +3598,10 @@
     "duration": 518,
     "pubDate": "Wed, 03 Jun 2026 22:02:53 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/03/32/ed/0332edaf-3bac-2cec-d7a9-e9f06e5368ea/mza_13138085606304468082.jpg/600x600bb.jpg",
    "intro": "為什麼大海有時候會漲得高高的，要把腳踩的沙灘都淹沒了，有時候又會退得遠遠的，露出好多神祕的小螃蟹？原來是天上的月亮姊姊在對地球「拉勾勾」！這集我們要來解開潮汐的祕密，看看月球的引力是如何像魔法一樣，讓全球的海水跟著它一起跳舞。還要挑戰，如果有一天月亮消失了，地球上的海洋會發生什麼可怕的大事？快跟著浩奇博士，一起去海邊探險吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/925b5a66ebc1870a2e51.jpg"
   },
   {
    "code": "73",
@@ -3210,6 +3616,7 @@
     "duration": 545,
     "pubDate": "Sun, 07 Jun 2026 22:02:15 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/e6/00/5e/e6005e2a-b58b-f58d-8ccb-81a9ab277325/mza_18206448203012626462.jpg/600x600bb.jpg",
    "intro": "幾百噸重的飛機能衝上雲端，還能載著幾百個人飛跨大海，它是怎麼辦到的？這集我們要來認識飛行的「四大隱形推手」：推力、阻力、升力還有重力！看飛機如何利用神祕的「翼剖面」形狀，在空氣中變出向上的拉力。還要認識直升機之父——塞考斯基，看他如何發明出不用跑道就能原地起飛的超級旋翼！快繫好安全帶，跟著科學隊長一起衝上九萬里高空吧！",
    "labs": [
     {
@@ -3218,7 +3625,8 @@
      "question": "把機翼抬得更高，升力就一直變大嗎？",
      "url": "https://lab.kidsci.app/windlab/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/673adbdf4cf8a42f22c1.jpg"
   },
   {
    "code": "74",
@@ -3233,8 +3641,10 @@
     "duration": 539,
     "pubDate": "Tue, 09 Jun 2026 22:02:05 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/c3/63/c9/c363c90f-6788-6117-e738-bb0d4cbb964a/mza_17872010593584376300.jpg/600x600bb.jpg",
    "intro": "為什麼有的飛機在天上飛，屁股後面卻要裝個小風扇？那是怕它飛得太熱嗎？才不是呢！如果沒有那個小風扇，直升機就會在空中自己轉圈圈轉到暈車！這集我們要來開箱超帥的海鷹直升機，看它如何用「聲納」在海底抓小偷，還要見識傳說中的「MAD 偵探」，竟然能用磁場聞出潛水艇在哪裡！最後還要看它如何像變形金剛一樣把翅膀摺起來。快跟著浩奇博士，來場海空大解密吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/84e6bd8a4dc899167c04.jpg"
   },
   {
    "code": "75",
@@ -3249,8 +3659,10 @@
     "duration": 560,
     "pubDate": "Thu, 11 Jun 2026 22:02:45 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/4f/45/65/4f456530-6c9f-e713-8f02-4cb496b16171/mza_10542225665043353935.jpg/600x600bb.jpg",
    "intro": "如果你能像變形金剛一樣隨意變換外表，那會多酷！在科學界，就住著一位真正的「變身大師」——那就是能量！它有時候是天上轟隆一聲的閃電，有時候是你肚子裡香噴噴的飯菜，甚至連你現在聽廣播的聲音都是它的化身。這集我們要來認識這位看不見的大力士，看它如何用「焦耳」來衡量力氣，還要發現原來我們跑步的力氣，竟然全都是從遙遠的太陽公公那裡「借」來的！快跟著科學小姐姐，來場充滿能量的變身秀吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/ed21faf9b85c8eab780d.jpg"
   },
   {
    "code": "76",
@@ -3265,8 +3677,10 @@
     "duration": 635,
     "pubDate": "Tue, 16 Jun 2026 05:12:46 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/4e/76/2e/4e762e78-144b-5f74-c6e1-bed974f50c1c/mza_16218560226694975805.jpg/600x600bb.jpg",
    "intro": "能量就像厲害的魔術師，會變換各種形態！從古代火堆、牛馬拉車，到現代的核能與太陽能，每一種力量都改變了我們的生活。讓我們一起來看看，人類是如何變聰明、變強壯，並一步步掌握這些神奇能量的吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/15d7b9b6b22ba9a6a950.jpg"
   },
   {
    "code": "77",
@@ -3283,8 +3697,10 @@
     "duration": 415,
     "pubDate": "Wed, 17 Jun 2026 22:02:06 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/cd/ae/22/cdae2263-a260-e531-8ba4-fd1d83e00bea/mza_2184581039120246629.jpg/600x600bb.jpg",
    "intro": "你知道嗎？收音機的聲響、微波爐的熱氣，甚至連電視上的沙沙聲，都藏著宇宙的大秘密！原來我們身處在一個充滿電磁波的世界，最酷的是，科學家竟然透過微波，聽到了宇宙誕生時留下的「第一聲啼哭」！趕快跟著隊長和博士，一起捕捉這些看不見的波吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/01c5da9634c7317cc53d.jpg"
   },
   {
    "code": "78",
@@ -3299,8 +3715,10 @@
     "duration": 465,
     "pubDate": "Sun, 21 Jun 2026 22:02:36 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/45/76/15/457615ed-0ae1-9991-4815-cd5d1e1e562c/mza_10405519391678122588.jpg/600x600bb.jpg",
    "intro": "這世界上竟然藏著一群很會玩躲貓貓的高手！除了美麗的彩虹光，還有熱呼呼的紅外線、能透視骨頭的X光，甚至是來自遙遠宇宙的終極能量王——伽瑪射線！雖然眼睛看不見，但它們隨時隨地都在我們身邊大顯身手。快跟著時光機，一起捕捉這些隱形的超能力光線吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/758763f5f0bf35d91de5.jpg"
   },
   {
    "code": "79",
@@ -3315,8 +3733,10 @@
     "duration": 503,
     "pubDate": "Wed, 24 Jun 2026 22:02:17 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/53/ab/0b/53ab0bb0-4b7a-54ea-ba26-ece3f77114d6/mza_11531979027869570436.jpg/600x600bb.jpg",
    "intro": "為什麼我們可以跟住在國外的阿公阿嬤視訊？為什麼手機地圖知道我們在哪裡？答案就在我們頭頂上面的太空裡唷！有一群揹著發電機翅膀、跑得跟光一樣快的「太空小幫手」正在默默幫忙。快跟著我們一起搭上想像力的太空船，看看通訊衛星是如何完成這些超級快遞任務的吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/048aa07a33f60339cee5.jpg"
   },
   {
    "code": "80",
@@ -3331,8 +3751,10 @@
     "duration": 434,
     "pubDate": "Sun, 28 Jun 2026 22:02:05 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/b5/0e/0f/b50e0f38-9516-42fd-001e-5a7b6d7552e0/mza_13252300442426585493.jpg/600x600bb.jpg",
    "intro": "有沒有覺得很神氣，每次出門玩，爸爸媽媽車上的導航總能精準找到路？這可不是仙子的魔法，而是天上有24位住在兩萬公里高空的「宇宙偵探」在幫忙喔！他們會跟我們的手機玩一種跟光一樣快的「計時遊戲」。趕快穿上太空衣，跟著隊長和博士一起揭開GPS的秘密吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/107bde5b388b550f7e86.jpg"
   },
   {
    "code": "81",
@@ -3347,6 +3769,7 @@
     "duration": 603,
     "pubDate": "Wed, 01 Jul 2026 22:02:23 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/f1/42/bc/f142bc89-cb88-7d76-b532-7367066d07b0/mza_9135608616212789493.jpg/600x600bb.jpg",
    "intro": "你有發現水杯裡的吸管好像斷掉了嗎？還是照鏡子時發現自己「左右相反」了？這不是靈異現象，而是光影魔術師在變魔術！快來跟我們一起揭開「反射」與「折射」的神秘面紗，看光線精靈如何轉彎，大腦又是如何被騙的！",
    "labs": [
     {
@@ -3355,7 +3778,8 @@
      "question": "換光源與元件，立即觀察折射、反射與色散。",
      "url": "https://lab.kidsci.app/rainbow/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/264fd87750dda4c8213d.jpg"
   },
   {
    "code": "82",
@@ -3370,6 +3794,7 @@
     "duration": 667,
     "pubDate": "Sun, 05 Jul 2026 22:02:01 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/19/10/eb/1910ebed-f45f-8613-e592-a5afc7c681ae/mza_7550266606834959388.jpg/600x600bb.jpg",
    "intro": "為什麼肥皂泡泡上面會有彩虹？為什麼瞇起眼睛看燈光會散開？這不是魔法，是光精靈在玩「干涉」與「繞射」！還要認識光影界的超級英雄「雷射光」，看它是如何超級團結、甚至能幫忙挖海底隧道喔！",
    "labs": [
     {
@@ -3378,7 +3803,8 @@
      "question": "換光源與元件，立即觀察折射、反射與色散。",
      "url": "https://lab.kidsci.app/rainbow/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/bb2848c0871568d933cb.jpg"
   },
   {
    "code": "83",
@@ -3393,8 +3819,10 @@
     "duration": 708,
     "pubDate": "Wed, 08 Jul 2026 22:02:05 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/05/06/1d/05061df4-70e2-f33e-6086-9efacaa81fb2/mza_14641322953170033133.jpg/600x600bb.jpg",
    "intro": "你有看過戴著「大草帽」的星系嗎？或是星星爆炸後留下的「大螃蟹」？想要看清幾千萬光年外的宇宙美景，就得靠位於智利的「甚大望遠鏡」VLT團隊！這群比太空站還重、擁有「150隻按摩小手」的超強大眼睛，正幫人類在宇宙中尋寶呢！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/ae7defcae192ec7eabeb.jpg"
   },
   {
    "code": "84",
@@ -3409,8 +3837,10 @@
     "duration": 497,
     "pubDate": "Sun, 12 Jul 2026 22:02:21 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/01/21/a0/0121a0e2-0ef9-1a31-4845-bbe82442b250/mza_14420176959480757562.jpg/600x600bb.jpg",
    "intro": "為什麼星星會一直眨眼睛？這對科學家來說居然是個大麻煩！今天我們要揭開望遠鏡看清楚宇宙的兩大秘訣：變出「假星星」的雷射光，以及讓光線在地下隧道「手牽手」合體的魔法！快來跟著科學隊長，看看地球上的望遠鏡是怎麼變身成宇宙最強偵探的吧！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/d564d136e3f2c42fed20.jpg"
   },
   {
    "code": "85",
@@ -3425,8 +3855,10 @@
     "duration": 498,
     "pubDate": "Wed, 15 Jul 2026 22:02:15 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/aa/ad/a4/aaada4a6-9de2-a7ea-e8f4-c37328ebfb84/mza_18414544249769363074.jpg/600x600bb.jpg",
    "intro": "聲音是怎麼從遠方「咻」地一聲跑進我們耳朵裡的？原來空氣裡有一群在玩「推推擠擠遊戲」的小精靈！今晚我們要跟著科學隊長，一起認識聲音的快慢速度，還要揭曉為什麼聲音在桌子裡跑得比在空氣裡還要快喔！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/b4b98a8b80f9ecae656c.jpg"
   },
   {
    "code": "86",
@@ -3441,6 +3873,7 @@
     "duration": 526,
     "pubDate": "Wed, 22 Jul 2026 22:02:04 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/09/02/0d/09020dd2-af4d-fc86-d0b9-f420f68df2c7/mza_7758796685314136411.jpg/600x600bb.jpg",
    "intro": "為什麼救護車開過來聲音會變尖？為什麼小提琴和長笛的聲音差這麼多？今天科學隊長要帶大家潛入神祕的樂器工廠，一起揭開聲音「變變變」的科學祕密！",
    "labs": [
     {
@@ -3449,7 +3882,8 @@
      "question": "聲源不改音高，為什麼聽到的波峰間隔會改變？",
      "url": "https://lab.kidsci.app/doppler/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/939dfaceb3cf5c69ccaa.jpg"
   },
   {
    "code": "87",
@@ -3464,8 +3898,10 @@
     "duration": 515,
     "pubDate": "Sun, 26 Jul 2026 22:02:12 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/47/f0/ef/47f0efca-c2f2-4d2f-0cc9-7ee45919059a/mza_17431194682824373125.jpg/600x600bb.jpg",
    "intro": "為什麼冰淇淋會融化？為什麼打氣筒會變燙？今天我們要認識熱這個調皮的魔法師，看看它是如何讓物體裡的小精靈跳舞，並在你的手心表演金屬融化的魔術！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/48061026869e25df2d89.jpg"
   },
   {
    "code": "88",
@@ -3480,6 +3916,7 @@
     "duration": 640,
     "pubDate": "Wed, 29 Jul 2026 22:02:09 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/5c/19/50/5c195082-e6cc-b432-b929-db1027512082/mza_14289027222447297057.jpg/600x600bb.jpg",
    "intro": "熱跟溫度居然不一樣？冰山裡的小兵居然比熱咖啡更有活力總和？今天我們要搭上宇宙飛船，一次學會熱傳遞的三大魔法，並去探訪宇宙中那些熱到爆炸與冷到僵掉的神祕角落！",
    "labs": [
     {
@@ -3488,7 +3925,8 @@
      "question": "拆橋、抽走氣體、隔開輻射，哪條路還能傳熱？",
      "url": "https://lab.kidsci.app/heatpath/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/84ca402b0fd44ede7d02.jpg"
   },
   {
    "code": "89",
@@ -3503,6 +3941,7 @@
     "duration": 492,
     "pubDate": "Wed, 05 Aug 2026 22:01:59 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/57/81/7c/57817c99-508d-7466-ee29-6b5355c1ca75/mza_13708920258414531912.jpg/600x600bb.jpg",
    "intro": "開關一按，燈就亮了？手機沒接線也能滑？今天我們要變身電的偵探，去電線裡的跑道看看微小的電子小精靈是怎麼工作、怎麼排隊，並解開電池與閃電背後的奇幻科學魔法！",
    "labs": [
     {
@@ -3511,7 +3950,8 @@
      "question": "斷開一盞燈旁的開關，其他燈會怎樣？",
      "url": "https://lab.kidsci.app/circuit/"
     }
-   ]
+   ],
+   "artworkLocal": "assets/episode-covers/cad34a0759fbe8267c90.jpg"
   },
   {
    "code": "90",
@@ -3526,8 +3966,10 @@
     "duration": 573,
     "pubDate": "Sun, 09 Aug 2026 22:02:07 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/30/46/2e/30462e02-ad19-5cf5-50c0-42f709bb96df/mza_4998590312768811292.jpg/600x600bb.jpg",
    "intro": "開關一按，燈就亮了？手機沒接線也能滑？今天我們要變身電的偵探，去電線裡的跑道看看微小的電子小精靈是怎麼工作、怎麼排隊，並解開電池與閃電背後的奇幻科學魔法！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/f75c375d6c2ee8236e15.jpg"
   },
   {
    "code": "91",
@@ -3542,8 +3984,10 @@
     "duration": 529,
     "pubDate": "Wed, 12 Aug 2026 22:02:11 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/b0/19/53/b01953dc-4cc7-2d43-1714-c9e21e444c7c/mza_9333266241010299300.jpg/600x600bb.jpg",
    "intro": "小朋友們，你們知道每天按一下開關，燈就亮了，這背後藏著什麼秘密嗎？快跟著科學隊長和好奇博士，一起搭上想像力的飛船，來一場超級酷的電力大冒險，看看電力小精靈是怎麼從遙遠的發電廠，一路變身並搭上高速公路來到你家的喔！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/c325710285522101eee3.jpg"
   },
   {
    "code": "92",
@@ -3558,8 +4002,10 @@
     "duration": 508,
     "pubDate": "Wed, 19 Aug 2026 22:02:09 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/b1/b9/da/b1b9dad7-f1e4-ad9e-baa2-abe50c18c8e9/mza_15471858127947579276.jpg/600x600bb.jpg",
    "intro": "小朋友們，你們知道嗎？發電廠來的電力小精靈力量大得驚人，如果直接衝進你家，電器可是會嚇壞的！快跟著科學隊長和好奇博士，一起潛入電力小精靈的「秘密變裝基地」——變電所，看看他們是如何進行兩次大變身，最後變成溫柔的電力，安全地幫我們點亮電燈、看電視喔！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/e4b3c37840dd3ee266e7.jpg"
   },
   {
    "code": "93",
@@ -3574,8 +4020,10 @@
     "duration": 622,
     "pubDate": "Sun, 23 Aug 2026 22:02:10 GMT"
    },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/bb/b9/ad/bbb9ad0d-8cec-1e3c-f011-402324cc831f/mza_18129910356870142920.jpg/600x600bb.jpg",
    "intro": "小朋友們，你們知道嗎？世界上所有的東西都是由超級微小的「原子積木」拼成的喔！有些積木疊得不穩，竟然會「變身」放出能量！跟著科學隊長和好奇博士，一起進入原子能量屋，看看科學家如何用一顆小中子撞擊鈾原子，引發神奇的連鎖反應，最後竟然能點亮全城市的電燈！",
-   "labs": []
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/f079c4c6f05b7d2cd9e8.jpg"
   }
  ]
 }

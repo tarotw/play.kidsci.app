@@ -85,8 +85,21 @@ def firstory_pages(prev: dict) -> dict:
 
 
 # ---------- Apple ----------
+def artwork_url(value) -> str | None:
+    if isinstance(value, dict):
+        value = value.get("url")
+    if not isinstance(value, str) or not value.startswith("https://"):
+        return None
+    return value.replace("{w}", "600").replace("{h}", "600").replace("{f}", "jpg")
+
+
+def merge_apple_episode(previous: dict, latest: dict) -> dict:
+    # Lookup/search 不一定包含訂閱狀態與封面；缺欄位時保留已取得的資料。
+    return {**previous, **{k: v for k, v in latest.items() if v is not None and v != ""}}
+
+
 def apple_rows(results: list[dict]) -> list[dict]:
-    return [{"title": r.get("trackName", ""), "url": clean_url(r.get("trackViewUrl")), "guid": r.get("episodeGuid"), "date": r.get("releaseDate"), "ms": r.get("trackTimeMillis")}
+    return [{"title": r.get("trackName", ""), "url": clean_url(r.get("trackViewUrl")), "guid": r.get("episodeGuid"), "date": r.get("releaseDate"), "ms": r.get("trackTimeMillis"), "artwork": artwork_url(r.get("artworkUrl600") or r.get("artworkUrl160") or r.get("artworkUrl100"))}
             for r in results if (r.get("wrapperType") == "podcastEpisode" or r.get("kind") == "podcast-episode") and str(r.get("collectionId")) == APPLE_ID]
 
 
@@ -112,7 +125,7 @@ def apple_full() -> list[dict]:
                 desc = a.get("description")
                 desc = (desc.get("standard") or desc.get("short")) if isinstance(desc, dict) else desc
                 rows.append({"title": a.get("name", ""), "url": clean_url(a.get("url")), "guid": a.get("guid"), "date": a.get("releaseDateTime"), "ms": a.get("durationInMilliseconds"),
-                             "intro": intro_text(desc)})
+                             "intro": intro_text(desc), "artwork": artwork_url(a.get("artwork"))})
             if not d.get("next"):
                 break
             url = "https://amp-api.podcasts.apple.com" + d["next"] + "&l=zh-Hant-TW" + extra
@@ -147,7 +160,7 @@ def apple(prev: dict) -> dict:
     found = {e["url"]: e for e in (prev.get("episodes") or []) if e.get("url")}  # 以前找到的都留著（Apple 很少下架）
     before = len(found)
     for e in apple_rows(results):
-        found[e["url"]] = e
+        found[e["url"]] = merge_apple_episode(found.get(e["url"], {}), e)
     say(f"Apple：節目共 {show.get('trackCount')} 集；Lookup 拿到 {len(apple_rows(results))} 集")
     # 全部（含訂閱者專屬）：以網頁 API 為準，記下哪些是訂閱者專屬
     try:
@@ -156,13 +169,13 @@ def apple(prev: dict) -> dict:
             for e in found.values():
                 e["sub"] = False
             for e in full:
-                found[e["url"]] = {**found.get(e["url"], {}), **e}
+                found[e["url"]] = merge_apple_episode(found.get(e["url"], {}), e)
     except Exception as err:  # noqa: BLE001
         say(f"Apple 網頁 API 失敗（保留上次的）：{err}")
     # Lookup 只給還在 RSS 裡的集數；舊的用搜尋找：先搜節目名稱，再一集一集搜標題
     try:
         for e in apple_search("科學好好聽"):
-            found[e["url"]] = e
+            found[e["url"]] = merge_apple_episode(found.get(e["url"], {}), e)
     except Exception as err:  # noqa: BLE001
         say(f"Apple 搜尋失敗：{err}")
     searched = dict(prev.get("searched") or {})
@@ -172,7 +185,7 @@ def apple(prev: dict) -> dict:
         term = re.sub(r"[：:｜|，,。！!？?（）()「」『』〈〉\[\]]+", " ", title).strip()[:40]
         try:
             for e in apple_search(term):
-                found[e["url"]] = e
+                found[e["url"]] = merge_apple_episode(found.get(e["url"], {}), e)
             searched[code] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         except Exception as err:  # noqa: BLE001
             say(f"Apple 搜尋 {code} 失敗：{err}")

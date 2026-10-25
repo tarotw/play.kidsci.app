@@ -126,8 +126,11 @@ def intro_text(desc: str | None) -> str | None:
 def firstory_items(feed_xml: bytes) -> list[dict]:
     channel = ET.fromstring(feed_xml).find("channel")
     items = []
+    show_image = channel.find(ITUNES + "image")
+    show_artwork = show_image.get("href") if show_image is not None else None
     for it in channel.findall("item"):
         enclosure = it.find("enclosure")
+        image = it.find(ITUNES + "image")
         items.append({
             "guid": it.findtext("guid"),
             "title": it.findtext("title") or "",
@@ -136,6 +139,8 @@ def firstory_items(feed_xml: bytes) -> list[dict]:
             "audio": enclosure.get("url") if enclosure is not None else None,
             "duration": parse_duration(it.findtext(ITUNES + "duration")),
             "episodeType": it.findtext(ITUNES + "episodeType"),
+            "artwork": image.get("href") if image is not None else show_artwork,
+            "artworkIsEpisode": image is not None,
             "intro": intro_text(it.findtext("description")),
         })
     return items

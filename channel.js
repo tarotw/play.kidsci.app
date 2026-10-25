@@ -3,6 +3,7 @@ import { iconFor } from './explorer.js';
 import { speakLines, stopSpeaking, pauseSpeaking, resumeSpeaking, canSpeak } from './speech.js';
 
 import { shortIntro } from './episode-intro.js';
+import { episodeArtwork, episodeMeta } from './episode-profile.js';
 
 const LAB_ORIGIN = 'https://lab.kidsci.app';
 const LAB_STAMP_SECONDS = 60;
@@ -54,6 +55,7 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     const embedUrl = e.state === 'public' ? appleEmbed(listen.apple) : null;
     podcastUrl = embedUrl;
     podcastTitle = e.title;
+    podcastArtwork = episodeArtwork(e);
     const embed = embedUrl ? '<div class="embed" data-podcast-host></div>' : '';
     const cap = embedUrl ? '📱 到 App 收聽，按「追蹤」新的一集就會自己出現' : '🎧 收聽這一集';
     const platforms = pf ? `<div class="platforms" aria-label="收聽這一集"><span class="pf-cap">${cap}</span>${pf}</div>` : '';
@@ -76,10 +78,19 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
 
     $('#channel').innerHTML = `<div class="inner">
       <button class="close" type="button" data-close aria-label="關閉">✕</button>
-      <p class="hero" aria-hidden="true">${iconFor(e)}</p>
-      <h2 id="ch-title">${esc(e.title)}</h2>
-      <p class="hint">${esc(code)} 台 ${stateBadge(e)} ${stampMarks(code)}</p>
+      <header class="episode-profile">
+        <img class="episode-cover" src="${esc(episodeArtwork(e))}" alt="${esc(e.title)}的單集封面" width="120" height="120" decoding="async">
+        <div class="episode-profile-copy"><p class="episode-show">科學好好聽 · 單集預覽</p>
+          <h2 id="ch-title">${esc(e.title)}</h2>
+          <p class="episode-meta">${esc(episodeMeta(e))}</p>
+          <p class="hint">${iconFor(e)} ${esc(code)} 台 ${stateBadge(e)} ${stampMarks(code)}</p>
+        </div>
+      </header>
       ${intro}${embed}${platforms}${labs ? `<div class="actions">${labs}</div>` : ''}${takeaways}${card}${question}</div>`;
+    $('#channel .episode-cover').addEventListener('error', (event) => {
+      event.currentTarget.src = 'assets/logo-square.jpg';
+      event.currentTarget.alt = '科學好好聽節目封面';
+    }, { once: true });
     if (!$('#channel').open) $('#channel').showModal();
     mountPodcast(); // 故事卡保持安靜；介紹只由孩子點隊長圖像播放。
     const params = new URLSearchParams(location.search);
@@ -109,7 +120,7 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
   });
 
   // ---------- 隊長圖像播放器：手動播放／暫停／繼續，和 Podcast 互斥 ----------
-  let talk = '', currentCode = null, podcastUrl = null, podcastTitle = '';
+  let talk = '', currentCode = null, podcastUrl = null, podcastTitle = '', podcastArtwork = '';
   let introState = 'idle', introFinished = false, introRun = 0;
   function renderIntro() {
     const button = $('#channel [data-talk]'), status = $('#channel [data-intro-status]');
@@ -133,7 +144,7 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
   function unmountPodcast() {
     const host = $('#channel [data-podcast-host]');
     if (!host) return;
-    host.innerHTML = '<button type="button" class="podcast-return" data-podcast><span aria-hidden="true">▶</span><span>聽完整 Podcast<small>播放完整故事</small></span></button>';
+    host.innerHTML = `<button type="button" class="podcast-return" data-podcast><img class="podcast-return-cover" src="${esc(podcastArtwork)}" alt="" width="72" height="72"><span aria-hidden="true">▶</span><span>聽完整 Podcast<small>播放完整故事</small></span></button>`;
   }
   function playTalk() {
     unmountPodcast(); // 移除跨網域播放器，確實結束另一個聲音，不猜測它是否在播放。
