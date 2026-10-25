@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import base64
 import difflib
+import html
 import json
 import os
 import re
@@ -96,6 +97,27 @@ def parse_duration(value: str | None) -> int | None:
     return seconds
 
 
+PROMO = re.compile(r"留言告訴我|科學好好聽實驗室|直接操作|Hosting provided|Powered by|訂閱|加入 ?VIP|贊助|收聽連結")
+
+
+def intro_text(desc: str | None) -> str | None:
+    """單集說明 → 給孩子看的介紹：第一段（太短就再接下一段），拿掉連結、「==>」和宣傳句。"""
+    if not desc:
+        return None
+    s = re.sub(r"</p>|<br\s*/?>", "\n", desc.replace("\r", ""))
+    s = html.unescape(re.sub(r"<[^>]+>", "", s))
+    paras = [p.strip() for p in s.split("\n") if p.strip()]
+    out = ""
+    for i, p in enumerate(paras):
+        if i and (PROMO.search(p) or len(out) >= 40):  # 第一段一定留（就算裡面剛好有「訂閱」）
+            break
+        p = re.sub(r"=+\s*>.*$", "", p)
+        p = re.sub(r"https?://\S+", "", p).strip()
+        out = f"{out} {p}".strip()
+    out = re.sub(r"\s+", " ", out).strip(" 　-—:：")
+    return out if len(out) >= 12 else None
+
+
 def firstory_items(feed_xml: bytes) -> list[dict]:
     channel = ET.fromstring(feed_xml).find("channel")
     items = []
@@ -109,6 +131,7 @@ def firstory_items(feed_xml: bytes) -> list[dict]:
             "audio": enclosure.get("url") if enclosure is not None else None,
             "duration": parse_duration(it.findtext(ITUNES + "duration")),
             "episodeType": it.findtext(ITUNES + "episodeType"),
+            "intro": intro_text(it.findtext("description")),
         })
     return items
 

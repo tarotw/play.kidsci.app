@@ -129,7 +129,7 @@ function openPeople() {
     <p class="hero" aria-hidden="true">${def.emoji}</p>
     <h2 id="people-title">${esc(def.name)}的居民</h2>
     <p class="hint">${x.eps.length} 個故事住在這裡。</p>
-    <p class="legend"><span class="lg can">▶ 綠色：可以聽</span><span class="lg vip">👑 金色：VIP，請大人幫忙</span></p>
+    <p class="legend"><span class="lg can">▶ 綠色：可以聽</span><span class="lg vip">👑 金色：VIP 訂閱集數</span></p>
     <ul class="eps">${rows}</ul></div>`;
   $('#people').showModal();
 }
@@ -209,17 +209,15 @@ function placeLabels() {
 }
 // 量下面大按鈕、播放器、上方標題的高度，給 CSS 排隊長泡泡和按鈕的位置用（才不會互相蓋住）
 function measureHud() {
-  const st = document.body.style, bar = document.querySelector('.isle-bar'), player = document.getElementById('player');
+  const st = document.body.style, bar = document.querySelector('.isle-bar');
   const top = Math.max(...['.hud-top .brand', '#isle-meta', '#people-btn', '.hud-buttons'].map((sel) => document.querySelector(sel)?.getBoundingClientRect().bottom || 0));
   st.setProperty('--bar-h', `${bar.offsetHeight}px`);
-  st.setProperty('--player-h', `${player.hidden ? 0 : player.offsetHeight}px`);
   st.setProperty('--top-h', `${Math.round(top)}px`);
 }
-if ('ResizeObserver' in window) { const ro = new ResizeObserver(measureHud); ['.isle-bar', '#player', '.hud-top'].forEach((sel) => ro.observe(document.querySelector(sel))); }
+if ('ResizeObserver' in window) { const ro = new ResizeObserver(measureHud); ['.isle-bar', '.hud-top'].forEach((sel) => ro.observe(document.querySelector(sel))); }
 addEventListener('resize', measureHud);
-new MutationObserver(measureHud).observe(document.getElementById('player'), { attributes: true, attributeFilter: ['hidden'] });
 measureHud();
-const HUD_PARTS = ['.hud-top .brand', '#isle-name', '#isle-meta', '#people-btn', '.hud-buttons', '.isle-bar', '#guide', '#player'];
+const HUD_PARTS = ['.hud-top .brand', '#isle-name', '#isle-meta', '#people-btn', '.hud-buttons', '.isle-bar', '#guide'];
 const labelRange = document.createRange();
 
 function go(id) {
@@ -271,7 +269,7 @@ function bind() {
   });
   ['pointerdown', 'keydown', 'wheel'].forEach((t) => window.addEventListener(t, resetIdle, { passive: true }));
 }
-const LISTEN = { public: '▶ 可以在這裡聽', subscriber: '👑 VIP 故事：請大人幫忙收聽' };
+const LISTEN = { public: '▶ 免費收聽（Apple Podcasts、Spotify）', subscriber: '👑 VIP 訂閱集數' };
 function showTip(code, x, y) {
   const tip = $('#isle-tip');
   if (!code || document.querySelector('dialog[open]')) { tip.hidden = true; return; }
@@ -286,7 +284,7 @@ let idleTimer = null, idleNags = 0;
 function resetIdle() {
   clearTimeout(idleTimer);
   idleTimer = setTimeout(() => {
-    if (document.querySelector('dialog[open]') || guide.busy() || !$('#audio').paused || world.busy()) { resetIdle(); return; }
+    if (document.querySelector('dialog[open]') || guide.busy() || world.busy()) { resetIdle(); return; }
     idleNags += 1;
     const def = world.current();
     guide.say([def && isleById.get(def.id)?.eps.length

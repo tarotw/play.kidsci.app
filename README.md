@@ -77,3 +77,8 @@ GitHub Pages（Settings → Pages → Deploy from branch → `main` / root），
 ## SEO（搜尋引擎）
 
 宇宙群島是 3D 畫布，搜尋引擎看不到字，所以 `tools/build_seo.py` 依 `data/islands.json`、`data/catalog.json` 產生：`index.html` 裡的標題、描述、關鍵字、Open Graph／Twitter、JSON-LD（WebSite、PodcastSeries、島的清單、常見問題）和一份**文字版**（每個群島、每座島、每一集的標題，連結是 `?isle=`、`?ch=`；畫面上收起來，給搜尋引擎和螢幕閱讀器，關掉 JS 時會直接顯示），另外 `sitemap.xml`、`robots.txt`（心智圖、旋鈕、縮放那幾頁不收錄）。每次目錄更新後由 GitHub Actions（`status.yml`）自動重跑，集數會跟著變；手動跑：`python3 tools/build_seo.py`。
+
+## 頻道卡與收聽
+
+點小居民打開的卡片：上面是好奇博士和科學隊長的對話，內容是這一集的介紹（`catalog.json` 的 `intro`，來自 Firstory 單集說明，沒有的話用 Apple Podcasts 上的說明，所以 VIP 集數也有介紹；只留第一段，去掉連結和宣傳句，由 `status_check.py` 的 `intro_text` 整理）。介紹開頭是問句就給好奇博士問，其餘由隊長回答。
+收聽一律連到 **Apple Podcasts、Spotify**（按住 2 秒才打開，請大人幫忙；打開時蓋👂耳朵章），網站上不直接播放 RSS 的音檔，也不連 Firstory。VIP 集數一樣只放 Apple／Spotify 的單集連結。

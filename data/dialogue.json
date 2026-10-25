@@ -38,7 +38,7 @@
   "answers": {
     "subscriber": "這是訂閱者限定的頻道，要請大人幫忙按住按鈕才能收聽。旁邊的實驗一樣可以玩喔！",
     "unreleased": "這是還沒播出的神秘訊號，再等等，它很快就會亮起來！",
-    "fallback": "按下聽聽看，我們一起找答案！"
+    "fallback": "按住下面的按鈕，到 Apple Podcasts 或 Spotify 聽聽看，我們一起找答案！"
   },
   "stamps": {
     "ear": [{"who": "captain", "text": "你聽完一整集了！耳朵章蓋好了。"}, {"who": "curious", "text": "下一台要去哪裡？"}],

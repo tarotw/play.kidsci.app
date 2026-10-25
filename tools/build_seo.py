@@ -18,7 +18,6 @@ ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://play.kidsci.app/"
 APPLE = "https://podcasts.apple.com/tw/podcast/id1812447277"
 SPOTIFY = "https://open.spotify.com/show/1eyISRdcgDTwZqIqrP1qKv"
-FIRSTORY = "https://kidsci.firstory.cc"
 NAME = "科學好好聽"
 
 
@@ -64,10 +63,10 @@ def main() -> None:
 
     # ---- JSON-LD ----
     series = {
-        "@type": "PodcastSeries", "@id": SITE + "#podcast", "name": NAME, "url": FIRSTORY,
+        "@type": "PodcastSeries", "@id": SITE + "#podcast", "name": NAME, "url": APPLE,
         "description": "給孩子的科學 Podcast：用故事講恐龍、太空、動物、人體、物理和科技。",
         "inLanguage": "zh-TW", "genre": ["兒童", "科學", "教育"], "audience": {"@type": "PeopleAudience", "suggestedMinAge": 4, "suggestedMaxAge": 12},
-        "sameAs": [APPLE, SPOTIFY, FIRSTORY], "image": SITE + "assets/logo-banner.png",
+        "sameAs": [APPLE, SPOTIFY], "image": SITE + "assets/logo-banner.png",
     }
     ld = [
         {"@context": "https://schema.org", "@type": "WebSite", "@id": SITE + "#site", "url": SITE, "name": "宇宙好好聽・宇宙群島",
@@ -80,7 +79,7 @@ def main() -> None:
         {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": "科學好好聽是什麼？", "acceptedAnswer": {"@type": "Answer", "text": "科學好好聽是給孩子聽的科普 Podcast，用有趣的故事介紹恐龍、太空、動物、人體、物理和科技。"}},
             {"@type": "Question", "name": "宇宙群島怎麼玩？", "acceptedAnswer": {"@type": "Answer", "text": "每一集故事是一個住在浮空島上的小居民。拖曳轉動畫面、點小居民就能聽故事，也可以按「去別的島」坐火箭到其他島。"}},
-            {"@type": "Question", "name": "哪裡可以收聽科學好好聽？", "acceptedAnswer": {"@type": "Answer", "text": "在 Apple Podcasts、Spotify 和 Firstory 都可以收聽；網站上綠色 ▶ 的集數可以直接在這裡聽，金色皇冠的是 VIP 訂閱者專屬。"}},
+            {"@type": "Question", "name": "哪裡可以收聽科學好好聽？", "acceptedAnswer": {"@type": "Answer", "text": "在 Apple Podcasts 和 Spotify 都可以收聽。宇宙群島上點一下小居民就會看到介紹，按住按鈕就能到 Apple Podcasts 或 Spotify 收聽；綠色 ▶ 是免費集數，金色皇冠是 VIP 訂閱集數。"}},
             {"@type": "Question", "name": "適合幾歲的孩子？", "acceptedAnswer": {"@type": "Answer", "text": "適合 4 到 12 歲的孩子，大人陪著一起聽也很有趣。"}},
         ]},
     ]
@@ -111,8 +110,8 @@ def main() -> None:
     parts = [f'<!--seo-body:start-->\n<section class="text-version" id="text-version" aria-label="宇宙群島文字版">',
              f"<h2>{NAME}・宇宙群島：兒童科普 Podcast 互動地圖</h2>",
              f"<p>《{NAME}》是給孩子聽的科普 Podcast。宇宙群島把 {total} 集科學故事變成住在浮空島上的小居民："
-             f"拖曳轉動畫面、點一下小居民就能聽故事，其中 {free} 集可以直接在這裡聽，也可以到 "
-             f'<a href="{APPLE}">Apple Podcasts</a>、<a href="{SPOTIFY}">Spotify</a>、<a href="{FIRSTORY}">Firstory</a> 收聽。'
+             f"拖曳轉動畫面、點一下小居民就能看到這一集的介紹，再到 "
+             f'<a href="{APPLE}">Apple Podcasts</a> 或 <a href="{SPOTIFY}">Spotify</a> 收聽（其中 {free} 集免費）。'
              "適合 4 到 12 歲的孩子，親子一起學恐龍、太空、動物、人體、物理和科技。</p>"]
     for gid in [None] + list(groups):
         sel = [(i, x) for i, x in live if i.get("group") == gid] if gid else [(i, x) for i, x in live if not i.get("group")]
@@ -124,7 +123,8 @@ def main() -> None:
             parts.append(f'<h4><a href="?isle={esc(isl["id"])}">{esc(isl["emoji"] + " " + isl["name"])}</a>（{len(eps)} 集）</h4><p>{esc(isl["intro"])}</p><ul>')
             for e in eps:
                 vip = "（VIP）" if e["state"] == "subscriber" else ""
-                parts.append(f'<li><a href="?ch={esc(e["code"])}">{esc(clean(e["title"]))}</a>{vip}</li>')
+                intro = f"：{esc(e['intro'])}" if e.get("intro") else ""
+                parts.append(f'<li><a href="?ch={esc(e["code"])}">{esc(clean(e["title"]))}</a>{vip}{intro}</li>')
             parts.append("</ul>")
     parts.append("<h3>常見問題</h3><dl>")
     for q in ld[3]["mainEntity"]:

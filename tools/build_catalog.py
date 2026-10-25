@@ -17,7 +17,6 @@ from status_check import code_from_title, load_drive_titles, load_overrides  # n
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
-JOIN_URL = "https://kidsci.firstory.cc/join"
 
 
 def load(name: str):
@@ -160,24 +159,18 @@ def main() -> None:
         if not on_firstory:
             best = None  # 只有預告片：不拿預告片的音檔
 
-        listen = None
-        if best:
-            listen = {
-                "firstory": best["link"],
-                "audio": best["audio"] if state == "public" else None,  # 在網站上直接播（只有公開 RSS 裡的才有）
-                "apple": best["apple"]["url"] if best["apple"] else None,
-                "duration": best["duration"],
-                "pubDate": best["pubDate"],
-            }
-        if state == "subscriber":
-            listen = {**(listen or {}), "join": JOIN_URL}
-        # Apple Podcasts、Spotify：找得到就放連結，找不到就不顯示
-        apple_url = (listen or {}).get("apple") or platforms["apple"].get(code)
+        # 收聽：一律連到 Apple Podcasts、Spotify（網站上不直接播 RSS 的音檔，也不連 Firstory）
+        apple_url = (best["apple"]["url"] if best and best["apple"] else None) or platforms["apple"].get(code)
         spotify_url = platforms["spotify"].get(code)
         if apple_url:
             apple_url = re.sub(r"[?&]uo=\d+$", "", apple_url)
-        if apple_url or spotify_url or listen:
-            listen = {**(listen or {}), "apple": apple_url, "spotify": spotify_url}
+        listen = {"apple": apple_url, "spotify": spotify_url}
+        if best:
+            listen.update({"duration": best["duration"], "pubDate": best["pubDate"]})
+        # 這一集的介紹（卡片上的對話用）：Firstory 單集說明，沒有的話用 Apple 上的（VIP 集數也有）
+        intros = [r.get("intro") for r in sorted(records, key=lambda r: ("回顧" in r["title"], r.get("trailerOnly", False))) if not r.get("trailerOnly")]
+        intros += [ep.get("intro") for ep in sorted(on_apple, key=lambda ep: "回顧" in (ep.get("title") or ""))]
+        intro = next((t for t in intros if t), None)
 
         entry = {
             "code": code,
@@ -187,6 +180,7 @@ def main() -> None:
             "also": also,
             "state": state,
             "listen": listen,
+            "intro": intro,
             "labs": labs_by_code.get(code, []),
         }
         if auto:

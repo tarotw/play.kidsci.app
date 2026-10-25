@@ -20,6 +20,8 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
+from status_check import intro_text
+
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "platforms.json"
 APPLE_ID = "1812447277"
@@ -107,7 +109,10 @@ def apple_full() -> list[dict]:
             d = json.loads(get(url, headers))
             for e in d.get("data", []):
                 a = e.get("attributes", {})
-                rows.append({"title": a.get("name", ""), "url": clean_url(a.get("url")), "guid": a.get("guid"), "date": a.get("releaseDateTime"), "ms": a.get("durationInMilliseconds")})
+                d = a.get("description")
+                d = (d.get("standard") or d.get("short")) if isinstance(d, dict) else d
+                rows.append({"title": a.get("name", ""), "url": clean_url(a.get("url")), "guid": a.get("guid"), "date": a.get("releaseDateTime"), "ms": a.get("durationInMilliseconds"),
+                             "intro": intro_text(d)})
             if not d.get("next"):
                 break
             url = "https://amp-api.podcasts.apple.com" + d["next"] + "&l=zh-Hant-TW" + extra
