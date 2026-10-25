@@ -17,7 +17,7 @@
 - 每一格有任務（拜訪 3 台、找到金色頻道、聽完一集），完成拿 🏅 任務勳章。頭像是從 `assets/logo-square.jpg` 裁出來的 `assets/avatar-*.png`。
 - 10 格全部打開，方便檢查每一集放的位置；正式版把 `app.js` 的 `PREVIEW` 改成 `false`，只開 `data/world.json` 的 `mvp_levels`（生物、地球、太陽系）。
 - 每一格裡的「區」（海洋、雨林、火山…）由 `data/world.json` 的區域關鍵字自動分，`build_catalog.py` 寫進每一集的 `zone`；分錯的話改關鍵字或在 `placements.json` 加 `zone`。
-- 公開集數在頁面裡直接播放，重點句跟著播放時間亮起；訂閱者限定（`c`、`s` 開頭）連到 Firstory，按鈕要按住 2 秒（請大人幫忙）。
+- 收聽都連到 Apple Podcasts、Spotify（點一下就打開），網站上不直接播放。
 - 實驗以 iframe 全螢幕打開，開 60 秒或收到 `kidsci-bridge.js` 的通知就蓋小手章；聽到 80% 蓋耳朵章。星章存在瀏覽器（localStorage）。
 
 ## 資料
@@ -57,7 +57,7 @@ python3 tools/build_catalog.py
 
 `.github/workflows/status.yml` 每天台灣時間 07:43 讀 [listensci](https://github.com/tarotw/listensci) 更新好的 `soundon.xml` 與 `apple.json`，重跑上架狀態與目錄。Spotify 要在 repo 的 Settings → Secrets 加上 `SPOTIFY_CLIENT_ID`、`SPOTIFY_CLIENT_SECRET` 才會檢查（節目 ID 預設已填好）。
 
-每一集的 **Apple Podcasts、Spotify 連結**由 `tools/platform_links.py` 找（同一個每日工作，存在 `data/platforms.json`），頻道卡上每一集都會列出這兩個平台：有連結就按住打開，找不到就不顯示那個平台。最準的來源是每一集的 Firstory 單集頁：Firstory 自己把節目發佈到 Spotify 和 Apple，單集頁上就寫著那一集在兩個平台的網址（看過的頁面會記下來，還沒有連結的每週再看一次）。另外也用 iTunes Lookup／搜尋補 Apple，再用標題對到代碼（`build_catalog.py`）。只在 Firstory 會員區、不在公開 RSS 裡的訂閱集數，平台上找不到公開連結，就不顯示。如果之後想改用 Spotify 官方 API，把 `SPOTIFY_CLIENT_ID`、`SPOTIFY_CLIENT_SECRET` 加到 repo 的 Actions Secrets 就會自動使用（節目 ID `1eyISRdcgDTwZqIqrP1qKv` 已寫在程式裡）。
+每一集的 **Apple Podcasts、Spotify 連結**由 `tools/platform_links.py` 找（同一個每日工作，存在 `data/platforms.json`），頻道卡上每一集都會列出這兩個平台：有連結就點一下打開，找不到就不顯示那個平台。最準的來源是每一集的 Firstory 單集頁：Firstory 自己把節目發佈到 Spotify 和 Apple，單集頁上就寫著那一集在兩個平台的網址（看過的頁面會記下來，還沒有連結的每週再看一次）。另外也用 iTunes Lookup／搜尋補 Apple，再用標題對到代碼（`build_catalog.py`）。只在 Firstory 會員區、不在公開 RSS 裡的訂閱集數，平台上找不到公開連結，就不顯示。如果之後想改用 Spotify 官方 API，把 `SPOTIFY_CLIENT_ID`、`SPOTIFY_CLIENT_SECRET` 加到 repo 的 Actions Secrets 就會自動使用（節目 ID `1eyISRdcgDTwZqIqrP1qKv` 已寫在程式裡）。
 
 ## 本機預覽
 
@@ -81,4 +81,4 @@ GitHub Pages（Settings → Pages → Deploy from branch → `main` / root），
 ## 頻道卡與收聽
 
 點小居民打開的卡片：上面是好奇博士和科學隊長的對話，內容是這一集的介紹（`catalog.json` 的 `intro`，來自 Firstory 單集說明，沒有的話用 Apple Podcasts 上的說明，所以 VIP 集數也有介紹；只留第一段，去掉連結和宣傳句，由 `status_check.py` 的 `intro_text` 整理）。介紹開頭是問句就給好奇博士問，其餘由隊長回答。
-收聽一律連到 **Apple Podcasts、Spotify**（按住 2 秒才打開，請大人幫忙；打開時蓋👂耳朵章），網站上不直接播放 RSS 的音檔，也不連 Firstory。VIP 集數一樣只放 Apple／Spotify 的單集連結。
+收聽一律連到 **Apple Podcasts、Spotify**（點一下就在新分頁打開；點的時候蓋👂耳朵章），網站上不直接播放 RSS 的音檔，也不連 Firstory。VIP 集數一樣只放 Apple／Spotify 的單集連結。

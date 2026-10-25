@@ -41,8 +41,8 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     }
     if (mine !== openSeq) return;
     const listen = e.listen || {};
-    // 收聽：Apple Podcasts、Spotify（按住 2 秒打開，請大人幫忙）
-    const platform = (url, icon, name, cls) => (url ? holdLink(url, `${icon} ${name}`, `pf ${cls}`, code) : '');
+    // 收聽：Apple Podcasts、Spotify（點一下就在新分頁打開）
+    const platform = (url, icon, name, cls) => (url ? `<a class="btn pf ${cls}" href="${esc(url)}" target="_blank" rel="noopener" data-ear="${esc(code)}">${icon} ${esc(name)}</a>` : '');
     const pf = platform(listen.apple, '🍎', 'Apple Podcasts', 'apple') + platform(listen.spotify, '🟢', 'Spotify', 'spotify');
     const platforms = pf ? `<div class="platforms" aria-label="收聽這一集"><span class="pf-cap">🎧 收聽這一集</span>${pf}</div>` : '';
     const labs = e.labs.map((lab) => `<button class="btn alt" type="button" data-lab="${esc(lab.url)}" data-lab-title="${esc(lab.title)}" data-code="${esc(code)}">🧪 ${esc(lab.title)}</button>`).join('');
@@ -91,45 +91,6 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     return out;
   }
 
-  function holdLink(url, label, style, code = '') {
-    return `<button class="btn ${style} hold" type="button" data-hold="${esc(url)}"${code ? ` data-code="${esc(code)}"` : ''}><span class="fill"></span><span class="label">${esc(label)}（按住）</span></button>`;
-  }
-
-  // 「請大人幫忙」：按住 2 秒，放開的那一下才開外部連結。
-  // 放開是使用者的手勢，Safari 才不會把新分頁當成彈出視窗擋掉。
-  function bindHold(root) {
-    let held = null;
-    const label = (btn) => btn.querySelector('.label');
-    const stop = () => {
-      if (!held) return;
-      clearTimeout(held.timer);
-      held.btn.classList.remove('holding', 'ready');
-      label(held.btn).textContent = held.text;
-      held = null;
-    };
-    const start = (btn) => {
-      stop();
-      btn.classList.add('holding');
-      const h = { btn, ready: false, text: label(btn).textContent };
-      h.timer = setTimeout(() => { h.ready = true; btn.classList.add('ready'); label(btn).textContent = '放開就打開 ✓'; }, 2000);
-      held = h;
-    };
-    const finish = () => {
-      if (held?.ready) {
-        window.open(held.btn.dataset.hold, '_blank', 'noopener');
-        if (held.btn.dataset.code) addStamp('ear', held.btn.dataset.code); // 打開 Apple／Spotify 去聽：蓋耳朵章
-      }
-      stop();
-    };
-    root.addEventListener('pointerdown', (ev) => { const b = ev.target.closest('[data-hold]'); if (b) start(b); });
-    root.addEventListener('pointerup', finish);
-    root.addEventListener('pointercancel', stop);
-    root.addEventListener('pointerleave', (ev) => { if (held && ev.target === held.btn) stop(); }, true);
-    root.addEventListener('contextmenu', (ev) => { if (ev.target.closest('[data-hold]')) ev.preventDefault(); }); // 長按不要跳出選單
-    root.addEventListener('keydown', (ev) => { const b = ev.target.closest('[data-hold]'); if (b && (ev.key === 'Enter' || ev.key === ' ') && !ev.repeat) { ev.preventDefault(); start(b); } });
-    root.addEventListener('keyup', (ev) => { if (ev.target.closest('[data-hold]') && (ev.key === 'Enter' || ev.key === ' ')) finish(); });
-  }
-
   // ---------- 實驗 ----------
   function openLab(url, title, code) {
     $('#lab-title').textContent = title;
@@ -165,6 +126,8 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     const lab = t.closest('[data-lab]');
     if (lab) { openLab(lab.dataset.lab, lab.dataset.labTitle, lab.dataset.code); return; }
     if (t.closest('[data-close]')) { t.closest('dialog').close(); return; }
+    const ear = t.closest('[data-ear]'); // 點了 Apple／Spotify 去聽：蓋耳朵章（連結本身照常打開）
+    if (ear) addStamp('ear', ear.dataset.ear);
     const again = t.closest('[data-open-ch]'); // 航行日誌：點一台再打開它
     if (again) { $('#journal').close(); openChannel(again.dataset.openCh); return; }
     if (t.id === 'clear-stamps' && confirm('要清除全部的星章和紀錄嗎？清除後就找不回來了。')) { onClear(); $('#journal').close(); }
@@ -180,7 +143,6 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     // lab 頁面加上 kidsci-bridge.js 後，第一次有意義的操作會送 {type: 'kidsci-lab-done'}。
     if (ev.origin === LAB_ORIGIN && ev.data?.type === 'kidsci-lab-done' && $('#lab').open) addStamp('hand', $('#lab').dataset.code);
   });
-  bindHold(document);
 
   return { openChannel, openJournal, stampMarks };
 }
