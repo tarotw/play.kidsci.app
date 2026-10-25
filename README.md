@@ -82,3 +82,10 @@ GitHub Pages（Settings → Pages → Deploy from branch → `main` / root），
 
 點小居民打開的卡片：上面是好奇博士和科學隊長的對話，內容是這一集的介紹（`catalog.json` 的 `intro`，來自 Firstory 單集說明，沒有的話用 Apple Podcasts 上的說明，所以 VIP 集數也有介紹；只留第一段，去掉連結和宣傳句，由 `status_check.py` 的 `intro_text` 整理）。介紹開頭是問句就給好奇博士問，其餘由隊長回答。
 收聽一律連到 **Apple Podcasts、Spotify**（點一下就在新分頁打開；點的時候蓋👂耳朵章），網站上不直接播放 RSS 的音檔，也不連 Firstory。VIP 集數一樣只放 Apple／Spotify 的單集連結。
+
+## 對話語音
+
+科學隊長是女生、好奇博士是男生。所有對話都可以念出來（`speech.js`，用瀏覽器內建語音）：隊長挑中文女聲，博士挑中文男聲（例如 Edge 的 YunJhe、Windows 的 Zhiwei）；裝置上沒有中文男聲時，博士用同一個聲音、把音調壓低。
+- 卡片：上面的「🔊 聽他們說」從頭念到尾，點任何一句就從那一句開始念，正在念的那一句會亮起來。
+- 隊長對話框：按 🔈 打開「念給我聽」，之後每一句都會念，打開卡片時也會自動念卡片上的對話。
+- 裝置上完全沒有語音時，按鈕不會卡住（3 秒沒開始就停）。

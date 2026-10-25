@@ -1,4 +1,6 @@
 // 科學隊長與好奇博士的對話框：打字機效果、點一下繼續、可以帶按鈕，也可以用瀏覽器的語音念出來。
+import { speak as say, stopSpeaking, canSpeak } from './speech.js';
+
 const STORE_KEY = 'kidsci-universe-guide';
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -37,15 +39,7 @@ export function createGuide({ root, cast }) {
   }
 
   function speak(text, who) {
-    if (!prefs.voice || !('speechSynthesis' in window)) return;
-    speechSynthesis.cancel();
-    const u = new SpeechSynthesisUtterance(text.replace(/[\u{1F300}-\u{1FAFF}☀-➿]/gu, ''));
-    u.lang = 'zh-TW';
-    u.pitch = cast[who]?.pitch ?? 1;
-    u.rate = cast[who]?.rate ?? 1;
-    const voice = speechSynthesis.getVoices().find((v) => v.lang === 'zh-TW') || speechSynthesis.getVoices().find((v) => v.lang.startsWith('zh'));
-    if (voice) u.voice = voice;
-    speechSynthesis.speak(u);
+    if (prefs.voice) say(text, who);
   }
 
   function show(next) {
@@ -114,7 +108,7 @@ export function createGuide({ root, cast }) {
     clearInterval(timer);
     line = null;
     root.hidden = true;
-    if ('speechSynthesis' in window) speechSynthesis.cancel();
+    stopSpeaking();
   }
 
   root.addEventListener('click', (ev) => {
@@ -131,7 +125,7 @@ export function createGuide({ root, cast }) {
       prefs.voice = !prefs.voice;
       savePrefs();
       if (prefs.voice && line) speak(line.text, line.who);
-      else if ('speechSynthesis' in window) speechSynthesis.cancel();
+      else stopSpeaking();
       return;
     }
     advance();
@@ -139,9 +133,11 @@ export function createGuide({ root, cast }) {
   root.addEventListener('keydown', (ev) => {
     if ((ev.key === 'Enter' || ev.key === ' ') && ev.target === root) { ev.preventDefault(); advance(); }
   });
+  if (!canSpeak()) voiceBtn.hidden = true;
   savePrefs();
 
   return {
+    get voice() { return prefs.voice; },
     /** 排進一串台詞；urgent=true 會先清掉還沒說的台詞；同一個 topic 的新台詞會換掉舊的。 */
     say(lines, { urgent = false, then, topic } = {}) {
       if (!prefs.on || !lines?.length) { then?.(); return; }

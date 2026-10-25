@@ -1,8 +1,8 @@
 {
   "_comment": "科學隊長（女孩，負責解說）與好奇博士（男孩，負責發問）的台詞。{name}、{scale}、{big}、{small} 等會由程式代入。",
   "cast": {
-    "captain": {"name": "科學隊長", "avatar": "assets/avatar-captain.png", "pitch": 1.15, "rate": 1.0},
-    "curious": {"name": "好奇博士", "avatar": "assets/avatar-curious.png", "pitch": 1.45, "rate": 1.05}
+    "captain": {"name": "科學隊長", "avatar": "assets/avatar-captain.png", "voice": "female"},
+    "curious": {"name": "好奇博士", "avatar": "assets/avatar-curious.png", "voice": "male"}
   },
   "intro": [
     {"who": "captain", "text": "嗨！我是科學隊長，歡迎登上耳機號！"},

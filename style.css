@@ -601,3 +601,13 @@ body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px
 .isle-page #channel .platforms .pf { min-height: 48px; flex-basis: 140px; }
 .isle-page #channel .platforms .pf { white-space: nowrap; }
 @media (max-width: 380px) { .isle-page #channel .platforms .pf { font-size: 14px; padding: 0 12px; } }
+
+/* 卡片上的對話：可以點來聽，正在念的那一句會亮起來 */
+.duo .talk-play { justify-self: start; min-height: 40px; padding: 0 16px; border-radius: 999px; border: 2px solid var(--teal); background: #e8fbf6; color: var(--teal); font-weight: 800; }
+.duo .talk-play[aria-pressed="true"] { background: var(--teal); color: #fff; }
+.say[role="button"] { cursor: pointer; }
+.say[role="button"]:focus-visible p { outline: 2px solid var(--gold); outline-offset: 2px; }
+.say.speaking p { box-shadow: 0 0 0 3px #ffd25a; background: #fff8dc; }
+.say.speaking img { animation: talking 0.5s ease-in-out infinite alternate; }
+@keyframes talking { to { transform: translateY(-3px) rotate(-4deg); } }
+@media (prefers-reduced-motion: reduce) { .say.speaking img { animation: none; } }

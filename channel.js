@@ -1,5 +1,6 @@
 // 宇宙好好聽：頻道卡（介紹對話＋到 Apple Podcasts、Spotify 收聽）、實驗、航行日誌。萬物旋鈕版（app.js）與放大縮小版（zoom.js）共用。
 import { iconFor } from './explorer.js';
+import { speakLines, stopSpeaking, canSpeak } from './speech.js';
 
 const LAB_ORIGIN = 'https://lab.kidsci.app';
 const LAB_STAMP_SECONDS = 60;
@@ -18,7 +19,7 @@ export function stateBadge(e) {
  * byCode：代碼 → 集數；lines：dialogue.json；getStamps()：目前的星章；
  * addStamp(kind, code)：蓋章（seen／ear／hand）；onOpen(code)：打開頻道卡時；onClear()：清除航行日誌。
  */
-export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = () => {}, onClear = () => {} }) {
+export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = () => {}, onClear = () => {}, autoVoice = () => false }) {
   let labTimer = null;
 
   const stampMarks = (code) => {
@@ -53,8 +54,11 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
       ? `<div class="card"><h3>🃏 ${esc(content.card.name)}</h3><p>${esc(content.card.description)}</p><ul>${content.card.knowledge.map((k) => `<li>${esc(k)}</li>`).join('')}</ul></div>` : '';
     const question = content?.question
       ? `<div class="question"><strong>好奇博士問你：</strong>${esc(content.question.text)}</div>` : '';
-    const say = (who, text) => `<div class="say ${who}"><img src="${lines.cast[who].avatar}" alt="${lines.cast[who].name}"><p>${esc(text)}</p></div>`;
-    const duo = `<div class="duo">${introTalk(e, content).map(([who, text]) => say(who, text)).join('')}</div>`;
+    talk = introTalk(e, content);
+    // 每一句都可以點來聽（隊長是女生的聲音、博士是男生的聲音），上面的按鈕從頭念到尾
+    const say = ([who, text], i) => `<div class="say ${who}" data-say="${i}"${canSpeak() ? ' role="button" tabindex="0" aria-label="念這一句"' : ''}><img src="${lines.cast[who].avatar}" alt="${lines.cast[who].name}"><p>${esc(text)}</p></div>`;
+    const playAll = canSpeak() ? '<button type="button" class="talk-play" data-talk aria-pressed="false">🔊 聽他們說</button>' : '';
+    const duo = `<div class="duo">${playAll}${talk.map(say).join('')}</div>`;
 
     $('#channel').innerHTML = `<div class="inner">
       <button class="close" type="button" data-close aria-label="關閉">✕</button>
@@ -63,9 +67,30 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
       <p class="hint">${esc(code)} 台 ${stateBadge(e)} ${stampMarks(code)}</p>
       ${duo}${platforms}${labs ? `<div class="actions">${labs}</div>` : ''}${takeaways}${card}${question}</div>`;
     if (!$('#channel').open) $('#channel').showModal();
+    if (autoVoice()) playTalk(0); // 打開了「念給我聽」：卡片的對話也直接念
     const params = new URLSearchParams(location.search);
     params.set('ch', code);
     history.replaceState(null, '', `?${params}`);
+  }
+
+  // ---------- 念卡片上的對話 ----------
+  let talk = [];
+  function playTalk(from = 0) {
+    const bubbles = [...document.querySelectorAll('#channel .say')];
+    const btn = document.querySelector('#channel [data-talk]');
+    const mark = (i) => bubbles.forEach((b, j) => b.classList.toggle('speaking', j === i));
+    btn?.setAttribute('aria-pressed', 'true');
+    if (btn) btn.textContent = '⏹ 停';
+    speakLines(talk.slice(from).map(([who, text]) => ({ who, text })), {
+      onLine: (i) => mark(from + i),
+      onDone: () => { mark(-1); if (btn) { btn.setAttribute('aria-pressed', 'false'); btn.textContent = '🔊 聽他們說'; } },
+    });
+  }
+  function stopTalk() {
+    stopSpeaking();
+    document.querySelectorAll('#channel .say.speaking').forEach((b) => b.classList.remove('speaking'));
+    const btn = document.querySelector('#channel [data-talk]');
+    if (btn) { btn.setAttribute('aria-pressed', 'false'); btn.textContent = '🔊 聽他們說'; }
   }
 
   // 介紹變成兩個人的對話：介紹開頭是問句就給好奇博士問，其餘由科學隊長回答（太長就分兩段）
@@ -126,13 +151,19 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     const lab = t.closest('[data-lab]');
     if (lab) { openLab(lab.dataset.lab, lab.dataset.labTitle, lab.dataset.code); return; }
     if (t.closest('[data-close]')) { t.closest('dialog').close(); return; }
+    const talkBtn = t.closest('[data-talk]');
+    if (talkBtn) { if (talkBtn.getAttribute('aria-pressed') === 'true') stopTalk(); else playTalk(0); return; }
+    const bubble = t.closest('#channel [data-say]');
+    if (bubble && canSpeak()) { playTalk(Number(bubble.dataset.say)); return; }
     const ear = t.closest('[data-ear]'); // 點了 Apple／Spotify 去聽：蓋耳朵章（連結本身照常打開）
     if (ear) addStamp('ear', ear.dataset.ear);
     const again = t.closest('[data-open-ch]'); // 航行日誌：點一台再打開它
     if (again) { $('#journal').close(); openChannel(again.dataset.openCh); return; }
     if (t.id === 'clear-stamps' && confirm('要清除全部的星章和紀錄嗎？清除後就找不回來了。')) { onClear(); $('#journal').close(); }
   });
+  $('#channel').addEventListener('keydown', (ev) => { const b = ev.target.closest?.('[data-say]'); if (b && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); playTalk(Number(b.dataset.say)); } });
   $('#channel').addEventListener('close', () => {
+    stopTalk();
     const params = new URLSearchParams(location.search);
     params.delete('ch');
     history.replaceState(null, '', params.toString() ? `?${params}` : location.pathname);

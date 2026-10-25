@@ -316,6 +316,7 @@ async function init() {
     byCode, lines, getStamps: () => stamps, addStamp,
     onOpen: () => { idleNags = 0; $('#isle-tip').hidden = true; },
     onClear: () => { stamps = { ear: [], hand: [], seen: [], missions: [], guess: 0 }; saveStamps(); world.refreshMarks(); renderHud(); },
+    autoVoice: () => guide.voice,
   });
   if (!webglOk()) {
     $('#loading-text').innerHTML = '這台裝置沒辦法顯示 3D 的宇宙群島。<br><a class="btn" href="knob.html?gl=0">改用平面的萬物地圖</a>';
