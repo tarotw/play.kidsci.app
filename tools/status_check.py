@@ -111,6 +111,7 @@ def intro_text(desc: str | None) -> str | None:
     for p in paras:
         p = re.sub(r"=+\s*>.*$", "", p)
         p = re.sub(r"https?://\S+", "", p)
+        p = re.split(r"留言告訴我|到『科學好好聽實驗室』|Hosting provided", p)[0]  # 同一段後面接著的宣傳句
         # VIP 集數在 Apple 上的說明開頭是宣傳句（「👉 加入 VIP 專屬星球，一個月免費收聽～」）
         p = re.sub(r"^[👉\s]*加入\s*VIP[^～~！!。]*[～~！!。]", "", p).strip(" 　-—:：")
         if not p:
