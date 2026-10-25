@@ -593,3 +593,11 @@ body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px
 
 /* 文字版（給搜尋引擎和螢幕閱讀器）：畫面上收起來，內容和島上的一致 */
 .text-version { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+
+/* 宇宙群島的卡片：收聽按鈕黏在卡片下緣，介紹比較長、螢幕比較小時也不用捲就按得到 */
+.isle-page #channel .inner { overflow: visible; }
+.isle-page #channel .platforms { position: sticky; bottom: 0; z-index: 2; margin: 8px -20px 0; padding: 10px 20px calc(12px + env(safe-area-inset-bottom));
+  background: linear-gradient(rgba(255, 255, 255, 0.86), #fff 30%); }
+.isle-page #channel .platforms .pf { min-height: 48px; flex-basis: 140px; }
+.isle-page #channel .platforms .pf { white-space: nowrap; }
+@media (max-width: 380px) { .isle-page #channel .platforms .pf { font-size: 14px; padding: 0 12px; } }

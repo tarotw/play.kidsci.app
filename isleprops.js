@@ -1438,7 +1438,7 @@ function caveArtTexture() {
     [202, 208, 216, 222].forEach((x) => { g.beginPath(); g.moveTo(x, 98); g.lineTo(x, 112); g.stroke(); });
     // 小人
     g.beginPath(); g.arc(200, 34, 5, 0, TAU); g.moveTo(200, 39); g.lineTo(200, 54); g.moveTo(192, 46); g.lineTo(212, 40); g.moveTo(200, 54); g.lineTo(194, 64); g.moveTo(200, 54); g.lineTo(206, 64); g.stroke();
-    const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.generateMipmaps = false; t.minFilter = THREE.LinearFilter; return t;
+    return c;
   });
 }
 function puffTexture() {

@@ -80,7 +80,7 @@ function renderHud() {
   const x = isleById.get(def.id);
   const seen = x.eps.filter((e) => stamps.seen.includes(e.code)).length;
   $('#isle-name').textContent = `${def.emoji} ${def.name}`;
-  // 島名下面：這座島的居民（按了打開名單），一眼看出幾個可以聽、幾個要請大人幫忙、幾個還在準備
+  // 島名下面：這座島的居民（按了打開名單），一眼看出幾個免費、幾個 VIP
   const ct = (st) => x.eps.filter((e) => e.state === st).length;
   $('#people-count').textContent = `${x.eps.length} 位居民`;
   $('#people-legend').innerHTML = [[ct('public'), 'can', '▶ 可以聽'], [ct('subscriber'), 'vip', '👑 VIP']]
