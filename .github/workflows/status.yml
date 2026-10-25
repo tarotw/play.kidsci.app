@@ -43,13 +43,18 @@ jobs:
         run: python3 tools/platform_links.py
       - name: 重建 catalog.json
         run: python3 tools/build_catalog.py
+      - name: 補上新故事的科學隊長女聲音檔
+        continue-on-error: true
+        run: |
+          python3 -m pip install edge-tts==7.3.1
+          python3 tools/build_speech_audio.py
       - name: 更新 SEO 文字版、sitemap
         run: python3 tools/build_seo.py
       - name: 有變動就提交
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/status.json data/catalog.json data/platforms.json STATUS.md index.html sitemap.xml robots.txt
+          git add data/status.json data/catalog.json data/platforms.json STATUS.md index.html sitemap.xml robots.txt assets/speech
           git diff --cached --quiet && exit 0
           git commit -m "更新上架狀態與目錄"
           # 跑的時候別人也推了東西：先接上最新的再推（這裡只改資料檔，不會衝突），最多試三次

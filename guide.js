@@ -36,6 +36,12 @@ export function createGuide({ root, cast }) {
   const $ = (sel) => root.querySelector(sel);
   const voiceBtn = $('.guide-voice');
   root.setAttribute('aria-label', '科學隊長');
+  document.addEventListener('kidsci-speech-unavailable', () => {
+    if (!root.hidden) {
+      voiceBtn.title = '語音暫時無法播放，點一下重試';
+      voiceBtn.dataset.retry = 'true';
+    }
+  });
 
   function savePrefs() {
     try { localStorage.setItem(STORE_KEY, JSON.stringify(prefs)); } catch { /* 停用儲存時照樣能用 */ }
@@ -52,7 +58,7 @@ export function createGuide({ root, cast }) {
     // 還不能出聲（還沒點過畫面）：喇叭一閃一閃，提示點一下就會念
     root.classList.toggle('waiting', canSpeak() && !unlocked());
     say(text, {
-      onLine: () => { heard = true; root.classList.remove('waiting'); },
+      onLine: () => { heard = true; root.classList.remove('waiting'); delete voiceBtn.dataset.retry; voiceBtn.removeAttribute('title'); },
       onDone: (finished) => {
         root.classList.remove('waiting');
         if (!finished) heard = true; // 念不出來（裝置沒有語音）：點一下照常往下一句
@@ -142,6 +148,7 @@ export function createGuide({ root, cast }) {
     }
     if (ev.target.closest('.guide-close')) { queue = []; onEmpty = null; hide(); return; }
     if (ev.target.closest('.guide-voice')) {
+      if (voiceBtn.dataset.retry && prefs.voice && line) { delete voiceBtn.dataset.retry; speak(line.text); return; }
       prefs.voice = !prefs.voice;
       prefs.voiceChosen = true;
       savePrefs();

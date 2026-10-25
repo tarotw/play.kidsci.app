@@ -22,7 +22,8 @@ test('rejects Cantonese tags, names and URI labels, even with an ambiguous Chine
 test('recognizes female Taiwan voices across Apple, Windows, Edge and Google', () => {
   for (const captain of [voice('Mei-Jia', 'zh-Hant'), voice('美嘉', 'zh-TW'),
     voice('Microsoft Hanhan Desktop', 'zh_TW'), voice('Microsoft HsiaoYu', 'zh-TW'),
-    voice('Google 國語（臺灣）', 'cmn-Hant-TW')]) {
+    voice('Google 國語（臺灣）', 'cmn-Hant-TW'),
+    voice('Chinese Taiwan', 'zh-TW', 'cmn-tw-x-ctc-local'), voice('Flo', 'zh-TW')]) {
     assert.equal(pickCaptainVoice([voice('Google 普通话', 'zh-CN'), captain]), captain);
   }
 });
