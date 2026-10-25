@@ -1,6 +1,8 @@
 // 宇宙好好聽：頻道卡（介紹對話＋到 Apple Podcasts、Spotify 收聽）、實驗、航行日誌。萬物旋鈕版（app.js）與放大縮小版（zoom.js）共用。
 import { iconFor } from './explorer.js';
-import { speakLines, stopSpeaking, canSpeak, replayedBy } from './speech.js';
+import { speakLines, stopSpeaking, pauseSpeaking, resumeSpeaking, canSpeak } from './speech.js';
+
+import { shortIntro } from './episode-intro.js';
 
 const LAB_ORIGIN = 'https://lab.kidsci.app';
 const LAB_STAMP_SECONDS = 60;
@@ -19,7 +21,7 @@ export function stateBadge(e) {
  * byCode：代碼 → 集數；lines：dialogue.json；getStamps()：目前的星章；
  * addStamp(kind, code)：蓋章（seen／ear／hand）；onOpen(code)：打開頻道卡時；onClear()：清除航行日誌。
  */
-export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = () => {}, onClear = () => {}, autoVoice = () => false }) {
+export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = () => {}, onClear = () => {} }) {
   let labTimer = null;
 
   const stampMarks = (code) => {
@@ -34,6 +36,9 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     const e = byCode.get(code);
     if (!e) return;
     const mine = ++openSeq;
+    stopTalk();
+    $('#channel .embed iframe')?.remove();
+    document.dispatchEvent(new CustomEvent('kidsci-story-open'));
     onOpen(code);
     addStamp('seen', code);
     let content = null;
@@ -47,9 +52,9 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     const pf = platform(listen.apple, '🍎', 'Apple Podcasts', 'apple') + platform(listen.spotify, '🟢', 'Spotify', 'spotify');
     // 免費的集數：卡片裡直接放 Apple Podcasts 的播放器（音檔從 Firstory 播，算進 Firstory 的下載數）
     const embedUrl = e.state === 'public' ? appleEmbed(listen.apple) : null;
-    const embed = embedUrl ? `<div class="embed"><iframe title="用 Apple Podcasts 收聽：${esc(e.title)}" src="${esc(embedUrl)}" height="175" loading="lazy"
-      allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-      sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"></iframe></div>` : '';
+    podcastUrl = embedUrl;
+    podcastTitle = e.title;
+    const embed = embedUrl ? '<div class="embed" data-podcast-host></div>' : '';
     const cap = embedUrl ? '📱 到 App 收聽，按「追蹤」新的一集就會自己出現' : '🎧 收聽這一集';
     const platforms = pf ? `<div class="platforms" aria-label="收聽這一集"><span class="pf-cap">${cap}</span>${pf}</div>` : '';
     const labs = e.labs.map((lab) => `<button class="btn alt" type="button" data-lab="${esc(lab.url)}" data-lab-title="${esc(lab.title)}" data-code="${esc(code)}">🧪 ${esc(lab.title)}</button>`).join('');
@@ -60,22 +65,23 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
       ? `<div class="card"><h3>🃏 ${esc(content.card.name)}</h3><p>${esc(content.card.description)}</p><ul>${content.card.knowledge.map((k) => `<li>${esc(k)}</li>`).join('')}</ul></div>` : '';
     const question = content?.question
       ? `<div class="question"><strong>科學隊長問你：</strong>${esc(content.question.text)}</div>` : '';
-    talk = introTalk(e, content);
-    talkTitle = e.title;
+    talk = shortIntro(e, content);
     currentCode = code;
-    // 每一句都由科學隊長的同一個女聲朗讀，上面的按鈕從頭念到尾
-    const say = ([who, text], i) => `<div class="say ${who}" data-say="${i}"${canSpeak() ? ' role="button" tabindex="0" aria-label="念這一句"' : ''}><img src="${lines.cast[who].avatar}" alt="${lines.cast[who].name}"><p>${esc(text)}</p></div>`;
-    const playAll = canSpeak() ? '<button type="button" class="talk-play" data-talk aria-pressed="false">🔊 聽隊長說</button>' : '';
-    const duo = `<div class="duo">${playAll}${talk.map(say).join('')}</div>`;
+    const captain = lines.cast.captain;
+    const avatar = canSpeak() ? `<button type="button" class="captain-play" data-talk aria-label="播放科學隊長介紹" aria-pressed="false">
+      <img src="${esc(captain.avatar)}" alt=""><span class="captain-play-icon" aria-hidden="true">▶</span></button>`
+      : `<img class="captain-still" src="${esc(captain.avatar)}" alt="科學隊長">`;
+    const intro = `<div class="captain-intro">${avatar}<div><p class="captain-intro-label">科學隊長的小介紹</p><p class="captain-intro-text">${esc(talk)}</p>
+      <p class="captain-intro-status" data-intro-status role="status">點隊長圖像，聽她說故事</p></div></div>`;
 
     $('#channel').innerHTML = `<div class="inner">
       <button class="close" type="button" data-close aria-label="關閉">✕</button>
       <p class="hero" aria-hidden="true">${iconFor(e)}</p>
       <h2 id="ch-title">${esc(e.title)}</h2>
       <p class="hint">${esc(code)} 台 ${stateBadge(e)} ${stampMarks(code)}</p>
-      ${embed}${duo}${platforms}${labs ? `<div class="actions">${labs}</div>` : ''}${takeaways}${card}${question}</div>`;
+      ${intro}${embed}${platforms}${labs ? `<div class="actions">${labs}</div>` : ''}${takeaways}${card}${question}</div>`;
     if (!$('#channel').open) $('#channel').showModal();
-    if (autoVoice()) playTalk(0); // 打開了「念給我聽」：卡片的對話也直接念
+    mountPodcast(); // 故事卡保持安靜；介紹只由孩子點隊長圖像播放。
     const params = new URLSearchParams(location.search);
     params.set('ch', code);
     history.replaceState(null, '', `?${params}`);
@@ -102,45 +108,58 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     }, 0);
   });
 
-  // ---------- 念卡片上的對話 ----------
-  let talk = [], talkTitle = '', currentCode = null;
-  function playTalk(from = 0) {
-    const bubbles = [...document.querySelectorAll('#channel .say')];
-    const btn = document.querySelector('#channel [data-talk]');
-    const mark = (i) => bubbles.forEach((b, j) => b.classList.toggle('speaking', j === i));
-    // 從頭念的時候，隊長先念這一集的名字（還不認得字的小朋友也知道是哪一集）
-    const title = from === 0 ? [{ text: `這一集是：${talkTitle}` }] : [];
-    speakLines([...title, ...talk.slice(from).map(([, text]) => ({ text }))], {
-      // 按鈕在真的開始念的時候才變成「停」（還不能出聲、在等第一次點畫面時，它還是「聽隊長說」）
-      onLine: (i) => { mark(from + i - title.length); btn?.setAttribute('aria-pressed', 'true'); if (btn) btn.textContent = '⏹ 停'; },
-      onDone: () => { mark(-1); if (btn) { btn.setAttribute('aria-pressed', 'false'); btn.textContent = '🔊 聽隊長說'; } },
+  // ---------- 隊長圖像播放器：手動播放／暫停／繼續，和 Podcast 互斥 ----------
+  let talk = '', currentCode = null, podcastUrl = null, podcastTitle = '';
+  let introState = 'idle', introFinished = false, introRun = 0;
+  function renderIntro() {
+    const button = $('#channel [data-talk]'), status = $('#channel [data-intro-status]');
+    if (!button) return;
+    const playing = introState === 'playing';
+    button.dataset.state = introState;
+    button.disabled = introState === 'loading';
+    button.setAttribute('aria-pressed', String(playing));
+    button.setAttribute('aria-label', playing ? '暫停科學隊長介紹' : introState === 'paused' ? '繼續科學隊長介紹' : '播放科學隊長介紹');
+    button.querySelector('.captain-play-icon').textContent = playing ? 'Ⅱ' : introState === 'loading' ? '…' : '▶';
+    if (status) status.textContent = playing ? '隊長介紹中・點圖像暫停' : introState === 'paused' ? '已暫停・點圖像繼續'
+      : introState === 'loading' ? '準備播放…' : introFinished ? '介紹完了・再點一次重聽' : '點隊長圖像，聽她說故事';
+  }
+  function mountPodcast() {
+    const host = $('#channel [data-podcast-host]');
+    if (!host || !podcastUrl || host.querySelector('iframe')) return;
+    host.innerHTML = `<iframe title="用 Apple Podcasts 收聽：${esc(podcastTitle)}" src="${esc(podcastUrl)}" height="175" loading="lazy"
+      allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+      sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"></iframe>`;
+  }
+  function unmountPodcast() {
+    const host = $('#channel [data-podcast-host]');
+    if (!host) return;
+    host.innerHTML = '<button type="button" class="podcast-return" data-podcast><span aria-hidden="true">▶</span><span>聽完整 Podcast<small>播放完整故事</small></span></button>';
+  }
+  function playTalk() {
+    unmountPodcast(); // 移除跨網域播放器，確實結束另一個聲音，不猜測它是否在播放。
+    const mine = ++introRun;
+    introFinished = false;
+    speakLines([{ text: talk }], {
+      onState: (state) => { if (mine === introRun) { introState = state; renderIntro(); } },
+      onDone: (finished) => { if (mine === introRun) { introState = 'idle'; introFinished = finished; renderIntro(); } },
     });
   }
   function stopTalk() {
+    introRun++;
     stopSpeaking();
-    document.querySelectorAll('#channel .say.speaking').forEach((b) => b.classList.remove('speaking'));
-    const btn = document.querySelector('#channel [data-talk]');
-    if (btn) { btn.setAttribute('aria-pressed', 'false'); btn.textContent = '🔊 聽隊長說'; }
+    introState = 'idle'; introFinished = false;
+    renderIntro();
   }
-
-  // 科學隊長直接介紹故事；長文分段，保留逐句點選朗讀。
-  function introTalk(e, content) {
-    const intro = (e.intro || '').replace(/^小朋友[，,]\s*/, '');
-    if (!intro.trim()) {
-      const reply = content?.takeaways?.[0]?.text || content?.card?.description
-        || (e.labs[0] ? `這一集有實驗「${e.labs[0].title}」可以玩：${e.labs[0].question}` : lines.answers.fallback);
-      return [['captain', reply]];
-    }
-    const sents = intro.match(/[^。！？!?]+[。！？!?]*[」』）)]*/g)?.map((x) => x.trim()).filter(Boolean) || [intro];
-    if (intro.length > 90 && sents.length > 2) {
-      const half = Math.ceil(sents.length / 2);
-      return [['captain', sents.slice(0, half).join('')], ['captain', sents.slice(half).join('')]];
-    }
-    return [['captain', intro]];
+  function toggleTalk() {
+    if (introState === 'playing') pauseSpeaking();
+    else if (introState === 'paused') resumeSpeaking();
+    else playTalk();
   }
 
   // ---------- 實驗 ----------
   function openLab(url, title, code) {
+    stopTalk();
+    unmountPodcast();
     $('#lab-title').textContent = title;
     $('#lab-frame').src = url;
     $('#lab').dataset.code = code;
@@ -174,21 +193,15 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     const lab = t.closest('[data-lab]');
     if (lab) { openLab(lab.dataset.lab, lab.dataset.labTitle, lab.dataset.code); return; }
     if (t.closest('[data-close]')) { t.closest('dialog').close(); return; }
+    if (t.closest('[data-podcast]')) { stopTalk(); mountPodcast(); return; }
     const talkBtn = t.closest('[data-talk]');
-    if (talkBtn) {
-      if (replayedBy(ev)) return; // 這一下點擊剛好把等著的念出來了
-      if (talkBtn.getAttribute('aria-pressed') === 'true') stopTalk(); else playTalk(0);
-      return;
-    }
-    const bubble = t.closest('#channel [data-say]');
-    if (bubble && canSpeak()) { playTalk(Number(bubble.dataset.say)); return; }
+    if (talkBtn) { toggleTalk(); return; }
     const ear = t.closest('[data-ear]'); // 點了 Apple／Spotify 去聽：蓋耳朵章（連結本身照常打開）
-    if (ear) addStamp('ear', ear.dataset.ear);
+    if (ear) { stopTalk(); unmountPodcast(); addStamp('ear', ear.dataset.ear); }
     const again = t.closest('[data-open-ch]'); // 航行日誌：點一台再打開它
     if (again) { $('#journal').close(); openChannel(again.dataset.openCh); return; }
     if (t.id === 'clear-stamps' && confirm('要清除全部的星章和紀錄嗎？清除後就找不回來了。')) { onClear(); $('#journal').close(); }
   });
-  $('#channel').addEventListener('keydown', (ev) => { const b = ev.target.closest?.('[data-say]'); if (b && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); playTalk(Number(b.dataset.say)); } });
   $('#channel').addEventListener('close', () => {
     stopTalk();
     $('#channel .embed')?.remove(); // 關掉卡片：播放器一起拿掉，聲音才會停

@@ -316,7 +316,6 @@ async function init() {
     byCode, lines, getStamps: () => stamps, addStamp,
     onOpen: () => { idleNags = 0; $('#isle-tip').hidden = true; },
     onClear: () => { stamps = { ear: [], hand: [], seen: [], missions: [], guess: 0 }; saveStamps(); world.refreshMarks(); renderHud(); },
-    autoVoice: () => guide.voice,
   });
   if (!webglOk()) {
     $('#loading-text').innerHTML = '這台裝置沒辦法顯示 3D 的宇宙群島。<br><a class="btn" href="knob.html?gl=0">改用平面的萬物地圖</a>';
@@ -359,8 +358,7 @@ async function init() {
   else if (firstVisit) setTimeout(() => {
     const def = world.current() || isleById.get(want).def;
     guide.say([
-      def.id === startId ? { who: 'captain', text: def.intro } : { who: 'captain', text: `歡迎來到宇宙群島！這裡是${def.name}。${def.intro}` },
-      { who: 'captain', text: '島上走來走去的小居民，每一個都是一集故事！點一下，就能認識他、聽他說故事。想去別的島，就坐火箭！', actions: [{ label: '🚀 去別的島', run: openStation }, { label: '好！', run: () => {} }] },
+      { who: 'captain', text: '我是科學隊長！點島上的小居民聽故事，或搭火箭去別的島探險。', actions: [{ label: '🚀 去別的島', run: openStation }, { label: '好！', run: () => {} }] },
     ], { topic: 'isle' });
   }, 900);
   resetIdle();

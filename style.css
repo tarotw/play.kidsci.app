@@ -622,3 +622,32 @@ body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px
 .embed iframe { display: block; width: 100%; height: 175px; border: 0; }
 /* 有播放器的卡片：播放器才是主角，下面的 App 按鈕跟著捲動就好（不要黏在下緣蓋住播放器） */
 .isle-page #channel .embed ~ .platforms { position: static; background: none; margin: 4px 0 8px; padding: 0; }
+
+/* 隊長圖像就是播放控制；文字不再是假按鈕，預設保持安靜。 */
+.captain-play { position: relative; display: inline-grid; place-items: center; width: 88px; height: 88px; flex: none;
+  border: 3px solid #fff3d8; border-radius: 50%; padding: 0; background: #ffdfb7; box-shadow: 0 3px 0 #d8995c, 0 6px 16px #734a2724; cursor: pointer; }
+.captain-play img, .captain-still { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+.captain-play-icon { position: absolute; right: -5px; bottom: -3px; display: grid; place-items: center;
+  width: 36px; height: 36px; padding-left: 2px; border: 3px solid #fffdf5; border-radius: 50%;
+  background: linear-gradient(#5bd6b7, #159c78); color: #fff; font-size: 20px; line-height: 1; box-shadow: 0 2px 6px #12523c30; }
+.captain-play[aria-pressed="true"] .captain-play-icon { padding-left: 0; background: linear-gradient(#f0ba63, #cf8b27); }
+.captain-play:focus-visible { outline: 3px solid var(--teal); outline-offset: 5px; }
+.captain-play:disabled { cursor: progress; }
+.captain-intro { display: grid; grid-template-columns: 88px 1fr; gap: 16px; align-items: center; margin: 16px 0 20px; padding: 16px;
+  border: 1px solid #e7cdaa; border-radius: 20px; background: #fff8eb; color: #3d4359; }
+.captain-intro-label { margin: 0 0 5px; color: #a56826; font-size: 13px; font-weight: 800; }
+.captain-intro-text { margin: 0; font-size: 16px; line-height: 1.7; }
+.captain-intro-status { margin: 7px 0 0; font-size: 12px; color: #627268; }
+.guide .guide-avatar-play { width: 72px; height: 72px; }
+.guide .guide-avatar { width: 100%; height: 100%; border: 0; }
+.guide .captain-play-icon { width: 31px; height: 31px; font-size: 17px; }
+.podcast-return { width: 100%; min-height: 142px; display: flex; gap: 16px; align-items: center; justify-content: center;
+  border: 1px solid #d7c8ef; border-radius: 12px; background: #f5efff; color: #693bad; font-size: 18px; font-weight: 800; cursor: pointer; }
+.podcast-return > span:first-child { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: #8852cd; color: white; font-size: 24px; }
+.podcast-return small { display: block; margin-top: 6px; font-size: 12px; font-weight: 400; }
+@media (max-width: 440px) {
+  .captain-intro { grid-template-columns: 76px 1fr; padding: 14px 12px; gap: 13px; }
+  .captain-intro .captain-play { width: 76px; height: 76px; }
+  .captain-intro-text { font-size: 15px; }
+  .guide .guide-avatar-play { width: 56px; height: 56px; }
+}

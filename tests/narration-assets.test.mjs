@@ -8,7 +8,7 @@ const manifest = JSON.parse(readFileSync(new URL('manifest.json', root), 'utf8')
 test('bundled narration uses one Taiwan Mandarin female voice', () => {
   assert.equal(manifest.voice, 'zh-TW-HsiaoChenNeural');
   assert.equal(manifest.lang, 'zh-TW');
-  assert.ok(Object.keys(manifest.clips).length >= 600);
+  assert.ok(Object.keys(manifest.clips).length >= 190);
 });
 
 test('every narration entry resolves to a nonempty MP3 file', () => {

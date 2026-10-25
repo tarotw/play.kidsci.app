@@ -1,16 +1,13 @@
 // 科學隊長的導覽對話框：打字機效果、點一下繼續、可以帶按鈕，也可以用瀏覽器的語音念出來。
-import { speak as say, stopSpeaking, canSpeak, unlocked } from './speech.js';
+import { speak as say, stopSpeaking, pauseSpeaking, resumeSpeaking, canSpeak } from './speech.js';
 
 const STORE_KEY = 'kidsci-universe-guide';
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// 預設會念出來（小朋友可能還不認得字）；按 🔊 關掉之後才記住「不要念」
+// 介紹一律由孩子點圖像播放；只保留是否顯示導覽的偏好。
 function loadPrefs() {
-  try {
-    const saved = JSON.parse(localStorage.getItem(STORE_KEY)) || {};
-    if (!saved.voiceChosen) delete saved.voice; // 以前存的「不念」是舊的預設值，不是小朋友自己選的
-    return { on: true, voice: true, ...saved };
-  } catch { return { on: true, voice: true }; }
+  try { return { on: true, ...JSON.parse(localStorage.getItem(STORE_KEY) || '{}'), voice: false }; }
+  catch { return { on: true, voice: false }; }
 }
 
 export function createGuide({ root, cast }) {
@@ -22,66 +19,56 @@ export function createGuide({ root, cast }) {
   let onEmpty = null;
 
   root.innerHTML = `
-    <img class="guide-avatar" alt="">
+    <button type="button" class="captain-play guide-avatar-play" aria-label="播放科學隊長介紹" aria-pressed="false">
+      <img class="guide-avatar" alt=""><span class="captain-play-icon" aria-hidden="true">▶</span>
+    </button>
     <div class="guide-body">
       <p class="guide-name"></p>
       <p class="guide-text"></p>
       <div class="guide-actions"></div>
     </div>
     <div class="guide-tools">
-      <button type="button" class="guide-voice" aria-pressed="false" aria-label="念給我聽">🔈</button>
       <button type="button" class="guide-close" aria-label="先不要說話">✕</button>
     </div>
     <span class="guide-next" aria-hidden="true">點一下繼續 ▸</span>`;
   const $ = (sel) => root.querySelector(sel);
-  const voiceBtn = $('.guide-voice');
+  const voiceBtn = $('.guide-avatar-play');
   root.setAttribute('aria-label', '科學隊長');
-  document.addEventListener('kidsci-speech-unavailable', () => {
-    if (!root.hidden) {
-      voiceBtn.title = '語音暫時無法播放，點一下重試';
-      voiceBtn.dataset.retry = 'true';
-    }
-  });
-
-  function savePrefs() {
-    try { localStorage.setItem(STORE_KEY, JSON.stringify(prefs)); } catch { /* 停用儲存時照樣能用 */ }
-    voiceBtn.setAttribute('aria-pressed', String(prefs.voice));
-    voiceBtn.textContent = prefs.voice ? '🔊' : '🔈';
+  let voiceState = 'idle';
+  function renderVoice(state) {
+    voiceState = state;
+    const playing = state === 'playing';
+    voiceBtn.disabled = state === 'loading';
+    voiceBtn.setAttribute('aria-pressed', String(playing));
+    voiceBtn.setAttribute('aria-label', playing ? '暫停科學隊長介紹' : state === 'paused' ? '繼續科學隊長介紹' : '播放科學隊長介紹');
+    voiceBtn.querySelector('.captain-play-icon').textContent = playing ? 'Ⅱ' : state === 'loading' ? '…' : '▶';
   }
-
-  // 念完一句（沒有按鈕要選）就自己往下一句，不用認字、不用一直點
-  let heard = false;
+  function savePrefs() {
+    try { localStorage.setItem(STORE_KEY, JSON.stringify({ on: prefs.on, voice: false })); } catch { /* 停用儲存時照樣能用 */ }
+  }
   function speak(text) {
-    heard = false;
-    if (!prefs.voice) return;
     const current = line;
-    // 還不能出聲（還沒點過畫面）：喇叭一閃一閃，提示點一下就會念
-    root.classList.toggle('waiting', canSpeak() && !unlocked());
     say(text, {
-      onLine: () => { heard = true; root.classList.remove('waiting'); delete voiceBtn.dataset.retry; voiceBtn.removeAttribute('title'); },
-      onDone: (finished) => {
-        root.classList.remove('waiting');
-        if (!finished) heard = true; // 念不出來（裝置沒有語音）：點一下照常往下一句
-        if (!finished || line !== current || root.hidden || current.actions?.length) return;
-        setTimeout(() => { if (line === current && !root.hidden) { if (!root.classList.contains('typed')) finishTyping(); nextLine(); } }, 900);
-      },
+      onState: (state) => { if (line === current && !root.hidden) renderVoice(state); },
+      onDone: () => { if (line === current && !root.hidden) { renderVoice('idle'); finishTyping(); } },
     });
   }
 
   function show(next) {
+    stopSpeaking();
+    renderVoice('idle');
     line = { ...next, who: 'captain' };
     typed = 0;
     const who = cast[line.who] || cast.captain;
     root.hidden = false;
     root.dataset.who = line.who;
     $('.guide-avatar').src = who.avatar;
-    $('.guide-avatar').alt = who.name;
+    $('.guide-avatar').alt = '';
     $('.guide-name').textContent = who.name;
     $('.guide-actions').innerHTML = '';
     root.classList.remove('typed');
     root.classList.add('bounce');
     setTimeout(() => root.classList.remove('bounce'), 400);
-    speak(line.text);
     clearInterval(timer);
     if (reduceMotion) { finishTyping(); return; }
     timer = setInterval(() => {
@@ -107,22 +94,15 @@ export function createGuide({ root, cast }) {
     nextLine();
   }
 
-  // 頻道卡、實驗、航行日誌開著時，背後的畫面按不到：台詞先排隊，等它關掉再說
-  let waiting = false;
+  // 打開播放器／視窗就清掉導覽，不在背景排隊，也不在關閉後突然續播。
   function openDialog() { return document.querySelector('dialog[open]'); }
-  function waitForDialog() {
-    if (waiting) return;
-    waiting = true;
-    const check = () => {
-      if (openDialog()) { setTimeout(check, 250); return; }
-      waiting = false;
-      if (!line && queue.length) nextLine();
-    };
-    setTimeout(check, 250);
-  }
+  function dismiss() { queue = []; onEmpty = null; if (line || !root.hidden) hide(); }
+  document.addEventListener('kidsci-story-open', dismiss);
+  new MutationObserver(() => { if (openDialog()) dismiss(); })
+    .observe(document.body, { subtree: true, attributes: true, attributeFilter: ['open'] });
 
   function nextLine() {
-    if (queue.length && openDialog()) { hide(); waitForDialog(); return; }
+    if (openDialog()) { dismiss(); return; }
     if (queue.length) { show(queue.shift()); return; }
     hide();
     const done = onEmpty;
@@ -147,17 +127,13 @@ export function createGuide({ root, cast }) {
       return;
     }
     if (ev.target.closest('.guide-close')) { queue = []; onEmpty = null; hide(); return; }
-    if (ev.target.closest('.guide-voice')) {
-      if (voiceBtn.dataset.retry && prefs.voice && line) { delete voiceBtn.dataset.retry; speak(line.text); return; }
-      prefs.voice = !prefs.voice;
-      prefs.voiceChosen = true;
-      savePrefs();
-      if (prefs.voice && line) speak(line.text);
-      else stopSpeaking();
+    if (ev.target.closest('.guide-avatar-play')) {
+      if (!line) return;
+      if (voiceState === 'playing') pauseSpeaking();
+      else if (voiceState === 'paused') resumeSpeaking();
+      else speak(line.text);
       return;
     }
-    // 還沒聽到這一句（網頁剛打開、還不能出聲）：第一次點是「念給我聽」，不是跳到下一句
-    if (prefs.voice && canSpeak() && line && !heard) { speak(line.text); return; }
     advance();
   });
   root.addEventListener('keydown', (ev) => {
@@ -167,9 +143,9 @@ export function createGuide({ root, cast }) {
   savePrefs();
 
   return {
-    get voice() { return prefs.voice; },
     /** 排進一串台詞；urgent=true 會先清掉還沒說的台詞；同一個 topic 的新台詞會換掉舊的。 */
     say(lines, { urgent = false, then, topic } = {}) {
+      if (openDialog()) return;
       if (!prefs.on || !lines?.length) { then?.(); return; }
       if (urgent) queue = [];
       if (topic) {

@@ -8,6 +8,7 @@ import os
 from pathlib import Path
 import re
 import ssl
+import subprocess
 
 ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT / 'assets' / 'speech'
@@ -49,25 +50,11 @@ def collect_texts():
         intro = island.get('intro', '')
         add(intro)
         add(f"歡迎來到宇宙群島！這裡是{island['name']}。{intro}")
-    episodes = json.loads((ROOT / 'data/catalog.json').read_text())['episodes']
-    for episode in episodes:
-        add(f"這一集是：{episode['title']}")
-        intro = re.sub(r'^小朋友[，,]\s*', '', episode.get('intro', ''))
-        sents = [s.strip() for s in re.findall(r'[^。！？!?]+[。！？!?]*[」』）)]*', intro) if s.strip()]
-        if len(intro) > 90 and len(sents) > 2:
-            half = (len(sents) + 1) // 2
-            add(''.join(sents[:half]))
-            add(''.join(sents[half:]))
-        elif intro.strip():
-            add(intro)
-        elif episode.get('content'):
-            content_path = ROOT / episode['content']
-            if content_path.exists():
-                content = json.loads(content_path.read_text())
-                takeaways = content.get('takeaways', [])
-                add(takeaways[0]['text'] if takeaways else content.get('card', {}).get('description', dialogue['answers']['fallback']))
-        else:
-            add(dialogue['answers']['fallback'])
+    # 和故事卡共用同一份摘要程式，避免畫面縮短後找不到對應語音。
+    episode_texts = subprocess.run(['node', str(ROOT / 'tools/collect_episode_narration.mjs')],
+                                  check=True, capture_output=True, text=True).stdout
+    for text in json.loads(episode_texts):
+        add(text)
     return sorted(texts)
 
 
