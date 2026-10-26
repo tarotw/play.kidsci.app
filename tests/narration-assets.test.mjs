@@ -24,5 +24,9 @@ test('every island has an introduction with bundled captain audio', () => {
   for (const island of islands) {
     assert.ok(island.intro?.trim(), `${island.id}: missing introduction`);
     assert.ok(manifest.clips[island.intro], `${island.id}: missing captain audio`);
+    for (const page of island.tour || []) {
+      assert.ok(page.title?.trim(), `${island.id}: missing page title`);
+      assert.ok(manifest.clips[page.text], `${island.id}: missing tutorial audio`);
+    }
   }
 });

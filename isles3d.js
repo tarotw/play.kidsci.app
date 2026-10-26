@@ -189,7 +189,7 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
   const sound = new Sound();
 
   const islandCloud = new THREE.SpriteMaterial({ map: cloudTexture(), color: 0xffffff, transparent: true, opacity: 0.85, depthWrite: false });
-  // ----- 擺島：錄音室島在中間，其他島圍成兩圈；太空的島比較高 -----
+  // ----- 擺島：母島「好好聽島」在中間，其他島圍成兩圈；太空的島比較高 -----
   const isles = islands.map(({ def, eps }) => {
     const R = def.id === startId ? 17 : Math.max(11, Math.min(23, 10 + Math.sqrt(eps.length) * 2.3));
     return { def, eps, R };
@@ -465,8 +465,8 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
     const flat = path.p3.clone().sub(path.p0).setY(0);
     flight = { from: here, to, t: 0, pre: reduceMotion ? 0.2 : 0.9, dur: reduceMotion ? 1.2 : 3.2 + path.p0.distanceTo(path.p3) / 160, path, heading: flat.lengthSq() > 1e-6 ? flat.normalize() : new THREE.Vector3(0, 0, 1) };
     mode = 'flight';
-    sound.wake(); sound.tune();
     onLaunch(to.def);
+    sound.wake(); sound.launch(flight.pre + flight.dur);
     return true;
   }
   function stepFlight(dt, t) {
@@ -508,7 +508,7 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
     if (u >= 1) {
       here = f.to; flight = null; mode = 'island';
       animateTo(islandView(here), 1.0);
-      sound.chime();
+      sound.stopLaunch(); sound.chime();
       onArrive(here.def);
     }
   }

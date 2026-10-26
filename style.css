@@ -640,6 +640,25 @@ body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px
 .captain-intro-status { margin: 7px 0 0; font-size: 12px; color: #627268; }
 .guide .guide-avatar-play { width: 72px; height: 72px; }
 .guide .guide-avatar { width: 100%; height: 100%; border: 0; }
+.guide.paged { cursor: default; padding-bottom: 12px; }
+.guide.paged .guide-body { display: contents; }
+.guide.paged .guide-avatar-play { grid-column: 1; grid-row: 1 / 3; }
+.guide.paged .guide-name { grid-column: 2; grid-row: 1; }
+.guide.paged .guide-page-title { grid-column: 2; grid-row: 2; margin: 0; }
+.guide.paged .guide-text { grid-column: 1 / -1; grid-row: 3; }
+.guide.paged .guide-tools { grid-column: 3; grid-row: 1 / 3; }
+.guide.paged .guide-pagination { grid-row: 4; }
+.guide-page-title { margin: 4px 0 6px; font-size: 19px; line-height: 1.45; color: var(--text); }
+.guide.paged .guide-text { min-height: 0; }
+.guide.paged .guide-actions:empty { display: none; }
+.guide.paged .guide-next { display: none; }
+.guide-pagination { grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 4px; }
+.guide-pagination[hidden] { display: none; }
+.guide-pagination button { min-height: 44px; border: 0; border-radius: 999px; padding: 6px 14px; background: #e8f6f1; color: #1a705e; font-weight: 800; }
+.guide-pagination button:last-child { background: #e8783c; color: #fff; }
+.guide-pagination button:disabled { opacity: 0.35; cursor: default; }
+.guide-pagination [data-guide-page] { color: var(--muted); font-size: 13px; white-space: nowrap; }
+body.isle-page .guide.paged { width: min(520px, calc(100vw - 32px)); }
 .guide .captain-play-icon { width: 31px; height: 31px; font-size: 17px; }
 .podcast-return { width: 100%; min-height: 142px; display: flex; gap: 16px; align-items: center; justify-content: center;
   border: 1px solid #d7c8ef; border-radius: 12px; background: #f5efff; color: #693bad; font-size: 18px; font-weight: 800; cursor: pointer; }

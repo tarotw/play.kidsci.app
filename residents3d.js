@@ -243,7 +243,7 @@ export function makeResidents(scene, list, atlas, { reduceMotion = false } = {})
       m.instanceColor.needsUpdate = true;
     });
   }
-  // 初始化時也處理完全沒有居民的錄音室島。
+  // 初始化時也處理完全沒有居民的母島「好好聽島」。
   Object.values(parts).forEach((m) => { m.count = 0; });
   return { mesh, parts, body, feet, headA, headB, slots, playSlots, setVisible, iPos, iA, iB, iC, uniforms };
 }

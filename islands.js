@@ -88,7 +88,7 @@ function renderHud() {
   $('#people-btn').setAttribute('aria-label', `看${def.name}的 ${x.eps.length} 位居民`);
   $('#people-btn').hidden = !x.eps.length;
   $('#isle-meta').hidden = !!x.eps.length;
-  if (!x.eps.length) $('#isle-meta').textContent = '出發點：坐火箭去拜訪住在各個島上的故事居民吧！';
+  if (!x.eps.length) $('#isle-meta').textContent = '宇宙群島的母島 · 點科學隊長圖像聽玩法說明';
   $('#map-ico').textContent = '🗺️'; $('#map-txt').textContent = '全部的島';
   $('#map-btn').setAttribute('aria-label', '看全部的島');
   const p = new URLSearchParams(location.search);
@@ -102,14 +102,14 @@ function openStation() {
     <button class="close" type="button" data-close aria-label="關閉">✕</button>
     <h2 id="station-title">🚀 火箭站</h2>
     <p class="hint">想去哪一座島？點一下，火箭就出發！</p>
-    ${[{ id: '', name: '出發點', emoji: '🎙️' }, ...groupDefs].map((g) => {
+    ${[{ id: '', name: '母島', emoji: '🏝️' }, ...groupDefs].map((g) => {
       const list = isles.filter(({ def }) => (def.group || '') === g.id);
       if (!list.length) return '';
       return `<h3 class="isle-group">${g.emoji} ${esc(g.name)}</h3><ul class="isle-grid">${list.map(({ def, eps }) => {
         const seen = eps.filter((e) => stamps.seen.includes(e.code)).length;
         return `<li><button type="button" class="isle-pick${def.id === here ? ' here' : ''}" data-go="${def.id}" ${def.id === here ? 'aria-current="true"' : ''}>
           <span class="em">${def.emoji}</span><span class="nm">${esc(def.name)}</span>
-          <span class="ct">${eps.length ? `${eps.length} 位居民${seen ? ` · 👋 ${seen}` : ''}` : '出發點'}</span>${def.id === here ? '<span class="you">你在這裡</span>' : visited.has(def.id) ? '<span class="been">✓</span>' : ''}</button></li>`;
+          <span class="ct">${eps.length ? `${eps.length} 位居民${seen ? ` · 👋 ${seen}` : ''}` : '母島・玩法說明'}</span>${def.id === here ? '<span class="you">你在這裡</span>' : visited.has(def.id) ? '<span class="been">✓</span>' : ''}</button></li>`;
       }).join('')}</ul>`;
     }).join('')}</div>`;
   $('#station').showModal();
@@ -228,6 +228,7 @@ function go(id) {
 // 每次進島都顯示該島介紹；到訪紀錄只用來標記地圖，不限制介紹次數。
 function introduceIsland(def) {
   guide.on = true;
+  if (def.tour?.length) { guide.showPages(def.tour, { onDone: openStation }); return; }
   guide.say([{ who: 'captain', text: def.intro }], { urgent: true, topic: 'isle' });
 }
 
@@ -235,12 +236,14 @@ function introduceIsland(def) {
 function openGuideMenu() {
   if (!guide.on) guide.on = true;
   const def = world.current();
+  if (def?.id === startId) { introduceIsland(def); return; }
   const x = def && isleById.get(def.id);
   const fresh = x?.eps.find((e) => !stamps.seen.includes(e.code));
   const next = isles.find(({ def: d }) => !visited.has(d.id));
   guide.say([{ who: 'captain', text: '需要幫忙嗎？', actions: [
     ...(fresh ? [{ label: `👋 介紹一個居民給我`, run: () => meet(fresh.code) }] : []),
     { label: '🚀 去別的島', run: openStation },
+    { label: '🏝️ 回好好聽島', run: () => go(startId) },
     ...(next ? [{ label: `🏝️ 帶我去${next.def.name}`, run: () => go(next.def.id) }] : []),
     { label: '🤫 先不要說話', run: () => { guide.on = false; } },
   ] }], { urgent: true });

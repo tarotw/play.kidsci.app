@@ -85,10 +85,54 @@ export const LANE_COLORS = ['#ff8a5c', '#ffd25c', '#ff5c8a', '#7cf2ff', '#b48cff
 
 // ---------- 音效（Web Audio，第一次點擊後才啟動） ----------
 export class Sound {
-  constructor() { this.ctx = null; this.on = true; }
+  constructor() { this.ctx = null; this._on = true; this.launchSound = null; }
+  get on() { return this._on; }
+  set on(value) { this._on = Boolean(value); if (!this._on) this.stopLaunch(); }
   wake() {
-    if (this.ctx) return;
-    try { this.ctx = new (window.AudioContext || window.webkitAudioContext)(); } catch { this.ctx = null; }
+    if (!this.ctx) {
+      try { this.ctx = new (window.AudioContext || window.webkitAudioContext)(); } catch { this.ctx = null; }
+    }
+    // Android Chrome 回到網頁後可能暫停音效 context；在使用者的點擊內恢復。
+    if (this.ctx?.state === 'suspended') this.ctx.resume().catch(() => {});
+  }
+  stopLaunch() {
+    const live = this.launchSound;
+    this.launchSound = null;
+    if (!live) return;
+    live.noise.onended = null;
+    for (const source of [live.noise, live.rumble]) { try { source.stop(); } catch { /* 已播放完 */ } }
+    live.nodes.forEach((node) => node.disconnect());
+  }
+  /** 柔和的引擎轟鳴逐漸升成噴射氣流，接著淡出；不再用短促的提示音代替發射。 */
+  launch(duration = 3) {
+    this.stopLaunch();
+    if (!this.on || !this.ctx) return;
+    const ctx = this.ctx, t = ctx.currentTime, dur = Math.max(1, Math.min(4.5, duration));
+    const buffer = ctx.createBuffer(1, Math.ceil(ctx.sampleRate * dur), ctx.sampleRate);
+    const samples = buffer.getChannelData(0);
+    for (let i = 0; i < samples.length; i++) samples[i] = Math.random() * 2 - 1;
+    const noise = ctx.createBufferSource(), filter = ctx.createBiquadFilter();
+    const rumble = ctx.createOscillator(), low = ctx.createGain(), volume = ctx.createGain();
+    noise.buffer = buffer;
+    filter.type = 'lowpass'; filter.Q.value = 0.7;
+    filter.frequency.setValueAtTime(180, t);
+    filter.frequency.exponentialRampToValueAtTime(1500, t + dur * 0.45);
+    filter.frequency.exponentialRampToValueAtTime(350, t + dur);
+    rumble.type = 'triangle';
+    rumble.frequency.setValueAtTime(55, t);
+    rumble.frequency.exponentialRampToValueAtTime(120, t + dur * 0.6);
+    low.gain.value = 0.22;
+    volume.gain.setValueAtTime(0.0001, t);
+    volume.gain.exponentialRampToValueAtTime(0.26, t + Math.min(0.35, dur * 0.2));
+    volume.gain.exponentialRampToValueAtTime(0.16, t + dur * 0.65);
+    volume.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    noise.connect(filter).connect(volume);
+    rumble.connect(low).connect(volume);
+    volume.connect(ctx.destination);
+    this.launchSound = { noise, rumble, nodes: [noise, filter, rumble, low, volume] };
+    noise.onended = () => { if (this.launchSound?.noise === noise) this.stopLaunch(); };
+    noise.start(t); noise.stop(t + dur);
+    rumble.start(t); rumble.stop(t + dur);
   }
   tone(freq, dur, type = 'sine', gain = 0.06, slide = 0) {
     if (!this.on || !this.ctx) return;

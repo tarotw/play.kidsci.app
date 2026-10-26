@@ -17,6 +17,7 @@ export function createGuide({ root, cast }) {
   let typed = 0;
   let timer = null;
   let onEmpty = null;
+  let pages = null, pageIndex = 0, pageDone = null;
 
   root.innerHTML = `
     <button type="button" class="captain-play guide-avatar-play" aria-label="播放科學隊長介紹" aria-pressed="false">
@@ -24,12 +25,18 @@ export function createGuide({ root, cast }) {
     </button>
     <div class="guide-body">
       <p class="guide-name"></p>
+      <h2 class="guide-page-title" hidden></h2>
       <p class="guide-text"></p>
       <div class="guide-actions"></div>
     </div>
     <div class="guide-tools">
-      <button type="button" class="guide-close" aria-label="先不要說話">✕</button>
+      <button type="button" class="guide-close" aria-label="關閉科學隊長介紹">✕</button>
     </div>
+    <nav class="guide-pagination" aria-label="玩法說明分頁" hidden>
+      <button type="button" data-guide-prev aria-label="上一頁玩法說明">← 上一頁</button>
+      <span data-guide-page aria-live="polite"></span>
+      <button type="button" data-guide-next>下一頁 ➜</button>
+    </nav>
     <span class="guide-next" aria-hidden="true">點一下繼續 ▸</span>`;
   const $ = (sel) => root.querySelector(sel);
   const voiceBtn = $('.guide-avatar-play');
@@ -65,12 +72,25 @@ export function createGuide({ root, cast }) {
     $('.guide-avatar').src = who.avatar;
     $('.guide-avatar').alt = '';
     $('.guide-name').textContent = who.name;
+    $('.guide-page-title').hidden = !line.title;
+    $('.guide-page-title').textContent = line.title || '';
+    $('.guide-close').setAttribute('aria-label', pages ? '關閉玩法說明' : '關閉科學隊長介紹');
+    root.classList.toggle('paged', Boolean(pages));
+    $('.guide-pagination').hidden = !pages;
+    if (pages) {
+      root.dataset.page = pageIndex + 1;
+      $('[data-guide-prev]').disabled = pageIndex === 0;
+      $('[data-guide-page]').textContent = `${pageIndex + 1} / ${pages.length}`;
+      $('[data-guide-page]').setAttribute('aria-label', `第 ${pageIndex + 1} 頁，共 ${pages.length} 頁`);
+      $('[data-guide-next]').textContent = pageIndex === pages.length - 1 ? '🚀 出發探險' : '下一頁 ➜';
+      $('[data-guide-next]').setAttribute('aria-label', pageIndex === pages.length - 1 ? '看完玩法，選一座島出發' : '下一頁玩法說明');
+    }
     $('.guide-actions').innerHTML = '';
     root.classList.remove('typed');
     root.classList.add('bounce');
     setTimeout(() => root.classList.remove('bounce'), 400);
     clearInterval(timer);
-    if (reduceMotion) { finishTyping(); return; }
+    if (reduceMotion || pages) { finishTyping(); return; }
     timer = setInterval(() => {
       typed += 1;
       $('.guide-text').textContent = [...line.text].slice(0, typed).join('');
@@ -89,6 +109,7 @@ export function createGuide({ root, cast }) {
 
   function advance() {
     if (!line) return;
+    if (pages) return; // 分頁只由明確的上一頁／下一頁按鈕切換，點文字不會跳頁。
     if (!root.classList.contains('typed')) { finishTyping(); return; }
     if (line.actions?.length) return; // 有按鈕的台詞要選一個才會繼續
     nextLine();
@@ -114,10 +135,30 @@ export function createGuide({ root, cast }) {
     clearInterval(timer);
     line = null;
     root.hidden = true;
+    pages = null; pageDone = null;
+    root.classList.remove('paged');
+    delete root.dataset.page;
+    $('.guide-pagination').hidden = true;
     stopSpeaking();
   }
 
+  function turnPage(delta) {
+    if (!pages) return;
+    const next = pageIndex + delta;
+    if (next < 0) return;
+    if (next >= pages.length) {
+      const done = pageDone;
+      dismiss();
+      done?.();
+      return;
+    }
+    pageIndex = next;
+    show(pages[pageIndex]); // 換頁結束上一頁語音；新頁仍由孩子點隊長播放。
+  }
+
   root.addEventListener('click', (ev) => {
+    if (ev.target.closest('[data-guide-prev]')) { turnPage(-1); return; }
+    if (ev.target.closest('[data-guide-next]')) { turnPage(1); return; }
     const action = ev.target.closest('.guide-action');
     if (action) {
       const a = line.actions[Number(action.dataset.i)];
@@ -137,6 +178,9 @@ export function createGuide({ root, cast }) {
     advance();
   });
   root.addEventListener('keydown', (ev) => {
+    if (pages && ev.target === root && (ev.key === 'ArrowLeft' || ev.key === 'ArrowRight')) {
+      ev.preventDefault(); turnPage(ev.key === 'ArrowLeft' ? -1 : 1); return;
+    }
     if ((ev.key === 'Enter' || ev.key === ' ') && ev.target === root) { ev.preventDefault(); advance(); }
   });
   if (!canSpeak()) voiceBtn.hidden = true;
@@ -144,10 +188,17 @@ export function createGuide({ root, cast }) {
 
   return {
     dismiss,
+    showPages(items, { onDone } = {}) {
+      if (openDialog() || !prefs.on || !items?.length) return;
+      dismiss();
+      pages = items; pageIndex = 0; pageDone = onDone;
+      show(pages[pageIndex]);
+    },
     /** 排進一串台詞；urgent=true 會先清掉還沒說的台詞；同一個 topic 的新台詞會換掉舊的。 */
     say(lines, { urgent = false, then, topic } = {}) {
       if (openDialog()) return;
       if (!prefs.on || !lines?.length) { then?.(); return; }
+      if (pages) dismiss();
       if (urgent) queue = [];
       if (topic) {
         queue = queue.filter((l) => l.topic !== topic);

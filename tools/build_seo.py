@@ -53,7 +53,7 @@ def main() -> None:
     per = assign(islands, episodes)
     total = sum(len(x) for x in per)
     free = sum(1 for x in per for e in x if e["state"] == "public")
-    live = [(i, x) for i, x in zip(islands, per) if x]
+    live = [(i, x) for i, x in zip(islands, per) if x or i['id'] == data['start']]
 
     # ---- 標題、描述（集數寫真的數字）----
     title = "科學好好聽｜兒童科普 Podcast 互動地圖・宇宙群島"
@@ -120,7 +120,11 @@ def main() -> None:
         if gid:
             parts.append(f"<h3>{esc(groups[gid]['emoji'] + ' ' + groups[gid]['name'])}</h3>")
         for isl, eps in sel:
-            parts.append(f'<h4><a href="?isle={esc(isl["id"])}">{esc(isl["emoji"] + " " + isl["name"])}</a>（{len(eps)} 集）</h4><p>{esc(isl["intro"])}</p><ul>')
+            count = '母島・玩法說明' if isl['id'] == data['start'] else f'{len(eps)} 集'
+            parts.append(f'<h4><a href="?isle={esc(isl["id"])}">{esc(isl["emoji"] + " " + isl["name"])}</a>（{count}）</h4><p>{esc(isl["intro"])}</p>')
+            for page in isl.get('tour', []):
+                parts.append(f'<h5>{esc(page["title"])}</h5><p>{esc(page["text"])}</p>')
+            parts[-1] += '<ul>'
             for e in eps:
                 vip = "（VIP）" if e["state"] == "subscriber" else ""
                 intro = f"：{esc(e['intro'])}" if e.get("intro") else ""
