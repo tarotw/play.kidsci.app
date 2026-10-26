@@ -18,3 +18,11 @@ test('every narration entry resolves to a nonempty MP3 file', () => {
     assert.ok(statSync(new URL(file, root)).size > 1000, file);
   }
 });
+
+test('every island has an introduction with bundled captain audio', () => {
+  const { islands } = JSON.parse(readFileSync(new URL('../data/islands.json', import.meta.url), 'utf8'));
+  for (const island of islands) {
+    assert.ok(island.intro?.trim(), `${island.id}: missing introduction`);
+    assert.ok(manifest.clips[island.intro], `${island.id}: missing captain audio`);
+  }
+});

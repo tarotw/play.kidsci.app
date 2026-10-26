@@ -143,6 +143,7 @@ export function createGuide({ root, cast }) {
   savePrefs();
 
   return {
+    dismiss,
     /** 排進一串台詞；urgent=true 會先清掉還沒說的台詞；同一個 topic 的新台詞會換掉舊的。 */
     say(lines, { urgent = false, then, topic } = {}) {
       if (openDialog()) return;

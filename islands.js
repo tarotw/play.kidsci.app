@@ -225,6 +225,12 @@ function go(id) {
   if (!world.travel(id)) return;
 }
 
+// 每次進島都顯示該島介紹；到訪紀錄只用來標記地圖，不限制介紹次數。
+function introduceIsland(def) {
+  guide.on = true;
+  guide.say([{ who: 'captain', text: def.intro }], { urgent: true, topic: 'isle' });
+}
+
 // ---------- 隊長選單 ----------
 function openGuideMenu() {
   if (!guide.on) guide.on = true;
@@ -329,7 +335,6 @@ async function init() {
   const lv = params.get('lv');
   const lvIsle = lv && isles.map((x) => ({ x, n: x.eps.filter((e) => e.home === lv || e.home.startsWith(`${lv}:`)).length })).sort((a, b) => b.n - a.n).find((y) => y.n)?.x;
   const want = chIsle?.def.id || (isleById.has(params.get('isle')) ? params.get('isle') : lvIsle?.def.id || startId);
-  const firstVisit = !visited.size;
   const { createIsles } = await import('./isles3d.js');
   let lastIsland = want;
   world = createIsles({
@@ -337,14 +342,13 @@ async function init() {
     onReady: () => document.body.classList.add('ready'),
     onResident: openSoon,
     onHover: showTip,
-    onLaunch: (def) => { toast(`🚀 出發！<br><small>飛往${esc(def.name)}</small>`); },
+    onLaunch: (def) => { guide.dismiss(); toast(`🚀 出發！<br><small>飛往${esc(def.name)}</small>`); },
     onArrive: (def) => {
       renderHud();
-      if (!def) return;
+      if (!def) { guide.dismiss(); return; }
       lastIsland = def.id;
-      const first = !visited.has(def.id);
       markVisit(def.id);
-      if (first && def.intro) setTimeout(() => guide.say([{ who: 'captain', text: def.intro }], { topic: 'isle' }), 500);
+      introduceIsland(def);
     },
   });
   world.lastIsland = () => lastIsland;
@@ -355,12 +359,7 @@ async function init() {
   renderHud();
   markVisit(want);
   if (ch && byCode.has(ch)) setTimeout(() => meet(ch), 800);
-  else if (firstVisit) setTimeout(() => {
-    const def = world.current() || isleById.get(want).def;
-    guide.say([
-      { who: 'captain', text: '我是科學隊長！點島上的小居民聽故事，或搭火箭去別的島探險。', actions: [{ label: '🚀 去別的島', run: openStation }, { label: '好！', run: () => {} }] },
-    ], { topic: 'isle' });
-  }, 900);
+  else introduceIsland(isleById.get(want).def);
   resetIdle();
   if (/[?&]debug\b/.test(location.search) || navigator.webdriver) window.__isles = { world, isles, stamps: () => stamps };
 }
