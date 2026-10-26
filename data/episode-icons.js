@@ -273,7 +273,7 @@ export const REVIEWED_EPISODE_ICONS = {
   "107": {
     "title": "水星與金星：冰火煉獄與酸雨女王",
     "contentKey": "46:a5a3fe70",
-    "icon": "🪐",
+    "icon": "space:mercury-venus",
     "subject": "水星與金星的極端環境"
   },
   "108": {
@@ -291,7 +291,7 @@ export const REVIEWED_EPISODE_ICONS = {
   "110": {
     "title": "天王星 vs 海王星：躺平哥與暴風弟的冰凍對決",
     "contentKey": "65:23b4fbbf",
-    "icon": "🪐",
+    "icon": "space:ice-giants",
     "subject": "天王星與海王星"
   },
   "111": {
@@ -951,7 +951,7 @@ export const REVIEWED_EPISODE_ICONS = {
   "s23": {
     "title": "冥王星的復仇：我才不是死掉的石頭！",
     "contentKey": "128:f0222f2f",
-    "icon": "🪐",
+    "icon": "space:pluto",
     "subject": "冥王星的活躍地質"
   },
   "s24": {

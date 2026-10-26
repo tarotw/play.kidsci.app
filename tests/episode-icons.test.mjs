@@ -28,7 +28,7 @@ test('every published episode has an evidence-backed content review for its actu
 
 test('selections reflect the full descriptions rather than author names or headline metaphors', () => {
   const expected = {
-    c12: '🪼', c26: '⚙️', c27: '🔭', c30: '🛰️', s27: '📱', s28: '♟️', s29: '🎨',
+    '107': 'space:mercury-venus', '110': 'space:ice-giants', s23: 'space:pluto', c12: '🪼', c26: '⚙️', c27: '🔭', c30: '🛰️', s27: '📱', s28: '♟️', s29: '🎨',
     s45: 'animal:caecilian', '182': '🐟', '114': '🧑‍🚀', '247': 'habitat:termite-mound',
     '206': 'animal:capybara', '212': 'animal:okapi', '196': 'animal:platypus', '197': 'animal:pangolin',
     '224': 'animal:hornbill', '225': 'animal:toucan', '216': '🦅', s42: '🕷️', s46: '🕷️',
