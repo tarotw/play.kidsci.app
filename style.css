@@ -494,10 +494,10 @@ body.isle-page .guide { bottom: var(--below); max-height: calc(100dvh - var(--be
 .isle-page .loading { background: linear-gradient(#9fd4ff, #ffe0ef); color: var(--text); }
 .isle-page .sheet .hero { filter: drop-shadow(0 4px 8px rgba(80, 70, 140, 0.25)); }
 
-/* 下面：一顆主要的「🚀 去別的島」，旁邊一顆小的「🗺️ 全部的島」（在全景時變「🏝️ 回到島上」）。
-   「居民」是這座島的事，放在上面島名下面 */
+/* 底部的大公仔打開居民名單，火箭換島，地圖看全景；母島和全景只保留後兩顆。 */
 /* 寬度跟著按鈕（不被 left: 50% 擠成一半寬） */
 .isle-bar { position: fixed; left: 50%; bottom: calc(16px + env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 5; display: flex; gap: 10px; width: max-content; max-width: calc(100vw - 16px); }
+.isle-bar.with-residents { align-items: center; }
 body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px); }
 /* 手機或矮螢幕：播放器只留一行標題，讓出空間給島 */
 @media (max-width: 640px), (max-height: 600px) {
@@ -516,6 +516,22 @@ body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px
 .isle-map .txt { font-size: 11px; font-weight: 800; white-space: nowrap; }
 :is(.isle-btn, .isle-map):active { transform: scale(0.96); }
 .isle-map:hover { background: #fff; }
+.isle-residents { position: relative; display: grid; justify-items: center; align-content: center; gap: 4px;
+  width: 108px; min-height: 80px; padding: 8px 12px 6px; border: 3px solid #fff; border-radius: 24px;
+  background: linear-gradient(#e8fff1, #a1e2c9); color: #165e4a; box-shadow: 0 5px 0 #62b695, 0 8px 18px #21574130; }
+.isle-residents:hover { background: linear-gradient(#f4fff7, #b7efd8); }
+.isle-residents:active { transform: translateY(3px); box-shadow: 0 2px 0 #62b695; }
+.isle-residents .txt { font-size: 14px; line-height: 1.2; font-weight: 900; }
+.residents-total { position: absolute; top: -8px; right: -6px; display: grid; place-items: center; min-width: 27px; height: 27px;
+  padding: 0 5px; border: 2px solid #fff; border-radius: 999px; background: #197a60; color: #fff; font-size: 12px; font-weight: 800; }
+.residents-figures { position: relative; display: block; width: 74px; height: 44px; }
+.mini-resident { position: absolute; bottom: 0; width: 30px; height: 31px; border: 2px solid #fff; border-radius: 16px 16px 10px 10px;
+  background: #ebae6e; box-shadow: inset 0 -4px 0 #b06f3d25, 0 3px 4px #305e3425; }
+.mini-resident > span { position: absolute; top: -13px; left: -3px; display: grid; place-items: center; width: 32px; height: 32px;
+  border: 2px solid #fff; border-radius: 50%; background: #fff0d7; font-size: 23px; line-height: 1; }
+.mini-resident.left { left: 0; transform: rotate(-12deg) translateY(2px); background: #bda6e7; }
+.mini-resident.right { right: 0; transform: rotate(12deg) translateY(2px); background: #f1bd69; }
+.mini-resident.middle { left: 22px; z-index: 1; height: 35px; background: #6bbfa5; }
 /* 島名下面：這座島的居民（一整塊都可以按） */
 .isle-people { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 4px 6px; max-width: 100%; margin-top: 4px; padding: 4px 10px 4px 6px; border-radius: 16px;
   border: 2px solid #fff; background: rgba(255, 255, 255, 0.82); color: #3a3f8a; text-align: left; box-shadow: 0 3px 10px rgba(80, 70, 140, 0.16); }
@@ -564,6 +580,13 @@ body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px
   .isle-btn .ico { font-size: 26px; }
   .isle-btn .txt { font-size: 18px; }
   .isle-map { width: 56px; height: 56px; border-radius: 20px; }
+  .isle-bar.with-residents .rocket { display: grid; justify-items: center; align-content: center; gap: 2px;
+    width: 104px; min-height: 80px; padding: 6px; border-radius: 24px; }
+  .isle-bar.with-residents .rocket .ico { font-size: 32px; }
+  .isle-bar.with-residents .rocket .txt { font-size: 14px; letter-spacing: 0; }
+  .isle-bar.with-residents .isle-map { width: 72px; height: 80px; border-radius: 24px; }
+  .isle-bar.with-residents .isle-map .ico { font-size: 28px; }
+  .isle-bar.with-residents .isle-map .txt { font-size: 12px; }
   .isle-people .who { font-size: 13px; }
   .isle-grid { grid-template-columns: repeat(2, 1fr); }
   .isle-label { font-size: 13px; padding: 4px 9px 4px 6px; }

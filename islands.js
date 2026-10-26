@@ -65,9 +65,23 @@ function assign(defs, episodes) {
 }
 
 // ---------- 上面的島名、下面的按鈕 ----------
+function renderResidentEntrance(island) {
+  const show = Boolean(island?.eps.length) && world.mode() === 'island';
+  $('#residents-btn').hidden = !show;
+  $('.isle-bar').classList.toggle('with-residents', show);
+  if (!show) return;
+  const examples = island.eps.slice(0, 3);
+  $('#residents-figures').innerHTML = ['left', 'middle', 'right'].map((position, i) =>
+    `<span class="mini-resident ${position}"><span>${esc(examples[i % examples.length].icon)}</span></span>`).join('');
+  $('#residents-total').textContent = island.eps.length;
+  $('#residents-btn').setAttribute('aria-label', `看看${island.def.name}的 ${island.eps.length} 位居民`);
+}
+
 function renderHud() {
   const def = world?.current();
+  $('#people-btn').disabled = false;
   if (!def) {
+    renderResidentEntrance(null);
     $('#isle-name').textContent = '🗺️ 宇宙群島';
     const heard = stamps.seen.filter((c) => byCode.has(c)).length;
     $('#isle-meta').textContent = `${isles.length} 座島 · 去過 ${visited.size} 座 · 拜訪過 ${heard} 個居民`;
@@ -78,6 +92,7 @@ function renderHud() {
     return;
   }
   const x = isleById.get(def.id);
+  renderResidentEntrance(x);
   const seen = x.eps.filter((e) => stamps.seen.includes(e.code)).length;
   $('#isle-name').textContent = `${def.emoji} ${def.name}`;
   // 島名下面：這座島的居民（按了打開名單），一眼看出幾個免費、幾個 VIP
@@ -260,6 +275,7 @@ function openSoon(code) { clearTimeout(openTimer); openTimer = setTimeout(() => 
 function bind() {
   $('#station-btn').addEventListener('click', openStation);
   $('#people-btn').addEventListener('click', openPeople);
+  $('#residents-btn').addEventListener('click', openPeople);
   $('#map-btn').addEventListener('click', () => { if (world.busy()) return; if (world.mode() === 'overview') { const id = world.lastIsland(); world.travel(id); } else world.overview(); });
   $('#station').addEventListener('click', (ev) => { const b = ev.target.closest('[data-go]'); if (b) { $('#station').close(); go(b.dataset.go); } });
   $('#people').addEventListener('click', (ev) => { const b = ev.target.closest('[data-ep]'); if (b) { $('#people').close(); meet(b.dataset.ep); } });
@@ -345,7 +361,10 @@ async function init() {
     onReady: () => document.body.classList.add('ready'),
     onResident: openSoon,
     onHover: showTip,
-    onLaunch: (def) => { guide.dismiss(); toast(`🚀 出發！<br><small>飛往${esc(def.name)}</small>`); },
+    onLaunch: (def) => {
+      guide.dismiss(); renderResidentEntrance(null); $('#people-btn').disabled = true;
+      toast(`🚀 出發！<br><small>飛往${esc(def.name)}</small>`);
+    },
     onArrive: (def) => {
       renderHud();
       if (!def) { guide.dismiss(); return; }
