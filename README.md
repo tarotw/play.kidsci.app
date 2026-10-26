@@ -67,6 +67,8 @@ python3 -m http.server 8000   # 然後開 http://localhost:8000/（其他版本�
 
 網址參數：`?lv=l07`（某一格）、`?lv=era:life`（時光機）、`?ch=112`（直接打開某一台）、`?mode=list`（清單模式）。
 
+選島流程的瀏覽器回歸測試：本機伺服器開啟、已安裝 Playwright 與 Chromium 後，執行 `node tests/island-navigation.browser.cjs`。可用 `BASE_URL` 指定正式網站、`CHROMIUM_PATH` 指定瀏覽器。測試會實際起飛與抵達，涵蓋全景鏡頭移動時立即選島、觸控島名、飛行中避免重複出發，以及火箭站選島。
+
 ## 發布
 
 GitHub Pages（Settings → Pages → Deploy from branch → `main` / root），`CNAME` 已設為 `play.kidsci.app`；kidsci.app 的 DNS 要加一筆 `play` CNAME 指向 `tarotw.github.io`。
