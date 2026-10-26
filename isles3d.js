@@ -460,6 +460,10 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
   function travel(id) {
     const to = byId.get(id);
     if (!to || flight) return false;
+    // 由「全部的島」選目的地時可能還在全景鏡頭動畫；先停下動畫再讓火箭起飛。
+    camAnim = null;
+    vel.yaw = vel.pitch = 0;
+    lastTouch = performance.now();
     if (to === here) { mode = 'island'; animateTo(islandView(here), 1); onArrive(here.def); return true; }
     const path = arc(here, to);
     const flat = path.p3.clone().sub(path.p0).setY(0);
@@ -699,7 +703,7 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
     overview: showOverview,
     current: () => (mode === 'overview' ? null : here.def),
     mode: () => mode,
-    busy: () => !!flight || !!camAnim,
+    busy: () => !!flight, // 鏡頭切換中仍可選島；僅飛行中鎖定操作。
     refreshMarks,
     /** 讓一個居民跳一跳（從清單點的時候）。 */
     greet(code) { const i = byCode.get(code); if (i != null) greet(i); },
