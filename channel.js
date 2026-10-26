@@ -136,7 +136,7 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
       };
     });
   }
-  let introState = 'idle', introFinished = false, introRun = 0;
+  let introState = 'idle', introFinished = false, introFailed = false, introRun = 0;
   function renderIntro() {
     const button = $('#channel [data-talk]'), status = $('#channel [data-intro-status]');
     if (!button) return;
@@ -147,7 +147,7 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     button.setAttribute('aria-label', playing ? '暫停科學隊長介紹' : introState === 'paused' ? '繼續科學隊長介紹' : '播放科學隊長介紹');
     button.querySelector('.captain-play-icon').textContent = playing ? 'Ⅱ' : introState === 'loading' ? '…' : '▶';
     if (status) status.textContent = playing ? '隊長介紹中・點圖像暫停' : introState === 'paused' ? '已暫停・點圖像繼續'
-      : introState === 'loading' ? '準備播放…' : introFinished ? '介紹完了・再點一次重聽' : '點隊長圖像，聽她說故事';
+      : introState === 'loading' ? '準備播放…' : introFailed ? '這次沒有播出聲音，請再點隊長試一次' : introFinished ? '介紹完了・再點一次重聽' : '點隊長圖像，聽她說故事';
   }
   function mountPodcast() {
     const host = $('#channel [data-podcast-host]');
@@ -165,16 +165,16 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
   function playTalk() {
     unmountPodcast(); // 移除跨網域播放器，確實結束另一個聲音，不猜測它是否在播放。
     const mine = ++introRun;
-    introFinished = false;
+    introFinished = false; introFailed = false;
     speakLines([{ text: talk }], {
       onState: (state) => { if (mine === introRun) { introState = state; renderIntro(); } },
-      onDone: (finished) => { if (mine === introRun) { introState = 'idle'; introFinished = finished; renderIntro(); } },
+      onDone: (finished) => { if (mine === introRun) { introState = 'idle'; introFinished = finished; introFailed = !finished; renderIntro(); } },
     });
   }
   function stopTalk() {
     introRun++;
     stopSpeaking();
-    introState = 'idle'; introFinished = false;
+    introState = 'idle'; introFinished = false; introFailed = false;
     renderIntro();
   }
   function toggleTalk() {

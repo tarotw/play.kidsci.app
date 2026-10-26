@@ -27,6 +27,7 @@ export function createGuide({ root, cast }) {
       <p class="guide-name"></p>
       <h2 class="guide-page-title" hidden></h2>
       <p class="guide-text"></p>
+      <p class="guide-voice-status" role="status" hidden></p>
       <div class="guide-actions"></div>
     </div>
     <div class="guide-tools">
@@ -44,6 +45,8 @@ export function createGuide({ root, cast }) {
   let voiceState = 'idle';
   function renderVoice(state) {
     voiceState = state;
+    $('.guide-voice-status').hidden = state !== 'unavailable';
+    $('.guide-voice-status').textContent = state === 'unavailable' ? '這次沒有播出聲音，請再點隊長試一次' : '';
     const playing = state === 'playing';
     voiceBtn.disabled = state === 'loading';
     voiceBtn.setAttribute('aria-pressed', String(playing));
@@ -57,7 +60,7 @@ export function createGuide({ root, cast }) {
     const current = line;
     say(text, {
       onState: (state) => { if (line === current && !root.hidden) renderVoice(state); },
-      onDone: () => { if (line === current && !root.hidden) { renderVoice('idle'); finishTyping(); } },
+      onDone: (finished) => { if (line === current && !root.hidden) { renderVoice(finished ? 'idle' : 'unavailable'); finishTyping(); } },
     });
   }
 

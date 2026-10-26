@@ -1,6 +1,7 @@
 // 宇宙好好聽・宇宙地圖（迷宮開圖）：整張心智圖一開始被星雲蓋住，點發光的「？」把地圖一塊一塊打開。
 // 中心 → 大主題（原子、生物、太陽系…）→ 小主題（雨林、行星…）→ 一集一集的故事。
 // 地圖直接從 data/catalog.json 長出來：新的集數會自動出現在對應的枝條上。
+import { loadProgress, PROGRESS_KEY as STORE_KEY } from './progress-store.js';
 import * as THREE from 'three';
 import { patchDialogs } from './compat.js';
 import { createGuide } from './guide.js';
@@ -8,7 +9,6 @@ import { createChannels, esc } from './channel.js';
 import { iconFor, Sound } from './explorer.js';
 import { iconMarkup } from './topic-art.js';
 
-const STORE_KEY = 'kidsci-universe-v1'; // 航行日誌（跟其他版本共用）
 const MAP_KEY = 'kidsci-universe-map-v1'; // 打開過的地方
 const $ = (sel) => document.querySelector(sel);
 const TAU = Math.PI * 2;
@@ -35,11 +35,7 @@ let nodes, root, worldR, fx, guide, channels, lines, byCode, sound;
 let revealed = new Set(), bornAt = new Map(), links = [], shownLinks = new Set();
 
 // ---------- 航行日誌 ----------
-function loadStamps() {
-  const empty = { ear: [], hand: [], seen: [], missions: [], guess: 0 };
-  try { return { ...empty, ...(JSON.parse(localStorage.getItem(STORE_KEY)) || {}) }; } catch { return empty; }
-}
-let stamps = loadStamps();
+let stamps = loadProgress();
 function saveStamps() {
   try { localStorage.setItem(STORE_KEY, JSON.stringify(stamps)); } catch { /* 停用儲存時仍可玩 */ }
   $('#stamp-count').textContent = stamps.ear.length + stamps.hand.length;

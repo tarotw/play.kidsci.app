@@ -1,0 +1,53 @@
+name: 功能回歸檢查
+on:
+  push:
+    paths: ['*.js', '*.html', 'style.css', 'data/**', 'tests/**', '.github/workflows/functional.yml']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: functional-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: 資料、語音、封面與儲存格式測試
+        run: |
+          node --test tests/*.test.mjs
+          python3 -m unittest discover -s tests -p 'test_*.py'
+      - name: 安裝測試瀏覽器
+        run: |
+          npm install --prefix "$RUNNER_TEMP/kidsci-qa" --no-package-lock playwright@1.57.0
+          "$RUNNER_TEMP/kidsci-qa/node_modules/.bin/playwright" install --with-deps chromium
+      - name: 啟動本機網站
+        run: |
+          python3 -m http.server 8000 > "$RUNNER_TEMP/kidsci-http.log" 2>&1 &
+          curl --fail --retry 12 --retry-connrefused --retry-delay 1 http://localhost:8000/ -o /dev/null
+      - name: 選島、觸控、失敗復原與逐島完整操作
+        env:
+          NODE_PATH: ${{ runner.temp }}/kidsci-qa/node_modules
+          QA_REPORT: ${{ runner.temp }}/full-site.json
+        run: |
+          node tests/island-navigation.browser.cjs
+          node tests/resilience.browser.cjs
+          node tests/gestures.browser.cjs
+          node tests/other-views.browser.cjs
+          node tests/mother-tour.browser.cjs
+          node tests/full-site.browser.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: functional-report
+          path: |
+            ${{ runner.temp }}/full-site.json*
+            ${{ runner.temp }}/kidsci-http.log

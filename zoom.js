@@ -1,22 +1,18 @@
 // 宇宙好好聽・一路放大縮小（小樣本）：畫面、萬物電梯、東西的集數清單、星章。
 // 資料：data/zoom.json（每層有哪些東西、每個東西有哪幾集）、data/catalog.json、data/dialogue.json。
+import { loadProgress, PROGRESS_KEY as STORE_KEY } from './progress-store.js';
 import { patchDialogs } from './compat.js';
 import { createGuide } from './guide.js';
 import { createChannels, esc, stateBadge } from './channel.js';
 import { iconFor } from './explorer.js';
 import { iconMarkup } from './topic-art.js';
 
-const STORE_KEY = 'kidsci-universe-v1'; // 跟萬物旋鈕版共用同一本航行日誌
 const $ = (sel) => document.querySelector(sel);
 
 let layers, byCode, lines, world, guide, channels;
 const visited = new Set(); // 這次已經介紹過的層
 
-function loadStamps() {
-  const empty = { ear: [], hand: [], seen: [], missions: [], guess: 0 };
-  try { return { ...empty, ...(JSON.parse(localStorage.getItem(STORE_KEY)) || {}) }; } catch { return empty; }
-}
-let stamps = loadStamps();
+let stamps = loadProgress();
 function saveStamps() {
   try { localStorage.setItem(STORE_KEY, JSON.stringify(stamps)); } catch { /* 停用儲存時仍可玩 */ }
   $('#stamp-count').textContent = stamps.ear.length + stamps.hand.length;
@@ -125,8 +121,11 @@ async function init() {
   ]);
   patchDialogs();
   lines = dialogue;
-  layers = zoom.layers;
   byCode = new Map(catalog.episodes.map((e) => [e.code, e]));
+  // 沒有上架故事的物件只作佈景；保留沒有故事但能鑽進下一層的入口。
+  layers = zoom.layers.map((layer) => ({ ...layer, things: layer.things
+    .map((thing) => ({ ...thing, codes: thing.codes.filter((code) => byCode.has(code)) }))
+    .filter((thing) => thing.door || thing.codes.length) }));
   guide = createGuide({ root: $('#guide'), cast: lines.cast });
   channels = createChannels({
     byCode, lines, getStamps: () => stamps, addStamp,

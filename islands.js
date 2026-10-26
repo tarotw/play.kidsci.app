@@ -1,23 +1,19 @@
 // 宇宙好好聽・宇宙群島：每一集故事都是一個小居民，住在浮在天上的島。坐火箭在島和島之間飛。
 // 資料：data/islands.json（有哪些島、每座島住哪些集）、data/catalog.json、data/dialogue.json。
+import { loadProgress, PROGRESS_KEY as STORE_KEY } from './progress-store.js';
 import { patchDialogs } from './compat.js';
 import { createGuide } from './guide.js';
 import { createChannels, esc, stateBadge } from './channel.js';
 import { iconFor } from './explorer.js';
 import { iconMarkup } from './topic-art.js';
 
-const STORE_KEY = 'kidsci-universe-v1'; // 航行日誌（跟其他版本共用）
 const VISIT_KEY = 'kidsci-universe-isles-v1'; // 去過哪些島
 const $ = (sel) => document.querySelector(sel);
 
 let world, guide, channels, lines, byCode, isles, isleById, startId, groupDefs = [];
 
 // ---------- 航行日誌 ----------
-function loadStamps() {
-  const empty = { ear: [], hand: [], seen: [], missions: [], guess: 0 };
-  try { return { ...empty, ...(JSON.parse(localStorage.getItem(STORE_KEY)) || {}) }; } catch { return empty; }
-}
-let stamps = loadStamps();
+let stamps = loadProgress();
 function saveStamps() {
   try { localStorage.setItem(STORE_KEY, JSON.stringify(stamps)); } catch { /* 停用儲存時仍可玩 */ }
   $('#stamp-count').textContent = stamps.ear.length + stamps.hand.length;
@@ -113,6 +109,7 @@ function renderHud() {
 
 // ---------- 火箭站：選一座島 ----------
 function openStation() {
+  clearTimeout(openTimer);
   const here = world.current()?.id;
   $('#station').innerHTML = `<div class="inner">
     <button class="close" type="button" data-close aria-label="關閉">✕</button>
@@ -133,6 +130,7 @@ function openStation() {
 
 // ---------- 居民名單 ----------
 function openPeople() {
+  clearTimeout(openTimer);
   const def = world.current();
   if (!def) return;
   const x = isleById.get(def.id);
@@ -275,7 +273,14 @@ function meet(code) {
 }
 // 先讓居民跳一下再打開卡片；連點好幾次只開最後一次
 let openTimer = 0;
-function openSoon(code) { clearTimeout(openTimer); openTimer = setTimeout(() => channels.openChannel(code), 450); }
+function openSoon(code) {
+  clearTimeout(openTimer);
+  openTimer = setTimeout(() => {
+    // 打招呼的動畫結束前，孩子可能已選島或打開別的視窗。
+    if (world.mode() !== 'island' || world.islandOf(code) !== world.current()?.id || document.querySelector('dialog[open]')) return;
+    channels.openChannel(code);
+  }, 450);
+}
 
 function bind() {
   $('#station-btn').addEventListener('click', openStation);
@@ -367,12 +372,13 @@ async function init() {
     onResident: openSoon,
     onHover: showTip,
     onLaunch: (def) => {
+      clearTimeout(openTimer);
       guide.dismiss(); renderResidentEntrance(null); $('#people-btn').disabled = true;
       toast(`🚀 出發！<br><small>飛往${esc(def.name)}</small>`);
     },
     onArrive: (def) => {
       renderHud();
-      if (!def) { guide.dismiss(); return; }
+      if (!def) { clearTimeout(openTimer); guide.dismiss(); return; }
       lastIsland = def.id;
       markVisit(def.id);
       introduceIsland(def);

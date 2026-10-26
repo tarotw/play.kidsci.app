@@ -1,4 +1,5 @@
 // 宇宙好好聽：萬物旋鈕。資料來自 data/world.json 與 data/catalog.json（由 tools/ 產生）。
+import { loadProgress, PROGRESS_KEY as STORE_KEY } from './progress-store.js';
 import { createExplorer as createExplorer2d, iconFor } from './explorer.js';
 import { iconMarkup } from './topic-art.js';
 import { createGuide } from './guide.js';
@@ -6,7 +7,6 @@ import { patchDialogs } from './compat.js';
 import { createChannels, esc, fill, pick, stateBadge } from './channel.js';
 
 const PREVIEW = true; // P0：所有格都打開，方便檢查分類。正式版改成 false，只開 world.mvp_levels。
-const STORE_KEY = 'kidsci-universe-v1';
 
 const $ = (sel) => document.querySelector(sel);
 
@@ -16,11 +16,7 @@ let view = { kind: 'level', id: 'l03' };
 let listMode = false;
 
 // ---------- 航行日誌（星章與探索紀錄） ----------
-function loadStamps() {
-  const empty = { ear: [], hand: [], seen: [], missions: [], guess: 0 };
-  try { return { ...empty, ...(JSON.parse(localStorage.getItem(STORE_KEY)) || {}) }; } catch { return empty; }
-}
-let stamps = loadStamps();
+let stamps = loadProgress();
 function saveStamps() {
   try { localStorage.setItem(STORE_KEY, JSON.stringify(stamps)); } catch { /* 停用儲存時仍可玩 */ }
   $('#stamp-count').textContent = stamps.ear.length + stamps.hand.length;

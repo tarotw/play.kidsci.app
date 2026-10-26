@@ -114,3 +114,41 @@ GitHub Pages（Settings → Pages → Deploy from branch → `main` / root），
 `tools/build_episode_icons.mjs` 產生精簡的 `data/episode-icons.js`。全站只透過 `episode-icons.js` 選圖，不以人名、地名、標題比喻或字串關鍵字猜測。核對結果必須同時符合代碼、標題及目前介紹的內容識別值；新集數或介紹變更時先用分類圖示，待逐集判讀後再更新。
 
 `topic-art.js` 為缺少合適表情符號的 41 種主題提供原創向量圖示與辨認特徵，例如水豚、㺢㹢狓、犀鳥、美西螈、水熊蟲、白蟻丘及各類行星。同一份路徑以 Canvas 畫上立體公仔貼圖，並以 SVG 顯示於找居民入口、居民名單、故事卡、日誌及其他版本的列表，保持圖案一致。測試涵蓋全目錄、內容變更、物種差異及標題比喻造成的誤判。
+
+## 功能回歸與檢查紀錄（2026-10-26）
+
+本次查核修正四項問題：居民打招呼的延後開卡會蓋住新開的火箭站；異常的舊航行紀錄會令首頁載入失敗；語音載入失敗時缺少提示；放大縮小版會推薦未上架故事而開出空白卡。四種地圖改用 `progress-store.js` 讀取紀錄，損壞欄位會復原，其他有效紀錄保留。
+
+| 範圍 | 本次驗證 |
+| --- | --- |
+| 島嶼探索 | 實際飛遍 20 座島；逐島播放介紹；核對 191 筆居民清單、19 座有人島嶼的上下入口與代表故事卡 |
+| 母島 | 四頁前後切換、末頁出發、關閉重開、回母島與重整回第一頁、預設安靜 |
+| 故事卡 | 191 集封面與公眾／VIP 狀態；本地封面→遠端封面→節目封面的備援；快速關閉重開；320px 版面 |
+| 聲音 | 288 份 MP3 完整解碼成功；介紹實際播放／暫停／續播／重播；失敗重試；火箭音效、靜音與停止 |
+| Podcast | 127 個公開 Apple 內嵌播放器均載入；代表單集實際媒體播放時間前進；與介紹互斥；關卡停止播放 |
+| 平台與實驗 | 125 個 Spotify 連結回應成功；91 個不同實驗能在 iframe 載入，未發現 JS 例外或失敗資源；關閉、計時取消及蓋章 |
+| 紀錄與視窗 | 拜訪／收聽／實驗紀錄、日誌重開故事、重新整理保存、清除取消／確認、Escape 關閉 |
+| 操作與版面 | 實際 3D 居民觸控、拖曳防誤觸、雙指縮放、鍵盤捷徑、桌面一般動畫、減少動態效果、320px／393px／橫向／桌面版面 |
+| 失敗復原 | 必要資料載入失敗與重試、破損或禁止儲存、無 WebGL 改用 2D、語音失敗後重試 |
+| 其他地圖 | 2D 搜尋／清單／旋鈕／猜題；心智圖分享連結、探索保存與鍵盤開卡；六層電梯、邊界、返回及故事入口 |
+
+本次 Android Chrome 使用 Pixel 7 觸控模擬，另測桌面 Chromium；尚未使用實體 Android／iPhone。VIP 已驗證頁面與連結流程，未使用付費訂閱帳號驗證平台授權。實驗內部科學模型的正確性不在這份網站功能測試內；外部服務結果反映當次檢查狀態。
+
+可重跑的測試（先啟動本機伺服器，安裝 Playwright 與 Chromium）：
+
+```bash
+node --test tests/*.test.mjs
+python3 -m unittest discover -s tests -p 'test_*.py'
+node tests/island-navigation.browser.cjs
+node tests/full-site.browser.cjs
+node tests/mother-tour.browser.cjs
+node tests/episode-cards.browser.cjs
+node tests/player-lab.browser.cjs
+node tests/gestures.browser.cjs
+node tests/resilience.browser.cjs
+node tests/other-views.browser.cjs
+```
+
+瀏覽器測試支援 `BASE_URL`（可指向正式網址）與 `CHROMIUM_PATH`；`full-site.browser.cjs` 支援 `QA_REPORT` 輸出逐島結果與失敗截圖。母島與封面測試的圖像／音效證據輸出到 `ARTIFACT_DIR`（預設 `/tmp/kidsci-qa`）。`episode-cards` 與 `player-lab` 會存取實際外部平台，需可連網。
+
+[功能回歸檢查](.github/workflows/functional.yml) 會在相關程式、資料與測試修改時自動執行資料測試、導覽、手勢、失敗復原及逐島流程，並保存報告。平台播放與外部封面備援另外以實際服務測試，避免將外部服務的登入、限流或中斷誤認為本機程式錯誤。
