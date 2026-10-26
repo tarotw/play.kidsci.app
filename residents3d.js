@@ -1,6 +1,7 @@
 // 宇宙群島的小公仔：共用貼圖集、立體部位與材質。
 import * as THREE from 'three';
 import { TAU, EMOJI_FONT } from './kit3d.js';
+import { paintIcon } from './topic-art.js';
 
 // ---------- 居民（每一集一個會走路的小人：頭是它的圖示，下面有兩隻小腳） ----------
 export function makeAtlas(icons, specials) {
@@ -16,7 +17,7 @@ export function makeAtlas(icons, specials) {
     tg.textAlign = 'center'; tg.textBaseline = 'middle';
     if (icon === 'zzz') { tg.font = '900 44px sans-serif'; tg.fillStyle = '#7a6cff'; tg.fillText('z', T * 0.35, T * 0.62); tg.font = '900 34px sans-serif'; tg.fillText('z', T * 0.58, T * 0.42); tg.font = '900 26px sans-serif'; tg.fillText('z', T * 0.76, T * 0.26); }
     else if (icon === 'check') { tg.fillStyle = '#5fcf9f'; tg.beginPath(); tg.arc(T / 2, T / 2, T * 0.32, 0, TAU); tg.fill(); tg.strokeStyle = '#fff'; tg.lineWidth = 12; tg.lineCap = 'round'; tg.beginPath(); tg.moveTo(T * 0.34, T * 0.52); tg.lineTo(T * 0.46, T * 0.64); tg.lineTo(T * 0.68, T * 0.38); tg.stroke(); }
-    else { tg.font = `${Math.round(T * 0.7)}px ${EMOJI_FONT}`; tg.fillStyle = '#000'; tg.fillText(icon, T / 2, T * 0.52); }
+    else { tg.font = `${Math.round(T * 0.7)}px ${EMOJI_FONT}`; tg.fillStyle = '#000'; paintIcon(tg, icon, T / 2, T * 0.52, Math.round(T * 0.7)); }
     g.save();
     if (specials.includes(icon)) {
       // 頭上的小徽章（皇冠、zzz、勾勾）保留白邊，遠遠也看得清楚

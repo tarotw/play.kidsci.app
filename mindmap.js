@@ -6,6 +6,7 @@ import { patchDialogs } from './compat.js';
 import { createGuide } from './guide.js';
 import { createChannels, esc } from './channel.js';
 import { iconFor, Sound } from './explorer.js';
+import { iconMarkup } from './topic-art.js';
 
 const STORE_KEY = 'kidsci-universe-v1'; // 航行日誌（跟其他版本共用）
 const MAP_KEY = 'kidsci-universe-map-v1'; // 打開過的地方
@@ -213,7 +214,7 @@ function updateChip(n) {
   const ear = n.code && stamps.ear.includes(n.code);
   b.classList.toggle('seen', !!seen);
   const progress = n.kind === 'branch' || n.kind === 'zone' ? branchProgress(n) : null;
-  const orb = n.kind === 'root' ? '<img src="assets/logo-square.jpg" alt="">' : `<span class="em">${n.emoji}</span>`;
+  const orb = n.kind === 'root' ? '<img src="assets/logo-square.jpg" alt="">' : `<span class="em">${iconMarkup(n.emoji)}</span>`;
   const name = front ? '？' : n.kind === 'leaf' ? n.name.replace(/[（(].*$/, '').slice(0, 14) : n.name;
   b.innerHTML = `<span class="orb"${progress != null ? ` style="--p:${progress}"` : ''}>${orb}${front ? '<span class="q">?</span>' : ''}${ear ? '<span class="mk">👂</span>' : seen ? '<span class="mk ok">✓</span>' : ''}</span><span class="nm">${esc(name)}</span>`;
   b.setAttribute('aria-label', front ? `還沒打開的地方（${n.kind === 'leaf' ? '一個故事' : n.name}）` : n.kind === 'leaf' ? `${n.name}（${n.state === 'subscriber' ? 'VIP' : n.state === 'unreleased' ? '即將登場' : '公開'}）` : n.name);

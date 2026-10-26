@@ -4,6 +4,7 @@ import { patchDialogs } from './compat.js';
 import { createGuide } from './guide.js';
 import { createChannels, esc, stateBadge } from './channel.js';
 import { iconFor } from './explorer.js';
+import { iconMarkup } from './topic-art.js';
 
 const STORE_KEY = 'kidsci-universe-v1'; // 跟萬物旋鈕版共用同一本航行日誌
 const $ = (sel) => document.querySelector(sel);
@@ -64,7 +65,7 @@ function openThing(t, { door, childName }) {
   if (!door && eps.length === 1) { channels.openChannel(eps[0].code); return; }
   const rows = eps.map((e) => `
     <li><button type="button" class="ep ${e.state}" data-ep="${esc(e.code)}">
-      <span class="ic">${iconFor(e)}</span><span class="tt">${esc(e.title)}</span>
+      <span class="ic">${iconMarkup(iconFor(e))}</span><span class="tt">${esc(e.title)}</span>
       <span class="tg">${stateBadge(e)}${e.labs.length ? '<span class="badge lab">實驗</span>' : ''}${stamps.seen.includes(e.code) ? '<span class="badge seen">✓ 聽過</span>' : ''}</span></button></li>`).join('');
   $('#thing').innerHTML = `<div class="inner">
     <button class="close" type="button" data-close aria-label="關閉">✕</button>

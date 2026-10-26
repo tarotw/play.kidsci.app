@@ -20,6 +20,7 @@ const ease = (t) => 1 - Math.pow(1 - t, 3);
 // 角色圖示和其他頁面共用同一份逐集核對資料。
 export { iconFor } from './episode-icons.js';
 import { iconFor } from './episode-icons.js';
+import { paintIcon } from './topic-art.js';
 
 // ---------- 場景主題 ----------
 export const THEMES = {
@@ -279,7 +280,7 @@ export function createExplorer({ canvas, world, episodes, getStamps, onPick, onR
       g.font = `${size}px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif`;
       g.textAlign = 'center';
       g.textBaseline = 'middle';
-      g.fillText(icon, size * 0.7, size * 0.75);
+      paintIcon(g, icon, size * 0.7, size * 0.75, size);
       sprites.set(key, c);
     }
     return sprites.get(key);

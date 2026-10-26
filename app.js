@@ -1,5 +1,6 @@
 // 宇宙好好聽：萬物旋鈕。資料來自 data/world.json 與 data/catalog.json（由 tools/ 產生）。
 import { createExplorer as createExplorer2d, iconFor } from './explorer.js';
+import { iconMarkup } from './topic-art.js';
 import { createGuide } from './guide.js';
 import { patchDialogs } from './compat.js';
 import { createChannels, esc, fill, pick, stateBadge } from './channel.js';
@@ -210,7 +211,7 @@ function renderStops() {
   $('#stops').innerHTML = list.map((e) => `
     <li><button class="stop ${e.state === 'subscriber' ? 'vip' : ''} ${e.state}" type="button" data-code="${esc(e.code)}">
       <span class="ch">${esc(e.code)}<small>台</small></span>
-      <span class="t">${iconFor(e)} ${esc(e.title)}</span>
+      <span class="t">${iconMarkup(iconFor(e))} ${esc(e.title)}</span>
       <span class="tags">${stateBadge(e)}${e.labs.length ? `<span class="badge lab">實驗 ${e.labs.length}</span>` : ''}<span class="stamps">${stampMarks(e.code)}</span></span>
     </button></li>`).join('') || '<li class="hint">這裡還沒有集數。</li>';
 }

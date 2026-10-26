@@ -1,5 +1,6 @@
 // 宇宙好好聽：頻道卡（介紹對話＋到 Apple Podcasts、Spotify 收聽）、實驗、航行日誌。萬物旋鈕版（app.js）與放大縮小版（zoom.js）共用。
 import { iconFor } from './explorer.js';
+import { iconMarkup } from './topic-art.js';
 import { speakLines, stopSpeaking, pauseSpeaking, resumeSpeaking, canSpeak } from './speech.js';
 
 import { shortIntro } from './episode-intro.js';
@@ -86,7 +87,7 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
         <div class="episode-profile-copy"><p class="episode-show">科學好好聽 · 單集預覽</p>
           <h2 id="ch-title">${esc(e.title)}</h2>
           <p class="episode-meta">${esc(episodeMeta(e))}</p>
-          <p class="hint">${iconFor(e)} ${esc(code)} 台 ${stateBadge(e)} ${stampMarks(code)}</p>
+          <p class="hint">${iconMarkup(iconFor(e))} ${esc(code)} 台 ${stateBadge(e)} ${stampMarks(code)}</p>
         </div>
       </header>
       ${embed}</section>
@@ -202,7 +203,7 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
   // ---------- 航行日誌 ----------
   function openJournal() {
     const st = getStamps();
-    const line = (code) => { const e = byCode.get(code); return e ? `<li><button type="button" class="jl" data-open-ch="${esc(code)}">${iconFor(e)} ${esc(code)} 台｜${esc(e.title)}</button></li>` : ''; };
+    const line = (code) => { const e = byCode.get(code); return e ? `<li><button type="button" class="jl" data-open-ch="${esc(code)}">${iconMarkup(iconFor(e))} ${esc(code)} 台｜${esc(e.title)}</button></li>` : ''; };
     $('#journal').innerHTML = `<div class="inner">
       <button class="close" type="button" data-close aria-label="關閉">✕</button>
       <h2 id="journal-title">📔 航行日誌</h2>

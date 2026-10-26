@@ -1,58 +1,61 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { iconFor } from '../episode-icons.js';
+import { iconFor, contentKey } from '../episode-icons.js';
 import { REVIEWED_EPISODE_ICONS } from '../data/episode-icons.js';
+import { TOPIC_ART, iconMarkup } from '../topic-art.js';
 
 const episodes = JSON.parse(readFileSync(new URL('../data/catalog.json', import.meta.url))).episodes;
+const review = JSON.parse(readFileSync(new URL('../data/episode-icon-review.json', import.meta.url)));
 const byCode = new Map(episodes.map(e => [e.code, e]));
 
-test('every published episode has a topic review for its current title and one visible icon', () => {
+test('every published episode has an evidence-backed content review for its actual introduction', () => {
   const graphemes = new Intl.Segmenter('zh-TW', { granularity: 'grapheme' });
   assert.equal(Object.keys(REVIEWED_EPISODE_ICONS).length, episodes.length);
   for (const episode of episodes) {
-    const review = REVIEWED_EPISODE_ICONS[episode.code];
-    assert.ok(review, episode.code);
-    assert.equal(review.title, episode.title, `${episode.code}: title needs a new review`);
-    assert.ok(review.subject.trim(), episode.code);
-    assert.equal([...graphemes.segment(review.icon)].length, 1, episode.code);
-    assert.match(review.icon, /\p{Extended_Pictographic}/u, episode.code);
-    assert.equal(iconFor(episode), review.icon);
+    const compiled = REVIEWED_EPISODE_ICONS[episode.code], choice = review.episodes[episode.code];
+    assert.equal(compiled.title, episode.title, episode.code);
+    assert.equal(compiled.contentKey, contentKey(episode.intro), episode.code);
+    assert.equal(contentKey(choice.siteIntro), contentKey(episode.intro), episode.code);
+    assert.ok(choice.meaning.length >= 15, episode.code);
+    assert.ok(choice.reason.length >= 10, episode.code);
+    assert.ok(choice.evidence.length >= 25, episode.code);
+    assert.match(choice.source, /^https:\/\/podcasts\.apple\.com\/tw\/podcast\/id1812447277\?i=\d+$/);
+    assert.equal(iconFor(episode), choice.icon);
+    if (!TOPIC_ART[choice.icon]) assert.equal([...graphemes.segment(choice.icon)].length, 1, episode.code);
   }
 });
 
-test('actual subjects take precedence over metaphors, similar names and incidental words', () => {
+test('selections reflect the full descriptions rather than author names or headline metaphors', () => {
   const expected = {
-    '216': '🦅', '237': '🌴', '238': '🌳', '213': '🐦', '224': '🐦',
-    's43': '🐸', 's42': '🕷️', 's46': '🕷️', 's62': '🐟', '208': '🦘',
-    '246': '🪲', '171': '🐋', '172': '🦎', '64': '🧲', 'c8': '🚢',
-    'c33': '🏎️', 's49': '💣', 'c26': '🍎', '227': '🐿️',
+    c12: '🪼', c26: '⚙️', c27: '🔭', c30: '🛰️', s27: '📱', s28: '♟️', s29: '🎨',
+    s45: 'animal:caecilian', '182': '🐟', '114': '🧑‍🚀', '247': 'habitat:termite-mound',
+    '206': 'animal:capybara', '212': 'animal:okapi', '196': 'animal:platypus', '197': 'animal:pangolin',
+    '224': 'animal:hornbill', '225': 'animal:toucan', '216': '🦅', s42: '🕷️', s46: '🕷️',
+    s50: 'vehicle:drone', s51: 'vehicle:tank', '68': 'vehicle:submarine',
   };
   for (const [code, icon] of Object.entries(expected)) assert.equal(iconFor(byCode.get(code)), icon, code);
-  const rainforest = episodes.filter(e => e.home === 'l03' && e.zone === '雨林');
-  assert.ok(rainforest.length);
-  for (const episode of rainforest) assert.ok(!['🐴', '🐄', '✈️', '🏎️'].includes(iconFor(episode)), episode.code);
+  assert.ok(review.episodes.c12.sourceIssue);
+  assert.ok(review.episodes['90'].sourceIssue);
   assert.equal(iconFor(byCode.get('s32')), '🐴');
   assert.equal(iconFor(byCode.get('s33')), '🐴');
 });
 
-test('future or renamed episodes cannot reintroduce substring and metaphor mistakes', () => {
-  const examples = [
-    ['亞馬遜危險又迷人的角鵰', 'l03', '🦅'],
-    ['亞馬遜水陸雨林生態', 'l03', '🌴'],
-    ['雨林裡的重裝轟炸機：大犀鳥', 'l03', '🐦'],
-    ['披著乳牛外衣的麝雉', 'l03', '🐦'],
-    ['裝甲車般的鱷雀鱔', 'l03', '🐟'],
-    ['狼蛛媽媽與大蟻蛛的育兒', 'l03', '🕷️'],
-    ['白蟻丘的摩天樓', 'l03', '🏗️'],
-    ['海上鋼鐵巨獸：福特號航母', 'l04', '🚢'],
-    ['黑鳥 SR-71 與海鷹直升機', 'l04', '✈️'],
-    ['馬達、馬赫環與高速引擎', 'l04', '⚙️'],
-    ['維生素 B2 與細胞的作用', 'l02', '🧫'],
-    ['公車急煞時的牛頓定律', 'era:scientists', '🍎'],
-    ['草原上的馬兒與馬蹄', 'l03', '🐴'],
-  ];
-  for (const [title, home, expected] of examples) assert.equal(iconFor({ title, home }), expected, title);
-  assert.equal(iconFor({ code: 's32', title: '亞馬遜雨林的生態', home: 'l03' }), '🌴');
-  assert.equal(iconFor({ title: '還沒核對的新題目', home: 'l03' }), '🐾');
+test('new titles or changed content never get a guessed keyword or stale reviewed icon', () => {
+  assert.equal(iconFor({ ...byCode.get('216'), intro: '改成介紹馬的演化。' }), '🐾');
+  assert.equal(iconFor({ ...byCode.get('s32'), title: '亞馬遜的鳥類' }), '🐾');
+  assert.equal(iconFor({ title: '亞馬遜轟炸機與馬達', home: 'l03' }), '🐾');
+  assert.equal(iconFor({ title: '牛頓公車裡的鐵製星星', home: 'l04' }), '⚙️');
+});
+
+test('species illustrations have labelled identifying features and share safe SVG markup', () => {
+  for (const [key, art] of Object.entries(TOPIC_ART)) {
+    assert.ok(art.label && art.features, key);
+    assert.ok(art.shapes.length >= 3, key);
+    const markup = iconMarkup(key);
+    assert.ok(markup.startsWith('<svg'), key);
+    assert.ok(markup.includes(`aria-label="${art.label}"`), key);
+    assert.ok(!markup.includes('<script') && !markup.includes('<image'), key);
+  }
+  assert.ok(!iconMarkup('<script>x</script>').includes('<script>'));
 });

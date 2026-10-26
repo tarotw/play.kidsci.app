@@ -4,6 +4,7 @@ import { patchDialogs } from './compat.js';
 import { createGuide } from './guide.js';
 import { createChannels, esc, stateBadge } from './channel.js';
 import { iconFor } from './explorer.js';
+import { iconMarkup } from './topic-art.js';
 
 const STORE_KEY = 'kidsci-universe-v1'; // 航行日誌（跟其他版本共用）
 const VISIT_KEY = 'kidsci-universe-isles-v1'; // 去過哪些島
@@ -72,7 +73,7 @@ function renderResidentEntrance(island) {
   if (!show) return;
   const examples = island.eps.slice(0, 3);
   $('#residents-figures').innerHTML = ['left', 'middle', 'right'].map((position, i) =>
-    `<span class="mini-resident ${position}"><span>${esc(examples[i % examples.length].icon)}</span></span>`).join('');
+    `<span class="mini-resident ${position}"><span>${iconMarkup(examples[i % examples.length].icon)}</span></span>`).join('');
   $('#residents-total').textContent = island.eps.length;
   $('#residents-btn').setAttribute('aria-label', `看看${island.def.name}的 ${island.eps.length} 位居民`);
 }
@@ -137,7 +138,7 @@ function openPeople() {
   const x = isleById.get(def.id);
   const rows = x.eps.map((e) => `
     <li><button type="button" class="ep ${e.state}" data-ep="${esc(e.code)}">
-      <span class="ic">${e.icon}</span><span class="tt">${esc(e.title)}</span>
+      <span class="ic">${iconMarkup(e.icon)}</span><span class="tt">${esc(e.title)}</span>
       <span class="tg">${stateBadge(e)}${e.labs.length ? '<span class="badge lab">實驗</span>' : ''}${stamps.seen.includes(e.code) ? '<span class="badge seen">✓ 拜訪過</span>' : ''}</span></button></li>`).join('');
   $('#people').innerHTML = `<div class="inner">
     <button class="close" type="button" data-close aria-label="關閉">✕</button>

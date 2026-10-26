@@ -1,5 +1,6 @@
 // 宇宙好好聽 3D 共用小工具：shader、貼圖、光暈、點雲。
 import * as THREE from 'three';
+import { paintIcon } from './topic-art.js';
 
 export const TAU = Math.PI * 2;
 // 柔光：所有光暈、邊光、點雲共用的強度。調這裡就能讓整個畫面更柔或更亮。
@@ -124,7 +125,7 @@ export function drawBadge(g, icon, state, marks) {
   g.textAlign = 'center'; g.textBaseline = 'middle';
   g.shadowColor = 'rgba(60,40,20,0.25)'; g.shadowBlur = 6; g.shadowOffsetY = 3;
   if (soon) { g.font = '800 84px sans-serif'; g.fillStyle = '#d6d2ee'; g.fillText('?', 96, 102); }
-  else { g.font = `86px ${EMOJI_FONT}`; g.fillStyle = '#000'; g.fillText(icon, 96, 104); }
+  else { g.font = `86px ${EMOJI_FONT}`; g.fillStyle = '#000'; paintIcon(g, icon, 96, 104, 86); }
   g.shadowColor = 'transparent'; g.shadowBlur = 0; g.shadowOffsetY = 0;
   const gloss = g.createLinearGradient(0, 26, 0, 96);
   gloss.addColorStop(0, 'rgba(255,255,255,0.4)'); gloss.addColorStop(1, 'rgba(255,255,255,0)');
