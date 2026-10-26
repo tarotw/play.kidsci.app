@@ -85,6 +85,9 @@ GitHub Pages（Settings → Pages → Deploy from branch → `main` / root），
 
 單集封面由 Apple Podcasts 單集資料與 RSS 的 `itunes:image` 取得，`build_catalog.py` 以實際 Apple 單集 ID 對應封面，並補上平台提供的日期與長度，未提供的欄位不顯示。`tools/cache_episode_artwork.py` 將原圖原樣快取在 `assets/episode-covers/`，網頁不必等待外部播放器載入才顯示圖片；每日更新也會補齊新封面。`episode-profile.js` 統一圖片選取與日期、長度格式；圖片載入失敗時使用節目封面。聽隊長介紹、暫時移除 Apple 播放器時，這張單集預覽仍保留，回到完整 Podcast 的按鈕也顯示該集封面。Apple 內嵌播放器裡的圖片由 Apple 決定，可能仍是節目共用封面。
 
+單集封面、資訊與 Apple 播放控制整合在同一張播放器卡片，隊長介紹放在卡片下方。卡片縮圖由本站提供，不依賴 Apple 內嵌圖片是否顯示；快取圖片失敗時依序嘗試原始單集封面、節目封面。播放器卡片及「聽完整 Podcast」按鈕使用相同的圖片備援，保持原有的介紹／Podcast 聲音互斥。
+快速關閉再開下一集時，忽略上一張卡片延後送達的關閉事件，避免新播放器被移除。
+
 ## 對話語音
 
 全站導覽與故事介紹優先播放網站自帶的科學隊長台灣華語女聲音檔（`assets/speech/`，固定 `zh-TW-HsiaoChenNeural`），不依賴 Android、iOS 或電腦上的系統語音名稱。`narration-audio.js` 只預載文字／檔名清單，音檔在需要朗讀時才下載；`speech.js` 使用真正的 Audio 播放事件驅動朗讀狀態。未錄製的動態文字才使用可辨識的系統華語女聲，不切換男聲、粵語或壓低音調。`tools/build_speech_audio.py` 收集導覽、島嶼介紹及精簡故事介紹，產生 MP3 與清單；安裝 `edge-tts` 後執行即可補上新內容，已有音檔會重用。每日目錄更新也會嘗試補齊新故事音檔；語音服務失敗不阻擋目錄更新。

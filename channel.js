@@ -3,7 +3,7 @@ import { iconFor } from './explorer.js';
 import { speakLines, stopSpeaking, pauseSpeaking, resumeSpeaking, canSpeak } from './speech.js';
 
 import { shortIntro } from './episode-intro.js';
-import { episodeArtwork, episodeMeta } from './episode-profile.js';
+import { episodeArtwork, episodeArtworkSources, episodeMeta } from './episode-profile.js';
 
 const LAB_ORIGIN = 'https://lab.kidsci.app';
 const LAB_STAMP_SECONDS = 60;
@@ -32,7 +32,8 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
 
   // 每次打開、關掉都換一個號碼：還在讀資料時被關掉（或又點了別人），就不要再跳出來
   let openSeq = 0;
-  $('#channel').addEventListener('close', () => { openSeq++; });
+  // close 事件會延後送達；快速開了下一集時，不讓上一張卡片的事件清掉新播放器。
+  $('#channel').addEventListener('close', () => { if (!$('#channel').open) openSeq++; });
   async function openChannel(code) {
     const e = byCode.get(code);
     if (!e) return;
@@ -56,6 +57,7 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     podcastUrl = embedUrl;
     podcastTitle = e.title;
     podcastArtwork = episodeArtwork(e);
+    artworkSources = episodeArtworkSources(e);
     const embed = embedUrl ? '<div class="embed" data-podcast-host></div>' : '';
     const cap = embedUrl ? '📱 到 App 收聽，按「追蹤」新的一集就會自己出現' : '🎧 收聽這一集';
     const platforms = pf ? `<div class="platforms" aria-label="收聽這一集"><span class="pf-cap">${cap}</span>${pf}</div>` : '';
@@ -78,19 +80,18 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
 
     $('#channel').innerHTML = `<div class="inner">
       <button class="close" type="button" data-close aria-label="關閉">✕</button>
+      <section class="episode-player${embedUrl ? ' has-podcast' : ''}" aria-labelledby="ch-title">
       <header class="episode-profile">
-        <img class="episode-cover" src="${esc(episodeArtwork(e))}" alt="${esc(e.title)}的單集封面" width="120" height="120" decoding="async">
+        <img class="episode-cover" data-episode-artwork src="${esc(episodeArtwork(e))}" alt="${esc(e.title)}的單集封面" width="120" height="120" decoding="async">
         <div class="episode-profile-copy"><p class="episode-show">科學好好聽 · 單集預覽</p>
           <h2 id="ch-title">${esc(e.title)}</h2>
           <p class="episode-meta">${esc(episodeMeta(e))}</p>
           <p class="hint">${iconFor(e)} ${esc(code)} 台 ${stateBadge(e)} ${stampMarks(code)}</p>
         </div>
       </header>
-      ${intro}${embed}${platforms}${labs ? `<div class="actions">${labs}</div>` : ''}${takeaways}${card}${question}</div>`;
-    $('#channel .episode-cover').addEventListener('error', (event) => {
-      event.currentTarget.src = 'assets/logo-square.jpg';
-      event.currentTarget.alt = '科學好好聽節目封面';
-    }, { once: true });
+      ${embed}</section>
+      ${intro}${platforms}${labs ? `<div class="actions">${labs}</div>` : ''}${takeaways}${card}${question}</div>`;
+    watchArtwork($('#channel'));
     if (!$('#channel').open) $('#channel').showModal();
     mountPodcast(); // 故事卡保持安靜；介紹只由孩子點隊長圖像播放。
     const params = new URLSearchParams(location.search);
@@ -120,7 +121,20 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
   });
 
   // ---------- 隊長圖像播放器：手動播放／暫停／繼續，和 Podcast 互斥 ----------
-  let talk = '', currentCode = null, podcastUrl = null, podcastTitle = '', podcastArtwork = '';
+  let talk = '', currentCode = null, podcastUrl = null, podcastTitle = '', podcastArtwork = '', artworkSources = [];
+  // 快取圖片失敗時先試原始單集封面，最後才退回節目封面；每個來源只試一次。
+  function watchArtwork(root) {
+    const sources = [...artworkSources];
+    root.querySelectorAll('[data-episode-artwork]').forEach((img) => {
+      let index = 0;
+      img.onerror = () => {
+        const next = sources[++index];
+        if (!next) { img.onerror = null; return; }
+        if (next === 'assets/logo-square.jpg') img.alt = '科學好好聽節目封面';
+        img.src = next;
+      };
+    });
+  }
   let introState = 'idle', introFinished = false, introRun = 0;
   function renderIntro() {
     const button = $('#channel [data-talk]'), status = $('#channel [data-intro-status]');
@@ -144,7 +158,8 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
   function unmountPodcast() {
     const host = $('#channel [data-podcast-host]');
     if (!host) return;
-    host.innerHTML = `<button type="button" class="podcast-return" data-podcast><img class="podcast-return-cover" src="${esc(podcastArtwork)}" alt="" width="72" height="72"><span aria-hidden="true">▶</span><span>聽完整 Podcast<small>播放完整故事</small></span></button>`;
+    host.innerHTML = `<button type="button" class="podcast-return" data-podcast><img class="podcast-return-cover" data-episode-artwork src="${esc(podcastArtwork)}" alt="" width="72" height="72"><span aria-hidden="true">▶</span><span>聽完整 Podcast<small>播放完整故事</small></span></button>`;
+    watchArtwork(host);
   }
   function playTalk() {
     unmountPodcast(); // 移除跨網域播放器，確實結束另一個聲音，不猜測它是否在播放。
@@ -214,6 +229,7 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
     if (t.id === 'clear-stamps' && confirm('要清除全部的星章和紀錄嗎？清除後就找不回來了。')) { onClear(); $('#journal').close(); }
   });
   $('#channel').addEventListener('close', () => {
+    if ($('#channel').open) return;
     stopTalk();
     $('#channel .embed')?.remove(); // 關掉卡片：播放器一起拿掉，聲音才會停
     const params = new URLSearchParams(location.search);

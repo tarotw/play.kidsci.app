@@ -621,7 +621,7 @@ body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px
 .embed { margin: 4px 0 8px; border-radius: 12px; overflow: hidden; background: #f4f1ff; min-height: 175px; }
 .embed iframe { display: block; width: 100%; height: 175px; border: 0; }
 /* 有播放器的卡片：播放器才是主角，下面的 App 按鈕跟著捲動就好（不要黏在下緣蓋住播放器） */
-.isle-page #channel .embed ~ .platforms { position: static; background: none; margin: 4px 0 8px; padding: 0; }
+.isle-page #channel .episode-player.has-podcast ~ .platforms { position: static; background: none; margin: 4px 0 8px; padding: 0; }
 
 /* 隊長圖像就是播放控制；文字不再是假按鈕，預設保持安靜。 */
 .captain-play { position: relative; display: inline-grid; place-items: center; width: 88px; height: 88px; flex: none;
@@ -653,6 +653,8 @@ body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px
 }
 
 /* 單集專屬封面與資訊一直保留，不受 Apple 播放器或介紹模式影響。 */
+.episode-player { padding: 14px; border: 1px solid #dcd8ed; border-radius: 20px; background: #f9f8ff; }
+.episode-player .embed { margin: 10px 0 0; }
 #channel .close { float: none; display: block; margin: -6px -6px -48px auto; }
 .episode-profile { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 18px; align-items: start; padding: 6px 46px 8px 0; }
 .episode-cover { display: block; width: 112px; height: 112px; object-fit: cover; border-radius: 18px; background: #f2e8d8; box-shadow: 0 5px 16px #1d224a20; }
@@ -664,10 +666,23 @@ body.isle-page.has-player .isle-bar { bottom: calc(var(--player-h, 106px) + 10px
 .podcast-return { gap: 12px; }
 .podcast-return > span:first-of-type { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: #8852cd; color: white; font-size: 22px; }
 @media (max-width: 440px) {
+  #channel.sheet { width: calc(100vw - 16px); max-width: calc(100vw - 16px); }
+  #channel .inner { padding: 12px; }
+  .isle-page #channel .platforms { margin-left: -12px; margin-right: -12px; padding-left: 12px; padding-right: 12px; }
+  .episode-player { padding: 0; border-radius: 16px; }
+  .episode-player .episode-profile { padding: 10px 38px 10px 10px; }
+  .episode-player .embed { margin-top: 0; border-radius: 0 0 15px 15px; }
   .episode-profile { grid-template-columns: 84px minmax(0, 1fr); gap: 12px; padding-right: 38px; }
   .episode-cover { width: 84px; height: 84px; border-radius: 14px; }
   .episode-profile h2 { font-size: 18px; }
   .episode-show { font-size: 11px; }
   .episode-meta { font-size: 12px; }
   .podcast-return-cover { width: 52px; height: 52px; }
+}
+@media (max-width: 350px) {
+  #channel.sheet { width: calc(100vw - 8px); max-width: calc(100vw - 8px); }
+  #channel .inner { padding: 8px; }
+  .isle-page #channel .platforms { margin-left: -8px; margin-right: -8px; padding-left: 8px; padding-right: 8px; }
+  .episode-player .episode-profile { grid-template-columns: 72px minmax(0, 1fr); gap: 8px; }
+  .episode-player .episode-cover { width: 72px; height: 72px; }
 }

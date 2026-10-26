@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, statSync } from 'node:fs';
-import { episodeArtwork, episodeMeta } from '../episode-profile.js';
+import { episodeArtwork, episodeArtworkSources, episodeMeta } from '../episode-profile.js';
 const root = new URL('../', import.meta.url);
 const episodes = JSON.parse(readFileSync(new URL('data/catalog.json', root), 'utf8')).episodes;
 
@@ -21,6 +21,10 @@ test('selects a local cover first, with remote and show-art fallbacks', () => {
   assert.equal(episodeArtwork({ artworkLocal: local, artwork: 'https://example.com/episode.jpg' }), local);
   assert.equal(episodeArtwork({ artwork: 'https://example.com/episode.jpg' }), 'https://example.com/episode.jpg');
   assert.equal(episodeArtwork({ artwork: 'javascript:alert(1)' }), 'assets/logo-square.jpg');
+  assert.deepEqual(episodeArtworkSources({ artworkLocal: local, artwork: 'https://example.com/episode.jpg' }),
+    [local, 'https://example.com/episode.jpg', 'assets/logo-square.jpg']);
+  assert.deepEqual(episodeArtworkSources({ artworkLocal: '../secret.jpg', artwork: 'javascript:alert(1)' }),
+    ['assets/logo-square.jpg']);
 });
 
 test('formats duration and publication date without displaying missing values', () => {
