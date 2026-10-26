@@ -237,8 +237,12 @@ const HUD_PARTS = ['.hud-top .brand', '#isle-name', '#isle-meta', '#people-btn',
 const labelRange = document.createRange();
 
 function go(id) {
-  if (world.busy()) return;
-  if (!world.travel(id)) return;
+  // 鏡頭正在切換到全景時也能直接選島；只有火箭在飛行中才不能再次起飛。
+  if (!world.travel(id)) {
+    if (world.mode() === 'flight') toast('🚀 火箭正在飛行中<br><small>抵達後就能再選下一座島</small>');
+    return false;
+  }
+  return true;
 }
 
 // 每次進島都顯示該島介紹；到訪紀錄只用來標記地圖，不限制介紹次數。
