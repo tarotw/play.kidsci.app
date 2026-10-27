@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T04:20:23Z",
+ "generated": "2026-10-27T02:25:25Z",
  "episodes": [
   {
    "code": "c10",
@@ -1521,6 +1521,24 @@
    "intro": "小朋友，如果有一天你要去月球，你會想在那邊留下你的腳印嗎？1969 年，兩名勇敢的太空人真的做到了！他們搭乘比 30 層樓還高的超級火箭，飛了 40 萬公里才抵達月球。快跟著我們一起回到那個熱血沸騰的發射台，看看人類是怎麼踏出那「歷史性的一步」吧！",
    "labs": [],
    "artworkLocal": "assets/episode-covers/50ddfa093197d7d0b355.jpg"
+  },
+  {
+   "code": "118",
+   "title": "登月全紀錄：40 萬公里的太空芭蕾與月球上的 382 公斤寶藏",
+   "home": "l06",
+   "zone": "登月",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "apple": "https://podcasts.apple.com/tw/podcast/%E7%99%BB%E6%9C%88%E5%85%A8%E7%B4%80%E9%8C%84-40-%E8%90%AC%E5%85%AC%E9%87%8C%E7%9A%84%E5%A4%AA%E7%A9%BA%E8%8A%AD%E8%95%BE%E8%88%87%E6%9C%88%E7%90%83%E4%B8%8A%E7%9A%84-382-%E5%85%AC%E6%96%A4%E5%AF%B6%E8%97%8F-ep-118/id1812447277?i=1000798255281",
+    "spotify": "https://open.spotify.com/episode/3kgxk9Egwj44jZW6OTLKu8",
+    "duration": 1236,
+    "pubDate": "Mon, 26 Oct 2026 22:02:01 GMT"
+   },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/6f/ab/3e/6fab3e58-c901-4315-189c-7a4ae137ea32/mza_316351077990384797.jpg/600x600bb.jpg",
+   "intro": "小朋友，你想知道太空人在月球上第一餐吃什麼嗎？牛肉、馬鈴薯竟然都被帶上月球了！今天我們要跟著阿波羅太空船，看看這場「太空芭蕾」是怎麼跳的，還要一起看看那台在月球上跑來跑去的「月球車」，最後看看英雄們是怎麼穿過紅通通的大氣層，安全降落在大海裡的喔！",
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/d678ed826affffcc3476.jpg"
   },
   {
    "code": "150",

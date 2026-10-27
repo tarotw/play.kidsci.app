@@ -1,7 +1,29 @@
 {
- "generated": "2026-10-26T04:20:23Z",
+ "generated": "2026-10-27T02:25:25Z",
  "spotifyChecked": false,
  "episodes": {
+  "118": [
+   {
+    "guid": "cmvp8rceo072r01xq87bl78yl",
+    "title": "〈登月全紀錄：40 萬公里的太空芭蕾與月球上的 382 公斤寶藏｜EP.118〉",
+    "link": "https://open.firstory.fm/story/cmvp8rceo072r01xq87bl78yl",
+    "pubDate": "Mon, 26 Oct 2026 22:02:01 GMT",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmvp8rceo072r01xq87bl78yl/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmvp8rceo072s01xq84xd12uz.mp3?v=1793018275746",
+    "duration": 1236,
+    "episodeType": "full",
+    "artwork": "https://image.firstory-cdn.me/Image/cmdpx4cs200ax01xldg5ta89p/9bQnLwb7NzF55DiW36TaH.jpg",
+    "artworkIsEpisode": true,
+    "intro": "小朋友，你想知道太空人在月球上第一餐吃什麼嗎？牛肉、馬鈴薯竟然都被帶上月球了！今天我們要跟著阿波羅太空船，看看這場「太空芭蕾」是怎麼跳的，還要一起看看那台在月球上跑來跑去的「月球車」，最後看看英雄們是怎麼穿過紅通通的大氣層，安全降落在大海裡的喔！",
+    "matchedBy": "code",
+    "labeledPublic": false,
+    "trailerOnly": false,
+    "apple": {
+     "trackId": 1000798255281,
+     "url": "https://podcasts.apple.com/tw/podcast/%E7%99%BB%E6%9C%88%E5%85%A8%E7%B4%80%E9%8C%84-40-%E8%90%AC%E5%85%AC%E9%87%8C%E7%9A%84%E5%A4%AA%E7%A9%BA%E8%8A%AD%E8%95%BE%E8%88%87%E6%9C%88%E7%90%83%E4%B8%8A%E7%9A%84-382-%E5%85%AC%E6%96%A4%E5%AF%B6%E8%97%8F-ep-118/id1812447277?i=1000798255281&uo=4"
+    },
+    "spotify": null
+   }
+  ],
   "117": [
    {
     "guid": "cmvg2ht3m01h801w48f4iaosm",
