@@ -107,6 +107,10 @@ GitHub Pages（Settings → Pages → Deploy from branch → `main` / root），
 
 居民入口以三個彩色小公仔呈現，圖案取自當地居民，並顯示實際居民數量；保留島名下的原有入口。手機將三顆底部按鈕排成大圖示，320px 螢幕也可操作。母島沒有居民，全景與飛行途中不顯示居民按鈕；抵達有居民的島才出現，避免打開上一座島的名單。母島玩法第三頁同步說明新入口，並有對應女聲。
 
+## 新集數更新流程
+
+每天自動抓進新集數（簡介、封面、隊長語音、Apple／Spotify 連結）。之後還要人（或 Claude）做兩件事：**指定住哪座島**（`data/placements.json`）和**逐集判讀簡介選圖示**（`data/episode-icon-review.json` → `node tools/build_episode_icons.mjs`）。`python3 tools/new_episodes.py` 會列出還沒處理的集數；步驟寫在 `CLAUDE.md`。沒處理時 `tests/episode-icons.test.mjs` 會失敗，所以 push 後的功能回歸檢查會變紅，就是提醒。
+
 ## 角色圖示核對
 
 逐集閱讀 191 集完整官方單集簡介（Apple Podcasts，125 集另與公開 RSS 交叉核對），將內容摘要、選圖理由、來源連結及原文證據保存在 `data/episode-icon-review.json`。這是官方簡介的內容判讀，並非全長音訊或逐字稿查核。C12 的標題與簡介物種不同，依簡介選冥河水母並記錄疑義；第 90 集的官方簡介與第 89 集重複，也保留資料問題註記。

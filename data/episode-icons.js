@@ -336,6 +336,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "icon": "🧑‍🚀",
     "subject": "阿波羅11號載人登月"
   },
+  "118": {
+    "title": "登月全紀錄：40 萬公里的太空芭蕾與月球上的 382 公斤寶藏",
+    "contentKey": "123:a4042b8a",
+    "icon": "🚀",
+    "subject": "阿波羅登月任務的全程"
+  },
   "150": {
     "title": "生物演化歷程：從單細胞到恐龍霸主 (上集)",
     "contentKey": "233:77545205",
@@ -1145,5 +1151,11 @@ export const REVIEWED_EPISODE_ICONS = {
     "contentKey": "166:f9dee8bd",
     "icon": "animal:gar",
     "subject": "鱷雀鱔的鱗甲與演化"
+  },
+  "s63": {
+    "title": "穿越六千萬年的綠色夢魘：解密「泰坦巨蟒」的絞殺神力｜SP.63",
+    "contentKey": "197:653d5661",
+    "icon": "🐍",
+    "subject": "泰坦巨蟒的體型與古氣候"
   }
 };
