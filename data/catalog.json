@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T02:25:25Z",
+ "generated": "2026-10-28T02:34:58Z",
  "episodes": [
   {
    "code": "c10",
@@ -1209,6 +1209,25 @@
    "intro": "如果有一種魚披著連菜刀都砍不進去的防彈鎖子甲、長著短吻鱷般的雙排暴牙，甚至在水裡缺氧時還能直接探出水面大口呼吸空氣，你相信牠真的存在嗎？牠就是見證恐龍滅絕的遠古活化石——鱷雀鱔！更神奇的是，科學家發現牠體內的分子時鐘慢得驚人，相隔一億年的親戚竟然還能生寶寶！快跟著科學隊長與好奇博士，一起潛入深水解開這隻史前裝甲巨獸的生存超能力吧！",
    "labs": [],
    "artworkLocal": "assets/episode-covers/b4c7d9e13a915d22fcec.jpg"
+  },
+  {
+   "code": "s63",
+   "title": "穿越六千萬年的綠色夢魘：解密「泰坦巨蟒」的絞殺神力｜SP.63",
+   "home": "studio",
+   "zone": null,
+   "also": [],
+   "state": "public",
+   "listen": {
+    "apple": "https://podcasts.apple.com/tw/podcast/%E7%A9%BF%E8%B6%8A%E5%85%AD%E5%8D%83%E8%90%AC%E5%B9%B4%E7%9A%84%E7%B6%A0%E8%89%B2%E5%A4%A2%E9%AD%98-%E8%A7%A3%E5%AF%86-%E6%B3%B0%E5%9D%A6%E5%B7%A8%E8%9F%92-%E7%9A%84%E7%B5%9E%E6%AE%BA%E7%A5%9E%E5%8A%9B-sp-63/id1812447277?i=1000798175159",
+    "spotify": "https://open.spotify.com/episode/5WWbkdLolxyKEf7vnSe8Sd",
+    "duration": 818,
+    "pubDate": "Tue, 27 Oct 2026 22:01:59 GMT"
+   },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/41/3f/f0/413ff073-a7c5-b6a0-8286-3f3dbf061111/mza_1220969070254895353.jpeg/600x600bb.jpg",
+   "intro": "想像一條長達 13 公尺、比公車還長、重達 1.1 公噸的史前巨蛇在沼澤裡無聲游動，連史前鱷魚都成了牠的潛在獵物！牠不用毒液，光憑驚人的肌肉力量就能制伏對手。更神奇的是，科學家竟然透過牠的脊椎骨，解開了六千萬年前地球赤道高達攝氏 30 多度的超級溫室密碼！究竟為什麼現在沒有這麼大的蛇？2024 年在印度發現的神秘蛇王又是誰？快跟著科學隊長與好奇博士，一起穿越時空探索這隻震撼遠古的綠色巨獸吧！",
+   "labs": [],
+   "autoPlaced": true,
+   "artworkLocal": "assets/episode-covers/3eed6f5eba7b1e707c88.jpg"
   },
   {
    "code": "103",

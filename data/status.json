@@ -1,7 +1,29 @@
 {
- "generated": "2026-10-27T02:25:25Z",
+ "generated": "2026-10-28T02:34:58Z",
  "spotifyChecked": false,
  "episodes": {
+  "s63": [
+   {
+    "guid": "cmvp8x3dc02xv01wc13a7dvh5",
+    "title": "〈穿越六千萬年的綠色夢魘：解密「泰坦巨蟒」的絞殺神力｜SP.63〉",
+    "link": "https://open.firstory.fm/story/cmvp8x3dc02xv01wc13a7dvh5",
+    "pubDate": "Tue, 27 Oct 2026 22:01:59 GMT",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmvp8x3dc02xv01wc13a7dvh5/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmvp8x3dc02xw01wc4vgeg3rx.mp3?v=1793018529103",
+    "duration": 818,
+    "episodeType": "full",
+    "artwork": "https://image.firstory-cdn.me/Image/cmdpx4cs200ax01xldg5ta89p/tF9iCxVh5Sa5NsdWQV408.jpg",
+    "artworkIsEpisode": true,
+    "intro": "想像一條長達 13 公尺、比公車還長、重達 1.1 公噸的史前巨蛇在沼澤裡無聲游動，連史前鱷魚都成了牠的潛在獵物！牠不用毒液，光憑驚人的肌肉力量就能制伏對手。更神奇的是，科學家竟然透過牠的脊椎骨，解開了六千萬年前地球赤道高達攝氏 30 多度的超級溫室密碼！究竟為什麼現在沒有這麼大的蛇？2024 年在印度發現的神秘蛇王又是誰？快跟著科學隊長與好奇博士，一起穿越時空探索這隻震撼遠古的綠色巨獸吧！",
+    "matchedBy": "code",
+    "labeledPublic": false,
+    "trailerOnly": false,
+    "apple": {
+     "trackId": 1000798175159,
+     "url": "https://podcasts.apple.com/tw/podcast/%E7%A9%BF%E8%B6%8A%E5%85%AD%E5%8D%83%E8%90%AC%E5%B9%B4%E7%9A%84%E7%B6%A0%E8%89%B2%E5%A4%A2%E9%AD%98-%E8%A7%A3%E5%AF%86-%E6%B3%B0%E5%9D%A6%E5%B7%A8%E8%9F%92-%E7%9A%84%E7%B5%9E%E6%AE%BA%E7%A5%9E%E5%8A%9B-sp-63/id1812447277?i=1000798175159&uo=4"
+    },
+    "spotify": null
+   }
+  ],
   "118": [
    {
     "guid": "cmvp8rceo072r01xq87bl78yl",
