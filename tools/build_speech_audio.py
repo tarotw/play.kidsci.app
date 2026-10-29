@@ -49,7 +49,7 @@ def collect_texts():
     for island in islands:
         intro = island.get('intro', '')
         add(intro)
-        add(f"歡迎來到宇宙群島！這裡是{island['name']}。{intro}")
+        add(f"歡迎來到宇宙島！這裡是{island['name']}。{intro}")
         for page in island.get('tour', []):
             add(page['text'])
     # 和故事卡共用同一份摘要程式，避免畫面縮短後找不到對應語音。

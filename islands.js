@@ -1,4 +1,4 @@
-// 宇宙好好聽・宇宙群島：每一集故事都是一個小居民，住在浮在天上的島。坐火箭在島和島之間飛。
+// 科學好好聽-宇宙島：每一集故事都是一個小居民，住在浮在天上的島。坐火箭在島和島之間飛。
 // 資料：data/islands.json（有哪些島、每座島住哪些集）、data/catalog.json、data/dialogue.json。
 import { loadProgress, PROGRESS_KEY as STORE_KEY } from './progress-store.js';
 import { patchDialogs } from './compat.js';
@@ -79,7 +79,7 @@ function renderHud() {
   $('#people-btn').disabled = false;
   if (!def) {
     renderResidentEntrance(null);
-    $('#isle-name').textContent = '🗺️ 宇宙群島';
+    $('#isle-name').textContent = '🗺️ 宇宙島';
     const heard = stamps.seen.filter((c) => byCode.has(c)).length;
     $('#isle-meta').textContent = `${isles.length} 座島 · 去過 ${visited.size} 座 · 拜訪過 ${heard} 個居民`;
     $('#isle-meta').hidden = false;
@@ -100,7 +100,7 @@ function renderHud() {
   $('#people-btn').setAttribute('aria-label', `看${def.name}的 ${x.eps.length} 位居民`);
   $('#people-btn').hidden = !x.eps.length;
   $('#isle-meta').hidden = !!x.eps.length;
-  if (!x.eps.length) $('#isle-meta').textContent = '宇宙群島的母島 · 點科學隊長圖像聽玩法說明';
+  if (!x.eps.length) $('#isle-meta').textContent = '宇宙島的母島 · 點科學隊長圖像聽玩法說明';
   $('#map-ico').textContent = '🗺️'; $('#map-txt').textContent = '全部的島';
   $('#map-btn').setAttribute('aria-label', '看全部的島');
   const p = new URLSearchParams(location.search);
@@ -353,7 +353,7 @@ async function init() {
     onClear: () => { stamps = { ear: [], hand: [], seen: [], missions: [], guess: 0 }; saveStamps(); world.refreshMarks(); renderHud(); },
   });
   if (!webglOk()) {
-    $('#loading-text').innerHTML = '這台裝置沒辦法顯示 3D 的宇宙群島。<br><a class="btn" href="knob.html?gl=0">改用平面的萬物地圖</a>';
+    $('#loading-text').innerHTML = '這台裝置沒辦法顯示 3D 的宇宙島。<br><a class="btn" href="knob.html?gl=0">改用平面的萬物地圖</a>';
     return;
   }
   // 分享連結：?ch=代碼 從那一集住的島出發；?isle=島 從那座島出發

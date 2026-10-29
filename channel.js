@@ -1,4 +1,4 @@
-// 宇宙好好聽：頻道卡（介紹對話＋到 Apple Podcasts、Spotify 收聽）、實驗、航行日誌。萬物旋鈕版（app.js）與放大縮小版（zoom.js）共用。
+// 科學好好聽-宇宙島：頻道卡（介紹對話＋到 Apple Podcasts、Spotify 收聽）、實驗、航行日誌。萬物旋鈕版（app.js）與放大縮小版（zoom.js）共用。
 import { iconFor } from './explorer.js';
 import { iconMarkup } from './topic-art.js';
 import { speakLines, stopSpeaking, pauseSpeaking, resumeSpeaking, canSpeak } from './speech.js';

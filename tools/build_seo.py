@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """把「搜尋引擎看得到的內容」寫進 index.html、sitemap.xml、robots.txt。
 
-宇宙群島整個畫面是 3D 畫布，搜尋引擎看不到字。所以這裡根據 data/islands.json、data/catalog.json
+宇宙島整個畫面是 3D 畫布，搜尋引擎看不到字。所以這裡根據 data/islands.json、data/catalog.json
 產生一份文字版（每座島、每一集的標題，連結用 ?ch=代碼）和結構化資料（JSON-LD），
 放在 index.html 的標記之間；每次目錄更新後由 GitHub Actions 重跑。
 文字版是給螢幕閱讀器和搜尋引擎用的真實內容（視覺上收起來，內容和畫面上一致），不是另外塞的關鍵字。
@@ -56,10 +56,10 @@ def main() -> None:
     live = [(i, x) for i, x in zip(islands, per) if x or i['id'] == data['start']]
 
     # ---- 標題、描述（集數寫真的數字）----
-    title = "科學好好聽｜兒童科普 Podcast 互動地圖・宇宙群島"
-    desc = (f"《科學好好聽》兒童科普 Podcast 的 3D 互動地圖：{total} 集科學故事變成小居民，住在動物、恐龍、太空、人體、物理的浮空島上。"
+    title = "科學好好聽-宇宙島｜兒童科普 Podcast 3D 互動地圖"
+    desc = (f"科學好好聽-宇宙島：《科學好好聽》兒童科普 Podcast 的 3D 互動地圖，{total} 集科學故事變成小居民，住在動物、恐龍、太空、人體、物理的浮空島上。"
             "坐火箭到雨林、深海、月亮拜訪他們，點一下就能聽介紹、連到 Apple Podcasts 和 Spotify 收聽，親子一起學科學。")
-    og_desc = f"坐火箭去拜訪 {total} 個兒童科普故事：恐龍、太空、動物、人體、科技，點一下就能認識他們！"
+    og_desc = f"{total} 個兒童科學故事變成小居民，住在浮在天上的島。坐火箭去拜訪恐龍、動物、太空和科學的故事島，點一下就能聽！"
 
     # ---- JSON-LD ----
     series = {
@@ -69,17 +69,17 @@ def main() -> None:
         "sameAs": [APPLE, SPOTIFY], "image": SITE + "assets/logo-banner.png",
     }
     ld = [
-        {"@context": "https://schema.org", "@type": "WebSite", "@id": SITE + "#site", "url": SITE, "name": "宇宙好好聽・宇宙群島",
-         "alternateName": [f"{NAME} 宇宙群島", "科學好好聽互動地圖"], "inLanguage": "zh-TW", "description": desc,
+        {"@context": "https://schema.org", "@type": "WebSite", "@id": SITE + "#site", "url": SITE, "name": "科學好好聽-宇宙島",
+         "alternateName": ["宇宙島", f"{NAME} 宇宙島", "科學好好聽互動地圖"], "inLanguage": "zh-TW", "description": desc,
          "publisher": {"@id": SITE + "#podcast"}},
         {"@context": "https://schema.org", **series},
-        {"@context": "https://schema.org", "@type": "ItemList", "name": "宇宙群島的島", "numberOfItems": len(live),
+        {"@context": "https://schema.org", "@type": "ItemList", "name": "宇宙島的島", "numberOfItems": len(live),
          "itemListElement": [{"@type": "ListItem", "position": n + 1, "name": isl["name"], "description": isl["intro"],
                               "url": f"{SITE}?isle={isl['id']}"} for n, (isl, _) in enumerate(live)]},
         {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
             {"@type": "Question", "name": "科學好好聽是什麼？", "acceptedAnswer": {"@type": "Answer", "text": "科學好好聽是給孩子聽的科普 Podcast，用有趣的故事介紹恐龍、太空、動物、人體、物理和科技。"}},
-            {"@type": "Question", "name": "宇宙群島怎麼玩？", "acceptedAnswer": {"@type": "Answer", "text": "每一集故事是一個住在浮空島上的小居民。拖曳轉動畫面、點小居民就能聽到這一集的介紹（還可以念出來），也可以按「去別的島」坐火箭到其他島。"}},
-            {"@type": "Question", "name": "哪裡可以收聽科學好好聽？", "acceptedAnswer": {"@type": "Answer", "text": "在 Apple Podcasts 和 Spotify 都可以收聽。宇宙群島上點一下小居民就會看到這一集的介紹，免費的集數可以直接在卡片裡的 Apple Podcasts 播放器聽完整一集，也可以點按鈕到 Apple Podcasts 或 Spotify 收聽；金色皇冠是 VIP 訂閱集數。"}},
+            {"@type": "Question", "name": "宇宙島怎麼玩？", "acceptedAnswer": {"@type": "Answer", "text": "每一集故事是一個住在浮空島上的小居民。拖曳轉動畫面、點小居民就能聽到這一集的介紹（還可以念出來），也可以按「去別的島」坐火箭到其他島。"}},
+            {"@type": "Question", "name": "哪裡可以收聽科學好好聽？", "acceptedAnswer": {"@type": "Answer", "text": "在 Apple Podcasts 和 Spotify 都可以收聽。宇宙島上點一下小居民就會看到這一集的介紹，免費的集數可以直接在卡片裡的 Apple Podcasts 播放器聽完整一集，也可以點按鈕到 Apple Podcasts 或 Spotify 收聽；金色皇冠是 VIP 訂閱集數。"}},
             {"@type": "Question", "name": "適合幾歲的孩子？", "acceptedAnswer": {"@type": "Answer", "text": "適合 4 到 12 歲的孩子，大人陪著一起聽也很有趣。"}},
         ]},
     ]
@@ -88,28 +88,32 @@ def main() -> None:
     head = f"""<!--seo-head:start-->
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
-<meta name="keywords" content="科學好好聽,兒童科普,兒童 Podcast,親子 Podcast,科學故事,孩子學科學,恐龍,太空,動物,人體,物理,科普互動地圖,宇宙群島">
+<meta name="keywords" content="科學好好聽,兒童科普,兒童 Podcast,親子 Podcast,科學故事,孩子學科學,恐龍,太空,動物,人體,物理,科普互動地圖,宇宙島,科學好好聽宇宙島">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:site_name" content="宇宙好好聽">
+<meta property="og:site_name" content="科學好好聽-宇宙島">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(og_desc)}">
-<meta property="og:image" content="{SITE}assets/logo-banner.png">
-<meta property="og:image:alt" content="科學好好聽">
+<meta property="og:image" content="{SITE}assets/og-cover.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="科學好好聽-宇宙島：浮在天上的科學故事島，小居民就是一集一集的故事">
 <meta property="og:url" content="{SITE}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(og_desc)}">
-<meta name="twitter:image" content="{SITE}assets/logo-banner.png">
+<meta name="twitter:image" content="{SITE}assets/og-cover.jpg">
+<meta name="twitter:image:alt" content="科學好好聽-宇宙島：浮在天上的科學故事島">
 <link rel="canonical" href="{SITE}">
 {ld_html}
 <!--seo-head:end-->"""
 
     # ---- 文字版 ----
-    parts = [f'<!--seo-body:start-->\n<section class="text-version" id="text-version" aria-label="宇宙群島文字版">',
-             f"<h2>{NAME}・宇宙群島：兒童科普 Podcast 互動地圖</h2>",
-             f"<p>《{NAME}》是給孩子聽的科普 Podcast。宇宙群島把 {total} 集科學故事變成住在浮空島上的小居民："
+    parts = [f'<!--seo-body:start-->\n<section class="text-version" id="text-version" aria-label="科學好好聽-宇宙島文字版">',
+             "<h2>科學好好聽-宇宙島：兒童科普 Podcast 互動地圖</h2>",
+             f"<p>《{NAME}》是給孩子聽的科普 Podcast。科學好好聽-宇宙島把 {total} 集科學故事變成住在浮空島上的小居民："
              f"拖曳轉動畫面、點一下小居民就能看到這一集的介紹，再到 "
              f'<a href="{APPLE}">Apple Podcasts</a> 或 <a href="{SPOTIFY}">Spotify</a> 收聽（其中 {free} 集免費，卡片裡就有播放器）。'
              "適合 4 到 12 歲的孩子，親子一起學恐龍、太空、動物、人體、物理和科技。</p>"]

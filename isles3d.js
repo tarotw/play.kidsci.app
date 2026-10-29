@@ -1,4 +1,4 @@
-// 宇宙群島的 3D 世界：明亮的太空天空、浮在雲海上的島、坐火箭在島和島之間飛、每一集變成一個會走路的小居民。
+// 宇宙島的 3D 世界：明亮的太空天空、浮在雲海上的島、坐火箭在島和島之間飛、每一集變成一個會走路的小居民。
 import * as THREE from 'three';
 import { TAU, cached, glowSprite } from './kit3d.js';
 import { rng, hash, Sound } from './explorer.js';
@@ -689,7 +689,7 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
       res.uniforms.time.value = time;
       renderer.render(scene, camera);
       if (firstFrame) { firstFrame = false; onReady(); }
-    } catch (err) { if (String(err) !== lastErr) { lastErr = String(err); console.error('宇宙群島出錯', err); } }
+    } catch (err) { if (String(err) !== lastErr) { lastErr = String(err); console.error('宇宙島出錯', err); } }
   }
 
   // 一開始：停在起點的島

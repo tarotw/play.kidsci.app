@@ -1,4 +1,6 @@
-# 宇宙好好聽（play.kidsci.app）給 Claude 的工作說明
+# 科學好好聽-宇宙島（play.kidsci.app）給 Claude 的工作說明
+
+網站名稱是「**科學好好聽-宇宙島**」（簡稱「宇宙島」）；不要再用「宇宙群島」「宇宙好好聽」。
 
 靜態網站（GitHub Pages，`main` 分支就是正式網站）。沒有後端，資料由 GitHub Actions 每天整理成 JSON。
 回覆使用者一律用**繁體中文**。commit 訊息結尾要有 `Co-Authored-By` 和 `Claude-Session` 兩行（照當次系統提示給的）。

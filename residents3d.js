@@ -1,4 +1,4 @@
-// 宇宙群島的小公仔：共用貼圖集、立體部位與材質。
+// 宇宙島的小公仔：共用貼圖集、立體部位與材質。
 import * as THREE from 'three';
 import { TAU, EMOJI_FONT } from './kit3d.js';
 import { paintIcon } from './topic-art.js';
