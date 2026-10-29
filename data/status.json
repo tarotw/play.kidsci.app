@@ -1,7 +1,29 @@
 {
- "generated": "2026-10-29T00:46:34Z",
+ "generated": "2026-10-29T02:52:30Z",
  "spotifyChecked": false,
  "episodes": {
+  "119": [
+   {
+    "guid": "cmvp9mni902z501wbdygbe3cl",
+    "title": "〈穿越光年的對話：從哥白尼到哈伯，揭開宇宙的「時光膠囊」｜EP.119〉",
+    "link": "https://open.firstory.fm/story/cmvp9mni902z501wbdygbe3cl",
+    "pubDate": "Wed, 28 Oct 2026 22:02:01 GMT",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmvp9mni902z501wbdygbe3cl/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmvp9mni902z601wb1dx2gbi4.mp3?v=1793019726496",
+    "duration": 816,
+    "episodeType": "full",
+    "artwork": "https://image.firstory-cdn.me/Image/cmdpx4cs200ax01xldg5ta89p/Vqtjj3wPP0KrElcYZVGmU.jpg",
+    "artworkIsEpisode": true,
+    "intro": "看星星其實就是看「過去」！就算是離我們最近的比鄰星，它的光也要跑四年多才能到你眼睛裡喔！今天我們要化身小小天文史學家，從古代會數石頭計時的人類，一路看到要把望遠鏡搬上外太空的現代科學家。快跟著科學隊長一起打開宇宙的時光膠囊吧！",
+    "matchedBy": "code",
+    "labeledPublic": false,
+    "trailerOnly": false,
+    "apple": {
+     "trackId": 1000798599514,
+     "url": "https://podcasts.apple.com/tw/podcast/%E7%A9%BF%E8%B6%8A%E5%85%89%E5%B9%B4%E7%9A%84%E5%B0%8D%E8%A9%B1-%E5%BE%9E%E5%93%A5%E7%99%BD%E5%B0%BC%E5%88%B0%E5%93%88%E4%BC%AF-%E6%8F%AD%E9%96%8B%E5%AE%87%E5%AE%99%E7%9A%84-%E6%99%82%E5%85%89%E8%86%A0%E5%9B%8A-ep-119/id1812447277?i=1000798599514&uo=4"
+    },
+    "spotify": null
+   }
+  ],
   "s63": [
    {
     "guid": "cmvp8x3dc02xv01wc13a7dvh5",
