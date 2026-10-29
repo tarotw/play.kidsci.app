@@ -55,9 +55,9 @@ python3 tools/build_catalog.py
 
 ## 每天自動執行
 
-`.github/workflows/status.yml` 每天台灣時間 07:43 讀 [listensci](https://github.com/tarotw/listensci) 更新好的 `soundon.xml` 與 `apple.json`，重跑上架狀態與目錄。Spotify 要在 repo 的 Settings → Secrets 加上 `SPOTIFY_CLIENT_ID`、`SPOTIFY_CLIENT_SECRET` 才會檢查（節目 ID 預設已填好）。
+`.github/workflows/status.yml` 每天台灣時間 07:43 讀 [listensci](https://github.com/tarotw/listensci) 更新好的 `soundon.xml` 與 `apple.json`，重跑上架狀態與目錄。Spotify 用 repo Actions Secrets 裡的 `SPOTIFY_CLIENT_ID`、`SPOTIFY_CLIENT_SECRET` 呼叫官方 API（已設定；節目 ID 預設已填好）。
 
-每一集的 **Apple Podcasts、Spotify 連結**由 `tools/platform_links.py` 找（同一個每日工作，存在 `data/platforms.json`），頻道卡上每一集都會列出這兩個平台：有連結就點一下打開，找不到就不顯示那個平台。最準的來源是每一集的 Firstory 單集頁：Firstory 自己把節目發佈到 Spotify 和 Apple，單集頁上就寫著那一集在兩個平台的網址（看過的頁面會記下來，還沒有連結的每週再看一次）。另外也用 iTunes Lookup／搜尋補 Apple，再用標題對到代碼（`build_catalog.py`）。只在 Firstory 會員區、不在公開 RSS 裡的訂閱集數，平台上找不到公開連結，就不顯示。如果之後想改用 Spotify 官方 API，把 `SPOTIFY_CLIENT_ID`、`SPOTIFY_CLIENT_SECRET` 加到 repo 的 Actions Secrets 就會自動使用（節目 ID `1eyISRdcgDTwZqIqrP1qKv` 已寫在程式裡）。
+每一集的 **Apple Podcasts、Spotify 連結**由 `tools/platform_links.py` 找（同一個每日工作，存在 `data/platforms.json`），頻道卡上每一集都會列出這兩個平台：有連結就點一下打開，找不到就不顯示那個平台。最準的來源是每一集的 Firstory 單集頁：Firstory 自己把節目發佈到 Spotify 和 Apple，單集頁上就寫著那一集在兩個平台的網址（看過的頁面會記下來，還沒有連結的每週再看一次）。另外也用 iTunes Lookup／搜尋補 Apple，再用標題對到代碼（`build_catalog.py`）。Spotify 另外用官方 API（repo 的 Actions Secrets 有 `SPOTIFY_CLIENT_ID`、`SPOTIFY_CLIENT_SECRET`，節目 ID `1eyISRdcgDTwZqIqrP1qKv` 已寫在程式裡）拿到全部集數，包含不在公開 RSS 裡的 VIP 集數，再用標題對到代碼。金鑰拿掉的話只能讀 Spotify 公開頁面（通常只有最新一集），VIP 集數就沒有 Spotify 連結。某一集 Firstory 沒同步到平台，那個平台就不顯示。
 
 ## 本機預覽
 
