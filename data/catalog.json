@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T07:28:25Z",
+ "generated": "2026-10-29T00:46:34Z",
  "episodes": [
   {
    "code": "c10",
@@ -1223,10 +1223,10 @@
     "duration": 818,
     "pubDate": "Tue, 27 Oct 2026 22:01:59 GMT"
    },
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/98/bb/6c/98bb6c64-a2b9-a897-d2a4-ef3128f43355/mza_537763749391421619.jpg/600x600bb.jpg",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/41/3f/f0/413ff073-a7c5-b6a0-8286-3f3dbf061111/mza_1220969070254895353.jpeg/600x600bb.jpg",
    "intro": "想像一條長達 13 公尺、比公車還長、重達 1.1 公噸的史前巨蛇在沼澤裡無聲游動，連史前鱷魚都成了牠的潛在獵物！牠不用毒液，光憑驚人的肌肉力量就能制伏對手。更神奇的是，科學家竟然透過牠的脊椎骨，解開了六千萬年前地球赤道高達攝氏 30 多度的超級溫室密碼！究竟為什麼現在沒有這麼大的蛇？2024 年在印度發現的神秘蛇王又是誰？快跟著科學隊長與好奇博士，一起穿越時空探索這隻震撼遠古的綠色巨獸吧！",
    "labs": [],
-   "artworkLocal": "assets/episode-covers/56b82616cc90b378e7ba.jpg"
+   "artworkLocal": "assets/episode-covers/3eed6f5eba7b1e707c88.jpg"
   },
   {
    "code": "103",
@@ -1557,6 +1557,24 @@
    "intro": "小朋友，你想知道太空人在月球上第一餐吃什麼嗎？牛肉、馬鈴薯竟然都被帶上月球了！今天我們要跟著阿波羅太空船，看看這場「太空芭蕾」是怎麼跳的，還要一起看看那台在月球上跑來跑去的「月球車」，最後看看英雄們是怎麼穿過紅通通的大氣層，安全降落在大海裡的喔！",
    "labs": [],
    "artworkLocal": "assets/episode-covers/d678ed826affffcc3476.jpg"
+  },
+  {
+   "code": "119",
+   "title": "穿越光年的對話：從哥白尼到哈伯，揭開宇宙的「時光膠囊」",
+   "home": "l08",
+   "zone": "光年",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "apple": "https://podcasts.apple.com/tw/podcast/%E7%A9%BF%E8%B6%8A%E5%85%89%E5%B9%B4%E7%9A%84%E5%B0%8D%E8%A9%B1-%E5%BE%9E%E5%93%A5%E7%99%BD%E5%B0%BC%E5%88%B0%E5%93%88%E4%BC%AF-%E6%8F%AD%E9%96%8B%E5%AE%87%E5%AE%99%E7%9A%84-%E6%99%82%E5%85%89%E8%86%A0%E5%9B%8A-ep-119/id1812447277?i=1000798599514",
+    "spotify": "https://open.spotify.com/episode/1Vyq4pvQGuBUm5NN7gpFRG",
+    "duration": 816,
+    "pubDate": "2026-10-28T22:02:01Z"
+   },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/e2/78/9d/e2789d65-9fdc-30ff-fb1f-b5d6fcc13849/mza_15109105126403926297.jpg/600x600bb.jpg",
+   "intro": "看星星其實就是看「過去」！就算是離我們最近的比鄰星，它的光也要跑四年多才能到你眼睛裡喔！今天我們要化身小小天文史學家，從古代會數石頭計時的人類，一路看到要把望遠鏡搬上外太空的現代科學家。快跟著科學隊長一起打開宇宙的時光膠囊吧！",
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/2b266d6f37e79b3ed625.jpg"
   },
   {
    "code": "150",
