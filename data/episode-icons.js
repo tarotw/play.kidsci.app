@@ -342,6 +342,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "icon": "🚀",
     "subject": "阿波羅登月任務的全程"
   },
+  "119": {
+    "title": "穿越光年的對話：從哥白尼到哈伯，揭開宇宙的「時光膠囊」",
+    "contentKey": "113:c2ce248f",
+    "icon": "🔭",
+    "subject": "天文觀測的歷史與光行時"
+  },
   "150": {
     "title": "生物演化歷程：從單細胞到恐龍霸主 (上集)",
     "contentKey": "233:77545205",
