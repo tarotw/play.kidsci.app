@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T02:52:30Z",
+ "generated": "2026-10-29T14:41:55Z",
  "firstory": {
   "https://open.firstory.fm/story/cmdpx4cur00cq01xld19aha50": {
    "spotify": "https://open.spotify.com/episode/3LeJFdsCDBCpJGKXBftJ8v",
@@ -2772,38 +2772,1051 @@
  },
  "spotify": {
   "show": "https://open.spotify.com/show/1eyISRdcgDTwZqIqrP1qKv",
-  "source": "public",
+  "source": "api",
   "episodes": [
    {
-    "title": "〈登月大冒險：阿波羅 11 號、史上最強火箭與人類的一大步｜EP.117〉",
-    "url": "https://open.spotify.com/episode/39O86S9aP8znpGJ3gDiS8c",
-    "date": "2026-10-21T22:02:00Z"
-   },
-   {
-    "title": "〈登月全紀錄：40 萬公里的太空芭蕾與月球上的 382 公斤寶藏｜EP.118〉",
-    "url": "https://open.spotify.com/episode/3kgxk9Egwj44jZW6OTLKu8",
-    "date": "2026-10-26T22:02:00Z"
+    "title": "〈穿越光年的對話：從哥白尼到哈伯，揭開宇宙的「時光膠囊」｜EP.119〉",
+    "url": "https://open.spotify.com/episode/1Vyq4pvQGuBUm5NN7gpFRG",
+    "date": "2026-10-28"
    },
    {
     "title": "〈穿越六千萬年的綠色夢魘：解密「泰坦巨蟒」的絞殺神力｜SP.63〉",
     "url": "https://open.spotify.com/episode/5WWbkdLolxyKEf7vnSe8Sd",
-    "date": "2026-10-27T22:01:00Z"
+    "date": "2026-10-27"
    },
    {
-    "title": "〈穿越光年的對話：從哥白尼到哈伯，揭開宇宙的「時光膠囊」｜EP.119〉",
-    "url": "https://open.spotify.com/episode/1Vyq4pvQGuBUm5NN7gpFRG",
-    "date": "2026-10-28T22:02:00Z"
+    "title": "〈登月全紀錄：40 萬公里的太空芭蕾與月球上的 382 公斤寶藏｜EP.118〉",
+    "url": "https://open.spotify.com/episode/3kgxk9Egwj44jZW6OTLKu8",
+    "date": "2026-10-26"
+   },
+   {
+    "title": "〈登月大冒險：阿波羅 11 號、史上最強火箭與人類的一大步｜EP.117〉",
+    "url": "https://open.spotify.com/episode/39O86S9aP8znpGJ3gDiS8c",
+    "date": "2026-10-21"
+   },
+   {
+    "title": "〈穿越一億年的淡水「水中裝甲車」：解密鱷雀鱔的雙排利齒、防彈硬鱗與長生基因之謎｜SP.62〉",
+    "url": "https://open.spotify.com/episode/7yEXvuYihFh5e2B1AIBu7k",
+    "date": "2026-10-20"
+   },
+   {
+    "title": "〈貼地飛行的太空火箭(下)：特斯拉第二代 Roadster 的推進器、馬赫環與牛頓第三定律｜VIP.34〉",
+    "url": "https://open.spotify.com/episode/4yU11I2pR3yu1DULKQFRIY",
+    "date": "2026-10-18"
+   },
+   {
+    "title": "〈貼地飛行的太空火箭(上)：特斯拉第二代 Roadster 的慣性與抓地力黑科技｜VIP.33〉",
+    "url": "https://open.spotify.com/episode/2hnihdDz3Gpe3Pg05ybemi",
+    "date": "2026-10-18"
+   },
+   {
+    "title": "〈非洲牛羚的瘋狂大遷徙與氣候守護神傳奇｜EP.252〉",
+    "url": "https://open.spotify.com/episode/0GtGKEL3nwcm2HkVRSiuof",
+    "date": "2026-10-15"
+   },
+   {
+    "title": "〈隱形的光芒：用神奇的太空望遠鏡，看見「看不見」的宇宙｜EP.116〉",
+    "url": "https://open.spotify.com/episode/2A64fhpTIh7j0ez79fOW3Y",
+    "date": "2026-10-14"
+   },
+   {
+    "title": "〈魔術般的熱量大搬家：冷氣如何把房間變冰箱？暖氣如何從冰雪中榨出熱能？｜VIP. 32〉",
+    "url": "https://open.spotify.com/episode/16KTTwaTwPVOGe9X6DKOTq",
+    "date": "2026-10-12"
+   },
+   {
+    "title": "〈星空藏寶圖：從巨石陣到哈伯望遠鏡的天文奇幻旅程｜EP.115〉",
+    "url": "https://open.spotify.com/episode/2kiDYBkzNbpE60CNjJ5nFB",
+    "date": "2026-10-11"
+   },
+   {
+    "title": "〈陸地重裝坦克：犀牛的史前傳說與科技救援行動｜EP.251〉",
+    "url": "https://open.spotify.com/episode/07Xdfw6ZIyPyDCHQFcPNdq",
+    "date": "2026-10-07"
+   },
+   {
+    "title": "〈太空軌道生活指南：星圖座標、無重力挑戰與神奇人造衛星｜EP.114〉",
+    "url": "https://open.spotify.com/episode/1Sr5GmfvtPe9mZ121UFGtj",
+    "date": "2026-10-06"
+   },
+   {
+    "title": "〈聽粉點播｜荒漠極速超跑鳥：有翅膀卻不愛飛、專吃毒蛇的「走鵑」傳奇｜VIP.31〉",
+    "url": "https://open.spotify.com/episode/3So2uk190vbycZEEqcTfMM",
+    "date": "2026-10-05"
+   },
+   {
+    "title": "〈太空先鋒部隊：機器人探險家與最強火箭的祕密地圖｜EP.113〉",
+    "url": "https://open.spotify.com/episode/138FoKQfB5u8zqmxDfpXO9",
+    "date": "2026-10-04"
+   },
+   {
+    "title": "〈科學好好聽實驗室｜3D 太陽系邊聽邊玩正式啟航！✨🪐〉",
+    "url": "https://open.spotify.com/episode/7zYV2xiCuJxnpwkbbtHGiF",
+    "date": "2026-10-04"
+   },
+   {
+    "title": "〈揭開海洋幽靈的面紗：在海床上飛翔的「魟魚」戰士｜EP.250〉",
+    "url": "https://open.spotify.com/episode/3Pk4zXt18i9bO2ulLOieMD",
+    "date": "2026-10-01"
+   },
+   {
+    "title": "〈月亮變變變！為什麼月亮會變臉？｜EP.112〉",
+    "url": "https://open.spotify.com/episode/3tEpyqQdZMjOfRm1Ph77pL",
+    "date": "2026-09-30"
+   },
+   {
+    "title": "〈荒野中的無聲死神：揭秘非洲岩蟒的隱秘生活與狂野本能｜EP.249〉",
+    "url": "https://open.spotify.com/episode/2E8bxdzWzIMKL29fiCPptv",
+    "date": "2026-09-29"
+   },
+   {
+    "title": "〈月球肚子裡藏著大火球？揭開月球的身世之謎！｜EP.111〉",
+    "url": "https://open.spotify.com/episode/04GV4BoYBx75t3IMfPGpiz",
+    "date": "2026-09-28"
+   },
+   {
+    "title": "〈吃草怎麼長出滿身牛肉？解密牛的「體內細菌農場」與四個胃的消化奇蹟｜SP.60〉",
+    "url": "https://open.spotify.com/episode/5vE1dU93WyVAbixkfOn33n",
+    "date": "2026-09-24"
+   },
+   {
+    "title": "〈太陽系衝鋒號(下)：氣體巨人的奇幻國度｜EP.106〉",
+    "url": "https://open.spotify.com/episode/2XBcncBPaqGcP1Q2Is3xT6",
+    "date": "2026-09-23"
+   },
+   {
+    "title": "〈科學好好聽實驗室｜🌪️ 讓孩子親手召喚強風、啟動地震，揭開摩天大樓的秘密！〉",
+    "url": "https://open.spotify.com/episode/4r3S0WVNjDQRDDovk3WWvf",
+    "date": "2026-09-23"
+   },
+   {
+    "title": "〈從「孤僻宅男」到「瘋狂暴徒」：蝗蟲變身真相與科技圍剿戰｜EP.248〉",
+    "url": "https://open.spotify.com/episode/1TPu7DwjQWCOIwIWxcafp7",
+    "date": "2026-09-21"
+   },
+   {
+    "title": "〈太陽系專輯｜太陽系衝鋒號(上)：勇闖內行星的冰火世界｜EP.105〉",
+    "url": "https://open.spotify.com/episode/3HI4aX7VZliQKMWBjXSC6x",
+    "date": "2026-09-20"
+   },
+   {
+    "title": "〈草原上的微型摩天樓：解密非洲白蟻丘的「呼吸」奇蹟｜EP.247〉",
+    "url": "https://open.spotify.com/episode/2Zk7wECNiT39Ba5F7qBTJM",
+    "date": "2026-09-17"
+   },
+   {
+    "title": "〈太陽系專輯｜太陽的壞脾氣：雀斑、噴嚏與極光之舞｜EP.104〉",
+    "url": "https://open.spotify.com/episode/0AUlaSPe4nlT2IIv3aWL9K",
+    "date": "2026-09-16"
+   },
+   {
+    "title": "☀️ 衝進上百萬度的恆星煉獄！人類史上最快飛行器：帕克太陽探測器如何「觸摸太陽」？",
+    "url": "https://open.spotify.com/episode/3jaVZRN50SyFwJgFVYM2eJ",
+    "date": "2026-09-15"
+   },
+   {
+    "title": "〈聽粉點播｜勇闖太陽煉獄的極速飛船：帕克太陽探測器與「觸摸恆星」的工程奇蹟｜VIP.30〉",
+    "url": "https://open.spotify.com/episode/00latScXfjt3YGjsWtswcW",
+    "date": "2026-09-14"
+   },
+   {
+    "title": "〈太陽系專輯｜宇宙大廚師：太陽的火熱廚房冒險｜EP.103〉",
+    "url": "https://open.spotify.com/episode/6Wgvt8WUbOCCRw3uHKgijW",
+    "date": "2026-09-13"
+   },
+   {
+    "title": "〈聽粉點播｜科學家專輯｜拿自己身體當實驗的瘋狂醫學天才：維爾納．福斯曼與心導管技術的生死冒險｜VIP.29〉",
+    "url": "https://open.spotify.com/episode/1jszLFgbPmZx4t7p8e2B8H",
+    "date": "2026-09-10"
+   },
+   {
+    "title": "〈太陽系專輯｜天王星 vs 海王星：躺平哥與暴風弟的冰凍對決｜EP.110〉",
+    "url": "https://open.spotify.com/episode/6mIAiQuS0IyQ16M9Es3EQP",
+    "date": "2026-09-09"
+   },
+   {
+    "title": "〈閃耀的黃金活寶石：仰望星空的滾糞蟲｜EP.246〉",
+    "url": "https://open.spotify.com/episode/5ITEYblUt1lnHOEDei1l5A",
+    "date": "2026-09-07"
+   },
+   {
+    "title": "〈太陽系專輯｜木星 vs 土星：太陽系的胖嘟嘟兄弟｜EP.109〉",
+    "url": "https://open.spotify.com/episode/0WpxQ9rcfAYx8HBwXUmmVo",
+    "date": "2026-09-06"
+   },
+   {
+    "title": "〈撕下猥瑣反派標籤：斑點鬣狗的權謀與生存絕殺｜EP.245〉",
+    "url": "https://open.spotify.com/episode/1sJiHFHLDhwelXXLrrmsBl",
+    "date": "2026-09-03"
+   },
+   {
+    "title": "〈太陽系專輯｜地球 vs 火星：藍色水球與紅色沙漠的超級PK｜EP.108〉",
+    "url": "https://open.spotify.com/episode/4DtW1lgEJTMYcEIWizdtxJ",
+    "date": "2026-09-02"
+   },
+   {
+    "title": "〈聽粉點播｜摩天大樓的抗震防風魔法：台北101的深根地基、巨型鋼骨與金色風阻尼球｜VIP.28〉",
+    "url": "https://open.spotify.com/episode/1LYOxQQh37KinyJtIb6kRK",
+    "date": "2026-08-31"
+   },
+   {
+    "title": "〈太陽系專輯｜水星與金星：冰火煉獄與酸雨女王｜EP.107〉",
+    "url": "https://open.spotify.com/episode/0SzjconGAwISUZgiNiSGM4",
+    "date": "2026-08-30"
+   },
+   {
+    "title": "〈牛頓專輯(下)｜磨鏡片、發明微積分、抓偽幣！牛頓的跨界神操作大結局｜VIP.27〉",
+    "url": "https://open.spotify.com/episode/6qjWDHkBcXjwT36QH29JPL",
+    "date": "2026-08-27"
+   },
+   {
+    "title": "〈世界之最專輯｜比子彈還快的極速黑鳥：SR-71 偵察機的熱浪傳奇與太空工程｜SP.59〉",
+    "url": "https://open.spotify.com/episode/5fpmdkUUSzfvt5nHimr8He",
+    "date": "2026-08-26"
+   },
+   {
+    "title": "〈海底最強生化戰士：雀尾螳螂蝦的爆破神拳與奇幻視覺｜EP.244〉",
+    "url": "https://open.spotify.com/episode/0G1rMWC0fePkWh9dxGCynL",
+    "date": "2026-08-24"
+   },
+   {
+    "title": "〈原子小積木的變身秀：核能是怎麼發電的？｜EP.93〉",
+    "url": "https://open.spotify.com/episode/4ol6KEU5x90K0yoiddhPVP",
+    "date": "2026-08-23"
+   },
+   {
+    "title": "〈牛頓專輯(中)｜公車急煞、彩虹密碼與火箭升空！牛頓三大運動定律與光的魔法｜VIP.26〉",
+    "url": "https://open.spotify.com/episode/4GiNBClVH37W0JUx8xewto",
+    "date": "2026-08-20"
+   },
+   {
+    "title": "〈電力小精靈的變裝派對：電是怎麼進到你家的？｜EP.92〉",
+    "url": "https://open.spotify.com/episode/6jHkMvQPqdVWGTsIySz2mH",
+    "date": "2026-08-19"
+   },
+   {
+    "title": "〈 不怕痛、不衰老、還不會得癌症！地底下的超級英雄「裸鼴鼠」｜VIP.24〉",
+    "url": "https://open.spotify.com/episode/6o5iXVd9UcdIorUYxmDfAR",
+    "date": "2026-08-17"
+   },
+   {
+    "title": "〈牛頓專輯(上)｜蘋果砸出的宇宙秘密！牛頓奇蹟年與萬有引力的誕生｜VIP.25〉",
+    "url": "https://open.spotify.com/episode/7kgOAPIwzpAhsPod2sf8WU",
+    "date": "2026-08-16"
+   },
+   {
+    "title": "〈荒漠裡的變形金剛：兩千歲不死的超級麵包樹｜EP.243〉",
+    "url": "https://open.spotify.com/episode/48KoTdh3FaVcBiSHjivGwF",
+    "date": "2026-08-13"
+   },
+   {
+    "title": "〈電力小精靈的大冒險：電力從哪裡來？｜EP.91〉",
+    "url": "https://open.spotify.com/episode/3rEoCqKjW7ZIqr1Y5GxY74",
+    "date": "2026-08-12"
+   },
+   {
+    "title": "〈被老師打最低分的論文，最後得了諾貝爾獎！斯萬特．阿瑞尼斯的科學逆襲故事｜VIP.23〉",
+    "url": "https://open.spotify.com/episode/59H0HdPQC1zVFXCvBmZlxF",
+    "date": "2026-08-10"
+   },
+   {
+    "title": "〈靜電英雄與閃電：大自然的電力派對｜EP.90〉",
+    "url": "https://open.spotify.com/episode/5spvzYXSsxSUcMkgB6uo8M",
+    "date": "2026-08-09"
+   },
+   {
+    "title": "〈海洋裡的熱帶雨林：探索珊瑚礁裡的極限求生大戰｜EP.242〉",
+    "url": "https://open.spotify.com/episode/4QKSVsmCFMI9wsj7RUvAUI",
+    "date": "2026-08-06"
+   },
+   {
+    "title": "〈電的魔法探險：電子小精靈的奇幻跑道｜EP.89〉",
+    "url": "https://open.spotify.com/episode/3iO9Zok706NWqcsWKBUTn1",
+    "date": "2026-08-05"
+   },
+   {
+    "title": "〈泡澡泡出靈感的瘋狂發明家（下）：搬動地球的槓桿、神話武器與現代科技奇蹟｜C22〉",
+    "url": "https://open.spotify.com/episode/1D8bPszAC0Ul6vdIqtHsIJ",
+    "date": "2026-08-03"
+   },
+   {
+    "title": "〈泡澡泡出靈感的瘋狂發明家（上）：阿基米德的皇冠密碼與浮力傳奇｜C21〉",
+    "url": "https://open.spotify.com/episode/63qPrQmtpEVYrxEuy4rrYg",
+    "date": "2026-08-02"
+   },
+   {
+    "title": "〈蓋在海底的超級萬里長城：大堡礁與珊瑚蟲的建築大揭秘｜EP.241〉",
+    "url": "https://open.spotify.com/episode/6dQQJkMjrnnLH682GisyX0",
+    "date": "2026-07-30"
+   },
+   {
+    "title": "〈熱能大冒險：熱與溫度的神祕差別｜EP.88〉",
+    "url": "https://open.spotify.com/episode/2zwDGKeUOSw18eKaux2HMv",
+    "date": "2026-07-29"
+   },
+   {
+    "title": "〈莽原動物生存法則：地表最快掠食與地下微型帝國｜EP.240〉",
+    "url": "https://open.spotify.com/episode/39em0Aq8bOBEJO2WI3ZsPB",
+    "date": "2026-07-27"
+   },
+   {
+    "title": "〈熱的魔法師：小精靈的能量派對｜EP.87〉",
+    "url": "https://open.spotify.com/episode/1hxgWAGvdGWVo26E1VXPe8",
+    "date": "2026-07-26"
+   },
+   {
+    "title": "〈非洲莽原生存戰：與巨獸共舞的抗旱奇蹟｜EP.239〉",
+    "url": "https://open.spotify.com/episode/7lsMJOhBtdz9Tnk1O9Bjc2",
+    "date": "2026-07-23"
+   },
+   {
+    "title": "〈公開｜聲音變變變：救護車的變音術與樂器的唱歌方法｜EP.86〉",
+    "url": "https://open.spotify.com/episode/0WBvMWG3rXfkxyGfzB7aQb",
+    "date": "2026-07-22"
+   },
+   {
+    "title": "〈VIP｜雲端上的空中城市：探索亞馬遜樹冠層｜EP.238〉",
+    "url": "https://open.spotify.com/episode/7BOXcEoteQtVfF0cyPLtKB",
+    "date": "2026-07-20"
+   },
+   {
+    "title": "〈公開｜海洋中的呆萌巨獸：翻車魚的奇特構造、日光浴之謎與驚人的跨赤道旅行｜P.20〉",
+    "url": "https://open.spotify.com/episode/1Ti5iwG1AgBDOVEBrZPR4g",
+    "date": "2026-07-20"
+   },
+   {
+    "title": "〈VIP點播｜水中「不老頑童」的奇幻魔法：墨西哥鈍口螈的超強肢體再生與基因解密｜VIP.19〉",
+    "url": "https://open.spotify.com/episode/5qKdLTFoxFWrih2PVjkWtX",
+    "date": "2026-07-16"
+   },
+   {
+    "title": "〈公開｜聲音小精靈的接力賽：推進擠擠的振動遊戲！｜EP.85〉",
+    "url": "https://open.spotify.com/episode/3b6Hj4g3yV6IXZDm97E6Dm",
+    "date": "2026-07-15"
+   },
+   {
+    "title": "〈VIP｜雨林裡的生存遊戲：潛入亞馬遜的神祕水陸世界｜EP.237〉",
+    "url": "https://open.spotify.com/episode/5YYbW0i1NeQDHQSXHW74pz",
+    "date": "2026-07-13"
+   },
+   {
+    "title": "〈公開｜宇宙大眼睛的超強眼鏡：雷射假星星與地下合體遊戲！｜EP.84〉",
+    "url": "https://open.spotify.com/episode/5RfueB0DiFFoLJoLVIS0c2",
+    "date": "2026-07-12"
+   },
+   {
+    "title": "〈VIP點播｜微米世界的極限生存大師：水熊蟲的「假死」超能力｜VIP.18〉",
+    "url": "https://open.spotify.com/episode/2mxiAogwiVcxFAHVwwohdv",
+    "date": "2026-07-09"
+   },
+   {
+    "title": "〈公開｜宇宙大眼睛：智利「甚大望遠鏡」VLT 尋寶記！｜EP.83〉",
+    "url": "https://open.spotify.com/episode/1xinLxB6oNuXUbdmH6HmKF",
+    "date": "2026-07-08"
+   },
+   {
+    "title": "〈VIP｜沙漠晝夜與不喝水的奇蹟：從南極到火星的極限挑戰｜EP.236〉",
+    "url": "https://open.spotify.com/episode/5U1ICFuGXPXIx6NgOPlKoG",
+    "date": "2026-07-06"
+   },
+   {
+    "title": "〈公開｜泡泡彩虹與雷射英雄：光影精靈的捉迷藏大賽！｜EP.82〉",
+    "url": "https://open.spotify.com/episode/5HSZanZI5eAzpn5BBAKeFg",
+    "date": "2026-07-05"
+   },
+   {
+    "title": "〈VIP｜沙漠裡的綠色巨人：索諾蘭的生存奇蹟｜EP.235〉",
+    "url": "https://open.spotify.com/episode/3nW2IoYY2p1XVrSMZP3pJa",
+    "date": "2026-07-02"
+   },
+   {
+    "title": "〈公開｜光影魔術師：揭開光線折射與反射的驚奇秘密！｜EP.81〉",
+    "url": "https://open.spotify.com/episode/5JpSfphMNCT0RESCQRqFY1",
+    "date": "2026-07-01"
+   },
+   {
+    "title": "〈VIP點播｜地球的氣候大怒神！聖嬰與反聖嬰現象的科學奧秘｜VIP.17〉",
+    "url": "https://open.spotify.com/episode/4vO5kkGcJrDmFX5XDup9lK",
+    "date": "2026-06-29"
+   },
+   {
+    "title": "〈公開｜宇宙偵探找找看：GPS如何從兩萬公里的太空找到你？｜EP.80〉",
+    "url": "https://open.spotify.com/episode/2LqGBlqIf2OklCmBbf0Lgz",
+    "date": "2026-06-28"
+   },
+   {
+    "title": "〈VIP｜暗夜精靈的魔指傳說：指猴的敲擊回聲定位與第六根手指之謎｜EP.234〉",
+    "url": "https://open.spotify.com/episode/0ilPvLGHtyuQh2kTaFyoX8",
+    "date": "2026-06-25"
+   },
+   {
+    "title": "〈公開｜太空裡的傳聲筒：通訊衛星與它們的超級快遞任務！｜EP.79〉",
+    "url": "https://open.spotify.com/episode/6AxgxcQwwWhhK7DMYyqtsh",
+    "date": "2026-06-24"
+   },
+   {
+    "title": "〈VIP｜解密表情大師與肌肉的記憶超能力！還有大腦通訊的新發現｜SP.56〉",
+    "url": "https://open.spotify.com/episode/3kuXS6xasgSU9Q6bR0Bt4N",
+    "date": "2026-06-22"
+   },
+   {
+    "title": "〈公開｜誰在玩躲貓貓？尋找隱形的超能力光線！｜EP.78〉",
+    "url": "https://open.spotify.com/episode/37aLRu6evKeOWjAR7VNwbx",
+    "date": "2026-06-21"
+   },
+   {
+    "title": "〈VIP｜雪山之鬼：雪豹的極限生存黑科技與驚人基因秘密｜EP.233〉",
+    "url": "https://open.spotify.com/episode/6GSRWujFtXnpcTSFL4oFWT",
+    "date": "2026-06-18"
+   },
+   {
+    "title": "〈公開｜能量特輯(3)｜宇宙的第一聲啼哭：神奇的微波與大霹靂回音！｜EP.77〉",
+    "url": "https://open.spotify.com/episode/174irTMcVeZ1MQrJdmxSEi",
+    "date": "2026-06-17"
+   },
+   {
+    "title": "〈VIP｜啟動人體無敵引擎！微觀下的肌肉三大家族與分子彈簧｜SP.55〉",
+    "url": "https://open.spotify.com/episode/7jJiJuJWJP66uQCl0tJFRo",
+    "date": "2026-06-16"
+   },
+   {
+    "title": "〈公開｜能量特輯(2)｜從火堆到發電廠：能量的超級變變變！｜EP.76〉",
+    "url": "https://open.spotify.com/episode/6NhPmo6YN22NcflNTI2fhC",
+    "date": "2026-06-16"
+   },
+   {
+    "title": "〈VIP｜雨林中的尤達大師：眼鏡猴的超能力與玻璃般脆弱的靈魂｜EP.232〉",
+    "url": "https://open.spotify.com/episode/0KqLGvexMaJ1g1nA028XDk",
+    "date": "2026-06-14"
+   },
+   {
+    "title": "〈公開｜能量特輯(1)｜變身大師：無所不在的能量世界｜EP.75〉",
+    "url": "https://open.spotify.com/episode/59lnepxgNIj2UaZNmQuwdI",
+    "date": "2026-06-11"
+   },
+   {
+    "title": "〈VIP｜深藍色的高智商異客：揭開海豚與虎鯨不為人知的「外星」文明｜EP.231〉",
+    "url": "https://open.spotify.com/episode/6ziaoQQNAApckss1sdmzf5",
+    "date": "2026-06-10"
+   },
+   {
+    "title": "〈公開｜重力特輯(4)｜空中陀螺對抗賽：直升機與海鷹偵探的祕密｜EP.74〉",
+    "url": "https://open.spotify.com/episode/2akKFYVR3QZWFhNJ6QSyHV",
+    "date": "2026-06-09"
+   },
+   {
+    "title": "〈VIP｜解密人體微觀宇宙：從36兆細胞大軍到看穿皮膚的透視超能力｜SP.54〉",
+    "url": "https://open.spotify.com/episode/3KehoCxevxn3BgDADOgtGZ",
+    "date": "2026-06-08"
+   },
+   {
+    "title": "〈公開｜重力特輯(3)｜飛天英雄大揭密：為什麼飛機能在天上飛？｜EP.73〉",
+    "url": "https://open.spotify.com/episode/11ZEJF4mLpxkhIodiPOzWv",
+    "date": "2026-06-07"
+   },
+   {
+    "title": "〈VIP｜誰說海牛只是胖？揭開「美人魚」的五大不可思議超能力｜EP.230〉",
+    "url": "https://open.spotify.com/episode/258rTsk22fk4wtjvNrnp9z",
+    "date": "2026-06-04"
+   },
+   {
+    "title": "〈公開｜重力特輯(2)｜月亮在對你拉勾勾？潮汐與引力的神祕律動｜EP.72〉",
+    "url": "https://open.spotify.com/episode/6SsiHZnGjn4a6RK1t8UnRP",
+    "date": "2026-06-03"
+   },
+   {
+    "title": "〈VIP點播｜人體內的奈米探險：解密超級細胞工廠的運作黑科技｜VIP.16〉",
+    "url": "https://open.spotify.com/episode/4xt88XDWBoie1M88D3BsF9",
+    "date": "2026-06-02"
+   },
+   {
+    "title": "〈公開｜重力特輯(1)｜宇宙級吸吸功大師：揭開「重力」的隱形絲線｜EP.71〉",
+    "url": "https://open.spotify.com/episode/3BIVFJldl3nhMFrVZ9zu6g",
+    "date": "2026-06-01"
+   },
+   {
+    "title": "〈VIP｜軍事武器專輯(9)｜揭開「海上金字塔」的神秘面紗：朱瓦特級驅逐艦與雷達匿蹤的科學魔法｜SP.52〉",
+    "url": "https://open.spotify.com/episode/2EcQcthRLXS9mXhpezyh0W",
+    "date": "2026-05-31"
+   },
+   {
+    "title": "〈VIP點播｜披著狗皮的貓？狐狸的生存黑科技與磁場定位傳奇｜VIP.15〉",
+    "url": "https://open.spotify.com/episode/3vCI3ddH40mDyzy8JafZ2C",
+    "date": "2026-05-28"
+   },
+   {
+    "title": "〈公開｜磁力特輯(2)｜誰把電變出來了？法拉第與電磁鐵的魔術秀｜EP.70〉",
+    "url": "https://open.spotify.com/episode/50y5AKjDeBpBs5LsWgFkLY",
+    "date": "2026-05-27"
+   },
+   {
+    "title": "〈VIP點播｜力學特輯(5)｜轉圈圈的魔法：向心力與離心力的隱形拔河！｜VIP.14〉",
+    "url": "https://open.spotify.com/episode/4RGThg7BmHu4bJz7tKC1XI",
+    "date": "2026-05-26"
+   },
+   {
+    "title": "〈公開｜磁力特輯(1)｜誰在指揮指南針？看不見的磁力魔法｜EP.69〉",
+    "url": "https://open.spotify.com/episode/1K5uv6OTMC6ddsd9bgHqlU",
+    "date": "2026-05-25"
+   },
+   {
+    "title": "〈VIP｜軍事武器專輯(8)｜陸地上的「飛機戰車」：M1 艾布蘭與它的噴射心臟｜SP.51〉",
+    "url": "https://open.spotify.com/episode/0uP7HdgJChhjltFpSpWsQW",
+    "date": "2026-05-24"
+   },
+   {
+    "title": "〈VIP｜軍事武器專輯(7)｜戰場上的天空幽靈：揭秘無人機的科技魔法｜SP.50〉",
+    "url": "https://open.spotify.com/episode/1VSOUas3P8fA8IdT8a2XfE",
+    "date": "2026-05-21"
+   },
+   {
+    "title": "〈公開｜力學特輯(4)｜大力士的秘密武器：滑輪與液壓的神奇力量｜EP.66〉",
+    "url": "https://open.spotify.com/episode/2xL4JQ4EBNKN0XUkWrXSpj",
+    "date": "2026-05-20"
+   },
+   {
+    "title": "〈VIP｜軍事武器專輯(6)｜地底掩體的終極剋星：GBU-57 巨型鑽地彈的科學奇蹟｜SP.49〉",
+    "url": "https://open.spotify.com/episode/2GOXTVTCvR2C9T2EZkYgSZ",
+    "date": "2026-05-19"
+   },
+   {
+    "title": "〈公開｜力學特輯(3)｜生活中的小小超級英雄：解密「簡單機械」的力量｜EP.65〉",
+    "url": "https://open.spotify.com/episode/3Z4HlNSC4KB0Liuq2O3W4Q",
+    "date": "2026-05-18"
+   },
+   {
+    "title": "〈VIP｜軍事武器專輯(5)｜翱翔天際的「強大者」：解析F-35I Adir匿蹤戰機的科技秘密｜SP.48〉",
+    "url": "https://open.spotify.com/episode/5EAAxNLY6hhNaQIeYKYKvY",
+    "date": "2026-05-17"
+   },
+   {
+    "title": "〈VIP｜軍事武器專輯(4)｜子彈打子彈的終極對決！愛國者三型飛彈（PAC-3）的黑科技大解密｜SP.47〉",
+    "url": "https://open.spotify.com/episode/1E6341nV8GUq2Zv5KxfARS",
+    "date": "2026-05-14"
+   },
+   {
+    "title": "〈公開｜力學特輯(2)｜隱形的吸引力法則：解開磁鐵與地球磁場的驚人謎團〉",
+    "url": "https://open.spotify.com/episode/3gSOX1T3yZsp9U3xt2qgoY",
+    "date": "2026-05-13"
+   },
+   {
+    "title": "〈VIP｜動物母親專輯(7)｜密集恐懼症的終極保母：狼蛛媽媽的超級育兒術｜SP.46〉",
+    "url": "https://open.spotify.com/episode/172b8wUgueAtnyPE6OowuV",
+    "date": "2026-05-12"
+   },
+   {
+    "title": "〈公開｜力學特輯(1)｜隱形魔法師大顯身手：尋找生活中看不見的角色——「力」〉",
+    "url": "https://open.spotify.com/episode/3pGEX1VdM1rup3MASrbF82",
+    "date": "2026-05-11"
+   },
+   {
+    "title": "〈VIP｜動物母親專輯(6)｜割肉餵娃！揭開蚓螈媽媽的瘋狂母愛｜SP.45〉",
+    "url": "https://open.spotify.com/episode/6tbYCMVM5kdwE0okt12xoN",
+    "date": "2026-05-10"
+   },
+   {
+    "title": "〈公開｜材料科學特輯(3)｜看不見的慢遊行：瀝青、玻璃與冰川的流動謎團〉",
+    "url": "https://open.spotify.com/episode/78AFI3jbYjajJ3GGlC2ZVd",
+    "date": "2026-05-09"
+   },
+   {
+    "title": "〈VIP｜動物母親專輯(5)｜嘴巴裡的育嬰房：莫三比克口孵魚的生存奇蹟｜SP.44〉",
+    "url": "https://open.spotify.com/episode/2HCMB1qDjb0oOEZfJmeh7n",
+    "date": "2026-05-07"
+   },
+   {
+    "title": "〈VIP｜動物母親專輯(4)｜枯葉大師與最強背上育兒！揭開負子蟾的超狂生存秀｜SP.43〉",
+    "url": "https://open.spotify.com/episode/6qTd7BJrtycuPwBXPbZJgK",
+    "date": "2026-05-05"
+   },
+   {
+    "title": "〈公開｜材料科學特輯(2)｜閃亮亮的寶石秘密：碳的變身術與黃金的軟Q功夫〉",
+    "url": "https://open.spotify.com/episode/2ZhnLJdCe7cnr6OosqpWvm",
+    "date": "2026-05-04"
+   },
+   {
+    "title": "〈VIP｜動物母親專輯(3)｜偽裝大師的超級母乳：大蟻蛛的哺乳奇觀｜SP.42〉",
+    "url": "https://open.spotify.com/episode/5g26XOfThVR7jW1xHEskMH",
+    "date": "2026-05-03"
+   },
+   {
+    "title": "〈母親節週企劃｜感恩特輯｜人類的母親，她不是超人，卻做了所有超人的事〉",
+    "url": "https://open.spotify.com/episode/7KfmEQ2cJXcEC4NZUXuouI",
+    "date": "2026-05-02"
+   },
+   {
+    "title": "〈公開｜材料科學特輯(1)｜神奇的材料英雄：從陶瓷碗到奈米機器人〉",
+    "url": "https://open.spotify.com/episode/4KhyqyMA4lC36C6OmQTbiK",
+    "date": "2026-05-01"
+   },
+   {
+    "title": "〈VIP｜動物母親專輯(2)｜雨林裡的超級外送員：草莓箭毒蛙媽媽的「愛心便當」大冒險！｜SP.41〉",
+    "url": "https://open.spotify.com/episode/0sG140DxTmsvTgp5d7i2QM",
+    "date": "2026-04-30"
+   },
+   {
+    "title": "〈公開｜物理化學專輯(6)｜繽紛閃耀的夜空舞會：解開煙火顏色的化學密碼〉",
+    "url": "https://open.spotify.com/episode/53QIeOYKK01kJUGfq2iWKs",
+    "date": "2026-04-29"
+   },
+   {
+    "title": "〈VIP｜河馬跟你想的不一樣：粉紅汗水、水下飛毛腿與古柯鹼荒謬劇｜EP.229〉",
+    "url": "https://open.spotify.com/episode/5gNXVUIyPMH3kQjR3PpscZ",
+    "date": "2026-04-28"
+   },
+   {
+    "title": "〈節目預告｜流紅汗的水怪〉",
+    "url": "https://open.spotify.com/episode/2ckIVn6aKnNPbaFEwcnLBT",
+    "date": "2026-04-27"
+   },
+   {
+    "title": "〈公開｜物理化學專輯(5)｜宇宙超級積木：元素週期表的使用說明書〉",
+    "url": "https://open.spotify.com/episode/7qT6zZNKHLTMsHdxrWtcWv",
+    "date": "2026-04-27"
+   },
+   {
+    "title": "〈VIP｜電腦科技專輯(1)｜量子電腦的超能力：從又零又一的魔法到改變世界的未來科技｜SP. 40〉",
+    "url": "https://open.spotify.com/episode/2ol37CmEeVcGDsPdoWPCbw",
+    "date": "2026-04-26"
+   },
+   {
+    "title": "〈VIP｜EP.228｜穿著燕尾服的戰術大師：企鵝的生存黑科技與暗黑兵法〉",
+    "url": "https://open.spotify.com/episode/47tKJxyBQREzdgjImXuvSn",
+    "date": "2026-04-26"
+   },
+   {
+    "title": "〈VIP｜EP.227｜夜空中的滑翔翼！飛鼠的粉紅螢光與空氣動力學秘密〉",
+    "url": "https://open.spotify.com/episode/2p2fTpLtB8Lppj6oMSHA4r",
+    "date": "2026-04-24"
+   },
+   {
+    "title": "〈公開｜物理化學專輯(4)｜物質變身大探險：從硬邦邦到亮晶晶的四種樣子〉",
+    "url": "https://open.spotify.com/episode/1BXHDiSMjxHkxlfKedxXcR",
+    "date": "2026-04-23"
+   },
+   {
+    "title": "〈VIP｜動物母親專輯(1)｜最不像鳥的鳥！奇異鳥的生存黑科技與巨蛋之謎｜EP.226〉",
+    "url": "https://open.spotify.com/episode/5CDReOYIxBZQlrMSUVAYyj",
+    "date": "2026-04-22"
+   },
+   {
+    "title": "〈公開｜物理化學專輯(3)｜超神祕的微觀世界：原子積木與空空的足球場〉",
+    "url": "https://open.spotify.com/episode/5y3sfBOU4tOUvzUQXzUft1",
+    "date": "2026-04-21"
+   },
+   {
+    "title": "〈VIP｜C.12｜深海巨怪的追蹤者：大王酸漿魷與巨烏賊的發光大對決！〉",
+    "url": "https://open.spotify.com/episode/5sZ4m9AoQDxxIyVzzJCqlO",
+    "date": "2026-04-20"
+   },
+   {
+    "title": "〈公開｜軍事武器專輯(3)｜深海裡的隱形戰神：維吉尼亞級核潛艦的祕密基地〉",
+    "url": "https://open.spotify.com/episode/5L6QM7rGSaFs65oeGNZ1JH",
+    "date": "2026-04-19"
+   },
+   {
+    "title": "〈VIP｜EP.225｜為什麼巨嘴鳥的嘴巴那麼大？原來是自帶超級空調！〉",
+    "url": "https://open.spotify.com/episode/1fvA96M3NHUmzQ7EVdRru4",
+    "date": "2026-04-18"
+   },
+   {
+    "title": "〈公開｜物理化學專輯(2)｜物質的變身遊戲：認識物理與化學變化的魔法〉",
+    "url": "https://open.spotify.com/episode/6c5WwncJJMQOMwJxTSOyvI",
+    "date": "2026-04-17"
+   },
+   {
+    "title": "〈VIP｜EP.224｜雨林中的重裝轟炸機：大犀鳥的雙嘴之謎與愛情監獄〉",
+    "url": "https://open.spotify.com/episode/1qDa4Z3m2NPyiWVJ1OTK26",
+    "date": "2026-04-16"
+   },
+   {
+    "title": "〈🎁【VIP 探索隊出發】每月一杯咖啡錢，解鎖會說話的科學寶庫！〉",
+    "url": "https://open.spotify.com/episode/6sisuC2lSxTZR5qK43fgIr",
+    "date": "2026-04-16"
+   },
+   {
+    "title": "〈公開｜物理化學專輯(1)｜萬物的小積木與宇宙隱形大力士〉",
+    "url": "https://open.spotify.com/episode/2nTSKRxj9jwDUVxnps69In",
+    "date": "2026-04-15"
+   },
+   {
+    "title": "〈VIP｜尖端科技專輯(2)｜地心深處的超級跑道：大型強子對撞機 (LHC) 的微觀冒險〉",
+    "url": "https://open.spotify.com/episode/1yR0m55I2zRg9VWcGkVjJ3",
+    "date": "2026-04-14"
+   },
+   {
+    "title": "〈公開｜尖端科技專輯(1)｜無人車的上帝視角：當人工智慧握住方向盤〉",
+    "url": "https://open.spotify.com/episode/6OMh8LamfuNUHbymYFXS5J",
+    "date": "2026-04-12"
+   },
+   {
+    "title": "〈VIP｜SP.39｜人類演化特輯(6)｜鐵的逆襲：從廢墟中煉出的金屬魔法〉",
+    "url": "https://open.spotify.com/episode/2hxyMgsgFTJKEHB4oVLkNn",
+    "date": "2026-04-11"
+   },
+   {
+    "title": "〈VIP｜EP.222｜蜂鳥特種部隊：挑戰物理極限的生物戰鬥機〉",
+    "url": "https://open.spotify.com/episode/1QNwy8gjONTB72KgADNUw9",
+    "date": "2026-04-11"
+   },
+   {
+    "title": "〈公開｜軍事武器專輯（2）｜海上鋼鐵巨獸：福特號航母的五大黑科技〉",
+    "url": "https://open.spotify.com/episode/2a2BRUXUUR1IvmvbAjspbu",
+    "date": "2026-04-09"
+   },
+   {
+    "title": "〈VIP｜EP.221｜地球的生命舞台：從深海到城市的棲地大冒險〉",
+    "url": "https://open.spotify.com/episode/3W1d75bXTv1iFfJ7Kqd3dP",
+    "date": "2026-04-08"
+   },
+   {
+    "title": "〈VIP｜EP.220｜動物界的微觀社會學：誰是最佳室友與超級奶爸？〉",
+    "url": "https://open.spotify.com/episode/2BI3Q7ZAkGmlIKMQBcNCcC",
+    "date": "2026-04-06"
+   },
+   {
+    "title": "〈VIP｜軍事武器專輯（1）｜比黃金還貴的飛機：B-2 幽靈轟炸機的秘密〉",
+    "url": "https://open.spotify.com/episode/3xBlShZwRqBuXM1Xiha9y1",
+    "date": "2026-04-05"
+   },
+   {
+    "title": "〈公開｜SP.38｜人類演化特輯 (5)｜從海底商船到帝國武器：青銅，人類第一場全球化的賭注〉",
+    "url": "https://open.spotify.com/episode/40lj6BuHmOLTU4bH4WS5zb",
+    "date": "2026-04-04"
+   },
+   {
+    "title": "〈公開｜EP.219｜動物的神奇第六感：誰是導航王與超強記憶大師？〉",
+    "url": "https://open.spotify.com/episode/1jgycc9JnLIbZ8TzOhUpTo",
+    "date": "2026-04-03"
+   },
+   {
+    "title": "〈公開｜EP.218｜沙漠裡的特種部隊：狐獴的生存黑科技與女王傳奇〉",
+    "url": "https://open.spotify.com/episode/2z0gzlajF9LnerQVZJd998",
+    "date": "2026-04-01"
+   },
+   {
+    "title": "〈公開｜熱門回顧-恐龍專輯(7)｜恐龍末日：解鎖6600萬年前的滅絕密碼〉",
+    "url": "https://open.spotify.com/episode/0PZfufIKNMre7dmK2WWYnL",
+    "date": "2026-03-31"
+   },
+   {
+    "title": "〈公開｜EP.217｜陸地巨獸的溫柔與智慧：揭開非洲象的演化奇蹟〉",
+    "url": "https://open.spotify.com/episode/7IoSE9isJ8S4pvA6uFNad8",
+    "date": "2026-03-30"
+   },
+   {
+    "title": "〈公開｜熱門回顧-恐龍專輯(6)｜雷克斯暴龍跑多快？小短手能幹嘛？〉",
+    "url": "https://open.spotify.com/episode/2t4mFsN8IahbZmyhByv0wG",
+    "date": "2026-03-29"
+   },
+   {
+    "title": "〈公開｜SP.37｜人類演化特輯 (4)｜破解史前人的冰箱！你的DNA裡住著遠古幽靈？〉",
+    "url": "https://open.spotify.com/episode/2RuxcYoNz3GcvRa3TSNwQ0",
+    "date": "2026-03-29"
+   },
+   {
+    "title": "〈公開｜EP.216｜亞馬遜雨林的戴面具巨人：戰神大叔「角鵰」的狩獵傳奇與溫柔〉",
+    "url": "https://open.spotify.com/episode/5w5DmueqfcQbnuCB7S5xQk",
+    "date": "2026-03-28"
+   },
+   {
+    "title": "〈熱門回顧-恐龍專輯(5)｜恐龍界的最強殺手！雷克斯暴龍的超狂咬合力與「超級感官」大揭密〉",
+    "url": "https://open.spotify.com/episode/2VrNSyUc49Vlpu3iMcOqkp",
+    "date": "2026-03-26"
+   },
+   {
+    "title": "〈EP.215｜天空的紅心與海上的強盜：解密軍艦鳥的極限生存術〉",
+    "url": "https://open.spotify.com/episode/2lyo87cVkxESYQq1daOPR5",
+    "date": "2026-03-25"
+   },
+   {
+    "title": "〈熱門回顧-恐龍專輯(4)｜恐龍稱霸的秘密：溫血引擎、空中巨獸與漂移的大陸！〉",
+    "url": "https://open.spotify.com/episode/1arbyONENjTSGBhZdcHuKl",
+    "date": "2026-03-24"
+   },
+   {
+    "title": "〈EP.214｜森林裡的頂級 DJ：琴鳥，自然界最狂的「聲音駭客〉",
+    "url": "https://open.spotify.com/episode/1OtrBBHjy7wg86kpvCQJPf",
+    "date": "2026-03-23"
+   },
+   {
+    "title": "〈熱門回顧-恐龍專輯(3)｜恐龍霸主來了！毛茸茸的暴龍與「裝甲坦克」大集合〉",
+    "url": "https://open.spotify.com/episode/5Z6U81jvONmt8JU3zZ7IS8",
+    "date": "2026-03-22"
+   },
+   {
+    "title": "〈SP.36｜人類演化特輯 (3)｜史前人類大揭密！尼安德塔人其實是溫柔的超級英雄？〉",
+    "url": "https://open.spotify.com/episode/10YvYAg65dqUCBqnJe7TMF",
+    "date": "2026-03-21"
+   },
+   {
+    "title": "〈EP.213｜披著羽毛的乳牛：揭開亞馬遜「臭臭鳥」麝雉的恐龍身世之謎〉",
+    "url": "https://open.spotify.com/episode/6QQRTv9bgFEJL59P62dtdb",
+    "date": "2026-03-20"
+   },
+   {
+    "title": "〈熱門回顧-恐龍專輯(2)｜恐龍隊長，我的遠古生物朋友去哪兒了？🦕從單細胞到霸主恐龍的超時空進化之旅 〉",
+    "url": "https://open.spotify.com/episode/3SRTJaU26tm8iWlc04IVaC",
+    "date": "2026-03-19"
+   },
+   {
+    "title": "〈EP.212｜穿著斑馬褲的長頸鹿：揭開非洲獨角獸「霍加狓」（Okapi）的神祕面紗〉",
+    "url": "https://open.spotify.com/episode/7hnVMsKS9ZC7607OczA0al",
+    "date": "2026-03-18"
+   },
+   {
+    "title": "〈熱門回顧-恐龍專輯(1)｜🦕地球生命大挑戰：化石密碼、恐龍滅絕與人類警報！🚨〉",
+    "url": "https://open.spotify.com/episode/5P18xRCQcuE8KbDdJQcibv",
+    "date": "2026-03-17"
+   },
+   {
+    "title": "〈EP.211｜演化的摩天大樓：長頸鹿 (Giraffe) 的生理奇蹟與未解之謎〉",
+    "url": "https://open.spotify.com/episode/27rMEhIFiNCaUxw4W0GHzz",
+    "date": "2026-03-16"
+   },
+   {
+    "title": "〈SP.35｜人類演化特輯 (2)｜百萬年前的科技發表會？石器時代的第一場BBQ派對！〉",
+    "url": "https://open.spotify.com/episode/4lkDMhcKGbZUagANjKGeHw",
+    "date": "2026-03-14"
+   },
+   {
+    "title": "〈EP.210｜澳洲荒野的「戰鬥推土機」：揭開袋熊的生物學奧秘〉",
+    "url": "https://open.spotify.com/episode/2bNBzkCo1sMsyUzKLp1lic",
+    "date": "2026-03-13"
+   },
+   {
+    "title": "〈EP.209｜演化謊言？大貓熊的「素食肉食者」真相與生存機密〉",
+    "url": "https://open.spotify.com/episode/5gj0h2HNCwKLMhsdJ5fo1T",
+    "date": "2026-03-11"
+   },
+   {
+    "title": "〈EP.208｜演化論的肌肉與魔法：解密「袋鼠」不可思議的生存工藝〉",
+    "url": "https://open.spotify.com/episode/7p8mE7UO5AiuYF2IrneW1p",
+    "date": "2026-03-09"
+   },
+   {
+    "title": "〈SP.34｜人類演化特輯 (1)｜站起來的秘密！解鎖人類最早的超能力〉",
+    "url": "https://open.spotify.com/episode/2ibyrJvHdxqAYmhX5z7haE",
+    "date": "2026-03-07"
+   },
+   {
+    "title": "〈EP.207｜無尾熊：演化史上的「極簡主義者」，還是深藏不露的生存大師？〉",
+    "url": "https://open.spotify.com/episode/6oUDrEgbrI16K3x0ramQ2Q",
+    "date": "2026-03-06"
+   },
+   {
+    "title": "〈EP.206｜水豚君的佛系哲學：世界上最大的老鼠如何稱霸地球？〉",
+    "url": "https://open.spotify.com/episode/3LeJFdsCDBCpJGKXBftJ8v",
+    "date": "2026-03-04"
+   },
+   {
+    "title": "〈EP.205｜夜空中的「重金屬」搖滾巨星：你以為你懂蝙蝠嗎？〉",
+    "url": "https://open.spotify.com/episode/3cSAaS4A10S9pQ355ZY3oJ",
+    "date": "2026-03-02"
+   },
+   {
+    "title": "〈EP.202｜為什麼你絕對不想惹「平頭哥」？蜜獾的無畏傳奇〉",
+    "url": "https://open.spotify.com/episode/5DuXw9Jp7nY6DYVEWI2t99",
+    "date": "2026-02-27"
+   },
+   {
+    "title": "〈EP.201｜穿著晚禮服的生化戰術家：你所不知道的臭鼬（Skunk）〉",
+    "url": "https://open.spotify.com/episode/2TAW0LkXELaF9Sb8hMNEjg",
+    "date": "2026-02-25"
+   },
+   {
+    "title": "〈EP.203｜藍色巨獸與深海輓歌：解密地球終極生命體的生與死〉",
+    "url": "https://open.spotify.com/episode/465doevv9jyrKjDBK23ykc",
+    "date": "2026-02-23"
+   },
+   {
+    "title": "〈EP.204｜深海巨獸的溫柔秘密：聽懂抹香鯨的悄悄話〉",
+    "url": "https://open.spotify.com/episode/2cgWj418n801Jp5Q9q0OEo",
+    "date": "2026-02-22"
+   },
+   {
+    "title": "〈EP.200｜深海的時間領主：格陵蘭鯊的 400 年長生秘密〉",
+    "url": "https://open.spotify.com/episode/3KxPHusxAAD42oqwyGJQpN",
+    "date": "2026-02-21"
+   },
+   {
+    "title": "〈EP.199｜海洋中的獨角獸：獨角鯨的長牙機密與心跳悖論〉",
+    "url": "https://open.spotify.com/episode/53iwEetNdMBOLKmTWh0HRI",
+    "date": "2026-02-20"
+   },
+   {
+    "title": "〈EP.198｜從巨獸到隱士：樹懶的節能生存奇蹟與史前冒險〉",
+    "url": "https://open.spotify.com/episode/3euALP8knlaZA5tXLtgICH",
+    "date": "2026-02-19"
+   },
+   {
+    "title": "〈SP.33｜春節馬年特輯｜中指神功馬老師：從五根腳趾到單蹄狂奔的演化大冒險〉",
+    "url": "https://open.spotify.com/episode/44YfqFVuCsYxYGcvY5nP8A",
+    "date": "2026-02-18"
+   },
+   {
+    "title": "〈SP.32｜春節馬年特輯｜貓咪變駿馬：馬兒祖先的「斷趾」求生大冒險！〉",
+    "url": "https://open.spotify.com/episode/01M6LxmzrdEr3FMpb6CvdB",
+    "date": "2026-02-17"
+   },
+   {
+    "title": "〈EP.197｜森林裡的寂寞騎士：解密「穿山甲」的隱形盔甲與身世之謎〉",
+    "url": "https://open.spotify.com/episode/3jbkGNA92BGKMdPRCNcWkA",
+    "date": "2026-02-16"
+   },
+   {
+    "title": "〈EP.196｜鴨嘴獸：演化史上最不可思議的拼裝奇蹟〉",
+    "url": "https://open.spotify.com/episode/53tf5m6WXIMVeZQN0TIRON",
+    "date": "2026-02-14"
+   },
+   {
+    "title": "〈EP.195｜哺乳動物（下）：生存大師的裝備庫與感官世界〉",
+    "url": "https://open.spotify.com/episode/111ebpaFGQiTAcOhBE4Mjc",
+    "date": "2026-02-13"
+   },
+   {
+    "title": "〈SP.31｜AI科普專輯｜數位防禦術：如何不被 AI 牽著鼻子走？〉",
+    "url": "https://open.spotify.com/episode/6ji3YsaMqqwBI6M2birdi4",
+    "date": "2026-02-12"
+   },
+   {
+    "title": "〈SP.30｜AI科普專輯｜AI Agent 元年：你的專屬數位超人來了！〉",
+    "url": "https://open.spotify.com/episode/1hczUoFJgP5MOqcuC1FTNy",
+    "date": "2026-02-11"
+   },
+   {
+    "title": "〈SP.29｜AI科普專輯｜AI 魔法棒背後的秘密：從文字接龍到畫出夢境〉",
+    "url": "https://open.spotify.com/episode/5jONgUHsz6Pp7LAfGvL5sT",
+    "date": "2026-02-10"
+   },
+   {
+    "title": "〈SP.28｜AI科普專輯｜AI 遊戲大爭霸：從深藍到 AlphaGo 的進化史〉",
+    "url": "https://open.spotify.com/episode/5buk98CRlZVtWVT3kNvlcn",
+    "date": "2026-02-09"
+   },
+   {
+    "title": "〈SP.27｜AI科普專輯｜隱形的室友：AI 如何讀懂你的心？〉",
+    "url": "https://open.spotify.com/episode/3scrn72y1qxj8eh6Bs9xz7",
+    "date": "2026-02-08"
+   },
+   {
+    "title": "〈EP.194｜哺乳動物（上）：生命型態的百變大爆發〉",
+    "url": "https://open.spotify.com/episode/5bstn2qw5dZsYtus7aVpgx",
+    "date": "2026-02-07"
+   },
+   {
+    "title": "〈EP.193｜解鎖天空之王的祕密：鳥類飛行的科學大冒險〉",
+    "url": "https://open.spotify.com/episode/3kgcXjSwmRnoICJNAAymAX",
+    "date": "2026-02-06"
+   },
+   {
+    "title": "〈EP.192｜鳥類的生活史：從巨蛋奇觀到萬里長征〉",
+    "url": "https://open.spotify.com/episode/0EZ3ple8dMpeI92kl65C0L",
+    "date": "2026-02-04"
+   },
+   {
+    "title": "〈EP.191｜飛翔的奇蹟：鳥類世界的奧秘大解密〉",
+    "url": "https://open.spotify.com/episode/0TuJOXZWcaszamA4j77Q0N",
+    "date": "2026-02-03"
+   },
+   {
+    "title": "〈EP.190｜岸邊的重裝甲戰士！揭開鱷魚一億年的生存神技〉",
+    "url": "https://open.spotify.com/episode/1IvjVOujuc5VssUBnPR69v",
+    "date": "2026-02-02"
+   },
+   {
+    "title": "〈SP.26｜宇宙特輯｜追光者大挑戰：誰才是宇宙中的「飛毛腿」冠軍？〉",
+    "url": "https://open.spotify.com/episode/1kEGWHs8ogrPgk7T5W5eLT",
+    "date": "2026-02-01"
+   },
+   {
+    "title": "〈EP.189｜鋼鐵防護衣！揭開爬行動物的身體奧祕〉",
+    "url": "https://open.spotify.com/episode/02fC5zjlNmIn8fEuJZHipU",
+    "date": "2026-02-01"
+   },
+   {
+    "title": "〈SP.25｜宇宙特輯｜宇宙大胃王：黑洞的貪食大冒險與時空隧道的祕密〉",
+    "url": "https://open.spotify.com/episode/2T6ILBszcYZC1Fjp2CCowC",
+    "date": "2026-01-31"
+   },
+   {
+    "title": "〈EP.188｜冷血外星人？揭開爬行動物的三億年生存神技！〉",
+    "url": "https://open.spotify.com/episode/6yDz6oMyE61KiQxj85n359",
+    "date": "2026-01-28"
+   },
+   {
+    "title": "〈SP.24｜宇宙特輯｜宇宙大冒險：從六十兆細胞到億萬光年的「星際捉迷藏」〉",
+    "url": "https://open.spotify.com/episode/1hqUKGWv7pmfJ7I66l6BrR",
+    "date": "2026-01-27"
+   },
+   {
+    "title": "〈VIP.11｜垂直極限的哲學家：亞歷克斯·霍諾德與「無繩」的勇氣科學〉",
+    "url": "https://open.spotify.com/episode/2MwVjuUdAllDsJtWb3SAWj",
+    "date": "2026-01-26"
+   },
+   {
+    "title": "〈VIP.10｜懸掛在 508 公尺高的極限科學：艾力克斯攀登台北 101 的技術真相〉",
+    "url": "https://open.spotify.com/episode/1pCPXbwdzpR0iQWb4PEncz",
+    "date": "2026-01-25"
+   },
+   {
+    "title": "〈SP.23｜宇宙特輯｜【冥王星大冒險】從邊疆孤兒到冰封奇蹟：那顆會跳動的「氮冰之心」〉",
+    "url": "https://open.spotify.com/episode/0NDue5LMVwyMGMRhq8MzmM",
+    "date": "2026-01-25"
+   },
+   {
+    "title": "〈EP.184｜深海裡的隱形戰機：大白鯊的「第六感」大冒險！〉",
+    "url": "https://open.spotify.com/episode/3cgEVrIZ6bRUF3wJc2agzj",
+    "date": "2026-01-16"
+   },
+   {
+    "title": "〈VIP.9｜新年悄悄話特輯｜大腦與 AI 的鏡像大冒險：為什麼我們會忘記，機器人會亂說話？〉",
+    "url": "https://open.spotify.com/episode/0aDjFOqhnbyl5poJJE153d",
+    "date": "2026-01-14"
+   },
+   {
+    "title": "〈EP.182｜水下法拉利：揭開魚類演化與流體力學的超能力祕密〉",
+    "url": "https://open.spotify.com/episode/3WRlDVWubwtycz86H0StuM",
+    "date": "2026-01-10"
+   },
+   {
+    "title": "〈VIP.8｜新年悄悄話特輯｜海上鋼鐵巨獸：福特號航母的「五大黑科技」大解密！〉",
+    "url": "https://open.spotify.com/episode/1mvETIYtFKVn1jyUcFjiVE",
+    "date": "2026-01-09"
+   },
+   {
+    "title": "〈VIP.6｜新年悄悄話特輯｜【未來坐駕大冒險】誰在開車？揭開無人駕駛車的「超感官」與「鋼鐵大腦」！〉",
+    "url": "https://open.spotify.com/episode/4Plk9gpNOCCuoTqsO9o7Xw",
+    "date": "2026-01-08"
+   },
+   {
+    "title": "〈VIP.5｜新年悄悄話特輯｜地球極速奧運會：誰才是披著毛皮的法拉利與生物界的戰鬥機？〉",
+    "url": "https://open.spotify.com/episode/2VSGgMT6V8FrWqVXvzFRQw",
+    "date": "2026-01-06"
+   },
+   {
+    "title": "〈EP.172｜終極海怪！讓霸王龍也不敢下水的「白堊紀海神」——蒼龍〉",
+    "url": "https://open.spotify.com/episode/6vATnidiSW8lJ8INTz8OP4",
+    "date": "2025-12-15"
+   },
+   {
+    "title": "〈EP.171｜鯨鯊大戰！擁有暴龍牙齒的「梅爾維爾鯨」 vs. 史上最大鯊魚「巨齒鯊」！〉",
+    "url": "https://open.spotify.com/episode/5ROGKz2nSfG17rnQik0yzM",
+    "date": "2025-12-13"
+   },
+   {
+    "title": "〈EP.170｜深海霸主之謎：巨齒鯊的牙齒比我的臉還大？！〉",
+    "url": "https://open.spotify.com/episode/6eEEm3vFIqOLWjoO8gcTXC",
+    "date": "2025-12-11"
    }
   ]
  },
  "log": [
-  "Firstory 單集頁：這次看了 1 頁；135 集裡有 Spotify 連結 135 集、Apple 連結 78 集",
+  "Firstory 單集頁：這次看了 0 頁；135 集裡有 Spotify 連結 135 集、Apple 連結 78 集",
   "Apple：節目共 205 集；Lookup 拿到 136 集",
   "Apple 網頁：全部 202 集，其中訂閱者專屬 64 集",
   "Apple：一集一集搜尋 0 集；全部共 202 集（之前 202 集）",
   "Spotify 節目 ID：1eyISRdcgDTwZqIqrP1qKv",
-  "Spotify：沒有設定 SPOTIFY_CLIENT_ID／SPOTIFY_CLIENT_SECRET，只能從公開頁面找（通常只有最新一集）",
-  "Spotify 嵌入頁：14731 字，找到 1 集",
-  "Spotify 節目頁：167157 字，多找到 0 集；頁面上的單集連結 0 個"
+  "Spotify API：207 集"
  ]
 }
