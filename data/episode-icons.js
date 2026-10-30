@@ -798,6 +798,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "icon": "animal:wildebeest",
     "subject": "牛羚的遷徙與生態作用"
   },
+  "253": {
+    "title": "狂野草原謎團！斑馬為什麼不能像馬一樣被我們騎？",
+    "contentKey": "81:5e62577d",
+    "icon": "🦓",
+    "subject": "斑馬為何難以馴化與條紋的功能"
+  },
   "c10": {
     "title": "懸掛在 508 公尺高的極限科學：艾力克斯攀登台北 101 的技術真相",
     "contentKey": "84:bd2a64cf",
