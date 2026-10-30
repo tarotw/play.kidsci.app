@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T02:57:22Z",
+ "generated": "2026-10-30T10:07:57Z",
  "episodes": [
   {
    "code": "c10",
@@ -2617,7 +2617,7 @@
    "state": "subscriber",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/vip-ep-223-%E9%B4%95%E9%B3%A5%E9%80%86%E8%A5%B2-%E6%8A%AB%E8%91%97%E7%BE%BD%E6%AF%9B%E7%9A%84%E8%BF%85%E7%8C%9B%E9%BE%8D%E8%88%87%E9%98%B2%E7%96%AB%E6%95%91%E6%98%9F/id1812447277?i=1000761396880",
-    "spotify": null,
+    "spotify": "https://open.spotify.com/episode/6EQkYQ4kCtcC8JbyR89UG5",
     "pubDate": "2026-04-14T21:58:03Z"
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/b0/5f/e0/b05fe063-504c-73ff-198d-957040c765d2/e78ab312-d126-4121-8a0b-030c0f4d56e8.png/600x600bb.jpg",

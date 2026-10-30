@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T02:57:22Z",
+ "generated": "2026-10-30T10:07:57Z",
  "firstory": {
   "https://open.firstory.fm/story/cmdpx4cur00cq01xld19aha50": {
    "spotify": "https://open.spotify.com/episode/3LeJFdsCDBCpJGKXBftJ8v",
@@ -3454,6 +3454,11 @@
     "date": "2026-04-15"
    },
    {
+    "title": "〈VIP｜EP.223｜鴕鳥逆襲：披著羽毛的迅猛龍與防疫救星〉",
+    "url": "https://open.spotify.com/episode/6EQkYQ4kCtcC8JbyR89UG5",
+    "date": "2026-04-14"
+   },
+   {
     "title": "〈VIP｜尖端科技專輯(2)｜地心深處的超級跑道：大型強子對撞機 (LHC) 的微觀冒險〉",
     "url": "https://open.spotify.com/episode/1yR0m55I2zRg9VWcGkVjJ3",
     "date": "2026-04-14"
@@ -3829,8 +3834,8 @@
   "Firstory 單集頁：這次看了 0 頁；135 集裡有 Spotify 連結 135 集、Apple 連結 78 集",
   "Apple：節目共 206 集；Lookup 拿到 136 集",
   "Apple 網頁：全部 203 集，其中訂閱者專屬 65 集",
-  "Apple：一集一集搜尋 0 集；全部共 203 集（之前 202 集）",
+  "Apple：一集一集搜尋 0 集；全部共 203 集（之前 203 集）",
   "Spotify 節目 ID：1eyISRdcgDTwZqIqrP1qKv",
-  "Spotify API：208 集"
+  "Spotify API：209 集"
  ]
 }
