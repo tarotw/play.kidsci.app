@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T14:41:55Z",
+ "generated": "2026-10-30T02:57:22Z",
  "episodes": [
   {
    "code": "c10",
@@ -3273,6 +3273,30 @@
    "intro": "你以為牛羚只是一群吃草的呆萌動物嗎？大錯特錯！牠們除了會內建能聞到50公里外的「氣象雷達」找雨水，竟然還是維持地球氣候的「隱形碳匯守護神」！快跟著我們一起參加這場驚心動魄的東非大遷徙，看牠們如何使出不可思議的「群體智慧」戰勝可怕的尼羅鱷！",
    "labs": [],
    "artworkLocal": "assets/episode-covers/cba903a8047d31727525.jpg"
+  },
+  {
+   "code": "253",
+   "title": "狂野草原謎團！斑馬為什麼不能像馬一樣被我們騎？",
+   "home": "l03",
+   "zone": "莽原",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "apple": "https://podcasts.apple.com/tw/podcast/%E7%8B%82%E9%87%8E%E8%8D%89%E5%8E%9F%E8%AC%8E%E5%9C%98-%E6%96%91%E9%A6%AC%E7%82%BA%E4%BB%80%E9%BA%BC%E4%B8%8D%E8%83%BD%E5%83%8F%E9%A6%AC%E4%B8%80%E6%A8%A3%E8%A2%AB%E6%88%91%E5%80%91%E9%A8%8E-ep-253/id1812447277?i=1000798180196",
+    "spotify": "https://open.spotify.com/episode/52c3tQ6m7Hk0K0BfsqfhPX",
+    "pubDate": "2026-10-29T22:00:00Z"
+   },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/de/72/c0/de72c0c3-e1dd-48df-43b6-a435e199105a/88b711c5-e5c3-4020-8de3-f9fd60ef3d22.jpg/600x600bb.jpg",
+   "intro": "草原上最酷的斑馬，為什麼不像馬兒一樣乖乖讓人騎？更神奇的是，牠身上的黑白條紋不僅是帥氣的防蟲罩，還自帶涼爽空調！快跟著我們一起解開這個從古至今最狂野的生物大謎團！",
+   "labs": [
+    {
+     "id": "H09",
+     "title": "斑馬條紋與虻的降落",
+     "question": "同一批示例虻，換個花紋會停下來嗎？",
+     "url": "https://lab.kidsci.app/flyland/"
+    }
+   ],
+   "artworkLocal": "assets/episode-covers/61261d5db9a22222f779.jpg"
   },
   {
    "code": "50",

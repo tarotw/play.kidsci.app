@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T14:41:55Z",
+ "generated": "2026-10-30T02:57:22Z",
  "firstory": {
   "https://open.firstory.fm/story/cmdpx4cur00cq01xld19aha50": {
    "spotify": "https://open.spotify.com/episode/3LeJFdsCDBCpJGKXBftJ8v",
@@ -679,7 +679,7 @@
  },
  "apple": {
   "show": "https://podcasts.apple.com/tw/podcast/%E7%A7%91%E5%AD%B8%E5%A5%BD%E5%A5%BD%E8%81%BD/id1812447277",
-  "total": 205,
+  "total": 206,
   "episodes": [
    {
     "title": "〈登月大冒險：阿波羅 11 號、史上最強火箭與人類的一大步｜EP.117〉",
@@ -2700,6 +2700,15 @@
     "intro": "看星星其實就是看「過去」！就算是離我們最近的比鄰星，它的光也要跑四年多才能到你眼睛裡喔！今天我們要化身小小天文史學家，從古代會數石頭計時的人類，一路看到要把望遠鏡搬上外太空的現代科學家。快跟著科學隊長一起打開宇宙的時光膠囊吧！",
     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/e2/78/9d/e2789d65-9fdc-30ff-fb1f-b5d6fcc13849/mza_15109105126403926297.jpg/600x600bb.jpg",
     "sub": false
+   },
+   {
+    "title": "〈狂野草原謎團！斑馬為什麼不能像馬一樣被我們騎？｜EP.253〉",
+    "url": "https://podcasts.apple.com/tw/podcast/%E7%8B%82%E9%87%8E%E8%8D%89%E5%8E%9F%E8%AC%8E%E5%9C%98-%E6%96%91%E9%A6%AC%E7%82%BA%E4%BB%80%E9%BA%BC%E4%B8%8D%E8%83%BD%E5%83%8F%E9%A6%AC%E4%B8%80%E6%A8%A3%E8%A2%AB%E6%88%91%E5%80%91%E9%A8%8E-ep-253/id1812447277?i=1000798180196",
+    "guid": "cmvpaxxoj07dt01t374z64ycx",
+    "date": "2026-10-29T22:00:00Z",
+    "intro": "草原上最酷的斑馬，為什麼不像馬兒一樣乖乖讓人騎？更神奇的是，牠身上的黑白條紋不僅是帥氣的防蟲罩，還自帶涼爽空調！快跟著我們一起解開這個從古至今最狂野的生物大謎團！",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/de/72/c0/de72c0c3-e1dd-48df-43b6-a435e199105a/88b711c5-e5c3-4020-8de3-f9fd60ef3d22.jpg/600x600bb.jpg",
+    "sub": true
    }
   ],
   "searched": {
@@ -2774,6 +2783,11 @@
   "show": "https://open.spotify.com/show/1eyISRdcgDTwZqIqrP1qKv",
   "source": "api",
   "episodes": [
+   {
+    "title": "〈狂野草原謎團！斑馬為什麼不能像馬一樣被我們騎？｜EP.253〉",
+    "url": "https://open.spotify.com/episode/52c3tQ6m7Hk0K0BfsqfhPX",
+    "date": "2026-10-29"
+   },
    {
     "title": "〈穿越光年的對話：從哥白尼到哈伯，揭開宇宙的「時光膠囊」｜EP.119〉",
     "url": "https://open.spotify.com/episode/1Vyq4pvQGuBUm5NN7gpFRG",
@@ -3813,10 +3827,10 @@
  },
  "log": [
   "Firstory 單集頁：這次看了 0 頁；135 集裡有 Spotify 連結 135 集、Apple 連結 78 集",
-  "Apple：節目共 205 集；Lookup 拿到 136 集",
-  "Apple 網頁：全部 202 集，其中訂閱者專屬 64 集",
-  "Apple：一集一集搜尋 0 集；全部共 202 集（之前 202 集）",
+  "Apple：節目共 206 集；Lookup 拿到 136 集",
+  "Apple 網頁：全部 203 集，其中訂閱者專屬 65 集",
+  "Apple：一集一集搜尋 0 集；全部共 203 集（之前 202 集）",
   "Spotify 節目 ID：1eyISRdcgDTwZqIqrP1qKv",
-  "Spotify API：207 集"
+  "Spotify API：208 集"
  ]
 }
