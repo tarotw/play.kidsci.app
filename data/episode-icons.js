@@ -620,13 +620,13 @@ export const REVIEWED_EPISODE_ICONS = {
   },
   "222": {
     "title": "蜂鳥特種部隊：挑戰物理極限的生物戰鬥機",
-    "contentKey": "182:4406eeb7",
+    "contentKey": "182:c095cb4d",
     "icon": "animal:hummingbird",
     "subject": "蜂鳥的高能量飛行"
   },
   "223": {
     "title": "鴕鳥逆襲：披著羽毛的迅猛龍與防疫救星",
-    "contentKey": "146:d39e60f7",
+    "contentKey": "146:d88c5839",
     "icon": "animal:ostrich",
     "subject": "鴕鳥的運動與免疫"
   },
