@@ -34,7 +34,7 @@ CODE_PATTERNS = [
     (re.compile(r"EP\.(\d+)"), "{}"),
 ]
 # 去掉這些前綴後再拿標題跟 Drive 比對
-TITLE_NOISE = re.compile(r"〈|〉|公開｜|熱門回顧-|[^｜]*專輯[^｜]*｜|[^｜]*特輯[^｜]*｜|[｜|](EP|SP|VIP|C|P)\.?\d+|EP\.\d+｜|SP\.\d+｜|VIP\.\d+｜")
+TITLE_NOISE = re.compile(r"〈|〉|公開｜|熱門回顧-|[^｜]*專輯[^｜]*｜|[^｜]*特輯[^｜]*｜|[^｜]*企劃[^｜]*｜|[｜|](EP|SP|VIP|C|P)\.?\d+|EP\.\d+｜|SP\.\d+｜|VIP\.\d+｜")
 
 
 def expected_access(code: str) -> str:

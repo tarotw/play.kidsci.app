@@ -14,7 +14,7 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from status_check import code_from_title, intro_text, load_drive_titles, load_overrides  # noqa: E402
+from status_check import clean_title, code_from_title, intro_text, load_drive_titles, load_overrides  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -137,7 +137,7 @@ def main() -> None:
         records = status.get(code, [])
         best = pick_record(records)
         on_apple = apple_eps.get(code, [])
-        title = titles.get(code) or (best["title"].strip("〈〉") if best else on_apple[0]["title"].strip("〈〉") if on_apple else code)
+        title = titles.get(code) or (clean_title(best["title"]) if best else clean_title(on_apple[0]["title"]) if on_apple else code)
         if placement is None:
             home, also, auto = home_by_rules(title, rules), [], True
         else:

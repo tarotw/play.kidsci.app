@@ -937,10 +937,16 @@ export const REVIEWED_EPISODE_ICONS = {
     "subject": "Roadster的慣性與抓地力"
   },
   "c34": {
-    "title": "貼地飛行的太空火箭(下)：特斯拉第二代 Roadster 的推進器、馬赫環與牛頓第三定律｜VIP.34",
+    "title": "貼地飛行的太空火箭(下)：特斯拉第二代 Roadster 的推進器、馬赫環與牛頓第三定律",
     "contentKey": "169:82c9d2c2",
     "icon": "🏎️",
     "subject": "Roadster的推進與震波"
+  },
+  "c35": {
+    "title": "深海霸主帝王蟹(上)：披著鎧甲的「假螃蟹」",
+    "contentKey": "128:bd210f11",
+    "icon": "🦀",
+    "subject": "帝王蟹的身世與構造"
   },
   "c5": {
     "title": "極速奧運會：獵豹、遊隼與旗魚的物理戰",
@@ -1159,13 +1165,13 @@ export const REVIEWED_EPISODE_ICONS = {
     "subject": "SR-71的高速與熱工程"
   },
   "s62": {
-    "title": "穿越一億年的淡水「水中裝甲車」：解密鱷雀鱔的雙排利齒、防彈硬鱗與長生基因之謎｜SP.62",
+    "title": "穿越一億年的淡水「水中裝甲車」：解密鱷雀鱔的雙排利齒、防彈硬鱗與長生基因之謎",
     "contentKey": "166:f9dee8bd",
     "icon": "animal:gar",
     "subject": "鱷雀鱔的鱗甲與演化"
   },
   "s63": {
-    "title": "穿越六千萬年的綠色夢魘：解密「泰坦巨蟒」的絞殺神力｜SP.63",
+    "title": "穿越六千萬年的綠色夢魘：解密「泰坦巨蟒」的絞殺神力",
     "contentKey": "197:653d5661",
     "icon": "🐍",
     "subject": "泰坦巨蟒的體型與古氣候"
