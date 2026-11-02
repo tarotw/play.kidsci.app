@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T10:49:07Z",
+ "generated": "2026-11-02T02:44:24Z",
  "firstory": {
   "https://open.firstory.fm/story/cmdpx4cur00cq01xld19aha50": {
    "spotify": "https://open.spotify.com/episode/3LeJFdsCDBCpJGKXBftJ8v",
@@ -675,11 +675,16 @@
    "spotify": "https://open.spotify.com/episode/1Vyq4pvQGuBUm5NN7gpFRG",
    "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000798599514",
    "checked": "2026-10-29"
+  },
+  "https://open.firstory.fm/story/cmvw7ighg03a001wy70uz12gn": {
+   "spotify": "https://open.spotify.com/episode/1suxbn0b7YhhNLGRmv2Mf1",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000799281846",
+   "checked": "2026-11-02"
   }
  },
  "apple": {
   "show": "https://podcasts.apple.com/tw/podcast/%E7%A7%91%E5%AD%B8%E5%A5%BD%E5%A5%BD%E8%81%BD/id1812447277",
-  "total": 207,
+  "total": 208,
   "episodes": [
    {
     "title": "〈登月大冒險：阿波羅 11 號、史上最強火箭與人類的一大步｜EP.117〉",
@@ -2719,6 +2724,16 @@
     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/41/3f/f0/413ff073-a7c5-b6a0-8286-3f3dbf061111/mza_1220969070254895353.jpeg/600x600bb.jpg",
     "sub": false,
     "intro": "科學好好聽有特派員了！ 科學隊長桌上那張插滿小旗子的地圖，到底藏著什麼任務？從今天起，「科學好好聽」多了兩位新夥伴——元氣滿滿的小可，和熱血衝第一的小博！他們是「科學好好聽特派員」，講深海生物就潛進深海，講沙漠動物就走進沙漠，帶著麥克風到科學故事的現場，把看到、聽到的第一手報導給大家。"
+   },
+   {
+    "title": "〈特派員企劃｜深海霸主帝王蟹(上)：披著鎧甲的「假螃蟹」｜VIP.35〉",
+    "url": "https://podcasts.apple.com/tw/podcast/%E7%89%B9%E6%B4%BE%E5%93%A1%E4%BC%81%E5%8A%83-%E6%B7%B1%E6%B5%B7%E9%9C%B8%E4%B8%BB%E5%B8%9D%E7%8E%8B%E8%9F%B9-%E4%B8%8A-%E6%8A%AB%E8%91%97%E9%8E%A7%E7%94%B2%E7%9A%84-%E5%81%87%E8%9E%83%E8%9F%B9-vip-35/id1812447277?i=1000799281846",
+    "guid": "cmvw7ighg03a001wy70uz12gn",
+    "date": "2026-11-01T22:02:01Z",
+    "ms": 1002000,
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/94/bd/60/94bd600b-5f4d-913e-2d4b-e3bcfa7e6888/mza_918398850738079688.jpg/600x600bb.jpg",
+    "sub": false,
+    "intro": "餐桌上最威風的帝王蟹，竟然不是真正的螃蟹？牠外面只有 8 隻腳，另外 2 隻迷你小腳偷偷藏在鰓裡當「牙刷」！牠的祖先是背著螺殼的寄居蟹，身上流著淡藍色的血，每次長大還得把八條長腿從舊殼裡硬拔出來！快跟小可和小博一起潛進北極深海，揭開「假螃蟹」的身世大秘密！"
    }
   ],
   "searched": {
@@ -2793,6 +2808,11 @@
   "show": "https://open.spotify.com/show/1eyISRdcgDTwZqIqrP1qKv",
   "source": "api",
   "episodes": [
+   {
+    "title": "〈特派員企劃｜深海霸主帝王蟹(上)：披著鎧甲的「假螃蟹」｜VIP.35〉",
+    "url": "https://open.spotify.com/episode/1suxbn0b7YhhNLGRmv2Mf1",
+    "date": "2026-11-01"
+   },
    {
     "title": "〈特別企劃｜科學好好聽特派員｜預告〉",
     "url": "https://open.spotify.com/episode/3UaYZuMwNqzNHsOXLowpY4",
@@ -3851,11 +3871,11 @@
   ]
  },
  "log": [
-  "Firstory 單集頁：這次看了 0 頁；135 集裡有 Spotify 連結 135 集、Apple 連結 78 集",
-  "Apple：節目共 207 集；Lookup 拿到 137 集",
-  "Apple 網頁：全部 204 集，其中訂閱者專屬 65 集",
-  "Apple：一集一集搜尋 0 集；全部共 204 集（之前 204 集）",
+  "Firstory 單集頁：這次看了 1 頁；136 集裡有 Spotify 連結 136 集、Apple 連結 79 集",
+  "Apple：節目共 208 集；Lookup 拿到 138 集",
+  "Apple 網頁：全部 205 集，其中訂閱者專屬 65 集",
+  "Apple：一集一集搜尋 0 集；全部共 205 集（之前 204 集）",
   "Spotify 節目 ID：1eyISRdcgDTwZqIqrP1qKv",
-  "Spotify API：211 集"
+  "Spotify API：212 集"
  ]
 }
