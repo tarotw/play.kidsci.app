@@ -498,8 +498,8 @@
   {
    "code": "c36",
    "title": "深海霸主帝王蟹(下)：與死神共舞的白令海捕蟹人",
-   "home": "studio",
-   "zone": null,
+   "home": "l03",
+   "zone": "海洋與深海",
    "also": [],
    "state": "subscriber",
    "listen": {
@@ -510,7 +510,6 @@
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/50/94/47/5094474c-ad6a-4b21-cf87-b732b4de2819/ef29df01-52db-444c-9846-ef82fdc23158.jpg/600x600bb.jpg",
    "intro": "小可和小博這次直接登上白令海的捕蟹船！三層樓高的巨浪、幾秒鐘就結冰的甲板、比雙人床還大的幾百公斤鋼鐵蟹籠在半空中晃來晃去……為什麼捕帝王蟹是全世界最危險的工作之一？還有，白令海竟然有大約一百億隻雪蟹消失了，牠們到底去哪裡了？快跟著兩位探險家一起出海破案！",
    "labs": [],
-   "autoPlaced": true,
    "artworkLocal": "assets/episode-covers/55edd5cfb68b512196ad.jpg"
   },
   {

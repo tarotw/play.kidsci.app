@@ -948,6 +948,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "icon": "🦀",
     "subject": "帝王蟹的身世與構造"
   },
+  "c36": {
+    "title": "深海霸主帝王蟹(下)：與死神共舞的白令海捕蟹人",
+    "contentKey": "127:bd35e281",
+    "icon": "🦀",
+    "subject": "白令海捕帝王蟹與雪蟹消失"
+  },
   "c5": {
     "title": "極速奧運會：獵豹、遊隼與旗魚的物理戰",
     "contentKey": "112:1f0864a",
