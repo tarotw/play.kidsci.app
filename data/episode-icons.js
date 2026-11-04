@@ -348,6 +348,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "icon": "🔭",
     "subject": "天文觀測的歷史與光行時"
   },
+  "120": {
+    "title": "宇宙透視眼：從「W」女王到不可見光的彩色秘密",
+    "contentKey": "109:aa9fc5d6",
+    "icon": "🔭",
+    "subject": "望遠鏡與不可見光的天文觀測"
+  },
   "150": {
     "title": "生物演化歷程：從單細胞到恐龍霸主 (上集)",
     "contentKey": "233:77545205",
