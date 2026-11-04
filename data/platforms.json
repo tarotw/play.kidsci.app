@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T09:18:40Z",
+ "generated": "2026-11-04T02:54:01Z",
  "firstory": {
   "https://open.firstory.fm/story/cmdpx4cur00cq01xld19aha50": {
    "spotify": "https://open.spotify.com/episode/3LeJFdsCDBCpJGKXBftJ8v",
@@ -2743,6 +2743,26 @@
     "intro": "小可和小博這次直接登上白令海的捕蟹船！三層樓高的巨浪、幾秒鐘就結冰的甲板、比雙人床還大的幾百公斤鋼鐵蟹籠在半空中晃來晃去……為什麼捕帝王蟹是全世界最危險的工作之一？還有，白令海竟然有大約一百億隻雪蟹消失了，牠們到底去哪裡了？快跟著兩位探險家一起出海破案！",
     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/50/94/47/5094474c-ad6a-4b21-cf87-b732b4de2819/ef29df01-52db-444c-9846-ef82fdc23158.jpg/600x600bb.jpg",
     "sub": true
+   },
+   {
+    "title": "〈上船囉！科學好好聽：好奇號・宇宙大冒險 頻道介紹〉",
+    "url": "https://podcasts.apple.com/tw/podcast/%E4%B8%8A%E8%88%B9%E5%9B%89-%E7%A7%91%E5%AD%B8%E5%A5%BD%E5%A5%BD%E8%81%BD-%E5%A5%BD%E5%A5%87%E8%99%9F-%E5%AE%87%E5%AE%99%E5%A4%A7%E5%86%92%E9%9A%AA-%E9%A0%BB%E9%81%93%E4%BB%8B%E7%B4%B9/id1812447277?i=1000799726819",
+    "guid": "cmw1gl5yd05030109ge951yzi",
+    "date": "2026-11-04T01:51:17Z",
+    "ms": 179000,
+    "intro": "不用買票，不用當太空人，戴上耳機就能環遊宇宙！小可和小博開著用想像力打造的好奇號，從地球出發：太陽打噴嚏、火星的豹紋石頭、薄得像鬆餅的大紅斑、冥王星的大愛心，全部都是真的科學。副駕駛的位置幫你留好了！",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/25/d5/71/25d5718d-c70c-99ba-6904-40120d7f3abb/mza_3637069215932354619.jpg/600x600bb.jpg",
+    "sub": false
+   },
+   {
+    "title": "〈宇宙透視眼：從「W」女王到不可見光的彩色秘密｜EP.120〉",
+    "url": "https://podcasts.apple.com/tw/podcast/%E5%AE%87%E5%AE%99%E9%80%8F%E8%A6%96%E7%9C%BC-%E5%BE%9E-w-%E5%A5%B3%E7%8E%8B%E5%88%B0%E4%B8%8D%E5%8F%AF%E8%A6%8B%E5%85%89%E7%9A%84%E5%BD%A9%E8%89%B2%E7%A7%98%E5%AF%86-ep-120/id1812447277?i=1000799675620",
+    "guid": "cmvw7zbzs07ya01z17ymm26hc",
+    "date": "2026-11-03T22:02:05Z",
+    "ms": 715000,
+    "intro": "即使你的眼睛看不見，宇宙中其實充滿了 X 射線和紅外線的「隱形顏色」喔！今天我們要化身宇宙小偵探，用反射式跟折射式望遠鏡這兩大門派的武功，去看 250 萬光年外的仙女座，還要教你怎麼用北斗七星找到那顆永遠不動的北極星！",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/bd/3b/1f/bd3b1f03-174d-92a6-e429-a4c3a6af4906/mza_5739446373746065190.jpg/600x600bb.jpg",
+    "sub": false
    }
   ],
   "searched": {
@@ -2817,6 +2837,16 @@
   "show": "https://open.spotify.com/show/1eyISRdcgDTwZqIqrP1qKv",
   "source": "api",
   "episodes": [
+   {
+    "title": "〈上船囉！科學好好聽：好奇號・宇宙大冒險 頻道介紹〉",
+    "url": "https://open.spotify.com/episode/7jlDbDt4FtCSq4aawAX2IM",
+    "date": "2026-11-04"
+   },
+   {
+    "title": "〈宇宙透視眼：從「W」女王到不可見光的彩色秘密｜EP.120〉",
+    "url": "https://open.spotify.com/episode/4LdXvzb3QaMi8Rhco0PPW0",
+    "date": "2026-11-03"
+   },
    {
     "title": "〈特派員企劃｜深海霸主帝王蟹(下)：與死神共舞的白令海捕蟹人｜VIP.36〉",
     "url": "https://open.spotify.com/episode/2CKtckUaePASqpNUbOUI97",
@@ -3887,9 +3917,9 @@
  "log": [
   "Firstory 單集頁：這次看了 0 頁；136 集裡有 Spotify 連結 136 集、Apple 連結 79 集",
   "Apple：節目共 209 集；Lookup 拿到 138 集",
-  "Apple 網頁：全部 206 集，其中訂閱者專屬 66 集",
-  "Apple：一集一集搜尋 0 集；全部共 206 集（之前 206 集）",
+  "Apple 網頁：全部 208 集，其中訂閱者專屬 66 集",
+  "Apple：一集一集搜尋 0 集；全部共 208 集（之前 206 集）",
   "Spotify 節目 ID：1eyISRdcgDTwZqIqrP1qKv",
-  "Spotify API：213 集"
+  "Spotify API：215 集"
  ]
 }
