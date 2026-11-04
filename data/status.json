@@ -1,7 +1,26 @@
 {
- "generated": "2026-11-04T02:54:01Z",
+ "generated": "2026-11-04T03:17:09Z",
  "spotifyChecked": true,
  "episodes": {
+  "120": [
+   {
+    "guid": "cmvw7zbzs07ya01z17ymm26hc",
+    "title": "〈宇宙透視眼：從「W」女王到不可見光的彩色秘密｜EP.120〉",
+    "link": "https://open.firstory.fm/story/cmvw7zbzs07ya01z17ymm26hc",
+    "pubDate": "Tue, 03 Nov 2026 22:02:05 GMT",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmvw7zbzs07ya01z17ymm26hc/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmvw7zbzs07yb01z1ahcfahv6.mp3?v=1793440206971",
+    "duration": 715,
+    "episodeType": "full",
+    "artwork": "https://image.firstory-cdn.me/Image/cmdpx4cs200ax01xldg5ta89p/L8He93KFpFQuuN77toEYD.jpg",
+    "artworkIsEpisode": true,
+    "intro": "即使你的眼睛看不見，宇宙中其實充滿了 X 射線和紅外線的「隱形顏色」喔！今天我們要化身宇宙小偵探，用反射式跟折射式望遠鏡這兩大門派的武功，去看 250 萬光年外的仙女座，還要教你怎麼用北斗七星找到那顆永遠不動的北極星！",
+    "matchedBy": "code",
+    "labeledPublic": false,
+    "trailerOnly": false,
+    "apple": null,
+    "spotify": true
+   }
+  ],
   "c35": [
    {
     "guid": "cmvw7ighg03a001wy70uz12gn",
@@ -2988,6 +3007,23 @@
   ]
  },
  "unmatched": [
+  {
+   "guid": "cmw1gl5yd05030109ge951yzi",
+   "title": "〈上船囉！科學好好聽：好奇號・宇宙大冒險 頻道介紹〉",
+   "link": "https://open.firstory.fm/story/cmw1gl5yd05030109ge951yzi",
+   "pubDate": "Wed, 04 Nov 2026 01:51:17 GMT",
+   "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmw1gl5yd05030109ge951yzi/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmw1gl5yd05040109bmt13kdb.mp3?v=1793756979394",
+   "duration": 179,
+   "episodeType": "trailer",
+   "artwork": "https://image.firstory-cdn.me/Image/cmdpx4cs200ax01xldg5ta89p/JhUz3UdwaS7QzCly0Uhlk.jpg",
+   "artworkIsEpisode": true,
+   "intro": "不用買票，不用當太空人，戴上耳機就能環遊宇宙！小可和小博開著用想像力打造的好奇號，從地球出發：太陽打噴嚏、火星的豹紋石頭、薄得像鬆餅的大紅斑、冥王星的大愛心，全部都是真的科學。副駕駛的位置幫你留好了！",
+   "matchedBy": "none",
+   "labeledPublic": false,
+   "trailerOnly": true,
+   "apple": null,
+   "spotify": true
+  },
   {
    "guid": "cmvw78lq500f20109clvuhzsj",
    "title": "〈特別企劃｜科學好好聽特派員｜預告〉",
