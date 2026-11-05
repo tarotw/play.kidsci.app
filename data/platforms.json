@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T03:17:09Z",
+ "generated": "2026-11-05T03:43:53Z",
  "firstory": {
   "https://open.firstory.fm/story/cmdpx4cur00cq01xld19aha50": {
    "spotify": "https://open.spotify.com/episode/3LeJFdsCDBCpJGKXBftJ8v",
@@ -689,7 +689,7 @@
  },
  "apple": {
   "show": "https://podcasts.apple.com/tw/podcast/%E7%A7%91%E5%AD%B8%E5%A5%BD%E5%A5%BD%E8%81%BD/id1812447277",
-  "total": 209,
+  "total": 212,
   "episodes": [
    {
     "title": "〈登月大冒險：阿波羅 11 號、史上最強火箭與人類的一大步｜EP.117〉",
@@ -2085,7 +2085,7 @@
     "title": "〈揭開海洋幽靈的面紗：在海床上飛翔的「魟魚」戰士｜EP.250〉",
     "url": "https://podcasts.apple.com/tw/podcast/%E6%8F%AD%E9%96%8B%E6%B5%B7%E6%B4%8B%E5%B9%BD%E9%9D%88%E7%9A%84%E9%9D%A2%E7%B4%97-%E5%9C%A8%E6%B5%B7%E5%BA%8A%E4%B8%8A%E9%A3%9B%E7%BF%94%E7%9A%84-%E9%AD%9F%E9%AD%9A-%E6%88%B0%E5%A3%AB-ep-250/id1812447277?i=1000792031412",
     "date": "2026-10-01T16:00:00Z",
-    "sub": true,
+    "sub": false,
     "guid": "cmulaj2bv005j01v8f0ye2jwp",
     "ms": null,
     "intro": "你有看過在海底「慢動作飛行」的神祕飛毯嗎？那其實是聰明絕頂的魟魚！牠們不僅有著像馬賽克瓷磚般的精密骨骼，還能在強大的海底吸力中穩定航行，甚至能潛入兩座台北 101 大樓深的深海！快跟著科學隊長一起潛入藍色海洋，認識這些流體力學大師吧！",
@@ -2768,6 +2768,15 @@
     "intro": "即使你的眼睛看不見，宇宙中其實充滿了 X 射線和紅外線的「隱形顏色」喔！今天我們要化身宇宙小偵探，用反射式跟折射式望遠鏡這兩大門派的武功，去看 250 萬光年外的仙女座，還要教你怎麼用北斗七星找到那顆永遠不動的北極星！",
     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/bd/3b/1f/bd3b1f03-174d-92a6-e429-a4c3a6af4906/mza_5739446373746065190.jpg/600x600bb.jpg",
     "sub": false
+   },
+   {
+    "title": "〈海洋中的絕美刺客：釉彩蠟膜蝦與棘冠海星的生死鬥｜EP.254〉",
+    "url": "https://podcasts.apple.com/tw/podcast/%E6%B5%B7%E6%B4%8B%E4%B8%AD%E7%9A%84%E7%B5%95%E7%BE%8E%E5%88%BA%E5%AE%A2-%E9%87%89%E5%BD%A9%E8%A0%9F%E8%86%9C%E8%9D%A6%E8%88%87%E6%A3%98%E5%86%A0%E6%B5%B7%E6%98%9F%E7%9A%84%E7%94%9F%E6%AD%BB%E9%AC%A5-ep-254/id1812447277?i=1000799048370",
+    "guid": "cmvw87vck07uz01xu84b8bcmf",
+    "date": "2026-11-04T22:00:00Z",
+    "intro": "穿著華麗瓷器外衣的釉彩蠟膜蝦，竟然是海洋中最殘忍的「海星收割機」？牠們如何聯手對付比自己大十幾倍的毒星君？快來聽這場微型海洋救世主的驚心動魄故事！",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/cd/cc/6a/cdcc6a64-5d56-395c-1e98-2ee8a727715b/1433a366-38ab-494c-927b-247c6fef4eca.jpg/600x600bb.jpg",
+    "sub": true
    }
   ],
   "searched": {
@@ -2842,6 +2851,11 @@
   "show": "https://open.spotify.com/show/1eyISRdcgDTwZqIqrP1qKv",
   "source": "api",
   "episodes": [
+   {
+    "title": "〈海洋中的絕美刺客：釉彩蠟膜蝦與棘冠海星的生死鬥｜EP.254〉",
+    "url": "https://open.spotify.com/episode/2Hz0xcZdn4rOlwrT7d0OTq",
+    "date": "2026-11-04"
+   },
    {
     "title": "〈上船囉！科學好好聽：好奇號・宇宙大冒險 頻道介紹〉",
     "url": "https://open.spotify.com/episode/7jlDbDt4FtCSq4aawAX2IM",
@@ -3920,11 +3934,11 @@
   ]
  },
  "log": [
-  "Firstory 單集頁：這次看了 1 頁；137 集裡有 Spotify 連結 137 集、Apple 連結 80 集",
-  "Apple：節目共 209 集；Lookup 拿到 138 集",
-  "Apple 網頁：全部 208 集，其中訂閱者專屬 66 集",
-  "Apple：一集一集搜尋 0 集；全部共 208 集（之前 208 集）",
+  "Firstory 單集頁：這次看了 0 頁；137 集裡有 Spotify 連結 137 集、Apple 連結 80 集",
+  "Apple：節目共 212 集；Lookup 拿到 140 集",
+  "Apple 網頁：全部 209 集，其中訂閱者專屬 66 集",
+  "Apple：一集一集搜尋 0 集；全部共 209 集（之前 208 集）",
   "Spotify 節目 ID：1eyISRdcgDTwZqIqrP1qKv",
-  "Spotify API：215 集"
+  "Spotify API：216 集"
  ]
 }

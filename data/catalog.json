@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T03:17:09Z",
+ "generated": "2026-11-05T03:43:53Z",
  "episodes": [
   {
    "code": "c10",
@@ -1619,7 +1619,7 @@
    "also": [],
    "state": "public",
    "listen": {
-    "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000799675620",
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%AE%87%E5%AE%99%E9%80%8F%E8%A6%96%E7%9C%BC-%E5%BE%9E-w-%E5%A5%B3%E7%8E%8B%E5%88%B0%E4%B8%8D%E5%8F%AF%E8%A6%8B%E5%85%89%E7%9A%84%E5%BD%A9%E8%89%B2%E7%A7%98%E5%AF%86-ep-120/id1812447277?i=1000799675620",
     "spotify": "https://open.spotify.com/episode/4LdXvzb3QaMi8Rhco0PPW0",
     "duration": 715,
     "pubDate": "Tue, 03 Nov 2026 22:02:05 GMT"
@@ -3275,7 +3275,7 @@
    "home": "l03",
    "zone": "海洋與深海",
    "also": [],
-   "state": "subscriber",
+   "state": "public",
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E6%8F%AD%E9%96%8B%E6%B5%B7%E6%B4%8B%E5%B9%BD%E9%9D%88%E7%9A%84%E9%9D%A2%E7%B4%97-%E5%9C%A8%E6%B5%B7%E5%BA%8A%E4%B8%8A%E9%A3%9B%E7%BF%94%E7%9A%84-%E9%AD%9F%E9%AD%9A-%E6%88%B0%E5%A3%AB-ep-250/id1812447277?i=1000792031412",
     "spotify": "https://open.spotify.com/episode/3Pk4zXt18i9bO2ulLOieMD",
@@ -3350,6 +3350,23 @@
     }
    ],
    "artworkLocal": "assets/episode-covers/61261d5db9a22222f779.jpg"
+  },
+  {
+   "code": "254",
+   "title": "海洋中的絕美刺客：釉彩蠟膜蝦與棘冠海星的生死鬥",
+   "home": "l03",
+   "zone": "珊瑚礁",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "apple": "https://podcasts.apple.com/tw/podcast/%E6%B5%B7%E6%B4%8B%E4%B8%AD%E7%9A%84%E7%B5%95%E7%BE%8E%E5%88%BA%E5%AE%A2-%E9%87%89%E5%BD%A9%E8%A0%9F%E8%86%9C%E8%9D%A6%E8%88%87%E6%A3%98%E5%86%A0%E6%B5%B7%E6%98%9F%E7%9A%84%E7%94%9F%E6%AD%BB%E9%AC%A5-ep-254/id1812447277?i=1000799048370",
+    "spotify": "https://open.spotify.com/episode/2Hz0xcZdn4rOlwrT7d0OTq",
+    "pubDate": "2026-11-04T22:00:00Z"
+   },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/cd/cc/6a/cdcc6a64-5d56-395c-1e98-2ee8a727715b/1433a366-38ab-494c-927b-247c6fef4eca.jpg/600x600bb.jpg",
+   "intro": "穿著華麗瓷器外衣的釉彩蠟膜蝦，竟然是海洋中最殘忍的「海星收割機」？牠們如何聯手對付比自己大十幾倍的毒星君？快來聽這場微型海洋救世主的驚心動魄故事！",
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/3a3455f4b67cb1bf45ce.jpg"
   },
   {
    "code": "50",
