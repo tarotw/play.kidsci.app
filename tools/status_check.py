@@ -107,7 +107,7 @@ def intro_text(desc: str | None) -> str | None:
     s = re.sub(r"</p>|<br\s*/?>", "\n", desc.replace("\r", ""))
     s = html.unescape(re.sub(r"<[^>]+>", "", s))
     paras = [p.strip() for p in s.split("\n") if p.strip()]
-    out = ""
+    out, body = "", 0  # body：不含開頭「【…】」標題行的字數
     for p in paras:
         p = re.sub(r"=+\s*>.*$", "", p)
         p = re.sub(r"https?://\S+", "", p)
@@ -116,9 +116,12 @@ def intro_text(desc: str | None) -> str | None:
         p = re.sub(r"^[👉\s]*加入\s*VIP[^～~！!。]*[～~！!。]", "", p).strip(" 　-—:：")
         if not p:
             continue
-        if out and (PROMO.search(p) or len(out) >= 40):  # 第一段一定留（就算裡面剛好有「訂閱」）
+        if out and (PROMO.search(p) or body >= 40):  # 第一段一定留（就算裡面剛好有「訂閱」）
             break
-        out = f"{out} {p}".strip()
+        head = re.fullmatch(r"[^\w【】]*【([^】]+)】[^\w【】]*", p)  # 一行一行的短句說明，開頭常是「🚀【標題】🌌」
+        out = f"{out} {head.group(1) if head else p}".strip()
+        if not head:  # 標題行留下裡面的字，但不算字數
+            body += len(p)
     out = re.sub(r"\s+", " ", out).strip()
     return out if len(out) >= 12 else None
 

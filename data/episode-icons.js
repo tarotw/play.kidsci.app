@@ -260,7 +260,7 @@ export const REVIEWED_EPISODE_ICONS = {
   },
   "105": {
     "title": "太陽系衝鋒號(上)：勇闖內行星的冰火世界",
-    "contentKey": "49:223b242a",
+    "contentKey": "71:f3844f44",
     "icon": "🌍",
     "subject": "四顆內側岩石行星"
   },
@@ -809,6 +809,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "contentKey": "81:5e62577d",
     "icon": "🦓",
     "subject": "斑馬為何難以馴化與條紋的功能"
+  },
+  "254": {
+    "title": "海洋中的絕美刺客：釉彩蠟膜蝦與棘冠海星的生死鬥",
+    "contentKey": "73:7232f98",
+    "icon": "🦐",
+    "subject": "釉彩蠟膜蝦捕食棘冠海星"
   },
   "c10": {
     "title": "懸掛在 508 公尺高的極限科學：艾力克斯攀登台北 101 的技術真相",
