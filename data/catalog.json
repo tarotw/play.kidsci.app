@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T03:43:53Z",
+ "generated": "2026-11-06T03:39:43Z",
  "episodes": [
   {
    "code": "c10",
@@ -1314,13 +1314,13 @@
    "also": [],
    "state": "public",
    "listen": {
-    "apple": "https://podcasts.apple.com/tw/podcast/%E5%A4%AA%E9%99%BD%E7%B3%BB%E5%B0%88%E8%BC%AF-%E5%A4%AA%E9%99%BD%E7%B3%BB%E8%A1%9D%E9%8B%92%E8%99%9F-%E4%B8%8A-%E5%8B%87%E9%97%96%E5%85%A7%E8%A1%8C%E6%98%9F%E7%9A%84%E5%86%B0%E7%81%AB%E4%B8%96%E7%95%8C-ep-105/id1812447277?i=1000790840453",
-    "spotify": "https://open.spotify.com/episode/3HI4aX7VZliQKMWBjXSC6x",
-    "duration": 1354,
-    "pubDate": "Sun, 20 Sep 2026 22:02:10 GMT"
+    "apple": "https://podcasts.apple.com/tw/podcast/%E9%9F%B3%E6%95%88%E9%87%8D%E9%8C%84%E7%89%88-%E5%A4%AA%E9%99%BD%E7%B3%BB%E8%A1%9D%E9%8B%92%E8%99%9F-%E4%B8%8A-%E5%8B%87%E9%97%96%E5%85%A7%E8%A1%8C%E6%98%9F%E7%9A%84%E5%86%B0%E7%81%AB%E4%B8%96%E7%95%8C-ep-105/id1812447277?i=1000800122414",
+    "spotify": "https://open.spotify.com/episode/4RHX7Yhs70ei47UbORBFrH",
+    "duration": 1073,
+    "pubDate": "Thu, 05 Nov 2026 23:01:41 GMT"
    },
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/9b/38/e9/9b38e97e-5b48-88ed-70b2-4fdb76bc55de/mza_2953100911350863296.jpg/600x600bb.jpg",
-   "intro": "各位小小探險家！快繫好安全帶，我們的「太陽系衝鋒號」要出發囉！這次我們要拜訪太陽系最熱鬧的內行星區",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/5f/66/d1/5f66d18f-deea-0b76-28cc-608bd71f9332/mza_1552008958184158621.jpg/600x600bb.jpg",
+   "intro": "🚀【太陽系探險隊出發！水星有冰塊？金星是地獄？】🌌 各位大朋友小朋友，準備好飛向宇宙浩瀚無垠了嗎？",
    "labs": [
     {
      "id": "solar",
@@ -1329,7 +1329,7 @@
      "url": "https://lab.kidsci.app/solar-system/"
     }
    ],
-   "artworkLocal": "assets/episode-covers/7cf95be9753431ec4ff8.jpg"
+   "artworkLocal": "assets/episode-covers/9aa10f30d09d6730de40.jpg"
   },
   {
    "code": "106",
