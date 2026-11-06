@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T03:39:43Z",
+ "generated": "2026-11-06T15:22:47Z",
  "firstory": {
   "https://open.firstory.fm/story/cmdpx4cur00cq01xld19aha50": {
    "spotify": "https://open.spotify.com/episode/3LeJFdsCDBCpJGKXBftJ8v",
@@ -3969,10 +3969,10 @@
   ]
  },
  "log": [
-  "Firstory 單集頁：這次看了 1 頁；138 集裡有 Spotify 連結 138 集、Apple 連結 81 集",
+  "Firstory 單集頁：這次看了 0 頁；138 集裡有 Spotify 連結 138 集、Apple 連結 81 集",
   "Apple：節目共 214 集；Lookup 拿到 142 集",
   "Apple 網頁：全部 211 集，其中訂閱者專屬 66 集",
-  "Apple：一集一集搜尋 0 集；全部共 211 集（之前 209 集）",
+  "Apple：一集一集搜尋 0 集；全部共 211 集（之前 211 集）",
   "Spotify 節目 ID：1eyISRdcgDTwZqIqrP1qKv",
   "Spotify API：218 集"
  ]
