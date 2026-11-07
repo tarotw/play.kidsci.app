@@ -1,7 +1,46 @@
 {
- "generated": "2026-11-06T15:26:08Z",
+ "generated": "2026-11-07T03:12:32Z",
  "spotifyChecked": true,
  "episodes": {
+  "106": [
+   {
+    "guid": "cmw4s1ml1000101po9kylccb3",
+    "title": "〈音效重錄版｜太陽系衝鋒號(下)：氣體巨人的奇幻國度｜EP.106〉",
+    "link": "https://open.firstory.fm/story/cmw4s1ml1000101po9kylccb3",
+    "pubDate": "Fri, 06 Nov 2026 22:02:01 GMT",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmw4s1ml1000101po9kylccb3/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmw4s1ml1000201po892a4icq.mp3?v=1793957737207",
+    "duration": 1130,
+    "episodeType": "full",
+    "artwork": "https://image.firstory-cdn.me/Image/cmdpx4cs200ax01xldg5ta89p/uM7K8Di8aHfc0yZ2nqFBT.jpg",
+    "artworkIsEpisode": true,
+    "intro": "各位小小太空人！穿越了小行星帶，我們即將進入太陽系的「巨人國」！木星肚子裡有個比地球還大的超級風暴，土星的呼拉圈竟然是冰塊做的，還多到有兩百七十四顆衛星！天王星為什麼躺著轉？海王星的風快到時速兩千公里？以前的第九大行星冥王星又去哪了？快來跟我們一起解開這些宇宙謎團！",
+    "matchedBy": "code",
+    "labeledPublic": false,
+    "trailerOnly": false,
+    "apple": null,
+    "spotify": true
+   },
+   {
+    "guid": "cmu7xunqf09nx01x913q3h0ch",
+    "title": "〈太陽系衝鋒號(下)：氣體巨人的奇幻國度｜EP.106〉",
+    "link": "https://open.firstory.fm/story/cmu7xunqf09nx01x913q3h0ch",
+    "pubDate": "Wed, 23 Sep 2026 22:02:18 GMT",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmu7xunqf09nx01x913q3h0ch/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmu7xunqf09ny01x91ah34dj2.mp3?v=1794014533258",
+    "duration": 1130,
+    "episodeType": "full",
+    "artwork": "https://image.firstory-cdn.me/Image/cmdpx4cs200ax01xldg5ta89p/79dG2RXuLfqW25xWwXTQn.jpg",
+    "artworkIsEpisode": true,
+    "intro": "各位小小太空人！穿越了危險的小行星帶，我們即將進入太陽系的「巨人國」！ 🌪️ 木星的肚子裡有個比地球還大的超級颱風？",
+    "matchedBy": "code",
+    "labeledPublic": false,
+    "trailerOnly": false,
+    "apple": {
+     "trackId": 1000791356695,
+     "url": "https://podcasts.apple.com/tw/podcast/%E5%A4%AA%E9%99%BD%E7%B3%BB%E8%A1%9D%E9%8B%92%E8%99%9F-%E4%B8%8B-%E6%B0%A3%E9%AB%94%E5%B7%A8%E4%BA%BA%E7%9A%84%E5%A5%87%E5%B9%BB%E5%9C%8B%E5%BA%A6-ep-106/id1812447277?i=1000791356695&uo=4"
+    },
+    "spotify": true
+   }
+  ],
   "105": [
    {
     "guid": "cmw45a3d005mg01yvdcv52ldl",
@@ -28,8 +67,8 @@
     "title": "〈太陽系專輯｜太陽系衝鋒號(上)：勇闖內行星的冰火世界｜EP.105〉",
     "link": "https://open.firstory.fm/story/cmu7xnpb00o9001z3cqnec4xv",
     "pubDate": "Sun, 20 Sep 2026 22:02:10 GMT",
-    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmu7xnpb00o9001z3cqnec4xv/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmu7xnpb00o9101z30tuidqbe.mp3?v=1789794925156",
-    "duration": 1354,
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmu7xnpb00o9001z3cqnec4xv/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmu7xnpb00o9101z30tuidqbe.mp3?v=1793953811667",
+    "duration": 1073,
     "episodeType": "full",
     "artwork": "https://image.firstory-cdn.me/Image/cmdpx4cs200ax01xldg5ta89p/ZpG3NOSz5Vjnnc82LLdnR.jpg",
     "artworkIsEpisode": true,
@@ -388,28 +427,6 @@
     "apple": {
      "trackId": 1000792094195,
      "url": "https://podcasts.apple.com/tw/podcast/%E6%9C%88%E7%90%83%E8%82%9A%E5%AD%90%E8%A3%A1%E8%97%8F%E8%91%97%E5%A4%A7%E7%81%AB%E7%90%83-%E6%8F%AD%E9%96%8B%E6%9C%88%E7%90%83%E7%9A%84%E8%BA%AB%E4%B8%96%E4%B9%8B%E8%AC%8E-ep-111/id1812447277?i=1000792094195&uo=4"
-    },
-    "spotify": true
-   }
-  ],
-  "106": [
-   {
-    "guid": "cmu7xunqf09nx01x913q3h0ch",
-    "title": "〈太陽系衝鋒號(下)：氣體巨人的奇幻國度｜EP.106〉",
-    "link": "https://open.firstory.fm/story/cmu7xunqf09nx01x913q3h0ch",
-    "pubDate": "Wed, 23 Sep 2026 22:02:18 GMT",
-    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmu7xunqf09nx01x913q3h0ch/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmu7xunqf09ny01x91ah34dj2.mp3?v=1789795244314",
-    "duration": 1222,
-    "episodeType": "full",
-    "artwork": "https://image.firstory-cdn.me/Image/cmdpx4cs200ax01xldg5ta89p/79dG2RXuLfqW25xWwXTQn.jpg",
-    "artworkIsEpisode": true,
-    "intro": "各位小小太空人！穿越了危險的小行星帶，我們即將進入太陽系的「巨人國」！ 🌪️ 木星的肚子裡有個比地球還大的超級颱風？",
-    "matchedBy": "code",
-    "labeledPublic": false,
-    "trailerOnly": false,
-    "apple": {
-     "trackId": 1000791356695,
-     "url": "https://podcasts.apple.com/tw/podcast/%E5%A4%AA%E9%99%BD%E7%B3%BB%E8%A1%9D%E9%8B%92%E8%99%9F-%E4%B8%8B-%E6%B0%A3%E9%AB%94%E5%B7%A8%E4%BA%BA%E7%9A%84%E5%A5%87%E5%B9%BB%E5%9C%8B%E5%BA%A6-ep-106/id1812447277?i=1000791356695&uo=4"
     },
     "spotify": true
    }

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T15:26:08Z",
+ "generated": "2026-11-07T03:12:32Z",
  "firstory": {
   "https://open.firstory.fm/story/cmdpx4cur00cq01xld19aha50": {
    "spotify": "https://open.spotify.com/episode/3LeJFdsCDBCpJGKXBftJ8v",
@@ -690,6 +690,11 @@
    "spotify": "https://open.spotify.com/episode/4RHX7Yhs70ei47UbORBFrH",
    "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000800122414",
    "checked": "2026-11-06"
+  },
+  "https://open.firstory.fm/story/cmw4s1ml1000101po9kylccb3": {
+   "spotify": "https://open.spotify.com/episode/33Wxfa4AaroPYm8NRRVhLv",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000800313233",
+   "checked": "2026-11-07"
   }
  },
  "apple": {
@@ -811,7 +816,7 @@
     "url": "https://podcasts.apple.com/tw/podcast/%E5%A4%AA%E9%99%BD%E7%B3%BB%E5%B0%88%E8%BC%AF-%E5%A4%AA%E9%99%BD%E7%B3%BB%E8%A1%9D%E9%8B%92%E8%99%9F-%E4%B8%8A-%E5%8B%87%E9%97%96%E5%85%A7%E8%A1%8C%E6%98%9F%E7%9A%84%E5%86%B0%E7%81%AB%E4%B8%96%E7%95%8C-ep-105/id1812447277?i=1000790840453",
     "guid": "cmu7xnpb00o9001z3cqnec4xv",
     "date": "2026-09-20T22:02:10Z",
-    "ms": 1073000,
+    "ms": 1354000,
     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/9b/38/e9/9b38e97e-5b48-88ed-70b2-4fdb76bc55de/mza_2953100911350863296.jpg/600x600bb.jpg",
     "intro": "各位小小探險家！快繫好安全帶，我們的「太陽系衝鋒號」要出發囉！這次我們要拜訪太陽系最熱鬧的內行星區",
     "sub": false
@@ -2802,6 +2807,16 @@
     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/71/32/2e/71322ec6-2c0f-e1c1-702e-0057cdc74a3f/mza_668744915025558022.jpg/600x600bb.jpg",
     "sub": false,
     "intro": "以前有一些集數，科學隊長和好奇博士的發音唸錯了，像是行星系列裡把天王星、海王星身上的「甲烷」一直唸成「甲天」，還有破音字和動物名字也唸錯不少。謝謝每一位細心提醒我們的聽眾！"
+   },
+   {
+    "title": "〈音效重錄版｜太陽系衝鋒號(下)：氣體巨人的奇幻國度｜EP.106〉",
+    "url": "https://podcasts.apple.com/tw/podcast/%E9%9F%B3%E6%95%88%E9%87%8D%E9%8C%84%E7%89%88-%E5%A4%AA%E9%99%BD%E7%B3%BB%E8%A1%9D%E9%8B%92%E8%99%9F-%E4%B8%8B-%E6%B0%A3%E9%AB%94%E5%B7%A8%E4%BA%BA%E7%9A%84%E5%A5%87%E5%B9%BB%E5%9C%8B%E5%BA%A6-ep-106/id1812447277?i=1000800313233",
+    "guid": "cmw4s1ml1000101po9kylccb3",
+    "date": "2026-11-06T22:02:01Z",
+    "ms": 1130000,
+    "intro": "各位小小太空人！穿越了小行星帶，我們即將進入太陽系的「巨人國」！木星肚子裡有個比地球還大的超級風暴，土星的呼拉圈竟然是冰塊做的，還多到有兩百七十四顆衛星！天王星為什麼躺著轉？海王星的風快到時速兩千公里？以前的第九大行星冥王星又去哪了？快來跟我們一起解開這些宇宙謎團！",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/c2/77/71/c2777143-f75e-78cd-bda3-3a67ba864bba/mza_787635407279119284.jpg/600x600bb.jpg",
+    "sub": false
    }
   ],
   "searched": {
@@ -2876,6 +2891,11 @@
   "show": "https://open.spotify.com/show/1eyISRdcgDTwZqIqrP1qKv",
   "source": "api",
   "episodes": [
+   {
+    "title": "〈音效重錄版｜太陽系衝鋒號(下)：氣體巨人的奇幻國度｜EP.106〉",
+    "url": "https://open.spotify.com/episode/33Wxfa4AaroPYm8NRRVhLv",
+    "date": "2026-11-06"
+   },
    {
     "title": "〈音效重錄版｜太陽系衝鋒號(上)：勇闖內行星的冰火世界｜EP.105〉",
     "url": "https://open.spotify.com/episode/4RHX7Yhs70ei47UbORBFrH",
@@ -3969,11 +3989,11 @@
   ]
  },
  "log": [
-  "Firstory 單集頁：這次看了 0 頁；138 集裡有 Spotify 連結 138 集、Apple 連結 81 集",
+  "Firstory 單集頁：這次看了 1 頁；139 集裡有 Spotify 連結 139 集、Apple 連結 82 集",
   "Apple：節目共 214 集；Lookup 拿到 142 集",
-  "Apple 網頁：全部 211 集，其中訂閱者專屬 66 集",
-  "Apple：一集一集搜尋 0 集；全部共 211 集（之前 211 集）",
+  "Apple 網頁：全部 212 集，其中訂閱者專屬 66 集",
+  "Apple：一集一集搜尋 0 集；全部共 212 集（之前 211 集）",
   "Spotify 節目 ID：1eyISRdcgDTwZqIqrP1qKv",
-  "Spotify API：218 集"
+  "Spotify API：219 集"
  ]
 }

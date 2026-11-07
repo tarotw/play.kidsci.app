@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-06T15:26:08Z",
+ "generated": "2026-11-07T03:12:32Z",
  "episodes": [
   {
    "code": "c10",
@@ -1339,13 +1339,13 @@
    "also": [],
    "state": "public",
    "listen": {
-    "apple": "https://podcasts.apple.com/tw/podcast/%E5%A4%AA%E9%99%BD%E7%B3%BB%E8%A1%9D%E9%8B%92%E8%99%9F-%E4%B8%8B-%E6%B0%A3%E9%AB%94%E5%B7%A8%E4%BA%BA%E7%9A%84%E5%A5%87%E5%B9%BB%E5%9C%8B%E5%BA%A6-ep-106/id1812447277?i=1000791356695",
-    "spotify": "https://open.spotify.com/episode/2XBcncBPaqGcP1Q2Is3xT6",
-    "duration": 1222,
-    "pubDate": "Wed, 23 Sep 2026 22:02:18 GMT"
+    "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000800313233",
+    "spotify": "https://open.spotify.com/episode/33Wxfa4AaroPYm8NRRVhLv",
+    "duration": 1130,
+    "pubDate": "Fri, 06 Nov 2026 22:02:01 GMT"
    },
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/8c/13/2e/8c132efe-75b8-e11c-9fea-0531eafea3da/mza_7669466089501930666.jpg/600x600bb.jpg",
-   "intro": "各位小小太空人！穿越了危險的小行星帶，我們即將進入太陽系的「巨人國」！ 🌪️ 木星的肚子裡有個比地球還大的超級颱風？",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/c2/77/71/c2777143-f75e-78cd-bda3-3a67ba864bba/mza_787635407279119284.jpg/600x600bb.jpg",
+   "intro": "各位小小太空人！穿越了小行星帶，我們即將進入太陽系的「巨人國」！木星肚子裡有個比地球還大的超級風暴，土星的呼拉圈竟然是冰塊做的，還多到有兩百七十四顆衛星！天王星為什麼躺著轉？海王星的風快到時速兩千公里？以前的第九大行星冥王星又去哪了？快來跟我們一起解開這些宇宙謎團！",
    "labs": [
     {
      "id": "solar",
@@ -1354,7 +1354,7 @@
      "url": "https://lab.kidsci.app/solar-system/"
     }
    ],
-   "artworkLocal": "assets/episode-covers/48339c69f01381d01ecd.jpg"
+   "artworkLocal": "assets/episode-covers/fe3bbedcfb05e75447fb.jpg"
   },
   {
    "code": "107",
