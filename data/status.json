@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T03:12:32Z",
+ "generated": "2026-11-08T02:42:35Z",
  "spotifyChecked": true,
  "episodes": {
   "106": [
@@ -17,7 +17,10 @@
     "matchedBy": "code",
     "labeledPublic": false,
     "trailerOnly": false,
-    "apple": null,
+    "apple": {
+     "trackId": 1000800313233,
+     "url": "https://podcasts.apple.com/tw/podcast/%E9%9F%B3%E6%95%88%E9%87%8D%E9%8C%84%E7%89%88-%E5%A4%AA%E9%99%BD%E7%B3%BB%E8%A1%9D%E9%8B%92%E8%99%9F-%E4%B8%8B-%E6%B0%A3%E9%AB%94%E5%B7%A8%E4%BA%BA%E7%9A%84%E5%A5%87%E5%B9%BB%E5%9C%8B%E5%BA%A6-ep-106/id1812447277?i=1000800313233&uo=4"
+    },
     "spotify": true
    },
    {
