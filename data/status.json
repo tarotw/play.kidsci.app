@@ -1,7 +1,29 @@
 {
- "generated": "2026-11-09T02:29:19Z",
+ "generated": "2026-11-09T02:58:33Z",
  "spotifyChecked": true,
  "episodes": {
+  "121": [
+   {
+    "guid": "cmw6eibn300wa01w25r1c9o5k",
+    "title": "〈地球小時候是個大火球？揭開地球的成長相簿！｜EP.121〉",
+    "link": "https://open.firstory.fm/story/cmw6eibn300wa01w25r1c9o5k",
+    "pubDate": "Sun, 08 Nov 2026 22:01:58 GMT",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmw6eibn300wa01w25r1c9o5k/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmw6eibn300wb01w250mgau5r.mp3?v=1794055846054",
+    "duration": 1109,
+    "episodeType": "full",
+    "artwork": "https://image.firstory-cdn.me/Image/cmdpx4cs200ax01xldg5ta89p/dTYXnX84u8v2Gxf37arHJ.jpg",
+    "artworkIsEpisode": true,
+    "intro": "你知道我們住的地球，以前竟然是一個超級燙的大火球嗎？而且以前的陸地全部黏在一起，叫做「盤古大陸」！快跟著科學隊長搭乘時光機，回到 45 億年前，看看地球是怎麼變身成現在這個美麗的藍色星球吧！",
+    "matchedBy": "code",
+    "labeledPublic": false,
+    "trailerOnly": false,
+    "apple": {
+     "trackId": 1000800628837,
+     "url": "https://podcasts.apple.com/tw/podcast/%E5%9C%B0%E7%90%83%E5%B0%8F%E6%99%82%E5%80%99%E6%98%AF%E5%80%8B%E5%A4%A7%E7%81%AB%E7%90%83-%E6%8F%AD%E9%96%8B%E5%9C%B0%E7%90%83%E7%9A%84%E6%88%90%E9%95%B7%E7%9B%B8%E7%B0%BF-ep-121/id1812447277?i=1000800628837&uo=4"
+    },
+    "spotify": true
+   }
+  ],
   "106": [
    {
     "guid": "cmw4s1ml1000101po9kylccb3",
