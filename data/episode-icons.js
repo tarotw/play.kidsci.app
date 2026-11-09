@@ -266,7 +266,7 @@ export const REVIEWED_EPISODE_ICONS = {
   },
   "106": {
     "title": "太陽系衝鋒號(下)：氣體巨人的奇幻國度",
-    "contentKey": "59:f9a85aa1",
+    "contentKey": "133:42df913c",
     "icon": "🪐",
     "subject": "外側巨行星"
   },
@@ -353,6 +353,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "contentKey": "109:aa9fc5d6",
     "icon": "🔭",
     "subject": "望遠鏡與不可見光的天文觀測"
+  },
+  "121": {
+    "title": "地球小時候是個大火球？揭開地球的成長相簿！",
+    "contentKey": "95:39a4e87d",
+    "icon": "🌍",
+    "subject": "地球的形成與演變"
   },
   "150": {
     "title": "生物演化歷程：從單細胞到恐龍霸主 (上集)",
