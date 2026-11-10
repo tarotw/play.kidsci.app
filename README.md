@@ -82,7 +82,9 @@ GitHub Pages（Settings → Pages → Deploy from branch → `main` / root），
 
 ## SEO（搜尋引擎）
 
-宇宙島是 3D 畫布，搜尋引擎看不到字，所以 `tools/build_seo.py` 依 `data/islands.json`、`data/catalog.json` 產生：`index.html` 裡的標題、描述、關鍵字、Open Graph／Twitter、JSON-LD（WebSite、PodcastSeries、島的清單、常見問題）和一份**文字版**（每個群島、每座島、每一集的標題，連結是 `?isle=`、`?ch=`；畫面上收起來，給搜尋引擎和螢幕閱讀器，關掉 JS 時會直接顯示），另外 `sitemap.xml`、`robots.txt`（心智圖、旋鈕、縮放那幾頁不收錄）。每次目錄更新後由 GitHub Actions（`status.yml`）自動重跑，集數會跟著變；手動跑：`python3 tools/build_seo.py`。
+宇宙島是 3D 畫布，搜尋引擎看不到字，所以 `tools/build_seo.py` 依 `data/islands.json`、`data/catalog.json` 產生：`index.html` 裡的標題、描述、關鍵字、Open Graph／Twitter、JSON-LD（WebSite、PodcastSeries、島的清單、常見問題）和一份**文字版**（每個群島、每座島、每一集的標題，連結到下面的靜態頁面；畫面上收起來，給搜尋引擎和螢幕閱讀器，關掉 JS 時會直接顯示），另外 `sitemap.xml`、`robots.txt`（心智圖、旋鈕、縮放那幾頁不收錄）。
+
+**每一集、每一座島的靜態頁面**（`tools/build_pages.py`，由 `build_seo.py` 呼叫）：`ep/<代碼>/`（標題、隊長介紹、封面、住在哪座島、Apple／Spotify 按鈕，免費集數有 Apple 內嵌播放器，「到宇宙島看這一集」連到 `/?ch=代碼`）和 `isle/<島>/`（島的介紹和全部集數）。每頁有自己的 canonical、Open Graph（封面當分享縮圖）和 JSON-LD（PodcastEpisode、BreadcrumbList），全部列進 `sitemap.xml`。頁面不手動改；集數下架時舊頁面會自動刪掉。新增或改了 sitemap 後，到 Google Search Console 重新提交 `sitemap.xml` 可以加快收錄。每次目錄更新後由 GitHub Actions（`status.yml`）自動重跑，集數會跟著變；手動跑：`python3 tools/build_seo.py`。
 
 ## 頻道卡與收聽
 

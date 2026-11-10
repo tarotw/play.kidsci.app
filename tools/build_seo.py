@@ -14,6 +14,8 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
+from build_pages import write_pages
+
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://play.kidsci.app/"
 APPLE = "https://podcasts.apple.com/tw/podcast/id1812447277"
@@ -27,6 +29,10 @@ def esc(s: str) -> str:
 
 def clean(title: str) -> str:
     return re.sub(r"^[〈\s]+|[〉\s]+$", "", title)
+
+
+def isle_link(isl: dict) -> str:
+    return "?isle=studio" if isl["id"] == "studio" else f"isle/{esc(isl['id'])}/"
 
 
 def assign(islands: list[dict], episodes: list[dict]) -> list[list[dict]]:
@@ -125,14 +131,14 @@ def main() -> None:
             parts.append(f"<h3>{esc(groups[gid]['emoji'] + ' ' + groups[gid]['name'])}</h3>")
         for isl, eps in sel:
             count = '母島・玩法說明' if isl['id'] == data['start'] else f'{len(eps)} 集'
-            parts.append(f'<h4><a href="?isle={esc(isl["id"])}">{esc(isl["emoji"] + " " + isl["name"])}</a>（{count}）</h4><p>{esc(isl["intro"])}</p>')
+            parts.append(f'<h4><a href="{isle_link(isl)}">{esc(isl["emoji"] + " " + isl["name"])}</a>（{count}）</h4><p>{esc(isl["intro"])}</p>')
             for page in isl.get('tour', []):
                 parts.append(f'<h5>{esc(page["title"])}</h5><p>{esc(page["text"])}</p>')
             parts[-1] += '<ul>'
             for e in eps:
                 vip = "（VIP）" if e["state"] == "subscriber" else ""
                 intro = f"：{esc(e['intro'])}" if e.get("intro") else ""
-                parts.append(f'<li><a href="?ch={esc(e["code"])}">{esc(clean(e["title"]))}</a>{vip}{intro}</li>')
+                parts.append(f'<li><a href="ep/{esc(e["code"])}/">{esc(clean(e["title"]))}</a>{vip}{intro}</li>')
             parts.append("</ul>")
     parts.append("<h3>常見問題</h3><dl>")
     for q in ld[3]["mainEntity"]:
@@ -146,13 +152,16 @@ def main() -> None:
     s = re.sub(r"<!--seo-body:start-->.*?<!--seo-body:end-->", lambda m: body, s, flags=re.S) if "<!--seo-body:start-->" in s else s
     p.write_text(s, encoding="utf-8")
 
+    # 每一集、每一座島的靜態頁面（ep/、isle/），sitemap 全部列進去
+    pages = write_pages(ROOT, SITE, NAME, islands, per, live, groups, data["start"], clean)
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    rows = [f"  <url><loc>{SITE}</loc><lastmod>{today}</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>"]
+    rows += [f"  <url><loc>{esc(u)}</loc>{f'<lastmod>{d}</lastmod>' if d else ''}</url>" for u, d in sorted(pages, key=lambda p: "/ep/" in p[0])]  # 島在前
     (ROOT / "sitemap.xml").write_text(
-        f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        f"  <url><loc>{SITE}</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n</urlset>\n", encoding="utf-8")
+        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "\n".join(rows) + "\n</urlset>\n", encoding="utf-8")
     (ROOT / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nDisallow: /mindmap.html\nDisallow: /knob.html\nDisallow: /zoom.html\n\nSitemap: {SITE}sitemap.xml\n", encoding="utf-8")
-    print(f"SEO：{len(live)} 座島、{total} 集寫進文字版和結構化資料")
+    print(f"SEO：{len(live)} 座島、{total} 集寫進文字版和結構化資料；靜態頁面與 sitemap {len(pages) + 1} 個網址")
 
 
 if __name__ == "__main__":
