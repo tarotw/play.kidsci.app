@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T02:58:33Z",
+ "generated": "2026-11-10T01:35:38Z",
  "episodes": [
   {
    "code": "c10",
@@ -3387,6 +3387,36 @@
    "intro": "穿著華麗瓷器外衣的釉彩蠟膜蝦，竟然是海洋中最殘忍的「海星收割機」？牠們如何聯手對付比自己大十幾倍的毒星君？快來聽這場微型海洋救世主的驚心動魄故事！",
    "labs": [],
    "artworkLocal": "assets/episode-covers/3a3455f4b67cb1bf45ce.jpg"
+  },
+  {
+   "code": "255",
+   "title": "海洋中的毒堡壘與隱形斗篷：揭開小丑魚與海葵的終極生存密碼",
+   "home": "l03",
+   "zone": "珊瑚礁",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "apple": "https://podcasts.apple.com/tw/podcast/%E6%B5%B7%E6%B4%8B%E4%B8%AD%E7%9A%84%E6%AF%92%E5%A0%A1%E5%A3%98%E8%88%87%E9%9A%B1%E5%BD%A2%E6%96%97%E7%AF%B7-%E6%8F%AD%E9%96%8B%E5%B0%8F%E4%B8%91%E9%AD%9A%E8%88%87%E6%B5%B7%E8%91%B5%E7%9A%84%E7%B5%82%E6%A5%B5%E7%94%9F%E5%AD%98%E5%AF%86%E7%A2%BC-ep-255/id1812447277?i=1000800413445",
+    "spotify": "https://open.spotify.com/episode/1xiTgc3HtAqhHU40fj1kvR",
+    "pubDate": "2026-11-09T22:00:00Z"
+   },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/88/e8/6d/88e86dcb-f28f-e225-674d-1b15e5b064b3/3a07ccd0-9dd9-4515-8199-8ca8ee166516.jpg/600x600bb.jpg",
+   "intro": "你知道可愛的小丑魚，其實會對著致命海葵大跳神秘的「適應之舞」，還要穿上特製的「隱形斗篷」才能不被毒刺刺傷嗎？牠們不只是好租客，竟然還懂得「算數學」來保護地盤！趕快跟著好奇博士潛入海底，看看這對海洋超級拍檔的生存黑科技吧！",
+   "labs": [
+    {
+     "id": "F09",
+     "title": "小丑魚與海葵的交換",
+     "question": "合作的好處和成本，兩邊都一樣嗎？",
+     "url": "https://lab.kidsci.app/reefpair/"
+    },
+    {
+     "id": "F10",
+     "title": "小丑魚的條紋分類工作台",
+     "question": "同樣三條白紋，就一定是同一種？",
+     "url": "https://lab.kidsci.app/fishsort/"
+    }
+   ],
+   "artworkLocal": "assets/episode-covers/a4b8e32f6ea2fb60b2e4.jpg"
   },
   {
    "code": "50",
