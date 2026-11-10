@@ -822,6 +822,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "icon": "🦐",
     "subject": "釉彩蠟膜蝦捕食棘冠海星"
   },
+  "255": {
+    "title": "海洋中的毒堡壘與隱形斗篷：揭開小丑魚與海葵的終極生存密碼",
+    "contentKey": "110:593a0179",
+    "icon": "🐠",
+    "subject": "小丑魚與海葵的共生"
+  },
   "c10": {
     "title": "懸掛在 508 公尺高的極限科學：艾力克斯攀登台北 101 的技術真相",
     "contentKey": "84:bd2a64cf",
