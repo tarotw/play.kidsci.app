@@ -1,7 +1,29 @@
 {
- "generated": "2026-11-10T04:47:24Z",
+ "generated": "2026-11-11T03:00:26Z",
  "spotifyChecked": true,
  "episodes": {
+  "122": [
+   {
+    "guid": "cmw6er8gj00zh01w574boa4oj",
+    "title": "〈地球有超能力？隱形斗篷與變形身材的秘密！｜EP.122〉",
+    "link": "https://open.firstory.fm/story/cmw6er8gj00zh01w574boa4oj",
+    "pubDate": "Tue, 10 Nov 2026 22:02:06 GMT",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmw6er8gj00zh01w574boa4oj/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmw6er8gj00zi01w5ggep44f9.mp3?v=1794056253497",
+    "duration": 1237,
+    "episodeType": "full",
+    "artwork": "https://image.firstory-cdn.me/Image/cmdpx4cs200ax01xldg5ta89p/SFcUekk17r4dwXhDDLgi7.jpg",
+    "artworkIsEpisode": true,
+    "intro": "你知道我們腳下的陸地正在偷偷賽跑嗎？而且地球其實不是圓的，是一個胖胖的「扁球體」？最酷的是，地球還有一件看不見的「隱形斗篷」，幫我們擋住太陽風的攻擊！快來聽聽這些不可思議的地球秘密吧！",
+    "matchedBy": "code",
+    "labeledPublic": false,
+    "trailerOnly": false,
+    "apple": {
+     "trackId": 1000801076620,
+     "url": "https://podcasts.apple.com/tw/podcast/%E5%9C%B0%E7%90%83%E6%9C%89%E8%B6%85%E8%83%BD%E5%8A%9B-%E9%9A%B1%E5%BD%A2%E6%96%97%E7%AF%B7%E8%88%87%E8%AE%8A%E5%BD%A2%E8%BA%AB%E6%9D%90%E7%9A%84%E7%A7%98%E5%AF%86-ep-122/id1812447277?i=1000801076620&uo=4"
+    },
+    "spotify": true
+   }
+  ],
   "121": [
    {
     "guid": "cmw6eibn300wa01w25r1c9o5k",

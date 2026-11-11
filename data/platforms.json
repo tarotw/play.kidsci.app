@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T04:47:24Z",
+ "generated": "2026-11-11T03:00:26Z",
  "firstory": {
   "https://open.firstory.fm/story/cmdpx4cur00cq01xld19aha50": {
    "spotify": "https://open.spotify.com/episode/3LeJFdsCDBCpJGKXBftJ8v",
@@ -700,11 +700,16 @@
    "spotify": "https://open.spotify.com/episode/0ppYsxrkKu7DcwjgMQsivk",
    "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000800628837",
    "checked": "2026-11-09"
+  },
+  "https://open.firstory.fm/story/cmw6er8gj00zh01w574boa4oj": {
+   "spotify": "https://open.spotify.com/episode/4bgzT5Ru4xfMBfibbxrajB",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000801076620",
+   "checked": "2026-11-11"
   }
  },
  "apple": {
   "show": "https://podcasts.apple.com/tw/podcast/%E7%A7%91%E5%AD%B8%E5%A5%BD%E5%A5%BD%E8%81%BD/id1812447277",
-  "total": 217,
+  "total": 218,
   "episodes": [
    {
     "title": "〈登月大冒險：阿波羅 11 號、史上最強火箭與人類的一大步｜EP.117〉",
@@ -2841,6 +2846,16 @@
     "intro": "你知道可愛的小丑魚，其實會對著致命海葵大跳神秘的「適應之舞」，還要穿上特製的「隱形斗篷」才能不被毒刺刺傷嗎？牠們不只是好租客，竟然還懂得「算數學」來保護地盤！趕快跟著好奇博士潛入海底，看看這對海洋超級拍檔的生存黑科技吧！",
     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/88/e8/6d/88e86dcb-f28f-e225-674d-1b15e5b064b3/3a07ccd0-9dd9-4515-8199-8ca8ee166516.jpg/600x600bb.jpg",
     "sub": true
+   },
+   {
+    "title": "〈地球有超能力？隱形斗篷與變形身材的秘密！｜EP.122〉",
+    "url": "https://podcasts.apple.com/tw/podcast/%E5%9C%B0%E7%90%83%E6%9C%89%E8%B6%85%E8%83%BD%E5%8A%9B-%E9%9A%B1%E5%BD%A2%E6%96%97%E7%AF%B7%E8%88%87%E8%AE%8A%E5%BD%A2%E8%BA%AB%E6%9D%90%E7%9A%84%E7%A7%98%E5%AF%86-ep-122/id1812447277?i=1000801076620",
+    "guid": "cmw6er8gj00zh01w574boa4oj",
+    "date": "2026-11-10T22:02:06Z",
+    "ms": 1237000,
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/1f/52/0f/1f520fd7-0df1-f55a-39c8-be8e4264047a/mza_1903542102765579466.jpg/600x600bb.jpg",
+    "sub": false,
+    "intro": "你知道我們腳下的陸地正在偷偷賽跑嗎？而且地球其實不是圓的，是一個胖胖的「扁球體」？最酷的是，地球還有一件看不見的「隱形斗篷」，幫我們擋住太陽風的攻擊！快來聽聽這些不可思議的地球秘密吧！"
    }
   ],
   "searched": {
@@ -2915,6 +2930,11 @@
   "show": "https://open.spotify.com/show/1eyISRdcgDTwZqIqrP1qKv",
   "source": "api",
   "episodes": [
+   {
+    "title": "〈地球有超能力？隱形斗篷與變形身材的秘密！｜EP.122〉",
+    "url": "https://open.spotify.com/episode/4bgzT5Ru4xfMBfibbxrajB",
+    "date": "2026-11-10"
+   },
    {
     "title": "〈海洋中的毒堡壘與隱形斗篷：揭開小丑魚與海葵的終極生存密碼｜EP.255〉",
     "url": "https://open.spotify.com/episode/1xiTgc3HtAqhHU40fj1kvR",
@@ -4023,11 +4043,11 @@
   ]
  },
  "log": [
-  "Firstory 單集頁：這次看了 0 頁；140 集裡有 Spotify 連結 140 集、Apple 連結 83 集",
-  "Apple：節目共 217 集；Lookup 拿到 144 集",
-  "Apple 網頁：全部 214 集，其中訂閱者專屬 67 集",
-  "Apple：一集一集搜尋 0 集；全部共 214 集（之前 214 集）",
+  "Firstory 單集頁：這次看了 1 頁；141 集裡有 Spotify 連結 141 集、Apple 連結 84 集",
+  "Apple：節目共 218 集；Lookup 拿到 145 集",
+  "Apple 網頁：全部 215 集，其中訂閱者專屬 67 集",
+  "Apple：一集一集搜尋 0 集；全部共 215 集（之前 214 集）",
   "Spotify 節目 ID：1eyISRdcgDTwZqIqrP1qKv",
-  "Spotify API：221 集"
+  "Spotify API：222 集"
  ]
 }

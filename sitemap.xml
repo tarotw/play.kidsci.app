@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://play.kidsci.app/</loc><lastmod>2026-11-10</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://play.kidsci.app/</loc><lastmod>2026-11-11</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
   <url><loc>https://play.kidsci.app/isle/rainforest/</loc><lastmod>2026-07-20</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/savanna/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/desert/</loc><lastmod>2026-10-05</lastmod></url>
@@ -10,6 +10,7 @@
   <url><loc>https://play.kidsci.app/isle/sky/</loc><lastmod>2026-06-29</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/dino/</loc><lastmod>2026-11-08</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/human/</loc><lastmod>2026-04-04</lastmod></url>
+  <url><loc>https://play.kidsci.app/isle/volcano/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/atom/</loc><lastmod>2026-08-23</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/force/</loc><lastmod>2026-10-12</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/lightning/</loc><lastmod>2026-08-19</lastmod></url>
@@ -124,6 +125,7 @@
   <url><loc>https://play.kidsci.app/ep/s36/</loc><lastmod>2026-03-21</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/s37/</loc><lastmod>2026-03-29</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/s38/</loc><lastmod>2026-04-04</lastmod></url>
+  <url><loc>https://play.kidsci.app/ep/122/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/53/</loc><lastmod>2026-04-15</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/54/</loc><lastmod>2026-04-17</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/55/</loc><lastmod>2026-04-21</lastmod></url>

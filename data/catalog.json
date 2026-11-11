@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T04:47:24Z",
+ "generated": "2026-11-11T03:00:26Z",
  "episodes": [
   {
    "code": "c10",
@@ -1648,6 +1648,24 @@
    "intro": "你知道我們住的地球，以前竟然是一個超級燙的大火球嗎？而且以前的陸地全部黏在一起，叫做「盤古大陸」！快跟著科學隊長搭乘時光機，回到 45 億年前，看看地球是怎麼變身成現在這個美麗的藍色星球吧！",
    "labs": [],
    "artworkLocal": "assets/episode-covers/cfdd521de8aa4f8dd797.jpg"
+  },
+  {
+   "code": "122",
+   "title": "地球有超能力？隱形斗篷與變形身材的秘密！",
+   "home": "l05",
+   "zone": "地心與板塊",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%9C%B0%E7%90%83%E6%9C%89%E8%B6%85%E8%83%BD%E5%8A%9B-%E9%9A%B1%E5%BD%A2%E6%96%97%E7%AF%B7%E8%88%87%E8%AE%8A%E5%BD%A2%E8%BA%AB%E6%9D%90%E7%9A%84%E7%A7%98%E5%AF%86-ep-122/id1812447277?i=1000801076620",
+    "spotify": "https://open.spotify.com/episode/4bgzT5Ru4xfMBfibbxrajB",
+    "duration": 1237,
+    "pubDate": "Tue, 10 Nov 2026 22:02:06 GMT"
+   },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/1f/52/0f/1f520fd7-0df1-f55a-39c8-be8e4264047a/mza_1903542102765579466.jpg/600x600bb.jpg",
+   "intro": "你知道我們腳下的陸地正在偷偷賽跑嗎？而且地球其實不是圓的，是一個胖胖的「扁球體」？最酷的是，地球還有一件看不見的「隱形斗篷」，幫我們擋住太陽風的攻擊！快來聽聽這些不可思議的地球秘密吧！",
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/c366c48d5372c9a8582f.jpg"
   },
   {
    "code": "150",
