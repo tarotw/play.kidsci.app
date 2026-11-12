@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T03:00:26Z",
+ "generated": "2026-11-12T04:14:48Z",
  "episodes": [
   {
    "code": "c10",
@@ -3435,6 +3435,23 @@
     }
    ],
    "artworkLocal": "assets/episode-covers/a4b8e32f6ea2fb60b2e4.jpg"
+  },
+  {
+   "code": "256",
+   "title": "湛藍的海洋掃地機器人：揭開藍指海星的奇妙生存術",
+   "home": "l03",
+   "zone": "珊瑚礁",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "apple": "https://podcasts.apple.com/tw/podcast/%E6%B9%9B%E8%97%8D%E7%9A%84%E6%B5%B7%E6%B4%8B%E6%8E%83%E5%9C%B0%E6%A9%9F%E5%99%A8%E4%BA%BA-%E6%8F%AD%E9%96%8B%E8%97%8D%E6%8C%87%E6%B5%B7%E6%98%9F%E7%9A%84%E5%A5%87%E5%A6%99%E7%94%9F%E5%AD%98%E8%A1%93-ep-256/id1812447277?i=1000800413546",
+    "spotify": "https://open.spotify.com/episode/5RBcTxX6TjPAllWFLlNRhe",
+    "pubDate": "2026-11-11T22:00:00Z"
+   },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/db/76/3e/db763e16-140f-4166-9dee-0f023a37a7eb/420bc680-5786-41ce-9d00-12371af5bf31.jpg/600x600bb.jpg",
+   "intro": "你知道海底有一台「自帶寶藍色」的天然掃地機器人嗎？慢吞吞的藍指海星不僅沒有眼睛跟大腦，吃飯的時候竟然還會把自己的胃「吐」出來吃東西！如果不小心被切斷了手，那隻斷掉的手甚至能長成一隻全新的星星！快來跟我們一起潛入珊瑚礁城市，認識這位全身充滿黑科技的海底清道夫吧！",
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/52e8751646e0ad552b52.jpg"
   },
   {
    "code": "50",
