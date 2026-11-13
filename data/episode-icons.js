@@ -360,6 +360,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "icon": "🌍",
     "subject": "地球的形成與演變"
   },
+  "122": {
+    "title": "地球有超能力？隱形斗篷與變形身材的秘密！",
+    "contentKey": "92:37e01cf1",
+    "icon": "🌏",
+    "subject": "板塊移動、地球形狀與地磁場"
+  },
   "150": {
     "title": "生物演化歷程：從單細胞到恐龍霸主 (上集)",
     "contentKey": "233:77545205",
@@ -827,6 +833,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "contentKey": "110:593a0179",
     "icon": "🐠",
     "subject": "小丑魚與海葵的共生"
+  },
+  "256": {
+    "title": "湛藍的海洋掃地機器人：揭開藍指海星的奇妙生存術",
+    "contentKey": "130:7bddd42",
+    "icon": "⭐",
+    "subject": "藍指海星的構造與再生"
   },
   "c10": {
     "title": "懸掛在 508 公尺高的極限科學：艾力克斯攀登台北 101 的技術真相",
