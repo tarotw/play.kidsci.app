@@ -103,9 +103,9 @@ def apple_rows(results: list[dict]) -> list[dict]:
             for r in results if (r.get("wrapperType") == "podcastEpisode" or r.get("kind") == "podcast-episode") and str(r.get("collectionId")) == APPLE_ID]
 
 
-def apple_full() -> list[dict]:
+def apple_full(apple_id: str = APPLE_ID) -> list[dict]:
     """Apple Podcasts 網頁上的全部單集（含訂閱者專屬）。權杖從網頁的 JS 裡拿（跟瀏覽器一樣）。"""
-    page = get(f"https://podcasts.apple.com/tw/podcast/id{APPLE_ID}")
+    page = get(f"https://podcasts.apple.com/tw/podcast/id{apple_id}")
     token = None
     for path in re.findall(r'src="(/assets/index[^"]+\.js)"', page):
         m = re.search(r"eyJ[A-Za-z0-9_-]{10,}\.eyJ[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,}", get("https://podcasts.apple.com" + path))
@@ -117,7 +117,7 @@ def apple_full() -> list[dict]:
     headers = {"Authorization": f"Bearer {token}", "Origin": "https://podcasts.apple.com", "Referer": "https://podcasts.apple.com/"}
 
     def fetch(extra: str) -> list[dict]:
-        rows, url = [], f"https://amp-api.podcasts.apple.com/v1/catalog/tw/podcasts/{APPLE_ID}/episodes?limit=100&l=zh-Hant-TW{extra}"
+        rows, url = [], f"https://amp-api.podcasts.apple.com/v1/catalog/tw/podcasts/{apple_id}/episodes?limit=100&l=zh-Hant-TW{extra}"
         for _ in range(20):
             d = json.loads(get(url, headers))
             for e in d.get("data", []):
