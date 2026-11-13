@@ -8,7 +8,7 @@
   <url><loc>https://play.kidsci.app/isle/zoo/</loc><lastmod>2026-09-21</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/ocean/</loc><lastmod>2026-11-11</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/sky/</loc><lastmod>2026-06-29</lastmod></url>
-  <url><loc>https://play.kidsci.app/isle/dino/</loc><lastmod>2026-11-08</lastmod></url>
+  <url><loc>https://play.kidsci.app/isle/dino/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/human/</loc><lastmod>2026-04-04</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/volcano/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/atom/</loc><lastmod>2026-08-23</lastmod></url>
@@ -18,7 +18,7 @@
   <url><loc>https://play.kidsci.app/isle/scientists/</loc><lastmod>2026-09-10</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/city/</loc><lastmod>2026-10-18</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/flight/</loc><lastmod>2026-08-26</lastmod></url>
-  <url><loc>https://play.kidsci.app/isle/moon/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://play.kidsci.app/isle/moon/</loc><lastmod>2026-10-31</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/planets/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/stars/</loc><lastmod>2026-11-03</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/s41/</loc><lastmod>2026-04-30</lastmod></url>
@@ -121,6 +121,8 @@
   <url><loc>https://play.kidsci.app/ep/170/</loc><lastmod>2025-12-11</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/171/</loc><lastmod>2025-12-13</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/172/</loc><lastmod>2025-12-15</lastmod></url>
+  <url><loc>https://play.kidsci.app/ep/hd1/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://play.kidsci.app/ep/hd2/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/s34/</loc><lastmod>2026-03-07</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/s35/</loc><lastmod>2026-03-14</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/s36/</loc><lastmod>2026-03-21</lastmod></url>
@@ -205,6 +207,7 @@
   <url><loc>https://play.kidsci.app/ep/118/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/79/</loc><lastmod>2026-06-24</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/80/</loc><lastmod>2026-06-28</lastmod></url>
+  <url><loc>https://play.kidsci.app/ep/hs2/</loc><lastmod>2026-10-31</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/c30/</loc><lastmod>2026-09-14</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/s23/</loc><lastmod>2026-01-25</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/103/</loc><lastmod>2026-09-13</lastmod></url>
@@ -215,6 +218,17 @@
   <url><loc>https://play.kidsci.app/ep/108/</loc><lastmod>2026-09-02</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/109/</loc><lastmod>2026-09-06</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/110/</loc><lastmod>2026-09-09</lastmod></url>
+  <url><loc>https://play.kidsci.app/ep/hs1/</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://play.kidsci.app/ep/hs3/</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://play.kidsci.app/ep/hs4/</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://play.kidsci.app/ep/hs5/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://play.kidsci.app/ep/hs6/</loc><lastmod>2026-11-01</lastmod></url>
+  <url><loc>https://play.kidsci.app/ep/hs7/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://play.kidsci.app/ep/hs8/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://play.kidsci.app/ep/hs9/</loc><lastmod>2026-11-02</lastmod></url>
+  <url><loc>https://play.kidsci.app/ep/hs10/</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://play.kidsci.app/ep/hs11/</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://play.kidsci.app/ep/hs12/</loc><lastmod>2026-11-06</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/s24/</loc><lastmod>2026-01-27</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/s25/</loc><lastmod>2026-01-31</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/115/</loc><lastmod>2026-10-11</lastmod></url>

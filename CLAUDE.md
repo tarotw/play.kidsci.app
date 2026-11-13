@@ -28,6 +28,11 @@
 6. **提交並推 `main`**（`git pull --rebase origin main` 之後再推，因為 Action 也會推）。commit 訊息寫清楚哪幾集、放哪座島、用什麼圖示。
 7. **回報**（繁體中文，簡短）：幾集新增、各放在哪座島、選了什麼圖示和理由、有沒有資料問題要使用者處理（例如 Firstory 上簡介重複）。
 
+### 第二個頻道「科學好好聽：好奇號・宇宙大冒險」
+- Apple `id6829127315`、Spotify 節目 `2DX3Emz7cUofgW5kjZN5mc`。每日流程的 `tools/curiosity_feed.py` 抓進 `data/curiosity.json`，`build_catalog.py` 併進目錄（`show: "curiosity"`），卡片和單集頁會標「🚀 好奇號」，按鈕連到好奇號自己的 Apple／Spotify 單集。
+- 代碼＝系列字首＋第幾集：太陽系系列 `hs1`…、恐龍探險系列 `hd1`…。**出現新系列**時代碼會是暫時的 `hx…`：先在 `build_catalog.py` 的 `CURIOSITY_SERIES` 加字首，再照上面的流程放島、選圖示。
+- 放島和選圖示跟主頻道一樣（`placements.json`、`episode-icon-review.json`），只是 `source` 用 `https://podcasts.apple.com/tw/podcast/id6829127315?i=單集編號`。
+
 ### 判斷規則（已經定案，不用再問）
 - **免費或 VIP 以 Apple Podcasts 為準**（`build_catalog.py` 自動處理）；網站只放 Apple 或 Firstory 公開 RSS 上找得到的集數，預告片和找不到的都不放。
 - **沒有任何集數的島不會出現**，第一集上架就會自動出現（火山島在 EP.122 上架時第一次出現；目前每座有 sources 的島都有集數，只有冰雪島沒有 sources）。

@@ -114,6 +114,75 @@ def platform_links(status: dict) -> dict[str, dict[str, str]]:
     return out
 
 
+# ---------- 第二個頻道「好奇號・宇宙大冒險」（tools/curiosity_feed.py 抓的 data/curiosity.json）----------
+# 代碼：系列字首＋第幾集（太陽系系列第六集 → hs6）。新的系列先拿到 hx＋guid 的暫時代碼，
+# new_episodes.py 會列出來；在這裡加上字首後代碼就固定了。
+CURIOSITY_SERIES = {"太陽系系列": "hs", "恐龍探險系列": "hd"}
+ZH_DIGITS = {"零": 0, "一": 1, "二": 2, "兩": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8, "九": 9}
+
+
+def zh_number(s: str) -> int | None:
+    if s.isdigit():
+        return int(s)
+    if "十" in s:
+        tens, _, ones = s.partition("十")
+        return (ZH_DIGITS.get(tens, 1) if tens else 1) * 10 + (ZH_DIGITS.get(ones, 0) if ones else 0)
+    return ZH_DIGITS.get(s)
+
+
+def curiosity_code(title: str, guid: str | None) -> tuple[str, str, str]:
+    """〈第六集｜太陽系系列｜好奇號登火星！…〉 → ("hs6", "太陽系系列", "好奇號登火星！…")"""
+    t = title.strip().strip("〈〉").strip()
+    m = re.match(r"第([零一二兩三四五六七八九十\d]+)集\s*[｜|]\s*([^｜|]+?)\s*[｜|]\s*(.+)$", t)
+    if m and m.group(2) in CURIOSITY_SERIES and zh_number(m.group(1)):
+        return f"{CURIOSITY_SERIES[m.group(2)]}{zh_number(m.group(1))}", m.group(2), m.group(3).strip()
+    tail = re.sub(r"[^a-z0-9]", "", (guid or t).lower())[-6:]
+    return f"hx{tail}", (m.group(2) if m else ""), (m.group(3).strip() if m else t)
+
+
+def curiosity_episodes(placements: dict, rules: list, levels: dict, labs_by_code: dict) -> tuple[dict | None, list[dict]]:
+    path = DATA / "curiosity.json"
+    if not path.exists():
+        return None, []
+    data = json.loads(path.read_text(encoding="utf-8"))
+    show = {k: data.get("show", {}).get(k) for k in ("name", "apple", "spotify", "artwork")}
+    apple = {(e.get("title") or "").strip(): e for e in data.get("apple", [])}
+    spotify = {(e.get("title") or "").strip(): e for e in data.get("spotify", [])}
+    rss = {(e.get("title") or "").strip(): e for e in data.get("rss", []) if e.get("episodeType") != "trailer"}
+    out = []
+    for raw in sorted(set(rss) | {t for t, e in apple.items() if t not in rss}):
+        r, a, sp = rss.get(raw), apple.get(raw, {}), spotify.get(raw, {})
+        code, series, title = curiosity_code(raw, (r or a).get("guid"))
+        placement = placements.get(code)
+        if placement is None:
+            home, also, auto = home_by_rules(title, rules), [], True
+        else:
+            home, also, auto = placement["home"], placement.get("also", []), False
+        if home == "skip":
+            continue
+        listen = {"apple": re.sub(r"[?&]uo=\d+$", "", a["url"]) if a.get("url") else None, "spotify": sp.get("url")}
+        if r:
+            listen.update({"duration": r.get("duration"), "pubDate": r.get("pubDate")})
+        else:
+            listen.update({"duration": round(a["ms"] / 1000) if a.get("ms") else None, "pubDate": a.get("date")})
+        entry = {
+            "code": code, "title": title, "home": home,
+            "zone": (placement or {}).get("zone") or zone_for(title, home, levels),
+            "also": also,
+            "state": "subscriber" if (a.get("sub") and not r) else "public",
+            "listen": {k: v for k, v in listen.items() if v is not None},
+            "artwork": a.get("artwork") or (r or {}).get("artwork") or show.get("artwork") or "assets/logo-square.jpg",
+            "intro": (r or {}).get("intro") or intro_text(a.get("description")),
+            "labs": labs_by_code.get(code, []),
+            "show": "curiosity", "series": series,
+        }
+        if auto:
+            entry["autoPlaced"] = True
+        out.append(entry)
+    out.sort(key=lambda e: (e["code"][:2], int(re.sub(r"\D", "", e["code"]) or 0) if e["code"][:2] != "hx" else 0, e["code"]))
+    return show, out
+
+
 def main() -> None:
     titles = drive_titles()
     placements = load("placements.json")
@@ -203,8 +272,11 @@ def main() -> None:
             entry["content"] = f"data/episodes/{code}.json"
         episodes.append(entry)
 
+    curiosity, more = curiosity_episodes(placements, rules, levels, labs_by_code)
+    episodes += more
     (DATA / "catalog.json").write_text(json.dumps({
         "generated": load("status.json")["generated"] if (DATA / "status.json").exists() else None,
+        **({"shows": {"curiosity": curiosity}} if curiosity else {}),
         "episodes": episodes,
     }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 

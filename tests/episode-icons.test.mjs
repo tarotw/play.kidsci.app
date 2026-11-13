@@ -20,7 +20,7 @@ test('every published episode has an evidence-backed content review for its actu
     assert.ok(choice.meaning.length >= 15, episode.code);
     assert.ok(choice.reason.length >= 10, episode.code);
     assert.ok(choice.evidence.length >= 25, episode.code);
-    assert.match(choice.source, /^https:\/\/podcasts\.apple\.com\/tw\/podcast\/id1812447277\?i=\d+$/);
+    assert.match(choice.source, /^https:\/\/podcasts\.apple\.com\/tw\/podcast\/id(1812447277|6829127315)\?i=\d+$/);
     assert.equal(iconFor(episode), choice.icon);
     if (!TOPIC_ART[choice.icon]) assert.equal([...graphemes.segment(choice.icon)].length, 1, episode.code);
   }

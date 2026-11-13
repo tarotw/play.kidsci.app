@@ -25,6 +25,7 @@
 | 檔案 | 內容 | 誰維護 |
 | --- | --- | --- |
 | `data/world.json` | 10 格、7 條法則航道、6 個年代 | 手動 |
+| `data/curiosity.json` | 第二個頻道「好奇號・宇宙大冒險」的 Apple、RSS、Spotify 單集（`tools/curiosity_feed.py`） | 每日自動 |
 | `data/source_titles.tsv` | Drive `listensci` 每個集數資料夾的代碼與主題（2026-10-02 盤點） | 手動／新集數時補 |
 | `data/placements.json` | 每一集的主位置與次位置 | 手動；`tools/make_placements.py` 是第一版的來源 |
 | `data/tag_rules.json` | 沒有手動位置的新集數，依標題或 tags 自動歸位的規則 | 手動 |

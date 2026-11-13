@@ -141,6 +141,10 @@ def write_pages(root: Path, site: str, name: str, islands: list[dict], per: list
     icons = (json.loads((root / "data/episode-icon-review.json").read_text(encoding="utf-8")).get("episodes") or {})
     home_of = {e["code"]: isl for isl, eps in zip(islands, per) for e in eps}
     series = {"@type": "PodcastSeries", "name": name, "url": "https://podcasts.apple.com/tw/podcast/id1812447277"}
+    catalog = json.loads((root / "data/catalog.json").read_text(encoding="utf-8"))
+    curiosity = (catalog.get("shows") or {}).get("curiosity") or {}
+    curiosity_series = {"@type": "PodcastSeries", "name": curiosity.get("name") or "科學好好聽：好奇號・宇宙大冒險",
+                        "url": curiosity.get("apple") or "https://podcasts.apple.com/tw/podcast/id6829127315"}
     urls: list[tuple[str, str]] = []
     keep_ep, keep_isle = set(), set()
 
@@ -150,6 +154,7 @@ def write_pages(root: Path, site: str, name: str, islands: list[dict], per: list
     def ep_item(e: dict, show_intro: bool = True) -> str:
         icon = emoji_icon(icons, e["code"])
         vip = ' <span class="tag vip">👑 VIP</span>' if e["state"] == "subscriber" else ""
+        vip += ' <span class="tag">🚀 好奇號</span>' if e.get("show") == "curiosity" else ""
         intro = f"<p>{esc(e['intro'])}</p>" if show_intro and e.get("intro") else ""
         return f'<li><a href="/ep/{e["code"]}/">{esc((icon + " ") if icon else "")}{esc(clean(e["title"]))}</a>{vip}{intro}</li>'
 
@@ -166,6 +171,9 @@ def write_pages(root: Path, site: str, name: str, islands: list[dict], per: list
             cover = f"/{e['artworkLocal']}" if e.get("artworkLocal") else "/assets/logo-square.jpg"
             meta = [dt.strftime("%Y/%-m/%-d") if dt else "", f"{round(listen['duration'] / 60)} 分鐘" if listen.get("duration") else ""]
             tags = '<span class="tag vip">👑 VIP 訂閱集數</span>' if vip else '<span class="tag">▶ 免費收聽</span>'
+            from_curiosity = e.get("show") == "curiosity"
+            if from_curiosity:
+                tags = f'<span class="tag">🚀 好奇號・宇宙大冒險{esc("・" + e["series"]) if e.get("series") else ""}</span>' + tags
             embed = apple_embed(listen.get("apple")) if not vip else None
             player = (f'<iframe title="用 Apple Podcasts 收聽：{esc(title)}" src="{esc(embed)}" loading="lazy" allow="autoplay *; encrypted-media *; clipboard-write" '
                       'sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"></iframe>') if embed else ""
@@ -191,7 +199,7 @@ def write_pages(root: Path, site: str, name: str, islands: list[dict], per: list
 </main>"""
             desc = f"{intro[:110]}{'…' if len(intro) > 110 else ''}" if intro else f"《{name}》兒童科普 Podcast：{title}"
             ep_ld = {"@context": "https://schema.org", "@type": "PodcastEpisode", "@id": url + "#episode", "url": url, "name": title,
-                     "description": intro, "inLanguage": "zh-TW", "image": site + cover.lstrip("/"), "partOfSeries": series,
+                     "description": intro, "inLanguage": "zh-TW", "image": site + cover.lstrip("/"), "partOfSeries": curiosity_series if from_curiosity else series,
                      "isAccessibleForFree": not vip, "sameAs": [listen[k] for k in ("apple", "spotify") if listen.get(k)]}
             if dt:
                 ep_ld["datePublished"] = dt.strftime("%Y-%m-%d")

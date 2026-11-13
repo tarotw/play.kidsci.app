@@ -1393,5 +1393,73 @@
   "also": [],
   "home": "l03",
   "zone": "海洋與深海"
+ },
+ "hs1": {
+  "also": [],
+  "home": "l07",
+  "zone": "行星"
+ },
+ "hs2": {
+  "also": [],
+  "home": "l06",
+  "zone": "月球"
+ },
+ "hs3": {
+  "also": [],
+  "home": "l07",
+  "zone": "太陽"
+ },
+ "hs4": {
+  "also": [],
+  "home": "l07",
+  "zone": "行星"
+ },
+ "hs5": {
+  "also": [],
+  "home": "l07",
+  "zone": "行星"
+ },
+ "hs6": {
+  "also": [],
+  "home": "l07",
+  "zone": "行星"
+ },
+ "hs7": {
+  "also": [],
+  "home": "l07",
+  "zone": "行星"
+ },
+ "hs8": {
+  "also": [],
+  "home": "l07",
+  "zone": "行星"
+ },
+ "hs9": {
+  "also": [],
+  "home": "l07",
+  "zone": "行星"
+ },
+ "hs10": {
+  "also": [],
+  "home": "l07",
+  "zone": "行星"
+ },
+ "hs11": {
+  "also": [],
+  "home": "l07",
+  "zone": "太陽系邊緣"
+ },
+ "hs12": {
+  "also": [],
+  "home": "l07",
+  "zone": "太陽系邊緣"
+ },
+ "hd1": {
+  "also": [],
+  "home": "era:life"
+ },
+ "hd2": {
+  "also": [],
+  "home": "era:life"
  }
 }

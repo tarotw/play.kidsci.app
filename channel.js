@@ -84,7 +84,7 @@ export function createChannels({ byCode, lines, getStamps, addStamp, onOpen = ()
       <section class="episode-player${embedUrl ? ' has-podcast' : ''}" aria-labelledby="ch-title">
       <header class="episode-profile">
         <img class="episode-cover" data-episode-artwork src="${esc(episodeArtwork(e))}" alt="${esc(e.title)}的單集封面" width="120" height="120" decoding="async">
-        <div class="episode-profile-copy"><p class="episode-show">科學好好聽 · 單集預覽</p>
+        <div class="episode-profile-copy"><p class="episode-show">${e.show === 'curiosity' ? '🚀 好奇號・宇宙大冒險' : '科學好好聽'} · 單集預覽</p>
           <h2 id="ch-title">${esc(e.title)}</h2>
           <p class="episode-meta">${esc(episodeMeta(e))}</p>
           <p class="hint">${iconMarkup(iconFor(e))} ${esc(code)} 台 ${stateBadge(e)} ${stampMarks(code)}</p>

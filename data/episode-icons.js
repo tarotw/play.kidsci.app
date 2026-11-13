@@ -1217,5 +1217,89 @@ export const REVIEWED_EPISODE_ICONS = {
     "contentKey": "197:653d5661",
     "icon": "🐍",
     "subject": "泰坦巨蟒的體型與古氣候"
+  },
+  "hd1": {
+    "title": "化石偵探營：時光機啟動！恐龍高速公路和琥珀裡的羽毛",
+    "contentKey": "170:999bbb95",
+    "icon": "🦴",
+    "subject": "化石與恐龍足跡"
+  },
+  "hd2": {
+    "title": "隱形泡泡出動！兩億三千萬年前，恐龍還不是老大",
+    "contentKey": "220:f1aa4bc6",
+    "icon": "🦖",
+    "subject": "三疊紀的早期恐龍"
+  },
+  "hs1": {
+    "title": "好奇號發射！從太空看我們的藍色彈珠——地球",
+    "contentKey": "104:634509d8",
+    "icon": "🌍",
+    "subject": "從太空看地球"
+  },
+  "hs2": {
+    "title": "好奇號登月！月亮的身世、變臉秀和離家出走的秘密",
+    "contentKey": "118:9a574e8a",
+    "icon": "🌕",
+    "subject": "月球的身世與月相"
+  },
+  "hs3": {
+    "title": "好奇號直擊太陽！宇宙大廚的火熱廚房和壞脾氣",
+    "contentKey": "125:71ebf70e",
+    "icon": "☀️",
+    "subject": "太陽的內部與太陽活動"
+  },
+  "hs4": {
+    "title": "好奇號闖水星！最近卻最難到的小不點，和它藏起來的冰與鑽石",
+    "contentKey": "80:1c274e12",
+    "icon": "space:mercury-venus",
+    "subject": "水星的環境與構造"
+  },
+  "hs5": {
+    "title": "好奇號探金星！地球的雙胞胎，竟然是會飆車的火山女王",
+    "contentKey": "116:89cb2573",
+    "icon": "space:mercury-venus",
+    "subject": "金星的極端環境"
+  },
+  "hs6": {
+    "title": "好奇號登火星！生鏽的紅色星球、豹紋石頭和機器人探險隊",
+    "contentKey": "125:ba902335",
+    "icon": "🔴",
+    "subject": "火星與火星探測車"
+  },
+  "hs7": {
+    "title": "好奇號闖木星！窗外空空的小行星帶，和一片鬆餅大紅斑",
+    "contentKey": "137:e209edb6",
+    "icon": "🪐",
+    "subject": "木星與小行星帶"
+  },
+  "hs8": {
+    "title": "好奇號訪土星！會下雨的呼拉圈，降落甲烷湖邊的泰坦",
+    "contentKey": "119:a3951b67",
+    "icon": "🪐",
+    "subject": "土星的環與衛星泰坦"
+  },
+  "hs9": {
+    "title": "好奇號拜訪天王星！躺著走路，還偷偷放熱的藍色怪咖",
+    "contentKey": "113:19230d6f",
+    "icon": "space:ice-giants",
+    "subject": "天王星"
+  },
+  "hs10": {
+    "title": "好奇號直達海王星！用筆尖發現的行星，和倒退走的崔頓",
+    "contentKey": "124:22896c17",
+    "icon": "space:ice-giants",
+    "subject": "海王星的發現與衛星崔頓"
+  },
+  "hs11": {
+    "title": "好奇號最後一站冥王星！大愛心、親一下就抓住，然後回家",
+    "contentKey": "123:41748535",
+    "icon": "space:pluto",
+    "subject": "冥王星與卡戎"
+  },
+  "hs12": {
+    "title": "好奇號特別任務：追彗星！",
+    "contentKey": "136:f24107e6",
+    "icon": "☄️",
+    "subject": "彗星"
   }
 };
