@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T07:13:40Z",
+ "generated": "2026-11-14T03:33:23Z",
  "shows": {
   "curiosity": {
    "name": "科學好好聽：好奇號・宇宙大冒險",
@@ -704,10 +704,10 @@
     "duration": 726,
     "pubDate": "Sun, 08 Feb 2026 21:23:31 GMT"
    },
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/41/3f/f0/413ff073-a7c5-b6a0-8286-3f3dbf061111/mza_1220969070254895353.jpeg/600x600bb.jpg",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/2a/0d/e6/2a0de649-f7ad-4ccd-f663-4547297b49fd/mza_4989403963521702329.jpg/600x600bb.jpg",
    "intro": "你知道你的手機裡住著一位隱形的室友嗎？它不只知道你喜歡看什麼影片，甚至還認得你剛睡醒的臉！今天我們要來聊聊這位既聰明又有點神祕的 AI 朋友，它到底是怎麼學會讀心術的？它真的懂我們的心情嗎？快來聽聽這場充滿驚奇的數位冒險吧！",
    "labs": [],
-   "artworkLocal": "assets/episode-covers/3eed6f5eba7b1e707c88.jpg"
+   "artworkLocal": "assets/episode-covers/61237fc70b46bb3792e3.jpg"
   },
   {
    "code": "s28",
@@ -4305,6 +4305,27 @@
    "show": "curiosity",
    "series": "恐龍探險系列",
    "artworkLocal": "assets/episode-covers/c44aa338685e7b6f0db8.jpg"
+  },
+  {
+   "code": "hd3",
+   "title": "差點被腕龍踩扁！骨頭裡有空氣的長脖子和梁龍甩尾之謎",
+   "home": "studio",
+   "zone": null,
+   "also": [],
+   "state": "public",
+   "listen": {
+    "apple": "https://podcasts.apple.com/tw/podcast/%E7%AC%AC%E4%B8%89%E9%9B%86-%E6%81%90%E9%BE%8D%E6%8E%A2%E9%9A%AA%E7%B3%BB%E5%88%97-%E5%B7%AE%E9%BB%9E%E8%A2%AB%E8%85%95%E9%BE%8D%E8%B8%A9%E6%89%81-%E9%AA%A8%E9%A0%AD%E8%A3%A1%E6%9C%89%E7%A9%BA%E6%B0%A3%E7%9A%84%E9%95%B7%E8%84%96%E5%AD%90%E5%92%8C%E6%A2%81%E9%BE%8D%E7%94%A9%E5%B0%BE%E4%B9%8B%E8%AC%8E/id6829127315?i=1000801833045",
+    "spotify": "https://open.spotify.com/episode/7daz58qtPl01WSkJYejMm4",
+    "duration": 803,
+    "pubDate": "Sat, 14 Nov 2026 02:11:45 GMT"
+   },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/9a/ba/db/9abadb66-9504-505f-9443-561cf8dd8916/mza_3012234167227434786.jpg/600x600bb.jpg",
+   "intro": "好奇號・恐龍時光大冒險第三集！時間亂流把好奇號甩到一億五千萬年前，好奇號就降落在一隻腕龍的兩隻前腳中間，隱形泡泡也擋不住牠的大腳，只能緊急升空！小可和小博打開比大小投影機，發現腕龍的頭比三層樓還高，體重大約三十噸。蜻蜻偵察機第一次出動，拍到腕龍吃葉子完全不咀嚼。透骨鏡則照出長脖子的祕密：脊椎骨裡有空氣，連著氣囊，鳥也有氣囊。接著一隻梁龍甩著長尾巴走過來，蜻蜻差點被掃到。梁龍的尾巴甩得出「啪」的一聲嗎？這條長尾巴到底拿來做什麼？最後，泥地上出現新鮮的三趾大腳印，步幅越來越大……牠可能在加速！",
+   "labs": [],
+   "show": "curiosity",
+   "series": "恐龍探險系列",
+   "autoPlaced": true,
+   "artworkLocal": "assets/episode-covers/0d36fb5d3b9127922279.jpg"
   },
   {
    "code": "hs1",
