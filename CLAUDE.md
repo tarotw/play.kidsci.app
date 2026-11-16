@@ -30,13 +30,14 @@
 
 ### 第二個頻道「科學好好聽：好奇號・宇宙大冒險」
 - Apple `id6829127315`、Spotify 節目 `2DX3Emz7cUofgW5kjZN5mc`。每日流程的 `tools/curiosity_feed.py` 抓進 `data/curiosity.json`，`build_catalog.py` 併進目錄（`show: "curiosity"`），卡片和單集頁會標「🚀 好奇號」，按鈕連到好奇號自己的 Apple／Spotify 單集。
-- 代碼＝系列字首＋第幾集：太陽系系列 `hs1`…、恐龍探險系列 `hd1`…。**出現新系列**時代碼會是暫時的 `hx…`：先在 `build_catalog.py` 的 `CURIOSITY_SERIES` 加字首，再照上面的流程放島、選圖示。
+- 代碼＝系列字首＋第幾集：太陽系系列 `hs1`…、恐龍探險系列 `hd1`…。同系列的新集數依 `build_catalog.py` 的 `SERIES_HOME` 自動住進該系列的島（恐龍探險 → 恐龍化石島；太陽系先照關鍵字，對不到就住行星島），不會掉進母島。**出現新系列**時代碼會是暫時的 `hx…`：在 `CURIOSITY_SERIES` 加字首、在 `SERIES_HOME` 加這個系列的島，再照上面的流程選圖示。
 - 放島和選圖示跟主頻道一樣（`placements.json`、`episode-icon-review.json`），只是 `source` 用 `https://podcasts.apple.com/tw/podcast/id6829127315?i=單集編號`。
 
 ### 判斷規則（已經定案，不用再問）
 - **免費或 VIP 以 Apple Podcasts 為準**（`build_catalog.py` 自動處理）；網站只放 Apple 或 Firstory 公開 RSS 上找得到的集數，預告片和找不到的都不放。
 - **沒有任何集數的島不會出現**，第一集上架就會自動出現（火山島在 EP.122 上架時第一次出現；目前每座有 sources 的島都有集數，只有冰雪島沒有 sources）。
 - 介紹、對話、隊長語音、封面、Apple 內嵌播放器（免費集數才有）、Spotify／Apple 按鈕、單集靜態頁 `ep/代碼/` 和 `sitemap.xml`（`build_seo.py` 產生），**全部都是資料自動帶出**，新集數不用另外做。
+- **好好聽島（母島）上的居民是「最新 20 集」推薦**（`islands.js` 的 `LATEST_PICKS`，兩個頻道一起依上架日期排），是分身，原本的島照樣有牠，自動更新。這跟「掉進母島」不同：`new_episodes.py` 說「目前在：好好聽島」才是真的沒分到島，一定要改。
 - 島的 3D 內容（`isleprops.js`）和群島分組（`data/islands.json` 的 `group`）不需要因為新集數而改，除非要新增一座島。
 
 ### 資料問題要告訴使用者（不要自己改來源資料）

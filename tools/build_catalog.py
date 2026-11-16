@@ -118,6 +118,9 @@ def platform_links(status: dict) -> dict[str, dict[str, str]]:
 # 代碼：系列字首＋第幾集（太陽系系列第六集 → hs6）。新的系列先拿到 hx＋guid 的暫時代碼，
 # new_episodes.py 會列出來；在這裡加上字首後代碼就固定了。
 CURIOSITY_SERIES = {"太陽系系列": "hs", "恐龍探險系列": "hd"}
+# 同一個系列的新集數先住哪裡（placements.json 有寫就照寫的）：
+# 恐龍探險一律住恐龍化石島；太陽系先照關鍵字分（月亮、太陽…），對不到就住行星島
+SERIES_HOME = {"恐龍探險系列": ("era:life", True), "太陽系系列": ("l07", False)}
 ZH_DIGITS = {"零": 0, "一": 1, "二": 2, "兩": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8, "九": 9}
 
 
@@ -156,6 +159,9 @@ def curiosity_episodes(placements: dict, rules: list, levels: dict, labs_by_code
         placement = placements.get(code)
         if placement is None:
             home, also, auto = home_by_rules(title, rules), [], True
+            series_home, always = SERIES_HOME.get(series, (None, False))
+            if series_home and (always or home == "studio"):
+                home, auto = series_home, False  # 系列決定的島，不用再人工確認
         else:
             home, also, auto = placement["home"], placement.get("also", []), False
         if home == "skip":

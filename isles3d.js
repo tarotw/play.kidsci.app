@@ -259,7 +259,13 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
     res.iB.needsUpdate = true;
   }
   refreshMarks();
-  const byCode = new Map(people.map((p, i) => [p.e.code, i]));
+  // 同一集可能有兩位：住的島上一位、母島「最新推薦」一位（pick）。在哪座島就用那座島上的那一位
+  const byCode = new Map(), copies = new Map();
+  people.forEach((p, i) => {
+    copies.set(p.e.code, [...(copies.get(p.e.code) || []), i]);
+    if (!p.e.pick || !byCode.has(p.e.code)) byCode.set(p.e.code, i);
+  });
+  const find = (code) => copies.get(code)?.find((i) => people[i].isle === here) ?? byCode.get(code);
   const camRight = new THREE.Vector3(), camBack = new THREE.Vector3();
   const partM = new THREE.Matrix4(), partQ = new THREE.Quaternion();
   const partPos = new THREE.Vector3(), partScale = new THREE.Vector3();
@@ -706,8 +712,9 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
     busy: () => !!flight, // 鏡頭切換中仍可選島；僅飛行中鎖定操作。
     refreshMarks,
     /** 讓一個居民跳一跳（從清單點的時候）。 */
-    greet(code) { const i = byCode.get(code); if (i != null) greet(i); },
-    islandOf(code) { const i = byCode.get(code); return i == null ? null : people[i].isle.def.id; },
+    greet(code) { const i = find(code); if (i != null) greet(i); },
+    /** 這一集在哪座島（目前這座島上有牠的話就是這座）。 */
+    islandOf(code) { const i = find(code); return i == null ? null : people[i].isle.def.id; },
     /** 每座島在螢幕上的位置（給島名標籤用）。 */
     islandScreens() {
       return isles.map((x) => {
@@ -723,7 +730,7 @@ export function createIsles({ canvas, islands, startId, getStamps, onArrive = ()
       others.forEach((x) => { const g = x.def.group; if (!g) return; const p = toScreen(v3.set(x.pos.x, x.pos.y + 8, x.pos.z)); if (p.behind) return; const o = out.get(g) || { x: 0, y: 0, n: 0 }; o.x += p.x; o.y += p.y; o.n++; out.set(g, o); });
       return [...out].map(([id, o]) => ({ id, x: o.x / o.n, y: o.y / o.n, behind: false }));
     },
-    residentScreen(code) { const i = byCode.get(code); if (i == null) return null; return toScreen(v3.set(res.iPos.getX(i), res.iPos.getY(i) + people[i].size * (people[i].sleep ? 0.94 : BODY.headCenter) + res.iA.getZ(i), res.iPos.getZ(i))); }, // 頭的中間（點這裡一定點到他）
+    residentScreen(code) { const i = find(code); if (i == null) return null; return toScreen(v3.set(res.iPos.getX(i), res.iPos.getY(i) + people[i].size * (people[i].sleep ? 0.94 : BODY.headCenter) + res.iA.getZ(i), res.iPos.getZ(i))); }, // 頭的中間（點這裡一定點到他）
     /** 不坐火箭，直接換到那座島（測試用）。 */
     jump(id) { const to = byId.get(id); if (!to || flight) return; here = to; mode = 'island'; camAnim = null; Object.assign(view, islandView(here)); onArrive(here.def); },
     debug: { renderer, scene, camera, view, residents: res, people, isles, ship, get here() { return here; }, get flight() { return flight; } },

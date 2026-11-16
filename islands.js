@@ -42,6 +42,7 @@ function toast(html) {
 }
 
 // ---------- 每一集住哪一座島 ----------
+const LATEST_PICKS = 20; // 好好聽島上的「最新推薦」幾集
 function assign(defs, episodes) {
   // "l03:雨林" 是 l03 的雨林區；"l01"、"era:life"、"lane:force"、"studio" 是整個 home
   const match = (src, e) => {
@@ -57,6 +58,13 @@ function assign(defs, episodes) {
   // 一般可以聽的先、再來是 VIP（清單裡的順序）
   const order = { public: 0, subscriber: 1 };
   out.forEach((x) => x.eps.sort((a, b) => order[a.state] - order[b.state] || a.code.localeCompare(b.code, 'en', { numeric: true })));
+  // 好好聽島（母島）：最新的幾集也在這裡「住」一份當推薦（pick），原本的島照樣有牠
+  const home = out.find(({ def }) => def.id === startId);
+  const homeName = new Map(out.flatMap(({ def, eps }) => eps.map((e) => [e.code, `${def.emoji} ${def.name}`])));
+  const when = (e) => Date.parse(e.listen?.pubDate || '') || 0;
+  const have = new Set(home.eps.map((e) => e.code));
+  home.eps.push(...[...episodes].filter((e) => !have.has(e.code)).sort((a, b) => when(b) - when(a)).slice(0, LATEST_PICKS)
+    .map((e) => ({ ...e, icon: iconFor(e), pick: true, homeName: homeName.get(e.code) })));
   // 還沒有任何一集上架的島先不出現（有集數上架就會自動出現）
   return out.filter((x) => x.eps.length || x.def.id === startId);
 }
@@ -94,7 +102,7 @@ function renderHud() {
   $('#isle-name').textContent = `${def.emoji} ${def.name}`;
   // 島名下面：這座島的居民（按了打開名單），一眼看出幾個免費、幾個 VIP
   const ct = (st) => x.eps.filter((e) => e.state === st).length;
-  $('#people-count').textContent = `${x.eps.length} 位居民`;
+  $('#people-count').textContent = def.id === startId ? `最新 ${x.eps.length} 集` : `${x.eps.length} 位居民`;
   $('#people-legend').innerHTML = [[ct('public'), 'can', '▶ 可以聽'], [ct('subscriber'), 'vip', '👑 VIP']]
     .filter(([n]) => n).map(([n, cls, txt]) => `<span class="lg ${cls}">${txt} ${n}</span>`).join('') + (seen ? `<span class="lg-seen">✓ 拜訪過 ${seen}</span>` : '');
   $('#people-btn').setAttribute('aria-label', `看${def.name}的 ${x.eps.length} 位居民`);
@@ -122,7 +130,7 @@ function openStation() {
         const seen = eps.filter((e) => stamps.seen.includes(e.code)).length;
         return `<li><button type="button" class="isle-pick${def.id === here ? ' here' : ''}" data-go="${def.id}" ${def.id === here ? 'aria-current="true"' : ''}>
           <span class="em">${def.emoji}</span><span class="nm">${esc(def.name)}</span>
-          <span class="ct">${eps.length ? `${eps.length} 位居民${seen ? ` · 👋 ${seen}` : ''}` : '母島・玩法說明'}</span>${def.id === here ? '<span class="you">你在這裡</span>' : visited.has(def.id) ? '<span class="been">✓</span>' : ''}</button></li>`;
+          <span class="ct">${def.id === startId && eps.length ? `⭐ 最新 ${eps.length} 集` : eps.length ? `${eps.length} 位居民${seen ? ` · 👋 ${seen}` : ''}` : '母島・玩法說明'}</span>${def.id === here ? '<span class="you">你在這裡</span>' : visited.has(def.id) ? '<span class="been">✓</span>' : ''}</button></li>`;
       }).join('')}</ul>`;
     }).join('')}</div>`;
   $('#station').showModal();
@@ -137,12 +145,12 @@ function openPeople() {
   const rows = x.eps.map((e) => `
     <li><button type="button" class="ep ${e.state}" data-ep="${esc(e.code)}">
       <span class="ic">${iconMarkup(e.icon)}</span><span class="tt">${esc(e.title)}</span>
-      <span class="tg">${stateBadge(e)}${e.labs.length ? '<span class="badge lab">實驗</span>' : ''}${stamps.seen.includes(e.code) ? '<span class="badge seen">✓ 拜訪過</span>' : ''}</span></button></li>`).join('');
+      <span class="tg">${stateBadge(e)}${e.pick && e.homeName ? `<span class="badge home">住在${esc(e.homeName)}</span>` : ''}${e.labs.length ? '<span class="badge lab">實驗</span>' : ''}${stamps.seen.includes(e.code) ? '<span class="badge seen">✓ 拜訪過</span>' : ''}</span></button></li>`).join('');
   $('#people').innerHTML = `<div class="inner">
     <button class="close" type="button" data-close aria-label="關閉">✕</button>
     <p class="hero" aria-hidden="true">${def.emoji}</p>
-    <h2 id="people-title">${esc(def.name)}的居民</h2>
-    <p class="hint">${x.eps.length} 個故事住在這裡。</p>
+    <h2 id="people-title">${esc(def.name)}${def.id === startId ? '的最新推薦' : '的居民'}</h2>
+    <p class="hint">${def.id === startId ? `最新上架的 ${x.eps.length} 集故事，先到母島來打招呼；牠們也住在自己的島上。` : `${x.eps.length} 個故事住在這裡。`}</p>
     <p class="legend"><span class="lg can">▶ 綠色：可以聽</span><span class="lg vip">👑 金色：VIP 訂閱集數</span></p>
     <ul class="eps">${rows}</ul></div>`;
   $('#people').showModal();
@@ -359,7 +367,7 @@ async function init() {
   // 分享連結：?ch=代碼 從那一集住的島出發；?isle=島 從那座島出發
   const params = new URLSearchParams(location.search);
   const ch = params.get('ch');
-  const chIsle = ch && isles.find((x) => x.eps.some((e) => e.code === ch));
+  const chIsle = ch && isles.find((x) => x.eps.some((e) => e.code === ch && !e.pick)); // 從牠住的島出發，不是母島的推薦
   // 舊版的 ?lv=大主題（例如 l07 太陽系）：去住最多那個主題的島
   const lv = params.get('lv');
   const lvIsle = lv && isles.map((x) => ({ x, n: x.eps.filter((e) => e.home === lv || e.home.startsWith(`${lv}:`)).length })).sort((a, b) => b.n - a.n).find((y) => y.n)?.x;

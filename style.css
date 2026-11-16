@@ -133,6 +133,7 @@ body.has-player main { padding-bottom: 300px; } /* 播放器出現時，清單�
 .badge.soon { color: var(--dark-star); }
 .badge.can { border-color: #2fb36a; color: #1f8f52; font-weight: 700; }
 .badge.lab { border-color: var(--teal); color: var(--teal); }
+.badge.home { border-color: var(--line); color: var(--muted); }
 .stop.vip { box-shadow: 0 0 0 2px var(--gold) inset; }
 .stop.unreleased { opacity: 0.55; }
 .stamps { color: var(--orange); letter-spacing: 2px; }

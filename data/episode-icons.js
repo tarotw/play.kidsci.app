@@ -366,6 +366,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "icon": "🌏",
     "subject": "板塊移動、地球形狀與地磁場"
   },
+  "123": {
+    "title": "地心探險記！洋蔥地球的內心戲",
+    "contentKey": "89:184207ad",
+    "icon": "🌎",
+    "subject": "地球的內部構造"
+  },
   "150": {
     "title": "生物演化歷程：從單細胞到恐龍霸主 (上集)",
     "contentKey": "233:77545205",
@@ -1229,6 +1235,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "contentKey": "220:f1aa4bc6",
     "icon": "🦖",
     "subject": "三疊紀的早期恐龍"
+  },
+  "hd3": {
+    "title": "差點被腕龍踩扁！骨頭裡有空氣的長脖子和梁龍甩尾之謎",
+    "contentKey": "247:8a3363a3",
+    "icon": "🦕",
+    "subject": "腕龍與梁龍等蜥腳類恐龍"
   },
   "hs1": {
     "title": "好奇號發射！從太空看我們的藍色彈珠——地球",
