@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T03:05:24Z",
+ "generated": "2026-11-16T03:07:30Z",
  "firstory": {
   "https://open.firstory.fm/story/cmdpx4cur00cq01xld19aha50": {
    "spotify": "https://open.spotify.com/episode/3LeJFdsCDBCpJGKXBftJ8v",
@@ -705,11 +705,16 @@
    "spotify": "https://open.spotify.com/episode/4bgzT5Ru4xfMBfibbxrajB",
    "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000801076620",
    "checked": "2026-11-11"
+  },
+  "https://open.firstory.fm/story/cmweou6ez008r01rp2trmgic6": {
+   "spotify": "https://open.spotify.com/episode/5UEe6aBYzW406cyXQwhsEk",
+   "apple": "https://podcasts.apple.com/tw/podcast/id1812447277?i=1000802133983",
+   "checked": "2026-11-16"
   }
  },
  "apple": {
   "show": "https://podcasts.apple.com/tw/podcast/%E7%A7%91%E5%AD%B8%E5%A5%BD%E5%A5%BD%E8%81%BD/id1812447277",
-  "total": 219,
+  "total": 220,
   "episodes": [
    {
     "title": "〈登月大冒險：阿波羅 11 號、史上最強火箭與人類的一大步｜EP.117〉",
@@ -2865,6 +2870,16 @@
     "intro": "你知道海底有一台「自帶寶藍色」的天然掃地機器人嗎？慢吞吞的藍指海星不僅沒有眼睛跟大腦，吃飯的時候竟然還會把自己的胃「吐」出來吃東西！如果不小心被切斷了手，那隻斷掉的手甚至能長成一隻全新的星星！快來跟我們一起潛入珊瑚礁城市，認識這位全身充滿黑科技的海底清道夫吧！",
     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/db/76/3e/db763e16-140f-4166-9dee-0f023a37a7eb/420bc680-5786-41ce-9d00-12371af5bf31.jpg/600x600bb.jpg",
     "sub": true
+   },
+   {
+    "title": "〈地心探險記！揭開地球洋蔥的秘密｜EP.123〉",
+    "url": "https://podcasts.apple.com/tw/podcast/%E5%9C%B0%E5%BF%83%E6%8E%A2%E9%9A%AA%E8%A8%98-%E6%8F%AD%E9%96%8B%E5%9C%B0%E7%90%83%E6%B4%8B%E8%94%A5%E7%9A%84%E7%A7%98%E5%AF%86-ep-123/id1812447277?i=1000802133983",
+    "guid": "cmweou6ez008r01rp2trmgic6",
+    "date": "2026-11-15T22:02:03Z",
+    "ms": 764000,
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/a8/45/72/a8457249-fb3e-c71e-57d8-800ba7106dc5/mza_13146776777467920505.jpg/600x600bb.jpg",
+    "sub": false,
+    "intro": "你也想知道地球肚子裡長什麼樣子嗎？我們雖然不能鑽進去，但是有超厲害的「地震波掃描儀」！快跟著科學隊長一起把地球像洋蔥一樣剝開，看看裡面熱呼呼的「軟流圈」和比太陽還熱的「內核」吧！"
    }
   ],
   "searched": {
@@ -2939,6 +2954,11 @@
   "show": "https://open.spotify.com/show/1eyISRdcgDTwZqIqrP1qKv",
   "source": "api",
   "episodes": [
+   {
+    "title": "〈地心探險記！揭開地球洋蔥的秘密｜EP.123〉",
+    "url": "https://open.spotify.com/episode/5UEe6aBYzW406cyXQwhsEk",
+    "date": "2026-11-15"
+   },
    {
     "title": "〈湛藍的海洋掃地機器人：揭開藍指海星的奇妙生存術｜EP.256〉",
     "url": "https://open.spotify.com/episode/5RBcTxX6TjPAllWFLlNRhe",
@@ -4057,11 +4077,11 @@
   ]
  },
  "log": [
-  "Firstory 單集頁：這次看了 0 頁；141 集裡有 Spotify 連結 141 集、Apple 連結 84 集",
-  "Apple：節目共 219 集；Lookup 拿到 145 集",
-  "Apple 網頁：全部 216 集，其中訂閱者專屬 68 集",
-  "Apple：一集一集搜尋 0 集；全部共 216 集（之前 216 集）",
+  "Firstory 單集頁：這次看了 1 頁；142 集裡有 Spotify 連結 142 集、Apple 連結 85 集",
+  "Apple：節目共 220 集；Lookup 拿到 146 集",
+  "Apple 網頁：全部 217 集，其中訂閱者專屬 68 集",
+  "Apple：一集一集搜尋 0 集；全部共 217 集（之前 216 集）",
   "Spotify 節目 ID：1eyISRdcgDTwZqIqrP1qKv",
-  "Spotify API：223 集"
+  "Spotify API：224 集"
  ]
 }

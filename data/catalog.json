@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T03:05:24Z",
+ "generated": "2026-11-16T03:07:30Z",
  "shows": {
   "curiosity": {
    "name": "科學好好聽：好奇號・宇宙大冒險",
@@ -1674,6 +1674,24 @@
    "intro": "你知道我們腳下的陸地正在偷偷賽跑嗎？而且地球其實不是圓的，是一個胖胖的「扁球體」？最酷的是，地球還有一件看不見的「隱形斗篷」，幫我們擋住太陽風的攻擊！快來聽聽這些不可思議的地球秘密吧！",
    "labs": [],
    "artworkLocal": "assets/episode-covers/c366c48d5372c9a8582f.jpg"
+  },
+  {
+   "code": "123",
+   "title": "地心探險記！洋蔥地球的內心戲",
+   "home": "l05",
+   "zone": "地心與板塊",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%9C%B0%E5%BF%83%E6%8E%A2%E9%9A%AA%E8%A8%98-%E6%8F%AD%E9%96%8B%E5%9C%B0%E7%90%83%E6%B4%8B%E8%94%A5%E7%9A%84%E7%A7%98%E5%AF%86-ep-123/id1812447277?i=1000802133983",
+    "spotify": "https://open.spotify.com/episode/5UEe6aBYzW406cyXQwhsEk",
+    "duration": 764,
+    "pubDate": "Sun, 15 Nov 2026 22:02:03 GMT"
+   },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/a8/45/72/a8457249-fb3e-c71e-57d8-800ba7106dc5/mza_13146776777467920505.jpg/600x600bb.jpg",
+   "intro": "你也想知道地球肚子裡長什麼樣子嗎？我們雖然不能鑽進去，但是有超厲害的「地震波掃描儀」！快跟著科學隊長一起把地球像洋蔥一樣剝開，看看裡面熱呼呼的「軟流圈」和比太陽還熱的「內核」吧！",
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/4ecdde8aa99e3ed3d989.jpg"
   },
   {
    "code": "150",
