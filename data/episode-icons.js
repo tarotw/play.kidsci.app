@@ -1224,6 +1224,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "icon": "🐍",
     "subject": "泰坦巨蟒的體型與古氣候"
   },
+  "s64": {
+    "title": "一光日的距離：航海家 1 號飛了快五十年，遠到連光都要走一整天！",
+    "contentKey": "190:ed6df35c",
+    "icon": "🛰️",
+    "subject": "航海家 1 號的旅程與一光日"
+  },
   "hd1": {
     "title": "化石偵探營：時光機啟動！恐龍高速公路和琥珀裡的羽毛",
     "contentKey": "170:999bbb95",

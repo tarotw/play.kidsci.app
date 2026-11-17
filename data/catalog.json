@@ -1273,9 +1273,9 @@
   },
   {
    "code": "s64",
-   "title": "特別節目｜一光日的距離：航海家 1 號飛了快五十年，遠到連光都要走一整天！",
-   "home": "studio",
-   "zone": null,
+   "title": "一光日的距離：航海家 1 號飛了快五十年，遠到連光都要走一整天！",
+   "home": "l07",
+   "zone": "探測器",
    "also": [],
    "state": "subscriber",
    "listen": {
@@ -1286,7 +1286,6 @@
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/65/fe/d0/65fed006-a16b-9ebe-ec79-248ef6b183fa/08fb0fb6-e9b9-4133-922b-7a6aefe924da.jpg/600x600bb.jpg",
    "intro": "2026 年 11 月 18 日傍晚，一台 1977 年出發的太空船，會飛到連光都要走一整天才到得了的地方！跟它說一句「你好」，要等兩天才聽到回答。航海家 1 號拍過會噴火的衛星、回頭拍下地球變成一粒藍色小點，還帶著一張要放給外星人聽的金唱片，上面竟然有閩南語！這位快五十歲的太空老兵，電力一年一年變少，工程師卻一次又一次從 250 億公里外把它救回來。一起來聽聽它的驚奇旅程吧！",
    "labs": [],
-   "autoPlaced": true,
    "artworkLocal": "assets/episode-covers/ab532b2380831898698a.jpg"
   },
   {
