@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T05:14:52Z",
+ "generated": "2026-11-18T03:12:37Z",
  "shows": {
   "curiosity": {
    "name": "科學好好聽：好奇號・宇宙大冒險",
@@ -1709,6 +1709,24 @@
    "intro": "你也想知道地球肚子裡長什麼樣子嗎？我們雖然不能鑽進去，但是有超厲害的「地震波掃描儀」！快跟著科學隊長一起把地球像洋蔥一樣剝開，看看裡面熱呼呼的「軟流圈」和比太陽還熱的「內核」吧！",
    "labs": [],
    "artworkLocal": "assets/episode-covers/4ecdde8aa99e3ed3d989.jpg"
+  },
+  {
+   "code": "124",
+   "title": "地球穿了五件衣服？「空氣衣」與流星終結者！",
+   "home": "l05",
+   "zone": "天氣與颱風",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%9C%B0%E7%90%83%E7%9A%84%E8%B6%85%E7%B4%9A%E7%A9%BA%E6%B0%A3%E8%A1%A3%E8%88%87%E9%9A%B1%E5%BD%A2%E7%9B%BE%E7%89%8C-ep-124/id1812447277?i=1000802558913",
+    "spotify": "https://open.spotify.com/episode/1qXP2VxxwvAw4fObP20Kfq",
+    "duration": 1141,
+    "pubDate": "2026-11-17T22:02:01Z"
+   },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/26/74/d1/2674d188-2f6d-e66e-4480-95c54710fb70/mza_16465942024790573631.jpg/600x600bb.jpg",
+   "intro": "地球怕冷嗎？為什麼穿了那麼厚的「空氣衣」？這件衣服不只能變出風雨雷電，還能幫我們擦防曬油（臭氧層），甚至還會接殺流星（中氣層）！快來認識這件保護我們的超級大氣層吧！",
+   "labs": [],
+   "artworkLocal": "assets/episode-covers/fada13e117ef417c3708.jpg"
   },
   {
    "code": "150",
@@ -4217,7 +4235,7 @@
     "duration": 492,
     "pubDate": "Wed, 05 Aug 2026 22:01:59 GMT"
    },
-   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/41/3f/f0/413ff073-a7c5-b6a0-8286-3f3dbf061111/mza_1220969070254895353.jpeg/600x600bb.jpg",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/10/11/4a/10114a70-d486-5c18-33cb-281e4963591b/mza_16750831701955663922.jpg/600x600bb.jpg",
    "intro": "開關一按，燈就亮了？手機沒接線也能滑？今天我們要變身電的偵探，去電線裡的跑道看看微小的電子小精靈是怎麼工作、怎麼排隊，並解開電池與閃電背後的奇幻科學魔法！",
    "labs": [
     {
@@ -4227,7 +4245,7 @@
      "url": "https://lab.kidsci.app/circuit/"
     }
    ],
-   "artworkLocal": "assets/episode-covers/3eed6f5eba7b1e707c88.jpg"
+   "artworkLocal": "assets/episode-covers/e163859fd088f7d50f9f.jpg"
   },
   {
    "code": "90",
@@ -4360,6 +4378,25 @@
    "show": "curiosity",
    "series": "恐龍探險系列",
    "artworkLocal": "assets/episode-covers/0d36fb5d3b9127922279.jpg"
+  },
+  {
+   "code": "hd4",
+   "title": "劍龍大戰異龍：骨板之謎、尾刺留下的洞和化石翅膀裡的蟲鳴",
+   "home": "era:life",
+   "zone": null,
+   "also": [],
+   "state": "public",
+   "listen": {
+    "spotify": "https://open.spotify.com/episode/55u86lt0KCK8Zk0tR2r0c2",
+    "duration": 790,
+    "pubDate": "Tue, 17 Nov 2026 07:17:31 GMT"
+   },
+   "artwork": "https://image.firstory-cdn.me/Image/cmvvmudw302dy01z7eo8vai9j/UYEt5wKqfRLdw3maY6cH-.jpg",
+   "intro": "好奇號・恐龍時光大冒險第四集！小可和小博回到一億五千多萬年前的莫里森森林，遇見幾隻正在吃蕨類的劍龍。牠們背上兩排左右交錯的骨板到底做什麼用？科學家還在討論。時間儀表算出一件驚人的事：劍龍和暴龍相隔大約八千萬年，比暴龍和我們之間還要久！小博在泡泡裡錄影，泡泡只剩五分鐘，異龍就從旁邊經過……劍龍轉身甩出尾刺。這不是編出來的：美國猶他州找到的一塊異龍尾巴骨頭上，真的有一個跟劍龍尾刺對得上的洞。透骨鏡照出恐龍線索第 4 號。晚上，新法寶古聲盒第一次播放：科學家從化石翅膀重建出一億六千五百萬年前的蟲鳴。",
+   "labs": [],
+   "show": "curiosity",
+   "series": "恐龍探險系列",
+   "artworkLocal": "assets/episode-covers/bce6fef2704e7f245d55.jpg"
   },
   {
    "code": "hs1",

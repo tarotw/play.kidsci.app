@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T05:14:58Z",
+ "generated": "2026-11-18T03:12:44Z",
  "show": {
   "name": "科學好好聽：好奇號・宇宙大冒險",
   "apple": "https://podcasts.apple.com/tw/podcast/%E7%A7%91%E5%AD%B8%E5%A5%BD%E5%A5%BD%E8%81%BD-%E5%A5%BD%E5%A5%87%E8%99%9F-%E5%AE%87%E5%AE%99%E5%A4%A7%E5%86%92%E9%9A%AA/id6829127315",
@@ -146,6 +146,18 @@
   }
  ],
  "rss": [
+  {
+   "guid": "cmwkcyuh201va01tubdhm01a9",
+   "title": "〈第四集｜恐龍探險系列｜劍龍大戰異龍：骨板之謎、尾刺留下的洞和化石翅膀裡的蟲鳴〉",
+   "link": "https://open.firstory.fm/story/cmwkcyuh201va01tubdhm01a9",
+   "pubDate": "Tue, 17 Nov 2026 07:17:31 GMT",
+   "audio": "https://m.cdn.firstory.me/track/cmvvmudw302dy01z7eo8vai9j/cmwkcyuh201va01tubdhm01a9/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmvvmudw302dy01z7eo8vai9j%2Fcmwkcyuh201vb01tu1mo72qev.mp3?v=1794899776562",
+   "duration": 790,
+   "episodeType": "full",
+   "artwork": "https://image.firstory-cdn.me/Image/cmvvmudw302dy01z7eo8vai9j/UYEt5wKqfRLdw3maY6cH-.jpg",
+   "artworkIsEpisode": true,
+   "intro": "好奇號・恐龍時光大冒險第四集！小可和小博回到一億五千多萬年前的莫里森森林，遇見幾隻正在吃蕨類的劍龍。牠們背上兩排左右交錯的骨板到底做什麼用？科學家還在討論。時間儀表算出一件驚人的事：劍龍和暴龍相隔大約八千萬年，比暴龍和我們之間還要久！小博在泡泡裡錄影，泡泡只剩五分鐘，異龍就從旁邊經過……劍龍轉身甩出尾刺。這不是編出來的：美國猶他州找到的一塊異龍尾巴骨頭上，真的有一個跟劍龍尾刺對得上的洞。透骨鏡照出恐龍線索第 4 號。晚上，新法寶古聲盒第一次播放：科學家從化石翅膀重建出一億六千五百萬年前的蟲鳴。"
+  },
   {
    "guid": "cmwepcyrc007o01u32tg84644",
    "title": "〈第三集｜恐龍探險系列｜差點被腕龍踩扁！骨頭裡有空氣的長脖子和梁龍甩尾之謎〉",
@@ -329,6 +341,14 @@
  ],
  "spotify": [
   {
+   "title": "〈第四集｜恐龍探險系列｜劍龍大戰異龍：骨板之謎、尾刺留下的洞和化石翅膀裡的蟲鳴〉",
+   "url": "https://open.spotify.com/episode/55u86lt0KCK8Zk0tR2r0c2",
+   "date": "2026-11-17",
+   "ms": 790820,
+   "description": "好奇號・恐龍時光大冒險第四集！小可和小博回到一億五千多萬年前的莫里森森林，遇見幾隻正在吃蕨類的劍龍。牠們背上兩排左右交錯的骨板到底做什麼用？科學家還在討論。時間儀表算出一件驚人的事：劍龍和暴龍相隔大約八千萬年，比暴龍和我們之間還要久！小博在泡泡裡錄影，泡泡只剩五分鐘，異龍就從旁邊經過……劍龍轉身甩出尾刺。這不是編出來的：美國猶他州找到的一塊異龍尾巴骨頭上，真的有一個跟劍龍尾刺對得上的洞。透骨鏡照出恐龍線索第 4 號。晚上，新法寶古聲盒第一次播放：科學家從化石翅膀重建出一億六千五百萬年前的蟲鳴。 ==> https://科學好好聽.app",
+   "artwork": "https://i.scdn.co/image/ab6765630000ba8ab6995542c57ff47f97ec1786"
+  },
+  {
    "title": "〈第三集｜恐龍探險系列｜差點被腕龍踩扁！骨頭裡有空氣的長脖子和梁龍甩尾之謎〉",
    "url": "https://open.spotify.com/episode/7daz58qtPl01WSkJYejMm4",
    "date": "2026-11-14",
@@ -452,7 +472,7 @@
  "log": [
   "好奇號 Apple Lookup：科學好好聽：好奇號・宇宙大冒險，共 15 集，拿到 15 集；RSS https://feed.firstory.me/rss/user/cmvvmudw302dy01z7eo8vai9j",
   "好奇號 Apple 網頁 API 失敗：HTTP Error 404: Not Found",
-  "好奇號 RSS：15 集",
-  "好奇號 Spotify：節目 2DX3Emz7cUofgW5kjZN5mc，15 集"
+  "好奇號 RSS：16 集",
+  "好奇號 Spotify：節目 2DX3Emz7cUofgW5kjZN5mc，16 集"
  ]
 }

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T05:14:52Z",
+ "generated": "2026-11-18T03:12:37Z",
  "firstory": {
   "https://open.firstory.fm/story/cmdpx4cur00cq01xld19aha50": {
    "spotify": "https://open.spotify.com/episode/3LeJFdsCDBCpJGKXBftJ8v",
@@ -972,7 +972,7 @@
     "guid": "cmsbtug6j0wgo01xf3uvc11x1",
     "date": "2026-08-05T22:01:59Z",
     "ms": 492000,
-    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/41/3f/f0/413ff073-a7c5-b6a0-8286-3f3dbf061111/mza_1220969070254895353.jpeg/600x600bb.jpg",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/10/11/4a/10114a70-d486-5c18-33cb-281e4963591b/mza_16750831701955663922.jpg/600x600bb.jpg",
     "intro": "開關一按，燈就亮了？手機沒接線也能滑？今天我們要變身電的偵探，去電線裡的跑道看看微小的電子小精靈是怎麼工作、怎麼排隊，並解開電池與閃電背後的奇幻科學魔法！",
     "sub": false
    },
@@ -2889,6 +2889,16 @@
     "intro": "2026 年 11 月 18 日傍晚，一台 1977 年出發的太空船，會飛到連光都要走一整天才到得了的地方！跟它說一句「你好」，要等兩天才聽到回答。航海家 1 號拍過會噴火的衛星、回頭拍下地球變成一粒藍色小點，還帶著一張要放給外星人聽的金唱片，上面竟然有閩南語！這位快五十歲的太空老兵，電力一年一年變少，工程師卻一次又一次從 250 億公里外把它救回來。一起來聽聽它的驚奇旅程吧！",
     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/65/fe/d0/65fed006-a16b-9ebe-ec79-248ef6b183fa/08fb0fb6-e9b9-4133-922b-7a6aefe924da.jpg/600x600bb.jpg",
     "sub": true
+   },
+   {
+    "title": "〈地球的超級空氣衣與隱形盾牌｜EP.124〉",
+    "url": "https://podcasts.apple.com/tw/podcast/%E5%9C%B0%E7%90%83%E7%9A%84%E8%B6%85%E7%B4%9A%E7%A9%BA%E6%B0%A3%E8%A1%A3%E8%88%87%E9%9A%B1%E5%BD%A2%E7%9B%BE%E7%89%8C-ep-124/id1812447277?i=1000802558913",
+    "guid": "cmwep0kwo006l01u393q78exx",
+    "date": "2026-11-17T22:02:01Z",
+    "ms": 1141000,
+    "intro": "地球怕冷嗎？為什麼穿了那麼厚的「空氣衣」？這件衣服不只能變出風雨雷電，還能幫我們擦防曬油（臭氧層），甚至還會接殺流星（中氣層）！快來認識這件保護我們的超級大氣層吧！",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/26/74/d1/2674d188-2f6d-e66e-4480-95c54710fb70/mza_16465942024790573631.jpg/600x600bb.jpg",
+    "sub": false
    }
   ],
   "searched": {
@@ -2963,6 +2973,11 @@
   "show": "https://open.spotify.com/show/1eyISRdcgDTwZqIqrP1qKv",
   "source": "api",
   "episodes": [
+   {
+    "title": "〈地球的超級空氣衣與隱形盾牌｜EP.124〉",
+    "url": "https://open.spotify.com/episode/1qXP2VxxwvAw4fObP20Kfq",
+    "date": "2026-11-17"
+   },
    {
     "title": "〈特別節目｜一光日的距離：航海家 1 號飛了快五十年，遠到連光都要走一整天！｜SP.64〉",
     "url": "https://open.spotify.com/episode/4IgbVT03qDrP4cqzwxknb9",
@@ -4093,9 +4108,9 @@
  "log": [
   "Firstory 單集頁：這次看了 0 頁；142 集裡有 Spotify 連結 142 集、Apple 連結 85 集",
   "Apple：節目共 221 集；Lookup 拿到 146 集",
-  "Apple 網頁：全部 218 集，其中訂閱者專屬 69 集",
-  "Apple：一集一集搜尋 0 集；全部共 218 集（之前 218 集）",
+  "Apple 網頁：全部 219 集，其中訂閱者專屬 69 集",
+  "Apple：一集一集搜尋 0 集；全部共 219 集（之前 218 集）",
   "Spotify 節目 ID：1eyISRdcgDTwZqIqrP1qKv",
-  "Spotify API：225 集"
+  "Spotify API：226 集"
  ]
 }
