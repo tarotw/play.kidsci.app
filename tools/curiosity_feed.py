@@ -23,13 +23,15 @@ from status_check import firstory_items
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "curiosity.json"
 APPLE_ID = "6829127315"
+# Apple 上也有用另一個節目編號列出的單集（例如恐龍探險第四集在 id6829081115 底下）：兩個都查、合併
+APPLE_EXTRA_IDS = ["6829081115"]
 SPOTIFY_EPISODE = "7q4q5NHVEpWGIJDPtYlxDp"  # 使用者給的其中一集，用來找節目 ID；SPOTIFY_CURIOSITY_SHOW_ID 可以蓋過
 
 
-def apple_lookup() -> tuple[dict, list[dict]]:
-    results = json.loads(get(f"https://itunes.apple.com/lookup?id={APPLE_ID}&entity=podcastEpisode&limit=200&country=tw")).get("results", [])
+def apple_lookup(apple_id: str = APPLE_ID) -> tuple[dict, list[dict]]:
+    results = json.loads(get(f"https://itunes.apple.com/lookup?id={apple_id}&entity=podcastEpisode&limit=200&country=tw")).get("results", [])
     show = next((r for r in results if r.get("wrapperType") == "track" or r.get("kind") == "podcast"), {})
-    eps = [r for r in results if (r.get("wrapperType") == "podcastEpisode" or r.get("kind") == "podcast-episode") and str(r.get("collectionId")) == APPLE_ID]
+    eps = [r for r in results if (r.get("wrapperType") == "podcastEpisode" or r.get("kind") == "podcast-episode") and str(r.get("collectionId")) == apple_id]
     rows = []
     for r in eps:
         rows.append({"title": r.get("trackName", ""), "url": clean_url(r.get("trackViewUrl")), "guid": r.get("episodeGuid"), "date": r.get("releaseDate"),
@@ -67,6 +69,14 @@ def main() -> None:
     except Exception as err:  # noqa: BLE001
         say(f"好奇號 Apple Lookup 失敗：{err}")
         rows = []
+    for extra in APPLE_EXTRA_IDS:
+        try:
+            info2, rows2 = apple_lookup(extra)
+            say(f"好奇號 Apple 另一個編號 {extra}：{info2.get('name')}，共 {info2.get('total')} 集，拿到 {len(rows2)} 集；RSS {info2.get('feed')}")
+            have = {r["title"] for r in rows}
+            rows += [r for r in rows2 if r["title"] not in have]
+        except Exception as err:  # noqa: BLE001
+            say(f"好奇號 Apple 另一個編號 {extra} 失敗：{err}")
     try:
         full = apple_full(APPLE_ID)
         by_url = {r["url"]: r for r in rows}
