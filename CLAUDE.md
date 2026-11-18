@@ -26,7 +26,8 @@
    `python3 tools/new_episodes.py`（要顯示「都處理好了」）、`node --test tests/*.test.mjs`、`python3 -m unittest discover -s tests -p 'test_*.py'`。
    瀏覽器測試（`tests/*.browser.cjs`，要 playwright，這個環境連不到 Apple 的內嵌播放器，`episode-cards` 會因此逾時，屬環境限制）：至少用本機網站打開新集數的 `?ch=代碼`，確認出現在對的島、有隊長介紹、Apple／Spotify 按鈕。
 6. **提交並推 `main`**（`git pull --rebase origin main` 之後再推，因為 Action 也會推）。commit 訊息寫清楚哪幾集、放哪座島、用什麼圖示。
-   推完要看「功能回歸檢查」（`functional.yml`）有沒有過（`mcp__github__actions_list` 看最新一次的 conclusion），失敗就讀 log 修好，不要讓使用者收到失敗通知才發現。
+   推完要看 GitHub Actions **所有**流程（「功能回歸檢查」`functional.yml` 和「上架狀態檢查與目錄更新」`status.yml`）最新一次的 conclusion（`mcp__github__actions_list` 不指定 workflow），失敗就讀 log 修好，不要讓使用者收到失敗通知才發現。
+   改到 `tools/**` 或 `data/placements.json` 等檔案時，推送本身就會觸發 `status.yml`，不要再手動觸發一次。
 7. **回報**（繁體中文，簡短）：幾集新增、各放在哪座島、選了什麼圖示和理由、有沒有資料問題要使用者處理（例如 Firstory 上簡介重複）。
 
 ### 第二個頻道「科學好好聽：好奇號・宇宙大冒險」
