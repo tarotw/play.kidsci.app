@@ -372,6 +372,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "icon": "🌎",
     "subject": "地球的內部構造"
   },
+  "124": {
+    "title": "地球穿了五件衣服？「空氣衣」與流星終結者！",
+    "contentKey": "82:36e02379",
+    "icon": "☁️",
+    "subject": "地球大氣層的分層"
+  },
   "150": {
     "title": "生物演化歷程：從單細胞到恐龍霸主 (上集)",
     "contentKey": "233:77545205",
@@ -1247,6 +1253,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "contentKey": "247:8a3363a3",
     "icon": "🦕",
     "subject": "腕龍與梁龍等蜥腳類恐龍"
+  },
+  "hd4": {
+    "title": "劍龍大戰異龍：骨板之謎、尾刺留下的洞和化石翅膀裡的蟲鳴",
+    "contentKey": "249:74fe6c51",
+    "icon": "🦕",
+    "subject": "劍龍與異龍"
   },
   "hs1": {
     "title": "好奇號發射！從太空看我們的藍色彈珠——地球",
