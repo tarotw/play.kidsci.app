@@ -30,9 +30,9 @@
 7. **回報**（繁體中文，簡短）：幾集新增、各放在哪座島、選了什麼圖示和理由、有沒有資料問題要使用者處理（例如 Firstory 上簡介重複）。
 
 ### 第二個頻道「科學好好聽：好奇號・宇宙大冒險」
-- Apple `id6829127315`、Spotify 節目 `2DX3Emz7cUofgW5kjZN5mc`。每日流程的 `tools/curiosity_feed.py` 抓進 `data/curiosity.json`，`build_catalog.py` 併進目錄（`show: "curiosity"`），卡片和單集頁會標「🚀 好奇號」，按鈕連到好奇號自己的 Apple／Spotify 單集。
+- Apple `id6829081115`（舊編號 id6829127315 也會查來補）、Spotify 節目 `2DX3Emz7cUofgW5kjZN5mc`。每日流程的 `tools/curiosity_feed.py` 抓進 `data/curiosity.json`，`build_catalog.py` 併進目錄（`show: "curiosity"`），卡片和單集頁會標「🚀 好奇號」，按鈕連到好奇號自己的 Apple／Spotify 單集。
 - 代碼＝系列字首＋第幾集：太陽系系列 `hs1`…、恐龍探險系列 `hd1`…。同系列的新集數依 `build_catalog.py` 的 `SERIES_HOME` 自動住進該系列的島（恐龍探險 → 恐龍化石島；太陽系先照關鍵字，對不到就住行星島），不會掉進母島。**出現新系列**時代碼會是暫時的 `hx…`：在 `CURIOSITY_SERIES` 加字首、在 `SERIES_HOME` 加這個系列的島，再照上面的流程選圖示。
-- 放島和選圖示跟主頻道一樣（`placements.json`、`episode-icon-review.json`），只是 `source` 用 `https://podcasts.apple.com/tw/podcast/id6829127315?i=單集編號`。Apple 還沒上架的集數（`new_episodes.py` 說「沒有 Apple 連結」）先用 Spotify 單集網址當 `source`，等 Apple 出現後再換成 Apple 的。
+- 放島和選圖示跟主頻道一樣（`placements.json`、`episode-icon-review.json`），只是 `source` 用 `https://podcasts.apple.com/tw/podcast/id6829081115?i=單集編號`。Apple 還沒上架的集數（`new_episodes.py` 說「沒有 Apple 連結」）先用 Spotify 單集網址當 `source`，等 Apple 出現後再換成 Apple 的。
 
 ### 判斷規則（已經定案，不用再問）
 - **免費或 VIP 以 Apple Podcasts 為準**（`build_catalog.py` 自動處理）；網站只放 Apple 或 Firstory 公開 RSS 上找得到的集數，預告片和找不到的都不放。

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """第二個頻道「科學好好聽：好奇號・宇宙大冒險」的單集資料，存成 data/curiosity.json。
 
-這個頻道在 Apple（id6829127315）和 Spotify 上是獨立的節目。要連到 Apple 和 Spotify，所以在
+這個頻道在 Apple（id6829081115）和 Spotify 上是獨立的節目。要連到 Apple 和 Spotify，所以在
 GitHub Actions 上跑（.github/workflows/status.yml）：
 - Apple：iTunes Lookup 拿節目資訊、公開 RSS 網址和單集；amp-api 拿全部單集（含訂閱者專屬）。
 - RSS：讀 Apple 給的公開 RSS（Firstory），拿每一集的完整說明。
@@ -22,9 +22,9 @@ from status_check import firstory_items
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "data" / "curiosity.json"
-APPLE_ID = "6829127315"
-# Apple 上也有用另一個節目編號列出的單集（例如恐龍探險第四集在 id6829081115 底下）：兩個都查、合併
-APPLE_EXTRA_IDS = ["6829081115"]
+APPLE_ID = "6829081115"  # 使用者 11-18 指定的節目頁
+# 舊的節目編號 id6829127315 也查，Apple 慢一步收錄時用來補（依標題合併，新編號優先）
+APPLE_EXTRA_IDS = ["6829127315"]
 SPOTIFY_EPISODE = "7q4q5NHVEpWGIJDPtYlxDp"  # 使用者給的其中一集，用來找節目 ID；SPOTIFY_CURIOSITY_SHOW_ID 可以蓋過
 
 

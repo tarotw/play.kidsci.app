@@ -144,7 +144,7 @@ def write_pages(root: Path, site: str, name: str, islands: list[dict], per: list
     catalog = json.loads((root / "data/catalog.json").read_text(encoding="utf-8"))
     curiosity = (catalog.get("shows") or {}).get("curiosity") or {}
     curiosity_series = {"@type": "PodcastSeries", "name": curiosity.get("name") or "科學好好聽：好奇號・宇宙大冒險",
-                        "url": curiosity.get("apple") or "https://podcasts.apple.com/tw/podcast/id6829127315"}
+                        "url": curiosity.get("apple") or "https://podcasts.apple.com/tw/podcast/id6829081115"}
     urls: list[tuple[str, str]] = []
     keep_ep, keep_isle = set(), set()
 

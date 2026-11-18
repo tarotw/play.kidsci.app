@@ -22,9 +22,11 @@ concurrency:
 
 jobs:
   status:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main  # 排隊等到的那次也要從最新的 main 開始（不是觸發當下的舊版本），推的時候才不會撞到
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -67,7 +69,9 @@ jobs:
           git commit -m "更新上架狀態與目錄"
           # 跑的時候別人也推了東西：先接上最新的再推（這裡只改資料檔，不會衝突），最多試三次
           for i in 1 2 3; do
-            git pull --rebase origin main && git push && exit 0
+            # 這裡提交的都是重新產生的資料檔：撞到時以這次產生的為準（-X theirs＝正在接上去的這個提交）
+            git pull --rebase -X theirs origin main && git push && exit 0
+            git rebase --abort 2>/dev/null || true
             sleep 5
           done
           exit 1
