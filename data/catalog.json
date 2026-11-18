@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T03:12:37Z",
+ "generated": "2026-11-18T03:46:35Z",
  "shows": {
   "curiosity": {
    "name": "科學好好聽：好奇號・宇宙大冒險",
@@ -4387,16 +4387,17 @@
    "also": [],
    "state": "public",
    "listen": {
+    "apple": "https://podcasts.apple.com/tw/podcast/%E7%AC%AC%E5%9B%9B%E9%9B%86-%E6%81%90%E9%BE%8D%E6%8E%A2%E9%9A%AA%E7%B3%BB%E5%88%97-%E5%8A%8D%E9%BE%8D%E5%A4%A7%E6%88%B0%E7%95%B0%E9%BE%8D-%E9%AA%A8%E6%9D%BF%E4%B9%8B%E8%AC%8E-%E5%B0%BE%E5%88%BA%E7%95%99%E4%B8%8B%E7%9A%84%E6%B4%9E%E5%92%8C%E5%8C%96%E7%9F%B3%E7%BF%85%E8%86%80%E8%A3%A1%E7%9A%84%E8%9F%B2%E9%B3%B4/id6829127315?i=1000802422546",
     "spotify": "https://open.spotify.com/episode/55u86lt0KCK8Zk0tR2r0c2",
     "duration": 790,
     "pubDate": "Tue, 17 Nov 2026 07:17:31 GMT"
    },
-   "artwork": "https://image.firstory-cdn.me/Image/cmvvmudw302dy01z7eo8vai9j/UYEt5wKqfRLdw3maY6cH-.jpg",
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/b4/ac/90/b4ac90d6-3cba-5603-f6a2-50811ca5ef6b/mza_505910478609547830.jpg/600x600bb.jpg",
    "intro": "好奇號・恐龍時光大冒險第四集！小可和小博回到一億五千多萬年前的莫里森森林，遇見幾隻正在吃蕨類的劍龍。牠們背上兩排左右交錯的骨板到底做什麼用？科學家還在討論。時間儀表算出一件驚人的事：劍龍和暴龍相隔大約八千萬年，比暴龍和我們之間還要久！小博在泡泡裡錄影，泡泡只剩五分鐘，異龍就從旁邊經過……劍龍轉身甩出尾刺。這不是編出來的：美國猶他州找到的一塊異龍尾巴骨頭上，真的有一個跟劍龍尾刺對得上的洞。透骨鏡照出恐龍線索第 4 號。晚上，新法寶古聲盒第一次播放：科學家從化石翅膀重建出一億六千五百萬年前的蟲鳴。",
    "labs": [],
    "show": "curiosity",
    "series": "恐龍探險系列",
-   "artworkLocal": "assets/episode-covers/bce6fef2704e7f245d55.jpg"
+   "artworkLocal": "assets/episode-covers/041eabf0dc6e3031561a.jpg"
   },
   {
    "code": "hs1",
