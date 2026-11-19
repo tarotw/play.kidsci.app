@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T04:46:08Z",
+ "generated": "2026-11-19T04:30:42Z",
  "shows": {
   "curiosity": {
    "name": "科學好好聽：好奇號・宇宙大冒險",
@@ -3513,6 +3513,30 @@
    "intro": "你知道海底有一台「自帶寶藍色」的天然掃地機器人嗎？慢吞吞的藍指海星不僅沒有眼睛跟大腦，吃飯的時候竟然還會把自己的胃「吐」出來吃東西！如果不小心被切斷了手，那隻斷掉的手甚至能長成一隻全新的星星！快來跟我們一起潛入珊瑚礁城市，認識這位全身充滿黑科技的海底清道夫吧！",
    "labs": [],
    "artworkLocal": "assets/episode-covers/52e8751646e0ad552b52.jpg"
+  },
+  {
+   "code": "257",
+   "title": "海蛇的藍色華爾茲：船槳尾巴、跨物種獵殺聯盟與「假頭」騙術大揭密",
+   "home": "l03",
+   "zone": "海洋與深海",
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "apple": "https://podcasts.apple.com/tw/podcast/%E6%B5%B7%E8%9B%87%E7%9A%84%E8%97%8D%E8%89%B2%E8%8F%AF%E7%88%BE%E8%8C%B2-%E8%88%B9%E6%A7%B3%E5%B0%BE%E5%B7%B4-%E8%B7%A8%E7%89%A9%E7%A8%AE%E7%8D%B5%E6%AE%BA%E8%81%AF%E7%9B%9F%E8%88%87-%E5%81%87%E9%A0%AD-%E9%A8%99%E8%A1%93%E5%A4%A7%E6%8F%AD%E5%AF%86-ep-257/id1812447277?i=1000801687951",
+    "spotify": "https://open.spotify.com/episode/2udJNrFfuE3ci5JHltWncR",
+    "pubDate": "2026-11-18T22:00:00Z"
+   },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/10/99/6b/10996b97-e077-c1b4-c143-8ce247b3c552/308b2252-9503-4c89-aa82-b7f80689b3e9.jpg/600x600bb.jpg",
+   "intro": "你知道海裡有一種蛇，尾巴長得像船槳，還會跟魚組隊打獵嗎？黃唇青斑海蛇不但毒性比眼鏡蛇還強好幾倍，牠們還會用尾巴假裝成另一顆頭來嚇跑敵人！更厲害的是，牠們能在陸地和海洋之間自由切換嗅覺系統，根本就是生物界的變形金剛！甚至還有無毒的魚偷學牠們的外表來保護自己，這一集帶你潛入海底揭開海蛇的超級秘密！",
+   "labs": [
+    {
+     "id": "B05",
+     "title": "海蛇尾巴的推水帳",
+     "question": "尾巴擺得更快，肌肉供能就不用增加嗎？",
+     "url": "https://lab.kidsci.app/seapadd/"
+    }
+   ],
+   "artworkLocal": "assets/episode-covers/c47481755f16f7d92053.jpg"
   },
   {
    "code": "50",
