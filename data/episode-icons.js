@@ -852,6 +852,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "icon": "⭐",
     "subject": "藍指海星的構造與再生"
   },
+  "257": {
+    "title": "海蛇的藍色華爾茲：船槳尾巴、跨物種獵殺聯盟與「假頭」騙術大揭密",
+    "contentKey": "147:311bb049",
+    "icon": "🐍",
+    "subject": "黃唇青斑海蛇的構造與行為"
+  },
   "c10": {
     "title": "懸掛在 508 公尺高的極限科學：艾力克斯攀登台北 101 的技術真相",
     "contentKey": "84:bd2a64cf",
