@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T03:29:07Z",
+ "generated": "2026-11-23T03:59:52Z",
  "shows": {
   "curiosity": {
    "name": "科學好好聽：好奇號・宇宙大冒險",
@@ -519,6 +519,43 @@
    "intro": "小可和小博這次直接登上白令海的捕蟹船！三層樓高的巨浪、幾秒鐘就結冰的甲板、比雙人床還大的幾百公斤鋼鐵蟹籠在半空中晃來晃去……為什麼捕帝王蟹是全世界最危險的工作之一？還有，白令海竟然有大約一百億隻雪蟹消失了，牠們到底去哪裡了？快跟著兩位探險家一起出海破案！",
    "labs": [],
    "artworkLocal": "assets/episode-covers/55edd5cfb68b512196ad.jpg"
+  },
+  {
+   "code": "c37",
+   "title": "用筷子夾住太空船！星艦 Starship 第一次從太空回家被「接住」",
+   "home": "studio",
+   "zone": null,
+   "also": [],
+   "state": "subscriber",
+   "listen": {
+    "apple": "https://podcasts.apple.com/tw/podcast/%E7%94%A8%E7%AD%B7%E5%AD%90%E5%A4%BE%E4%BD%8F%E5%A4%AA%E7%A9%BA%E8%88%B9-%E6%98%9F%E8%89%A6-starship-%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%BE%9E%E5%A4%AA%E7%A9%BA%E5%9B%9E%E5%AE%B6%E8%A2%AB-%E6%8E%A5%E4%BD%8F-vip-37/id1812447277?i=1000803302722",
+    "spotify": "https://open.spotify.com/episode/4eZNJGS6yrJzUqxSWs5Rxq",
+    "pubDate": "2026-11-22T22:00:00Z"
+   },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/0c/41/35/0c413570-7216-490b-3c65-b11e188c757d/e4af488c-2c8f-48bb-8cbe-77914336a399.jpg/600x600bb.jpg",
+   "intro": "一枚比四十層樓還高的火箭，從太空繞了地球十四圈回來，最後竟然被發射塔用一雙巨大的「筷子」夾在半空中！2026 年 11 月，SpaceX 的星艦完成人類史上第一次「筷子夾太空船」。為什麼火箭不伸腳降落？為什麼這一夾讓大家說「一切都要改變了」？跟著科學隊長和好奇博士一起看懂這場太空大夾娃娃！",
+   "labs": [],
+   "autoPlaced": true,
+   "artworkLocal": "assets/episode-covers/de2ab739073b43e70207.jpg"
+  },
+  {
+   "code": "c39",
+   "title": "地球偷偷多了一顆月亮！迷你月亮十二月就要說再見",
+   "home": "l06",
+   "zone": "月球",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%9C%B0%E7%90%83%E5%81%B7%E5%81%B7%E5%A4%9A%E4%BA%86%E4%B8%80%E9%A1%86%E6%9C%88%E4%BA%AE-%E8%BF%B7%E4%BD%A0%E6%9C%88%E4%BA%AE%E5%8D%81%E4%BA%8C%E6%9C%88%E5%B0%B1%E8%A6%81%E8%AA%AA%E5%86%8D%E8%A6%8B-vip-39/id1812447277?i=1000803369460",
+    "spotify": "https://open.spotify.com/episode/61nO23PNa7pgMHwksWudT0",
+    "duration": 782,
+    "pubDate": "Sun, 22 Nov 2026 03:32:59 GMT"
+   },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/a9/9d/60/a99d6018-cb24-ee53-0a3b-0a4e8e85844d/mza_9833213603127423600.jpg/600x600bb.jpg",
+   "intro": "你知道嗎？地球從今年 4 月開始，偷偷多了一顆「迷你月亮」！它只有一個大人那麼高，一直到 8 月才被匈牙利的天文學家發現。大家還懷疑它是不是太空垃圾，最後靠「太陽光的推力」才破案：它是一顆真正的小石頭。可是它只是來作客，12 月左右就要離開地球，回去繞太陽了。快來聽聽這場太空偵探故事，還有曾經被抓包的「假月亮」火箭殼！",
+   "labs": [],
+   "autoPlaced": true,
+   "artworkLocal": "assets/episode-covers/3fda3b27277afc6bf8b2.jpg"
   },
   {
    "code": "c5",
@@ -3477,7 +3514,7 @@
    "listen": {
     "apple": "https://podcasts.apple.com/tw/podcast/%E6%B5%B7%E6%B4%8B%E4%B8%AD%E7%9A%84%E6%AF%92%E5%A0%A1%E5%A3%98%E8%88%87%E9%9A%B1%E5%BD%A2%E6%96%97%E7%AF%B7-%E6%8F%AD%E9%96%8B%E5%B0%8F%E4%B8%91%E9%AD%9A%E8%88%87%E6%B5%B7%E8%91%B5%E7%9A%84%E7%B5%82%E6%A5%B5%E7%94%9F%E5%AD%98%E5%AF%86%E7%A2%BC-ep-255/id1812447277?i=1000800413445",
     "spotify": "https://open.spotify.com/episode/1xiTgc3HtAqhHU40fj1kvR",
-    "pubDate": "2026-11-09T22:00:00Z"
+    "pubDate": "2026-11-09T22:02:07Z"
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource221/v4/88/e8/6d/88e86dcb-f28f-e225-674d-1b15e5b064b3/3a07ccd0-9dd9-4515-8199-8ca8ee166516.jpg/600x600bb.jpg",
    "intro": "你知道可愛的小丑魚，其實會對著致命海葵大跳神秘的「適應之舞」，還要穿上特製的「隱形斗篷」才能不被毒刺刺傷嗎？牠們不只是好租客，竟然還懂得「算數學」來保護地盤！趕快跟著好奇博士潛入海底，看看這對海洋超級拍檔的生存黑科技吧！",

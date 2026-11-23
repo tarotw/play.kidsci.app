@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://play.kidsci.app/</loc><lastmod>2026-11-22</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://play.kidsci.app/</loc><lastmod>2026-11-23</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
   <url><loc>https://play.kidsci.app/isle/rainforest/</loc><lastmod>2026-07-20</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/savanna/</loc><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/desert/</loc><lastmod>2026-10-05</lastmod></url>
@@ -18,9 +18,10 @@
   <url><loc>https://play.kidsci.app/isle/scientists/</loc><lastmod>2026-09-10</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/city/</loc><lastmod>2026-10-18</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/flight/</loc><lastmod>2026-08-26</lastmod></url>
-  <url><loc>https://play.kidsci.app/isle/moon/</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://play.kidsci.app/isle/moon/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/planets/</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://play.kidsci.app/isle/stars/</loc><lastmod>2026-11-03</lastmod></url>
+  <url><loc>https://play.kidsci.app/ep/c37/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/s41/</loc><lastmod>2026-04-30</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/s43/</loc><lastmod>2026-05-05</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/198/</loc><lastmod>2026-02-19</lastmod></url>
@@ -205,6 +206,7 @@
   <url><loc>https://play.kidsci.app/ep/68/</loc><lastmod>2026-04-19</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/73/</loc><lastmod>2026-06-07</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/74/</loc><lastmod>2026-06-09</lastmod></url>
+  <url><loc>https://play.kidsci.app/ep/c39/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/111/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/112/</loc><lastmod>2026-09-30</lastmod></url>
   <url><loc>https://play.kidsci.app/ep/113/</loc><lastmod>2026-10-04</lastmod></url>

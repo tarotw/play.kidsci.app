@@ -1,7 +1,29 @@
 {
- "generated": "2026-11-22T03:29:07Z",
+ "generated": "2026-11-23T03:59:52Z",
  "spotifyChecked": true,
  "episodes": {
+  "c39": [
+   {
+    "guid": "cmwr9rebh02tj01ti35redbqr",
+    "title": "〈地球偷偷多了一顆月亮！迷你月亮十二月就要說再見｜VIP.39〉",
+    "link": "https://open.firstory.fm/story/cmwr9rebh02tj01ti35redbqr",
+    "pubDate": "Sun, 22 Nov 2026 03:32:59 GMT",
+    "audio": "https://m.cdn.firstory.me/track/cmdpx4cs200ax01xldg5ta89p/cmwr9rebh02tj01ti35redbqr/https%3A%2F%2Ffile.cdn.firstory.me%2FRecord%2Fcmdpx4cs200ax01xldg5ta89p%2Fcmwr9rebh02tk01tig6n9fz9x.mp3?v=1795317659673",
+    "duration": 782,
+    "episodeType": "full",
+    "artwork": "https://image.firstory-cdn.me/Image/cmdpx4cs200ax01xldg5ta89p/WRLLQmEf_9G6nEvAwgn4Y.jpg",
+    "artworkIsEpisode": true,
+    "intro": "你知道嗎？地球從今年 4 月開始，偷偷多了一顆「迷你月亮」！它只有一個大人那麼高，一直到 8 月才被匈牙利的天文學家發現。大家還懷疑它是不是太空垃圾，最後靠「太陽光的推力」才破案：它是一顆真正的小石頭。可是它只是來作客，12 月左右就要離開地球，回去繞太陽了。快來聽聽這場太空偵探故事，還有曾經被抓包的「假月亮」火箭殼！",
+    "matchedBy": "code",
+    "labeledPublic": false,
+    "trailerOnly": false,
+    "apple": {
+     "trackId": 1000803369460,
+     "url": "https://podcasts.apple.com/tw/podcast/%E5%9C%B0%E7%90%83%E5%81%B7%E5%81%B7%E5%A4%9A%E4%BA%86%E4%B8%80%E9%A1%86%E6%9C%88%E4%BA%AE-%E8%BF%B7%E4%BD%A0%E6%9C%88%E4%BA%AE%E5%8D%81%E4%BA%8C%E6%9C%88%E5%B0%B1%E8%A6%81%E8%AA%AA%E5%86%8D%E8%A6%8B-vip-39/id1812447277?i=1000803369460&uo=4"
+    },
+    "spotify": true
+   }
+  ],
   "124": [
    {
     "guid": "cmwep0kwo006l01u393q78exx",
