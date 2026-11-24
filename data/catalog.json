@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T03:59:52Z",
+ "generated": "2026-11-24T07:05:50Z",
  "shows": {
   "curiosity": {
    "name": "科學好好聽：好奇號・宇宙大冒險",
@@ -4479,6 +4479,26 @@
    "show": "curiosity",
    "series": "恐龍探險系列",
    "artworkLocal": "assets/episode-covers/8b223ac11d89e47d4d65.jpg"
+  },
+  {
+   "code": "hd6",
+   "title": "地球史上最危險的河：棘龍是潛水高手，還是超大鷺鷥？",
+   "home": "era:life",
+   "zone": null,
+   "also": [],
+   "state": "public",
+   "listen": {
+    "apple": "https://podcasts.apple.com/tw/podcast/%E7%AC%AC%E5%85%AD%E9%9B%86-%E6%81%90%E9%BE%8D%E6%8E%A2%E9%9A%AA%E7%B3%BB%E5%88%97-%E5%9C%B0%E7%90%83%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%8D%B1%E9%9A%AA%E7%9A%84%E6%B2%B3-%E6%A3%98%E9%BE%8D%E6%98%AF%E6%BD%9B%E6%B0%B4%E9%AB%98%E6%89%8B-%E9%82%84%E6%98%AF%E8%B6%85%E5%A4%A7%E9%B7%BA%E9%B7%A5/id6829081115?i=1000803714380",
+    "spotify": "https://open.spotify.com/episode/4YVOjiSQUIOiv0DzCjpxOY",
+    "duration": 798,
+    "pubDate": "Tue, 24 Nov 2026 03:46:25 GMT"
+   },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/08/f8/99/08f8999d-a23b-1955-1f1f-c5b579869a53/mza_14107437924572360327.jpg/600x600bb.jpg",
+   "intro": "好奇號・恐龍時光大冒險第六集！時間轉盤轉到大約九千五百萬年前，好奇號切換成防水模式，浮在今天摩洛哥沙漠底下的一條大河上。水面下游過嘴巴像大鋸子的魚，船身突然被撞了一下，接著一面背帆冒出水面：棘龍來了！透骨鏡看到牠像船槳一樣的尾巴，可是棘龍到底是潛水抓魚的游泳高手，還是站在淺水裡等魚的超大鷺鷥？科學家吵到現在還沒吵完，小可和小博也各站一邊，請你來投票。就在這時候，岸上又走來一隻鯊齒龍……研究這裡的科學家說，這裡可以說是地球史上最危險的地方！",
+   "labs": [],
+   "show": "curiosity",
+   "series": "恐龍探險系列",
+   "artworkLocal": "assets/episode-covers/41f85c4937d47e8385f8.jpg"
   },
   {
    "code": "hs1",
