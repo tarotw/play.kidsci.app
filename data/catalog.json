@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T07:05:50Z",
+ "generated": "2026-11-25T05:40:45Z",
  "shows": {
   "curiosity": {
    "name": "科學好好聽：好奇號・宇宙大冒險",
@@ -1764,6 +1764,31 @@
    "intro": "地球怕冷嗎？為什麼穿了那麼厚的「空氣衣」？這件衣服不只能變出風雨雷電，還能幫我們擦防曬油（臭氧層），甚至還會接殺流星（中氣層）！快來認識這件保護我們的超級大氣層吧！",
    "labs": [],
    "artworkLocal": "assets/episode-covers/fada13e117ef417c3708.jpg"
+  },
+  {
+   "code": "126",
+   "title": "地球也會長青春痘？火山三兄弟來了！",
+   "home": "l05",
+   "zone": "火山與地震",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "apple": "https://podcasts.apple.com/tw/podcast/%E5%9C%B0%E5%BA%95%E6%BB%BE%E7%87%99%E6%BF%83%E6%B9%AF%E5%A4%A7%E7%88%86%E7%99%BC-%E7%81%AB%E5%B1%B1%E4%B8%89%E5%85%84%E5%BC%9F-57%E5%85%AC%E9%87%8C%E8%A1%9D%E5%A4%A9%E7%81%AB%E5%B1%B1%E9%9B%B2%E8%88%87%E7%A5%9E%E5%A5%87%E7%81%AB%E5%B1%B1%E7%81%B0%E7%9A%84%E7%A7%98%E5%AF%86-ep-126/id1812447277?i=1000803868746",
+    "spotify": "https://open.spotify.com/episode/3gIFL500Epam2xwtSzYuiW",
+    "duration": 849,
+    "pubDate": "Tue, 24 Nov 2026 22:01:58 GMT"
+   },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/e0/4d/36/e04d36cd-2528-c709-e5fb-3b38ee6de9f3/mza_16983796425503428955.jpg/600x600bb.jpg",
+   "intro": "地球臉上也會長青春痘？原來是超級火熱的「火山」！這集節目要介紹火山家族的三兄弟：隨時想噴發的活火山大哥、正在睡覺的休眠火山二哥，還有已經退休的死火山小弟。還有，你知道火山灰其實是植物的超級營養品嗎？快來聽聽火山的秘密吧！",
+   "labs": [
+    {
+     "id": "J03",
+     "title": "火山氣體為什麼會膨脹？",
+     "question": "降低上方壓力，氣體會留在岩漿裡、形成泡，還是逃出去？",
+     "url": "https://lab.kidsci.app/gasrise/"
+    }
+   ],
+   "artworkLocal": "assets/episode-covers/9fe9326169b4ecd4111f.jpg"
   },
   {
    "code": "150",
