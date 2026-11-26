@@ -523,8 +523,8 @@
   {
    "code": "c37",
    "title": "用筷子夾住太空船！星艦 Starship 第一次從太空回家被「接住」",
-   "home": "studio",
-   "zone": null,
+   "home": "l06",
+   "zone": "登月",
    "also": [],
    "state": "subscriber",
    "listen": {
@@ -535,7 +535,6 @@
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/0c/41/35/0c413570-7216-490b-3c65-b11e188c757d/e4af488c-2c8f-48bb-8cbe-77914336a399.jpg/600x600bb.jpg",
    "intro": "一枚比四十層樓還高的火箭，從太空繞了地球十四圈回來，最後竟然被發射塔用一雙巨大的「筷子」夾在半空中！2026 年 11 月，SpaceX 的星艦完成人類史上第一次「筷子夾太空船」。為什麼火箭不伸腳降落？為什麼這一夾讓大家說「一切都要改變了」？跟著科學隊長和好奇博士一起看懂這場太空大夾娃娃！",
    "labs": [],
-   "autoPlaced": true,
    "artworkLocal": "assets/episode-covers/de2ab739073b43e70207.jpg"
   },
   {
@@ -554,7 +553,6 @@
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/a9/9d/60/a99d6018-cb24-ee53-0a3b-0a4e8e85844d/mza_9833213603127423600.jpg/600x600bb.jpg",
    "intro": "你知道嗎？地球從今年 4 月開始，偷偷多了一顆「迷你月亮」！它只有一個大人那麼高，一直到 8 月才被匈牙利的天文學家發現。大家還懷疑它是不是太空垃圾，最後靠「太陽光的推力」才破案：它是一顆真正的小石頭。可是它只是來作客，12 月左右就要離開地球，回去繞太陽了。快來聽聽這場太空偵探故事，還有曾經被抓包的「假月亮」火箭殼！",
    "labs": [],
-   "autoPlaced": true,
    "artworkLocal": "assets/episode-covers/3fda3b27277afc6bf8b2.jpg"
   },
   {

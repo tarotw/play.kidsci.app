@@ -378,6 +378,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "icon": "☁️",
     "subject": "地球大氣層的分層"
   },
+  "126": {
+    "title": "地球也會長青春痘？火山三兄弟來了！",
+    "contentKey": "110:f062a84",
+    "icon": "🌋",
+    "subject": "活火山、休眠火山和死火山"
+  },
   "150": {
     "title": "生物演化歷程：從單細胞到恐龍霸主 (上集)",
     "contentKey": "233:77545205",
@@ -1008,6 +1014,18 @@ export const REVIEWED_EPISODE_ICONS = {
     "icon": "🦀",
     "subject": "白令海捕帝王蟹與雪蟹消失"
   },
+  "c37": {
+    "title": "用筷子夾住太空船！星艦 Starship 第一次從太空回家被「接住」",
+    "contentKey": "145:d30f7a1e",
+    "icon": "🚀",
+    "subject": "星艦 Starship 被發射塔夾住回收"
+  },
+  "c39": {
+    "title": "地球偷偷多了一顆月亮！迷你月亮十二月就要說再見",
+    "contentKey": "160:d1b1712e",
+    "icon": "🪨",
+    "subject": "暫時繞地球的迷你月亮"
+  },
   "c5": {
     "title": "極速奧運會：獵豹、遊隼與旗魚的物理戰",
     "contentKey": "112:1f0864a",
@@ -1265,6 +1283,18 @@ export const REVIEWED_EPISODE_ICONS = {
     "contentKey": "249:74fe6c51",
     "icon": "🦕",
     "subject": "劍龍與異龍"
+  },
+  "hd5": {
+    "title": "長羽毛的恐龍森林：始祖鳥的小島、火山邊的羽王龍和四隻翅膀的小盜龍",
+    "contentKey": "219:397d1380",
+    "icon": "🪶",
+    "subject": "長羽毛的恐龍"
+  },
+  "hd6": {
+    "title": "地球史上最危險的河：棘龍是潛水高手，還是超大鷺鷥？",
+    "contentKey": "221:8e35555d",
+    "icon": "🦖",
+    "subject": "棘龍與白堊紀的大河"
   },
   "hs1": {
     "title": "好奇號發射！從太空看我們的藍色彈珠——地球",
