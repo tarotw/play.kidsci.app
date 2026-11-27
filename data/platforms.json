@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T07:43:09Z",
+ "generated": "2026-11-27T05:21:42Z",
  "firstory": {
   "https://open.firstory.fm/story/cmdpx4cur00cq01xld19aha50": {
    "spotify": "https://open.spotify.com/episode/3LeJFdsCDBCpJGKXBftJ8v",
@@ -2952,6 +2952,15 @@
     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/e0/4d/36/e04d36cd-2528-c709-e5fb-3b38ee6de9f3/mza_16983796425503428955.jpg/600x600bb.jpg",
     "sub": false,
     "intro": "地球臉上也會長青春痘？原來是超級火熱的「火山」！這集節目要介紹火山家族的三兄弟：隨時想噴發的活火山大哥、正在睡覺的休眠火山二哥，還有已經退休的死火山小弟。還有，你知道火山灰其實是植物的超級營養品嗎？快來聽聽火山的秘密吧！"
+   },
+   {
+    "title": "〈尋水特種部隊：黃唇青斑海蛇的解渴大作戰！｜EP.258〉",
+    "url": "https://podcasts.apple.com/tw/podcast/%E5%B0%8B%E6%B0%B4%E7%89%B9%E7%A8%AE%E9%83%A8%E9%9A%8A-%E9%BB%83%E5%94%87%E9%9D%92%E6%96%91%E6%B5%B7%E8%9B%87%E7%9A%84%E8%A7%A3%E6%B8%B4%E5%A4%A7%E4%BD%9C%E6%88%B0-ep-258/id1812447277?i=1000803303552",
+    "guid": "cmwqhygam02vo01rm1i5bdw01",
+    "date": "2026-11-26T22:00:00Z",
+    "intro": "你知道住在海裡的海蛇，其實也會「渴」到乾巴巴嗎？🦎🌊 本集帶你揭開黃唇青斑海蛇的祕密：牠們竟然不喝海水，還會把身體捲成「碗」來接雨水喝！快來聽聽這些海中蛟(jiāo)龍如何在重重挑戰下，展開一場驚心動魄的極限尋水記！",
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/55/57/5c/55575cd7-ff08-449a-2117-318489e3240f/6ae7779e-4c8d-4999-8d87-a602016c53ff.jpg/600x600bb.jpg",
+    "sub": true
    }
   ],
   "searched": {
@@ -3027,6 +3036,11 @@
   "show": "https://open.spotify.com/show/1eyISRdcgDTwZqIqrP1qKv",
   "source": "api",
   "episodes": [
+   {
+    "title": "〈尋水特種部隊：黃唇青斑海蛇的解渴大作戰！｜EP.258〉",
+    "url": "https://open.spotify.com/episode/3SCee3piMHYpEwEWpCMxI6",
+    "date": "2026-11-26"
+   },
    {
     "title": "〈地底滾燙濃湯大爆發！火山三兄弟、57公里衝天火山雲與神奇火山灰的秘密｜EP.126〉",
     "url": "https://open.spotify.com/episode/3gIFL500Epam2xwtSzYuiW",
@@ -4182,9 +4196,9 @@
  "log": [
   "Firstory 單集頁：這次看了 0 頁；145 集裡有 Spotify 連結 145 集、Apple 連結 88 集",
   "Apple：節目共 225 集；Lookup 拿到 148 集",
-  "Apple 網頁：全部 222 集，其中訂閱者專屬 71 集",
-  "Apple：一集一集搜尋 0 集；全部共 223 集（之前 223 集）",
+  "Apple 網頁：全部 223 集，其中訂閱者專屬 72 集",
+  "Apple：一集一集搜尋 0 集；全部共 224 集（之前 223 集）",
   "Spotify 節目 ID：1eyISRdcgDTwZqIqrP1qKv",
-  "Spotify API：230 集"
+  "Spotify API：231 集"
  ]
 }
