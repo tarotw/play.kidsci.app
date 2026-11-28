@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T10:42:37Z",
+ "generated": "2026-11-28T13:26:17Z",
  "firstory": {
   "https://open.firstory.fm/story/cmdpx4cur00cq01xld19aha50": {
    "spotify": "https://open.spotify.com/episode/3LeJFdsCDBCpJGKXBftJ8v",
@@ -729,7 +729,7 @@
  },
  "apple": {
   "show": "https://podcasts.apple.com/tw/podcast/%E7%A7%91%E5%AD%B8%E5%A5%BD%E5%A5%BD%E8%81%BD/id1812447277",
-  "total": 226,
+  "total": 227,
   "episodes": [
    {
     "title": "〈登月大冒險：阿波羅 11 號、史上最強火箭與人類的一大步｜EP.117〉",
@@ -2961,6 +2961,16 @@
     "intro": "你知道住在海裡的海蛇，其實也會「渴」到乾巴巴嗎？🦎🌊 本集帶你揭開黃唇青斑海蛇的祕密：牠們竟然不喝海水，還會把身體捲成「碗」來接雨水喝！快來聽聽這些海中蛟(jiāo)龍如何在重重挑戰下，展開一場驚心動魄的極限尋水記！",
     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/PodcastSource211/v4/55/57/5c/55575cd7-ff08-449a-2117-318489e3240f/6ae7779e-4c8d-4999-8d87-a602016c53ff.jpg/600x600bb.jpg",
     "sub": true
+   },
+   {
+    "title": "〈預告影片｜倒立吃飯的海邊小火山：藤壺的驚奇一生｜SP.65〉",
+    "url": "https://podcasts.apple.com/tw/podcast/%E9%A0%90%E5%91%8A%E5%BD%B1%E7%89%87-%E5%80%92%E7%AB%8B%E5%90%83%E9%A3%AF%E7%9A%84%E6%B5%B7%E9%82%8A%E5%B0%8F%E7%81%AB%E5%B1%B1-%E8%97%A4%E5%A3%BA%E7%9A%84%E9%A9%9A%E5%A5%87%E4%B8%80%E7%94%9F-sp-65/id1812447277?i=1000804552101",
+    "guid": "cmx0ekgam06hf01xk0epzhy7f",
+    "date": "2026-11-28T12:51:03Z",
+    "ms": 77000,
+    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/cb/1d/dc/cb1ddcd6-f16b-2173-986e-9bf399020d9d/mza_1985757228469198303.jpg/600x600bb.jpg",
+    "sub": false,
+    "intro": "海邊石頭上成群像迷你火山的藤壺，牠一輩子把頭黏在石頭上倒立..."
    }
   ],
   "searched": {
@@ -3036,6 +3046,11 @@
   "show": "https://open.spotify.com/show/1eyISRdcgDTwZqIqrP1qKv",
   "source": "api",
   "episodes": [
+   {
+    "title": "〈預告影片｜倒立吃飯的海邊小火山：藤壺的驚奇一生｜SP.65〉",
+    "url": "https://open.spotify.com/episode/0R6LcCaybzMXC8EFYFfLam",
+    "date": "2026-11-28"
+   },
    {
     "title": "〈尋水特種部隊：黃唇青斑海蛇的解渴大作戰！｜EP.258〉",
     "url": "https://open.spotify.com/episode/3SCee3piMHYpEwEWpCMxI6",
@@ -4195,10 +4210,10 @@
  },
  "log": [
   "Firstory 單集頁：這次看了 0 頁；145 集裡有 Spotify 連結 145 集、Apple 連結 88 集",
-  "Apple：節目共 226 集；Lookup 拿到 148 集",
-  "Apple 網頁：全部 223 集，其中訂閱者專屬 72 集",
-  "Apple：一集一集搜尋 0 集；全部共 224 集（之前 224 集）",
+  "Apple：節目共 227 集；Lookup 拿到 149 集",
+  "Apple 網頁：全部 224 集，其中訂閱者專屬 72 集",
+  "Apple：一集一集搜尋 0 集；全部共 225 集（之前 224 集）",
   "Spotify 節目 ID：1eyISRdcgDTwZqIqrP1qKv",
-  "Spotify API：231 集"
+  "Spotify API：232 集"
  ]
 }

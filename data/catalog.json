@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T10:42:37Z",
+ "generated": "2026-11-28T13:26:17Z",
  "shows": {
   "curiosity": {
    "name": "科學好好聽：好奇號・宇宙大冒險",
@@ -1322,6 +1322,32 @@
    "intro": "2026 年 11 月 18 日傍晚，一台 1977 年出發的太空船，會飛到連光都要走一整天才到得了的地方！跟它說一句「你好」，要等兩天才聽到回答。航海家 1 號拍過會噴火的衛星、回頭拍下地球變成一粒藍色小點，還帶著一張要放給外星人聽的金唱片，上面竟然有閩南語！這位快五十歲的太空老兵，電力一年一年變少，工程師卻一次又一次從 250 億公里外把它救回來。一起來聽聽它的驚奇旅程吧！",
    "labs": [],
    "artworkLocal": "assets/episode-covers/ab532b2380831898698a.jpg"
+  },
+  {
+   "code": "s65",
+   "title": "預告影片｜倒立吃飯的海邊小火山：藤壺的驚奇一生",
+   "home": "l05",
+   "zone": "火山與地震",
+   "also": [],
+   "state": "public",
+   "listen": {
+    "apple": "https://podcasts.apple.com/tw/podcast/%E9%A0%90%E5%91%8A%E5%BD%B1%E7%89%87-%E5%80%92%E7%AB%8B%E5%90%83%E9%A3%AF%E7%9A%84%E6%B5%B7%E9%82%8A%E5%B0%8F%E7%81%AB%E5%B1%B1-%E8%97%A4%E5%A3%BA%E7%9A%84%E9%A9%9A%E5%A5%87%E4%B8%80%E7%94%9F-sp-65/id1812447277?i=1000804552101",
+    "spotify": "https://open.spotify.com/episode/0R6LcCaybzMXC8EFYFfLam",
+    "duration": 77,
+    "pubDate": "2026-11-28T12:51:03Z"
+   },
+   "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/cb/1d/dc/cb1ddcd6-f16b-2173-986e-9bf399020d9d/mza_1985757228469198303.jpg/600x600bb.jpg",
+   "intro": "海邊石頭上成群像迷你火山的藤壺，牠一輩子把頭黏在石頭上倒立...",
+   "labs": [
+    {
+     "id": "B13",
+     "title": "倒立吃飯的藤壺",
+     "question": "牠用頭黏在石頭上、用腳撈東西吃，而且一輩子只能選一次家。先幫藤壺吃飽，再替寶寶挑一個最好的家！",
+     "url": "https://lab.kidsci.app/barnacle/"
+    }
+   ],
+   "autoPlaced": true,
+   "artworkLocal": "assets/episode-covers/d991d6d4f82d596d3081.jpg"
   },
   {
    "code": "103",
