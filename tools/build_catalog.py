@@ -93,7 +93,8 @@ def platform_links(status: dict) -> dict[str, dict[str, str]]:
     for name in ("apple", "spotify"):
         for ep in (data.get(name) or {}).get("episodes", []):
             title = (ep.get("title") or "").strip()
-            if not ep.get("url") or title in trailers or (ep.get("ms") and ep["ms"] < 60000):
+            # 預告片不放：Firstory 標成預告的、不到 1 分鐘的，還有標題寫「預告」的（例如只上 Apple／Spotify 的預告影片）
+            if not ep.get("url") or title in trailers or (ep.get("ms") and ep["ms"] < 60000) or "預告" in title:
                 continue
             code = by_title.get(title)
             if not code:
