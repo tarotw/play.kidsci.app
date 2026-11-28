@@ -1585,5 +1585,16 @@
    "c21",
    "c22"
   ]
+ },
+ {
+  "id": "B13",
+  "slug": "barnacle",
+  "title": "倒立吃飯的藤壺",
+  "question": "牠用頭黏在石頭上、用腳撈東西吃，而且一輩子只能選一次家。先幫藤壺吃飽，再替寶寶挑一個最好的家！",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/barnacle/",
+  "episodes": [
+   "s65"
+  ]
  }
 ]
