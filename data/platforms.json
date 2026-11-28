@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T05:21:42Z",
+ "generated": "2026-11-28T00:06:11Z",
  "firstory": {
   "https://open.firstory.fm/story/cmdpx4cur00cq01xld19aha50": {
    "spotify": "https://open.spotify.com/episode/3LeJFdsCDBCpJGKXBftJ8v",
@@ -729,7 +729,7 @@
  },
  "apple": {
   "show": "https://podcasts.apple.com/tw/podcast/%E7%A7%91%E5%AD%B8%E5%A5%BD%E5%A5%BD%E8%81%BD/id1812447277",
-  "total": 225,
+  "total": 226,
   "episodes": [
    {
     "title": "〈登月大冒險：阿波羅 11 號、史上最強火箭與人類的一大步｜EP.117〉",
@@ -4195,9 +4195,9 @@
  },
  "log": [
   "Firstory 單集頁：這次看了 0 頁；145 集裡有 Spotify 連結 145 集、Apple 連結 88 集",
-  "Apple：節目共 225 集；Lookup 拿到 148 集",
+  "Apple：節目共 226 集；Lookup 拿到 148 集",
   "Apple 網頁：全部 223 集，其中訂閱者專屬 72 集",
-  "Apple：一集一集搜尋 0 集；全部共 224 集（之前 223 集）",
+  "Apple：一集一集搜尋 0 集；全部共 224 集（之前 224 集）",
   "Spotify 節目 ID：1eyISRdcgDTwZqIqrP1qKv",
   "Spotify API：231 集"
  ]
