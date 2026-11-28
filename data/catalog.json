@@ -1519,7 +1519,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/44/82/9b/44829b1a-4a3b-38c5-bd61-7c11e42011cd/mza_9058818745292873843.jpg/600x600bb.jpg",
    "intro": "這集我們要拜訪一對穿著藍色外套的神秘兄弟 🛌 天王星哥哥：他是個超級怪咖，竟然是「躺著」繞太陽跑的！而且他是全太陽系最冷的冰庫！",
-   "labs": [],
+   "labs": [
+    {
+     "id": "K14",
+     "title": "用筆尖找行星",
+     "question": "天王星走得一下快、一下慢，好像有看不見的東西在拉它。用紙和筆算出神祕行星在哪裡、用望遠鏡找到它，再找出冥王星和卡戎一起轉圈的平衡點！",
+     "url": "https://lab.kidsci.app/penplanet/"
+    }
+   ],
    "artworkLocal": "assets/episode-covers/10db79e0e4bdd7763810.jpg"
   },
   {
@@ -4871,7 +4878,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/2c/c8/93/2cc8935d-a495-8428-d53a-f5ac6ce2f098/mza_12898488667073506270.jpg/600x600bb.jpg",
    "intro": "天王星躺著走路已經夠怪了，小博還說它是唯一沒開暖爐的巨行星。結果小可一看熱量表，放出去的熱竟然比收到的多！原來科學家早就改答案了。人類唯一一次來訪又可能碰上颱風天，第二十九顆月亮還沒有名字，而發現這顆行星的，竟然是一位音樂家！",
-   "labs": [],
+   "labs": [
+    {
+     "id": "K14",
+     "title": "用筆尖找行星",
+     "question": "天王星走得一下快、一下慢，好像有看不見的東西在拉它。用紙和筆算出神祕行星在哪裡、用望遠鏡找到它，再找出冥王星和卡戎一起轉圈的平衡點！",
+     "url": "https://lab.kidsci.app/penplanet/"
+    }
+   ],
    "show": "curiosity",
    "series": "太陽系系列",
    "artworkLocal": "assets/episode-covers/a554f6de717099fa6ea8.jpg"
@@ -4891,7 +4905,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/39/19/28/391928ee-d502-2596-acff-3abd11dfe944/mza_763201417686343746.jpg/600x600bb.jpg",
    "intro": "一顆行星，竟然是用紙和筆算出來的！伽利略曾經跟它擦身而過，勒維耶光靠數學就指出它在哪裡，加勒的望遠鏡一看，真的就在那裡。小可和小博飛到海王星，看差不多高鐵七倍快的風、跑到中間的極光，還要追查環上的黏土，嫌犯竟然是倒退走的崔頓！跟著好奇號一起破案 ！",
-   "labs": [],
+   "labs": [
+    {
+     "id": "K14",
+     "title": "用筆尖找行星",
+     "question": "天王星走得一下快、一下慢，好像有看不見的東西在拉它。用紙和筆算出神祕行星在哪裡、用望遠鏡找到它，再找出冥王星和卡戎一起轉圈的平衡點！",
+     "url": "https://lab.kidsci.app/penplanet/"
+    }
+   ],
    "show": "curiosity",
    "series": "太陽系系列",
    "artworkLocal": "assets/episode-covers/c1457a9416cd98916fef.jpg"
@@ -4911,7 +4932,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/bc/18/34/bc183479-5d6f-9aa4-b790-9ead42e166c8/mza_18263488875365961872.jpg/600x600bb.jpg",
    "intro": "太陽系大冒險最後一站！冥王星比月亮還小，被發現到現在連一圈都還沒繞完。有個十歲女孩寫信要把它變回行星，還要全世界免費吃冰淇淋！小可和小博想像降落在大愛心上，飛到另一面看卡戎：它和冥王星是親一下就抓住的嗎？飛完十一站，扣好安全帶，這一次，我們回家。",
-   "labs": [],
+   "labs": [
+    {
+     "id": "K14",
+     "title": "用筆尖找行星",
+     "question": "天王星走得一下快、一下慢，好像有看不見的東西在拉它。用紙和筆算出神祕行星在哪裡、用望遠鏡找到它，再找出冥王星和卡戎一起轉圈的平衡點！",
+     "url": "https://lab.kidsci.app/penplanet/"
+    }
+   ],
    "show": "curiosity",
    "series": "太陽系系列",
    "artworkLocal": "assets/episode-covers/ca1e663c8eab6911b36c.jpg"

@@ -1706,5 +1706,19 @@
    "hs8",
    "109"
   ]
+ },
+ {
+  "id": "K14",
+  "slug": "penplanet",
+  "title": "用筆尖找行星",
+  "question": "天王星走得一下快、一下慢，好像有看不見的東西在拉它。用紙和筆算出神祕行星在哪裡、用望遠鏡找到它，再找出冥王星和卡戎一起轉圈的平衡點！",
+  "topic": "space",
+  "url": "https://lab.kidsci.app/penplanet/",
+  "episodes": [
+   "hs9",
+   "hs10",
+   "hs11",
+   "110"
+  ]
  }
 ]
