@@ -864,6 +864,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "icon": "🐍",
     "subject": "黃唇青斑海蛇的構造與行為"
   },
+  "258": {
+    "title": "尋水特種部隊：黃唇青斑海蛇的解渴大作戰！",
+    "contentKey": "110:2589675",
+    "icon": "🐍",
+    "subject": "黃唇青斑海蛇怎麼找淡水喝"
+  },
   "c10": {
     "title": "懸掛在 508 公尺高的極限科學：艾力克斯攀登台北 101 的技術真相",
     "contentKey": "84:bd2a64cf",
@@ -1295,6 +1301,12 @@ export const REVIEWED_EPISODE_ICONS = {
     "contentKey": "221:8e35555d",
     "icon": "🦖",
     "subject": "棘龍與白堊紀的大河"
+  },
+  "hd7": {
+    "title": "海怪出沒注意：魚龍在海裡生小魚龍，滄龍咬住好奇號！",
+    "contentKey": "223:945b04f3",
+    "icon": "animal:mosasaur",
+    "subject": "魚龍、蛇頸龍與滄龍等海生爬行類"
   },
   "hs1": {
     "title": "好奇號發射！從太空看我們的藍色彈珠——地球",
