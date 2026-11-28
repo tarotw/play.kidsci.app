@@ -45,6 +45,11 @@
 ### 資料問題要告訴使用者（不要自己改來源資料）
 簡介重複（例如第 90 集複製第 89 集）、標題和簡介物種不同、Apple 和 RSS 的狀態矛盾等，只在 `episode-icon-review.json` 用 `sourceIssue` 記錄，並在回報裡提醒使用者到 Firstory 修。
 
+## 每一頁都要有分享圖（OG Image）——使用者明確要求過，不能漏
+- 不管是這個網站還是互動實驗室（`tarotw/lab.kidsci.app`，lab.kidsci.app），**新增或重做任何頁面都要有自己的分享圖**（1200×630，`og:image` 加寬高、`twitter:card=summary_large_image`）；只放小標誌不算。
+- 這個網站：首頁用 `assets/og-cover.jpg`（`tools/og/make_og.mjs`），單集頁和島頁由 `build_seo.py` 自動帶封面，新增其他種類的頁面時要自己補。
+- 實驗室：`node tools/og/make_og.mjs <資料夾>` 產生 `<資料夾>/og.jpg`，做法和新增實驗的步驟寫在那個專案的 `CLAUDE.md`。
+
 ## 其他常用
 - 本機看網站：`python3 -m http.server 8000`（從專案根目錄）。測試 3D 要用 SwiftShader 的 headless chromium（`--use-angle=swiftshader --enable-unsafe-swiftshader`）。
 - 每日自動流程與資料檔說明在 `README.md` 的「資料檔」表。
