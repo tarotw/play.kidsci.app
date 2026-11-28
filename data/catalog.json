@@ -1724,7 +1724,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/1f/52/0f/1f520fd7-0df1-f55a-39c8-be8e4264047a/mza_1903542102765579466.jpg/600x600bb.jpg",
    "intro": "你知道我們腳下的陸地正在偷偷賽跑嗎？而且地球其實不是圓的，是一個胖胖的「扁球體」？最酷的是，地球還有一件看不見的「隱形斗篷」，幫我們擋住太陽風的攻擊！快來聽聽這些不可思議的地球秘密吧！",
-   "labs": [],
+   "labs": [
+    {
+     "id": "J11",
+     "title": "地球的隱形斗篷",
+     "question": "太陽不停吹出帶電的粒子，地球靠肚子裡的發電機撐開一件看不見的斗篷。攪動地心、撐過三次太陽風暴，再用手指把地球轉扁！",
+     "url": "https://lab.kidsci.app/magshield/"
+    }
+   ],
    "artworkLocal": "assets/episode-covers/c366c48d5372c9a8582f.jpg"
   },
   {

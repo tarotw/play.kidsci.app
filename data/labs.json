@@ -1596,5 +1596,16 @@
   "episodes": [
    "s65"
   ]
+ },
+ {
+  "id": "J11",
+  "slug": "magshield",
+  "title": "地球的隱形斗篷",
+  "question": "太陽不停吹出帶電的粒子，地球靠肚子裡的發電機撐開一件看不見的斗篷。攪動地心、撐過三次太陽風暴，再用手指把地球轉扁！",
+  "topic": "earth",
+  "url": "https://lab.kidsci.app/magshield/",
+  "episodes": [
+   "122"
+  ]
  }
 ]
