@@ -4959,7 +4959,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/a2/62/8d/a2628dac-b94e-f748-3fef-7f28aceed035/mza_14742389466035619005.jpg/600x600bb.jpg",
    "intro": "太陽系大冒險的特別任務：好奇號去追彗星！彗星聞起來竟然像臭雞蛋和馬廄？小可和小博降落在黑得像木炭的橡皮鴨彗星上，小博一跳差點飛進太空。跟著彗星靠近太陽，看它長出兩條方向不同的尾巴，再飛過土星軌道，追上一位從別的恆星飛來、可能比太陽系還老的外地客人。最後還有台灣發現的彗星！",
-   "labs": [],
+   "labs": [
+    {
+     "id": "K15",
+     "title": "追彗星！兩條尾巴和橡皮鴨",
+     "question": "彗星靠近太陽會長出兩條方向不同的尾巴，有時候尾巴還跑在前面！再到像橡皮鴨的 67P 彗星上跳一跳：要多輕才不會飛進太空？",
+     "url": "https://lab.kidsci.app/cometchase/"
+    }
+   ],
    "show": "curiosity",
    "series": "太陽系系列",
    "artworkLocal": "assets/episode-covers/b2af17f0e8a5a3bbd832.jpg"

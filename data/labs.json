@@ -1720,5 +1720,16 @@
    "hs11",
    "110"
   ]
+ },
+ {
+  "id": "K15",
+  "slug": "cometchase",
+  "title": "追彗星！兩條尾巴和橡皮鴨",
+  "question": "彗星靠近太陽會長出兩條方向不同的尾巴，有時候尾巴還跑在前面！再到像橡皮鴨的 67P 彗星上跳一跳：要多輕才不會飛進太空？",
+  "topic": "space",
+  "url": "https://lab.kidsci.app/cometchase/",
+  "episodes": [
+   "hs12"
+  ]
  }
 ]
