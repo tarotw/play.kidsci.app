@@ -1482,7 +1482,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/5d/49/0e/5d490ed1-a0c2-e7e9-26a6-1f4b5457f1d2/mza_17496454313124778193.jpg/600x600bb.jpg",
    "intro": "各位小小探險家！這集我們要來一場星際大PK！🥊 一方是我們的家——充滿活力的 藍色地球隊 🌍",
-   "labs": [],
+   "labs": [
+    {
+     "id": "K12",
+     "title": "遙控毅力號：火星上的豹紋石頭",
+     "question": "訊號從地球飛到火星要好幾分鐘，沒辦法用搖桿開車！先排好一串指令再送出，帶毅力號找到豹紋石頭；再到火星上大喊、看夕陽，聽聽看、看看哪裡和地球不一樣。",
+     "url": "https://lab.kidsci.app/marsrover/"
+    }
+   ],
    "artworkLocal": "assets/episode-covers/47e18b0d402092d27c13.jpg"
   },
   {
@@ -4768,7 +4775,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/5a/86/88/5a8688be-bbe4-2cb0-ad83-a2c984bba4bb/mza_8032637306794074266.jpg/600x600bb.jpg",
    "intro": "好奇號終於可以降落了！小可和小博用想像力踏上火星，發現這裡的聲音又小又悶，連罵人都聽不到。毅力號找到長著豹紋斑點的石頭，是生命的線索嗎？小可想發頭條，卻一直被退件。還有火星的夕陽，顏色跟你想的不一樣！一起來看看，真正在火星上工作的機器人發現了什麼 ?",
-   "labs": [],
+   "labs": [
+    {
+     "id": "K12",
+     "title": "遙控毅力號：火星上的豹紋石頭",
+     "question": "訊號從地球飛到火星要好幾分鐘，沒辦法用搖桿開車！先排好一串指令再送出，帶毅力號找到豹紋石頭；再到火星上大喊、看夕陽，聽聽看、看看哪裡和地球不一樣。",
+     "url": "https://lab.kidsci.app/marsrover/"
+    }
+   ],
    "show": "curiosity",
    "series": "太陽系系列",
    "artworkLocal": "assets/episode-covers/51b19a56fbe0d4824fb5.jpg"
