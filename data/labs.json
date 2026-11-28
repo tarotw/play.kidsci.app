@@ -1301,8 +1301,8 @@
  {
   "id": "J01",
   "slug": "seisloc",
-  "title": "地震波到站時間定位",
-  "question": "同一站P先到、S後到，這段時間差能告訴你什麼？",
+  "title": "地震偵探：找出震央",
+  "question": "地震發生了，可是震央在哪裡？看三個測站收到的 P 波和 S 波，畫三個圈圈把它找出來！",
   "topic": "earth",
   "url": "https://lab.kidsci.app/seisloc/",
   "episodes": [
@@ -1312,8 +1312,8 @@
  {
   "id": "J02",
   "slug": "plates",
-  "title": "板塊邊界的地形工廠",
-  "question": "拉開、推近、擦肩：哪種邊界會形成山脈、裂谷或海溝？",
+  "title": "推一推板塊，山就長出來",
+  "question": "地球表面是一塊塊會動的大拼圖。把兩塊板塊推擠、拉開、擦肩而過，看看會長出高山、火山、海溝還是大裂谷！",
   "topic": "earth",
   "url": "https://lab.kidsci.app/plates/",
   "episodes": [
