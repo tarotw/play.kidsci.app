@@ -1706,7 +1706,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/dd/ea/2d/ddea2d6c-43ef-cfc7-9b94-6b48fd7b562c/mza_11915483510211590149.jpg/600x600bb.jpg",
    "intro": "你知道我們住的地球，以前竟然是一個超級燙的大火球嗎？而且以前的陸地全部黏在一起，叫做「盤古大陸」！快跟著科學隊長搭乘時光機，回到 45 億年前，看看地球是怎麼變身成現在這個美麗的藍色星球吧！",
-   "labs": [],
+   "labs": [
+    {
+     "id": "J10",
+     "title": "地心探險記：切開洋蔥地球",
+     "question": "地球像洋蔥一樣一層一層的，可是人類最深的洞只鑽了大約 12 公里。開想像的鑽地船衝到地心，再用地震波幫神祕星球照 CT！",
+     "url": "https://lab.kidsci.app/earthcore/"
+    }
+   ],
    "artworkLocal": "assets/episode-covers/cfdd521de8aa4f8dd797.jpg"
   },
   {
@@ -1749,7 +1756,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/a8/45/72/a8457249-fb3e-c71e-57d8-800ba7106dc5/mza_13146776777467920505.jpg/600x600bb.jpg",
    "intro": "你也想知道地球肚子裡長什麼樣子嗎？我們雖然不能鑽進去，但是有超厲害的「地震波掃描儀」！快跟著科學隊長一起把地球像洋蔥一樣剝開，看看裡面熱呼呼的「軟流圈」和比太陽還熱的「內核」吧！",
-   "labs": [],
+   "labs": [
+    {
+     "id": "J10",
+     "title": "地心探險記：切開洋蔥地球",
+     "question": "地球像洋蔥一樣一層一層的，可是人類最深的洞只鑽了大約 12 公里。開想像的鑽地船衝到地心，再用地震波幫神祕星球照 CT！",
+     "url": "https://lab.kidsci.app/earthcore/"
+    }
+   ],
    "artworkLocal": "assets/episode-covers/4ecdde8aa99e3ed3d989.jpg"
   },
   {
@@ -1767,7 +1781,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/26/74/d1/2674d188-2f6d-e66e-4480-95c54710fb70/mza_16465942024790573631.jpg/600x600bb.jpg",
    "intro": "地球怕冷嗎？為什麼穿了那麼厚的「空氣衣」？這件衣服不只能變出風雨雷電，還能幫我們擦防曬油（臭氧層），甚至還會接殺流星（中氣層）！快來認識這件保護我們的超級大氣層吧！",
-   "labs": [],
+   "labs": [
+    {
+     "id": "J09",
+     "title": "地球的五件空氣衣",
+     "question": "地球穿了五件看不見的空氣衣！搭氣球和火箭一路飛上太空，看溫度計忽冷忽熱，再丟石頭試試看：哪一件是「流星終結者」？",
+     "url": "https://lab.kidsci.app/atmos/"
+    }
+   ],
    "artworkLocal": "assets/episode-covers/fada13e117ef417c3708.jpg"
   },
   {
@@ -4442,7 +4463,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/3a/4a/b2/3a4ab22b-f987-dcff-ec76-fd1152388cec/mza_6648770679356869826.jpg/600x600bb.jpg",
    "intro": "好奇號・恐龍時光大冒險第一集！好奇號要升級成時光機，可是小可和小博得先通過化石偵探營的三關：看恐龍骨頭怎麼變成化石、到英國採石場的「恐龍高速公路」量腳印估算恐龍走多快，再看加拿大琥珀裡八千萬年前的羽毛。三根腳趾的腳印為什麼很像大鳥踩的？營隊的畢業考只有一題：有一群恐龍到今天都沒有滅絕。最後，時間轉盤轉到兩億三千萬年前……時光機停不下來了！",
-   "labs": [],
+   "labs": [
+    {
+     "id": "B14",
+     "title": "恐龍腳印偵探",
+     "question": "泥地上一串大腳印：牠的腿有多高？是用走的還是用跑的？拿尺量一量就知道，再看看恐龍骨頭要過幾關才能變成化石！",
+     "url": "https://lab.kidsci.app/dinotrack/"
+    }
+   ],
    "show": "curiosity",
    "series": "恐龍探險系列",
    "artworkLocal": "assets/episode-covers/3dbf2fb2211b5c2a57dc.jpg"

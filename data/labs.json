@@ -135,8 +135,8 @@
  {
   "id": "F03",
   "slug": "beaver",
-  "title": "河狸水壩實驗室",
-  "question": "水壩留下的水，是從哪裡來？",
+  "title": "河狸的水壩和祕密小屋",
+  "question": "河狸為什麼要蓋水壩？幫牠咬樹、堵住小溪，把家門藏到水面下，再蓋一間大野狼進不來的小屋！",
   "topic": "animal",
   "url": "https://lab.kidsci.app/beaver/",
   "episodes": [
@@ -1606,6 +1606,40 @@
   "url": "https://lab.kidsci.app/magshield/",
   "episodes": [
    "122"
+  ]
+ },
+ {
+  "id": "J09",
+  "slug": "atmos",
+  "title": "地球的五件空氣衣",
+  "question": "地球穿了五件看不見的空氣衣！搭氣球和火箭一路飛上太空，看溫度計忽冷忽熱，再丟石頭試試看：哪一件是「流星終結者」？",
+  "topic": "earth",
+  "url": "https://lab.kidsci.app/atmos/",
+  "episodes": [
+   "124"
+  ]
+ },
+ {
+  "id": "J10",
+  "slug": "earthcore",
+  "title": "地心探險記：切開洋蔥地球",
+  "question": "地球像洋蔥一樣一層一層的，可是人類最深的洞只鑽了大約 12 公里。開想像的鑽地船衝到地心，再用地震波幫神祕星球照 CT！",
+  "topic": "earth",
+  "url": "https://lab.kidsci.app/earthcore/",
+  "episodes": [
+   "123",
+   "121"
+  ]
+ },
+ {
+  "id": "B14",
+  "slug": "dinotrack",
+  "title": "恐龍腳印偵探",
+  "question": "泥地上一串大腳印：牠的腿有多高？是用走的還是用跑的？拿尺量一量就知道，再看看恐龍骨頭要過幾關才能變成化石！",
+  "topic": "animal",
+  "url": "https://lab.kidsci.app/dinotrack/",
+  "episodes": [
+   "hd1"
   ]
  }
 ]
