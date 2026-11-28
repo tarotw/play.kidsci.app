@@ -1494,7 +1494,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/41/da/fd/41dafd20-a326-eccd-f672-5a7455a34906/mza_4309980916437467229.jpg/600x600bb.jpg",
    "intro": "各位小小探險家！這集我們要飛向外太陽系，拜訪兩個超級大胖子！🪐 👑 木星大哥：他是太陽系的國王，肚子裡裝得下1300個地球！還有一個比地球還大的紅眼睛颱風！",
-   "labs": [],
+   "labs": [
+    {
+     "id": "K13",
+     "title": "閃不到的小行星帶，排隊跑步的土星環",
+     "question": "開好奇號穿過小行星帶，要怎麼左閃右躲？大紅斑放得下地球嗎？土星環的冰塊，誰先跑完一圈？",
+     "url": "https://lab.kidsci.app/ringrace/"
+    }
+   ],
    "artworkLocal": "assets/episode-covers/79cf4651cfa751cfbe96.jpg"
   },
   {
@@ -4810,7 +4817,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/99/f9/01/99f901dc-620e-60c9-c173-17d215e3689a/mza_129356596795012057.jpg/600x600bb.jpg",
    "intro": "小博抓緊方向盤準備左閃右躲，窗外卻空空的？原來小行星帶大得不得了，人類還不是閃石頭，而是直接把太空船撞上去！抵達行星之王木星後，小可發現大紅斑不是颱風，薄得像一片鬆餅；雲裡下的可能是不能吃的蘑菇球；衛星埃歐的爆發，還讓儀器破表。大紅斑、火山、冰下的海洋，你最想親眼看哪一個？",
-   "labs": [],
+   "labs": [
+    {
+     "id": "K13",
+     "title": "閃不到的小行星帶，排隊跑步的土星環",
+     "question": "開好奇號穿過小行星帶，要怎麼左閃右躲？大紅斑放得下地球嗎？土星環的冰塊，誰先跑完一圈？",
+     "url": "https://lab.kidsci.app/ringrace/"
+    }
+   ],
    "show": "curiosity",
    "series": "太陽系系列",
    "artworkLocal": "assets/episode-covers/6f930a0cd72d974190f7.jpg"
@@ -4830,7 +4844,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/a7/36/b2/a736b27c-c6b5-a2a5-a1cf-7fce7dcb1a86/mza_2964954131300887818.jpg/600x600bb.jpg",
    "intro": "土星的呼拉圈竟然在下雨！小可和小博搭著「好奇號」貼近土星環，發現它是一大群排隊跑步的冰塊；飛到土星南極，雲上竟然排出十邊形；一顆小冰球還噴出比地球直徑四分之三還長的水氣。最後終於可以想像降落了：站在泰坦的甲烷湖邊，看看泳衣派不派得上用場！",
-   "labs": [],
+   "labs": [
+    {
+     "id": "K13",
+     "title": "閃不到的小行星帶，排隊跑步的土星環",
+     "question": "開好奇號穿過小行星帶，要怎麼左閃右躲？大紅斑放得下地球嗎？土星環的冰塊，誰先跑完一圈？",
+     "url": "https://lab.kidsci.app/ringrace/"
+    }
+   ],
    "show": "curiosity",
    "series": "太陽系系列",
    "artworkLocal": "assets/episode-covers/efe17d3a14f52aa81cab.jpg"

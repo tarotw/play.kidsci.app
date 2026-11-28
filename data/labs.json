@@ -1693,5 +1693,18 @@
    "hs3",
    "103"
   ]
+ },
+ {
+  "id": "K13",
+  "slug": "ringrace",
+  "title": "閃不到的小行星帶，排隊跑步的土星環",
+  "question": "開好奇號穿過小行星帶，要怎麼左閃右躲？大紅斑放得下地球嗎？土星環的冰塊，誰先跑完一圈？",
+  "topic": "space",
+  "url": "https://lab.kidsci.app/ringrace/",
+  "episodes": [
+   "hs7",
+   "hs8",
+   "109"
+  ]
  }
 ]
