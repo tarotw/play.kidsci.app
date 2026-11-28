@@ -1668,5 +1668,18 @@
    "hs6",
    "108"
   ]
+ },
+ {
+  "id": "K11",
+  "slug": "hotplanet",
+  "title": "最熱的行星是誰？",
+  "question": "水星離太陽最近，為什麼最熱的卻是金星？拖動行星、幫它蓋上二氧化碳毯子，做出水星、金星和地球，再派著陸器下去；最後幫小博在飆車的雲底下找回著陸器！",
+  "topic": "space",
+  "url": "https://lab.kidsci.app/hotplanet/",
+  "episodes": [
+   "hs4",
+   "hs5",
+   "107"
+  ]
  }
 ]

@@ -1437,6 +1437,12 @@
      "title": "水星的三比二節拍",
      "question": "繞太陽兩圈，為什麼才過一個水星太陽日？",
      "url": "https://lab.kidsci.app/mercbeat/"
+    },
+    {
+     "id": "K11",
+     "title": "最熱的行星是誰？",
+     "question": "水星離太陽最近，為什麼最熱的卻是金星？拖動行星、幫它蓋上二氧化碳毯子，做出水星、金星和地球，再派著陸器下去；最後幫小博在飆車的雲底下找回著陸器！",
+     "url": "https://lab.kidsci.app/hotplanet/"
     }
    ],
    "artworkLocal": "assets/episode-covers/bd45f79dc856f6b347b9.jpg"
@@ -4709,7 +4715,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/58/4f/4d/584f4d8b-e0da-ad57-a74a-8e34da1a4f9c/mza_16996401170911309721.jpg/600x600bb.jpg",
    "intro": "離太陽最近的水星，竟然是最難到達的行星！小可和小博搭著「好奇號」貼著水星飛：一天比一年還長、地上有縮小留下的皺紋、烤箱星球的坑底藏著冰，肚子裡可能還有一層鑽石！",
-   "labs": [],
+   "labs": [
+    {
+     "id": "K11",
+     "title": "最熱的行星是誰？",
+     "question": "水星離太陽最近，為什麼最熱的卻是金星？拖動行星、幫它蓋上二氧化碳毯子，做出水星、金星和地球，再派著陸器下去；最後幫小博在飆車的雲底下找回著陸器！",
+     "url": "https://lab.kidsci.app/hotplanet/"
+    }
+   ],
    "show": "curiosity",
    "series": "太陽系系列",
    "artworkLocal": "assets/episode-covers/c2829e36770e3a7c41c6.jpg"
@@ -4729,7 +4742,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/fc/3d/e2/fc3de20e-988f-91a9-6faa-1b10418a23f5/mza_6066585929856981668.jpg/600x600bb.jpg",
    "intro": "金星是地球的姊妹星？小可本來想下去野餐，結果發現漂亮的雲是硫酸，表面四百六十度以上，連機器人都只撐一部電影的時間。小博拿一朵雲當地標，雲卻飆車跑掉了！夜晚那一面的地面還會發光，旁邊還有一個名字是寫錯字來的假月亮。跟著好奇號一起去看！",
-   "labs": [],
+   "labs": [
+    {
+     "id": "K11",
+     "title": "最熱的行星是誰？",
+     "question": "水星離太陽最近，為什麼最熱的卻是金星？拖動行星、幫它蓋上二氧化碳毯子，做出水星、金星和地球，再派著陸器下去；最後幫小博在飆車的雲底下找回著陸器！",
+     "url": "https://lab.kidsci.app/hotplanet/"
+    }
+   ],
    "show": "curiosity",
    "series": "太陽系系列",
    "artworkLocal": "assets/episode-covers/6145967bc43243bad60f.jpg"
