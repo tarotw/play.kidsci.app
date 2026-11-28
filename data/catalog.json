@@ -1338,7 +1338,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/61/4a/b0/614ab07c-99b0-a7b4-b253-bc12e12fbc24/mza_3465957331577785381.jpg/600x600bb.jpg",
    "intro": "各位小小探險家！你知道太陽公公其實是一位超級大廚師嗎？他在核心煮著熱騰騰的光和熱，而且他的表面竟然像一鍋滾燙的「米粒粥」，每一顆米粒都跟台灣一樣大？！快戴上你的想像力墨鏡，跟我們一起飛向太陽探險吧！",
-   "labs": [],
+   "labs": [
+    {
+     "id": "K10",
+     "title": "陽光擠出迷宮：太陽大廚的火熱廚房",
+     "question": "太陽中心做出來的光，要在太陽裡擠多久才出得來？帶一顆光子闖出彈來彈去的迷宮，再拿太陽望遠鏡看看大廚的米粒粥、雀斑和頭髮！",
+     "url": "https://lab.kidsci.app/sunmaze/"
+    }
+   ],
    "artworkLocal": "assets/episode-covers/9815efa4dcf98402a9a5.jpg"
   },
   {
@@ -4695,7 +4702,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts211/v4/55/91/3b/55913bc4-fed8-3175-0e08-c6bd663e0936/mza_8235753508541810016.jpg/600x600bb.jpg",
    "intro": "太陽竟然是一位宇宙大廚？小可和小博搭著「好奇號」隔著超級防護罩直擊太陽：鑽進 1500 萬度的超級大烤箱、看陽光花 10 萬年擠出迷宮、發現太陽表面是一鍋米粒粥，還長了頭髮和雀斑！這時太陽突然打了一個宇宙級噴嚏，他們一路追回地球，看它變成美麗的極光！",
-   "labs": [],
+   "labs": [
+    {
+     "id": "K10",
+     "title": "陽光擠出迷宮：太陽大廚的火熱廚房",
+     "question": "太陽中心做出來的光，要在太陽裡擠多久才出得來？帶一顆光子闖出彈來彈去的迷宮，再拿太陽望遠鏡看看大廚的米粒粥、雀斑和頭髮！",
+     "url": "https://lab.kidsci.app/sunmaze/"
+    }
+   ],
    "show": "curiosity",
    "series": "太陽系系列",
    "artworkLocal": "assets/episode-covers/1b3ce22b454f68f05d87.jpg"
