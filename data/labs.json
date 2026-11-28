@@ -1317,7 +1317,8 @@
   "topic": "earth",
   "url": "https://lab.kidsci.app/plates/",
   "episodes": [
-   "128"
+   "128",
+   "hs1"
   ]
  },
  {
@@ -1605,7 +1606,8 @@
   "topic": "earth",
   "url": "https://lab.kidsci.app/magshield/",
   "episodes": [
-   "122"
+   "122",
+   "hs1"
   ]
  },
  {
@@ -1616,7 +1618,8 @@
   "topic": "earth",
   "url": "https://lab.kidsci.app/atmos/",
   "episodes": [
-   "124"
+   "124",
+   "hs1"
   ]
  },
  {
@@ -1640,6 +1643,18 @@
   "url": "https://lab.kidsci.app/dinotrack/",
   "episodes": [
    "hd1"
+  ]
+ },
+ {
+  "id": "K09",
+  "slug": "moonface",
+  "title": "月亮變臉秀：永遠看不到的背面",
+  "question": "月亮為什麼一下圓、一下彎？我們為什麼永遠看不到月亮的背面？拖著月亮繞地球走一圈，再讓它一邊繞一邊轉，就知道了！",
+  "topic": "space",
+  "url": "https://lab.kidsci.app/moonface/",
+  "episodes": [
+   "hs2",
+   "112"
   ]
  }
 ]

@@ -1534,6 +1534,12 @@
      "title": "月相的三點觀察台",
      "question": "月球都只亮半邊，為什麼我們看到的亮面會改變？",
      "url": "https://lab.kidsci.app/moonview/"
+    },
+    {
+     "id": "K09",
+     "title": "月亮變臉秀：永遠看不到的背面",
+     "question": "月亮為什麼一下圓、一下彎？我們為什麼永遠看不到月亮的背面？拖著月亮繞地球走一圈，再讓它一邊繞一邊轉，就知道了！",
+     "url": "https://lab.kidsci.app/moonface/"
     }
    ],
    "artworkLocal": "assets/episode-covers/7e3a42a0b7175033b6a5.jpg"
@@ -4610,7 +4616,26 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/8f/f2/42/8ff242c8-911f-f9fb-f1be-aeb85e55d1b9/mza_527753525977526971.jpg/600x600bb.jpg",
    "intro": "天空為什麼是藍的？腳下的陸地其實是會偷偷搬家的巨大拼圖？地球歪著身體跑，才跑出春夏秋冬？小可和小博搭上「好奇號」太空船，第一站就從我們的家出發，飛到太空回頭看這顆藍色彈珠，還在極區上空撞見太陽噴嚏變成的極光！",
-   "labs": [],
+   "labs": [
+    {
+     "id": "J02",
+     "title": "推一推板塊，山就長出來",
+     "question": "地球表面是一塊塊會動的大拼圖。把兩塊板塊推擠、拉開、擦肩而過，看看會長出高山、火山、海溝還是大裂谷！",
+     "url": "https://lab.kidsci.app/plates/"
+    },
+    {
+     "id": "J11",
+     "title": "地球的隱形斗篷",
+     "question": "太陽不停吹出帶電的粒子，地球靠肚子裡的發電機撐開一件看不見的斗篷。攪動地心、撐過三次太陽風暴，再用手指把地球轉扁！",
+     "url": "https://lab.kidsci.app/magshield/"
+    },
+    {
+     "id": "J09",
+     "title": "地球的五件空氣衣",
+     "question": "地球穿了五件看不見的空氣衣！搭氣球和火箭一路飛上太空，看溫度計忽冷忽熱，再丟石頭試試看：哪一件是「流星終結者」？",
+     "url": "https://lab.kidsci.app/atmos/"
+    }
+   ],
    "show": "curiosity",
    "series": "太陽系系列",
    "artworkLocal": "assets/episode-covers/be2156bf16782dbc85b3.jpg"
@@ -4630,7 +4655,14 @@
    },
    "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts221/v4/7a/53/1b/7a531b44-f044-283f-de26-be4ba542d275/mza_931296698107968852.jpg/600x600bb.jpg",
    "intro": "月亮為什麼一下圓、一下彎？我們為什麼永遠看不到月亮的背面？小可和小博搭著「好奇號」從地球軌道出發，繞到月球背面、降落在阿姆斯壯走過的寧靜海，在黑色的白天看星星，開漫遊車去看大峽谷，還用掃描器發現月亮肚子裡藏著一顆 1400 度的大鐵球！",
-   "labs": [],
+   "labs": [
+    {
+     "id": "K09",
+     "title": "月亮變臉秀：永遠看不到的背面",
+     "question": "月亮為什麼一下圓、一下彎？我們為什麼永遠看不到月亮的背面？拖著月亮繞地球走一圈，再讓它一邊繞一邊轉，就知道了！",
+     "url": "https://lab.kidsci.app/moonface/"
+    }
+   ],
    "show": "curiosity",
    "series": "太陽系系列",
    "artworkLocal": "assets/episode-covers/862b253eb8125ecee633.jpg"
